@@ -1,9 +1,14 @@
 defaults:
-  - base
-  - replica
-  - sam
-  - _self_
+ - base_detections
+ - nuscenes
+ - sam
+ - _self_
+
+dataset_root: /home/lzc/PycharmProjects/concept-graphs/dataset/v1.0-mini
+scene_id: scene-0061
+classes_file: /home/lzc/PycharmProjects/concept-graphs/conceptgraph/vehicle_classes.txt
+
 
 stride: 1
-exp_suffix: _streamlined_yolo_stride50_no_bg24
+exp_suffix: streamlined_yolo_vehicle_v1
 save_video: true

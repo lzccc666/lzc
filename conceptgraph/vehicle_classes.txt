@@ -1,0 +1,14 @@
+car
+truck
+bus
+motorcycle
+bicycle
+pedestrian
+traffic sign
+traffic light
+road
+sidewalk
+building
+tree
+fence
+pole

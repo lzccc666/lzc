@@ -482,6 +482,173 @@ class ReplicaDataset(GradSLAMDataset):
         return embedding.permute(0, 2, 3, 1)  # (1, H, W, embedding_dim)
 
 
+class Kitti360Dataset(GradSLAMDataset):
+    """
+    Minimal KITTI-360 loader for a preprocessed single-front-camera subset.
+
+    Expected layout:
+
+        <dataset_root>/<sequence>/
+            color/000000.png
+            depth/000000.png
+            poses.txt
+            intrinsics.txt   # optional, preferred over YAML values
+
+    The depth images are expected to be PNG files whose values are stored in
+    millimeters by default (png_depth_scale=1000.0).
+    """
+
+    def __init__(
+        self,
+        config_dict,
+        basedir,
+        sequence,
+        stride: Optional[int] = None,
+        start: Optional[int] = 0,
+        end: Optional[int] = -1,
+        desired_height: Optional[int] = 376,
+        desired_width: Optional[int] = 1408,
+        load_embeddings: Optional[bool] = False,
+        embedding_dir: Optional[str] = "embeddings",
+        embedding_dim: Optional[int] = 512,
+        **kwargs,
+    ):
+        self.input_folder = os.path.join(basedir, sequence)
+        self.pose_path = os.path.join(self.input_folder, "poses.txt")
+        self.intrinsics_path = os.path.join(self.input_folder, "intrinsics.txt")
+
+        if os.path.isfile(self.intrinsics_path):
+            scene_intrinsic = np.loadtxt(self.intrinsics_path)
+            if scene_intrinsic.shape == (3, 3):
+                fx = scene_intrinsic[0, 0]
+                fy = scene_intrinsic[1, 1]
+                cx = scene_intrinsic[0, 2]
+                cy = scene_intrinsic[1, 2]
+            elif scene_intrinsic.size == 4:
+                fx, fy, cx, cy = scene_intrinsic.reshape(-1).tolist()
+            else:
+                raise ValueError(
+                    "intrinsics.txt must contain either a 3x3 matrix or four values: fx fy cx cy"
+                )
+
+            config_dict["camera_params"]["fx"] = float(fx)
+            config_dict["camera_params"]["fy"] = float(fy)
+            config_dict["camera_params"]["cx"] = float(cx)
+            config_dict["camera_params"]["cy"] = float(cy)
+
+        super().__init__(
+            config_dict,
+            stride=stride,
+            start=start,
+            end=end,
+            desired_height=desired_height,
+            desired_width=desired_width,
+            load_embeddings=load_embeddings,
+            embedding_dir=embedding_dir,
+            embedding_dim=embedding_dim,
+            **kwargs,
+        )
+
+    def get_filepaths(self):
+        color_paths = natsorted(glob.glob(f"{self.input_folder}/color/*.png"))
+        if len(color_paths) == 0:
+            color_paths = natsorted(glob.glob(f"{self.input_folder}/color/*.jpg"))
+
+        depth_paths = natsorted(glob.glob(f"{self.input_folder}/depth/*.png"))
+        if len(depth_paths) == 0:
+            depth_paths = natsorted(glob.glob(f"{self.input_folder}/depth/*.npy"))
+
+        embedding_paths = None
+        if self.load_embeddings:
+            embedding_paths = natsorted(
+                glob.glob(f"{self.input_folder}/{self.embedding_dir}/*.pt")
+            )
+
+        return color_paths, depth_paths, embedding_paths
+
+    def load_poses(self):
+        if os.path.isfile(self.pose_path):
+            poses = []
+            lines = []
+            with open(self.pose_path, "r") as f:
+                lines = [line.strip() for line in f.readlines() if line.strip()]
+
+            if len(lines) == self.num_imgs:
+                for line in lines:
+                    c2w = np.array(list(map(float, line.split()))).reshape(4, 4)
+                    poses.append(torch.from_numpy(c2w).float())
+                return poses
+
+            if len(lines) == self.num_imgs * 4:
+                for idx in range(0, len(lines), 4):
+                    c2w = np.array(
+                        [list(map(float, lines[idx + row].split())) for row in range(4)]
+                    )
+                    poses.append(torch.from_numpy(c2w).float())
+                return poses
+
+            raise ValueError(
+                "poses.txt must contain either one flattened 4x4 pose per line or one 4x4 pose over four lines"
+            )
+
+        posefiles = natsorted(glob.glob(f"{self.input_folder}/pose/*.txt"))
+        if posefiles:
+            return [torch.from_numpy(np.loadtxt(posefile)).float() for posefile in posefiles]
+
+        raise FileNotFoundError(
+            f"Could not find poses.txt or pose/*.txt under {self.input_folder}"
+        )
+
+    def read_embedding_from_file(self, embedding_file_path):
+        embedding = torch.load(embedding_file_path, map_location="cpu")
+        return embedding.permute(0, 2, 3, 1)  # (1, H, W, embedding_dim)
+
+
+class NuScenesDataset(Kitti360Dataset):
+    """
+    Minimal nuScenes loader for a preprocessed single-front-camera subset.
+
+    This reuses the same lightweight directory structure as the KITTI-360
+    minimal format:
+
+        <dataset_root>/<scene_name>/
+            color/
+            depth/
+            poses.txt
+            intrinsics.txt
+    """
+
+    def __init__(
+        self,
+        config_dict,
+        basedir,
+        sequence,
+        stride: Optional[int] = None,
+        start: Optional[int] = 0,
+        end: Optional[int] = -1,
+        desired_height: Optional[int] = 900,
+        desired_width: Optional[int] = 1600,
+        load_embeddings: Optional[bool] = False,
+        embedding_dir: Optional[str] = "embeddings",
+        embedding_dim: Optional[int] = 512,
+        **kwargs,
+    ):
+        super().__init__(
+            config_dict,
+            basedir,
+            sequence,
+            stride=stride,
+            start=start,
+            end=end,
+            desired_height=desired_height,
+            desired_width=desired_width,
+            load_embeddings=load_embeddings,
+            embedding_dir=embedding_dir,
+            embedding_dim=embedding_dim,
+            **kwargs,
+        )
+
+
 class ScannetDataset(GradSLAMDataset):
     def __init__(
         self,
@@ -1171,6 +1338,10 @@ def get_dataset(dataconfig, basedir, sequence, **kwargs):
         return ICLDataset(config_dict, basedir, sequence, **kwargs)
     elif config_dict["dataset_name"].lower() in ["replica"]:
         return ReplicaDataset(config_dict, basedir, sequence, **kwargs)
+    elif config_dict["dataset_name"].lower() in ["kitti360", "kitti-360"]:
+        return Kitti360Dataset(config_dict, basedir, sequence, **kwargs)
+    elif config_dict["dataset_name"].lower() in ["nuscenes", "nu-scenes", "nu_scenes"]:
+        return NuScenesDataset(config_dict, basedir, sequence, **kwargs)
     elif config_dict["dataset_name"].lower() in ["azure", "azurekinect"]:
         return AzureKinectDataset(config_dict, basedir, sequence, **kwargs)
     elif config_dict["dataset_name"].lower() in ["scannet"]:

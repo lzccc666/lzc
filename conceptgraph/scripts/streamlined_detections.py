@@ -42,8 +42,9 @@ def main(cfg: DictConfig):
     )
 
     # Initialize the model(s)
-    detection_model = measure_time(YOLO)('yolov8l-world.pt')
-    sam_predictor = SAM('mobile_sam.pt') # UltraLytics SAM
+    checkpoint_dir = "/home/lzc/PycharmProjects/concept-graphs/checkpoint"
+    detection_model = measure_time(YOLO)(f'{checkpoint_dir}/yolov8l-world.pt')
+    sam_predictor = SAM(f'{checkpoint_dir}/mobile_sam.pt') # UltraLytics SAM
     # sam_predictor = measure_time(get_sam_predictor)(cfg) # Normal SAM
     clip_model, _, clip_preprocess = open_clip.create_model_and_transforms(
         "ViT-H-14", "laion2b_s32b_b79k"

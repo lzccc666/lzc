@@ -1,9 +1,15 @@
 defaults:
-  - base_mapping
-  - replica
-  - sam
-  - _self_
+ - base_mapping
+ - nuscenes
+ - sam
+ - _self_
 
-stride: 50
-exp_suffix: streamlined_yolo_stride40_no_bg31
+dataset_root: /home/lzc/PycharmProjects/concept-graphs/dataset/v1.0-mini
+scene_id: scene-0061
+
+gsa_variant: streamlined_yolo
+detection_folder_name: exp_${exp_suffix}/detections
+
+stride: 1
+exp_suffix: streamlined_yolo_vehicle_v1
 save_video: false

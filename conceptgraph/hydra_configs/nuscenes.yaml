@@ -1,0 +1,3 @@
+dataset_root: /home/lzc/PycharmProjects/concept-graphs/dataset/v1.0-mini
+dataset_config: /home/lzc/PycharmProjects/concept-graphs/conceptgraph/nuscenes/nuscenes.yaml
+scene_id: scene-0061
