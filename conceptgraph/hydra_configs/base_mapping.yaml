@@ -25,6 +25,29 @@ semantic_threshold: 0.5
 physical_threshold: 0.5
 # Only when match_method=="sim_sum"
 sim_threshold: 0
+max_tracking_distance_m: 8.0
+
+# Dynamic object handling for object-level 3D mapping.
+enable_dynamic_object_handling: true
+dynamic_classes:
+  - car
+  - truck
+  - bus
+  - motorcycle
+  - bicycle
+  - pedestrian
+static_classes:
+  - traffic sign
+  - traffic light
+  - road
+  - sidewalk
+  - building
+  - tree
+  - fence
+  - pole
+velocity_threshold: 0.5
+frame_dt: 1.0
+center_history_size: 8
 
 # For contain_number
 use_contain_number: !!bool False
@@ -49,7 +72,7 @@ obj_min_points: 0
 obj_min_detections: 3
 
 # For merge_overlap_objects() function
-merge_overlap_thresh: 0.7      # -1 means do not perform the merge_overlap_objects()
+merge_overlap_thresh: -1      # -1 means do not perform the merge_overlap_objects()
 merge_visual_sim_thresh: 0.7   # Merge only if the visual similarity is larger
 merge_text_sim_thresh: 0.7     # Merge only if the text cosine sim is larger
 

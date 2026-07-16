@@ -120,7 +120,17 @@ def collect_scene_samples(scene_record: dict, sample_by_token: dict):
 def collect_sample_data_for_scene(scene_record: dict, sample_by_token: dict, sample_data_by_token: dict):
     """Collect CAM_FRONT and LIDAR_TOP data for a scene"""
     ordered_samples = collect_scene_samples(scene_record, sample_by_token)
-    
+
+    direct_result = []
+    for sample_record in ordered_samples:
+        data = sample_record.get("data", {})
+        cam_token = data.get("CAM_FRONT")
+        lidar_token = data.get("LIDAR_TOP")
+        if cam_token in sample_data_by_token and lidar_token in sample_data_by_token:
+            direct_result.append((sample_record, {"CAM_FRONT": cam_token, "LIDAR_TOP": lidar_token}))
+    if direct_result:
+        return direct_result
+
     # Build a mapping from sample_token to its data
     sample_data_by_sample_token = {}
     for sd_token, sd_record in sample_data_by_token.items():
@@ -128,9 +138,14 @@ def collect_sample_data_for_scene(scene_record: dict, sample_by_token: dict, sam
         if sample_token not in sample_data_by_sample_token:
             sample_data_by_sample_token[sample_token] = {}
         filename = sd_record.get("filename", "")
-        if "CAM_FRONT" in filename and "CAM_FRONT" not in sample_data_by_sample_token[sample_token]:
+        parts = Path(filename).parts
+        if not sd_record.get("is_key_frame", False):
+            continue
+        if len(parts) < 3 or parts[0] != "samples":
+            continue
+        if len(parts) >= 2 and parts[-2] == "CAM_FRONT" and "CAM_FRONT" not in sample_data_by_sample_token[sample_token]:
             sample_data_by_sample_token[sample_token]["CAM_FRONT"] = sd_token
-        elif "LIDAR_TOP" in filename and "LIDAR_TOP" not in sample_data_by_sample_token[sample_token]:
+        elif len(parts) >= 2 and parts[-2] == "LIDAR_TOP" and "LIDAR_TOP" not in sample_data_by_sample_token[sample_token]:
             sample_data_by_sample_token[sample_token]["LIDAR_TOP"] = sd_token
     
     # Match samples with their data

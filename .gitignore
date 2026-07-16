@@ -181,4 +181,11 @@ cfslam/tmp.png
 cfslam/temp.json
 Grounded-Segment-Anything/
 chamferdist/
-Grounded-Segment-Anything/
+Grounded-Segment-Anything/nature-skills/
+nature-skills/
+outputs/
+*.pth
+*.pt
+*.safetensors
+*.tgz
+*.zip

@@ -95,6 +95,28 @@ def prepare_objects_save_vis(objects: MapObjectList, downsample_size: float=0.02
                 del objects_to_save[i][k]
                 
     return objects_to_save.to_serializable()
+
+
+def save_scene_map_for_downstream(cfg, objects: MapObjectList, bg_objects, classes, class_colors) -> Path:
+    """Write the map path consumed by scenegraph/navigation stages."""
+    exp_suffix = getattr(cfg, "exp_suffix", None)
+    if exp_suffix is None:
+        exp_suffix = getattr(cfg, "save_suffix", "streamlined")
+    exp_dir = cfg.dataset_root / cfg.scene_id / f"exp_{exp_suffix}"
+    map_dir = exp_dir / "map"
+    map_dir.mkdir(parents=True, exist_ok=True)
+    map_path = map_dir / "scene_map_cfslam.pkl.gz"
+    result = {
+        "objects": objects.to_serializable(),
+        "bg_objects": None if bg_objects is None else bg_objects.to_serializable(),
+        "cfg": cfg,
+        "class_names": classes,
+        "class_colors": class_colors,
+    }
+    with gzip.open(map_path, "wb") as f:
+        pickle.dump(result, f)
+    print(f"Saved downstream scene map to {map_path}")
+    return map_path
     
 def process_cfg(cfg: DictConfig):
     cfg.dataset_root = Path(cfg.dataset_root)
@@ -390,6 +412,8 @@ def main(cfg : DictConfig):
         with gzip.open(pcd_save_path, "wb") as f:
             pickle.dump(results, f)
         print(f"Saved full point cloud after post-processing to {pcd_save_path}")
+
+    save_scene_map_for_downstream(cfg, objects, bg_objects, classes, class_colors)
         
     if cfg.save_objects_all_frames:
         save_meta_path = save_all_folder / f"meta.pkl.gz"

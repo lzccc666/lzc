@@ -1,5 +1,6 @@
 import torch
 import torch.nn.functional as F
+import numpy as np
 
 from conceptgraph.slam.slam_classes import MapObjectList, DetectionList
 from conceptgraph.utils.general_utils import Timer
@@ -11,7 +12,12 @@ from conceptgraph.utils.ious import (
 )
 from conceptgraph.slam.utils import (
     merge_obj2_into_obj1, 
-    compute_overlap_matrix_2set
+    compute_overlap_matrix_2set,
+    ensure_motion_metadata,
+    estimate_observation_velocity,
+    initialize_motion_metadata,
+    should_use_short_term_update,
+    update_dynamic_object_short_term,
 )
 
 def compute_spatial_similarities(cfg, detection_list: DetectionList, objects: MapObjectList) -> torch.Tensor:
@@ -86,17 +92,93 @@ def merge_detections_to_objects(
     objects: MapObjectList, 
     agg_sim: torch.Tensor
 ) -> MapObjectList:
+    if not bool(getattr(cfg, "enable_dynamic_object_handling", True)):
+        return _merge_detections_to_objects_legacy(cfg, detection_list, objects, agg_sim)
+
     # Iterate through all detections and merge them into objects
     for i in range(agg_sim.shape[0]):
+        initialize_motion_metadata(cfg, detection_list[i])
         # If not matched to any object, add it as a new object
         if agg_sim[i].max() == float('-inf'):
             objects.append(detection_list[i])
         # Merge with most similar existing object
         else:
-            j = agg_sim[i].argmax()
+            det_classes = set(map(int, np.atleast_1d(detection_list[i]["class_id"]).tolist()))
+            best_j = None
+            best_score = float("-inf")
+            for j in torch.argsort(agg_sim[i], descending=True).tolist():
+                obj_classes = set(map(int, np.atleast_1d(objects[j]["class_id"]).tolist()))
+                if det_classes.isdisjoint(obj_classes):
+                    continue
+                det_center = _bbox_center_from_object(detection_list[i]["bbox"])
+                obj_center = _bbox_center_from_object(objects[j]["bbox"])
+                if float(np.linalg.norm(det_center - obj_center)) > float(getattr(cfg, "max_tracking_distance_m", 8.0)):
+                    continue
+                score = float(agg_sim[i, j])
+                if score > best_score:
+                    best_score = score
+                    best_j = j
+            if best_j is None:
+                objects.append(detection_list[i])
+                continue
+            j = best_j
             matched_det = detection_list[i]
             matched_obj = objects[j]
-            merged_obj = merge_obj2_into_obj1(cfg, matched_obj, matched_det, run_dbscan=False)
+            ensure_motion_metadata(cfg, matched_obj)
+            velocity, current_center, current_frame = estimate_observation_velocity(cfg, matched_obj, matched_det)
+            if should_use_short_term_update(cfg, matched_obj, matched_det, velocity):
+                merged_obj = update_dynamic_object_short_term(
+                    cfg,
+                    matched_obj,
+                    matched_det,
+                    velocity=velocity,
+                    current_center=current_center,
+                    current_frame=current_frame,
+                )
+            else:
+                merged_obj = merge_obj2_into_obj1(cfg, matched_obj, matched_det, run_dbscan=False)
             objects[j] = merged_obj
-            
+    
     return objects
+
+
+def _merge_detections_to_objects_legacy(
+    cfg,
+    detection_list: DetectionList,
+    objects: MapObjectList,
+    agg_sim: torch.Tensor,
+) -> MapObjectList:
+    for i in range(agg_sim.shape[0]):
+        if agg_sim[i].max() == float("-inf"):
+            objects.append(detection_list[i])
+        else:
+            det_classes = set(map(int, np.atleast_1d(detection_list[i]["class_id"]).tolist()))
+            best_j = None
+            best_score = float("-inf")
+            for j in torch.argsort(agg_sim[i], descending=True).tolist():
+                obj_classes = set(map(int, np.atleast_1d(objects[j]["class_id"]).tolist()))
+                if det_classes.isdisjoint(obj_classes):
+                    continue
+                det_center = _bbox_center_from_object(detection_list[i]["bbox"])
+                obj_center = _bbox_center_from_object(objects[j]["bbox"])
+                if float(np.linalg.norm(det_center - obj_center)) > float(getattr(cfg, "max_tracking_distance_m", 8.0)):
+                    continue
+                score = float(agg_sim[i, j])
+                if score > best_score:
+                    best_score = score
+                    best_j = j
+            if best_j is None:
+                objects.append(detection_list[i])
+                continue
+            objects[best_j] = merge_obj2_into_obj1(cfg, objects[best_j], detection_list[i], run_dbscan=False)
+    return objects
+
+
+def _bbox_center_from_object(bbox) -> np.ndarray:
+    if hasattr(bbox, "center"):
+        return np.asarray(bbox.center, dtype=float)
+    if hasattr(bbox, "get_center"):
+        return np.asarray(bbox.get_center(), dtype=float)
+    if isinstance(bbox, np.ndarray):
+        return np.asarray(bbox, dtype=float).mean(axis=0)
+    return np.asarray(bbox["center"], dtype=float)

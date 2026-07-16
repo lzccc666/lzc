@@ -13,7 +13,7 @@ import cv2
 import json
 import imageio
 import matplotlib
-matplotlib.use("TkAgg")
+matplotlib.use("Agg")
 from matplotlib import pyplot as plt
 import numpy as np
 import pickle
@@ -44,7 +44,7 @@ except ImportError as e:
 if "GSA_PATH" in os.environ:
     GSA_PATH = os.environ["GSA_PATH"]
 else:
-    raise ValueError("Please set the GSA_PATH environment variable to the path of the GSA repo. ")
+    GSA_PATH = str(Path(__file__).resolve().parents[2] / "Grounded-Segment-Anything")
     
 import sys
 TAG2TEXT_PATH = os.path.join(GSA_PATH, "")

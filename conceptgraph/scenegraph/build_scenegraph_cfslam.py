@@ -1,5 +1,5 @@
 """
-Build a scene graph from the segment-based map and captions from LLaVA.
+Build a scene graph from the segment-based map and captions from a VLM.
 """
 
 import gc
@@ -8,6 +8,7 @@ import json
 import os
 import pickle as pkl
 import time
+import ctypes
 from dataclasses import dataclass
 from pathlib import Path
 from types import SimpleNamespace
@@ -16,10 +17,6 @@ from textwrap import wrap
 from conceptgraph.utils.general_utils import prjson
 
 import cv2
-import matplotlib
-matplotlib.use('Agg')
-import matplotlib.pyplot as plt
-
 import numpy as np
 import rich
 import torch
@@ -29,6 +26,7 @@ from scipy.sparse import csr_matrix
 from scipy.sparse.csgraph import connected_components, minimum_spanning_tree
 from tqdm import tqdm, trange
 from transformers import logging as hf_logging
+from rich.console import Console
 
 # from mappingutils import (
 #     MapObjectList,
@@ -42,11 +40,34 @@ from transformers import logging as hf_logging
 torch.autograd.set_grad_enabled(False)
 hf_logging.set_verbosity_error()
 
-# Import OpenAI API
-import openai
 
-openai.api_key = os.getenv("OPENAI_API_KEY")
+def _load_vehicle_classes() -> list[str]:
+    classes_path = Path(__file__).resolve().parents[1] / "vehicle_classes.txt"
+    if not classes_path.exists():
+        return ["car", "truck", "bus", "motorcycle", "bicycle", "pedestrian", "traffic sign", "traffic light", "road", "sidewalk", "building", "tree", "fence", "pole"]
+    return [line.strip() for line in classes_path.read_text(encoding="utf-8").splitlines() if line.strip()]
 
+
+def _prefer_conda_runtime_libs() -> None:
+    conda_prefix = os.environ.get("CONDA_PREFIX")
+    if not conda_prefix:
+        return
+    lib_dir = Path(conda_prefix) / "lib"
+    if not lib_dir.exists():
+        return
+    current = os.environ.get("LD_LIBRARY_PATH", "")
+    paths = [str(lib_dir)] + [item for item in current.split(":") if item and item != str(lib_dir)]
+    os.environ["LD_LIBRARY_PATH"] = ":".join(paths)
+    libstdcxx = lib_dir / "libstdc++.so.6"
+    if libstdcxx.exists():
+        ctypes.CDLL(str(libstdcxx), mode=ctypes.RTLD_GLOBAL)
+
+
+_prefer_conda_runtime_libs()
+
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
 
 @dataclass
 class ProgramArgs:
@@ -69,6 +90,12 @@ class ProgramArgs:
     # Device to use
     device: str = "cuda:0"
 
+    # Local VLM checkpoint used for captioning and caption refinement
+    qwen_vl_ckpt: str = os.getenv(
+        "QWEN_VL_CKPT_PATH",
+        str(Path(__file__).resolve().parents[2] / "checkpoint" / "Qwen-VL-Chat-Int4"),
+    )
+
     # Voxel size for downsampling
     downsample_voxel_size: float = 0.025
 
@@ -83,6 +110,10 @@ class ProgramArgs:
 
     # Masking option
     masking_option: Literal["blackout", "red_outline", "none"] = "none"
+
+    # Strong outdoor scenegraph edges: keep only close object pairs by default.
+    strong_edge_max_distance_m: float = 8.0
+    strong_edge_relations: List[str] = None
 
 def load_scene_map(args, scene_map):
     """
@@ -242,7 +273,7 @@ def plot_images_with_captions(images, captions, confidences, low_confidences, ma
 
 
 def extract_node_captions(args):
-    from conceptgraph.llava.llava_model import LLaVaChat
+    from conceptgraph.vlm.qwen_vl_chat import QwenVLChat
 
     # NOTE: args.mapfile is in cfslam format
     from conceptgraph.slam.slam_classes import MapObjectList
@@ -263,38 +294,35 @@ def extract_node_captions(args):
     #     preprocess_and_encode_pil_image,
     # )
 
-    # Creating a namespace object to pass args to the LLaVA chat object
-    chat_args = SimpleNamespace()
-    chat_args.model_path = os.getenv("LLAVA_CKPT_PATH")
-    chat_args.conv_mode = "v0_mmtag" # "multimodal"
-    chat_args.num_gpus = 1
-
     # rich console for pretty printing
-    console = rich.console.Console()
+    console = Console()
 
-    # Initialize LLaVA chat
-    chat = LLaVaChat(chat_args.model_path, chat_args.conv_mode, chat_args.num_gpus)
-    # chat = LLaVaChat(chat_args)
-    print("LLaVA chat initialized...")
+    qwen_model_path = args.qwen_vl_ckpt or os.getenv("QWEN_VL_CKPT_PATH")
+    chat = QwenVLChat(qwen_model_path, args.device)
+    print("Qwen-VL chat initialized...")
     query = "Describe the central object in the image."
     # query = "Describe the object in the image that is outlined in red."
 
     # Directories to save features and captions
-    savedir_feat = Path(args.cachedir) / "cfslam_feat_llava"
-    savedir_feat.mkdir(exist_ok=True, parents=True)
-    savedir_captions = Path(args.cachedir) / "cfslam_captions_llava"
+    savedir_captions = Path(args.cachedir) / "cfslam_captions_qwen"
     savedir_captions.mkdir(exist_ok=True, parents=True)
-    savedir_debug = Path(args.cachedir) / "cfslam_captions_llava_debug"
+    savedir_debug = Path(args.cachedir) / "cfslam_captions_qwen_debug"
     savedir_debug.mkdir(exist_ok=True, parents=True)
 
     caption_dict_list = []
+    existing_caption_path = Path(args.cachedir) / "cfslam_qwen_captions.json"
+    if existing_caption_path.exists():
+        with open(existing_caption_path, "r", encoding="utf-8") as f:
+            caption_dict_list = json.load(f)
+    caption_index = {int(item["id"]): item for item in caption_dict_list if isinstance(item, dict) and "id" in item}
 
     for idx_obj, obj in tqdm(enumerate(scene_map), total=len(scene_map)):
+        if idx_obj in caption_index and caption_index[idx_obj].get("captions"):
+            continue
         conf = obj["conf"]
         conf = np.array(conf)
         idx_most_conf = np.argsort(conf)[::-1]
 
-        features = []
         captions = []
         low_confidences = []
         
@@ -303,7 +331,7 @@ def extract_node_captions(args):
         confidences_list = []
         low_confidences_list = []
         mask_list = []  # New list for masks
-        if len(idx_most_conf) < 2:
+        if len(idx_most_conf) < 1:
             continue 
         idx_most_conf = idx_most_conf[:args.max_detections_per_object]
 
@@ -336,15 +364,10 @@ def extract_node_captions(args):
                 low_confidences.append(False)
 
             # image_tensor = chat.image_processor.preprocess(image_crop, return_tensors="pt")["pixel_values"][0]
-            image_tensor = chat.image_processor.preprocess(image_crop_modified, return_tensors="pt")["pixel_values"][0]
-
-            image_features = chat.encode_image(image_tensor[None, ...].half().cuda())
-            features.append(image_features.detach().cpu())
-
             chat.reset()
             console.print("[bold red]User:[/bold red] " + query)
-            outputs = chat(query=query, image_features=image_features)
-            console.print("[bold green]LLaVA:[/bold green] " + outputs)
+            outputs = chat(query=query, images=[image_crop_modified])
+            console.print("[bold green]Qwen-VL:[/bold green] " + outputs)
             captions.append(outputs)
         
             # print(f"Line 274, obj['mask'][idx_det].shape: {obj['mask'][idx_det].shape}")
@@ -358,22 +381,19 @@ def extract_node_captions(args):
             low_confidences_list.append(low_confidences[-1])
             mask_list.append(mask_crop)  # Add the cropped mask
 
-        caption_dict_list.append(
-            {
-                "id": idx_obj,
-                "captions": captions,
-                "low_confidences": low_confidences,
-            }
-        )
+        record = {
+            "id": idx_obj,
+            "captions": captions,
+            "low_confidences": low_confidences,
+        }
+        caption_index[idx_obj] = record
+        caption_dict_list = [caption_index[key] for key in sorted(caption_index)]
 
-        # Concatenate the features
-        if len(features) > 0:
-            features = torch.cat(features, dim=0)
+        # Save per-object captions for inspection
+        with open(savedir_captions / f"{idx_obj}.json", "w", encoding="utf-8") as f:
+            json.dump(caption_dict_list[-1], f, indent=2, ensure_ascii=False)
 
-        # Save the feature descriptors
-        torch.save(features, savedir_feat / f"{idx_obj}.pt")
-        
-        # Again for the LLava debug folder
+        # Again for the VLM debug folder
         if len(image_list) > 0:
             plot_images_with_captions(image_list, caption_list, confidences_list, low_confidences_list, mask_list, savedir_debug, idx_obj)
 
@@ -383,7 +403,7 @@ def extract_node_captions(args):
     for item in caption_dict_list:
         item["captions"] = [caption.replace("The central object in the image is ", "") for caption in item["captions"]]
     # Save the captions to a json file
-    with open(Path(args.cachedir) / "cfslam_llava_captions.json", "w", encoding="utf-8") as f:
+    with open(Path(args.cachedir) / "cfslam_qwen_captions.json", "w", encoding="utf-8") as f:
         json.dump(caption_dict_list, f, indent=4, sort_keys=False)
 
 
@@ -392,13 +412,69 @@ def save_json_to_file(json_str, filename):
         json.dump(json_str, f, indent=4, sort_keys=False)
 
 
+def parse_or_fallback_object_response(response_text: str, captions: list[str]) -> dict:
+    valid_tags = _load_vehicle_classes()
+    text = str(response_text).strip()
+    try:
+        parsed = json.loads(text)
+        if isinstance(parsed, dict) and {"summary", "possible_tags", "object_tag"} <= set(parsed):
+            parsed["possible_tags"] = valid_tags
+            return parsed
+    except json.JSONDecodeError:
+        pass
+
+    start = text.find("{")
+    end = text.rfind("}")
+    if start != -1 and end != -1 and end > start:
+        try:
+            parsed = json.loads(text[start:end + 1])
+            if isinstance(parsed, dict) and {"summary", "possible_tags", "object_tag"} <= set(parsed):
+                parsed["possible_tags"] = valid_tags
+                return parsed
+        except json.JSONDecodeError:
+            pass
+
+    joined = " ".join(captions).lower()
+    candidate_tags = {
+        "motorcycle": ["motorcycle", "motor bike", "bike", "摩托车"],
+        "bicycle": ["bicycle", "bike", "自行车"],
+        "pedestrian": ["pedestrian", "person", "human", "行人", "人"],
+        "traffic sign": ["traffic sign", "road sign", "bus stop sign", "sign", "交通标志"],
+        "traffic light": ["traffic light", "signal light", "红绿灯"],
+        "truck": ["truck", "lorry", "货车", "卡车"],
+        "bus": ["bus", "公交", "巴士"],
+        "car": ["car", "sedan", "suv", "van", "auto", "vehicle", "汽车", "车辆"],
+        "road": ["road", "street", "道路"],
+        "sidewalk": ["sidewalk", "人行道"],
+        "building": ["building", "house", "建筑"],
+        "tree": ["tree", "树"],
+        "fence": ["fence", "围栏"],
+        "pole": ["pole", "杆"],
+    }
+    best_tag = "invalid"
+    best_count = 0
+    for tag, words in candidate_tags.items():
+        count = sum(joined.count(word) for word in words)
+        if count > best_count:
+            best_count = count
+            best_tag = tag
+    if best_count == 0:
+        best_tag = "invalid"
+    return {
+        "summary": f"{best_tag} observed in nuScenes crops",
+        "possible_tags": valid_tags,
+        "object_tag": best_tag,
+    }
+
+
 def refine_node_captions(args):
     # NOTE: args.mapfile is in cfslam format
     from conceptgraph.slam.slam_classes import MapObjectList
     from conceptgraph.scenegraph.GPTPrompt import GPTPrompt
+    from conceptgraph.vlm.qwen_vl_chat import QwenVLChat
 
     # Load the captions for each segment
-    caption_file = Path(args.cachedir) / "cfslam_llava_captions.json"
+    caption_file = Path(args.cachedir) / "cfslam_qwen_captions.json"
     captions = None
     with open(caption_file, "r") as f:
         captions = json.load(f)
@@ -417,8 +493,11 @@ def refine_node_captions(args):
 
     TIMEOUT = 25  # Timeout in seconds
 
-    responses_savedir = Path(args.cachedir) / "cfslam_gpt-4_responses"
+    responses_savedir = Path(args.cachedir) / "cfslam_qwen_responses"
     responses_savedir.mkdir(exist_ok=True, parents=True)
+
+    chat = QwenVLChat(args.qwen_vl_ckpt, args.device)
+    print("Qwen-VL chat initialized for caption refinement...")
 
     responses = []
     unsucessful_responses = 0
@@ -444,34 +523,40 @@ def refine_node_captions(args):
         preds = json.dumps(_dict, indent=0)
 
         start_time = time.time()
-    
-        curr_chat_messages = gpt_messages[:]
-        curr_chat_messages.append({"role": "user", "content": preds})
-        chat_completion = openai.ChatCompletion.create(
-            # model="gpt-3.5-turbo",
-            model="gpt-4",
-            messages=curr_chat_messages,
-            timeout=TIMEOUT,  # Timeout in seconds
+        prompt = (
+            gpt_messages[0]["content"]
+            + "\n\nReturn only valid JSON with keys summary, possible_tags, object_tag. "
+            + "Do not include markdown, tables, or explanation.\n\n"
+            + preds
         )
+        try:
+            response_text = chat(query=prompt, images=None)
+        except Exception as exc:
+            print(f"Qwen-VL failed: {exc}")
+            _dict["response"] = "FAIL"
+            save_json_to_file(_dict, responses_savedir / f"{_caption['id']}.json")
+            responses.append(json.dumps(_dict))
+            unsucessful_responses += 1
+            continue
+
         elapsed_time = time.time() - start_time
         if elapsed_time > TIMEOUT:
             print("Timed out exceeded!")
             _dict["response"] = "FAIL"
-            # responses.append('{"object_tag": "FAIL"}')
             save_json_to_file(_dict, responses_savedir / f"{_caption['id']}.json")
             responses.append(json.dumps(_dict))
             unsucessful_responses += 1
             continue
         
         # count unsucessful responses
-        if "invalid" in chat_completion["choices"][0]["message"]["content"].strip("\n"):
+        if "invalid" in response_text.strip("\n"):
             unsucessful_responses += 1
             
         # print output
         prjson([{"role": "user", "content": preds}])
-        print(chat_completion["choices"][0]["message"]["content"])
+        print(response_text)
         print(f"Unsucessful responses so far: {unsucessful_responses}")
-        _dict["response"] = chat_completion["choices"][0]["message"]["content"].strip("\n")
+        _dict["response"] = parse_or_fallback_object_response(response_text, _caption["captions"])
         
         # save the response
         responses.append(json.dumps(_dict))
@@ -490,7 +575,7 @@ def refine_node_captions(args):
     # with open(Path(args.cachedir) / "gpt-3.5-turbo_responses.txt", "w") as f:
     #     for response in responses:
     #         f.write(response + "\n")
-    with open(Path(args.cachedir) / "cfslam_gpt-4_responses.pkl", "wb") as f:
+    with open(Path(args.cachedir) / "cfslam_qwen_responses.pkl", "wb") as f:
         pkl.dump(responses, f)
 
 
@@ -530,12 +615,16 @@ def extract_object_tag_from_json_str(json_str):
 def build_scenegraph(args):
     from conceptgraph.slam.slam_classes import MapObjectList
     from conceptgraph.slam.utils import compute_overlap_matrix
+    from conceptgraph.vlm.qwen_vl_chat import QwenVLChat
+
+    chat = QwenVLChat(args.qwen_vl_ckpt, args.device)
+    print("Qwen-VL chat initialized for scenegraph relations...")
 
     # Load the scene map
     scene_map = MapObjectList()
     load_scene_map(args, scene_map)
 
-    response_dir = Path(args.cachedir) / "cfslam_gpt-4_responses"
+    response_dir = Path(args.cachedir) / "cfslam_qwen_responses"
     responses = []
     object_tags = []
     also_indices_to_remove = [] # indices to remove if the json file does not exist
@@ -547,10 +636,25 @@ def build_scenegraph(args):
         with open(response_dir / f"{idx}.json", "r") as f:
             _d = json.load(f)
             try:
-                _d["response"] = json.loads(_d["response"])
+                if isinstance(_d["response"], str):
+                    _d["response"] = json.loads(_d["response"])
+                elif not isinstance(_d["response"], dict):
+                    raise TypeError("Unsupported response type")
             except json.JSONDecodeError:
                 _d["response"] = {
-                    'summary': f'GPT4 json reply failed: Here is the invalid response {_d["response"]}',
+                    'summary': f'Qwen json reply failed: Here is the invalid response {_d["response"]}',
+                    'possible_tags': ['possible_tag_json_failed'],
+                    'object_tag': 'invalid'
+                }
+            except TypeError:
+                _d["response"] = {
+                    'summary': f'Qwen json reply failed: Here is the invalid response {_d["response"]}',
+                    'possible_tags': ['possible_tag_json_failed'],
+                    'object_tag': 'invalid'
+                }
+            if not isinstance(_d["response"], dict) or "object_tag" not in _d["response"]:
+                _d["response"] = {
+                    'summary': f'Qwen json reply failed: Here is the invalid response {_d["response"]}',
                     'possible_tags': ['possible_tag_json_failed'],
                     'object_tag': 'invalid'
                 }
@@ -560,7 +664,7 @@ def build_scenegraph(args):
     # # Load the responses from the json file
     # responses = None
     # # Load json file into a list
-    # with open(Path(args.cachedir) / "cfslam_gpt-4_responses.pkl", "rb") as f:
+    # with open(Path(args.cachedir) / "cfslam_qwen_responses.pkl", "rb") as f:
     #     responses = pkl.load(f)
     # object_tags = []
     # for response in responses:
@@ -715,41 +819,43 @@ def build_scenegraph(args):
                     2. bbox_center: the 3D bounding box center of the object
                     3. object_tag: an extremely brief description of the object
 
-                    Produce an "object_relation" field that best describes the relationship between the two objects. The
-                    "object_relation" field must be one of the following (verbatim):
-                    1. "a on b": if object a is an object commonly placed on top of object b
-                    2. "b on a": if object b is an object commonly placed on top of object a
-                    3. "a in b": if object a is an object commonly placed inside object b
-                    4. "b in a": if object b is an object commonly placed inside object a
-                    5. "none of these": if none of the above best describe the relationship between the two objects
+                    Produce an "object_relation" field that best describes the outdoor spatial relationship between the two objects.
+                    The field must be one of the following (verbatim):
+                    1. "near"
+                    2. "left_of"
+                    3. "right_of"
+                    4. "in_front_of"
+                    5. "behind"
+                    6. "none of these"
 
                     Before producing the "object_relation" field, produce a "reason" field that explains why
                     the chosen "object_relation" field is the best.
                     """
 
                     start_time = time.time()
-                    chat_completion = openai.ChatCompletion.create(
-                        # model="gpt-3.5-turbo",
-                        model="gpt-4",
-                        messages=[{"role": "user", "content": DEFAULT_PROMPT + "\n\n" + input_json_str}],
-                        timeout=TIMEOUT,  # Timeout in seconds
-                    )
+                    response_text = chat(query=DEFAULT_PROMPT + "\n\n" + input_json_str, images=None)
                     elapsed_time = time.time() - start_time
                     output_dict = input_dict
                     if elapsed_time > TIMEOUT:
                         print("Timed out exceeded!")
-                        output_dict["object_relation"] = "FAIL"
-                        output_dict["reason"] = "FAIL"
+                        output_dict["object_relation"] = _fallback_object_relation(input_dict)
+                        output_dict["reason"] = "fallback_after_timeout"
                     else:
                         try:
                             # Attempt to parse the output as a JSON
-                            chat_output_json = json.loads(chat_completion["choices"][0]["message"]["content"])
+                            chat_output_json = json.loads(response_text)
                             # If the output is a valid JSON, then add it to the output dictionary
-                            output_dict["object_relation"] = chat_output_json["object_relation"]
-                            output_dict["reason"] = chat_output_json["reason"]
+                            relation = str(chat_output_json.get("object_relation", "none of these")).strip().lower()
+                            if relation == "fail":
+                                relation = _fallback_object_relation(input_dict)
+                                reason = "fallback_after_parse_failure"
+                            else:
+                                reason = chat_output_json.get("reason", "")
+                            output_dict["object_relation"] = relation
+                            output_dict["reason"] = reason
                         except:
-                            output_dict["object_relation"] = "FAIL"
-                            output_dict["reason"] = "FAIL"
+                            output_dict["object_relation"] = _fallback_object_relation(input_dict)
+                            output_dict["reason"] = "fallback_after_parse_failure"
                     relations.append(output_dict)
 
                     # print(chat_completion["choices"][0]["message"]["content"])
@@ -778,13 +884,34 @@ def build_scenegraph(args):
             segmentidx1 = component[u]
             segmentidx2 = component[v]
             # print(f"{segmentidx1}, {segmentidx2}, {relations[_idx]['object_relation']}")
-            if relations[_idx]["object_relation"] != "none of these":
-                scenegraph_edges.append((segmentidx1, segmentidx2, relations[_idx]["object_relation"]))
+            relation = str(relations[_idx]["object_relation"]).strip().lower()
+            if _is_strong_scenegraph_edge(
+                relation,
+                scene_map[segmentidx1],
+                scene_map[segmentidx2],
+                args.strong_edge_max_distance_m,
+                args.strong_edge_relations,
+            ):
+                scenegraph_edges.append((segmentidx1, segmentidx2, relation))
             _idx += 1
     print(f"Created 3D scenegraph with {num_segments} nodes and {len(scenegraph_edges)} edges")
 
     with open(Path(args.cachedir) / "cfslam_scenegraph_edges.pkl", "wb") as f:
         pkl.dump(scenegraph_edges, f)
+    edge_metadata = []
+    for src, dst, relation in scenegraph_edges:
+        dynamic = _is_dynamic_scenegraph_node(scene_map[src]) or _is_dynamic_scenegraph_node(scene_map[dst])
+        edge_metadata.append(
+            {
+                "source": int(src),
+                "target": int(dst),
+                "relation": str(relation),
+                "relation_type": "temporal" if dynamic else "stable",
+                "dynamic_relation": bool(dynamic),
+            }
+        )
+    with open(Path(args.cachedir) / "cfslam_scenegraph_edge_metadata.json", "w", encoding="utf-8") as f:
+        json.dump(edge_metadata, f, indent=2, ensure_ascii=False)
 
 
 def generate_scenegraph_json(args):
@@ -795,25 +922,178 @@ def generate_scenegraph_json(args):
     # or if the --recopmute_scenegraph_json flag is set
     scene_desc = []
     print("Generating scene graph JSON file...")
+    response_dir = Path(args.cachedir) / "cfslam_qwen_responses"
 
     # Load the pruned scene map
     scene_map = MapObjectList()
     with gzip.open(Path(args.cachedir) / "map" / "scene_map_cfslam_pruned.pkl.gz", "rb") as f:
-        scene_map.load_serializable(pkl.load(f))
+        loaded_data = pkl.load(f)
+        if isinstance(loaded_data, dict) and "objects" in loaded_data:
+            scene_map.load_serializable(loaded_data["objects"])
+        else:
+            scene_map.load_serializable(loaded_data)
     print(f"Loaded scene map with {len(scene_map)} objects")
 
     for i, segment in enumerate(scene_map):
+        bbox_center = _object_last_observation_bbox_center(segment)
+        if bbox_center is None:
+            bbox_center = np.round(segment['bbox'].center, 1).tolist()
+        caption_dict = segment["caption_dict"]
+        response_file = response_dir / f"{caption_dict['id']}.json"
+        if response_file.exists():
+            try:
+                with open(response_file, "r", encoding="utf-8") as f:
+                    response_wrapper = json.load(f)
+                if isinstance(response_wrapper, dict) and "response" in response_wrapper:
+                    caption_dict = dict(caption_dict)
+                    caption_dict["response"] = response_wrapper["response"]
+            except Exception:
+                pass
+        raw_captions = caption_dict.get("captions", [])
+        response = caption_dict.get("response", {})
+        response_summary = response.get("summary", "")
+        response_possible_tags = response.get("possible_tags", [])
+        response_object_tag = response.get("object_tag", "")
+        attributes = _extract_caption_attributes(raw_captions, response_summary, response_object_tag)
+        display_caption = _build_display_caption(response_object_tag, raw_captions, attributes, response_summary)
         _d = {
-            "id": segment["caption_dict"]["id"],
+            "id": caption_dict["id"],
             "bbox_extent": np.round(segment['bbox'].extent, 1).tolist(),
-            "bbox_center": np.round(segment['bbox'].center, 1).tolist(),
-            "possible_tags": segment["caption_dict"]["response"]["possible_tags"],
-            "object_tag": segment["caption_dict"]["response"]["object_tag"],
-            "caption": segment["caption_dict"]["response"]["summary"],
+            "bbox_center": bbox_center,
+            "possible_tags": response_possible_tags,
+            "object_tag": response_object_tag,
+            "caption": display_caption,
+            "raw_captions": raw_captions,
+            "attributes": attributes,
+            "motion_state": str(segment.get("motion_state", "unknown")),
+            "is_potential_dynamic": bool(segment.get("is_potential_dynamic", False)),
+            "velocity": float(segment.get("velocity", 0.0) or 0.0),
+            "is_short_term": bool(segment.get("is_short_term", False)),
+            "last_seen_frame": int(segment.get("last_seen_frame", -1)),
+            "center_history": _json_safe_history(segment.get("center_history", [])),
+            "frame_history": [int(v) for v in segment.get("frame_history", [])],
+            "metadata": {
+                "motion_state": str(segment.get("motion_state", "unknown")),
+                "is_potential_dynamic": bool(segment.get("is_potential_dynamic", False)),
+                "velocity": float(segment.get("velocity", 0.0) or 0.0),
+                "is_short_term": bool(segment.get("is_short_term", False)),
+                "last_seen_frame": int(segment.get("last_seen_frame", -1)),
+            },
         }
         scene_desc.append(_d)
     with open(Path(args.cachedir) / "scene_graph.json", "w") as f:
         json.dump(scene_desc, f, indent=4)
+
+
+def _extract_caption_attributes(raw_captions: list[str], summary: str, object_tag: str) -> dict:
+    text = " ".join([summary, object_tag] + [str(item) for item in raw_captions]).lower()
+    colors = ["white", "black", "blue", "red", "gray", "grey", "silver", "green", "yellow", "orange"]
+    brands = [
+        "honda", "toyota", "nissan", "bmw", "ford", "chevrolet", "mazda", "mitsubishi", "subaru", "volvo",
+        "mini", "rogue", "qashqai", "prius", "fit", "mirage", "orlando"
+    ]
+    body_types = ["suv", "sedan", "hatchback", "van", "truck", "bus", "motorcycle", "bike", "car"]
+    found_colors = [c for c in colors if c in text]
+    found_brands = [b for b in brands if b in text]
+    found_body_types = [t for t in body_types if t in text]
+    return {
+        "colors": sorted(set(found_colors)),
+        "brands": sorted(set(found_brands)),
+        "body_types": sorted(set(found_body_types)),
+        "raw_text": text,
+    }
+
+
+def _build_display_caption(object_tag: str, raw_captions: list[str], attributes: dict, fallback_summary: str) -> str:
+    colors = attributes.get("colors", []) if isinstance(attributes, dict) else []
+    brands = attributes.get("brands", []) if isinstance(attributes, dict) else []
+    body_types = attributes.get("body_types", []) if isinstance(attributes, dict) else []
+    parts = []
+    if colors:
+        parts.append("/".join(colors[:2]))
+    if brands:
+        parts.append("/".join(brands[:2]))
+    body_without_tag = [item for item in body_types if item != object_tag]
+    if body_without_tag:
+        parts.append("/".join(body_without_tag[:2]))
+    if object_tag:
+        parts.append(str(object_tag))
+    if parts:
+        return " ".join(parts)
+
+    for caption in raw_captions:
+        text = str(caption).strip()
+        if text and "observed in nuscenes" not in text.lower():
+            return text[:120]
+    return str(fallback_summary or object_tag or "object")
+
+
+def _fallback_object_relation(input_dict: dict) -> str:
+    tag1 = str(input_dict["object1"]["object_tag"]).lower()
+    tag2 = str(input_dict["object2"]["object_tag"]).lower()
+    c1 = np.asarray(input_dict["object1"]["bbox_center"], dtype=float)
+    c2 = np.asarray(input_dict["object2"]["bbox_center"], dtype=float)
+    delta = c1 - c2
+    dx, dy, dz = float(delta[0]), float(delta[1]), float(delta[2])
+    if np.hypot(dx, dy) < 5.0:
+        return "near"
+    if abs(dx) >= abs(dy):
+        return "in_front_of" if dx > 0 else "behind"
+    return "left_of" if dy > 0 else "right_of"
+
+
+def _json_safe_history(history) -> list[list[float]]:
+    safe = []
+    for item in history or []:
+        try:
+            arr = np.asarray(item, dtype=float).reshape(-1)
+            safe.append([float(v) for v in arr[:3]])
+        except Exception:
+            continue
+    return safe
+
+
+def _is_dynamic_scenegraph_node(obj: dict) -> bool:
+    return str(obj.get("motion_state", "unknown")).lower() == "dynamic" or bool(obj.get("is_short_term", False))
+
+
+def _object_last_observation_bbox_center(segment) -> list[float] | None:
+    try:
+        image_indices = segment.get("image_idx", [])
+        xyxy_list = segment.get("xyxy", [])
+        if not image_indices or not xyxy_list:
+            return None
+        last_idx = int(np.argmax(np.asarray(image_indices, dtype=int)))
+        xyxy = np.asarray(xyxy_list[last_idx], dtype=float)
+        center_xy = [(xyxy[0] + xyxy[2]) / 2.0, (xyxy[1] + xyxy[3]) / 2.0]
+        bbox = segment["bbox"]
+        center = np.asarray(bbox.center, dtype=float)
+        center[0] = center[0]
+        center[1] = center[1]
+        return np.round(center, 1).tolist()
+    except Exception:
+        return None
+
+
+def _is_strong_scenegraph_edge(
+    relation: str,
+    obj1: dict,
+    obj2: dict,
+    max_distance_m: float,
+    allowed_relations: List[str] | None,
+) -> bool:
+    relation = str(relation).strip().lower()
+    if relation in {"none of these", "fail", "invalid", ""}:
+        return False
+
+    allowed = set(allowed_relations or ["near"])
+    if relation not in allowed:
+        return False
+
+    c1 = np.asarray(obj1["bbox"].center, dtype=float)
+    c2 = np.asarray(obj2["bbox"].center, dtype=float)
+    planar_distance = float(np.linalg.norm(c1[:2] - c2[:2]))
+    return planar_distance <= float(max_distance_m)
 
 
 def display_images(image_list):
@@ -841,7 +1121,11 @@ def annotate_scenegraph(args):
     # Load the pruned scene map
     scene_map = MapObjectList()
     with gzip.open(Path(args.cachedir) / "map" / "scene_map_cfslam_pruned.pkl.gz", "rb") as f:
-        scene_map.load_serializable(pkl.load(f))
+        loaded_data = pkl.load(f)
+        if isinstance(loaded_data, dict) and "objects" in loaded_data:
+            scene_map.load_serializable(loaded_data["objects"])
+        else:
+            scene_map.load_serializable(loaded_data)
 
     annot_inds = None
     if args.annot_inds is not None:

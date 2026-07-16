@@ -19,10 +19,9 @@ from gradslam.structures.pointclouds import Pointclouds
 
 from conceptgraph.slam.slam_classes import MapObjectList
 
-from conceptgraph.llava.llava_model import LLaVaChat
+from conceptgraph.vlm.qwen_vl_chat import QwenVLChat
 from conceptgraph.utils.image import crop_image_pil
-try: LLAVA_CKPT_PATH = os.environ["LLAVA_CKPT_PATH"]
-except KeyError: raise ValueError("Please set the environment variable LLAVA_CKPT_PATH to the path of the LLaVA checkpoint")
+QWEN_VL_CKPT_PATH = os.environ.get("QWEN_VL_CKPT_PATH", "Qwen/Qwen2-VL-2B-Instruct")
 
 def get_parser():
     parser = argparse.ArgumentParser()
@@ -86,9 +85,8 @@ if __name__ == "__main__":
     global_pcd.colors = o3d.utility.Vector3dVector(np.concatenate([pcd.colors for pcd in pcds]))
     object_indices = np.concatenate([np.full(len(pcd.points), i) for i, pcd in enumerate(pcds)])
     
-    # chat = LLaVaChat(LLAVA_CKPT_PATH, "multimodal", 1)
-    chat = LLaVaChat(LLAVA_CKPT_PATH, "default", 1)
-    print("LLaVA chat initialized...")
+    chat = QwenVLChat(QWEN_VL_CKPT_PATH, "cuda:0")
+    print("Qwen-VL chat initialized...")
     
     while True:
         # Set the title of the window
@@ -137,7 +135,6 @@ if __name__ == "__main__":
         idx_sort = np.argsort(conf)[::-1]
         
         object_crops = []
-        crop_features = []
         for i, idx_det in enumerate(idx_sort[:5]):
             # wrong_path = picked_obj['color_path'][idx_det]
             # correct_prefix = '/home/sacha/data/scan12/'
@@ -155,13 +152,7 @@ if __name__ == "__main__":
             x1, y1, x2, y2 = xyxy
             image_crop = crop_image_pil(image, x1, y1, x2, y2, 10)
 
-            image_tensor = chat.image_processor.preprocess(image_crop, return_tensors="pt")[
-                "pixel_values"
-            ][0]
-            image_feature = chat.encode_image(image_tensor[None, ...].half().cuda())
-            
             object_crops.append(image_crop)
-            crop_features.append(image_feature)
             
         # Show the crops using plt
         fig, axes = plt.subplots(1, len(object_crops), figsize=(10, 3))
@@ -177,17 +168,12 @@ if __name__ == "__main__":
         # print("Using the LLaVA feature from the most confident detection...")
         # llava_feat = crop_features[0]
         
-        print(f"Using the mean feature from {len(crop_features)} image crops...")
-        print(crop_features[0].shape)
-        llava_feat = torch.stack(crop_features, dim=0).mean(dim=0)
-        print(llava_feat.shape)
-        
         query = "What is the central object in this image?"
-        outputs = chat(query=query, image_features=llava_feat.half().cuda())
+        outputs = chat(query=query, images=object_crops[:1])
         # console.print("[bold red]User:[/bold red] " + query)
         print("User: " + query)
         # print(outputs)
-        print("LLaVA: " + outputs)
+        print("Qwen-VL: " + outputs)
 
         while True:
             query = input("Enter a query ('q' to quit): ")
@@ -195,9 +181,9 @@ if __name__ == "__main__":
                 break
             # console.print("[bold red]User:[/bold red] " + query)
             print("User: " + query)
-            outputs = chat(query=query, image_features=None)
+            outputs = chat(query=query, images=object_crops[:1])
             # print(outputs)
-            print("LLaVA: " + outputs)
+            print("Qwen-VL: " + outputs)
 
             
         plt.close(fig)

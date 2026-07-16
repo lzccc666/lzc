@@ -9,6 +9,17 @@ import open3d as o3d
 
 from conceptgraph.utils.general_utils import to_numpy, to_tensor
 
+
+MOTION_DEFAULTS = {
+    "is_potential_dynamic": False,
+    "motion_state": "unknown",
+    "center_history": None,
+    "frame_history": None,
+    "velocity": 0.0,
+    "is_short_term": False,
+    "last_seen_frame": -1,
+}
+
 class DetectionList(list):
     def get_values(self, key, idx:int=None):
         if idx is None:
@@ -119,6 +130,7 @@ class MapObjectList(DetectionList):
         s_obj_list = []
         for obj in self:
             s_obj_dict = copy.deepcopy(obj)
+            _ensure_serializable_motion_defaults(s_obj_dict)
             
             s_obj_dict['clip_ft'] = to_numpy(s_obj_dict['clip_ft'])
             s_obj_dict['text_ft'] = to_numpy(s_obj_dict['text_ft'])
@@ -152,5 +164,38 @@ class MapObjectList(DetectionList):
             del new_obj['pcd_np']
             del new_obj['bbox_np']
             del new_obj['pcd_color_np']
+            _ensure_serializable_motion_defaults(new_obj)
             
             self.append(new_obj)
+
+
+def _ensure_serializable_motion_defaults(obj: dict) -> None:
+    if obj.get("center_history") is None:
+        center = _infer_center_for_defaults(obj)
+        obj["center_history"] = [center]
+    if obj.get("frame_history") is None:
+        frame = int(obj.get("last_seen_frame", -1))
+        if frame < 0 and obj.get("image_idx"):
+            frame = int(np.max(np.asarray(obj["image_idx"], dtype=int)))
+        obj["frame_history"] = [frame]
+    if "last_seen_frame" not in obj or int(obj.get("last_seen_frame", -1)) < 0:
+        frame_hist = obj.get("frame_history", [-1])
+        obj["last_seen_frame"] = int(frame_hist[-1]) if frame_hist else -1
+    for key, value in MOTION_DEFAULTS.items():
+        if key not in obj:
+            obj[key] = [] if value is None else copy.deepcopy(value)
+
+
+def _infer_center_for_defaults(obj: dict) -> list[float]:
+    bbox = obj.get("bbox")
+    if bbox is not None:
+        if hasattr(bbox, "center"):
+            return np.asarray(bbox.center, dtype=float).tolist()
+        if hasattr(bbox, "get_center"):
+            return np.asarray(bbox.get_center(), dtype=float).tolist()
+    bbox_np = obj.get("bbox_np")
+    if bbox_np is not None:
+        points = np.asarray(bbox_np, dtype=float)
+        if points.ndim == 2 and points.shape[0] > 0:
+            return ((points.min(axis=0) + points.max(axis=0)) / 2.0).tolist()
+    return [0.0, 0.0, 0.0]

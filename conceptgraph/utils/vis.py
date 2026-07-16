@@ -10,9 +10,33 @@ import matplotlib.pyplot as plt
 import torch
 import open3d as o3d
 
-import supervision as sv
-from supervision.draw.color import Color, ColorPalette
+try:
+    import supervision as sv
+    from supervision.draw.color import Color, ColorPalette
+except Exception:  # pragma: no cover
+    sv = None
+
+    class Color:  # type: ignore[too-many-ancestors]
+        pass
+
+    class ColorPalette:  # type: ignore[too-many-ancestors]
+        @staticmethod
+        def default():
+            return None
+
+        @staticmethod
+        def from_hex(*args, **kwargs):
+            return None
+
 from conceptgraph.slam.slam_classes import MapObjectList
+
+
+def _default_color_palette():
+    if hasattr(ColorPalette, "default"):
+        return ColorPalette.default()
+    if hasattr(ColorPalette, "DEFAULT"):
+        return ColorPalette.DEFAULT
+    return None
 
 class OnlineObjectRenderer():
     '''
@@ -194,7 +218,7 @@ def vis_result_fast(
     image: np.ndarray, 
     detections: sv.Detections, 
     classes: list[str], 
-    color: Color | ColorPalette = ColorPalette.default(), 
+    color: Color | ColorPalette | None = None, 
     instance_random_color: bool = False,
     draw_bbox: bool = True,
 ) -> np.ndarray:
@@ -203,15 +227,13 @@ def vis_result_fast(
     This is fast but of the same resolution of the input image, thus can be blurry. 
     '''
     # annotate image with detections
-    box_annotator = sv.BoxAnnotator(
-        color = color,
-        text_scale=0.3,
-        text_thickness=1,
-        text_padding=2,
-    )
-    mask_annotator = sv.MaskAnnotator(
-        color = color
-    )
+    if sv is None:
+        raise ImportError("supervision is not available in the current environment")
+    if color is None:
+        color = _default_color_palette()
+
+    box_annotator = sv.BoxAnnotator(color=color, thickness=2)
+    mask_annotator = sv.MaskAnnotator(color=color)
 
     if hasattr(detections, 'confidence') and hasattr(detections, 'class_id'):
         confidences = detections.confidence
@@ -236,7 +258,7 @@ def vis_result_fast(
     annotated_image = mask_annotator.annotate(scene=image.copy(), detections=detections)
     
     if draw_bbox:
-        annotated_image = box_annotator.annotate(scene=annotated_image, detections=detections, labels=labels)
+        annotated_image = box_annotator.annotate(scene=annotated_image, detections=detections)
     return annotated_image, labels
 
 def vis_result_slow_caption(image, masks, boxes_filt, pred_phrases, caption, text_prompt):

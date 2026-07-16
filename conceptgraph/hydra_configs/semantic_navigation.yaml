@@ -1,0 +1,34 @@
+defaults:
+ - _self_
+
+dataset_root: /root/autodl-tmp/lizichong/dataset/nuscenes_minimal
+scene_id: scene-0061
+exp_suffix: streamlined_yolo_outdoor_objects_v1
+
+query_text: 去前方停车车辆附近
+vehicle_pose: [0.0, 0.0, 0.0]
+
+cachedir: ${dataset_root}/${scene_id}/exp_${exp_suffix}
+scene_map_path: ${cachedir}/map/scene_map_cfslam_pruned.pkl.gz
+scene_graph_json_path: ${cachedir}/scene_graph.json
+annotated_scenegraph_json_path: ${cachedir}/annotated_scenegraph.json
+scene_graph_edge_path: ${cachedir}/cfslam_scenegraph_edges.pkl
+bev_map_path: null
+
+output_dir: ${cachedir}/navigation
+
+grid_resolution: 0.5
+grid_padding_m: 10.0
+robot_radius_m: 1.0
+default_near_distance_m: 8.0
+start_search_radius_m: 6.0
+goal_search_radius_m: 25.0
+allow_goal_fallback: true
+
+lambda_text: 0.55
+lambda_relation: 0.30
+lambda_distance_prior: 0.25
+semantic_cost_weight: 0.05
+clearance_cost_weight: 0.25
+path_smoothing_iterations: 2
+max_candidates: 8

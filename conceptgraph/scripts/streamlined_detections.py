@@ -1,11 +1,16 @@
 
 import gzip
+import json
 from pathlib import Path
 import pickle
 from conceptgraph.scripts.generate_gsa_results import get_sam_predictor
 import cv2
 import hydra
-from line_profiler import profile
+try:
+    from line_profiler import profile
+except ImportError:
+    def profile(func):
+        return func
 import numpy as np
 from omegaconf import DictConfig
 import torch
@@ -42,12 +47,21 @@ def main(cfg: DictConfig):
     )
 
     # Initialize the model(s)
-    checkpoint_dir = "/home/lzc/PycharmProjects/concept-graphs/checkpoint"
+    checkpoint_dir = str(Path(__file__).resolve().parents[2] / "checkpoint")
     detection_model = measure_time(YOLO)(f'{checkpoint_dir}/yolov8l-world.pt')
     sam_predictor = SAM(f'{checkpoint_dir}/mobile_sam.pt') # UltraLytics SAM
     # sam_predictor = measure_time(get_sam_predictor)(cfg) # Normal SAM
+    clip_checkpoint = (
+        Path(checkpoint_dir)
+        / "hf_models"
+        / "models--laion--CLIP-ViT-H-14-laion2B-s32B-b79K"
+        / "snapshots"
+        / "1c2b8495b28150b8a4922ee1c8edee224c284c0c"
+        / "open_clip_model.safetensors"
+    )
     clip_model, _, clip_preprocess = open_clip.create_model_and_transforms(
-        "ViT-H-14", "laion2b_s32b_b79k"
+        "ViT-H-14",
+        pretrained=str(clip_checkpoint),
     )
     clip_model = clip_model.to(cfg.device)
     clip_tokenizer = open_clip.get_tokenizer("ViT-H-14")
@@ -57,6 +71,11 @@ def main(cfg: DictConfig):
     classes = [line.strip() for line in open(cfg.classes_file)]
     classes = [cls for cls in classes if cls not in bg_classes] # remove background classes
     detection_model.set_classes(classes)
+
+    classes_out_path = Path(cfg.dataset_root) / cfg.scene_id / f"gsa_classes_{cfg.exp_suffix.split('_outdoor_objects_v1')[0] if cfg.exp_suffix.endswith('_outdoor_objects_v1') else 'streamlined_yolo'}.json"
+    if not classes_out_path.exists():
+        with open(classes_out_path, "w", encoding="utf-8") as f:
+            json.dump(classes, f, ensure_ascii=False, indent=2)
     
     # Create the output directory and save the current config
     exp_out_path = Path(cfg.dataset_root) / cfg.scene_id / f"exp_{cfg.exp_suffix}"

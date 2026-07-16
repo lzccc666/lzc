@@ -18,6 +18,37 @@ from conceptgraph.slam.slam_classes import MapObjectList, DetectionList
 from conceptgraph.utils.ious import compute_3d_iou, compute_3d_iou_accuracte_batch, mask_subtract_contained, compute_iou_batch
 from conceptgraph.dataset.datasets_common import from_intrinsics_matrix
 
+
+DEFAULT_DYNAMIC_CLASSES = {
+    "car",
+    "truck",
+    "bus",
+    "motorcycle",
+    "bicycle",
+    "pedestrian",
+}
+
+DEFAULT_STATIC_CLASSES = {
+    "traffic sign",
+    "traffic light",
+    "road",
+    "sidewalk",
+    "building",
+    "tree",
+    "fence",
+    "pole",
+}
+
+MOTION_STATE_KEYS = {
+    "is_potential_dynamic",
+    "motion_state",
+    "center_history",
+    "frame_history",
+    "velocity",
+    "is_short_term",
+    "last_seen_frame",
+}
+
 def get_classes_colors(classes):
     class_colors = {}
 
@@ -175,6 +206,192 @@ def get_bounding_box(cfg, pcd):
     else:
         return pcd.get_axis_aligned_bounding_box()
 
+
+def _cfg_list(cfg, key: str, default: set[str]) -> set[str]:
+    values = getattr(cfg, key, None)
+    if values is None:
+        return set(default)
+    return {normalize_class_name(item) for item in values}
+
+
+def normalize_class_name(value) -> str:
+    return str(value).strip().lower().replace("_", " ")
+
+
+def get_object_class_names(obj: dict) -> set[str]:
+    raw_names = obj.get("class_name", obj.get("object_tag", []))
+    if isinstance(raw_names, str):
+        raw_names = [raw_names]
+    names = {normalize_class_name(name) for name in raw_names if str(name).strip()}
+    return names
+
+
+def get_object_center(obj: dict) -> np.ndarray:
+    bbox = obj.get("bbox")
+    if bbox is not None:
+        if hasattr(bbox, "center"):
+            return np.asarray(bbox.center, dtype=float)
+        if hasattr(bbox, "get_center"):
+            return np.asarray(bbox.get_center(), dtype=float)
+        if isinstance(bbox, dict) and "center" in bbox:
+            return np.asarray(bbox["center"], dtype=float)
+    if obj.get("center_history"):
+        return np.asarray(obj["center_history"][-1], dtype=float)
+    bbox_np = obj.get("bbox_np")
+    if bbox_np is not None:
+        points = np.asarray(bbox_np, dtype=float)
+        return (points.min(axis=0) + points.max(axis=0)) / 2.0
+    raise KeyError("Object has neither bbox nor center_history")
+
+
+def get_object_frame_idx(obj: dict, fallback: int = 0) -> int:
+    if "last_seen_frame" in obj:
+        return int(obj["last_seen_frame"])
+    image_idx = obj.get("image_idx", [])
+    if image_idx:
+        return int(np.max(np.asarray(image_idx, dtype=int)))
+    return int(fallback)
+
+
+def is_potential_dynamic_class(cfg, class_names: set[str]) -> bool:
+    dynamic_classes = _cfg_list(cfg, "dynamic_classes", DEFAULT_DYNAMIC_CLASSES)
+    return bool(class_names & dynamic_classes)
+
+
+def is_static_class(cfg, class_names: set[str]) -> bool:
+    static_classes = _cfg_list(cfg, "static_classes", DEFAULT_STATIC_CLASSES)
+    return bool(class_names & static_classes)
+
+
+def initialize_motion_metadata(cfg, obj: dict, frame_idx: int | None = None) -> dict:
+    """Attach motion metadata to a new detection or old deserialized object."""
+    if not bool(getattr(cfg, "enable_dynamic_object_handling", True)):
+        return obj
+    class_names = get_object_class_names(obj)
+    is_potential_dynamic = is_potential_dynamic_class(cfg, class_names)
+    is_static = is_static_class(cfg, class_names)
+    center = get_object_center(obj).astype(float).tolist()
+    if frame_idx is None:
+        frame_idx = get_object_frame_idx(obj)
+
+    obj.setdefault("is_potential_dynamic", bool(is_potential_dynamic))
+    # A vehicle/person class is only "potentially dynamic"; without observed
+    # motion evidence it should remain a long-term, mergeable static object.
+    obj.setdefault("motion_state", "static")
+    obj.setdefault("center_history", [center])
+    obj.setdefault("frame_history", [int(frame_idx)])
+    obj.setdefault("velocity", 0.0)
+    obj.setdefault("is_short_term", False)
+    obj.setdefault("last_seen_frame", int(frame_idx))
+    trim_motion_history(cfg, obj)
+    return obj
+
+
+def ensure_motion_metadata(cfg, obj: dict) -> dict:
+    return initialize_motion_metadata(cfg, obj, frame_idx=get_object_frame_idx(obj))
+
+
+def trim_motion_history(cfg, obj: dict) -> None:
+    max_size = int(getattr(cfg, "center_history_size", 8))
+    if max_size <= 0:
+        return
+    for key in ("center_history", "frame_history"):
+        if key in obj and isinstance(obj[key], list) and len(obj[key]) > max_size:
+            obj[key] = obj[key][-max_size:]
+
+
+def estimate_observation_velocity(cfg, obj: dict, det: dict) -> tuple[float, np.ndarray, int]:
+    ensure_motion_metadata(cfg, obj)
+    initialize_motion_metadata(cfg, det)
+    current_center = get_object_center(det)
+    previous_center = np.asarray(obj.get("center_history", [get_object_center(obj)])[-1], dtype=float)
+    current_frame = get_object_frame_idx(det, get_object_frame_idx(obj) + 1)
+    previous_frame = get_object_frame_idx(obj)
+    frame_dt = float(getattr(cfg, "frame_dt", 1.0))
+    delta_frames = max(1, int(current_frame) - int(previous_frame))
+    delta_t = max(frame_dt * delta_frames, 1e-6)
+    velocity = float(np.linalg.norm(current_center - previous_center) / delta_t)
+    return velocity, current_center, current_frame
+
+
+def update_motion_metadata_after_match(cfg, obj: dict, det: dict, velocity: float, current_center: np.ndarray, current_frame: int) -> dict:
+    if not bool(getattr(cfg, "enable_dynamic_object_handling", True)):
+        return obj
+    class_names = get_object_class_names(obj) | get_object_class_names(det)
+    is_potential_dynamic = is_potential_dynamic_class(cfg, class_names)
+    is_static = is_static_class(cfg, class_names)
+    velocity_threshold = float(getattr(cfg, "velocity_threshold", 0.5))
+
+    obj["is_potential_dynamic"] = bool(is_potential_dynamic)
+    obj["velocity"] = float(velocity)
+    obj["last_seen_frame"] = int(current_frame)
+    obj.setdefault("center_history", [])
+    obj.setdefault("frame_history", [])
+    obj["center_history"].append(np.asarray(current_center, dtype=float).tolist())
+    obj["frame_history"].append(int(current_frame))
+    trim_motion_history(cfg, obj)
+
+    if is_static:
+        obj["motion_state"] = "static"
+        obj["is_short_term"] = False
+    elif is_potential_dynamic and velocity > velocity_threshold:
+        obj["motion_state"] = "dynamic"
+        obj["is_short_term"] = True
+    elif is_potential_dynamic:
+        obj["motion_state"] = "static"
+        obj["is_short_term"] = False
+    else:
+        obj["motion_state"] = obj.get("motion_state", "unknown")
+        obj["is_short_term"] = bool(obj.get("is_short_term", False))
+    return obj
+
+
+def should_use_short_term_update(cfg, obj: dict, det: dict, velocity: float) -> bool:
+    if not bool(getattr(cfg, "enable_dynamic_object_handling", True)):
+        return False
+    class_names = get_object_class_names(obj) | get_object_class_names(det)
+    if is_static_class(cfg, class_names):
+        return False
+    return is_potential_dynamic_class(cfg, class_names) and velocity > float(getattr(cfg, "velocity_threshold", 0.5))
+
+
+def update_dynamic_object_short_term(cfg, obj: dict, det: dict, velocity: float, current_center: np.ndarray, current_frame: int) -> dict:
+    """Update identity, semantics and current geometry without accumulating old/new point clouds."""
+    n_obj = int(obj.get("num_detections", 1))
+    n_det = int(det.get("num_detections", 1))
+    for key, value in det.items():
+        if key in {"pcd", "bbox", "clip_ft", "text_ft", "inst_color"}:
+            continue
+        if key in MOTION_STATE_KEYS:
+            continue
+        if isinstance(value, list):
+            obj.setdefault(key, [])
+            obj[key] = obj[key] + value
+        elif isinstance(value, (int, float, np.integer, np.floating)) and key == "num_detections":
+            obj[key] = n_obj + n_det
+        elif key not in obj:
+            obj[key] = copy.deepcopy(value)
+
+    obj["pcd"] = copy.deepcopy(det["pcd"])
+    obj["bbox"] = copy.deepcopy(det["bbox"])
+    obj["bbox"].color = [1, 0.6, 0]
+
+    obj["clip_ft"] = (to_tensor(obj["clip_ft"]) * n_obj + to_tensor(det["clip_ft"]) * n_det) / max(n_obj + n_det, 1)
+    obj["clip_ft"] = F.normalize(obj["clip_ft"], dim=0)
+    obj["text_ft"] = (to_tensor(obj["text_ft"]) * n_obj + to_tensor(det["text_ft"]) * n_det) / max(n_obj + n_det, 1)
+    obj["text_ft"] = F.normalize(obj["text_ft"], dim=0)
+    update_motion_metadata_after_match(cfg, obj, det, velocity, current_center, current_frame)
+    obj["motion_state"] = "dynamic"
+    obj["is_short_term"] = True
+    return obj
+
+
+def is_long_term_mergeable(cfg, obj: dict) -> bool:
+    if not bool(getattr(cfg, "enable_dynamic_object_handling", True)):
+        return True
+    ensure_motion_metadata(cfg, obj)
+    return obj.get("motion_state") != "dynamic" and not bool(obj.get("is_short_term", False))
+
 def merge_obj2_into_obj1(cfg, obj1, obj2, run_dbscan=True):
     '''
     Merge the new object to the old object
@@ -183,19 +400,35 @@ def merge_obj2_into_obj1(cfg, obj1, obj2, run_dbscan=True):
     n_obj1_det = obj1['num_detections']
     n_obj2_det = obj2['num_detections']
     
-    for k in obj1.keys():
+    for k in list(obj1.keys()):
         if k in ['caption']:
             # Here we need to merge two dictionaries and adjust the key of the second one
             for k2, v2 in obj2['caption'].items():
                 obj1['caption'][k2 + n_obj1_det] = v2
         elif k not in ['pcd', 'bbox', 'clip_ft', "text_ft"]:
-            if isinstance(obj1[k], list) or isinstance(obj1[k], int):
-                obj1[k] += obj2[k]
-            elif k == "inst_color":
+            if k in MOTION_STATE_KEYS:
+                continue
+            if k == "inst_color":
                 obj1[k] = obj1[k] # Keep the initial instance color
+            elif k not in obj2:
+                continue
+            elif isinstance(obj1[k], list):
+                obj1[k] += obj2[k]
+            elif isinstance(obj1[k], bool):
+                obj1[k] = bool(obj1[k])
+            elif isinstance(obj1[k], int):
+                obj1[k] += obj2[k]
+            elif isinstance(obj1[k], float):
+                obj1[k] = float(obj1[k])
+            elif isinstance(obj1[k], str):
+                obj1[k] = obj1[k]
+            elif isinstance(obj1[k], dict):
+                merged = copy.deepcopy(obj1[k])
+                if isinstance(obj2[k], dict):
+                    merged.update(obj2[k])
+                obj1[k] = merged
             else:
-                # TODO: handle other types if needed in the future
-                raise NotImplementedError
+                obj1[k] = obj1[k]
         else: # pcd, bbox, clip_ft, text_ft are handled below
             continue
 
@@ -218,6 +451,10 @@ def merge_obj2_into_obj1(cfg, obj1, obj2, run_dbscan=True):
                        obj2['text_ft'] * n_obj2_det) / (
                        n_obj1_det + n_obj2_det)
     obj1['text_ft'] = F.normalize(obj1['text_ft'], dim=0)
+
+    if bool(getattr(cfg, "enable_dynamic_object_handling", True)):
+        velocity, current_center, current_frame = estimate_observation_velocity(cfg, obj1, obj2)
+        update_motion_metadata_after_match(cfg, obj1, obj2, velocity, current_center, current_frame)
     
     return obj1
 
@@ -333,6 +570,8 @@ def merge_overlap_objects(cfg, objects: MapObjectList, overlap_matrix: np.ndarra
 
     kept_objects = np.ones(len(objects), dtype=bool)
     for i, j, ratio in zip(x, y, overlap_ratio):
+        if not is_long_term_mergeable(cfg, objects[i]) or not is_long_term_mergeable(cfg, objects[j]):
+            continue
         visual_sim = F.cosine_similarity(
             to_tensor(objects[i]['clip_ft']),
             to_tensor(objects[j]['clip_ft']),
@@ -563,6 +802,7 @@ def gobs_to_detection_list(
             'clip_ft': to_tensor(gobs['image_feats'][mask_idx]),
             'text_ft': to_tensor(gobs['text_feats'][mask_idx]),
         }
+        initialize_motion_metadata(cfg, detected_object, frame_idx=idx)
         
         if class_name in BG_CLASSES:
             bg_detection_list.append(detected_object)
