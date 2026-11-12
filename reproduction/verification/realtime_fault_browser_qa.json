@@ -1,0 +1,134 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "viewport": "desktop",
+      "condition": "baseline",
+      "frame": 0,
+      "effective_detection_visible": true,
+      "four_outcomes": "生成路线：是\n选对对象：是\n正确锁定：是\n实际到达：是",
+      "GT_hidden": true,
+      "source_links_checked": 3,
+      "page_errors": []
+    },
+    {
+      "viewport": "desktop",
+      "condition": "sensor_blackout_4s",
+      "frame": 5,
+      "effective_detection_visible": true,
+      "four_outcomes": "生成路线：是\n选对对象：是\n正确锁定：是\n实际到达：是",
+      "GT_hidden": true,
+      "source_links_checked": 3,
+      "page_errors": []
+    },
+    {
+      "viewport": "desktop",
+      "condition": "lidar_dropout_80pct",
+      "frame": 5,
+      "effective_detection_visible": true,
+      "four_outcomes": "生成路线：是\n选对对象：是\n正确锁定：是\n实际到达：是",
+      "GT_hidden": true,
+      "source_links_checked": 3,
+      "page_errors": []
+    },
+    {
+      "viewport": "desktop",
+      "condition": "depth_noise_02m",
+      "frame": 5,
+      "effective_detection_visible": true,
+      "four_outcomes": "生成路线：是\n选对对象：是\n正确锁定：是\n实际到达：是",
+      "GT_hidden": true,
+      "source_links_checked": 3,
+      "page_errors": []
+    },
+    {
+      "viewport": "desktop",
+      "condition": "pose_noise_025m_2deg",
+      "frame": 5,
+      "effective_detection_visible": true,
+      "four_outcomes": "生成路线：是\n选对对象：是\n正确锁定：是\n实际到达：是",
+      "GT_hidden": true,
+      "source_links_checked": 3,
+      "page_errors": []
+    },
+    {
+      "viewport": "desktop",
+      "condition": "detection_dropout_30pct",
+      "frame": 5,
+      "effective_detection_visible": true,
+      "four_outcomes": "生成路线：是\n选对对象：是\n正确锁定：是\n实际到达：是",
+      "GT_hidden": true,
+      "source_links_checked": 3,
+      "page_errors": []
+    },
+    {
+      "viewport": "mobile",
+      "condition": "baseline",
+      "frame": 0,
+      "effective_detection_visible": true,
+      "four_outcomes": "生成路线：是\n选对对象：是\n正确锁定：是\n实际到达：是",
+      "GT_hidden": true,
+      "source_links_checked": 3,
+      "page_errors": []
+    },
+    {
+      "viewport": "mobile",
+      "condition": "sensor_blackout_4s",
+      "frame": 5,
+      "effective_detection_visible": true,
+      "four_outcomes": "生成路线：是\n选对对象：是\n正确锁定：是\n实际到达：是",
+      "GT_hidden": true,
+      "source_links_checked": 3,
+      "page_errors": []
+    },
+    {
+      "viewport": "mobile",
+      "condition": "lidar_dropout_80pct",
+      "frame": 5,
+      "effective_detection_visible": true,
+      "four_outcomes": "生成路线：是\n选对对象：是\n正确锁定：是\n实际到达：是",
+      "GT_hidden": true,
+      "source_links_checked": 3,
+      "page_errors": []
+    },
+    {
+      "viewport": "mobile",
+      "condition": "depth_noise_02m",
+      "frame": 5,
+      "effective_detection_visible": true,
+      "four_outcomes": "生成路线：是\n选对对象：是\n正确锁定：是\n实际到达：是",
+      "GT_hidden": true,
+      "source_links_checked": 3,
+      "page_errors": []
+    },
+    {
+      "viewport": "mobile",
+      "condition": "pose_noise_025m_2deg",
+      "frame": 5,
+      "effective_detection_visible": true,
+      "four_outcomes": "生成路线：是\n选对对象：是\n正确锁定：是\n实际到达：是",
+      "GT_hidden": true,
+      "source_links_checked": 3,
+      "page_errors": []
+    },
+    {
+      "viewport": "mobile",
+      "condition": "detection_dropout_30pct",
+      "frame": 5,
+      "effective_detection_visible": true,
+      "four_outcomes": "生成路线：是\n选对对象：是\n正确锁定：是\n实际到达：是",
+      "GT_hidden": true,
+      "source_links_checked": 3,
+      "page_errors": []
+    }
+  ],
+  "read_only_requests": true,
+  "new_model_calls": 0,
+  "human_records_written": 0,
+  "limitations": [
+    "只读保存的六条件单任务CPU日志",
+    "15秒TTL下4秒断流未触发过期制动",
+    "不新增独立任务覆盖或正式GPU故障完成信用"
+  ],
+  "goal_complete": false
+}

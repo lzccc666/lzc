@@ -1,0 +1,216 @@
+{
+  "conditions": {
+    "first_reachable_same_safe_pool": {
+      "positive_selection": {
+        "estimate": 0.04638472032742155,
+        "numerator": 34,
+        "denominator": 733,
+        "ci95": [
+          0.008517706332233862,
+          0.11153846153846154
+        ],
+        "valid_resamples": 4000
+      },
+      "no_match_false_selection": {
+        "estimate": 0.015706806282722512,
+        "numerator": 6,
+        "denominator": 382,
+        "ci95": [
+          0.0,
+          0.03743551604868318
+        ],
+        "valid_resamples": 4000
+      },
+      "selected": 50,
+      "route_generated": {
+        "count": 50,
+        "denominator": 1115,
+        "rate": 0.04484304932735426
+      },
+      "full_road_legal": {
+        "count": 46,
+        "denominator": 50,
+        "rate": 0.92
+      },
+      "static_body_pose_legal": {
+        "count": 1,
+        "denominator": 50,
+        "rate": 0.02
+      },
+      "endpoint_2m_from_predicted_bbox": {
+        "count": 50,
+        "denominator": 50,
+        "rate": 1.0
+      },
+      "failures": {
+        "NO_SEMANTIC_CANDIDATES": 1036,
+        "NO_LEGAL_LANE_PATH": 29
+      }
+    },
+    "joint_safe_approach": {
+      "positive_selection": {
+        "estimate": 0.04638472032742155,
+        "numerator": 34,
+        "denominator": 733,
+        "ci95": [
+          0.008517706332233862,
+          0.11153846153846154
+        ],
+        "valid_resamples": 4000
+      },
+      "no_match_false_selection": {
+        "estimate": 0.015706806282722512,
+        "numerator": 6,
+        "denominator": 382,
+        "ci95": [
+          0.0,
+          0.03743551604868318
+        ],
+        "valid_resamples": 4000
+      },
+      "selected": 50,
+      "route_generated": {
+        "count": 50,
+        "denominator": 1115,
+        "rate": 0.04484304932735426
+      },
+      "full_road_legal": {
+        "count": 46,
+        "denominator": 50,
+        "rate": 0.92
+      },
+      "static_body_pose_legal": {
+        "count": 1,
+        "denominator": 50,
+        "rate": 0.02
+      },
+      "endpoint_2m_from_predicted_bbox": {
+        "count": 50,
+        "denominator": 50,
+        "rate": 1.0
+      },
+      "failures": {
+        "NO_SEMANTIC_CANDIDATES": 1036,
+        "NO_LEGAL_LANE_PATH": 29
+      }
+    },
+    "joint_without_safe_approach": {
+      "positive_selection": {
+        "estimate": 0.03547066848567531,
+        "numerator": 26,
+        "denominator": 733,
+        "ci95": [
+          0.006047102456836098,
+          0.10020163537635952
+        ],
+        "valid_resamples": 4000
+      },
+      "no_match_false_selection": {
+        "estimate": 0.013089005235602094,
+        "numerator": 5,
+        "denominator": 382,
+        "ci95": [
+          0.0,
+          0.03533882164248303
+        ],
+        "valid_resamples": 4000
+      },
+      "selected": 32,
+      "route_generated": {
+        "count": 32,
+        "denominator": 1115,
+        "rate": 0.028699551569506727
+      },
+      "full_road_legal": {
+        "count": 31,
+        "denominator": 32,
+        "rate": 0.96875
+      },
+      "static_body_pose_legal": {
+        "count": 0,
+        "denominator": 32,
+        "rate": 0.0
+      },
+      "endpoint_2m_from_predicted_bbox": {
+        "count": 0,
+        "denominator": 32,
+        "rate": 0.0
+      },
+      "failures": {
+        "NO_SEMANTIC_CANDIDATES": 1036,
+        "NO_LEGAL_LANE_PATH": 47
+      }
+    }
+  },
+  "paired_differences": [
+    {
+      "method": "first_reachable_same_safe_pool",
+      "baseline": "joint_safe_approach",
+      "metric": "positive_selection",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "first_reachable_same_safe_pool",
+      "baseline": "joint_safe_approach",
+      "metric": "no_match_false_selection",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "joint_without_safe_approach",
+      "baseline": "joint_safe_approach",
+      "metric": "positive_selection",
+      "difference": -0.010914051841746243,
+      "ci95": [
+        -0.021164021164021163,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "joint_without_safe_approach",
+      "baseline": "joint_safe_approach",
+      "metric": "no_match_false_selection",
+      "difference": -0.002617801047120418,
+      "ci95": [
+        -0.006884978336993294,
+        0.0
+      ],
+      "valid_resamples": 4000
+    }
+  ],
+  "scenes": 38,
+  "logs": 11,
+  "query_cases": 1115,
+  "case_records": 3345,
+  "raw_sha256": "1676f1f6ba5fe79522718493c3cbe105a05beb879a2f7b55b31936110eadfafe",
+  "first_and_joint_share_actual_safe_goal_pool": true,
+  "bootstrap": {
+    "unit": "采集log",
+    "repetitions": 4000,
+    "seed": 17
+  },
+  "limitations": [
+    "离线当前观测规划；两种策略不产生新的控制轨迹，实际到达/稳定锁定均未评价",
+    "沿用生产接近环与联合效用，但为有界离线诊断替换为0.5m点车道规划，非运行中Hybrid导航成绩",
+    "每目标12个接近环候选，Top-K=3；首达条件共享完整条件实际规划池，仅改变对象选择顺序",
+    "去安全接近条件只改为预测中心投影并取消距离/净空门限，仍有预测障碍和车道审计；未执行该条件",
+    "未匹配预测身份为unknown并保留为正查询失败；预测bbox完整性不足，安全结论不覆盖真实整车",
+    "预算耗尽不证明不可达；无路径条件不记100%安全；共享CPU不计独占性能"
+  ],
+  "gt_in_inference": false,
+  "independent_test": false,
+  "actual_arrival_evaluated": false,
+  "goal_complete": false,
+  "elapsed_s": 1156.737370569259,
+  "release_sha256": "1dc37b7e5688b81365baa78ea2bc9be2af1fb26c43c834851ac11888fca9e581"
+}

@@ -425,6 +425,12 @@
       "executable": false
     },
     {
+      "path": "conceptgraph/completion/realtime_faults.py",
+      "sha256": "1357998f7d99107e79c3fa70eec5fc96df0a176630ef22b2bc1e29072c8287f7",
+      "bytes": 16268,
+      "executable": false
+    },
+    {
       "path": "conceptgraph/completion/realtime_matrix.py",
       "sha256": "b8c912537704f852bda26fe5f99bc471b7610b7841143d7a625dc62dc2ad21d4",
       "bytes": 11692,
@@ -2069,6 +2075,12 @@
       "executable": false
     },
     {
+      "path": "tests/test_completion_realtime_faults.py",
+      "sha256": "e830f5b212fa94d3433d11e19dee3a189cd04a47dd5127c1301a75348bd92dfd",
+      "bytes": 7535,
+      "executable": false
+    },
+    {
       "path": "tests/test_completion_realtime_matrix.py",
       "sha256": "c0c5701cc5f585a4419e568ebcebc3e00333d7ac7efe526750325973bbfbfefd",
       "bytes": 1898,
@@ -2218,5 +2230,5 @@
   "original_manuscript_published": false,
   "credentials_published": false,
   "goal_complete": false,
-  "updated_utc": "2026-11-12T14:33:03.631796+00:00"
+  "updated_utc": "2026-11-12T15:26:13.431534+00:00"
 }

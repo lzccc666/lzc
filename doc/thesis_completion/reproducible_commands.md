@@ -315,3 +315,14 @@ CUDA_VISIBLE_DEVICES='' OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=2 \
 ```
 
 实际运行`camera_time_gt_dev_full_001`，报告与原始关联记录在`mapping_evaluation/camera_time_gt_dev_full_001/`。完整参数以该release.json与--help为准；独立审核源码为`source_bundle/camera_time_gt_audit_001.py`。六地图已有完整统计和独立显式车身复算，审核源码`source_bundle/causal_map_audit_002.py`；该审核器固定输出audit_002，已有结果不可覆盖，首次边界失败audit_001须保留。三处数值边界差异记录不应改判通过。
+
+
+## 真实时钟传感器故障与CPU试跑
+
+正式GPU故障当前只排队，不可在主矩阵/缺一语义活跃时手动启动。先查看`faults/realtime_fault_after_semantics_001/release.json`、`source_bundle/realtime_fault_after_semantics_001.log`及进程；已保存run-id拒绝覆盖。等待器已运行，不要再次执行。程序入口`python -m conceptgraph.completion.realtime_faults --help`；矩阵脚本和冻结预算见`task_protocol/realtime_sensor_faults_001.md`。
+
+已完成的独立输入/执行复核可阅读`faults/realtime_fault_cpu_smoke_002/audit_001/report.json`及`report.md`；来源脚本`source_bundle/realtime_fault_cpu_audit_001.py`使用排他新目录，原路径已完成，不应直接覆盖重跑。`realtime_fault_cpu_smoke_002.py`的原run-id已完成，重新实验须独立新版本和预算。第一批001的真实兼容失败保留。
+
+查看器：`http://localhost:8768/visualizations/realtime_fault_cpu_preview_002/index.html`。63张有效检测图来自已保存真实输出重绘，前端新增调用0。源生成脚本002和浏览器QA002留存；001排他写入/Playwright参数失败也保留。
+
+CPU渲染隔离运行库不是全局安装。真实使用的环境变量、OSMesa/PyOpenGL来源、SHA及成功探针见`source_bundle/software_render_runtime_001/accepted_001.json`、`probe_004.log`和`realtime_fault_cpu_smoke_002.py`。库未进入公共Git，异机需从官方源重建；CPU TTL15秒与正式GPU1.5秒分开。4秒断流在CPU批未触发过期停车；仅TTL0.3秒已知路径功能试验显示停车/恢复，不能替代正式GPU证据。

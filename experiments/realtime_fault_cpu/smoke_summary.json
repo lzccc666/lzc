@@ -1,0 +1,44 @@
+{
+  "attempted": 6,
+  "expected": 6,
+  "model": "rule",
+  "frontend_device": "cpu",
+  "complete_input_output_smoke": true,
+  "elapsed_s": 360.9406893160194,
+  "results": [
+    {
+      "condition": "baseline",
+      "status": "ARRIVED",
+      "actual_fault_exposed": false
+    },
+    {
+      "condition": "sensor_blackout_4s",
+      "status": "ARRIVED",
+      "actual_fault_exposed": true
+    },
+    {
+      "condition": "lidar_dropout_80pct",
+      "status": "ARRIVED",
+      "actual_fault_exposed": true
+    },
+    {
+      "condition": "depth_noise_02m",
+      "status": "ARRIVED",
+      "actual_fault_exposed": true
+    },
+    {
+      "condition": "pose_noise_025m_2deg",
+      "status": "ARRIVED",
+      "actual_fault_exposed": true
+    },
+    {
+      "condition": "detection_dropout_30pct",
+      "status": "ARRIVED",
+      "actual_fault_exposed": true
+    }
+  ],
+  "no_Qwen_model_called": true,
+  "formal_GPU_matrix_completed": false,
+  "arrival_credit": false,
+  "goal_complete": false
+}

@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "updated_utc": "2026-11-12T14:54:26.294045+00:00",
+  "elapsed_s": 6.320469928905368,
+  "actual_control_ticks": [
+    45,
+    18
+  ],
+  "blackout_moving_before": 1.1818753573955663,
+  "blackout_stopped_speed": 0.0,
+  "blackout_resumed_speed": 1.0337768125,
+  "blocked_guard_latched": true,
+  "blocked_stopped_speed": 0.0,
+  "unsafe_path_not_restored_by_fresh_packet": true,
+  "independent_execution_audits_passed": true,
+  "control_log_sha256": {
+    "blackout_execution.jsonl": "63ef27484e8d6142b5af35f34464b620e1c5fd2054d2a6f4c528271252dfb93b",
+    "blocked_execution.jsonl": "44ab078e0b6c28fd11955cf55f8798a0e9718546c7ffff8e41b2f62ec2692ecd"
+  },
+  "real_clock": true,
+  "model_calls": 0,
+  "full_perception_fault_experiment": false,
+  "arrival_credit": false,
+  "limitations": [
+    "已知直道路面、预置搜索路径、静态障碍",
+    "TTL .3s是功能试验值，正式感知矩阵1.5s不变",
+    "共享主机墙钟事件只验证功能，不是独占实时性能",
+    "没有真实感知输入或Qwen，不能作为全链故障验收"
+  ],
+  "goal_complete": false
+}
