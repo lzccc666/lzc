@@ -73,9 +73,17 @@ def statistics(source, release, rows):
             'CPU与其他作业共享，无独占性能信用'], independent_test=False, actual_arrival_evaluated=False, goal_complete=False))
 
 
+def validate_baseline_frames(expected, baseline):
+    actual = baseline['source_frames']
+    if any(actual.get(path) != sha for path, sha in expected.items()) or 17 not in baseline['seeds']:
+        raise ValueError('复用基线与当前传感器帧指纹或seed17不一致')
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--run-id', required=True)
+    parser.add_argument('--mapping-run', default='robust_motion_full_001')
+    parser.add_argument('--baseline-fault-run', default='recorded_fault_full_001')
     parser.add_argument('--scene', action='append')
     parser.add_argument('--wall-budget-s', type=float, default=1800.)
     args = parser.parse_args()
@@ -86,15 +94,21 @@ def main():
         raise ValueError('fixed unique development scenes required')
     dest = OUTPUT/'ablations'/args.run_id
     dest.mkdir(parents=True, exist_ok=False)
-    sources = [OUTPUT/'mapping_evaluation/robust_motion_full_001'/s/'frames.jsonl' for s in scenes]
+    sources = [OUTPUT/'mapping_evaluation'/args.mapping_run/s/'frames.jsonl' for s in scenes]
     modules = [Path(__file__), PROJECT/'conceptgraph/completion/fault_robustness.py',
         PROJECT/'conceptgraph/completion/fault_statistics.py', PROJECT/'conceptgraph/completion/stage9.py',
         PROJECT/'conceptgraph/completion/depth.py', PROJECT/'conceptgraph/completion/association.py',
         PROJECT/'conceptgraph/completion/motion.py', PROJECT/'conceptgraph/completion/quality.py',
         *sorted((PROJECT/'conceptgraph/slam').glob('*.py')), PROJECT/'conceptgraph/hydra_configs/base_mapping.yaml']
     frozen = {str(p.relative_to(PROJECT)): digest(p) for p in modules}
-    baseline = OUTPUT/'faults/recorded_fault_full_001'
-    release = dict(conditions=SETTINGS, seed=17, scene_logs={s: known[s]['log_token'] for s in scenes},
+    baseline = OUTPUT/'faults'/args.baseline_fault_run
+    baseline_release = json.loads((baseline/'release.json').read_text())
+    validate_baseline_frames({str(p): digest(p) for p in sources}, baseline_release)
+    if baseline_release.get('inference_config') != OmegaConf.to_container(mapping_config()):
+        raise ValueError('复用基线建图配置不一致')
+    release = dict(mapping_run=args.mapping_run, baseline_fault_run=args.baseline_fault_run,
+        baseline_release_sha256=digest(baseline/'release.json'),
+        conditions=SETTINGS, seed=17, scene_logs={s: known[s]['log_token'] for s in scenes},
         baseline_reports={s: digest(baseline/s/'seed17/unperturbed/report.json') for s in scenes},
         source_frames_sha256={str(p): digest(p) for p in sources}, source_sha256=frozen,
         complete_config=OmegaConf.to_container(mapping_config()), wall_budget_s=args.wall_budget_s,

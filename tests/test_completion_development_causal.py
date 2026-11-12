@@ -10,6 +10,7 @@ from conceptgraph.completion.development_causal_audit import independent_depth, 
 from conceptgraph.completion.development_causal_inputs import bind_detection, development_cameras
 from conceptgraph.completion import development_causal_statistics as causal_statistics
 from conceptgraph.completion import retrieval_statistics
+from conceptgraph.completion.mapping_module_ablation import validate_baseline_frames
 
 
 def test_independent_projection_nearest_collision_and_missing_pixels():
@@ -115,3 +116,11 @@ def test_retrieval_statistics_negative_only_keeps_positive_rate_unknown():
     assert retrieval_statistics.nullable_number(estimates[0, 1]) == 0
     assert retrieval_statistics.nullable_number(estimates[1, 1]) == 1
     assert json.dumps(dict(positive=positive), allow_nan=False) == '{"positive": null}'
+
+
+def test_module_ablation_rejects_baseline_from_future_lidar_or_another_seed():
+    with pytest.raises(ValueError, match='传感器帧'):
+        validate_baseline_frames({'frame': 'past-sha'}, dict(source_frames={'frame': 'future-sha'}, seeds=[17]))
+    with pytest.raises(ValueError, match='seed17'):
+        validate_baseline_frames({'frame': 'past-sha'}, dict(source_frames={'frame': 'past-sha'}, seeds=[29]))
+    validate_baseline_frames({'frame': 'past-sha'}, dict(source_frames={'frame': 'past-sha'}, seeds=[17, 29, 43]))

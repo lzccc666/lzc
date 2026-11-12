@@ -256,4 +256,8 @@ LD_LIBRARY_PATH=/root/miniconda3/envs/conceptgraph/lib OPENBLAS_NUM_THREADS=1 OM
 试运行证据：data_manifest/development_causal_inputs_smoke_001/audit_001/report.json、statistics/causal_mapping_smoke_001/report.json、mapping_evaluation/causal_relations_smoke_001/summary.json、main_experiments/causal_retrieval_smoke_001/report.json、statistics/causal_retrieval_smoke_002/report.json。检索统计001的无正查询NaN写出失败保留，002以null表示未知；缺测和候选缺失均保留在原GT分母。官方sample GT仍存在晚于相机的时间近似，见协议，不将此批称封存测试或完整导航。
 
 
-公开克隆中的开发causal全量复现还需要合法原始nuScenes数据、原开发场景身份文件、同RGB真实前端文件及其SHA清单；公共仓库没有这些数据，不能直接声称异机主实验可复现。在提供这些依赖后，先把`doc/thesis_completion/development_causal_mapping_001.md`与`development_causal_downstream_001.md`复制至本地`outputs/project_v2/thesis_completion_v1/task_protocol/`的同名位置，再运行所列命令。无需原始数据的普通CPU测试已在隔离代码导出291项通过，另2项真实crop数据依赖明确skip。
+开发causal完整输入及独立审计现已结束：38场景11log1508帧，1470真实过去扫描、38缺测，未来0，年龄3.870–63.661ms；1508帧独立重投影像素差0，7659文件SHA通过。实际resume 0归档读取/0新增输出。官方sample GT偏移实测33.136–42.356ms，保留评价时间近似。
+
+新增显式输入版本入口：fault_robustness --mapping-run；mapping_module_ablation --mapping-run和--baseline-fault-run（必须帧SHA/seed17/配置相同）；map_constraint_ablation和goal_selection_ablation --retrieval-run。默认旧版本保留，禁止用旧未来LiDAR完整条件作新causal消融基线。source_bundle/causal_ablations_after_downstream_001.py已启动等待，同版完整causal下游结束后顺序做684扰动、114模块记录、六地图及三目标接近条件；协议development_causal_ablations_001.md。真实smoke均完成，未把排队当结果。全量tests294通过，5依赖警告。全部阶段仍未验收。
+
+公开克隆需另外提供合法原始nuScenes数据、原开发身份和真实前端SHA记录；先把doc/thesis_completion中的development_causal_*_001.md复制至本机outputs/project_v2/thesis_completion_v1/task_protocol同名位置。公共仓库不含这些传感器和模型数据，不声称无数据的一键全量复现。

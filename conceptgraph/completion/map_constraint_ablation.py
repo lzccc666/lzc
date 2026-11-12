@@ -294,6 +294,7 @@ def _save_context(dest, context, frame):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--run-id', required=True)
+    parser.add_argument('--retrieval-run', default='retrieval_baselines_dev_full_001')
     parser.add_argument('--per-scene', type=int, default=6)
     parser.add_argument('--query-limit', type=int)
     parser.add_argument('--wall-budget-s', type=float, default=7200.)
@@ -302,7 +303,7 @@ def main():
     if not 1 <= args.per_scene <= 6 or args.query_limit is not None and args.query_limit < 1:
         raise ValueError('invalid development query budget')
     begun = time.monotonic()
-    source = OUTPUT/'main_experiments/retrieval_baselines_dev_full_001'
+    source = OUTPUT/'main_experiments'/args.retrieval_run
     source_release = json.loads((source/'release.json').read_text())
     queries = selected_queries(source, args.per_scene)
     if args.query_limit:
@@ -320,7 +321,7 @@ def main():
     frozen = {str(p.relative_to(PROJECT)): digest(p) for p in modules}
     dest = OUTPUT/'ablations'/args.run_id
     dest.mkdir(parents=True, exist_ok=False)
-    release = dict(conditions=CONDITIONS, selected_queries=queries, queries=len(queries),
+    release = dict(retrieval_run=args.retrieval_run, conditions=CONDITIONS, selected_queries=queries, queries=len(queries),
         expected_cases=len(queries)*len(CONDITIONS), selection='开发正查询逐场景SHA256固定排序取前6，不访问路径结果',
         source_queries_sha256=digest(source/'queries.jsonl'), source_frames_sha256=source_release['source_frames_sha256'],
         source_sha256=frozen, map_sha256={location: digest(PROJECT/'dataset/nuscenes_map_expansion/expansion'/f'{location}.json')

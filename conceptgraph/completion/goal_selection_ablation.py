@@ -165,12 +165,13 @@ def summarize(destination, rows, scene_logs):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--run-id', required=True)
+    parser.add_argument('--retrieval-run', default='retrieval_baselines_dev_full_001')
     parser.add_argument('--scene')
     parser.add_argument('--goal-budget-s', type=float, default=.5)
     parser.add_argument('--wall-budget-s', type=float, default=3600.)
     args = parser.parse_args()
     begun = time.monotonic()
-    source = OUTPUT/'main_experiments/retrieval_baselines_dev_full_001'
+    source = OUTPUT/'main_experiments'/args.retrieval_run
     release = json.loads((source/'release.json').read_text())
     queries = [r for r in map(json.loads, (source/'queries.jsonl').open())
                if r['method']=='existing_object_joint_rule' and (not args.scene or r['scene']==args.scene)]
@@ -187,7 +188,7 @@ def main():
         ['map_constraint_ablation', 'selection_ablation', 'navigation_diagnostics', 'retrieval_statistics', 'stage9']],
         *sorted((PROJECT/'conceptgraph/navigation').glob('*.py')), PROJECT/'conceptgraph/scenegraph/relations.py']
     source_shas = {str(p):digest(p) for p in dependencies}
-    dump(dest/'release.json', dict(source_sha256=source_shas, source_query_sha256=digest(source/'queries.jsonl'),
+    dump(dest/'release.json', dict(retrieval_run=args.retrieval_run,source_sha256=source_shas, source_query_sha256=digest(source/'queries.jsonl'),
         source_frames_sha256=release['source_frames_sha256'], query_cases=len(queries), expected_records=len(queries)*3,
         conditions=CONDITIONS, selection='全部冻结开发查询；smoke可按scene过滤，不按规划结果筛选',
         top_k=3, goals_per_object=12, approach_distance_m=2., minimum_clearance_m=.5,

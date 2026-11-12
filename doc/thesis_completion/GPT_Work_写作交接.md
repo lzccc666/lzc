@@ -66,3 +66,15 @@ KITTI方法差异按33个drive配对4000次bootstrap：召回差+4.70个百分�
 完整流水线已真实启动（source_bundle/development_causal_pipeline_full_001），转换后自动执行独立审计、38场景七条件重建、11log配对统计；causal_downstream_full_001等待其完成后运行关系、选择上限、四方法检索及统计。不能把排队当完成，最终状态查各complete/report。官方sample GT仍较相机晚约33–42ms，必须披露评价时间近似。本批不提供路径、锁定、实际到达或新封存信用。
 
 可查日志：source_bundle/development_causal_pipeline_full_001.log、source_bundle/development_causal_pipeline_full_001/{convert,audit,mapping,statistics}.log、source_bundle/causal_downstream_full_001.log。输入输出与审计位于data_manifest/development_causal_inputs_full_001；结果位于mapping_evaluation/causal_mapping_full_001、statistics/causal_mapping_full_001。旧GPT_Work_论文写作交接包_v1.zip保留原检查点，不包含此后新增实验；工作目录与validation_report.json是动态进展入口。
+
+新增代码快照已于2026-11-12T12:09:31.779896+00:00同步GitHub main `7706d7358b5cd74a33feda6d5fe32c8b48a6d3e7`（增量源文件总数356；当前原机293测试，隔离导出291通过/2真实数据依赖跳过）。原checkout索引保持，真实完整实验仍在后台；不是Goal完成证明。
+
+
+开发causal完整输入及独立审计现已结束：38场景11log1508帧，1470真实过去扫描、38缺测，未来0，年龄3.870–63.661ms；1508帧独立重投影像素差0，7659文件SHA通过。实际resume 0归档读取/0新增输出。官方sample GT偏移实测33.136–42.356ms，保留评价时间近似。
+
+新增显式输入版本入口：fault_robustness --mapping-run；mapping_module_ablation --mapping-run和--baseline-fault-run（必须帧SHA/seed17/配置相同）；map_constraint_ablation和goal_selection_ablation --retrieval-run。默认旧版本保留，禁止用旧未来LiDAR完整条件作新causal消融基线。source_bundle/causal_ablations_after_downstream_001.py已启动等待，同版完整causal下游结束后顺序做684扰动、114模块记录、六地图及三目标接近条件；协议development_causal_ablations_001.md。真实smoke均完成，未把排队当结果。全量tests294通过，5依赖警告。全部阶段仍未验收。
+
+
+完整38场景过去LiDAR重建统计已结束（statistics/causal_mapping_full_001）：5723个跨帧GT观测全保留，38个缺测帧130个GT观测均0匹配。原融合986/5723（17.23%）、匹配精确率16.49%、中心误差1.696m；深度质量1723/5723（30.11%）、43.68%、1.303m。召回差+12.88pp，11log配对95%CI[8.12,18.08]pp；中心误差差−0.393m，CI[−0.543,−0.270]m。原始身份变化30/615、深度44/1312，率差区间跨0，不称身份改善。稳健运动条件1720/5723、44.05%、1.282m，保留召回略降与身份未知。以上是开发集同输入方法比较；官方sample GT时间近似仍在，未开启新封存，也未做车辆到达。
+
+旧未来LiDAR诊断的19.48%→32.12%等数据仅保留原离线口径，不能混用为当前过去LiDAR成绩。新统计包含七条件及实测/缺测分组、10556帧—方法行与4000次log配对bootstrap；关系及四检索在同批输入上顺序推进，后续完整录制故障/消融按冻结队列执行。

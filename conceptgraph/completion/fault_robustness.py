@@ -126,6 +126,7 @@ def run_case(frames,condition,seed,dest,classes,deadline,*,inference_config=None
 def main():
     parser=argparse.ArgumentParser()
     parser.add_argument('--run-id',required=True)
+    parser.add_argument('--mapping-run',default='robust_motion_full_001')
     parser.add_argument('--scene',action='append')
     parser.add_argument('--seeds',nargs='+',type=int,default=[17,29,43])
     parser.add_argument('--wall-budget-s',type=float,required=True)
@@ -137,13 +138,13 @@ def main():
         raise ValueError('only unique development scenes allowed')
     dest=OUTPUT/'faults'/args.run_id
     dest.mkdir(parents=True,exist_ok=False)
-    sources=[OUTPUT/'mapping_evaluation/robust_motion_full_001'/s/'frames.jsonl' for s in scenes]
+    sources=[OUTPUT/'mapping_evaluation'/args.mapping_run/s/'frames.jsonl' for s in scenes]
     py_sources=[Path(__file__),PROJECT/'conceptgraph/slam/streamlined_mapping.py',
         PROJECT/'conceptgraph/slam/mapping.py',PROJECT/'conceptgraph/slam/utils.py',
         PROJECT/'conceptgraph/completion/depth.py',PROJECT/'conceptgraph/completion/association.py',
         PROJECT/'conceptgraph/completion/motion.py',PROJECT/'conceptgraph/completion/quality.py',
         PROJECT/'conceptgraph/completion/stage9.py',PROJECT/'conceptgraph/hydra_configs/base_mapping.yaml']
-    dump(dest/'release.json',dict(conditions=CONDITIONS,scene_logs={s:known[s]['log_token'] for s in scenes},
+    dump(dest/'release.json',dict(mapping_run=args.mapping_run,conditions=CONDITIONS,scene_logs={s:known[s]['log_token'] for s in scenes},
         seeds=args.seeds,wall_budget_s=args.wall_budget_s,storage_budget_mb=350,
         source_frames={str(p):digest(p) for p in sources},
         source_sha256={str(p.relative_to(PROJECT)):digest(p) for p in py_sources},
