@@ -302,3 +302,16 @@ python -m conceptgraph.completion.inspection --mapping-run causal_mapping_full_0
 ```
 
 本轮过去LiDAR684录制故障、各114动态模块/关联门限完整结束；五步敏感性队列有complete.json。全帧关联和配对统计独立重算脚本为 `source_bundle/causal_fault_audit_001.py`、`causal_module_parameter_audit_001.py`，其输出已存在，原脚本故意拒绝覆盖，复现应另建输出版本或在隔离复现目录执行。不是启动脚本后即视为实验完成。
+
+
+## 相机时间评价敏感性与完整地图复核
+
+已真实完成的运行ID拒绝覆盖。相机时间评价只使用固定过去LiDAR开发预测与隔离官方标注中心；不运行模型/封存导航。重现已有结果须另选run-id，并保持原协议和元数据SHA。原官方时间主成绩不被本补充替代。
+
+```bash
+CUDA_VISIBLE_DEVICES='' OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=2 \
+  /root/miniconda3/envs/conceptgraph/bin/python -m conceptgraph.completion.camera_time_evaluation \
+  --run-id camera_time_gt_dev_reproduction_001
+```
+
+实际运行`camera_time_gt_dev_full_001`，报告与原始关联记录在`mapping_evaluation/camera_time_gt_dev_full_001/`。完整参数以该release.json与--help为准；独立审核源码为`source_bundle/camera_time_gt_audit_001.py`。六地图已有完整统计和独立显式车身复算，审核源码`source_bundle/causal_map_audit_002.py`；该审核器固定输出audit_002，已有结果不可覆盖，首次边界失败audit_001须保留。三处数值边界差异记录不应改判通过。

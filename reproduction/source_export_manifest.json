@@ -101,6 +101,12 @@
       "executable": false
     },
     {
+      "path": "conceptgraph/completion/camera_time_evaluation.py",
+      "sha256": "7648889c25404802e89a62e21367c31aac1d2ff580ed27d429fef872f6ad0434",
+      "bytes": 20510,
+      "executable": false
+    },
+    {
       "path": "conceptgraph/completion/causal_input_audit.py",
       "sha256": "1d832d6ecb9a80b8921f3193caa828a419fadf27ae7e62ec52cf85659b72ec48",
       "bytes": 7789,
@@ -618,8 +624,8 @@
     },
     {
       "path": "conceptgraph/completion/thesis_portal.py",
-      "sha256": "6401c209186a5395161974d66be2ee805452398c66b8fa6479cdee117faa908d",
-      "bytes": 25697,
+      "sha256": "b74d18ff695dd23d592a51af77f471eae4695616b96d20bd2ef0cc8a377f43ac",
+      "bytes": 29450,
       "executable": false
     },
     {
@@ -1985,6 +1991,12 @@
       "executable": false
     },
     {
+      "path": "tests/test_completion_camera_time_evaluation.py",
+      "sha256": "3de1a8f21c07ae1921356e2db7eca3f94116f21862d971681ad06ae26c131d75",
+      "bytes": 4148,
+      "executable": false
+    },
+    {
       "path": "tests/test_completion_development_causal.py",
       "sha256": "d52e554734c4d835160db33d73552c8691bb55bba770f158282a8f9c48ca9fb0",
       "bytes": 7201,
@@ -2206,5 +2218,5 @@
   "original_manuscript_published": false,
   "credentials_published": false,
   "goal_complete": false,
-  "updated_utc": "2026-11-12T13:53:22.619517+00:00"
+  "updated_utc": "2026-11-12T14:33:03.631796+00:00"
 }

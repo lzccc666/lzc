@@ -1,0 +1,23 @@
+{
+  "passed": false,
+  "updated_utc": "2026-11-12T14:28:15.865596+00:00",
+  "reason": "独立显式矩形变换与NumPy矩阵乘法在边界的浮点差引起逐姿态covers明细不一致，尚未完成全量汇总复算",
+  "first_case": [
+    "scene-0174",
+    20,
+    3,
+    "lane_direction"
+  ],
+  "source_sha256": "efc8f001d30ff6dc5fb76c318338bf8ddd1c5cb99277c128391e03256ea63551",
+  "failure_log": "source_bundle/causal_map_audit_001.log",
+  "diagnostic": {
+    "maximum_sampled_corner_hausdorff_m": 2.5421149729252077e-13,
+    "own_rectangle_outside_lane_area_m2": [
+      3.513073553336195e-13,
+      1.62435747787862e-13,
+      1.204642794443632e-13
+    ],
+    "original_run_unchanged": true
+  },
+  "goal_complete": false
+}

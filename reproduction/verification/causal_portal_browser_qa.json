@@ -5,9 +5,9 @@
       "viewport": "desktop",
       "result": {
         "overflow": false,
-        "statusRows": 40,
+        "statusRows": 42,
         "goal": "Goal仍在进行 · 必需条件未全部满足",
-        "main": "已保存尝试记录 253 / 450；尚未据部分样本计算最终结论。",
+        "main": "已保存尝试记录 278 / 450；尚未据部分样本计算最终结论。",
         "human": "真实提交：开发 0；自然指令 0。数量不等于可靠标签覆盖。",
         "paperLinks": [
           "http://127.0.0.1:8768/thesis/manuscript_delivery_016/%E5%AE%8C%E6%95%B4%E8%AE%BA%E6%96%87%E9%98%B6%E6%AE%B5%E6%95%B4%E5%90%88%E7%A8%BF.docx",
@@ -72,6 +72,26 @@
             "status": 200
           },
           {
+            "path": "/task_protocol/camera_time_gt_sensitivity_001.md",
+            "status": 200
+          },
+          {
+            "path": "/mapping_evaluation/camera_time_gt_dev_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/mapping_evaluation/camera_time_gt_dev_full_001/audit_001/report.md",
+            "status": 200
+          },
+          {
+            "path": "/statistics/causal_maps_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/ablations/causal_maps_full_001/audit_002/report.md",
+            "status": 200
+          },
+          {
             "path": "/statistics/causal_modules_full_001/report.json",
             "status": 200
           },
@@ -105,6 +125,10 @@
           },
           {
             "path": "/faults/causal_fault_full_001/audit_001/report.md",
+            "status": 200
+          },
+          {
+            "path": "/source_bundle/tests_camera_time_001.log",
             "status": 200
           },
           {
@@ -153,6 +177,14 @@
           },
           {
             "path": "/data_manifest/causal_cross_input_audit_002/report.json",
+            "status": 200
+          },
+          {
+            "path": "/mapping_evaluation/camera_time_gt_dev_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/ablations/causal_maps_full_001/audit_002/report.md",
             "status": 200
           },
           {
@@ -248,7 +280,11 @@
             "status": 200
           },
           {
-            "path": "/visualizations/thesis_portal_004/causal_evidence.json",
+            "path": "/visualizations/thesis_portal_007/causal_evidence.json",
+            "status": 200
+          },
+          {
+            "path": "/visualizations/causal_review_browser_canonical_002/report.json",
             "status": 200
           },
           {
@@ -285,6 +321,34 @@
           },
           {
             "path": "/visualizations/causal_review_browser_canonical_002/report.json",
+            "status": 200
+          },
+          {
+            "path": "/task_protocol/camera_time_gt_sensitivity_001.md",
+            "status": 200
+          },
+          {
+            "path": "/mapping_evaluation/camera_time_gt_dev_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/mapping_evaluation/camera_time_gt_dev_full_001/audit_001/report.md",
+            "status": 200
+          },
+          {
+            "path": "/statistics/causal_maps_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/ablations/causal_maps_full_001/audit_002/report.md",
+            "status": 200
+          },
+          {
+            "path": "/ablations/causal_maps_full_001/audit_002/report.json",
+            "status": 200
+          },
+          {
+            "path": "/ablations/causal_maps_full_001/audit_001/failure.json",
             "status": 200
           }
         ]
@@ -295,9 +359,9 @@
       "viewport": "mobile",
       "result": {
         "overflow": false,
-        "statusRows": 40,
+        "statusRows": 42,
         "goal": "Goal仍在进行 · 必需条件未全部满足",
-        "main": "已保存尝试记录 253 / 450；尚未据部分样本计算最终结论。",
+        "main": "已保存尝试记录 278 / 450；尚未据部分样本计算最终结论。",
         "human": "真实提交：开发 0；自然指令 0。数量不等于可靠标签覆盖。",
         "paperLinks": [
           "http://127.0.0.1:8768/thesis/manuscript_delivery_016/%E5%AE%8C%E6%95%B4%E8%AE%BA%E6%96%87%E9%98%B6%E6%AE%B5%E6%95%B4%E5%90%88%E7%A8%BF.docx",
@@ -362,6 +426,26 @@
             "status": 200
           },
           {
+            "path": "/task_protocol/camera_time_gt_sensitivity_001.md",
+            "status": 200
+          },
+          {
+            "path": "/mapping_evaluation/camera_time_gt_dev_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/mapping_evaluation/camera_time_gt_dev_full_001/audit_001/report.md",
+            "status": 200
+          },
+          {
+            "path": "/statistics/causal_maps_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/ablations/causal_maps_full_001/audit_002/report.md",
+            "status": 200
+          },
+          {
             "path": "/statistics/causal_modules_full_001/report.json",
             "status": 200
           },
@@ -395,6 +479,10 @@
           },
           {
             "path": "/faults/causal_fault_full_001/audit_001/report.md",
+            "status": 200
+          },
+          {
+            "path": "/source_bundle/tests_camera_time_001.log",
             "status": 200
           },
           {
@@ -443,6 +531,14 @@
           },
           {
             "path": "/data_manifest/causal_cross_input_audit_002/report.json",
+            "status": 200
+          },
+          {
+            "path": "/mapping_evaluation/camera_time_gt_dev_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/ablations/causal_maps_full_001/audit_002/report.md",
             "status": 200
           },
           {
@@ -538,7 +634,11 @@
             "status": 200
           },
           {
-            "path": "/visualizations/thesis_portal_004/causal_evidence.json",
+            "path": "/visualizations/thesis_portal_007/causal_evidence.json",
+            "status": 200
+          },
+          {
+            "path": "/visualizations/causal_review_browser_canonical_002/report.json",
             "status": 200
           },
           {
@@ -575,6 +675,34 @@
           },
           {
             "path": "/visualizations/causal_review_browser_canonical_002/report.json",
+            "status": 200
+          },
+          {
+            "path": "/task_protocol/camera_time_gt_sensitivity_001.md",
+            "status": 200
+          },
+          {
+            "path": "/mapping_evaluation/camera_time_gt_dev_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/mapping_evaluation/camera_time_gt_dev_full_001/audit_001/report.md",
+            "status": 200
+          },
+          {
+            "path": "/statistics/causal_maps_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/ablations/causal_maps_full_001/audit_002/report.md",
+            "status": 200
+          },
+          {
+            "path": "/ablations/causal_maps_full_001/audit_002/report.json",
+            "status": 200
+          },
+          {
+            "path": "/ablations/causal_maps_full_001/audit_001/failure.json",
             "status": 200
           }
         ]

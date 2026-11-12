@@ -1,0 +1,86 @@
+{
+  "passed": true,
+  "updated_utc": "2026-11-12T14:16:43.416226+00:00",
+  "source_report_sha256": "01fbc9fb19114248e155f00d35bdf96e8111966098c29a058a7a6f7ce5910cf9",
+  "source_records_sha256": "a084cc231ec7baf381cf2026c0c2801d925bbbced099fa9e51e2ac5ff6c3e980",
+  "audit_source_sha256": "1b9428c09aa9f5dfbd5618d346668f9d37d9192b40c8e5d9ec9bfb8c48f4f5cc",
+  "frames": 1508,
+  "fixed_GT_observations": 5723,
+  "interpolated": 5311,
+  "fallback_retained": 412,
+  "method_frame_conditions_recomputed": 21112,
+  "all_centers_and_source_chains_independently_recomputed": true,
+  "all_original_frame_metrics_exact": true,
+  "all_assignments_and_ID_transitions_independently_recomputed": true,
+  "all_point_CI_and_paired_contrasts_recomputed": true,
+  "split_sources_match_preexisting_protected_baseline": {
+    "outputs/project_v2/lane_qwen_expansion_v1/split_manifest.json": "04b0c94e537a011918d88036b6551c5382e7032c1bd9338d32c06bf3df6404ff",
+    "outputs/project_v2/lane_qwen_expansion_v1/scene_selection_manifest.json": "3369fe212a457cf82327aa5d60efc77ebfd66049f53d474810084ff52cfb57d7",
+    "outputs/project_v2/lane_qwen_expansion_v1/prospective_supplement_v2/scene_selection_manifest.json": "8e2f229413e5fe3f4ee285c20604d211f078b106d42748b5e4e87562a7c1d4cf",
+    "outputs/project_v2/lane_qwen_expansion_v1/prospective_supplement_v2/split_manifest.json": "b366ffc7b112c5fe03ee939149238c344c396981c1042a241ea6b8e9833e907a"
+  },
+  "center_shift_m_by_group": {
+    "category_car": {
+      "observations": 2382,
+      "median": 0.009358461347336408,
+      "p95": 0.45350681466154813,
+      "maximum": 0.7532765462241195
+    },
+    "motion_static": {
+      "observations": 2556,
+      "median": 0.0031435759224059706,
+      "p95": 0.01892459112513449,
+      "maximum": 0.15764986427574285
+    },
+    "category_pedestrian": {
+      "observations": 2258,
+      "median": 0.03596223944307922,
+      "p95": 0.05659936465998787,
+      "maximum": 0.08501104410945777
+    },
+    "category_bus": {
+      "observations": 186,
+      "median": 0.18907437069585892,
+      "p95": 0.2796650238199004,
+      "maximum": 0.5133769089271552
+    },
+    "motion_dynamic": {
+      "observations": 3022,
+      "median": 0.05072968741445112,
+      "p95": 0.4469100187955312,
+      "maximum": 0.7532765462241195
+    },
+    "category_bicycle": {
+      "observations": 170,
+      "median": 0.0056197910120965935,
+      "p95": 0.23936247271910008,
+      "maximum": 0.2921019330425807
+    },
+    "category_truck": {
+      "observations": 583,
+      "median": 0.005414911856508553,
+      "p95": 0.36386096066638896,
+      "maximum": 0.6427240974927778
+    },
+    "motion_unknown": {
+      "observations": 145,
+      "median": 0.019030886654639787,
+      "p95": 0.45322528903849746,
+      "maximum": 0.6627139785009932
+    },
+    "category_motorcycle": {
+      "observations": 144,
+      "median": 0.007344883702038386,
+      "p95": 0.45359879440598255,
+      "maximum": 0.6627139785009932
+    }
+  },
+  "frontend_model_or_navigation_calls": 0,
+  "new_test_opened": false,
+  "limitations": [
+    "共享SciPy优化器，不调用生产插值/质量/统计函数；独立重算不等于人工实例真值",
+    "中心插值为离线参考模型，保留412原中心；不是完整相机时刻GT或新的主表",
+    "原可见GT集合和预测不变，不补标缺失对象，也不计锁定/路线/到达"
+  ],
+  "goal_complete": false
+}

@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-12T13:53:22.360161+00:00",
+  "updated_utc": "2026-11-12T14:33:03.396769+00:00",
   "goal_complete": false,
   "stage9_complete": false,
   "stage10_complete": false,
@@ -103,7 +103,7 @@
         "interactive_simulation/realtime_three_model_full_001/trial_records.jsonl",
         "statistics/plan_reuse_pilot_001/report.json"
       ],
-      "remaining": "冻结50任务×3种子×规则/base/new共450次，当前已保存254/450。所有角色相同前端、执行器、90秒预算与候选安全验证；单模型进程、源码冻结、失败不自动重试。预算24小时/20GB，磁盘低于6GB停止。单任务路线复用pilot规则/base到达、new超时，三者路线/选对/正确锁定成立，重排均0应用，不能据此宣称新模型改善。此批为颜色表达合成开发任务，不是新封存测试或复杂自然关系验收"
+      "remaining": "冻结50任务×3种子×规则/base/new共450次，当前已保存279/450。所有角色相同前端、执行器、90秒预算与候选安全验证；单模型进程、源码冻结、失败不自动重试。预算24小时/20GB，磁盘低于6GB停止。单任务路线复用pilot规则/base到达、new超时，三者路线/选对/正确锁定成立，重排均0应用，不能据此宣称新模型改善。此批为颜色表达合成开发任务，不是新封存测试或复杂自然关系验收"
     },
     "独立消融": {
       "status": "部分完成",
@@ -168,24 +168,25 @@
       "remaining": "第1—7章阶段稿47页、19张第6章三线表Word/Excel/PDF/CSV、7图、11处可编辑OMML公式。表6-19单列条件静态可达参考；4指定页实际目视通过。11处引文表述按一手内容限缩，另核对11组方法细节；A*最优性条件与预算搜索、Hybrid连续搜索来源与本项目前向适配分别说明，85会议/URL修正。删除重复h(n)引文表达使数学对象由12降至11，非公式丢失。85引用连续，全部正文主张仍未核完，无原生Word渲染或学校模板，完整主矩阵/封存/消融仍待验收"
     },
     "测试": {
-      "status": "项目311项通过，最终仍待全部实验结束",
+      "status": "321原机测试及新门户实测通过，最终待验收",
       "evidence": [
-        "source_bundle/tests_full_026.log",
-        "source_bundle/ruff_completion_040.log",
-        "source_bundle/git_diff_check_028.log",
-        "source_bundle/engineering_verification_027.md"
+        "source_bundle/tests_full_028.log",
+        "source_bundle/ruff_completion_043.log",
+        "source_bundle/git_diff_check_029.log",
+        "visualizations/thesis_portal_browser_qa_010/report.json",
+        "source_bundle/engineering_verification_028.md"
       ],
-      "remaining": "项目原定pytest -q tests实际311通过/5依赖警告，真实crop两项原机通过；无路径pytest误收集第三方/输出目录的104项收集错误原日志保留，未改历史文件凑通过。新审核版本/内容/方法/节点回归均临时结构，不当人工。Ruff业务范围/diff通过；完整矩阵、封存、独占性能及最终保护仍缺"
+      "remaining": "项目标准pytest -q tests实际321通过5依赖警告；业务completion/navigation/tests Ruff通过。广域042的未改动上游scenegraph仍10旧问题，前次含slam更广范围17问题保持记录。新门户008桌面/手机42状态行82证据GET读取通过、无溢出/JS错误、人工0。纯代码导出待本批实际执行，运行结束后的最终验收仍缺"
     },
     "旧产物保护": {
-      "status": "本轮全量复核通过，最终验收待全部实验结束",
+      "status": "本轮255170历史文件复核通过，最终待全部实验结束",
       "evidence": [
         "baseline_before.json",
         "baseline_verification.json",
-        "source_bundle/protection_verify_010.log",
-        "source_bundle/github_sync_001/public_clone_verification_005.json"
+        "source_bundle/protection_verify_011.log",
+        "source_bundle/github_sync_001/public_clone_verification_006.json"
       ],
-      "remaining": "本轮重新流式核验255170历史文件，0改动/缺失；Git原索引保持，当前357业务源码已匿名核对。主矩阵66依赖及CPU队列冻结来源不改；仍需所有实验最终结束后复验，不以阶段快照代替最终保护验收"
+      "remaining": "2026-11-12 13:58 UTC全量255170历史文件0改动/缺失，原checkout索引未变；main da74ca4匿名核对359源文件字节及执行权限。主矩阵66及CPU冻结依赖均未变，所有实验结束后仍须最终保护验收"
     },
     "可视化": {
       "status": "部分完成",
@@ -305,12 +306,22 @@
       "remaining": "固定64帧/33官方原始drive，真实CPU YOLO/MobileSAM/CLIP已完成64次；三类319GT，3m中心匹配247→262，召回77.43%→82.13%，drive配对95%差区间+1.48至+9.07pp；共同支持251对误差1.758→1.540m。卡车误差退化2.768→2.888m，深度未知16→18保留；Cyclist代理单列，不是官方AP、跨帧场景图或导航到达。公开预训练与KITTI重叠未知；封存未开启"
     },
     "代码与实验交接": {
-      "status": "本次359份源码导出与测试通过，发布随后核验",
+      "status": "本地361源码，新增补充评价待增量发布",
       "evidence": [
         "工作交接_代码与实验.md",
-        "GPT_Work_写作交接.md"
+        "GPT_Work_写作交接.md",
+        "source_bundle/github_sync_001/push_report_006.json",
+        "source_bundle/github_sync_001/public_clone_verification_006.json",
+        "source_bundle/github_sync_001/incremental_export_manifest_004.json",
+        "GPT_Work_论文写作交接包_v3.zip",
+        "source_bundle/source_checkpoint_017/checkpoint.json",
+        "source_bundle/writing_handoff_package_004.json",
+        "source_bundle/writing_handoff_package_004_verification.json",
+        "GPT_Work_论文写作交接包_v4.zip",
+        "mapping_evaluation/camera_time_gt_dev_full_001/report.json",
+        "ablations/causal_maps_full_001/audit_002/report.md"
       ],
-      "remaining": "当前快照生成于提交前：359源文件字节/执行权限核对，311原机/309导出通过、2真实数据依赖skip；推送后以push_report_006和public_clone_verification_006为准。v3是旧357源码快照；长期Goal和全部阶段仍未验收。"
+      "remaining": "公开main da74ca4与v4包仍为上一批359源码快照；本批新增相机时间评价与完整地图结果，本地321测试通过。当前实际新推送与后续包以对应回执为准，不以旧回执证明361文件已公开；当前公开main da74ca4，359份源码字节及执行权限一致；311原机/309纯代码导出通过、2真实数据依赖skip，原checkout索引保持，凭据不落盘。新审核来源绑定和故障/模块/门限小型证据已交付，不公开原图/点云/权重/原论文。v3仍是之前357源码的生成时快照，当前根文档和新回执优先；后续矩阵、人工、封存和独占性能未完成；新v4实际246文件/11850815字节，CRC/逐项SHA/359源码归档核验通过，v1/v2/v3保留。包含本批完整故障、动态/TTL、门限和新审核证据，不新增论文结论；仍未携带原始数据或权重"
     },
     "结构化JSON校验": {
       "status": "当前运行中快照通过，非最终验收",
@@ -406,6 +417,25 @@
         "source_bundle/review_service_upgrade_002.json"
       ],
       "remaining": "8768新审核绑定过去LiDAR索引/证据/源预测/真实crop指纹，记录建图方法和明确节点；跨方法节点或缺身份依据拒绝，切换方法清空旧身份结论。桌面/手机仅读取和4份错误SHA真实POST，全部400、人工0新增。311项目测试通过，新增有效结构只在临时合成目录测试，不伪装真人。当前表单单位是已有检测，缺检测官方对象、跨帧长链和双人复核仍需独立记录；旧页面按旧来源保留"
+    },
+    "GT时间近似敏感性": {
+      "status": "完整补充评价及独立重算通过，非精确时间GT",
+      "evidence": [
+        "task_protocol/camera_time_gt_sensitivity_001.md",
+        "mapping_evaluation/camera_time_gt_dev_full_001/report.json",
+        "mapping_evaluation/camera_time_gt_dev_full_001/audit_001/report.md"
+      ],
+      "remaining": "38开发场景1508帧5723原GT观测与七方法预测不变；5311线性中心插值、412无前驱回退。新参考下深度质量相对原融合召回差+12.98pp（11logCI8.20至18.20pp）、误差差−0.37094m；深度质量自身时间参考差的召回/误差区间跨0。21112方法帧条件、所有源链/区间独立重算。只改评价中心，尺寸朝向/可见性仍原近似，未获人工轨迹验证，不替换主表或新封存标签，无导航/到达信用"
+    },
+    "过去LiDAR六地图约束": {
+      "status": "完整1272条件结束并复核，未执行车辆",
+      "evidence": [
+        "statistics/causal_maps_full_001/report.json",
+        "ablations/causal_maps_full_001/audit_002/report.md",
+        "ablations/causal_maps_full_001/audit_002/report.json",
+        "ablations/causal_maps_full_001/audit_001/failure.json"
+      ],
+      "remaining": "212查询176不同几何，完整约束94路线/212，其中49同时车道与道路合法、仅2/94静态矩形通过；正确对象参考点由隔离GT给定。842路线条件/335不同路径20869车身姿态、384源SHA、84指标210配对CI复算。三处逐姿态二值边界差异保留，完整路线车身通过/失败严格一致，未将原违规改判通过；车道审计沿用既有实现。首次失败保留，不计正确选择、锁定或实际到达"
     }
   }
 }

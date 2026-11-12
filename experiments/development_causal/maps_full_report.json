@@ -1,0 +1,3232 @@
+{
+  "source_run": "causal_maps_full_001",
+  "source_release_sha256": "a8454cb03fbf30e5873068d828f1ab15f4322cc637effe9a3feab0af6dcfe999",
+  "source_summary_sha256": "b8cb82cce7384cf729c46aca3946e9bea0c40e64723f3a1253e971076dcb0f2c",
+  "source_records_sha256": "8e899fdea19301d02bc235dc48376b2687628e57df8eaa033653d8c773e50279",
+  "statistics_source_sha256": "d56e7772b42afbfb2ecba52d397ea4998720f096d15d1c7e6777e6e2de677ca5",
+  "queries": 212,
+  "cases": 1272,
+  "unique_geometric_queries": 176,
+  "scenes": 38,
+  "logs": 11,
+  "unique_observation_windows": 159,
+  "conditions": {
+    "free_space": {
+      "route_generated": {
+        "estimate": 0.9245283018867925,
+        "ci95": [
+          0.8411057278825755,
+          0.9769755716134599
+        ],
+        "count": 196,
+        "denominator": 212,
+        "valid_resamples": 4000
+      },
+      "full_lane_legal_all_queries": {
+        "estimate": 0.19811320754716982,
+        "ci95": [
+          0.12952662930457157,
+          0.2472569955817379
+        ],
+        "count": 42,
+        "denominator": 212,
+        "valid_resamples": 4000
+      },
+      "full_road_legal_all_queries": {
+        "estimate": 0.12264150943396226,
+        "ci95": [
+          0.07547169811320754,
+          0.171875
+        ],
+        "count": 26,
+        "denominator": 212,
+        "valid_resamples": 4000
+      },
+      "full_lane_legal_among_routes": {
+        "estimate": 0.21428571428571427,
+        "ci95": [
+          0.149652133580705,
+          0.2608695652173913
+        ],
+        "count": 42,
+        "denominator": 196,
+        "valid_resamples": 4000
+      },
+      "full_road_legal_among_routes": {
+        "estimate": 0.1326530612244898,
+        "ci95": [
+          0.0845047558075727,
+          0.1843602538373922
+        ],
+        "count": 26,
+        "denominator": 196,
+        "valid_resamples": 4000
+      },
+      "point_drivable_among_routes": {
+        "estimate": 0.3622448979591837,
+        "ci95": [
+          0.27896540512420337,
+          0.45946722584653626
+        ],
+        "count": 71,
+        "denominator": 196,
+        "valid_resamples": 4000
+      },
+      "direction_violation_among_routes": {
+        "estimate": 0.4387755102040816,
+        "ci95": [
+          0.3636281883584042,
+          0.5810839685839685
+        ],
+        "count": 86,
+        "denominator": 196,
+        "valid_resamples": 4000
+      },
+      "connection_violation_among_routes": {
+        "estimate": 0.5918367346938775,
+        "ci95": [
+          0.4636480023700694,
+          0.7062180521926286
+        ],
+        "count": 116,
+        "denominator": 196,
+        "valid_resamples": 4000
+      },
+      "reverse_among_routes": {
+        "estimate": 0.3877551020408163,
+        "ci95": [
+          0.3199954954954955,
+          0.522298731852872
+        ],
+        "count": 76,
+        "denominator": 196,
+        "valid_resamples": 4000
+      },
+      "out_of_lane_among_routes": {
+        "estimate": 0.4642857142857143,
+        "ci95": [
+          0.375,
+          0.5447550141113208
+        ],
+        "count": 91,
+        "denominator": 196,
+        "valid_resamples": 4000
+      },
+      "static_rectangle_legal_among_routes": {
+        "estimate": 0.015306122448979591,
+        "ci95": [
+          0.0,
+          0.03465418073599268
+        ],
+        "count": 3,
+        "denominator": 196,
+        "valid_resamples": 4000
+      },
+      "tangent_curvature_exceeds_bound_among_routes": {
+        "estimate": 0.9744897959183674,
+        "ci95": [
+          0.9436619718309859,
+          1.0
+        ],
+        "count": 191,
+        "denominator": 196,
+        "valid_resamples": 4000
+      },
+      "planning_budget_all_queries": {
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "count": 0,
+        "denominator": 212,
+        "valid_resamples": 4000
+      },
+      "common_projection_failure_all_queries": {
+        "estimate": 0.07547169811320754,
+        "ci95": [
+          0.02302442838654012,
+          0.15889427211742452
+        ],
+        "count": 16,
+        "denominator": 212,
+        "valid_resamples": 4000
+      }
+    },
+    "drivable_area": {
+      "route_generated": {
+        "estimate": 0.7641509433962265,
+        "ci95": [
+          0.6511627906976745,
+          0.8707247075518039
+        ],
+        "count": 162,
+        "denominator": 212,
+        "valid_resamples": 4000
+      },
+      "full_lane_legal_all_queries": {
+        "estimate": 0.22169811320754718,
+        "ci95": [
+          0.11874735169491525,
+          0.3241129279693902
+        ],
+        "count": 47,
+        "denominator": 212,
+        "valid_resamples": 4000
+      },
+      "full_road_legal_all_queries": {
+        "estimate": 0.22169811320754718,
+        "ci95": [
+          0.11874735169491525,
+          0.3241129279693902
+        ],
+        "count": 47,
+        "denominator": 212,
+        "valid_resamples": 4000
+      },
+      "full_lane_legal_among_routes": {
+        "estimate": 0.29012345679012347,
+        "ci95": [
+          0.1532186907020873,
+          0.44275321481633284
+        ],
+        "count": 47,
+        "denominator": 162,
+        "valid_resamples": 4000
+      },
+      "full_road_legal_among_routes": {
+        "estimate": 0.29012345679012347,
+        "ci95": [
+          0.1532186907020873,
+          0.44275321481633284
+        ],
+        "count": 47,
+        "denominator": 162,
+        "valid_resamples": 4000
+      },
+      "point_drivable_among_routes": {
+        "estimate": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "count": 162,
+        "denominator": 162,
+        "valid_resamples": 4000
+      },
+      "direction_violation_among_routes": {
+        "estimate": 0.5308641975308642,
+        "ci95": [
+          0.3983739837398374,
+          0.6592209466511142
+        ],
+        "count": 86,
+        "denominator": 162,
+        "valid_resamples": 4000
+      },
+      "connection_violation_among_routes": {
+        "estimate": 0.48148148148148145,
+        "ci95": [
+          0.34931235051098064,
+          0.6408020576728012
+        ],
+        "count": 78,
+        "denominator": 162,
+        "valid_resamples": 4000
+      },
+      "reverse_among_routes": {
+        "estimate": 0.4444444444444444,
+        "ci95": [
+          0.2982362821948488,
+          0.5607501359837808
+        ],
+        "count": 72,
+        "denominator": 162,
+        "valid_resamples": 4000
+      },
+      "out_of_lane_among_routes": {
+        "estimate": 0.11728395061728394,
+        "ci95": [
+          0.025423728813559324,
+          0.19282904570844153
+        ],
+        "count": 19,
+        "denominator": 162,
+        "valid_resamples": 4000
+      },
+      "static_rectangle_legal_among_routes": {
+        "estimate": 0.018518518518518517,
+        "ci95": [
+          0.0,
+          0.040268456375838924
+        ],
+        "count": 3,
+        "denominator": 162,
+        "valid_resamples": 4000
+      },
+      "tangent_curvature_exceeds_bound_among_routes": {
+        "estimate": 0.9938271604938271,
+        "ci95": [
+          0.9767441860465116,
+          1.0
+        ],
+        "count": 161,
+        "denominator": 162,
+        "valid_resamples": 4000
+      },
+      "planning_budget_all_queries": {
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "count": 0,
+        "denominator": 212,
+        "valid_resamples": 4000
+      },
+      "common_projection_failure_all_queries": {
+        "estimate": 0.07547169811320754,
+        "ci95": [
+          0.02302442838654012,
+          0.15889427211742452
+        ],
+        "count": 16,
+        "denominator": 212,
+        "valid_resamples": 4000
+      }
+    },
+    "lane_area": {
+      "route_generated": {
+        "estimate": 0.7452830188679245,
+        "ci95": [
+          0.674657124598545,
+          0.8297941871784175
+        ],
+        "count": 158,
+        "denominator": 212,
+        "valid_resamples": 4000
+      },
+      "full_lane_legal_all_queries": {
+        "estimate": 0.24528301886792453,
+        "ci95": [
+          0.14761709601873538,
+          0.33143162719633307
+        ],
+        "count": 52,
+        "denominator": 212,
+        "valid_resamples": 4000
+      },
+      "full_road_legal_all_queries": {
+        "estimate": 0.18867924528301888,
+        "ci95": [
+          0.10168632615666515,
+          0.2692401960784314
+        ],
+        "count": 40,
+        "denominator": 212,
+        "valid_resamples": 4000
+      },
+      "full_lane_legal_among_routes": {
+        "estimate": 0.3291139240506329,
+        "ci95": [
+          0.19625710097122961,
+          0.4258072233369347
+        ],
+        "count": 52,
+        "denominator": 158,
+        "valid_resamples": 4000
+      },
+      "full_road_legal_among_routes": {
+        "estimate": 0.25316455696202533,
+        "ci95": [
+          0.13674242424242425,
+          0.3496036585365854
+        ],
+        "count": 40,
+        "denominator": 158,
+        "valid_resamples": 4000
+      },
+      "point_drivable_among_routes": {
+        "estimate": 0.6265822784810127,
+        "ci95": [
+          0.4807442196531792,
+          0.7663056176351076
+        ],
+        "count": 99,
+        "denominator": 158,
+        "valid_resamples": 4000
+      },
+      "direction_violation_among_routes": {
+        "estimate": 0.44936708860759494,
+        "ci95": [
+          0.3474697554697555,
+          0.6039655528052805
+        ],
+        "count": 71,
+        "denominator": 158,
+        "valid_resamples": 4000
+      },
+      "connection_violation_among_routes": {
+        "estimate": 0.5316455696202531,
+        "ci95": [
+          0.3893129770992366,
+          0.6800270270270272
+        ],
+        "count": 84,
+        "denominator": 158,
+        "valid_resamples": 4000
+      },
+      "reverse_among_routes": {
+        "estimate": 0.35443037974683544,
+        "ci95": [
+          0.25738211562661933,
+          0.4909280303030304
+        ],
+        "count": 56,
+        "denominator": 158,
+        "valid_resamples": 4000
+      },
+      "out_of_lane_among_routes": {
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "count": 0,
+        "denominator": 158,
+        "valid_resamples": 4000
+      },
+      "static_rectangle_legal_among_routes": {
+        "estimate": 0.0189873417721519,
+        "ci95": [
+          0.0,
+          0.041666666666666664
+        ],
+        "count": 3,
+        "denominator": 158,
+        "valid_resamples": 4000
+      },
+      "tangent_curvature_exceeds_bound_among_routes": {
+        "estimate": 0.9683544303797469,
+        "ci95": [
+          0.9340633423180593,
+          1.0
+        ],
+        "count": 153,
+        "denominator": 158,
+        "valid_resamples": 4000
+      },
+      "planning_budget_all_queries": {
+        "estimate": 0.1792452830188679,
+        "ci95": [
+          0.0684823925984365,
+          0.27237390382716764
+        ],
+        "count": 38,
+        "denominator": 212,
+        "valid_resamples": 4000
+      },
+      "common_projection_failure_all_queries": {
+        "estimate": 0.07547169811320754,
+        "ci95": [
+          0.02302442838654012,
+          0.15889427211742452
+        ],
+        "count": 16,
+        "denominator": 212,
+        "valid_resamples": 4000
+      }
+    },
+    "lane_direction": {
+      "route_generated": {
+        "estimate": 0.5377358490566038,
+        "ci95": [
+          0.4354717741935484,
+          0.6278052977369903
+        ],
+        "count": 114,
+        "denominator": 212,
+        "valid_resamples": 4000
+      },
+      "full_lane_legal_all_queries": {
+        "estimate": 0.2358490566037736,
+        "ci95": [
+          0.1467291887592789,
+          0.30894376468681634
+        ],
+        "count": 50,
+        "denominator": 212,
+        "valid_resamples": 4000
+      },
+      "full_road_legal_all_queries": {
+        "estimate": 0.1792452830188679,
+        "ci95": [
+          0.09937667944143429,
+          0.25225546975546975
+        ],
+        "count": 38,
+        "denominator": 212,
+        "valid_resamples": 4000
+      },
+      "full_lane_legal_among_routes": {
+        "estimate": 0.43859649122807015,
+        "ci95": [
+          0.26413807890222984,
+          0.5963302752293578
+        ],
+        "count": 50,
+        "denominator": 114,
+        "valid_resamples": 4000
+      },
+      "full_road_legal_among_routes": {
+        "estimate": 0.3333333333333333,
+        "ci95": [
+          0.17975458308693082,
+          0.48064168819982783
+        ],
+        "count": 38,
+        "denominator": 114,
+        "valid_resamples": 4000
+      },
+      "point_drivable_among_routes": {
+        "estimate": 0.6052631578947368,
+        "ci95": [
+          0.5237956810631229,
+          0.6888888888888889
+        ],
+        "count": 69,
+        "denominator": 114,
+        "valid_resamples": 4000
+      },
+      "direction_violation_among_routes": {
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "count": 0,
+        "denominator": 114,
+        "valid_resamples": 4000
+      },
+      "connection_violation_among_routes": {
+        "estimate": 0.543859649122807,
+        "ci95": [
+          0.38982158786797505,
+          0.7272909090909092
+        ],
+        "count": 62,
+        "denominator": 114,
+        "valid_resamples": 4000
+      },
+      "reverse_among_routes": {
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "count": 0,
+        "denominator": 114,
+        "valid_resamples": 4000
+      },
+      "out_of_lane_among_routes": {
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "count": 0,
+        "denominator": 114,
+        "valid_resamples": 4000
+      },
+      "static_rectangle_legal_among_routes": {
+        "estimate": 0.017543859649122806,
+        "ci95": [
+          0.0,
+          0.047630494505494544
+        ],
+        "count": 2,
+        "denominator": 114,
+        "valid_resamples": 4000
+      },
+      "tangent_curvature_exceeds_bound_among_routes": {
+        "estimate": 0.956140350877193,
+        "ci95": [
+          0.8897419072615923,
+          1.0
+        ],
+        "count": 109,
+        "denominator": 114,
+        "valid_resamples": 4000
+      },
+      "planning_budget_all_queries": {
+        "estimate": 0.3443396226415094,
+        "ci95": [
+          0.2091540816326531,
+          0.46413476874003196
+        ],
+        "count": 73,
+        "denominator": 212,
+        "valid_resamples": 4000
+      },
+      "common_projection_failure_all_queries": {
+        "estimate": 0.07547169811320754,
+        "ci95": [
+          0.02302442838654012,
+          0.15889427211742452
+        ],
+        "count": 16,
+        "denominator": 212,
+        "valid_resamples": 4000
+      }
+    },
+    "lane_connection": {
+      "route_generated": {
+        "estimate": 0.5566037735849056,
+        "ci95": [
+          0.46384907445875456,
+          0.6621636636636636
+        ],
+        "count": 118,
+        "denominator": 212,
+        "valid_resamples": 4000
+      },
+      "full_lane_legal_all_queries": {
+        "estimate": 0.4009433962264151,
+        "ci95": [
+          0.2857142857142857,
+          0.4899031707806542
+        ],
+        "count": 85,
+        "denominator": 212,
+        "valid_resamples": 4000
+      },
+      "full_road_legal_all_queries": {
+        "estimate": 0.23113207547169812,
+        "ci95": [
+          0.13180555555555554,
+          0.32666666666666666
+        ],
+        "count": 49,
+        "denominator": 212,
+        "valid_resamples": 4000
+      },
+      "full_lane_legal_among_routes": {
+        "estimate": 0.7203389830508474,
+        "ci95": [
+          0.5172413793103449,
+          0.8468491450634308
+        ],
+        "count": 85,
+        "denominator": 118,
+        "valid_resamples": 4000
+      },
+      "full_road_legal_among_routes": {
+        "estimate": 0.4152542372881356,
+        "ci95": [
+          0.25236650485436896,
+          0.5548949864498646
+        ],
+        "count": 49,
+        "denominator": 118,
+        "valid_resamples": 4000
+      },
+      "point_drivable_among_routes": {
+        "estimate": 0.6101694915254238,
+        "ci95": [
+          0.4795883421861895,
+          0.7431223654847509
+        ],
+        "count": 72,
+        "denominator": 118,
+        "valid_resamples": 4000
+      },
+      "direction_violation_among_routes": {
+        "estimate": 0.2457627118644068,
+        "ci95": [
+          0.09998091603053437,
+          0.4679043722621705
+        ],
+        "count": 29,
+        "denominator": 118,
+        "valid_resamples": 4000
+      },
+      "connection_violation_among_routes": {
+        "estimate": 0.025423728813559324,
+        "ci95": [
+          0.0,
+          0.058823529411764705
+        ],
+        "count": 3,
+        "denominator": 118,
+        "valid_resamples": 4000
+      },
+      "reverse_among_routes": {
+        "estimate": 0.09322033898305085,
+        "ci95": [
+          0.02104714912280702,
+          0.1830269607843138
+        ],
+        "count": 11,
+        "denominator": 118,
+        "valid_resamples": 4000
+      },
+      "out_of_lane_among_routes": {
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "count": 0,
+        "denominator": 118,
+        "valid_resamples": 4000
+      },
+      "static_rectangle_legal_among_routes": {
+        "estimate": 0.01694915254237288,
+        "ci95": [
+          0.0,
+          0.037037037037037035
+        ],
+        "count": 2,
+        "denominator": 118,
+        "valid_resamples": 4000
+      },
+      "tangent_curvature_exceeds_bound_among_routes": {
+        "estimate": 0.9661016949152542,
+        "ci95": [
+          0.9157894736842105,
+          1.0
+        ],
+        "count": 114,
+        "denominator": 118,
+        "valid_resamples": 4000
+      },
+      "planning_budget_all_queries": {
+        "estimate": 0.15566037735849056,
+        "ci95": [
+          0.08973880597014926,
+          0.2240500995863337
+        ],
+        "count": 33,
+        "denominator": 212,
+        "valid_resamples": 4000
+      },
+      "common_projection_failure_all_queries": {
+        "estimate": 0.07547169811320754,
+        "ci95": [
+          0.02302442838654012,
+          0.15889427211742452
+        ],
+        "count": 16,
+        "denominator": 212,
+        "valid_resamples": 4000
+      }
+    },
+    "lane_direction_connection": {
+      "route_generated": {
+        "estimate": 0.44339622641509435,
+        "ci95": [
+          0.33695229781482317,
+          0.5357142857142857
+        ],
+        "count": 94,
+        "denominator": 212,
+        "valid_resamples": 4000
+      },
+      "full_lane_legal_all_queries": {
+        "estimate": 0.42924528301886794,
+        "ci95": [
+          0.33172554347826083,
+          0.5101173020527859
+        ],
+        "count": 91,
+        "denominator": 212,
+        "valid_resamples": 4000
+      },
+      "full_road_legal_all_queries": {
+        "estimate": 0.23113207547169812,
+        "ci95": [
+          0.13180555555555554,
+          0.32666666666666666
+        ],
+        "count": 49,
+        "denominator": 212,
+        "valid_resamples": 4000
+      },
+      "full_lane_legal_among_routes": {
+        "estimate": 0.9680851063829787,
+        "ci95": [
+          0.930552536231884,
+          1.0
+        ],
+        "count": 91,
+        "denominator": 94,
+        "valid_resamples": 4000
+      },
+      "full_road_legal_among_routes": {
+        "estimate": 0.5212765957446809,
+        "ci95": [
+          0.3766195569136746,
+          0.6285714285714286
+        ],
+        "count": 49,
+        "denominator": 94,
+        "valid_resamples": 4000
+      },
+      "point_drivable_among_routes": {
+        "estimate": 0.5425531914893617,
+        "ci95": [
+          0.3768068887634105,
+          0.6629244015632633
+        ],
+        "count": 51,
+        "denominator": 94,
+        "valid_resamples": 4000
+      },
+      "direction_violation_among_routes": {
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "count": 0,
+        "denominator": 94,
+        "valid_resamples": 4000
+      },
+      "connection_violation_among_routes": {
+        "estimate": 0.031914893617021274,
+        "ci95": [
+          0.0,
+          0.06944746376811596
+        ],
+        "count": 3,
+        "denominator": 94,
+        "valid_resamples": 4000
+      },
+      "reverse_among_routes": {
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "count": 0,
+        "denominator": 94,
+        "valid_resamples": 4000
+      },
+      "out_of_lane_among_routes": {
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "count": 0,
+        "denominator": 94,
+        "valid_resamples": 4000
+      },
+      "static_rectangle_legal_among_routes": {
+        "estimate": 0.02127659574468085,
+        "ci95": [
+          0.0,
+          0.061232339089481974
+        ],
+        "count": 2,
+        "denominator": 94,
+        "valid_resamples": 4000
+      },
+      "tangent_curvature_exceeds_bound_among_routes": {
+        "estimate": 0.9574468085106383,
+        "ci95": [
+          0.8840579710144928,
+          1.0
+        ],
+        "count": 90,
+        "denominator": 94,
+        "valid_resamples": 4000
+      },
+      "planning_budget_all_queries": {
+        "estimate": 0.2169811320754717,
+        "ci95": [
+          0.1411042944785276,
+          0.34501470588235295
+        ],
+        "count": 46,
+        "denominator": 212,
+        "valid_resamples": 4000
+      },
+      "common_projection_failure_all_queries": {
+        "estimate": 0.07547169811320754,
+        "ci95": [
+          0.02302442838654012,
+          0.15889427211742452
+        ],
+        "count": 16,
+        "denominator": 212,
+        "valid_resamples": 4000
+      }
+    }
+  },
+  "paired_differences": [
+    {
+      "a": "free_space",
+      "b": "drivable_area",
+      "metric": "route_generated",
+      "difference": 0.160377358490566,
+      "ci95": [
+        0.08583384426732062,
+        0.23272511580612373
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "drivable_area",
+      "metric": "full_lane_legal_all_queries",
+      "difference": -0.023584905660377353,
+      "ci95": [
+        -0.09929195434690712,
+        0.038862627010295414
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "drivable_area",
+      "metric": "full_road_legal_all_queries",
+      "difference": -0.09905660377358491,
+      "ci95": [
+        -0.16867469879518074,
+        -0.03421608284119406
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "drivable_area",
+      "metric": "full_lane_legal_among_routes",
+      "difference": -0.0758377425044092,
+      "ci95": [
+        -0.20065636719420796,
+        0.022603780818404234
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "drivable_area",
+      "metric": "full_road_legal_among_routes",
+      "difference": -0.15747039556563366,
+      "ci95": [
+        -0.27399116819919733,
+        -0.059243790888954706
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "drivable_area",
+      "metric": "point_drivable_among_routes",
+      "difference": -0.6377551020408163,
+      "ci95": [
+        -0.7210345948757966,
+        -0.5405327741534638
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "drivable_area",
+      "metric": "direction_violation_among_routes",
+      "difference": -0.0920886873267826,
+      "ci95": [
+        -0.20063199202347165,
+        0.04114397662124936
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "drivable_area",
+      "metric": "connection_violation_among_routes",
+      "difference": 0.11035525321239609,
+      "ci95": [
+        0.05097997104576685,
+        0.15682032182654917
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "drivable_area",
+      "metric": "reverse_among_routes",
+      "difference": -0.05668934240362811,
+      "ci95": [
+        -0.20002238056823393,
+        0.16541464432918293
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "drivable_area",
+      "metric": "out_of_lane_among_routes",
+      "difference": 0.3470017636684304,
+      "ci95": [
+        0.2815361761346079,
+        0.43256457189343095
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "drivable_area",
+      "metric": "static_rectangle_legal_among_routes",
+      "difference": -0.003212396069538926,
+      "ci95": [
+        -0.00703081475962832,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "drivable_area",
+      "metric": "tangent_curvature_exceeds_bound_among_routes",
+      "difference": -0.01933736457545976,
+      "ci95": [
+        -0.049297806636501774,
+        0.0019670955527549276
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "drivable_area",
+      "metric": "planning_budget_all_queries",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "drivable_area",
+      "metric": "common_projection_failure_all_queries",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_area",
+      "metric": "route_generated",
+      "difference": 0.179245283018868,
+      "ci95": [
+        0.06848239259843644,
+        0.2723739038271677
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_area",
+      "metric": "full_lane_legal_all_queries",
+      "difference": -0.047169811320754707,
+      "ci95": [
+        -0.0934606766136525,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_area",
+      "metric": "full_road_legal_all_queries",
+      "difference": -0.06603773584905662,
+      "ci95": [
+        -0.10800000000000001,
+        -0.016
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_area",
+      "metric": "full_lane_legal_among_routes",
+      "difference": -0.11482820976491862,
+      "ci95": [
+        -0.17718228200371056,
+        -0.038250964320154304
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_area",
+      "metric": "full_road_legal_among_routes",
+      "difference": -0.12051149573753553,
+      "ci95": [
+        -0.1794199615013253,
+        -0.039827958210311126
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_area",
+      "metric": "point_drivable_among_routes",
+      "difference": -0.264337380521829,
+      "ci95": [
+        -0.376003319612972,
+        -0.14814788007463164
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_area",
+      "metric": "direction_violation_among_routes",
+      "difference": -0.010591578403513324,
+      "ci95": [
+        -0.07817708943551997,
+        0.05658340814914597
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_area",
+      "metric": "connection_violation_among_routes",
+      "difference": 0.06019116507362443,
+      "ci95": [
+        0.019312390682019353,
+        0.09035577449370549
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_area",
+      "metric": "reverse_among_routes",
+      "difference": 0.03332472229398087,
+      "ci95": [
+        -0.07322889898226706,
+        0.18308093856062801
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_area",
+      "metric": "out_of_lane_among_routes",
+      "difference": 0.4642857142857143,
+      "ci95": [
+        0.375,
+        0.5447550141113208
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_area",
+      "metric": "static_rectangle_legal_among_routes",
+      "difference": -0.003681219323172308,
+      "ci95": [
+        -0.008542652482942923,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_area",
+      "metric": "tangent_curvature_exceeds_bound_among_routes",
+      "difference": 0.006135365538620485,
+      "ci95": [
+        0.0,
+        0.01165630715077467
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_area",
+      "metric": "planning_budget_all_queries",
+      "difference": -0.1792452830188679,
+      "ci95": [
+        -0.27237390382716764,
+        -0.06848239259843644
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_area",
+      "metric": "common_projection_failure_all_queries",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_direction",
+      "metric": "route_generated",
+      "difference": 0.3867924528301887,
+      "ci95": [
+        0.2516974714414068,
+        0.5063291139240507
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_direction",
+      "metric": "full_lane_legal_all_queries",
+      "difference": -0.037735849056603765,
+      "ci95": [
+        -0.06938775510204082,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_direction",
+      "metric": "full_road_legal_all_queries",
+      "difference": -0.05660377358490565,
+      "ci95": [
+        -0.08865510512400858,
+        -0.016
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_direction",
+      "metric": "full_lane_legal_among_routes",
+      "difference": -0.22431077694235588,
+      "ci95": [
+        -0.3585682276064417,
+        -0.10144693502531031
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_direction",
+      "metric": "full_road_legal_among_routes",
+      "difference": -0.2006802721088435,
+      "ci95": [
+        -0.31005651809987145,
+        -0.08240920762709246
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_direction",
+      "metric": "point_drivable_among_routes",
+      "difference": -0.24301825993555315,
+      "ci95": [
+        -0.31793057015488174,
+        -0.14277094515452238
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_direction",
+      "metric": "direction_violation_among_routes",
+      "difference": 0.4387755102040816,
+      "ci95": [
+        0.3636281883584042,
+        0.5810839685839685
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_direction",
+      "metric": "connection_violation_among_routes",
+      "difference": 0.0479770855710705,
+      "ci95": [
+        -0.10896960545220809,
+        0.15992044929544938
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_direction",
+      "metric": "reverse_among_routes",
+      "difference": 0.3877551020408163,
+      "ci95": [
+        0.3199954954954955,
+        0.522298731852872
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_direction",
+      "metric": "out_of_lane_among_routes",
+      "difference": 0.4642857142857143,
+      "ci95": [
+        0.375,
+        0.5447550141113208
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_direction",
+      "metric": "static_rectangle_legal_among_routes",
+      "difference": -0.0022377372001432146,
+      "ci95": [
+        -0.021985237899804243,
+        0.015584027942572382
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_direction",
+      "metric": "tangent_curvature_exceeds_bound_among_routes",
+      "difference": 0.018349445041174417,
+      "ci95": [
+        0.0,
+        0.05555776364599897
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_direction",
+      "metric": "planning_budget_all_queries",
+      "difference": -0.3443396226415094,
+      "ci95": [
+        -0.46413476874003184,
+        -0.20915408163265295
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_direction",
+      "metric": "common_projection_failure_all_queries",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_connection",
+      "metric": "route_generated",
+      "difference": 0.3679245283018868,
+      "ci95": [
+        0.24375000000000002,
+        0.4525577483403923
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_connection",
+      "metric": "full_lane_legal_all_queries",
+      "difference": -0.2028301886792453,
+      "ci95": [
+        -0.25373134328358204,
+        -0.14503540214625513
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_connection",
+      "metric": "full_road_legal_all_queries",
+      "difference": -0.10849056603773585,
+      "ci95": [
+        -0.16500121359223302,
+        -0.045744206773618526
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_connection",
+      "metric": "full_lane_legal_among_routes",
+      "difference": -0.5060532687651331,
+      "ci95": [
+        -0.6134301745088058,
+        -0.33858616448528733
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_connection",
+      "metric": "full_road_legal_among_routes",
+      "difference": -0.28260117606364576,
+      "ci95": [
+        -0.393246162516991,
+        -0.14626741309476024
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_connection",
+      "metric": "point_drivable_among_routes",
+      "difference": -0.24792459356624008,
+      "ci95": [
+        -0.42381488566808734,
+        -0.06254368175146298
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_connection",
+      "metric": "direction_violation_among_routes",
+      "difference": 0.19301279833967483,
+      "ci95": [
+        0.05481774668630336,
+        0.33269112024459824
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_connection",
+      "metric": "connection_violation_among_routes",
+      "difference": 0.5664130058803182,
+      "ci95": [
+        0.4437196231019835,
+        0.6852135259764284
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_connection",
+      "metric": "reverse_among_routes",
+      "difference": 0.2945347630577655,
+      "ci95": [
+        0.1773991819237331,
+        0.4604482491726273
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_connection",
+      "metric": "out_of_lane_among_routes",
+      "difference": 0.4642857142857143,
+      "ci95": [
+        0.375,
+        0.5447550141113208
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_connection",
+      "metric": "static_rectangle_legal_among_routes",
+      "difference": -0.0016430300933932898,
+      "ci95": [
+        -0.013657506218634177,
+        0.017243245260486647
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_connection",
+      "metric": "tangent_curvature_exceeds_bound_among_routes",
+      "difference": 0.008388101003113158,
+      "ci95": [
+        -0.011235955056179803,
+        0.03143067226890751
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_connection",
+      "metric": "planning_budget_all_queries",
+      "difference": -0.15566037735849056,
+      "ci95": [
+        -0.22405009958633368,
+        -0.08973880597014923
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_connection",
+      "metric": "common_projection_failure_all_queries",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_direction_connection",
+      "metric": "route_generated",
+      "difference": 0.4811320754716981,
+      "ci95": [
+        0.3834113113190524,
+        0.5824404761904762
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_direction_connection",
+      "metric": "full_lane_legal_all_queries",
+      "difference": -0.23113207547169812,
+      "ci95": [
+        -0.2857142857142857,
+        -0.17200000000000001
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_direction_connection",
+      "metric": "full_road_legal_all_queries",
+      "difference": -0.10849056603773585,
+      "ci95": [
+        -0.16500121359223302,
+        -0.045744206773618526
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_direction_connection",
+      "metric": "full_lane_legal_among_routes",
+      "difference": -0.7537993920972644,
+      "ci95": [
+        -0.8390833477733495,
+        -0.679763512763596
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_direction_connection",
+      "metric": "full_road_legal_among_routes",
+      "difference": -0.38862353452019105,
+      "ci95": [
+        -0.4616002516002516,
+        -0.2801694583856031
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_direction_connection",
+      "metric": "point_drivable_among_routes",
+      "difference": -0.18030829353017797,
+      "ci95": [
+        -0.35334475086825795,
+        0.029412869173399112
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_direction_connection",
+      "metric": "direction_violation_among_routes",
+      "difference": 0.4387755102040816,
+      "ci95": [
+        0.3636281883584042,
+        0.5810839685839685
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_direction_connection",
+      "metric": "connection_violation_among_routes",
+      "difference": 0.5599218410768563,
+      "ci95": [
+        0.4303531420016796,
+        0.6836427626606199
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_direction_connection",
+      "metric": "reverse_among_routes",
+      "difference": 0.3877551020408163,
+      "ci95": [
+        0.3199954954954955,
+        0.522298731852872
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_direction_connection",
+      "metric": "out_of_lane_among_routes",
+      "difference": 0.4642857142857143,
+      "ci95": [
+        0.375,
+        0.5447550141113208
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_direction_connection",
+      "metric": "static_rectangle_legal_among_routes",
+      "difference": -0.005970473295701259,
+      "ci95": [
+        -0.03411784736734435,
+        0.015029656065840278
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_direction_connection",
+      "metric": "tangent_curvature_exceeds_bound_among_routes",
+      "difference": 0.017042987407729027,
+      "ci95": [
+        -0.010812279670975325,
+        0.06188440573853016
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_direction_connection",
+      "metric": "planning_budget_all_queries",
+      "difference": -0.2169811320754717,
+      "ci95": [
+        -0.3450147058823529,
+        -0.1411042944785276
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "free_space",
+      "b": "lane_direction_connection",
+      "metric": "common_projection_failure_all_queries",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_area",
+      "metric": "route_generated",
+      "difference": 0.018867924528301994,
+      "ci95": [
+        -0.10244215134459035,
+        0.15854142469996133
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_area",
+      "metric": "full_lane_legal_all_queries",
+      "difference": -0.023584905660377353,
+      "ci95": [
+        -0.051724137931034475,
+        0.014928178655594261
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_area",
+      "metric": "full_road_legal_all_queries",
+      "difference": 0.033018867924528295,
+      "ci95": [
+        0.009569377990430616,
+        0.06751360606616524
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_area",
+      "metric": "full_lane_legal_among_routes",
+      "difference": -0.03899046726050942,
+      "ci95": [
+        -0.11550197127363492,
+        0.04766384787273044
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_area",
+      "metric": "full_road_legal_among_routes",
+      "difference": 0.036958899828098135,
+      "ci95": [
+        -0.020250854585147474,
+        0.11204506734200534
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_area",
+      "metric": "point_drivable_among_routes",
+      "difference": 0.37341772151898733,
+      "ci95": [
+        0.23369438236489237,
+        0.5192557803468208
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_area",
+      "metric": "direction_violation_among_routes",
+      "difference": 0.08149710892326928,
+      "ci95": [
+        -0.02522659043468753,
+        0.150063755581308
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_area",
+      "metric": "connection_violation_among_routes",
+      "difference": -0.050164088138771656,
+      "ci95": [
+        -0.08419674334979318,
+        -0.011417965235736436
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_area",
+      "metric": "reverse_among_routes",
+      "difference": 0.09001406469760898,
+      "ci95": [
+        -0.034081439393939386,
+        0.16617552651584072
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_area",
+      "metric": "out_of_lane_among_routes",
+      "difference": 0.11728395061728394,
+      "ci95": [
+        0.025423728813559324,
+        0.19282904570844153
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_area",
+      "metric": "static_rectangle_legal_among_routes",
+      "difference": -0.0004688232536333818,
+      "ci95": [
+        -0.005428054638038604,
+        0.0034574240665727787
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_area",
+      "metric": "tangent_curvature_exceeds_bound_among_routes",
+      "difference": 0.025472730114080244,
+      "ci95": [
+        0.0,
+        0.0596542408611429
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_area",
+      "metric": "planning_budget_all_queries",
+      "difference": -0.1792452830188679,
+      "ci95": [
+        -0.27237390382716764,
+        -0.06848239259843644
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_area",
+      "metric": "common_projection_failure_all_queries",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_direction",
+      "metric": "route_generated",
+      "difference": 0.2264150943396227,
+      "ci95": [
+        0.058114617940199335,
+        0.3945042721581289
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_direction",
+      "metric": "full_lane_legal_all_queries",
+      "difference": -0.014150943396226412,
+      "ci95": [
+        -0.04918270373010216,
+        0.03428571428571431
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_direction",
+      "metric": "full_road_legal_all_queries",
+      "difference": 0.042452830188679264,
+      "ci95": [
+        0.009569377990430616,
+        0.09545671685002893
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_direction",
+      "metric": "full_lane_legal_among_routes",
+      "difference": -0.14847303443794668,
+      "ci95": [
+        -0.25381627514499544,
+        -0.033446258322369034
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_direction",
+      "metric": "full_road_legal_among_routes",
+      "difference": -0.043209876543209846,
+      "ci95": [
+        -0.12650314292918186,
+        0.04663444014321705
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_direction",
+      "metric": "point_drivable_among_routes",
+      "difference": 0.39473684210526316,
+      "ci95": [
+        0.3111111111111111,
+        0.4762043189368771
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_direction",
+      "metric": "direction_violation_among_routes",
+      "difference": 0.5308641975308642,
+      "ci95": [
+        0.3983739837398374,
+        0.6592209466511142
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_direction",
+      "metric": "connection_violation_among_routes",
+      "difference": -0.06237816764132559,
+      "ci95": [
+        -0.1852105602344757,
+        0.03141813209583327
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_direction",
+      "metric": "reverse_among_routes",
+      "difference": 0.4444444444444444,
+      "ci95": [
+        0.2982362821948488,
+        0.5607501359837808
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_direction",
+      "metric": "out_of_lane_among_routes",
+      "difference": 0.11728395061728394,
+      "ci95": [
+        0.025423728813559324,
+        0.19282904570844153
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_direction",
+      "metric": "static_rectangle_legal_among_routes",
+      "difference": 0.0009746588693957114,
+      "ci95": [
+        -0.01863208167385597,
+        0.0214302587176603
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_direction",
+      "metric": "tangent_curvature_exceeds_bound_among_routes",
+      "difference": 0.037686809616634176,
+      "ci95": [
+        0.0,
+        0.09999999999999998
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_direction",
+      "metric": "planning_budget_all_queries",
+      "difference": -0.3443396226415094,
+      "ci95": [
+        -0.46413476874003184,
+        -0.20915408163265295
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_direction",
+      "metric": "common_projection_failure_all_queries",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_connection",
+      "metric": "route_generated",
+      "difference": 0.20754716981132082,
+      "ci95": [
+        0.06481209150326793,
+        0.3406254816337016
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_connection",
+      "metric": "full_lane_legal_all_queries",
+      "difference": -0.17924528301886794,
+      "ci95": [
+        -0.21597692307692307,
+        -0.12208947816222351
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_connection",
+      "metric": "full_road_legal_all_queries",
+      "difference": -0.009433962264150941,
+      "ci95": [
+        -0.045871559633027525,
+        0.030703441295546578
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_connection",
+      "metric": "full_lane_legal_among_routes",
+      "difference": -0.43021552626072396,
+      "ci95": [
+        -0.5473603681392518,
+        -0.2651322541549443
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_connection",
+      "metric": "full_road_legal_among_routes",
+      "difference": -0.12513078049801213,
+      "ci95": [
+        -0.1884204570833023,
+        -0.03688458277536982
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_connection",
+      "metric": "point_drivable_among_routes",
+      "difference": 0.38983050847457623,
+      "ci95": [
+        0.2568776345152492,
+        0.5204116578138105
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_connection",
+      "metric": "direction_violation_among_routes",
+      "difference": 0.28510148566645743,
+      "ci95": [
+        0.15360510372809758,
+        0.36949986877342034
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_connection",
+      "metric": "connection_violation_among_routes",
+      "difference": 0.45605775266792214,
+      "ci95": [
+        0.3239852408817533,
+        0.6170212765957447
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_connection",
+      "metric": "reverse_among_routes",
+      "difference": 0.3512241054613936,
+      "ci95": [
+        0.23358672819428633,
+        0.43220935527682725
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_connection",
+      "metric": "out_of_lane_among_routes",
+      "difference": 0.11728395061728394,
+      "ci95": [
+        0.025423728813559324,
+        0.19282904570844153
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_connection",
+      "metric": "static_rectangle_legal_among_routes",
+      "difference": 0.0015693659761456362,
+      "ci95": [
+        -0.011159728246949906,
+        0.023504273504273504
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_connection",
+      "metric": "tangent_curvature_exceeds_bound_among_routes",
+      "difference": 0.027725465578572916,
+      "ci95": [
+        0.0,
+        0.07883033311222425
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_connection",
+      "metric": "planning_budget_all_queries",
+      "difference": -0.15566037735849056,
+      "ci95": [
+        -0.22405009958633368,
+        -0.08973880597014923
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_connection",
+      "metric": "common_projection_failure_all_queries",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_direction_connection",
+      "metric": "route_generated",
+      "difference": 0.3207547169811321,
+      "ci95": [
+        0.16097219853317407,
+        0.4905189732142859
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_direction_connection",
+      "metric": "full_lane_legal_all_queries",
+      "difference": -0.20754716981132076,
+      "ci95": [
+        -0.24664240013509203,
+        -0.14814814814814817
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_direction_connection",
+      "metric": "full_road_legal_all_queries",
+      "difference": -0.009433962264150941,
+      "ci95": [
+        -0.045871559633027525,
+        0.030703441295546578
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_direction_connection",
+      "metric": "full_lane_legal_among_routes",
+      "difference": -0.6779616495928553,
+      "ci95": [
+        -0.8342044549357891,
+        -0.5116515062148425
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_direction_connection",
+      "metric": "full_road_legal_among_routes",
+      "difference": -0.2311531389545574,
+      "ci95": [
+        -0.29685413387485693,
+        -0.14905662446956028
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_direction_connection",
+      "metric": "point_drivable_among_routes",
+      "difference": 0.45744680851063835,
+      "ci95": [
+        0.33707559843673673,
+        0.6231931112365895
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_direction_connection",
+      "metric": "direction_violation_among_routes",
+      "difference": 0.5308641975308642,
+      "ci95": [
+        0.3983739837398374,
+        0.6592209466511142
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_direction_connection",
+      "metric": "connection_violation_among_routes",
+      "difference": 0.4495665878644602,
+      "ci95": [
+        0.31108578949550225,
+        0.6142864774114775
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_direction_connection",
+      "metric": "reverse_among_routes",
+      "difference": 0.4444444444444444,
+      "ci95": [
+        0.2982362821948488,
+        0.5607501359837808
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_direction_connection",
+      "metric": "out_of_lane_among_routes",
+      "difference": 0.11728395061728394,
+      "ci95": [
+        0.025423728813559324,
+        0.19282904570844153
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_direction_connection",
+      "metric": "static_rectangle_legal_among_routes",
+      "difference": -0.002758077226162333,
+      "ci95": [
+        -0.030754349816849817,
+        0.019842494283581116
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_direction_connection",
+      "metric": "tangent_curvature_exceeds_bound_among_routes",
+      "difference": 0.036380351983188786,
+      "ci95": [
+        0.0,
+        0.1014137920514953
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_direction_connection",
+      "metric": "planning_budget_all_queries",
+      "difference": -0.2169811320754717,
+      "ci95": [
+        -0.3450147058823529,
+        -0.1411042944785276
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "drivable_area",
+      "b": "lane_direction_connection",
+      "metric": "common_projection_failure_all_queries",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_area",
+      "b": "lane_direction",
+      "metric": "route_generated",
+      "difference": 0.2075471698113207,
+      "ci95": [
+        0.1155199944459873,
+        0.35333333333333333
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_area",
+      "b": "lane_direction",
+      "metric": "full_lane_legal_all_queries",
+      "difference": 0.009433962264150941,
+      "ci95": [
+        0.0,
+        0.02899616368286445
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_area",
+      "b": "lane_direction",
+      "metric": "full_road_legal_all_queries",
+      "difference": 0.009433962264150969,
+      "ci95": [
+        0.0,
+        0.02899616368286448
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_area",
+      "b": "lane_direction",
+      "metric": "full_lane_legal_among_routes",
+      "difference": -0.10948256717743726,
+      "ci95": [
+        -0.2183012028094161,
+        -0.04702690838957444
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_area",
+      "b": "lane_direction",
+      "metric": "full_road_legal_among_routes",
+      "difference": -0.08016877637130798,
+      "ci95": [
+        -0.17182837272638848,
+        -0.030644965783466815
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_area",
+      "b": "lane_direction",
+      "metric": "point_drivable_among_routes",
+      "difference": 0.02131912058627583,
+      "ci95": [
+        -0.08325514230347718,
+        0.13557584396777989
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_area",
+      "b": "lane_direction",
+      "metric": "direction_violation_among_routes",
+      "difference": 0.44936708860759494,
+      "ci95": [
+        0.3474697554697555,
+        0.6039655528052805
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_area",
+      "b": "lane_direction",
+      "metric": "connection_violation_among_routes",
+      "difference": -0.012214079502553932,
+      "ci95": [
+        -0.15042371553884704,
+        0.0837822282489217
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_area",
+      "b": "lane_direction",
+      "metric": "reverse_among_routes",
+      "difference": 0.35443037974683544,
+      "ci95": [
+        0.25738211562661933,
+        0.4909280303030304
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_area",
+      "b": "lane_direction",
+      "metric": "out_of_lane_among_routes",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_area",
+      "b": "lane_direction",
+      "metric": "static_rectangle_legal_among_routes",
+      "difference": 0.0014434821230290933,
+      "ci95": [
+        -0.016234358706986442,
+        0.0196078431372549
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_area",
+      "b": "lane_direction",
+      "metric": "tangent_curvature_exceeds_bound_among_routes",
+      "difference": 0.012214079502553932,
+      "ci95": [
+        0.0,
+        0.04607920921302551
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_area",
+      "b": "lane_direction",
+      "metric": "planning_budget_all_queries",
+      "difference": -0.1650943396226415,
+      "ci95": [
+        -0.3061283472926743,
+        -0.08035714285714288
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_area",
+      "b": "lane_direction",
+      "metric": "common_projection_failure_all_queries",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_area",
+      "b": "lane_connection",
+      "metric": "route_generated",
+      "difference": 0.18867924528301883,
+      "ci95": [
+        0.10647307572936057,
+        0.29729729729729726
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_area",
+      "b": "lane_connection",
+      "metric": "full_lane_legal_all_queries",
+      "difference": -0.1556603773584906,
+      "ci95": [
+        -0.18055973895582325,
+        -0.12105050933786078
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_area",
+      "b": "lane_connection",
+      "metric": "full_road_legal_all_queries",
+      "difference": -0.042452830188679236,
+      "ci95": [
+        -0.07228915662650603,
+        -0.01428571428571429
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_area",
+      "b": "lane_connection",
+      "metric": "full_lane_legal_among_routes",
+      "difference": -0.39122505900021454,
+      "ci95": [
+        -0.48810833755790617,
+        -0.2714629423378523
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_area",
+      "b": "lane_connection",
+      "metric": "full_road_legal_among_routes",
+      "difference": -0.16208968032611026,
+      "ci95": [
+        -0.25630767239377666,
+        -0.07635255702722592
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_area",
+      "b": "lane_connection",
+      "metric": "point_drivable_among_routes",
+      "difference": 0.0164127869555889,
+      "ci95": [
+        -0.14279705411068655,
+        0.18150312504022967
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_area",
+      "b": "lane_connection",
+      "metric": "direction_violation_among_routes",
+      "difference": 0.20360437674318815,
+      "ci95": [
+        0.1126778865300166,
+        0.30196708041014575
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_area",
+      "b": "lane_connection",
+      "metric": "connection_violation_among_routes",
+      "difference": 0.5062218408066937,
+      "ci95": [
+        0.37047300640930003,
+        0.6621979166666668
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_area",
+      "b": "lane_connection",
+      "metric": "reverse_among_routes",
+      "difference": 0.2612100407637846,
+      "ci95": [
+        0.17778589871730802,
+        0.38602038056852145
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_area",
+      "b": "lane_connection",
+      "metric": "out_of_lane_among_routes",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_area",
+      "b": "lane_connection",
+      "metric": "static_rectangle_legal_among_routes",
+      "difference": 0.002038189229779018,
+      "ci95": [
+        -0.008684874764596126,
+        0.02197802197802198
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_area",
+      "b": "lane_connection",
+      "metric": "tangent_curvature_exceeds_bound_among_routes",
+      "difference": 0.0022527354644926723,
+      "ci95": [
+        -0.014635243440502599,
+        0.02268703417341589
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_area",
+      "b": "lane_connection",
+      "metric": "planning_budget_all_queries",
+      "difference": 0.023584905660377353,
+      "ci95": [
+        -0.06037799164239586,
+        0.11601164658634543
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_area",
+      "b": "lane_connection",
+      "metric": "common_projection_failure_all_queries",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_area",
+      "b": "lane_direction_connection",
+      "metric": "route_generated",
+      "difference": 0.3018867924528301,
+      "ci95": [
+        0.2142794486215538,
+        0.4461702127659575
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_area",
+      "b": "lane_direction_connection",
+      "metric": "full_lane_legal_all_queries",
+      "difference": -0.1839622641509434,
+      "ci95": [
+        -0.22404371584699456,
+        -0.14285714285714285
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_area",
+      "b": "lane_direction_connection",
+      "metric": "full_road_legal_all_queries",
+      "difference": -0.042452830188679236,
+      "ci95": [
+        -0.07228915662650603,
+        -0.01428571428571429
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_area",
+      "b": "lane_direction_connection",
+      "metric": "full_lane_legal_among_routes",
+      "difference": -0.6389711823323458,
+      "ci95": [
+        -0.78509480023793,
+        -0.5317568700987194
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_area",
+      "b": "lane_direction_connection",
+      "metric": "full_road_legal_among_routes",
+      "difference": -0.26811203878265555,
+      "ci95": [
+        -0.35,
+        -0.19786064121543062
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_area",
+      "b": "lane_direction_connection",
+      "metric": "point_drivable_among_routes",
+      "difference": 0.08402908699165101,
+      "ci95": [
+        -0.08308593007913842,
+        0.2899322181702871
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_area",
+      "b": "lane_direction_connection",
+      "metric": "direction_violation_among_routes",
+      "difference": 0.44936708860759494,
+      "ci95": [
+        0.3474697554697555,
+        0.6039655528052805
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_area",
+      "b": "lane_direction_connection",
+      "metric": "connection_violation_among_routes",
+      "difference": 0.49973067600323184,
+      "ci95": [
+        0.35741298993360465,
+        0.6591185760508734
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_area",
+      "b": "lane_direction_connection",
+      "metric": "reverse_among_routes",
+      "difference": 0.35443037974683544,
+      "ci95": [
+        0.25738211562661933,
+        0.4909280303030304
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_area",
+      "b": "lane_direction_connection",
+      "metric": "out_of_lane_among_routes",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_area",
+      "b": "lane_direction_connection",
+      "metric": "static_rectangle_legal_among_routes",
+      "difference": -0.0022892539725289512,
+      "ci95": [
+        -0.02832338743156918,
+        0.018170637743006163
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_area",
+      "b": "lane_direction_connection",
+      "metric": "tangent_curvature_exceeds_bound_among_routes",
+      "difference": 0.010907621869108541,
+      "ci95": [
+        -0.014042189909671795,
+        0.05420175375172732
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_area",
+      "b": "lane_direction_connection",
+      "metric": "planning_budget_all_queries",
+      "difference": -0.03773584905660379,
+      "ci95": [
+        -0.22794440144478847,
+        0.07377808136004857
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_area",
+      "b": "lane_direction_connection",
+      "metric": "common_projection_failure_all_queries",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_direction",
+      "b": "lane_connection",
+      "metric": "route_generated",
+      "difference": -0.018867924528301883,
+      "ci95": [
+        -0.21057924984875986,
+        0.14529914529914528
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_direction",
+      "b": "lane_connection",
+      "metric": "full_lane_legal_all_queries",
+      "difference": -0.16509433962264153,
+      "ci95": [
+        -0.19130568974771875,
+        -0.12849162011173182
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_direction",
+      "b": "lane_connection",
+      "metric": "full_road_legal_all_queries",
+      "difference": -0.051886792452830205,
+      "ci95": [
+        -0.08374521837245787,
+        -0.018690137574737326
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_direction",
+      "b": "lane_connection",
+      "metric": "full_lane_legal_among_routes",
+      "difference": -0.2817424918227773,
+      "ci95": [
+        -0.4341499803912696,
+        -0.06600461907065668
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_direction",
+      "b": "lane_connection",
+      "metric": "full_road_legal_among_routes",
+      "difference": -0.08192090395480228,
+      "ci95": [
+        -0.21080786903155324,
+        0.06260851815673672
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_direction",
+      "b": "lane_connection",
+      "metric": "point_drivable_among_routes",
+      "difference": -0.004906333630686932,
+      "ci95": [
+        -0.1522494965260118,
+        0.15141756641036985
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_direction",
+      "b": "lane_connection",
+      "metric": "direction_violation_among_routes",
+      "difference": -0.2457627118644068,
+      "ci95": [
+        -0.46790437226217046,
+        -0.09998091603053429
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_direction",
+      "b": "lane_connection",
+      "metric": "connection_violation_among_routes",
+      "difference": 0.5184359203092477,
+      "ci95": [
+        0.36417302338233803,
+        0.7145093044596097
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_direction",
+      "b": "lane_connection",
+      "metric": "reverse_among_routes",
+      "difference": -0.09322033898305085,
+      "ci95": [
+        -0.1830269607843137,
+        -0.021047149122807
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_direction",
+      "b": "lane_connection",
+      "metric": "out_of_lane_among_routes",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_direction",
+      "b": "lane_connection",
+      "metric": "static_rectangle_legal_among_routes",
+      "difference": 0.0005947071067499247,
+      "ci95": [
+        -0.0032490417954136866,
+        0.01297436114473384
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_direction",
+      "b": "lane_connection",
+      "metric": "tangent_curvature_exceeds_bound_among_routes",
+      "difference": -0.00996134403806126,
+      "ci95": [
+        -0.03507378067722896,
+        0.005129971093946811
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_direction",
+      "b": "lane_connection",
+      "metric": "planning_budget_all_queries",
+      "difference": 0.18867924528301885,
+      "ci95": [
+        0.05530979658639233,
+        0.33336776859504147
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_direction",
+      "b": "lane_connection",
+      "metric": "common_projection_failure_all_queries",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_direction",
+      "b": "lane_direction_connection",
+      "metric": "route_generated",
+      "difference": 0.09433962264150941,
+      "ci95": [
+        -0.01463593974175037,
+        0.21856470226618613
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_direction",
+      "b": "lane_direction_connection",
+      "metric": "full_lane_legal_all_queries",
+      "difference": -0.19339622641509435,
+      "ci95": [
+        -0.22951028772164606,
+        -0.15286137988039086
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_direction",
+      "b": "lane_direction_connection",
+      "metric": "full_road_legal_all_queries",
+      "difference": -0.051886792452830205,
+      "ci95": [
+        -0.08374521837245787,
+        -0.018690137574737326
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_direction",
+      "b": "lane_direction_connection",
+      "metric": "full_lane_legal_among_routes",
+      "difference": -0.5294886151549085,
+      "ci95": [
+        -0.7176122291021672,
+        -0.3696870479354735
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_direction",
+      "b": "lane_direction_connection",
+      "metric": "full_road_legal_among_routes",
+      "difference": -0.18794326241134757,
+      "ci95": [
+        -0.27777797145911776,
+        -0.10859212161661239
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_direction",
+      "b": "lane_direction_connection",
+      "metric": "point_drivable_among_routes",
+      "difference": 0.06270996640537518,
+      "ci95": [
+        -0.05371362719284068,
+        0.22304219452741442
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_direction",
+      "b": "lane_direction_connection",
+      "metric": "direction_violation_among_routes",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_direction",
+      "b": "lane_direction_connection",
+      "metric": "connection_violation_among_routes",
+      "difference": 0.5119447555057858,
+      "ci95": [
+        0.35734379610999334,
+        0.7108905956848031
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_direction",
+      "b": "lane_direction_connection",
+      "metric": "reverse_among_routes",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_direction",
+      "b": "lane_direction_connection",
+      "metric": "out_of_lane_among_routes",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_direction",
+      "b": "lane_direction_connection",
+      "metric": "static_rectangle_legal_among_routes",
+      "difference": -0.0037327360955580445,
+      "ci95": [
+        -0.016570048883296003,
+        0.0003393770862065524
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_direction",
+      "b": "lane_direction_connection",
+      "metric": "tangent_curvature_exceeds_bound_among_routes",
+      "difference": -0.0013064576334453903,
+      "ci95": [
+        -0.020690187799978135,
+        0.021388022648845425
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_direction",
+      "b": "lane_direction_connection",
+      "metric": "planning_budget_all_queries",
+      "difference": 0.1273584905660377,
+      "ci95": [
+        0.009699664277288812,
+        0.21311776759884285
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_direction",
+      "b": "lane_direction_connection",
+      "metric": "common_projection_failure_all_queries",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_connection",
+      "b": "lane_direction_connection",
+      "metric": "route_generated",
+      "difference": 0.1132075471698113,
+      "ci95": [
+        0.028406410806174932,
+        0.256018918918919
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_connection",
+      "b": "lane_direction_connection",
+      "metric": "full_lane_legal_all_queries",
+      "difference": -0.028301886792452824,
+      "ci95": [
+        -0.06593406593406598,
+        -0.005404678872420805
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_connection",
+      "b": "lane_direction_connection",
+      "metric": "full_road_legal_all_queries",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_connection",
+      "b": "lane_direction_connection",
+      "metric": "full_lane_legal_among_routes",
+      "difference": -0.2477461233321313,
+      "ci95": [
+        -0.459692649420472,
+        -0.11342080186171544
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_connection",
+      "b": "lane_direction_connection",
+      "metric": "full_road_legal_among_routes",
+      "difference": -0.10602235845654528,
+      "ci95": [
+        -0.2121913580246914,
+        -0.03087819597409971
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_connection",
+      "b": "lane_direction_connection",
+      "metric": "point_drivable_among_routes",
+      "difference": 0.06761630003606212,
+      "ci95": [
+        0.00031521922772349907,
+        0.20396521819949665
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_connection",
+      "b": "lane_direction_connection",
+      "metric": "direction_violation_among_routes",
+      "difference": 0.2457627118644068,
+      "ci95": [
+        0.09998091603053437,
+        0.4679043722621705
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_connection",
+      "b": "lane_direction_connection",
+      "metric": "connection_violation_among_routes",
+      "difference": -0.00649116480346195,
+      "ci95": [
+        -0.017162864489591402,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_connection",
+      "b": "lane_direction_connection",
+      "metric": "reverse_among_routes",
+      "difference": 0.09322033898305085,
+      "ci95": [
+        0.02104714912280702,
+        0.1830269607843138
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_connection",
+      "b": "lane_direction_connection",
+      "metric": "out_of_lane_among_routes",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_connection",
+      "b": "lane_direction_connection",
+      "metric": "static_rectangle_legal_among_routes",
+      "difference": -0.004327443202307969,
+      "ci95": [
+        -0.024689305027510808,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_connection",
+      "b": "lane_direction_connection",
+      "metric": "tangent_curvature_exceeds_bound_among_routes",
+      "difference": 0.008654886404615869,
+      "ci95": [
+        0.0,
+        0.037149116273418485
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_connection",
+      "b": "lane_direction_connection",
+      "metric": "planning_budget_all_queries",
+      "difference": -0.061320754716981146,
+      "ci95": [
+        -0.20635351966873705,
+        0.012097998563406055
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "a": "lane_connection",
+      "b": "lane_direction_connection",
+      "metric": "common_projection_failure_all_queries",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    }
+  ],
+  "statuses": {
+    "free_space": {
+      "PATH_GENERATED": 196,
+      "COMMON_ENDPOINT_PROJECTION_FAILED": 16
+    },
+    "drivable_area": {
+      "PATH_GENERATED": 162,
+      "ENDPOINT_NOT_FREE_IN_CONDITION": 34,
+      "COMMON_ENDPOINT_PROJECTION_FAILED": 16
+    },
+    "lane_area": {
+      "PATH_GENERATED": 158,
+      "COMMON_ENDPOINT_PROJECTION_FAILED": 16,
+      "PLANNING_WALL_BUDGET": 38
+    },
+    "lane_direction": {
+      "PATH_GENERATED": 114,
+      "COMMON_ENDPOINT_PROJECTION_FAILED": 16,
+      "PLANNING_WALL_BUDGET": 73,
+      "EXHAUSTED_SEARCH_NOT_PROOF_OF_UNREACHABILITY": 9
+    },
+    "lane_connection": {
+      "EXHAUSTED_SEARCH_NOT_PROOF_OF_UNREACHABILITY": 45,
+      "PATH_GENERATED": 118,
+      "PLANNING_WALL_BUDGET": 33,
+      "COMMON_ENDPOINT_PROJECTION_FAILED": 16
+    },
+    "lane_direction_connection": {
+      "EXHAUSTED_SEARCH_NOT_PROOF_OF_UNREACHABILITY": 56,
+      "PATH_GENERATED": 94,
+      "PLANNING_WALL_BUDGET": 46,
+      "COMMON_ENDPOINT_PROJECTION_FAILED": 16
+    }
+  },
+  "bootstrap": {
+    "unit": "采集log",
+    "repetitions": 4000,
+    "seed": 17,
+    "paired": true
+  },
+  "limitations": [
+    "当前正确对象由隔离GT给定，参考点不是已核验安全接近区域；不覆盖真实语义选择/锁定/到达",
+    "开发查询按场景固定散列预选；重复语义查询不增加独立几何任务或场景，按log聚类",
+    "共同端点和已观测预测障碍；未观测障碍与动态交通风险不在此安全结论内",
+    "规划失败/预算耗尽不自证不可达，所有冻结查询保留；零路径的条件安全率为null",
+    "完整车道审计与官方可行驶多边形检查分别报告，地图先验不一致不隐去",
+    "矩形车身只作路径切线静态姿态检查，未积分控制或审计连续车身扫掠；不声称运动学可执行",
+    "共享CPU且含当前窗口边缓存，不作为独占规划性能或新封存主表"
+  ],
+  "performance_credit": false,
+  "independent_test": false,
+  "actual_arrival_evaluated": false,
+  "goal_complete": false
+}

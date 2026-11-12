@@ -146,10 +146,58 @@ def causal_section():
             '<div class="links"><a href="/statistics/causal_fault_full_001/report.json">六条件统计与区间</a>'
             '<a href="/faults/causal_fault_full_001/audit_001/report.md">可读结果表</a>'
             '<a href="/faults/causal_fault_full_001/audit_001/report.json">全帧独立重算</a></div>')
+    camera = OUTPUT/'mapping_evaluation/camera_time_gt_dev_full_001/report.json'
+    camera_audit = camera.parent/'audit_001/report.json'
+    if camera.exists() and camera_audit.exists():
+        values = json.loads(camera.read_text())
+        audit = json.loads(camera_audit.read_text())
+        if not audit['passed'] or audit['source_report_sha256'] != digest(camera):
+            raise ValueError('相机时间评价与独立重算不一致')
+        paths += [camera, camera_audit]
+        comparison = next(row for row in values['method_contrasts']
+            if row['condition'] == 'camera_center_interpolation_proxy'
+            and row['method'] == 'one_to_one_depth_quality'
+            and row['baseline'] == 'original_fusion' and row['metric'] == 'recall')
+        note += ('<h3>相机时间中心插值：固定分母的补充敏感性</h3>'
+            f'<p>仍为{values["fixed_GT_observations"]}个GT观测、全部七种原预测。'
+            f'{values["alignment_states"]["interpolated"]}个中心在相邻官方标注间线性插值，'
+            f'{values["alignment_states"]["fallback"]}个无前驱保留原中心。'
+            '只改变评价中心，不改输入、方法或主表；尺寸、朝向与可见性仍有原时间近似。'
+            f'新参考下深度质量相对原融合召回差{100*comparison["value"]:+.2f}pp，'
+            f'11log配对95%区间[{100*comparison["ci95"][0]:.2f}, '
+            f'{100*comparison["ci95"][1]:.2f}]pp。'
+            '深度质量自身因评价中心改变的召回/误差差异区间均跨0。'
+            '线性轨迹假设未获人工验证，不能称精确相机时间真值或新增到达证据。</p>'
+            '<div class="links"><a href="/task_protocol/camera_time_gt_sensitivity_001.md">补充评价协议</a>'
+            '<a href="/mapping_evaluation/camera_time_gt_dev_full_001/report.json">七方法全部区间与回退</a>'
+            '<a href="/mapping_evaluation/camera_time_gt_dev_full_001/audit_001/report.md">独立重算与可读结果</a></div>')
+    maps = OUTPUT/'statistics/causal_maps_full_001/report.json'
+    if maps.exists():
+        values = json.loads(maps.read_text())
+        full = values['conditions']['lane_direction_connection']
+        paths.append(maps)
+        rectangle = full['static_rectangle_legal_among_routes']
+        note += ('<h3>六地图约束：完整过去LiDAR诊断</h3>'
+            f'<p>{values["queries"]}查询、{values["cases"]}条件、'
+            f'{values["unique_geometric_queries"]}个不同几何查询。完整约束生成'
+            f'{full["route_generated"]["count"]}条路线，'
+            f'{full["full_road_legal_all_queries"]["count"]}条同时通过车道与可行驶区域检查；'
+            f'仅{rectangle["count"]}/{rectangle["denominator"]}路线通过静态矩形姿态检查。'
+            '正确对象参考点由隔离GT给定，没有控制执行、正确锁定或实际到达信用。</p>'
+            '<div class="links"><a href="/statistics/causal_maps_full_001/report.json">六条件全部分母与配对区间</a></div>')
+        map_audit = OUTPUT/'ablations/causal_maps_full_001/audit_002/report.json'
+        if map_audit.exists():
+            audit = json.loads(map_audit.read_text())
+            if not audit['passed'] or audit['source_statistics_sha256'] != digest(maps):
+                raise ValueError('地图统计与复核版本不一致')
+            paths.append(map_audit)
+            note += ('<p><a href="/ablations/causal_maps_full_001/audit_002/report.md">'
+                '完整记录、显式矩形几何与区间复算</a>；沿用既有独立车道审计器，'
+                '未新增第二套车道审计实现。逐姿态数值边界差异及首次失败保留，'
+                '未把边界违规改判为通过。</p>')
     for title, report_path in [
             ('动态维护/TTL完整建图消融', 'statistics/causal_modules_full_001/report.json'),
-            ('关联门限完整敏感性', 'statistics/causal_mapping_parameters_full_001/report.json'),
-            ('六地图约束完整开发诊断', 'statistics/causal_maps_full_001/report.json')]:
+            ('关联门限完整敏感性', 'statistics/causal_mapping_parameters_full_001/report.json')]:
         report = OUTPUT/report_path
         if report.exists():
             paths.append(report)
