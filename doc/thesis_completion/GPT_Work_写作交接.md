@@ -55,3 +55,14 @@ KITTI方法差异按33个drive配对4000次bootstrap：召回差+4.70个百分�
 `thesis/claim_citation_review_015.json` 保存11处限缩和11组细节复查。ALIGN表示学习不能写为检测器；A*原论文条件不能外推到有预算的实现；本项目是前向车辆搜索适配，不能称完整复现Dolgov两阶段与倒车策略；稀疏VLMaps式网格不能称复现LSeg像素映射。错arXiv、反爬HTTP200、仅元数据页面与下载失败均保留，不能充当全文内容证据。
 
 写作时可围绕已有方法和真实改动组织论证，但创新性和最终结论必须由一手文献比较与完整结果支持。请先依据证据制定框架，再起草；不得把剩余项用预期结果补齐，也不得将此交接材料直接当作正式论文正文。
+
+代码仓库已同步：https://github.com/lzccc666/lzc ，远端main提交`60cd334a1df6a77e7a4652ad0244db43a5588e01`。详细入口在仓库`README_THESIS_COMPLETION.md`。运行中的矩阵与未提交人工标注不因公开代码而变为完成。文献抓取009中38/59/65的HTTP429空body误用.json后缀，005扫描失败保留；类型核验002将其明确列为原始失败响应，不能作为JSON元数据或正文支持。
+
+
+## 开发集过去LiDAR续跑补充（2026-11-12）
+
+新增development_causal_inputs/audit/mapping/statistics/pipeline/downstream模块。固定38开发场景11log1508相机帧，逐帧复用相同RGB真实检测，新前端调用为0；按相机之前100ms内最近实测扫描重投影，缺测保留，旧未来LiDAR结果继续仅作离线诊断。真实3帧试运行已完成转换、独立原始表选帧/标定/像素重投影（0不一致）、七建图条件及关系/四检索调用；该片段对象0/2，无正查询的检索指标为null，失败NaN写出原件保留并修复。全量293 tests通过，5依赖警告。
+
+完整流水线已真实启动（source_bundle/development_causal_pipeline_full_001），转换后自动执行独立审计、38场景七条件重建、11log配对统计；causal_downstream_full_001等待其完成后运行关系、选择上限、四方法检索及统计。不能把排队当完成，最终状态查各complete/report。官方sample GT仍较相机晚约33–42ms，必须披露评价时间近似。本批不提供路径、锁定、实际到达或新封存信用。
+
+可查日志：source_bundle/development_causal_pipeline_full_001.log、source_bundle/development_causal_pipeline_full_001/{convert,audit,mapping,statistics}.log、source_bundle/causal_downstream_full_001.log。输入输出与审计位于data_manifest/development_causal_inputs_full_001；结果位于mapping_evaluation/causal_mapping_full_001、statistics/causal_mapping_full_001。旧GPT_Work_论文写作交接包_v1.zip保留原检查点，不包含此后新增实验；工作目录与validation_report.json是动态进展入口。

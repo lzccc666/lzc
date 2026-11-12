@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "cameras": 3,
+  "original_RGB_exact_checks": 3,
+  "detection_reuse_same_RGB_checks": 3,
+  "actual_new_frontend_calls": 0,
+  "independent_projection_frames": 3,
+  "independent_projection_mismatched_pixels": 0,
+  "real_past_lidar_pairs": 2,
+  "explicit_missing_masks": 1,
+  "future_lidar_pairs": 0,
+  "maximum_past_lidar_age_s": 0.013574,
+  "maximum_original_camera_pose_difference": 8.881784197001252e-16,
+  "sample_GT_time_offset_s": {
+    "minimum": 0.036167,
+    "maximum": 0.036955
+  },
+  "evaluation_limit": "GT仍为原官方sample时刻；移动对象时间近似，不能称完全同步GT",
+  "checked_output_files": 23,
+  "all_fingerprints_passed": true,
+  "complete_sha256": "eab2a524f5bdd70a6725eee7804a98d684420dbca995f83fc5ea7f1ad1fa90bc",
+  "auditor_sha256": "55f09a472af5314fd4a058a259b5b04c1ccbf3c5fde38d6c5c77c57a6c0e2900",
+  "transform_helper_sha256": "1d832d6ecb9a80b8921f3193caa828a419fadf27ae7e62ec52cf85659b72ec48",
+  "checks_sha256": "f7b17b4ba0b0357756f4889d30fe711dd925b334d5f9ecd91577490bc6c24792",
+  "elapsed_s": 26.975776739418507,
+  "no_GT_used_in_conversion": true,
+  "no_new_model_calls": true,
+  "methods_evaluated": false,
+  "new_test_opened": false,
+  "goal_complete": false
+}

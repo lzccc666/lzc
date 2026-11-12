@@ -238,3 +238,22 @@ CUDA_VISIBLE_DEVICES='' /root/miniconda3/envs/conceptgraph/bin/python -m concept
 本轮最终代码检查快照：全量tests286通过/5条依赖警告（tests_full_018.log）、Ruff与diff检查通过（ruff_completion_030.log、git_diff_check_021.log）、历史255170文件全量SHA0变化（protection_verify_008.log）。运行中66源文件保持一致，完整主矩阵及后续缺一仍未结束，因此非整个Goal最终验收。
 
 写作交接见 `GPT_Work_写作交接.md`，执行与Git交接见 `工作交接_代码与实验.md`。用户已授权同步到 `https://github.com/lzccc666/lzc`；只同步当前代码和必要小型交接证据，不发布原始数据、权重、原论文与凭据。成功与否以本机 `source_bundle/github_sync_001/push_report.json` 的远端核验为准，不能仅以本地提交判断已同步。
+
+
+## 开发集过去LiDAR输入、独立审计与真实重建（新增）
+
+现有全量运行：`source_bundle/development_causal_pipeline_full_001/`。仅CPU、单个顺序流水线，与主矩阵重叠时无独占性能信用。以下命令已真实启动；新复现实验必须换run-id，已有输出不覆盖。
+
+```bash
+LD_LIBRARY_PATH=/root/miniconda3/envs/conceptgraph/lib OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=2 CUDA_VISIBLE_DEVICES='' /root/miniconda3/envs/conceptgraph/bin/python -m conceptgraph.completion.development_causal_pipeline --run-id full_001
+LD_LIBRARY_PATH=/root/miniconda3/envs/conceptgraph/lib OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=2 CUDA_VISIBLE_DEVICES='' /root/miniconda3/envs/conceptgraph/bin/python -m conceptgraph.completion.development_causal_downstream --run-id full_001 --mapping-run causal_mapping_full_001 --wait-for-pipeline full_001
+```
+
+第一条顺序执行：原开发38场景1508帧过去LiDAR转换（3GiB/7200s）→独立原始表及像素重投影审计（1800s）→复用同RGB真实前端的七条件重建（3GiB/10800s）→4000次log配对统计。第二条只在完整建图结束后运行关系、正确解析上限、四方法检索和配对统计（1GiB，分阶段900/900/1800/600s）。磁盘均保留6GiB。单模型GPU主矩阵及66源码不得改动。
+
+只核验已完成转换而不重复读归档的入口：保持release所有源码与输入SHA不变，调用development_causal_inputs对应的`--run-id development_causal_inputs_full_001 --wall-budget-s 7200 --storage-budget-gb 3 --minimum-free-gb 6 --resume`。若源代码更新，应使用新的run-id及新release；不可覆盖旧结果。其他失败需先查看interrupted/failed记录，再按各stage command和新run-id重做，不把排队计完成。
+
+试运行证据：data_manifest/development_causal_inputs_smoke_001/audit_001/report.json、statistics/causal_mapping_smoke_001/report.json、mapping_evaluation/causal_relations_smoke_001/summary.json、main_experiments/causal_retrieval_smoke_001/report.json、statistics/causal_retrieval_smoke_002/report.json。检索统计001的无正查询NaN写出失败保留，002以null表示未知；缺测和候选缺失均保留在原GT分母。官方sample GT仍存在晚于相机的时间近似，见协议，不将此批称封存测试或完整导航。
+
+
+公开克隆中的开发causal全量复现还需要合法原始nuScenes数据、原开发场景身份文件、同RGB真实前端文件及其SHA清单；公共仓库没有这些数据，不能直接声称异机主实验可复现。在提供这些依赖后，先把`doc/thesis_completion/development_causal_mapping_001.md`与`development_causal_downstream_001.md`复制至本地`outputs/project_v2/thesis_completion_v1/task_protocol/`的同名位置，再运行所列命令。无需原始数据的普通CPU测试已在隔离代码导出291项通过，另2项真实crop数据依赖明确skip。

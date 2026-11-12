@@ -52,6 +52,10 @@ def interval(values):
         valid_resamples=len(valid))
 
 
+def nullable_number(value):
+    return float(value) if np.isfinite(value) else None
+
+
 def main():
     parser=argparse.ArgumentParser()
     parser.add_argument('--input-run',required=True)
@@ -81,12 +85,12 @@ def main():
             raise ValueError('raw records disagree with completed report')
         results[method]={}
         for m,metric in enumerate(metric_names):
-            results[method][metric]=dict(estimate=float(estimates[j,m]),
+            results[method][metric]=dict(estimate=nullable_number(estimates[j,m]),
                 numerator=int(totals[j,m*2]),denominator=int(totals[j,m*2+1]),
                 **interval(rates[:,j,m]))
             if j!=baseline:
                 differences.append(dict(method=method,baseline=methods[baseline],metric=metric,
-                    difference=float(estimates[j,m]-estimates[baseline,m]),
+                    difference=nullable_number(estimates[j,m]-estimates[baseline,m]),
                     **interval(rates[:,j,m]-rates[:,baseline,m])))
     if digest(raw)!=raw_sha:
         raise ValueError('records changed while computing statistics')
@@ -97,7 +101,7 @@ def main():
         statistics_source_sha256=digest(__file__),scenes=len(scenes),logs=len(logs),
         paired_queries=len(rows)//len(methods),methods=results,paired_differences=differences,
         bootstrap=dict(unit='采集log',repetitions=4000,seed=17,paired=True),
-        denominators='正查询733及无匹配382；未知关联/目标未入候选保留为正任务失败；不以帧或调用数为独立样本',
+        denominators=f'正查询{int(totals[0,1])}及无匹配{int(totals[0,3])}；未知关联/目标未入候选保留为正任务失败；不以帧或调用数为独立样本',
         association_limits='当前检测/网格为类别及3m中心关联(次近差<0.5m为unknown)，对象图为原独立一对一关联；口径不同，不将点估计差全归因于检索模块',
         adaptation='VLMaps式稀疏crop CLIP二维网格；不等同完整VLMaps复现',
         independent_test=False,arrival_evaluated=False,stage12_complete=False,goal_complete=False))

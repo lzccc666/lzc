@@ -1,0 +1,1403 @@
+{
+  "scenes": 1,
+  "logs": 1,
+  "frames": 3,
+  "real_past_lidar_frames": 2,
+  "missing_past_lidar_frames": 1,
+  "all_frames_retained": true,
+  "methods": {
+    "one_to_one_depth_quality": {
+      "all": {
+        "true_positive": 0,
+        "truth": 2,
+        "predictions": 0,
+        "duplicate_nodes": 0,
+        "identity_switches": 0,
+        "adjacent_matched_transitions": 0,
+        "nodes_associated_with_multiple_instances": 0,
+        "matched_center_error_sum_m": 0.0,
+        "recall": {
+          "value": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_resamples": 4000
+        },
+        "matched_prediction_precision": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "center_error_m_mean": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "identity_switch_rate": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        }
+      },
+      "real_past_lidar": {
+        "true_positive": 0,
+        "truth": 2,
+        "predictions": 0,
+        "duplicate_nodes": 0,
+        "identity_switches": null,
+        "adjacent_matched_transitions": null,
+        "nodes_associated_with_multiple_instances": null,
+        "matched_center_error_sum_m": 0.0,
+        "recall": {
+          "value": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_resamples": 4000
+        },
+        "matched_prediction_precision": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "center_error_m_mean": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "identity_switch_rate": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        }
+      },
+      "missing_past_lidar": {
+        "true_positive": 0,
+        "truth": 0,
+        "predictions": 0,
+        "duplicate_nodes": 0,
+        "identity_switches": null,
+        "adjacent_matched_transitions": null,
+        "nodes_associated_with_multiple_instances": null,
+        "matched_center_error_sum_m": 0.0,
+        "recall": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "matched_prediction_precision": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "center_error_m_mean": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "identity_switch_rate": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        }
+      }
+    },
+    "one_to_one_depth_robust_motion": {
+      "all": {
+        "true_positive": 0,
+        "truth": 2,
+        "predictions": 0,
+        "duplicate_nodes": 0,
+        "identity_switches": 0,
+        "adjacent_matched_transitions": 0,
+        "nodes_associated_with_multiple_instances": 0,
+        "matched_center_error_sum_m": 0.0,
+        "recall": {
+          "value": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_resamples": 4000
+        },
+        "matched_prediction_precision": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "center_error_m_mean": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "identity_switch_rate": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        }
+      },
+      "real_past_lidar": {
+        "true_positive": 0,
+        "truth": 2,
+        "predictions": 0,
+        "duplicate_nodes": 0,
+        "identity_switches": null,
+        "adjacent_matched_transitions": null,
+        "nodes_associated_with_multiple_instances": null,
+        "matched_center_error_sum_m": 0.0,
+        "recall": {
+          "value": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_resamples": 4000
+        },
+        "matched_prediction_precision": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "center_error_m_mean": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "identity_switch_rate": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        }
+      },
+      "missing_past_lidar": {
+        "true_positive": 0,
+        "truth": 0,
+        "predictions": 0,
+        "duplicate_nodes": 0,
+        "identity_switches": null,
+        "adjacent_matched_transitions": null,
+        "nodes_associated_with_multiple_instances": null,
+        "matched_center_error_sum_m": 0.0,
+        "recall": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "matched_prediction_precision": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "center_error_m_mean": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "identity_switch_rate": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        }
+      }
+    },
+    "one_to_one_no_expiry": {
+      "all": {
+        "true_positive": 0,
+        "truth": 2,
+        "predictions": 0,
+        "duplicate_nodes": 0,
+        "identity_switches": 0,
+        "adjacent_matched_transitions": 0,
+        "nodes_associated_with_multiple_instances": 0,
+        "matched_center_error_sum_m": 0.0,
+        "recall": {
+          "value": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_resamples": 4000
+        },
+        "matched_prediction_precision": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "center_error_m_mean": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "identity_switch_rate": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        }
+      },
+      "real_past_lidar": {
+        "true_positive": 0,
+        "truth": 2,
+        "predictions": 0,
+        "duplicate_nodes": 0,
+        "identity_switches": null,
+        "adjacent_matched_transitions": null,
+        "nodes_associated_with_multiple_instances": null,
+        "matched_center_error_sum_m": 0.0,
+        "recall": {
+          "value": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_resamples": 4000
+        },
+        "matched_prediction_precision": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "center_error_m_mean": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "identity_switch_rate": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        }
+      },
+      "missing_past_lidar": {
+        "true_positive": 0,
+        "truth": 0,
+        "predictions": 0,
+        "duplicate_nodes": 0,
+        "identity_switches": null,
+        "adjacent_matched_transitions": null,
+        "nodes_associated_with_multiple_instances": null,
+        "matched_center_error_sum_m": 0.0,
+        "recall": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "matched_prediction_precision": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "center_error_m_mean": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "identity_switch_rate": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        }
+      }
+    },
+    "one_to_one_timestamp": {
+      "all": {
+        "true_positive": 0,
+        "truth": 2,
+        "predictions": 0,
+        "duplicate_nodes": 0,
+        "identity_switches": 0,
+        "adjacent_matched_transitions": 0,
+        "nodes_associated_with_multiple_instances": 0,
+        "matched_center_error_sum_m": 0.0,
+        "recall": {
+          "value": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_resamples": 4000
+        },
+        "matched_prediction_precision": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "center_error_m_mean": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "identity_switch_rate": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        }
+      },
+      "real_past_lidar": {
+        "true_positive": 0,
+        "truth": 2,
+        "predictions": 0,
+        "duplicate_nodes": 0,
+        "identity_switches": null,
+        "adjacent_matched_transitions": null,
+        "nodes_associated_with_multiple_instances": null,
+        "matched_center_error_sum_m": 0.0,
+        "recall": {
+          "value": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_resamples": 4000
+        },
+        "matched_prediction_precision": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "center_error_m_mean": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "identity_switch_rate": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        }
+      },
+      "missing_past_lidar": {
+        "true_positive": 0,
+        "truth": 0,
+        "predictions": 0,
+        "duplicate_nodes": 0,
+        "identity_switches": null,
+        "adjacent_matched_transitions": null,
+        "nodes_associated_with_multiple_instances": null,
+        "matched_center_error_sum_m": 0.0,
+        "recall": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "matched_prediction_precision": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "center_error_m_mean": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "identity_switch_rate": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        }
+      }
+    },
+    "original_fusion": {
+      "all": {
+        "true_positive": 0,
+        "truth": 2,
+        "predictions": 0,
+        "duplicate_nodes": 0,
+        "identity_switches": 0,
+        "adjacent_matched_transitions": 0,
+        "nodes_associated_with_multiple_instances": 0,
+        "matched_center_error_sum_m": 0.0,
+        "recall": {
+          "value": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_resamples": 4000
+        },
+        "matched_prediction_precision": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "center_error_m_mean": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "identity_switch_rate": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        }
+      },
+      "real_past_lidar": {
+        "true_positive": 0,
+        "truth": 2,
+        "predictions": 0,
+        "duplicate_nodes": 0,
+        "identity_switches": null,
+        "adjacent_matched_transitions": null,
+        "nodes_associated_with_multiple_instances": null,
+        "matched_center_error_sum_m": 0.0,
+        "recall": {
+          "value": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_resamples": 4000
+        },
+        "matched_prediction_precision": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "center_error_m_mean": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "identity_switch_rate": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        }
+      },
+      "missing_past_lidar": {
+        "true_positive": 0,
+        "truth": 0,
+        "predictions": 0,
+        "duplicate_nodes": 0,
+        "identity_switches": null,
+        "adjacent_matched_transitions": null,
+        "nodes_associated_with_multiple_instances": null,
+        "matched_center_error_sum_m": 0.0,
+        "recall": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "matched_prediction_precision": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "center_error_m_mean": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "identity_switch_rate": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        }
+      }
+    },
+    "single_frame": {
+      "all": {
+        "true_positive": 0,
+        "truth": 2,
+        "predictions": 0,
+        "duplicate_nodes": 0,
+        "identity_switches": 0,
+        "adjacent_matched_transitions": 0,
+        "nodes_associated_with_multiple_instances": 0,
+        "matched_center_error_sum_m": 0.0,
+        "recall": {
+          "value": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_resamples": 4000
+        },
+        "matched_prediction_precision": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "center_error_m_mean": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "identity_switch_rate": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        }
+      },
+      "real_past_lidar": {
+        "true_positive": 0,
+        "truth": 2,
+        "predictions": 0,
+        "duplicate_nodes": 0,
+        "identity_switches": null,
+        "adjacent_matched_transitions": null,
+        "nodes_associated_with_multiple_instances": null,
+        "matched_center_error_sum_m": 0.0,
+        "recall": {
+          "value": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_resamples": 4000
+        },
+        "matched_prediction_precision": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "center_error_m_mean": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "identity_switch_rate": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        }
+      },
+      "missing_past_lidar": {
+        "true_positive": 0,
+        "truth": 0,
+        "predictions": 0,
+        "duplicate_nodes": 0,
+        "identity_switches": null,
+        "adjacent_matched_transitions": null,
+        "nodes_associated_with_multiple_instances": null,
+        "matched_center_error_sum_m": 0.0,
+        "recall": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "matched_prediction_precision": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "center_error_m_mean": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "identity_switch_rate": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        }
+      }
+    },
+    "timestamp_only": {
+      "all": {
+        "true_positive": 0,
+        "truth": 2,
+        "predictions": 0,
+        "duplicate_nodes": 0,
+        "identity_switches": 0,
+        "adjacent_matched_transitions": 0,
+        "nodes_associated_with_multiple_instances": 0,
+        "matched_center_error_sum_m": 0.0,
+        "recall": {
+          "value": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_resamples": 4000
+        },
+        "matched_prediction_precision": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "center_error_m_mean": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "identity_switch_rate": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        }
+      },
+      "real_past_lidar": {
+        "true_positive": 0,
+        "truth": 2,
+        "predictions": 0,
+        "duplicate_nodes": 0,
+        "identity_switches": null,
+        "adjacent_matched_transitions": null,
+        "nodes_associated_with_multiple_instances": null,
+        "matched_center_error_sum_m": 0.0,
+        "recall": {
+          "value": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_resamples": 4000
+        },
+        "matched_prediction_precision": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "center_error_m_mean": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "identity_switch_rate": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        }
+      },
+      "missing_past_lidar": {
+        "true_positive": 0,
+        "truth": 0,
+        "predictions": 0,
+        "duplicate_nodes": 0,
+        "identity_switches": null,
+        "adjacent_matched_transitions": null,
+        "nodes_associated_with_multiple_instances": null,
+        "matched_center_error_sum_m": 0.0,
+        "recall": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "matched_prediction_precision": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "center_error_m_mean": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "identity_switch_rate": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        }
+      }
+    }
+  },
+  "paired_differences": [
+    {
+      "method": "one_to_one_depth_quality",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "recall",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "one_to_one_depth_quality",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "matched_prediction_precision",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_depth_quality",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "center_error_m_mean",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_depth_quality",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "identity_switch_rate",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_depth_quality",
+      "baseline": "original_fusion",
+      "group": "real_past_lidar",
+      "metric": "recall",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "one_to_one_depth_quality",
+      "baseline": "original_fusion",
+      "group": "real_past_lidar",
+      "metric": "matched_prediction_precision",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_depth_quality",
+      "baseline": "original_fusion",
+      "group": "real_past_lidar",
+      "metric": "center_error_m_mean",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_depth_quality",
+      "baseline": "original_fusion",
+      "group": "real_past_lidar",
+      "metric": "identity_switch_rate",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_depth_quality",
+      "baseline": "original_fusion",
+      "group": "missing_past_lidar",
+      "metric": "recall",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_depth_quality",
+      "baseline": "original_fusion",
+      "group": "missing_past_lidar",
+      "metric": "matched_prediction_precision",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_depth_quality",
+      "baseline": "original_fusion",
+      "group": "missing_past_lidar",
+      "metric": "center_error_m_mean",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_depth_quality",
+      "baseline": "original_fusion",
+      "group": "missing_past_lidar",
+      "metric": "identity_switch_rate",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_depth_robust_motion",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "recall",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "one_to_one_depth_robust_motion",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "matched_prediction_precision",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_depth_robust_motion",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "center_error_m_mean",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_depth_robust_motion",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "identity_switch_rate",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_depth_robust_motion",
+      "baseline": "original_fusion",
+      "group": "real_past_lidar",
+      "metric": "recall",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "one_to_one_depth_robust_motion",
+      "baseline": "original_fusion",
+      "group": "real_past_lidar",
+      "metric": "matched_prediction_precision",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_depth_robust_motion",
+      "baseline": "original_fusion",
+      "group": "real_past_lidar",
+      "metric": "center_error_m_mean",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_depth_robust_motion",
+      "baseline": "original_fusion",
+      "group": "real_past_lidar",
+      "metric": "identity_switch_rate",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_depth_robust_motion",
+      "baseline": "original_fusion",
+      "group": "missing_past_lidar",
+      "metric": "recall",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_depth_robust_motion",
+      "baseline": "original_fusion",
+      "group": "missing_past_lidar",
+      "metric": "matched_prediction_precision",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_depth_robust_motion",
+      "baseline": "original_fusion",
+      "group": "missing_past_lidar",
+      "metric": "center_error_m_mean",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_depth_robust_motion",
+      "baseline": "original_fusion",
+      "group": "missing_past_lidar",
+      "metric": "identity_switch_rate",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_no_expiry",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "recall",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "one_to_one_no_expiry",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "matched_prediction_precision",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_no_expiry",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "center_error_m_mean",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_no_expiry",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "identity_switch_rate",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_no_expiry",
+      "baseline": "original_fusion",
+      "group": "real_past_lidar",
+      "metric": "recall",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "one_to_one_no_expiry",
+      "baseline": "original_fusion",
+      "group": "real_past_lidar",
+      "metric": "matched_prediction_precision",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_no_expiry",
+      "baseline": "original_fusion",
+      "group": "real_past_lidar",
+      "metric": "center_error_m_mean",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_no_expiry",
+      "baseline": "original_fusion",
+      "group": "real_past_lidar",
+      "metric": "identity_switch_rate",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_no_expiry",
+      "baseline": "original_fusion",
+      "group": "missing_past_lidar",
+      "metric": "recall",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_no_expiry",
+      "baseline": "original_fusion",
+      "group": "missing_past_lidar",
+      "metric": "matched_prediction_precision",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_no_expiry",
+      "baseline": "original_fusion",
+      "group": "missing_past_lidar",
+      "metric": "center_error_m_mean",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_no_expiry",
+      "baseline": "original_fusion",
+      "group": "missing_past_lidar",
+      "metric": "identity_switch_rate",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_timestamp",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "recall",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "one_to_one_timestamp",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "matched_prediction_precision",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_timestamp",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "center_error_m_mean",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_timestamp",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "identity_switch_rate",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_timestamp",
+      "baseline": "original_fusion",
+      "group": "real_past_lidar",
+      "metric": "recall",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "one_to_one_timestamp",
+      "baseline": "original_fusion",
+      "group": "real_past_lidar",
+      "metric": "matched_prediction_precision",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_timestamp",
+      "baseline": "original_fusion",
+      "group": "real_past_lidar",
+      "metric": "center_error_m_mean",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_timestamp",
+      "baseline": "original_fusion",
+      "group": "real_past_lidar",
+      "metric": "identity_switch_rate",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_timestamp",
+      "baseline": "original_fusion",
+      "group": "missing_past_lidar",
+      "metric": "recall",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_timestamp",
+      "baseline": "original_fusion",
+      "group": "missing_past_lidar",
+      "metric": "matched_prediction_precision",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_timestamp",
+      "baseline": "original_fusion",
+      "group": "missing_past_lidar",
+      "metric": "center_error_m_mean",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_timestamp",
+      "baseline": "original_fusion",
+      "group": "missing_past_lidar",
+      "metric": "identity_switch_rate",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "single_frame",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "recall",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "single_frame",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "matched_prediction_precision",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "single_frame",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "center_error_m_mean",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "single_frame",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "identity_switch_rate",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "single_frame",
+      "baseline": "original_fusion",
+      "group": "real_past_lidar",
+      "metric": "recall",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "single_frame",
+      "baseline": "original_fusion",
+      "group": "real_past_lidar",
+      "metric": "matched_prediction_precision",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "single_frame",
+      "baseline": "original_fusion",
+      "group": "real_past_lidar",
+      "metric": "center_error_m_mean",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "single_frame",
+      "baseline": "original_fusion",
+      "group": "real_past_lidar",
+      "metric": "identity_switch_rate",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "single_frame",
+      "baseline": "original_fusion",
+      "group": "missing_past_lidar",
+      "metric": "recall",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "single_frame",
+      "baseline": "original_fusion",
+      "group": "missing_past_lidar",
+      "metric": "matched_prediction_precision",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "single_frame",
+      "baseline": "original_fusion",
+      "group": "missing_past_lidar",
+      "metric": "center_error_m_mean",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "single_frame",
+      "baseline": "original_fusion",
+      "group": "missing_past_lidar",
+      "metric": "identity_switch_rate",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "timestamp_only",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "recall",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "timestamp_only",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "matched_prediction_precision",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "timestamp_only",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "center_error_m_mean",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "timestamp_only",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "identity_switch_rate",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "timestamp_only",
+      "baseline": "original_fusion",
+      "group": "real_past_lidar",
+      "metric": "recall",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "timestamp_only",
+      "baseline": "original_fusion",
+      "group": "real_past_lidar",
+      "metric": "matched_prediction_precision",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "timestamp_only",
+      "baseline": "original_fusion",
+      "group": "real_past_lidar",
+      "metric": "center_error_m_mean",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "timestamp_only",
+      "baseline": "original_fusion",
+      "group": "real_past_lidar",
+      "metric": "identity_switch_rate",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "timestamp_only",
+      "baseline": "original_fusion",
+      "group": "missing_past_lidar",
+      "metric": "recall",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "timestamp_only",
+      "baseline": "original_fusion",
+      "group": "missing_past_lidar",
+      "metric": "matched_prediction_precision",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "timestamp_only",
+      "baseline": "original_fusion",
+      "group": "missing_past_lidar",
+      "metric": "center_error_m_mean",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "timestamp_only",
+      "baseline": "original_fusion",
+      "group": "missing_past_lidar",
+      "metric": "identity_switch_rate",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    }
+  ],
+  "source_report_sha256": {
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_smoke_001/scene-0012/report.json": "6f2b9a3a99a3d67b21adc6505fb909d70bbe6265468033e2c9a4535d21e164f3"
+  },
+  "source_frames_sha256": {
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_smoke_001/scene-0012/frames.jsonl": "cd22d8b86848f2212a5af1ce560c206f6f6e1e0274a9519e043cad83e57b9621"
+  },
+  "source_input_release_sha256": "86280724f8dd3abbeebed3da0de34a8f1904a8d9b6f855ec697d345a4ec80c1b",
+  "bootstrap": {
+    "unit": "采集log",
+    "paired": true,
+    "repetitions": 4000,
+    "seed": 17
+  },
+  "actual_new_frontend_calls": 0,
+  "evaluation_limit": "官方GT沿用原sample时刻，较相机晚约33–42ms；动态误差作为时间近似单列，不称完整严格同步GT",
+  "group_identity_limit": "身份指标仅全连续序列定义，不为按深度可用性筛选后的不连续帧重算身份信用",
+  "unmatched_prediction_limit": "范围内未匹配预测含评测关联不足，不全部等同真实误检",
+  "actual_arrivals": 0,
+  "navigation_evaluated": false,
+  "independent_test": false,
+  "goal_complete": false
+}

@@ -1,0 +1,160 @@
+{
+  "source_run": "causal_retrieval_smoke_001",
+  "source_sha256": "7c3cc668c8995bf5ab0f0b9776bd4e4ebd5c6d492236b677bb36a3d04d418403",
+  "release_sha256": "b5b34680d2103e6de3ee957328762ed09b468ae42b79e03f4002459b6fd39cf5",
+  "completed_report_sha256": "63a5c654a14f2fe5db1a4a8bc8a04203eb7287f03883d34f11ae525683a41210",
+  "statistics_source_sha256": "dd5ea18b586a9a7f7f40bed98ba48f55398af19385d4eb2f0f31dfdb8f0c5689",
+  "scenes": 1,
+  "logs": 1,
+  "paired_queries": 1,
+  "methods": {
+    "category_nearest_current_detection": {
+      "positive_selection": {
+        "estimate": null,
+        "numerator": 0,
+        "denominator": 0,
+        "ci95": null,
+        "valid_resamples": 0
+      },
+      "no_match_false_selection": {
+        "estimate": 0.0,
+        "numerator": 0,
+        "denominator": 1,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "valid_resamples": 4000
+      }
+    },
+    "clip_current_crop": {
+      "positive_selection": {
+        "estimate": null,
+        "numerator": 0,
+        "denominator": 0,
+        "ci95": null,
+        "valid_resamples": 0
+      },
+      "no_match_false_selection": {
+        "estimate": 0.0,
+        "numerator": 0,
+        "denominator": 1,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "valid_resamples": 4000
+      }
+    },
+    "existing_object_joint_rule": {
+      "positive_selection": {
+        "estimate": null,
+        "numerator": 0,
+        "denominator": 0,
+        "ci95": null,
+        "valid_resamples": 0
+      },
+      "no_match_false_selection": {
+        "estimate": 0.0,
+        "numerator": 0,
+        "denominator": 1,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "valid_resamples": 4000
+      }
+    },
+    "vlmaps_style_sparse_clip_grid": {
+      "positive_selection": {
+        "estimate": null,
+        "numerator": 0,
+        "denominator": 0,
+        "ci95": null,
+        "valid_resamples": 0
+      },
+      "no_match_false_selection": {
+        "estimate": 0.0,
+        "numerator": 0,
+        "denominator": 1,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "valid_resamples": 4000
+      }
+    }
+  },
+  "paired_differences": [
+    {
+      "method": "category_nearest_current_detection",
+      "baseline": "existing_object_joint_rule",
+      "metric": "positive_selection",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "category_nearest_current_detection",
+      "baseline": "existing_object_joint_rule",
+      "metric": "no_match_false_selection",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "clip_current_crop",
+      "baseline": "existing_object_joint_rule",
+      "metric": "positive_selection",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "clip_current_crop",
+      "baseline": "existing_object_joint_rule",
+      "metric": "no_match_false_selection",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "vlmaps_style_sparse_clip_grid",
+      "baseline": "existing_object_joint_rule",
+      "metric": "positive_selection",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "vlmaps_style_sparse_clip_grid",
+      "baseline": "existing_object_joint_rule",
+      "metric": "no_match_false_selection",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    }
+  ],
+  "bootstrap": {
+    "unit": "采集log",
+    "repetitions": 4000,
+    "seed": 17,
+    "paired": true
+  },
+  "denominators": "正查询0及无匹配1；未知关联/目标未入候选保留为正任务失败；不以帧或调用数为独立样本",
+  "association_limits": "当前检测/网格为类别及3m中心关联(次近差<0.5m为unknown)，对象图为原独立一对一关联；口径不同，不将点估计差全归因于检索模块",
+  "adaptation": "VLMaps式稀疏crop CLIP二维网格；不等同完整VLMaps复现",
+  "independent_test": false,
+  "arrival_evaluated": false,
+  "stage12_complete": false,
+  "goal_complete": false
+}
