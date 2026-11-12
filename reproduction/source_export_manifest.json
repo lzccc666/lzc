@@ -551,6 +551,12 @@
       "executable": false
     },
     {
+      "path": "conceptgraph/completion/runtime_profiling.py",
+      "sha256": "6f80759d0d00085609e0af17687d803d3e439829905ec08f7ed1afbfcbe06bd9",
+      "bytes": 20843,
+      "executable": false
+    },
+    {
       "path": "conceptgraph/completion/selection_ablation.py",
       "sha256": "34c28db90e81119c95ec97cf5833d6a1aef4ad7b776afb2d006cb90aba954cd1",
       "bytes": 8335,
@@ -2135,6 +2141,12 @@
       "executable": false
     },
     {
+      "path": "tests/test_completion_runtime_profiling.py",
+      "sha256": "633ff2bd2c15a64058e9f1df82dfbf46991a6a16824990bc3831d58325f7f707",
+      "bytes": 3345,
+      "executable": false
+    },
+    {
       "path": "tests/test_completion_semantic_resume.py",
       "sha256": "ce260364ce36877cd68c03fbaa5810f88bc5f66ab3f51e4a9dd7b4b59e6f6d4c",
       "bytes": 842,
@@ -2230,5 +2242,5 @@
   "original_manuscript_published": false,
   "credentials_published": false,
   "goal_complete": false,
-  "updated_utc": "2026-11-12T15:26:13.431534+00:00"
+  "updated_utc": "2026-11-12T15:51:18.844907+00:00"
 }

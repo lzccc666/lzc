@@ -326,3 +326,12 @@ CUDA_VISIBLE_DEVICES='' OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=2 \
 查看器：`http://localhost:8768/visualizations/realtime_fault_cpu_preview_002/index.html`。63张有效检测图来自已保存真实输出重绘，前端新增调用0。源生成脚本002和浏览器QA002留存；001排他写入/Playwright参数失败也保留。
 
 CPU渲染隔离运行库不是全局安装。真实使用的环境变量、OSMesa/PyOpenGL来源、SHA及成功探针见`source_bundle/software_render_runtime_001/accepted_001.json`、`probe_004.log`和`realtime_fault_cpu_smoke_002.py`。库未进入公共Git，异机需从官方源重建；CPU TTL15秒与正式GPU1.5秒分开。4秒断流在CPU批未触发过期停车；仅TTL0.3秒已知路径功能试验显示停车/恢复，不能替代正式GPU证据。
+
+
+## 分阶段性能测量
+
+当前CPU已经实际完成，固定输出`performance/runtime_profile_cpu_frontend_001`与`runtime_profile_cpu_recorded_001`、独立统计`runtime_profile_cpu_smoke_001/audit_001`。源脚本`source_bundle/runtime_profile_cpu_smoke_001.py`与`runtime_profile_CPU_audit_001.py`使用排他run-id；原输出不可覆盖。新复验须先声明新版本/预算和独立路径。
+
+正式独占GPU队列`source_bundle/runtime_profile_after_faults_001.py`已经启动，先等待原主矩阵/缺一/GPU故障真实进程均退出，检查PID启动tick与CUDA空闲后才执行；不要再次启动。协议/固定输入见`task_protocol/runtime_performance_001.md`和`performance/runtime_profile_protocol_002/plan.json`。001含一个重复语义输入而未运行Qwen，保留原清单；002与已完成CPU输入完全一致，实际业务cache.get截获核对三模型各72个不同键，没有运行模型或写响应。
+
+业务CLI：`python -m conceptgraph.completion.runtime_profiling --help`。CPU必须在进程启动前设`CUDA_VISIBLE_DEVICES=''`；GPU默认监测唯一计算进程，发现他进程取消独占信用。每模型/任务首次、暖态、缓存分开，嵌套计时不相加。源码及Adapter冻结，旧run-id排他拒绝；没有自动重试或丢弃慢/失败请求。全量完成后仍须独立复核统计和全部工程验收。

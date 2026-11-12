@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-12T15:25:35.093093+00:00",
+  "updated_utc": "2026-11-12T15:50:34.451600+00:00",
   "goal_complete": false,
   "stage9_complete": false,
   "stage10_complete": false,
@@ -103,7 +103,7 @@
         "interactive_simulation/realtime_three_model_full_001/trial_records.jsonl",
         "statistics/plan_reuse_pilot_001/report.json"
       ],
-      "remaining": "冻结50任务×3种子×规则/base/new共450次，当前已保存310/450。所有角色相同前端、执行器、90秒预算与候选安全验证；单模型进程、源码冻结、失败不自动重试。预算24小时/20GB，磁盘低于6GB停止。单任务路线复用pilot规则/base到达、new超时，三者路线/选对/正确锁定成立，重排均0应用，不能据此宣称新模型改善。此批为颜色表达合成开发任务，不是新封存测试或复杂自然关系验收"
+      "remaining": "冻结50任务×3种子×规则/base/new共450次，当前已保存325/450。所有角色相同前端、执行器、90秒预算与候选安全验证；单模型进程、源码冻结、失败不自动重试。预算24小时/20GB，磁盘低于6GB停止。单任务路线复用pilot规则/base到达、new超时，三者路线/选对/正确锁定成立，重排均0应用，不能据此宣称新模型改善。此批为颜色表达合成开发任务，不是新封存测试或复杂自然关系验收"
     },
     "独立消融": {
       "status": "过去LiDAR离线批次完成，CUDA缺一与新封存仍待验收",
@@ -148,11 +148,16 @@
       "remaining": "录制按log、执行按配置、受控排序按bank配对4000次bootstrap；语义真实验证仅2log，区间离散且不足泛化证据。三种子分别报告，未知身份与全部失败保留；封存/完整主比较仍缺"
     },
     "性能": {
-      "status": "部分完成",
+      "status": "CPU真实分阶段试跑通过，唯一CUDA进程主测仍待运行",
       "evidence": [
-        "mapping_evaluation/frontend_corrected_smoke_002/inputs/scene-0038/frontend_complete.json"
+        "task_protocol/runtime_performance_001.md",
+        "performance/runtime_profile_cpu_smoke_001/audit_001/report.md",
+        "performance/runtime_profile_cpu_frontend_001/report.json",
+        "performance/runtime_profile_cpu_recorded_001/report.json",
+        "performance/runtime_profile_cache_key_audit_001/report.json",
+        "performance/runtime_profile_after_faults_001/release.json"
       ],
-      "remaining": "仅前端开发smoke，完整单模型分阶段性能待测"
+      "remaining": "固定4开发场景12RGB真实CPU前端，暖态总中位4.155s/P95 7.191s；10录制观测与391状态重算无新执行。共享CPU不获独占/GPU实时信用，规划2次/跟踪10次小分母P95不可泛化，嵌套不相加。002计划三模型各72不同实际cache键预检通过，0模型/0响应；正式GPU前端12与216新Qwen+216缓存待既有三作业真实终止后逐进程执行，目前GPU性能调用0。69源码冻结，待实际独占监测及完整复核"
     },
     "论文": {
       "status": "部分完成",
@@ -165,25 +170,23 @@
       "remaining": "第1—7章阶段稿47页、19张第6章三线表Word/Excel/PDF/CSV、7图、11处可编辑OMML公式。表6-19单列条件静态可达参考；4指定页实际目视通过。11处引文表述按一手内容限缩，另核对11组方法细节；A*最优性条件与预算搜索、Hybrid连续搜索来源与本项目前向适配分别说明，85会议/URL修正。删除重复h(n)引文表达使数学对象由12降至11，非公式丢失。85引用连续，全部正文主张仍未核完，无原生Word渲染或学校模板，完整主矩阵/封存/消融仍待验收"
     },
     "测试": {
-      "status": "当前原机336通过，最终全量待全部实验结束",
+      "status": "当前原机345通过，最终全量待全部任务结束",
       "evidence": [
-        "source_bundle/tests_full_030.log",
-        "source_bundle/ruff_completion_044.log",
-        "source_bundle/git_diff_check_030.log",
-        "source_bundle/realtime_fault_browser_qa_001.log",
-        "source_bundle/realtime_fault_browser_qa_002.log"
+        "source_bundle/tests_full_032.log",
+        "source_bundle/ruff_completion_046.log",
+        "source_bundle/git_diff_check_032.log"
       ],
-      "remaining": "新增15项故障触发、深度毫米量化、无效深度不增密、位姿隔离、七字段检测兼容和异常恢复测试；336通过、范围Ruff/diff通过。真实001额外gobs字典失败未被先前测试发现，保留并修复后真实六条件完成。查看器001排他写入失败/QA001参数错误保留，002桌面手机12组只读通过；全部后台结束后仍须最终工程检查"
+      "remaining": "新增9项计时冷暖/缓存/失败分母、非法秒数、异常恢复和唯一CUDA进程门禁测试；345通过、范围Ruff/diff通过。真实CPU前端12与录制10帧/391状态重算通过，性能GPU未执行。所有后台及封存任务后仍需最终工程验收，旧实际失败保持"
     },
     "旧产物保护": {
-      "status": "255170历史文件14:34复核通过，最终待全部任务结束",
+      "status": "255170历史文件15:28复核通过，最终待全部任务结束",
       "evidence": [
         "baseline_before.json",
         "baseline_verification.json",
-        "source_bundle/protection_verify_012.log",
-        "source_bundle/github_sync_001/public_clone_verification_007.json"
+        "source_bundle/protection_verify_013.log",
+        "source_bundle/protection_verify_014.log"
       ],
-      "remaining": "2026-11-12 14:34 UTC255170历史文件零改动/缺失；原checkout索引不变，361公开源码字节和权限一致。主矩阵66、CPU消融31、敏感性29冻结源SHA均保持。所有任务结束后仍须最终保护验收"
+      "remaining": "014实际2026-11-12 15:28 UTC255170文件零改变/缺失；013因误用--verify被已有基线保护拒绝，原日志保留。原索引未变；主矩阵/消融/敏感性/新故障队列冻结源仍须交付检查点核验，所有实验后最终验收未完成"
     },
     "可视化": {
       "status": "部分完成",
@@ -302,27 +305,27 @@
       "remaining": "固定64帧/33官方原始drive，真实CPU YOLO/MobileSAM/CLIP已完成64次；三类319GT，3m中心匹配247→262，召回77.43%→82.13%，drive配对95%差区间+1.48至+9.07pp；共同支持251对误差1.758→1.540m。卡车误差退化2.768→2.888m，深度未知16→18保留；Cyclist代理单列，不是官方AP、跨帧场景图或导航到达。公开预训练与KITTI重叠未知；封存未开启"
     },
     "代码与实验交接": {
-      "status": "361源码已同步，v5交接包独立核验，Goal仍未完成",
+      "status": "363源码已公开，v6交接包独立核验，Goal仍未完成",
       "evidence": [
         "工作交接_代码与实验.md",
         "GPT_Work_写作交接.md",
-        "source_bundle/github_sync_001/push_report_007.json",
-        "source_bundle/github_sync_001/public_clone_verification_007.json",
-        "source_bundle/source_checkpoint_018/checkpoint.json",
-        "source_bundle/writing_handoff_package_005.json",
-        "source_bundle/writing_handoff_package_005_verification.json",
-        "GPT_Work_论文写作交接包_v5.zip"
+        "source_bundle/github_sync_001/push_report_008.json",
+        "source_bundle/github_sync_001/public_clone_verification_008.json",
+        "source_bundle/github_sync_001/incremental_staged_audit_007.json",
+        "source_bundle/writing_handoff_package_006.json",
+        "source_bundle/writing_handoff_package_006_verification.json",
+        "GPT_Work_论文写作交接包_v6.zip"
       ],
-      "remaining": "公开main 853ff0b，361源码字节与执行权限一致、7个公开CSV字段一致，原checkout索引不变；原机321通过，纯代码导出319通过2真实数据依赖skip。用户后续GPT Work拟框架和正式写作；旧v4为359源码快照保留，本批包以新版本实际回执为准。未公开原始数据/权重/原论文或凭据，后续主矩阵、人工、封存及独占性能仍缺；v5实际275文件/12030147字节，CRC、273材料SHA及361源码归档字节/权限独立核验。包括本批相机时间敏感性、全部地图/目标策略及负结果和边界失败；v1至v4保持，原始数据/模型/原论文不入包。包是生成时快照，其后进度以服务器当前证据为准"
+      "remaining": "main f5ded41、363源码字节/执行权限及7CSV字段一致，原索引不变；原机336通过，纯代码334通过2真实数据依赖skip。包括新增实际故障入口和六条件小型派生报告，公开代码不等于实验全部完成；旧包v1-v5保留，新包以独立回执为准；v6实际310文件/12380773字节，CRC/清单SHA/363源码归档独立核验。新增真实控制和CPU六故障证据、首次兼容失败及15秒TTL未过期的负结果；不包含原始数据/权重/原论文/隔离运行库二进制，不新增论文稿，所有状态仅打包时快照"
     },
     "结构化JSON校验": {
-      "status": "运行中严格快照012通过，非最终验收",
+      "status": "运行中严格快照013通过，非最终验收",
       "evidence": [
-        "source_bundle/json_snapshot_012/report.json",
+        "source_bundle/json_snapshot_013/report.json",
         "source_bundle/failed_json_payload_audit_001/report.json",
         "thesis/citation_http_payload_type_audit_002/report.json"
       ],
-      "remaining": "81089文件/1334263JSONL记录严格解析，0非法0读取变化；完成的过去LiDAR队列均纳入，40活跃/已注册原始响应或失败残片明确跳过，不改原字节。仍有实际主矩阵/缓存和后续任务未结束，不作为最终工程验收"
+      "remaining": "86208文件/1444836JSONL记录，非法0、读取变化0；只排除活跃子进程/追加日志及精确SHA注册的原始失败响应。正式主矩阵/缺一/GPU故障仍未结束，不是最终工程验收"
     },
     "开发集过去LiDAR重建": {
       "status": "本批开发重建已完成，整体未验收",

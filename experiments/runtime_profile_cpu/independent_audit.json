@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "updated_utc": "2026-11-12T15:48:39.944940+00:00",
+  "checks": [
+    {
+      "run": "runtime_profile_cpu_frontend_001",
+      "timing_rows": 50,
+      "groups": 10,
+      "report_sha256": "33c37d2f8ce342c5ebfda6e444df5e325f4c587184ccb2d0a46d92a754086d24",
+      "timings_sha256": "1564e9a53da09c33ddd672efada644d5955efde0c68dffdaaf3e4ca87d3cdb31"
+    },
+    {
+      "run": "runtime_profile_cpu_recorded_001",
+      "timing_rows": 463,
+      "groups": 9,
+      "report_sha256": "23073d34a1a1dd8f00da1690def2976d5e847397f9175d62e720c8c2335d7d34",
+      "timings_sha256": "238ed5ff10165963c04efa12521d4e1d17a56ec6ddf90534567641bbc7d50d74"
+    }
+  ],
+  "CPU_actual_frontend_calls": 12,
+  "frontend_source_chains": 12,
+  "recorded_frames": 10,
+  "recomputed_control_states": 391,
+  "original_plan_sha256": "99565b3ec68c162ca7a41cba5df0e80d4e5b00e4ecbaf145713baf89189eec7f",
+  "CUDA_model_calls": 0,
+  "Qwen_model_calls": 0,
+  "hardware_snapshots": {
+    "hardware_queued.json": {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/performance/runtime_profile_after_faults_001/hardware_queued.json",
+      "sha256": "e33956e0e235977730ba9ebf1436a28ce5f86691cb200c9f1d07609fd45e0ab4"
+    }
+  },
+  "limitations": [
+    "CPU共享负载，不是独占性能",
+    "计时值来源于perf_counter_ns；本次独立重算统计，不是第二个外部时钟校准",
+    "391状态使用既有车辆函数重算，不是第二套独立物理实现或新执行",
+    "嵌套阶段不相加；成功仅表示函数正常返回，模型/格式/准确率另列",
+    "规划只有2次，控制仅10次；小分母P95不可泛化",
+    "固定4开发场景12RGB与一个合成任务的录制链，不是完整闭环吞吐"
+  ],
+  "formal_GPU_performance_complete": false,
+  "goal_complete": false
+}

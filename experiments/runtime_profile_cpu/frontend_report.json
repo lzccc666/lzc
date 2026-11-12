@@ -1,0 +1,103 @@
+{
+  "mode": "frontend",
+  "device": "cpu",
+  "variant": "new",
+  "stages": {
+    "CLIP_preprocess_image_text/cold_first_call": {
+      "calls": 1,
+      "failures": 0,
+      "median_s": 2.603607175,
+      "p95_s": 2.603607175,
+      "summed_s": 2.603607175,
+      "successful_calls_per_measured_s": 0.3840825181317915
+    },
+    "CLIP_preprocess_image_text/warm": {
+      "calls": 11,
+      "failures": 0,
+      "median_s": 3.090007373,
+      "p95_s": 5.8772669010000005,
+      "summed_s": 38.02076155400001,
+      "successful_calls_per_measured_s": 0.2893156146905935
+    },
+    "SAM_segmentation/cold_first_call": {
+      "calls": 1,
+      "failures": 0,
+      "median_s": 0.620858099,
+      "p95_s": 0.620858099,
+      "summed_s": 0.620858099,
+      "successful_calls_per_measured_s": 1.6106740036260685
+    },
+    "SAM_segmentation/warm": {
+      "calls": 11,
+      "failures": 0,
+      "median_s": 0.720202338,
+      "p95_s": 1.0049017885,
+      "summed_s": 8.147948777,
+      "successful_calls_per_measured_s": 1.3500330329825785
+    },
+    "YOLO_detection/cold_first_call": {
+      "calls": 1,
+      "failures": 0,
+      "median_s": 0.561571333,
+      "p95_s": 0.561571333,
+      "summed_s": 0.561571333,
+      "successful_calls_per_measured_s": 1.780717677766504
+    },
+    "YOLO_detection/warm": {
+      "calls": 11,
+      "failures": 0,
+      "median_s": 0.226715627,
+      "p95_s": 0.280886141,
+      "summed_s": 2.493513198,
+      "successful_calls_per_measured_s": 4.411446471918774
+    },
+    "YOLO_vocabulary_setup/cold_setup": {
+      "calls": 1,
+      "failures": 0,
+      "median_s": 3.442117226,
+      "p95_s": 3.442117226,
+      "summed_s": 3.442117226,
+      "successful_calls_per_measured_s": 0.2905188679939513
+    },
+    "frontend_model_load/cold_process": {
+      "calls": 1,
+      "failures": 0,
+      "median_s": 9.672860029,
+      "p95_s": 9.672860029,
+      "summed_s": 9.672860029,
+      "successful_calls_per_measured_s": 0.10338203974852533
+    },
+    "frontend_total/cold_first_frame": {
+      "calls": 1,
+      "failures": 0,
+      "median_s": 7.261731405,
+      "p95_s": 7.261731405,
+      "summed_s": 7.261731405,
+      "successful_calls_per_measured_s": 0.13770820541661166
+    },
+    "frontend_total/warm": {
+      "calls": 11,
+      "failures": 0,
+      "median_s": 4.155363155,
+      "p95_s": 7.1913612874999995,
+      "summed_s": 49.200707817,
+      "successful_calls_per_measured_s": 0.22357401931927576
+    }
+  },
+  "actual": {
+    "actual_frontend_calls": 12,
+    "model_calls_reused": false
+  },
+  "peak_torch_GPU_allocated_MiB": null,
+  "peak_torch_GPU_reserved_MiB": null,
+  "unique_CUDA_process_verified": false,
+  "samples_are_stage_invocations_not_independent_scenes": true,
+  "nested_stage_times_not_additive": true,
+  "GPU_sync_added_at_frontend_and_semantic_boundaries": false,
+  "CPU_shared_host_no_exclusive_performance_credit": true,
+  "external_GPU_activity_between_half_second_samples_not_excluded": false,
+  "cold_OS_page_cache_not_guaranteed": true,
+  "end_to_end_throughput_credit": false,
+  "independent_test": false,
+  "goal_complete": false
+}
