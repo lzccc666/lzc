@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "updated_utc": "2026-11-12T13:48:31.928509+00:00",
+  "results": [
+    {
+      "kind": "modules",
+      "case_records": 114,
+      "frame_condition_records": 4524,
+      "all_frame_assignments_recomputed": true,
+      "all_case_counts_and_ID_transitions_recomputed": true,
+      "estimates_and_intervals": 15,
+      "paired_differences_and_intervals": 10,
+      "source_summary_sha256": "9d8655dcb3b6bcb6a5053dda22c52a7acfd6c4778842954472eb00a03390cec7",
+      "statistics_sha256": "3d3b8b53a181f0d909010c3150247ef8897500bc8d5b571ba62b194c16cccd0f"
+    },
+    {
+      "kind": "parameters",
+      "case_records": 114,
+      "frame_condition_records": 4524,
+      "all_frame_assignments_recomputed": true,
+      "all_case_counts_and_ID_transitions_recomputed": true,
+      "estimates_and_intervals": 15,
+      "paired_differences_and_intervals": 10,
+      "source_summary_sha256": "a20bec64ec12c092e9bd79acb012955b8744152d483ab724b9e176d9739f1012",
+      "statistics_sha256": "c0543ab340733329b545cda28f8dfda7c1bfe9c791a1f5c93901a606c2a36d5f"
+    }
+  ],
+  "unique_mapping_case_files": 190,
+  "unique_mapping_frame_records": 7540,
+  "source_files_checked": 418,
+  "files_manifest_sha256": "c583e063b851d89ca42548ded2d713255dec2cf90eb3d84d2ff6ebb63eaa6d14",
+  "source_sha256": "8ee3487b3a42307dc2a4e2a79a0fe161e0326d80a2ce18c0d07c4b9df2bd8543",
+  "model_calls": 0,
+  "new_test_opened": false,
+  "actual_arrivals": 0,
+  "limitations": [
+    "两批都复用同38个seed17完整基线，不能当成独立方法或重复增加样本",
+    "独立重算同类3m XY代理关联，共享SciPy优化器，不能代替真实人工实例审核",
+    "GT较相机晚约33–42ms，关闭动态模块导致运动标记unknown不作运动分类改善证据"
+  ],
+  "goal_complete": false
+}

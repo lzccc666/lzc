@@ -274,3 +274,31 @@ python -m conceptgraph.completion.mapping_parameter_statistics --input-run YOUR_
 ```
 
 关联基线须同观测SHA、seed17、配置，不能替换旧未来LiDAR结果。9参数实际10035行；关系边条件保留几何回退，不能称关闭全部关系推理。零正查询指标必须null，真实负查询验证见 `source_bundle/causal_sensitivity_negative_only_001`。门户004展示最新past主结果，旧门户及失败浏览器命名冲突日志保留。
+
+
+过去LiDAR动静态与错误证据已实际完成，生成器源码及指纹在 `source_bundle/causal_diagnostics_full_001`。异机准备同一mapping和official_motion标签后，可使用新run-id：
+
+```bash
+python -m conceptgraph.completion.motion_audit --mapping-run causal_mapping_full_001 --run-id YOUR_NEW_MOTION
+python -m conceptgraph.completion.inspection --mapping-run causal_mapping_full_001 --run-id YOUR_NEW_EVIDENCE --method one_to_one_depth_quality
+```
+
+本机补充配对统计由 `source_bundle/causal_motion_statistics_001.py`生成，真实crop/掩膜核验由 `source_bundle/causal_evidence_audit_001.py`执行；原件保留，不能重复运行现有目录。共同匹配分析为初步计数后的解释性分析，不是预注册独立主表；全部自动证据，不改变人工提交数量或旧审核服务。
+
+## 版本化过去LiDAR人工核验
+
+正式访问 `http://localhost:8768/visualizations/causal_development_review_002/index.html`；先转发8768端口。旧开发身份审核不能直接归入新图。新来源、方法和节点校验测试311通过，实际人工数量仍以 `/api/review_status` 为准。完整操作、无检测对象和跨帧证据限制见 `task_protocol/development_human_review_versioning_001.md`。
+
+已有服务正在8768运行，勿重复启动。仅在其确实退出后，用下面命令恢复；保持记录目录不变。
+
+```bash
+/root/miniconda3/envs/conceptgraph/bin/python -m conceptgraph.completion.review_server --port 8768
+```
+
+如需重新生成只读审核页面必须使用新的run-id；证据和审计SHA改变时先独立复核，不覆盖001/002。
+
+```bash
+/root/miniconda3/envs/conceptgraph/bin/python -m conceptgraph.completion.development_review --run-id YOUR_NEW_REVIEW_ID
+```
+
+本轮过去LiDAR684录制故障、各114动态模块/关联门限完整结束；五步敏感性队列有complete.json。全帧关联和配对统计独立重算脚本为 `source_bundle/causal_fault_audit_001.py`、`causal_module_parameter_audit_001.py`，其输出已存在，原脚本故意拒绝覆盖，复现应另建输出版本或在隔离复现目录执行。不是启动脚本后即视为实验完成。

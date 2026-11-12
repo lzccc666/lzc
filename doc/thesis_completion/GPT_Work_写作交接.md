@@ -56,7 +56,7 @@ KITTI方法差异按33个drive配对4000次bootstrap：召回差+4.70个百分�
 
 写作时可围绕已有方法和真实改动组织论证，但创新性和最终结论必须由一手文献比较与完整结果支持。请先依据证据制定框架，再起草；不得把剩余项用预期结果补齐，也不得将此交接材料直接当作正式论文正文。
 
-代码仓库： https://github.com/lzccc666/lzc 。当前提交与匿名核验以 `source_bundle/github_sync_001/push_report_005.json`、`public_clone_verification_005.json` 的实际存在和通过状态为准；若尚未生成，最近已核验版本为ef79af8，不能称本轮新增代码已同步。论文写作不因公开代码而获得实验完成信用。
+代码仓库： https://github.com/lzccc666/lzc 。上一批已核验main为 `026113136069a7884a9007de35bcd1e9bfe95f5b`，357份源码内容和权限已匿名核对；正式证据为 `source_bundle/github_sync_001/push_report_005.json`、`public_clone_verification_005.json`。论文写作不因公开代码而获得实验完成信用。
 
 文献抓取009中38/59/65的HTTP429空body误用.json后缀，原失败保留；类型核验002明确其为原始失败响应。另有检索零正查询时旧生成器写NaN失败的残片保留；新版本以null输出、真实负查询试运行通过。以上均不得当成功证据。
 
@@ -72,6 +72,28 @@ KITTI方法差异按33个drive配对4000次bootstrap：召回差+4.70个百分�
 
 证据：`statistics/causal_mapping_full_001`、`statistics/causal_retrieval_full_001`、`mapping_evaluation/causal_relations_full_001`、`performance/causal_selection_parameters_full_001`、`ablations/causal_selection_ablation_full_001`、`performance/causal_road_groups_full_001`、`source_bundle/causal_sensitivity_audit_001`。没有路线、正确锁定或车辆实际到达信用。旧未来LiDAR的19.48%→32.12%等数值继续保留历史口径，不能混用为当前成绩。
 
-`source_bundle/causal_ablations_after_downstream_001.py` 正在执行684录制扰动，随后114动态模块条件、六地图、三选择接近条件。`source_bundle/causal_sensitivity_sequence_001.py --preset full` 的前三项已结束，等待同源故障全批完成后实际重建76关联门限条件并复用38个同版基线。对应release中的全部源码和协议也须冻结，不能仅保护主导航66源码。故障注入是离线建图，不计闭环故障安全。
+过去LiDAR的684次录制故障已完整结束，27144条帧条件记录、全部684汇总、30项指标区间和25项配对差异独立重算通过。LiDAR丢失80%后召回30.06%→14.22%，差−15.84pp，11log配对CI[−19.92,−12.14]pp；位姿扰动中心误差+0.1887m，CI[0.1687,0.2332]m。合成白噪声/随机缺失未经真实传感器误差标定，不计闭环故障恢复或实际到达。
 
-新的门户004明确区分当前过去LiDAR与历史未来LiDAR，结果从固定报告读取，提供全部负结果和配对区间入口。旧v1/v2写作包是其生成时快照，保留不改；新增结果以当前工作目录和后续版本包为准。
+动态/TTL模块和关联门限各114条件也均完整结束；各76次新CPU重建、38份同版seed17基线复用，两批共享同一基线，不能重复增加独立样本。228条件视图/9048帧记录、190份不同重建案例/7540帧实际记录全部独立重算：减动态维护召回−5.21pp（CI[−6.82,−3.30]）、匹配精确率−13.09pp；减TTL精确率−3.89pp（CI[−6.51,−1.99]）。关闭动态模块也关闭运动标记，全部unknown是定义副作用，不能单凭0分类正确率证明贡献。
+
+关联门限0.25相对0.35的精确率+0.745pp，CI[−0.025,+2.021]pp跨0，**未重现旧未来输入下明确的精确率收益**。0.45召回仅+0.472pp，同时精确率−14.45pp、身份变化率+16.07pp。配置保持冻结，不按开发挑优改正在运行的导航。完整敏感性五步队列已结束，六地图与三种目标接近策略仍按另一冻结队列推进。
+
+证据：`statistics/causal_fault_full_001`、`faults/causal_fault_full_001/audit_001`、`statistics/causal_modules_full_001`、`statistics/causal_modules_motion_full_001`、`statistics/causal_mapping_parameters_full_001`、`source_bundle/causal_module_parameter_audit_001`。本段均为38开发场景11log，不是封存或车辆执行成绩。
+
+当前门户007明确区分当前过去LiDAR与历史未来LiDAR，结果从固定报告读取，提供全部负结果和配对区间入口。旧v1/v2写作包是其生成时快照，保留不改；新增结果以当前工作目录和后续版本包为准。
+
+## 过去LiDAR动静态与错误证据补充
+
+38场景1508帧动静态评价已完成，官方静态2556、动态3022、未知145个跨帧观测。深度质量→稳健运动的匹配静态状态准确率29.65%→47.09%，动态68.24%→62.17%。补充解释分析在双方共同匹配子集上复核：静态853观测254→398正确，差+16.88pp，11log配对CI[9.14,21.72]pp；动态822观测561→511正确，差−6.08pp，CI[−9.69,−1.37]pp。不能声称全部运动状态改善；共同子集分析在初步计数后设计，不是预注册独立主表，且仍条件于双方成功关联。官方unknown和相机/GT时间近似保留。证据 `mapping_evaluation/causal_motion_full_001/report.json`、`statistics/causal_motion_full_001/report.json` 与两份逐log CSV。
+
+预设每场景首/中/末114帧证据已生成，保存RGB预览、真实CLIP crop、SAM掩膜、有效过去LiDAR、官方投影与三维预测。855个真实crop及855掩膜逐像素核对、385个官方对象观测计数一致：86个中心匹配仍需身份核验、134深度不足、123无同类二维投影匹配、42定位或关联待核验。全部是自动候选诊断，不能写成123次确定漏检或42次确定错合并；不增加人工记录。预览RGB为JPEG重编码副本，不作为模型输入哈希。证据 `annotation/causal_dev_evidence_001/index.json`、`error_inventory.jsonl`、`audit_001/report.json`。
+
+上一批业务源码已同步GitHub main `026113136069a7884a9007de35bcd1e9bfe95f5b`，匿名拉取核对357个源码的字节及执行权限均一致，原项目索引未变；正式记录 `source_bundle/github_sync_001/push_report_005.json` 和 `public_clone_verification_005.json`。本节新增运动/错误证据仍在本机输出目录，公开仓库不含原始图像/点云/权重。Goal仍为false，后台主矩阵和有界CPU队列继续。
+
+真实时钟资源范围：当前主矩阵与CPU录制重建、证据检查共享主机，CPU事件写入resource_events.jsonl；GPU没有额外并发模型。不同时间段的主机负载可能影响排队、超时和到达，因此不能把墙钟差异全部归因于Adapter，也不能称独占实时性能；完整统计须保留资源时间线和全部失败。独占性能验收仍未完成。
+
+当前人工入口为 `http://localhost:8768/visualizations/causal_development_review_002/index.html`，绑定过去LiDAR索引、证据、源预测与真实crop指纹，并保存建图方法和所选节点。身份类结论不能跨方法/帧直接复用，正确关联还需明确当前官方实例。切换方法清空旧身份结论，颜色/细属性默认unknown。旧corrected页按旧来源兼容；002版是正式新入口，001仅拒绝路径测试，无人工记录。
+
+操作见 `task_protocol/development_human_review_versioning_001.md`。桌面/手机实际读取与4份故意错误SHA提交测试全部通过且HTTP400，未模拟成功人工提交。311项目测试通过，其中新来源/方法/节点验证只用临时合成结构；真实审核数量目前仍0。现有表单单位为已有检测，不能用提交数量替代无检测官方对象、跨帧长链或双审核者裁决的独立审核。新门户007链接该入口并单列过去LiDAR故障与完整消融。
+
+本次新增审核业务与测试后共有359份源码；增量发布及匿名核验以 `source_bundle/github_sync_001/push_report_006.json`、`public_clone_verification_006.json` 为准，缺少这两份成功回执时不能推断已推送。首次测试误收集第三方和输出目录复制测试的104项收集错误保留于tests_full_025.log；项目原定 `pytest -q tests` 实际311通过，详见 `source_bundle/engineering_verification_027.md`。

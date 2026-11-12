@@ -1,0 +1,1387 @@
+{
+  "source_run": "causal_fault_full_001",
+  "source_release_sha256": "b05e7d4fb20508db776c6391744cab647be351de6c2c2142543698a87a3143d4",
+  "source_summary_sha256": "57e6324b7f9bf83b33dba273c36c0a594df453a891ee422719091f060cc64a54",
+  "case_report_hashes": {
+    "scene-0012/seed17/depth_noise_020m/report.json": "030a61658bb5f298885ecc65a66125efbea8cea2079a398b7391181559592c0c",
+    "scene-0012/seed17/detection_dropout_30pct/report.json": "16178491c3aa0ce9c4a17fdb52e760b65e8976e4c8b2cbed6aae9e10559d45dd",
+    "scene-0012/seed17/lidar_dropout_80pct/report.json": "26c5987b056e771e9fe043fce4e89dd84214ec6f82a3caaa36e0b141c5c7fc5c",
+    "scene-0012/seed17/pose_noise_025m_2deg/report.json": "b0d2365e465a9aeb500e1fa33a754764e0266e39745fd54722928eb68fcfe252",
+    "scene-0012/seed17/three_frame_perception_blackout/report.json": "71018dea5f3980aee681f0e40630c658782d9646e45b6680536473f1ed328e0a",
+    "scene-0012/seed17/unperturbed/report.json": "b84722e50bf71116011b07737684ea189b3eed1d3532d301fc7a5b6c7ac188ac",
+    "scene-0012/seed29/depth_noise_020m/report.json": "f1ff95c43a6e7730a112adfe839f927892848f4eba11200354e42537722f3c65",
+    "scene-0012/seed29/detection_dropout_30pct/report.json": "302fbb0bb5c1a3a4b9791e21c7463881488592b325328dc1931a65f7f0518a8f",
+    "scene-0012/seed29/lidar_dropout_80pct/report.json": "fbc4e2152b5773bd5a49bcca66babc91f66f0cd375404d876608be4374420457",
+    "scene-0012/seed29/pose_noise_025m_2deg/report.json": "34ce014fb4e63fe7f040f4e93c0c7d8713208727859683f9250c206117fb43c9",
+    "scene-0012/seed29/three_frame_perception_blackout/report.json": "59b2a3a232d0496c7353e636edace04c6e9f1862c164c34e3254d960b2e2d1b0",
+    "scene-0012/seed29/unperturbed/report.json": "f348a0ed877ad79d8530b145025e048753fff15e6b2a846a7ad7f2930d3dfec4",
+    "scene-0012/seed43/depth_noise_020m/report.json": "2d4c0defd13cc1d1e529b304eb0a987e2401bd603119b6f8fb682a0fb3d2eff6",
+    "scene-0012/seed43/detection_dropout_30pct/report.json": "792b4704ace423718ea8c19685e7b3cc07c6832a538a4102724486c3a23321e0",
+    "scene-0012/seed43/lidar_dropout_80pct/report.json": "bf69c124f44421f30ab2b8dd7cd9ac44063056a9977eafe881f420b3e7225cd5",
+    "scene-0012/seed43/pose_noise_025m_2deg/report.json": "83f2fa598dfe1b06f19bde315d7f3bb5fd84d22ed4ea291ccd76133eb422ddb2",
+    "scene-0012/seed43/three_frame_perception_blackout/report.json": "001c306d9204619fb4466589e2c57751f2fd85b27c9518cd16cf6d5cc99ab146",
+    "scene-0012/seed43/unperturbed/report.json": "75a7febbe1502349a17545884991f274212539dc9b12dee38363d534cb5b735e",
+    "scene-0013/seed17/depth_noise_020m/report.json": "1dbc2dcf4343628cea8be376bdb8f73fa4592d9090d397b73e5911fd36a231d9",
+    "scene-0013/seed17/detection_dropout_30pct/report.json": "fff4ab9e0429bb20366295959672a3dccb31d76a2d088d992f5a72786e1081c5",
+    "scene-0013/seed17/lidar_dropout_80pct/report.json": "fc0210c9123adfa4a2132d30103b188d87bdea72c53861edceba6613c229a3a3",
+    "scene-0013/seed17/pose_noise_025m_2deg/report.json": "7cf973f9190c1ab8c14a77c97f20667a0c7115ac585c8e71ab52c5ca830b8657",
+    "scene-0013/seed17/three_frame_perception_blackout/report.json": "7c42b363e59a664949d87344e438cf207abb931dbb6b328ab779379cef3090aa",
+    "scene-0013/seed17/unperturbed/report.json": "b139dab795206312faf9fbe2c4400812dee80a401483a3c111ad02089c073649",
+    "scene-0013/seed29/depth_noise_020m/report.json": "2b0de53af97a43eaa4ae54760f17a1232ae37caeffd8f222371a80b6e4ac9e2c",
+    "scene-0013/seed29/detection_dropout_30pct/report.json": "f5839bfa0e4993ab781fb598f8653717619a19181a9d6235312b750c2ba68c6d",
+    "scene-0013/seed29/lidar_dropout_80pct/report.json": "e71855264ff5fe783896cbcefdd0bb0ba3e95ccabe0a91139cd4909d759cb78d",
+    "scene-0013/seed29/pose_noise_025m_2deg/report.json": "68d9b490a4a34a478dd796b0c46f5cf9d2875af3bcdc8efc5c7895a347d925f9",
+    "scene-0013/seed29/three_frame_perception_blackout/report.json": "a968ba5fb9e56569a9dde9ae868b23097be3e561b030e2ace8d0fb46f2351d09",
+    "scene-0013/seed29/unperturbed/report.json": "17d45c91ae7908dc17b92b436bc9b5bcd18bdfbc568de0406954b621d26db3c2",
+    "scene-0013/seed43/depth_noise_020m/report.json": "3471f170219b68c57a0dc5470609903c7f88274b73c6b8dad0efea863eaede91",
+    "scene-0013/seed43/detection_dropout_30pct/report.json": "618f7525e3ad221f907b85baf64d171ef44ca5d3d84c4a1ec5b4c9e616a9053d",
+    "scene-0013/seed43/lidar_dropout_80pct/report.json": "cc9e684ecf67b77f6c08421cdf781e2817053c11f21f10463d640c6ff9b66134",
+    "scene-0013/seed43/pose_noise_025m_2deg/report.json": "74da6556da16a5d31e7428f17bceb70d4d0a81529e6bd4f24e8c86cbb51b8be0",
+    "scene-0013/seed43/three_frame_perception_blackout/report.json": "c9aae8079c9954fe2cfc40ea6d558bbf096289ee5a876247902f62200fa9c623",
+    "scene-0013/seed43/unperturbed/report.json": "4cd0d5326d4983cdc3f60c699304a3ee75eb5f126e225fde7386f6f7ff532aac",
+    "scene-0014/seed17/depth_noise_020m/report.json": "1bbc118e9376adea0f9ed76223568dc25811a36fcd6726f89be9774cbca1733b",
+    "scene-0014/seed17/detection_dropout_30pct/report.json": "3c47b3be67b0bca894bff09897fdb7f16c7131134f633b8a97147e0b7c6058b5",
+    "scene-0014/seed17/lidar_dropout_80pct/report.json": "c9e2d95335d302e0f14dae1dd058e7c42cdb384ef7849eb119813824d12c9ef2",
+    "scene-0014/seed17/pose_noise_025m_2deg/report.json": "7d1b0bd07965482747ee3584b9bf2ec163bf33a695014c543d01b5e11ed62f1b",
+    "scene-0014/seed17/three_frame_perception_blackout/report.json": "bddf767a939064f832d4f52375c5dd6b9c6dd3be13e89a1904c7adb0838d70c6",
+    "scene-0014/seed17/unperturbed/report.json": "787bacda9530e6412ab4c3448cc0377e12462e5fd11023c64a8e1dd802839aae",
+    "scene-0014/seed29/depth_noise_020m/report.json": "06abfc48286d6030a87e87415213afea491324ce68a398180ac8a784ce5c8c6a",
+    "scene-0014/seed29/detection_dropout_30pct/report.json": "577800641ca5eb25553e8245cc1063a5eb78b6ce02bbb1f2c09709d7092405ea",
+    "scene-0014/seed29/lidar_dropout_80pct/report.json": "8c3362edde08079c53f7771cf8b4652bca0081a157813e8a533bf001e0e5c18b",
+    "scene-0014/seed29/pose_noise_025m_2deg/report.json": "ccbe6b57e83252ff05f8a1175aaab254ee7aae256b2af7566032778e56a51596",
+    "scene-0014/seed29/three_frame_perception_blackout/report.json": "c0e07a5e1a192dbf8417c7c743ca16000a01dd6b33341228ef191de9cd59cb35",
+    "scene-0014/seed29/unperturbed/report.json": "523fb1d2ef02892ad7895773382e230ea9975726455b6862a2ff81858115e402",
+    "scene-0014/seed43/depth_noise_020m/report.json": "b4538dec8299fdb2c35ac02298958fb2a59a2d967adb5f66c8f21f20070019f9",
+    "scene-0014/seed43/detection_dropout_30pct/report.json": "6a90f12f4d0c7525ae79ce1c93832b1caa1bddbb0c9988b120caeee2b709ee92",
+    "scene-0014/seed43/lidar_dropout_80pct/report.json": "c87cacb07711b0654ad8a586a73fec633dd8421a07155520b29962b21bf62a7e",
+    "scene-0014/seed43/pose_noise_025m_2deg/report.json": "8129f560fe9b0b781eab72c8926a777b49ce386e33a76b97456c5dc351af61c8",
+    "scene-0014/seed43/three_frame_perception_blackout/report.json": "3792d3e15b0fc64b41b2962957b7a3ab9ce40b7d52c4b8edc39a88147e13a42f",
+    "scene-0014/seed43/unperturbed/report.json": "559f090618363b27b47f6e958af47f0edb2188d336116fea874d9802cef54ee7",
+    "scene-0015/seed17/depth_noise_020m/report.json": "5a883a2ec1243ae4f7799155131508dc17c35c7e486ceaa236650b5c30c04bab",
+    "scene-0015/seed17/detection_dropout_30pct/report.json": "f1d190179b6558430526865e88df620c1506cc7887736344face4713f7ab86b3",
+    "scene-0015/seed17/lidar_dropout_80pct/report.json": "221b9099aa563564277b26d8caab0a96c1e618020277a8b6464c486fba0f74f8",
+    "scene-0015/seed17/pose_noise_025m_2deg/report.json": "8255faafdab627c2c7da5d9af481ac4732cf0469e02411e9d3e371a88b1eaad8",
+    "scene-0015/seed17/three_frame_perception_blackout/report.json": "23c7da4f635ce5786825ab8fc8ef4413e38e0229eb465efdabe4e81407b8b19f",
+    "scene-0015/seed17/unperturbed/report.json": "8c909c2da19fd5964f1e07193da16faf53cd358b15882d757a2033c0385538ba",
+    "scene-0015/seed29/depth_noise_020m/report.json": "046e9b87fef9bbd1192d858a2b4c9efa4a504e6f086fd2b7e55d354cb98d03a7",
+    "scene-0015/seed29/detection_dropout_30pct/report.json": "5b5eba151f70a5dba64315af7de2a9fb17890af4d11006062b82fb5586ecac94",
+    "scene-0015/seed29/lidar_dropout_80pct/report.json": "8c77594b52237f2b7588a5cc440c9558b3e6ae6119ce76f7a76e08963d554f86",
+    "scene-0015/seed29/pose_noise_025m_2deg/report.json": "12c7eb1792018513cf3e0d81814292cf18c51d8ca031623946436908f9eb06c8",
+    "scene-0015/seed29/three_frame_perception_blackout/report.json": "f8397396cd78ec2e613ef6a63bbac8af08e10266e0c8bfab8496ff17df16e34e",
+    "scene-0015/seed29/unperturbed/report.json": "7a13c9dda2f518de2cfc465b2c753c1c6271c8f165019430fe8b94993f2cd057",
+    "scene-0015/seed43/depth_noise_020m/report.json": "b694ed4792fe13feaa9d23119328e9ffd363634585942b31fa8ff944e1363af3",
+    "scene-0015/seed43/detection_dropout_30pct/report.json": "ef1cbe1d0f37b3e43e8e6cf1da6a18f59118e5ad603be73c60b6853dfb5cb609",
+    "scene-0015/seed43/lidar_dropout_80pct/report.json": "d4c10412a7373faab0b74efec73bbf4a1065b4d57a892ab7aa22413fff7e4606",
+    "scene-0015/seed43/pose_noise_025m_2deg/report.json": "1b46c7108e52da5b84a3739bf9b26bd50c96d641005f4fb35630cb42f4ac2619",
+    "scene-0015/seed43/three_frame_perception_blackout/report.json": "f60ccae31749b98322eb177fb8ed4460643ebd605737a4fffadfb7d70a274ad4",
+    "scene-0015/seed43/unperturbed/report.json": "dccf7b8b21c7662f929f2dff7a387d5dda2e0b9008f2e900f6e32af28b53219d",
+    "scene-0016/seed17/depth_noise_020m/report.json": "53a5817c5b74efc4e3c8b1fe09885b68f2a6eebe2b1a67e5e27b8315d0b57640",
+    "scene-0016/seed17/detection_dropout_30pct/report.json": "f2ced51026495437060c9865515a9c8f8194a2e3e37ec83fd71197d322aefe79",
+    "scene-0016/seed17/lidar_dropout_80pct/report.json": "5d86694b5ce56164ca9f08bcc5d3840d0d65a0df5f6591e98f9d385f32bb94ba",
+    "scene-0016/seed17/pose_noise_025m_2deg/report.json": "6b1d9a46bfd4a47c9447c95427187d0aa423c66375d764c540361d9b4f420833",
+    "scene-0016/seed17/three_frame_perception_blackout/report.json": "998641aaf0fd188498aa80f7b3eba9c0626c343858e448581adb7ac1c0911361",
+    "scene-0016/seed17/unperturbed/report.json": "a9a581a0ad65e9660607f7de57c5f52bdf1e5c64f6e7ebf6cc8a02e82985519c",
+    "scene-0016/seed29/depth_noise_020m/report.json": "856e6651ea959e8567fb2131bb7a5adf778ae199e9319114541099282b9fcbff",
+    "scene-0016/seed29/detection_dropout_30pct/report.json": "e716f643dcb537357eedbdffc2a5d0ca7a2b1d0cf5242e7541e2e16998cdf057",
+    "scene-0016/seed29/lidar_dropout_80pct/report.json": "e5a5a9cf175a30cb5739c4aa81e3b1aab9ac805b889f57d2738f3c9d0459808e",
+    "scene-0016/seed29/pose_noise_025m_2deg/report.json": "3209bed07ba224d1ef108091b1b4a125a6deca7673786532b560b008a286bf71",
+    "scene-0016/seed29/three_frame_perception_blackout/report.json": "62b6d393382b0d48184c5c64f4b2a406afbc9a2baa9158d97b810ea87ac21e2f",
+    "scene-0016/seed29/unperturbed/report.json": "0db90de9d7bd05df541268ad08b10208dae813d21de5d9991c64781748681363",
+    "scene-0016/seed43/depth_noise_020m/report.json": "4c2b13ee00b956395dabf4fba335dac3ce53b7eb6a3a130c6ac42257c6aae6bc",
+    "scene-0016/seed43/detection_dropout_30pct/report.json": "bdeff3968a206ba1c6b8479f7f41e31a4ee677b4e549ab5841a2bf026fa283e7",
+    "scene-0016/seed43/lidar_dropout_80pct/report.json": "9cc99b5ed0c1ce30a365f56d16dbb77c02ad5444cf5db1dac7d35407d05bc002",
+    "scene-0016/seed43/pose_noise_025m_2deg/report.json": "dadcc8ab887b491982942b8c1664607783ea845b59a4480bd1f852a86568dc21",
+    "scene-0016/seed43/three_frame_perception_blackout/report.json": "5258a551b8a53878aaee830761d87fd611e2e54baf2552f2320f2ef04f7177b1",
+    "scene-0016/seed43/unperturbed/report.json": "67c1fae626eea9eed8279f8fe12e20761ae899ebba05ba28d7b313b1738490a1",
+    "scene-0019/seed17/depth_noise_020m/report.json": "6f457c49b9b7a067b82509c420dece269ef9ea4e41e2584659d83dd2b47be5cc",
+    "scene-0019/seed17/detection_dropout_30pct/report.json": "cf7240343b3000011673a1f618f173bbffafc9be637bee1ae97447e82ab7624b",
+    "scene-0019/seed17/lidar_dropout_80pct/report.json": "04991acd8e0b5fbda8700619c1dd9bbe79d34e14c085c2ffc169f0bfe98a8390",
+    "scene-0019/seed17/pose_noise_025m_2deg/report.json": "cf8feb44d9658983fa594fda3ee01e4c607e210b0b247ac3ebbdeee60ae7ff92",
+    "scene-0019/seed17/three_frame_perception_blackout/report.json": "7f778e0943518d99279aa51375b395b723adf8728790eb31074f227c16e41d31",
+    "scene-0019/seed17/unperturbed/report.json": "29170e8b2c80f33e12c612da35d58a568221c09fc6a55e38565b7b6bbf6174de",
+    "scene-0019/seed29/depth_noise_020m/report.json": "c626d8b6bbe737c665b7276daf210a42a9d70b1ef241a158a1c4646c3b8f2e59",
+    "scene-0019/seed29/detection_dropout_30pct/report.json": "349deebe004ce9dcc5d9cd6c856e6e110b8d48ed3f4e2e40cb6f6432866c8fbf",
+    "scene-0019/seed29/lidar_dropout_80pct/report.json": "1b3a3eee425dea21dba4d2185ed72a610f3cb3f4069795126bf5b4f343bbdfdd",
+    "scene-0019/seed29/pose_noise_025m_2deg/report.json": "52a9a9beec15bd754013e1875a4e904069613c505e789dfbf904d95627d2fdc5",
+    "scene-0019/seed29/three_frame_perception_blackout/report.json": "222ba4d4dab41d8e5c30c7532037bf406e821aa0a6d9869c77505b18463539b4",
+    "scene-0019/seed29/unperturbed/report.json": "fee6501dc69a036e090007674e0cd8302f2b60c48ae34a3d7bdaa9572c128e1a",
+    "scene-0019/seed43/depth_noise_020m/report.json": "edae78c1798c60514dff1aae71319f173079b615e4b1084eca0704509a2aa03e",
+    "scene-0019/seed43/detection_dropout_30pct/report.json": "2c87e5fd3c4e8d668428f9304b2e8d239611c16f909b3463b5dfa9dbf8597e18",
+    "scene-0019/seed43/lidar_dropout_80pct/report.json": "358ad63aaea8b671e8cf88770951f0a4a9ef0fd5834506bb20171b4bf9e6b22a",
+    "scene-0019/seed43/pose_noise_025m_2deg/report.json": "9cb257279a594bce401d5526dcbd091710e4586225126218044eb17786fab654",
+    "scene-0019/seed43/three_frame_perception_blackout/report.json": "aae4544d3cb6689101d7a2bc97cd7207c7e47a769ad25f243542eeb3bdc8a272",
+    "scene-0019/seed43/unperturbed/report.json": "95b746ad1b4e20e550aefee458eb8b5f6bb49767c07f977be8f4477e32476157",
+    "scene-0020/seed17/depth_noise_020m/report.json": "876069225cd9427ca378d6161d460b1f72b10ddbb2ce05bf2ff749c2a0e6f523",
+    "scene-0020/seed17/detection_dropout_30pct/report.json": "5c84eaab3eae10e1a6854d4a4c4cbdde319a0374a146816c75e1996c2dbedadb",
+    "scene-0020/seed17/lidar_dropout_80pct/report.json": "f92708843422882fe856be9b0cd157facefa7c0adf21e872b45c2d3b963c47f1",
+    "scene-0020/seed17/pose_noise_025m_2deg/report.json": "822e27f9a11795ce4bb55041daa4f3eb8bfcd6afc8d9a3f673d3477943cdf82f",
+    "scene-0020/seed17/three_frame_perception_blackout/report.json": "6533a6e36acd7c9048f561eeed599d2298d5f8e7cc4bdbc4d4f23c68bea17dc4",
+    "scene-0020/seed17/unperturbed/report.json": "97a522850b045ab6c6035660a150426e23a571dc79abfee1445c3ce67b7083dd",
+    "scene-0020/seed29/depth_noise_020m/report.json": "6b0e828883a9c59021b3299546da5844dcaad8e74f522922b6b0190d92c258c9",
+    "scene-0020/seed29/detection_dropout_30pct/report.json": "12cd91b72eb1cd5b49410c60b25e8432425316a074c53ccae560db11fb8da3a9",
+    "scene-0020/seed29/lidar_dropout_80pct/report.json": "08d0bf0f3d356c36c17caf845a4e370930e2a5a40c10f15c146492f12e6be436",
+    "scene-0020/seed29/pose_noise_025m_2deg/report.json": "d83c51e479605aa66d788a3a5a42c2b0bca2179d861fe750f2a261288c0aa867",
+    "scene-0020/seed29/three_frame_perception_blackout/report.json": "522d0268906b5141caee5f794f11a87bdc50215b3e1e571782bb9e4db4adbbae",
+    "scene-0020/seed29/unperturbed/report.json": "02644077437da1e896e6bdd045b253bfd0b1ceb903acb4ffbb998b7a5a05515c",
+    "scene-0020/seed43/depth_noise_020m/report.json": "e60eced3772b0d01fb27ac2767a8e04613f8355b9f975369ff90567b3bf70640",
+    "scene-0020/seed43/detection_dropout_30pct/report.json": "3e55c6ab3d5c98ee374f9648247aea24645cb54726079d883c76ca34df5ad91c",
+    "scene-0020/seed43/lidar_dropout_80pct/report.json": "361d954e69a300c177e64e4bf030b247c9c4c4fbd0724616d9d8e875e36ee7f4",
+    "scene-0020/seed43/pose_noise_025m_2deg/report.json": "325b8b17f9281a8d33092f353f342f1e2207e2367a4ef10c7cc47a6576ccf241",
+    "scene-0020/seed43/three_frame_perception_blackout/report.json": "0ea060d36a348179fcb7f587291be648f7a251d536c21c0e012d37b3b8545601",
+    "scene-0020/seed43/unperturbed/report.json": "5377e8a61120982ce935e4e504cf9c6af425c7f1ee5e7d91ebdfd0f14a8552fd",
+    "scene-0021/seed17/depth_noise_020m/report.json": "0eeb2b72fc5a8c736afebc742f15f0538dc46d671e560069b1f55dc39634c1fe",
+    "scene-0021/seed17/detection_dropout_30pct/report.json": "06df28cf79238c12565b03e1525b9de57eabacd717c9bba6349bf839c457e0b1",
+    "scene-0021/seed17/lidar_dropout_80pct/report.json": "5263d4cd58347b50bea7c58690adda504a986b8bc7680baff7bfc88f5e288ce6",
+    "scene-0021/seed17/pose_noise_025m_2deg/report.json": "b69a536f2b85dc60ba1be3202425c2019600270d04501b6ccd80aba6cd502f08",
+    "scene-0021/seed17/three_frame_perception_blackout/report.json": "4f7ef476d067723d945829f2562f6c7023ad74db0a32907e4c177f250547642d",
+    "scene-0021/seed17/unperturbed/report.json": "945528de53b54d9cac4a2465b937794199a7e4dbd5dbfd52b01ee8668c8a669b",
+    "scene-0021/seed29/depth_noise_020m/report.json": "9786f39ac74dc7d816b4efd5f54485c20a56cf3de41e8499ed508f192b1533d8",
+    "scene-0021/seed29/detection_dropout_30pct/report.json": "db340ecaba0564373f0f30188551d2172471346a88f01b8237e0875869bf5956",
+    "scene-0021/seed29/lidar_dropout_80pct/report.json": "dd6321023f006bb4f88e30df1b3b9e428d83f4da276187e3cef7ebb1765d4de2",
+    "scene-0021/seed29/pose_noise_025m_2deg/report.json": "2e6f2dd637ab4c7247bcaae9adfed54c31b80d2baa2a383e48e5f56d95abfe3c",
+    "scene-0021/seed29/three_frame_perception_blackout/report.json": "28877e7ecc511fd9741c6623238c48d66b59eb53bee44dfc12eb3ebeacb36062",
+    "scene-0021/seed29/unperturbed/report.json": "5fe9918a2ecf1f412f714b01d4e9b2bcf451207819c6ea69f3d6f329e00ef27f",
+    "scene-0021/seed43/depth_noise_020m/report.json": "e76e88b598a8eb4f3e93f335cf1d620775fba00a23961ba450d5058acbfc4780",
+    "scene-0021/seed43/detection_dropout_30pct/report.json": "829f3bd1362e297ee2576ed580b76324f7800b4862f8744600fc97f37bf69cda",
+    "scene-0021/seed43/lidar_dropout_80pct/report.json": "0f8c5a49d6f1b76adc7d63f374fd8dab5c40938fb63bdcf3e1be6c2f3f9e6dc3",
+    "scene-0021/seed43/pose_noise_025m_2deg/report.json": "3f7a3cf4aa1818f17316a0cf076c613360d0ae8802f66f8f8963ea155449d304",
+    "scene-0021/seed43/three_frame_perception_blackout/report.json": "e585b4668b8901a7b5dc767dc6bd9f9649659e19c9d7ecbe35c05293a3fd1848",
+    "scene-0021/seed43/unperturbed/report.json": "e5029526737cb9089ee839760ff1b8644b83cc6c024ca446b54e74a59a382595",
+    "scene-0025/seed17/depth_noise_020m/report.json": "7ed276b6e0d8a4afb3b201ffd6efe305b96b86e435ed01f12402388f60426939",
+    "scene-0025/seed17/detection_dropout_30pct/report.json": "eb3c653eec249a98ec8678b42912b5284821feee49355a00ed332de8edace06d",
+    "scene-0025/seed17/lidar_dropout_80pct/report.json": "1462aafa22a55b389b5df6705870e60fa8852662fd03f899671fa876d2fe8295",
+    "scene-0025/seed17/pose_noise_025m_2deg/report.json": "ea8b045395aca57c83028f440c0c73df175b4495844dfd82ed1c731488415c99",
+    "scene-0025/seed17/three_frame_perception_blackout/report.json": "5679acec5e5fe5e6183d19bcb8dc84b8f7db34f2c92bd208ab645dd4e4d5a343",
+    "scene-0025/seed17/unperturbed/report.json": "fc5289752b111e6d3adacc25b209517001d16d4fe59b90f5edeb8fdf003053a9",
+    "scene-0025/seed29/depth_noise_020m/report.json": "158a2270595da0083e9f091b8cb243a9c7bc350958146070d87d9d52d9882ab0",
+    "scene-0025/seed29/detection_dropout_30pct/report.json": "9917f8c397f2bca4a2d3da046b4f2c6edb6e09d66b485a4cb33c2325a484dbd9",
+    "scene-0025/seed29/lidar_dropout_80pct/report.json": "01c6bbb06662a9fd3a9792bcbbb42e156babe266616103625777df43391804ee",
+    "scene-0025/seed29/pose_noise_025m_2deg/report.json": "8a2e6abaa94e1ec79dc83ac4cd2ceaa2642265cdaaf3fc7ca810ba3daeae2879",
+    "scene-0025/seed29/three_frame_perception_blackout/report.json": "63b7e9582188769250ad01427a07cf2e1ded588258d42e62955e1051d2f7d7bf",
+    "scene-0025/seed29/unperturbed/report.json": "8816e3080f1cde2e93489236761aa88bed09bc9e9d9030677e6329e8a8b17922",
+    "scene-0025/seed43/depth_noise_020m/report.json": "81238b11c6c67eb5b4ff1bf440082b9518db4f18552f89d2bf919bbcb35625f4",
+    "scene-0025/seed43/detection_dropout_30pct/report.json": "dabfbd4d3b720aea0700b50c0aa4d7eb1c11f5c3b072877a60f26a490cbcf3eb",
+    "scene-0025/seed43/lidar_dropout_80pct/report.json": "fb1e24978e65f5d643d0abdcd5d789eeafd0e96c71ad6d7c4c5b815576932d8b",
+    "scene-0025/seed43/pose_noise_025m_2deg/report.json": "84938313034e0854933b0d1889b5e84c309b18cd93315e7198fecb7a1c99a1ee",
+    "scene-0025/seed43/three_frame_perception_blackout/report.json": "8c1a6aeaf81bd6b402fd078941870896e24800c2bb16747a6c3e76fc1acba093",
+    "scene-0025/seed43/unperturbed/report.json": "ad8b09be4f8d648b18d14d8eb105269c096ac357645b3238133dbd5e295386b6",
+    "scene-0026/seed17/depth_noise_020m/report.json": "18cf16948f646156d685e051c1340b85063d81682ee739cbfc00773a2d12605d",
+    "scene-0026/seed17/detection_dropout_30pct/report.json": "64966b1fbfc50cd673fda818e78bcd39ecb79363b4c2d95e44b69b90319ecc83",
+    "scene-0026/seed17/lidar_dropout_80pct/report.json": "0d1d367786fb5bd1f22534c1dbbb56bc45880169fb42a7764a00cb1ec102a848",
+    "scene-0026/seed17/pose_noise_025m_2deg/report.json": "0be0684f55a5201b78c7287e35c9a432b819acd9bb0862ea27ace3d84227a281",
+    "scene-0026/seed17/three_frame_perception_blackout/report.json": "21c7ec7495f8a437a309342d0a473daa424faf80a6b2725f036724bd7d765da2",
+    "scene-0026/seed17/unperturbed/report.json": "88c3f4545ec24aec2102557d0ff03a3df5aaa3c9aa075633c7dbeef7cb2a5099",
+    "scene-0026/seed29/depth_noise_020m/report.json": "ba22e7f7850fda4ccb3fa0c7b215ec0c3a56aeb9f064f2e214bcf8a68e04415c",
+    "scene-0026/seed29/detection_dropout_30pct/report.json": "ebbc4be87703b2f449b3d2fdfcb256382417340f6b264ff934ab295852854e0e",
+    "scene-0026/seed29/lidar_dropout_80pct/report.json": "912eae6e7d24f6f374eeb0ccfb33e27b865580c1ee104d7a2f4e124790464e30",
+    "scene-0026/seed29/pose_noise_025m_2deg/report.json": "7b5018b47b7f8d063a6445236ccc3c66f2fddb5a9a38459fc44e2a851ccdebc0",
+    "scene-0026/seed29/three_frame_perception_blackout/report.json": "ca27d74c90ffbcbd2c3fa23051a45cf24517c6b761bf7b0fff400c9b560d6e5b",
+    "scene-0026/seed29/unperturbed/report.json": "233548a614a4e1ed9ab7d9c4b7458514c424999ec90859eae8cc1da7a573dab5",
+    "scene-0026/seed43/depth_noise_020m/report.json": "285711c84585ace8647d650841319257bcbb8f9b9a569cc282c903ccfdf97084",
+    "scene-0026/seed43/detection_dropout_30pct/report.json": "5d3c1df1d4b77e990fc9845d5938449fbd3103ec68f75a9b96639349df352016",
+    "scene-0026/seed43/lidar_dropout_80pct/report.json": "da9b836df6a71ba3a66bf1e4f6671dee8ccd86ca4841ec36794e9bdff2be51a1",
+    "scene-0026/seed43/pose_noise_025m_2deg/report.json": "16ec11afcddc6afb3ca7582dbb820979a2d79ddf83ced5949c3b6492ed2c4d8d",
+    "scene-0026/seed43/three_frame_perception_blackout/report.json": "efb4d12263723d7d8d7f57a87bdbd6ce8d56b77c651e8172cbc3f42b4958c0ac",
+    "scene-0026/seed43/unperturbed/report.json": "647348b2b0ceb3fcec520a04515ee41594d14d6c7b18eda294aee1717dd2c107",
+    "scene-0027/seed17/depth_noise_020m/report.json": "29f4c8ccf016456d1dd6240ad75d1cf0b98396b77c9a237f757256869a58bf2a",
+    "scene-0027/seed17/detection_dropout_30pct/report.json": "3bcaecdc98b047f627884bb6982aa0ad6c188cd65dcca03dd1759b94adfe2bb4",
+    "scene-0027/seed17/lidar_dropout_80pct/report.json": "b55a903a6adb587de8b67f63f60c2572bcfaa0074606f9ece36fa82bdc8f2d9a",
+    "scene-0027/seed17/pose_noise_025m_2deg/report.json": "42e65dafc24a1a173a9cb97981744e315e5d143028d1f2899b2e57d12fe33836",
+    "scene-0027/seed17/three_frame_perception_blackout/report.json": "c8bf642c9513bddf14169cc4a9aa3c5a736ed299a430ceb3ff0a5cd892ee2e35",
+    "scene-0027/seed17/unperturbed/report.json": "9f634aa05c03a6c92c715460fda28f29e6961e7d7afb116fb36888e53f1a6fb3",
+    "scene-0027/seed29/depth_noise_020m/report.json": "d60d50662a6c2d6e2b2aea104d8dcdf251b5ce7c90647281310864cb38870163",
+    "scene-0027/seed29/detection_dropout_30pct/report.json": "a2d81fcda3e08c66aafa506aee5e534d0cdcd3c2a1e4889eed32331a5e1b982f",
+    "scene-0027/seed29/lidar_dropout_80pct/report.json": "f5b3941eea076182eb121acaab5d938aa5de62d637204c73069b6567eabb56e3",
+    "scene-0027/seed29/pose_noise_025m_2deg/report.json": "5553b3199fda44124e97bf5b59afd781842572bfa26b050f4bc5471b8e12e6de",
+    "scene-0027/seed29/three_frame_perception_blackout/report.json": "2b41d18d7952be53b914004738a598aaf4aaeeb08483b933221dda9e38780ee6",
+    "scene-0027/seed29/unperturbed/report.json": "c278e6263da16940ee8ac8220e6f6d45d47e958be38cede28cf1243e11490adf",
+    "scene-0027/seed43/depth_noise_020m/report.json": "d10a3a1d30ed27c1f69965d592520251cd854169c758ae049af4b3251c4f3603",
+    "scene-0027/seed43/detection_dropout_30pct/report.json": "a7b42193b76a0150993db66e315360cfee8e81851b80fd6c0cc69a426d3e1655",
+    "scene-0027/seed43/lidar_dropout_80pct/report.json": "a546d9efe92dc9ca7ce1c16bf67b578139e8fad032613f9d6eb47a69dfcf71e2",
+    "scene-0027/seed43/pose_noise_025m_2deg/report.json": "0e938217381c82f7b7b9e26cec81e5b29e5d721d5af1ec04adcb21037ba468ed",
+    "scene-0027/seed43/three_frame_perception_blackout/report.json": "d8345454d4750b034b044696500305b6f61153fba9a8bb4497f84fab25d82d1e",
+    "scene-0027/seed43/unperturbed/report.json": "5722c581c198a165d9cebf427d835c4e23eadc5b5ce330cd9c90855f22543d7d",
+    "scene-0030/seed17/depth_noise_020m/report.json": "b15977507ccd4aa6922c15d7c6dd4e619f6982c334d57e96d4620f652d5ab1fc",
+    "scene-0030/seed17/detection_dropout_30pct/report.json": "a079cebeef0f249fddc0448303bd70232c4f1e481ef439ec740df6e6f895f7bc",
+    "scene-0030/seed17/lidar_dropout_80pct/report.json": "166b8b992522020d4ab3a5db9af8e561e8a10d34d6682c6214c9a6b50bb92eb5",
+    "scene-0030/seed17/pose_noise_025m_2deg/report.json": "549b12c1d8fde25b65d10e49fc9d2ba0a6aff9f41a7e1fbf9363063fc5355e86",
+    "scene-0030/seed17/three_frame_perception_blackout/report.json": "ea6e83a7fc3da284ef9d058359d418a76f85eef4e6f10f5290a52a6d63fbab92",
+    "scene-0030/seed17/unperturbed/report.json": "99c91aede71fda29cdc4d029c7bc45fde06e6ab391e62871a85309d818ab5584",
+    "scene-0030/seed29/depth_noise_020m/report.json": "0959bad0b636b3e11c40afd65d516d153fa2c9dd326d6e88f4bf920ad578e334",
+    "scene-0030/seed29/detection_dropout_30pct/report.json": "9e607cda877b4072f65ff47bffaf7b56fd29961c1340256047a0d164d44bea33",
+    "scene-0030/seed29/lidar_dropout_80pct/report.json": "a3ec26314f28c2d595c35e8052cad15aa7d9149515443dd5d08f930de267bad2",
+    "scene-0030/seed29/pose_noise_025m_2deg/report.json": "1a4d42c900f4bc97564d992834d712bad3839d966b4351d1173feb36f6aa9314",
+    "scene-0030/seed29/three_frame_perception_blackout/report.json": "cb30132e4a11208b598ab1f831eca06c2b60d2956a567758bd98deca25acd65e",
+    "scene-0030/seed29/unperturbed/report.json": "c57d98a185eae6041df8133e379c2c6eb034c6a231e2992974fcd56cd80a0554",
+    "scene-0030/seed43/depth_noise_020m/report.json": "3d8bb66e6426811a1fab7fa1fe80203a90c87e7b6608c7551034ab008eb6ca99",
+    "scene-0030/seed43/detection_dropout_30pct/report.json": "692563ace5db0c04f818c7102f4f57ecafd2afa1d6902fd042256d2bd713a798",
+    "scene-0030/seed43/lidar_dropout_80pct/report.json": "3026404490df74c90ca6d12fa2167fd3ab32819f26251284caa9c76161624c5d",
+    "scene-0030/seed43/pose_noise_025m_2deg/report.json": "0dc303584081b50fae6d928aec91d5ace77d12ae0826873dad38aefb862fcc36",
+    "scene-0030/seed43/three_frame_perception_blackout/report.json": "a8022b1070ee55d0ec6cb30652ee26afccf8dc52ab1b239f64730acc3512e262",
+    "scene-0030/seed43/unperturbed/report.json": "c821941c21ab7dadfd77239ef2a522c2af0c2a643bfbf48543b93a7d02863027",
+    "scene-0032/seed17/depth_noise_020m/report.json": "2a56a584a821e9c8755ffa3d3e18717190050be42a96f75682e2a99ac269bcbd",
+    "scene-0032/seed17/detection_dropout_30pct/report.json": "dc0dfd072787ebcbd7922002566bb1e7463ab7ecec994c01da3922e2e6de5ea3",
+    "scene-0032/seed17/lidar_dropout_80pct/report.json": "ae56c1befc6f669fafcf60565ab5d61341ae513f6e588f7a814cf7a564257907",
+    "scene-0032/seed17/pose_noise_025m_2deg/report.json": "d8d94caaf848e4fa8e5d6d7800cea36412a56db08905ce66152b9f58b8bf66d8",
+    "scene-0032/seed17/three_frame_perception_blackout/report.json": "3cda075117cc2e72423274d2143bb0f332b7cc02eaddfac95deed67908c4b7b2",
+    "scene-0032/seed17/unperturbed/report.json": "31186dea22928a45f134a6aea2f9f0218eb8da8f384ddca5a77c142279c197a4",
+    "scene-0032/seed29/depth_noise_020m/report.json": "50a4c547f3855a7b4cd9e67153b0be4c2c52ad4a0976a3237874a4cb9ce491a5",
+    "scene-0032/seed29/detection_dropout_30pct/report.json": "449b8b25d3c1e492ca542d90a7c86cd0cd7de78f93e953c430e3f8a192cebd84",
+    "scene-0032/seed29/lidar_dropout_80pct/report.json": "7e4ecee458d57292797568ea292be176932aa5365a1636302f4be84a9adb9c0e",
+    "scene-0032/seed29/pose_noise_025m_2deg/report.json": "8f5045f632272301422c36e0cce668ec86710e35a975e4e0ffa1ef6cdd74df67",
+    "scene-0032/seed29/three_frame_perception_blackout/report.json": "da0c1530efc2e3125409f4b00d78233de3c905c73f6c2c76177d16e6d434eec0",
+    "scene-0032/seed29/unperturbed/report.json": "2aa25936099523a225da086ae2c95d37418a45abcd28e89de272f0c3062cac1e",
+    "scene-0032/seed43/depth_noise_020m/report.json": "899d888facadfdfbc70c3426310460ca29cf5214c7ebd31b5a3345f484651352",
+    "scene-0032/seed43/detection_dropout_30pct/report.json": "6b0818188755b36f6b32d2163e4ce22e30c76e6ecbe2014ab044fedee6ea9e38",
+    "scene-0032/seed43/lidar_dropout_80pct/report.json": "8334619c62373d54cf182a53f7743f8a9cb55121822054f295ea9a80b5e81834",
+    "scene-0032/seed43/pose_noise_025m_2deg/report.json": "8f4179b0e2bf39563c5b36c570655ddd26ff6b7801666dd1a9a6c7faa7244c9a",
+    "scene-0032/seed43/three_frame_perception_blackout/report.json": "0e7a4749f6bb1347f768835342735df102956337829a40acb79232169a6ede1c",
+    "scene-0032/seed43/unperturbed/report.json": "f1e878637518e03ebee98f8cccec566b716d766f038bf805f2f6455431f46acf",
+    "scene-0035/seed17/depth_noise_020m/report.json": "5f960d1eedcf3703f565e4d38999034286c8ab8dda857632b046ef654484daf8",
+    "scene-0035/seed17/detection_dropout_30pct/report.json": "0224c784364da140582f29154d7fa7d6dac73b24bb5ff12f9648b25f6d2a39ed",
+    "scene-0035/seed17/lidar_dropout_80pct/report.json": "a534639bbd5f3223cffedc7b4b13f477c469b63bd1c20ae97c4de51cd775f8aa",
+    "scene-0035/seed17/pose_noise_025m_2deg/report.json": "c907e253837fe5516e74386783ccd1e45053a49b844f4b83f3565d27592f12f9",
+    "scene-0035/seed17/three_frame_perception_blackout/report.json": "663f576d2e4e0c3ddd1c8af8be06c313143298210f70fc83256e6268c373ef11",
+    "scene-0035/seed17/unperturbed/report.json": "99b50634303f0d4dc9a77c88de94bc5618cd7412bfa09aea6247c952cf7cb271",
+    "scene-0035/seed29/depth_noise_020m/report.json": "2175e82d09e1b3321f812dc7e4c8f6add06d493e6ff7c8c2cf0e23041671c18a",
+    "scene-0035/seed29/detection_dropout_30pct/report.json": "e4b1674a3610c9e7c48c2e825bb0227d84e41afbe280034c80174bb7289e954c",
+    "scene-0035/seed29/lidar_dropout_80pct/report.json": "bda54f9a28222e3c1c477255c29d4828f49b50eea232cbe5494cb79efeee1deb",
+    "scene-0035/seed29/pose_noise_025m_2deg/report.json": "0f6e6ea0093a1fffc188816e6ffd86ea4c23a9b48b8346fcc1d21cb3ce41cd9f",
+    "scene-0035/seed29/three_frame_perception_blackout/report.json": "7a6ede11cafc8d713daf87e3337a51bcc44f139ea5ee505e15a65ee50ba64736",
+    "scene-0035/seed29/unperturbed/report.json": "b2fda65d520ffa55ffe67f9d1a2ec3b81c688512ec02905c53332361142c8375",
+    "scene-0035/seed43/depth_noise_020m/report.json": "834c5397154012e5d83cec009174d5b60743038dab5778a8d9cef31fc10a01d0",
+    "scene-0035/seed43/detection_dropout_30pct/report.json": "32a19c203bf22f711e8c0762ea58ec6e4f3f565ae7923d0cc65b017ff576804c",
+    "scene-0035/seed43/lidar_dropout_80pct/report.json": "c025a65aae519b5bed2ef216098f5770430c51642e8fc5e71345f764de543584",
+    "scene-0035/seed43/pose_noise_025m_2deg/report.json": "46669ae74c91636a552bb7d1300717e5040ceeb9529ab198a3557023115e7627",
+    "scene-0035/seed43/three_frame_perception_blackout/report.json": "9a875c098342c80b677b7dfbfd683f9287df766cbbab97a83e6ed913107df3be",
+    "scene-0035/seed43/unperturbed/report.json": "115443e1158ed948ff7976fcda36c6dbfd38919e349893d0f2df3a823e4d3942",
+    "scene-0038/seed17/depth_noise_020m/report.json": "cdf89ba12de01dd016b775b75c86903b995c3366037fd08a1ca8be198ce08f97",
+    "scene-0038/seed17/detection_dropout_30pct/report.json": "31353af37d9b99469ff8fa81454f46c06930da9678162d419bc7fd5b550ab54b",
+    "scene-0038/seed17/lidar_dropout_80pct/report.json": "9f25782548d7f1131795367688e178a3996a7ee00df67f899c9327a27b078c7e",
+    "scene-0038/seed17/pose_noise_025m_2deg/report.json": "f95cccd495d561f1b871cd04ccbac2ee1064e72537843c7e0f8998a2ff987f92",
+    "scene-0038/seed17/three_frame_perception_blackout/report.json": "8b3642b871482c6b95bf3ffa91505fd66360a6a576275c8578f77c40eae27b00",
+    "scene-0038/seed17/unperturbed/report.json": "f5cbfefdd4215a0ee4f46fd8ab837e6dccee7842d8e719cbd3f5fde2e1b1c402",
+    "scene-0038/seed29/depth_noise_020m/report.json": "41cc96494eb8290fc2c24f2ed7cca0ee2aa0f250aea180ce279a0af81b95a968",
+    "scene-0038/seed29/detection_dropout_30pct/report.json": "0dd72618402a443dfb6b6c64d4fc3d308d6200161c84b86c98fe82546ea34217",
+    "scene-0038/seed29/lidar_dropout_80pct/report.json": "bed5730c68760e24ab91f8c728971a38ac201cd560d775fe7a226dd2f9a30aca",
+    "scene-0038/seed29/pose_noise_025m_2deg/report.json": "767919a76449d78c4bee58aa2eb9eb9398b86008d11ae1a6d1966e546285132d",
+    "scene-0038/seed29/three_frame_perception_blackout/report.json": "e1586d35008c352f60a9c69c389f48f278e58d2869e8e6099ecde9caa679f247",
+    "scene-0038/seed29/unperturbed/report.json": "06fc5fbcf582949421310b041cd3bbd7635b627a1e2de0fc3d5c66f92ceedfdb",
+    "scene-0038/seed43/depth_noise_020m/report.json": "e37a16dc280bbb67fe5c3b92e8f37abd62d3d306c26037ca0d3779688644e6b4",
+    "scene-0038/seed43/detection_dropout_30pct/report.json": "77e10560d7cdcaac49c9d2ecd39f3f6efdb234f2377f8628896a9626ee53e7f8",
+    "scene-0038/seed43/lidar_dropout_80pct/report.json": "c4878cab8782e7a4e15e7230472172af3ec59c9889cbc94135e596a14c1d0d39",
+    "scene-0038/seed43/pose_noise_025m_2deg/report.json": "324ffd3ca458df84459a706e2ad0359beb55d7f458cf3bf5b6bd42d908ff28db",
+    "scene-0038/seed43/three_frame_perception_blackout/report.json": "bc259f0b992029a30d9a738f1ca1119415a7ecce13e5bed0d1c5000102da5714",
+    "scene-0038/seed43/unperturbed/report.json": "0345f52e149c87ea0e0c557ad2ccb1d2ef873dff29cf9cdfde5ec658194578f7",
+    "scene-0039/seed17/depth_noise_020m/report.json": "d9ca8fe7970556366889e5d1179762ad4098cea36dccb897521968c57e87fcb1",
+    "scene-0039/seed17/detection_dropout_30pct/report.json": "85b004097304e96aa6f87ad983aed1fe8496f20416aa8ee72297639e9972c07a",
+    "scene-0039/seed17/lidar_dropout_80pct/report.json": "1d6dc5b4ccb3f28c242f960fa7d9301cfa5c844799c069339d226feca291cc11",
+    "scene-0039/seed17/pose_noise_025m_2deg/report.json": "fb91cd70d0a142bc9e2c9270f73569202b568e3c3f3f837eb5441ecf3f646638",
+    "scene-0039/seed17/three_frame_perception_blackout/report.json": "1110df28ca17620d8b34149d7407c9124f501c7af8430c26918710b35b28bb07",
+    "scene-0039/seed17/unperturbed/report.json": "33b415e69cfc2e8701185c23ab163d2e7a3f76a8110caebd1ce283ab3f27fd07",
+    "scene-0039/seed29/depth_noise_020m/report.json": "6c5188435a79f0d7bf0b2d04ac08f8ab49b36ec5526cdb35bd546b49e6287008",
+    "scene-0039/seed29/detection_dropout_30pct/report.json": "c808393c1058301815e69f8bbd655159d300f943c720a76793bf3730e66c8015",
+    "scene-0039/seed29/lidar_dropout_80pct/report.json": "c5fd6ab96bdd59a96d87d3d4ac20e2746b848a46e1aef47cfb5dbaf1379eacee",
+    "scene-0039/seed29/pose_noise_025m_2deg/report.json": "f1271f1e093bce358f586fa18f693ad1ba713bef7b04fe06ef0487e6c5498948",
+    "scene-0039/seed29/three_frame_perception_blackout/report.json": "a1aa3f0c58a37ad16ec35cee06e9ba6cf232cc20a591f1b461f2f9edf17d19ec",
+    "scene-0039/seed29/unperturbed/report.json": "48962d230b34b2371f7e5aba349bee7be6a0585e4c740c09550f06a1279be49d",
+    "scene-0039/seed43/depth_noise_020m/report.json": "cb21d17e9fb73a50c3d8ec6c989be22a687405a9ed38650ed58a5fcd83b0a7db",
+    "scene-0039/seed43/detection_dropout_30pct/report.json": "f7c75d8131881e6f2fdb57b6bfbfb44c445eccc76a80e185aceeb16126a1c7aa",
+    "scene-0039/seed43/lidar_dropout_80pct/report.json": "881c65234e09e3820eef7e6a62bd0594c8f38c3eb0d7ed8c8adf4a2b27f68a91",
+    "scene-0039/seed43/pose_noise_025m_2deg/report.json": "fa85eeb4497a41666bbbdd0edc2e6571e51a3b426df9d4b4a0270d9e36f879dc",
+    "scene-0039/seed43/three_frame_perception_blackout/report.json": "0acc98a82a57d55716f6eab9dc5b80c3db128334d80fe38e353678cae5f4ee20",
+    "scene-0039/seed43/unperturbed/report.json": "62e5f4a8d3c3c8a0633bda2533e8e08457e3bfe28029416c675536b47db18fa6",
+    "scene-0042/seed17/depth_noise_020m/report.json": "3878ccba0972be5d88c6a6c940813e8b940d2c722bc56db1b53fee1d26ab8349",
+    "scene-0042/seed17/detection_dropout_30pct/report.json": "cc0e1f591fc3106d9e7c786892d7cb3c3d49e2aa191bcdb69644d2b9ae0350a7",
+    "scene-0042/seed17/lidar_dropout_80pct/report.json": "0c7d215eaf0c3ca26a39b5d8f2e434a36a53f4b5088db11b8819249431593ef3",
+    "scene-0042/seed17/pose_noise_025m_2deg/report.json": "e448ef9cc96aa0dcac05bc7e588d51cdc79134ad7a566b558194fa2cb5f93d67",
+    "scene-0042/seed17/three_frame_perception_blackout/report.json": "500f985b5c77688b652a345c66d8f5d1c97e0a66f10296bb54452d2e80eb64a0",
+    "scene-0042/seed17/unperturbed/report.json": "d661a4156aa14d7f565d31b3b1c1781b3eda27c74dd2af2bc0747a262c936c84",
+    "scene-0042/seed29/depth_noise_020m/report.json": "75dd5e360ce765f534690a1b86701f8df1f95fd4cb91d795306cf87c25d552f4",
+    "scene-0042/seed29/detection_dropout_30pct/report.json": "1635b060e70aacdb0ced28790c3c0bdff73b91dec664d84122398d46271246b2",
+    "scene-0042/seed29/lidar_dropout_80pct/report.json": "0be1508d4c14b7b6b1cae3bdf14a8b8a627104029bc0e5b0f73365553f1aa9e4",
+    "scene-0042/seed29/pose_noise_025m_2deg/report.json": "24512eef4f719b5b88ce6e2051461b16a0481c7eb89a667b43286a63316c9f4d",
+    "scene-0042/seed29/three_frame_perception_blackout/report.json": "d13c496f493655a2cb82008eabea7ab93e3293b59fe80cd1c8ea18c9a0eb9417",
+    "scene-0042/seed29/unperturbed/report.json": "158edd081627ea6606ad52f775db33f9420a9dbd732711a1fdab676f208da61a",
+    "scene-0042/seed43/depth_noise_020m/report.json": "0ad9488cc34957a4589813846c7da859fcce65321699fb9111c6bf3b99bad597",
+    "scene-0042/seed43/detection_dropout_30pct/report.json": "9691e196f5d6c9a3c528cb9740aaa87156c66ae6881fa836f0224d8cdee3f260",
+    "scene-0042/seed43/lidar_dropout_80pct/report.json": "5d5c70cb2d57b25c8886508f85527692491cccfb03991b6185fdfbc88ebac551",
+    "scene-0042/seed43/pose_noise_025m_2deg/report.json": "7fc9b366328a1b001d23862d8d6a93d48d3a0fee1f348a2da4cf9f9ec0b6a7b1",
+    "scene-0042/seed43/three_frame_perception_blackout/report.json": "9a395666b0846a70cf44296c06e8b0b7684ed0c811f4e8143cdacbfbba6812ad",
+    "scene-0042/seed43/unperturbed/report.json": "ef17daa81e5022462bbdd7549065edd93431e92d8869467c8e8b30798600dcf9",
+    "scene-0043/seed17/depth_noise_020m/report.json": "4eb4a60ad64bfe70ab8242e6b58d14762ef1551555dfa8206d49874bc27b2fd7",
+    "scene-0043/seed17/detection_dropout_30pct/report.json": "f7685e0d84d1e3551d1c4a90056fc9a440e04052ff7429e68c0271068dd00835",
+    "scene-0043/seed17/lidar_dropout_80pct/report.json": "ce6320d786d2ce71bcf2b539cf396192785f40de53c21c84a628b4d1279bae54",
+    "scene-0043/seed17/pose_noise_025m_2deg/report.json": "7740d50e256e041db98f55022b2c000a827968c5e9f310e469e6b3727e8d11e2",
+    "scene-0043/seed17/three_frame_perception_blackout/report.json": "9be21c1f0b2a6e7f27e6631108df9dfac48f7c1e0582aaac8e29d4dfb0511fa0",
+    "scene-0043/seed17/unperturbed/report.json": "f2622979181e283fb32cd41f9773aa551521f8ad36d336f8501f2a98217d6baa",
+    "scene-0043/seed29/depth_noise_020m/report.json": "3753c98b80cee50cf127af526098205ec62175c64b53552c118c65b91db98554",
+    "scene-0043/seed29/detection_dropout_30pct/report.json": "e1d81998ccd6011f64b0a3e9733687275dad041db9eadaab73536d2c92d9b87a",
+    "scene-0043/seed29/lidar_dropout_80pct/report.json": "ebd199827b8727ed8ce89103c0986153e69faddaaf3f337c45bdc808818e90ea",
+    "scene-0043/seed29/pose_noise_025m_2deg/report.json": "a8374e66eb047de1d205c5deef17b5e2f99101db611930cdb273d8192e83502c",
+    "scene-0043/seed29/three_frame_perception_blackout/report.json": "9d0b976e71e218313dd5757f6173e6a954cbf9e525acf3634cbb8a1d88bcc2de",
+    "scene-0043/seed29/unperturbed/report.json": "7b104a62bb2e082ab166e27e79c45c2501043a4a1f1da885b238b7ca92ff2281",
+    "scene-0043/seed43/depth_noise_020m/report.json": "7c90fb12003c8a152873e0c7f576b2b4c2c904e7a354a7b00be9a0d7d8c7f9fa",
+    "scene-0043/seed43/detection_dropout_30pct/report.json": "f519a2f793871f5c1888daee028c4c2e7b4d525648873a84be4396b6f8e8d2e9",
+    "scene-0043/seed43/lidar_dropout_80pct/report.json": "b0d9c5f7de9642bfbc477e56b7e3431783ac19457cebf1ed72b3db771446664e",
+    "scene-0043/seed43/pose_noise_025m_2deg/report.json": "3aef9132760642e64004c4fd497145cd6c79a78fa221c0380565a5b5e2490c3a",
+    "scene-0043/seed43/three_frame_perception_blackout/report.json": "b46c506accf414d7ae1e78fb92c68b16206143c4a94ea46e185975c99093fca1",
+    "scene-0043/seed43/unperturbed/report.json": "86ee42317ab6eab0179244ed74b9cb1d334b0a5e2d69c20ec02e8bc94c8ed1fe",
+    "scene-0044/seed17/depth_noise_020m/report.json": "2a03e41bf9ddeb2a5369c3821c2ad96b049a97f5aaf7442914c34fdc31b50927",
+    "scene-0044/seed17/detection_dropout_30pct/report.json": "856d42c320e21301289699ca81d7962b7a6cf1fe71d7e7763e0eb932737e3d6b",
+    "scene-0044/seed17/lidar_dropout_80pct/report.json": "c3b61009653960acdbb3be1f84f576232bd3c27f3cacbcd8a5090403095b538f",
+    "scene-0044/seed17/pose_noise_025m_2deg/report.json": "4c3c26a3eafb12bdf1a063cff972fa07c36d63e5f413da436e69fc03e891dd36",
+    "scene-0044/seed17/three_frame_perception_blackout/report.json": "135130d010a44b12eeaec901158ec3395839753c0ea63bc9f82040162dcb1b29",
+    "scene-0044/seed17/unperturbed/report.json": "bc1ae5818ed7c552c4fc98e93de15c88236c6549d3405c26f38ddd5117e6bab7",
+    "scene-0044/seed29/depth_noise_020m/report.json": "59d5a6e6dbd79f7d3f901935f7ec3c285271fc878f518b979ec7e5b5bccce4bf",
+    "scene-0044/seed29/detection_dropout_30pct/report.json": "407259855cd8485c21c3e9058777d5ef077a5ba28256049bc1f321a18cd13400",
+    "scene-0044/seed29/lidar_dropout_80pct/report.json": "21add41a46161cc87b20667025ef8ab1b8479c0c764916ac7c3bce0918624f1e",
+    "scene-0044/seed29/pose_noise_025m_2deg/report.json": "8c08883447d17fb4d6f4472bc622ad530b34dede8cfbb845139605811efc2def",
+    "scene-0044/seed29/three_frame_perception_blackout/report.json": "019c98097de5d5be29e197490aca4dda2fd24f71a0e0bbdc0d4687c92e19bab8",
+    "scene-0044/seed29/unperturbed/report.json": "ebdb4497f9d7a48952d1ca128d66c97c7acf3536f79bbcaa5a0c51fba0a6292a",
+    "scene-0044/seed43/depth_noise_020m/report.json": "473cd894564e1d0909aeceaea42f4605d6c4af3f4b16efa518934486229f5422",
+    "scene-0044/seed43/detection_dropout_30pct/report.json": "bd92cf6212f278e48ba884b19d9a1dadeb2e713d8fb13a8725119a5288ccccaa",
+    "scene-0044/seed43/lidar_dropout_80pct/report.json": "4008d167f554bb2c2a45d4c37cc900076ad06ef7034d027d4878e5c083206d10",
+    "scene-0044/seed43/pose_noise_025m_2deg/report.json": "075ec44326f8287407df5abd76ed70d3b9ea367ccfd609ad8c87474f0861ab27",
+    "scene-0044/seed43/three_frame_perception_blackout/report.json": "1b49c3c620f732e274a9367c562d5b7c9584832219a2b72eeeab6bf557558d64",
+    "scene-0044/seed43/unperturbed/report.json": "b9fbb630e9d52f1368524d24aba5fd5c0dc1edaf6cc89c230556b01582897583",
+    "scene-0047/seed17/depth_noise_020m/report.json": "cf5f8db3c658ca8a39a98ad75d48479c1daac786b4f195cc0f62ae05feb27211",
+    "scene-0047/seed17/detection_dropout_30pct/report.json": "77717a2daa06a2c5699c86b9c54c6cd73e27b1e15433da91613ececd0b700bc3",
+    "scene-0047/seed17/lidar_dropout_80pct/report.json": "9e8e08a1de1519af86be15e5fa3ae444adf159c7d923e8b3d8255251e4599b75",
+    "scene-0047/seed17/pose_noise_025m_2deg/report.json": "be871a7418f2ebc4c390b450c063706735442d2239ac2861c09a3157cdfe2c4c",
+    "scene-0047/seed17/three_frame_perception_blackout/report.json": "9720773c5c1e882dc17559475c614e370ce17cf18faf0d6437dad3f1736589bf",
+    "scene-0047/seed17/unperturbed/report.json": "c021a239619fbd09a96046b925c95f0ef3b11976d6c247b879e9bb5ee37d2ebe",
+    "scene-0047/seed29/depth_noise_020m/report.json": "dfb3dbf85b2187d6f41f75aa13f6d70b64efa0a0adc002e4b44e9b6b534f63f1",
+    "scene-0047/seed29/detection_dropout_30pct/report.json": "a7675e3eb4adaa84d325a2d3563153614b35670c34c28fc490575a7c3462ef1e",
+    "scene-0047/seed29/lidar_dropout_80pct/report.json": "df87278608b729086aa8228e76832ea9a9045c83e14c4896e71b32caf05d22f9",
+    "scene-0047/seed29/pose_noise_025m_2deg/report.json": "1c6bc6705b9c3751eb68eebfc123492d53c0df34342b7dd4738a6db230d61151",
+    "scene-0047/seed29/three_frame_perception_blackout/report.json": "350aa053490229cd3f71478a82ee6e884e0b8ae098d84a03492f90bd0f6ea65d",
+    "scene-0047/seed29/unperturbed/report.json": "50558dc03a0dd99508cad59c4f8e8cd50e68be91a1ec3d4317222b8bee41f19c",
+    "scene-0047/seed43/depth_noise_020m/report.json": "abcefc68eb0766e60a4b641a2d8477f4f4577effb7c23cc1fd22afe67e2e5bf7",
+    "scene-0047/seed43/detection_dropout_30pct/report.json": "0ce5550741705d63aece07ec6e7be4a037a79b5b1be3ec66aa7f262ebde8f726",
+    "scene-0047/seed43/lidar_dropout_80pct/report.json": "7211bc0d225518e3cf96e7de74d6efef51856d22e5f5af8d6cbc16f7712cf334",
+    "scene-0047/seed43/pose_noise_025m_2deg/report.json": "115fb732dbaa7dfa3bd8d67f3724528c252c904a14f0d145da4ca6ffe190873e",
+    "scene-0047/seed43/three_frame_perception_blackout/report.json": "3d6a02d18eb4381b4eb973a1153a9de3a06d63a2eb8b184454156e982c07b519",
+    "scene-0047/seed43/unperturbed/report.json": "d8f59262e05eb7e506d69317ce4d7925cc8eeab4b5e56564f9654724b80df747",
+    "scene-0048/seed17/depth_noise_020m/report.json": "c69fcb9db1d4ce5f013b5c27a4c28857a44209864855186fba2612fdde1d60c9",
+    "scene-0048/seed17/detection_dropout_30pct/report.json": "dc5b7ea1b2c2e017610e9df1802ab7c68566b7cba4c8575b3de36b1fec5ddd66",
+    "scene-0048/seed17/lidar_dropout_80pct/report.json": "ddf0e8f743be4f079726b947ea87fd6f916fed43557707720d55ad2aa0a9a1c2",
+    "scene-0048/seed17/pose_noise_025m_2deg/report.json": "f4a0e61c6fa521457005eb53abd3abbbe3a15b8d435dd7b8bb6cad53125798de",
+    "scene-0048/seed17/three_frame_perception_blackout/report.json": "8797f4b6f2a8a3f40bdfb289446a35b49d45f660dfe98c2438aafbb64942f996",
+    "scene-0048/seed17/unperturbed/report.json": "ca80ef421690b0b4a59c42fe1c37b7aac9204e1f937ae8f9106cdf9020e309c4",
+    "scene-0048/seed29/depth_noise_020m/report.json": "cb2416261128fe25828dedde594ceeec212c7359c47a9eae794f4e334cb92b82",
+    "scene-0048/seed29/detection_dropout_30pct/report.json": "7532c7f5fc38f3198b1b9a32ef41cfd9ce6629db896c7fe734c0fd134600ad23",
+    "scene-0048/seed29/lidar_dropout_80pct/report.json": "b5b7948a2594aca9e2e5e048eb3666ae2b98e37367e9d75cf95d3d643aa95521",
+    "scene-0048/seed29/pose_noise_025m_2deg/report.json": "f9838a9271a622668c35566bf486535155a304acd2474b93e70fff307bf87fb7",
+    "scene-0048/seed29/three_frame_perception_blackout/report.json": "fde290462180f0f33aadf960240f994193bc379748efa62cf264727410fb738e",
+    "scene-0048/seed29/unperturbed/report.json": "93314f4d73c093f6722df2c9b5b949764b630922471f5760d41e6a9b9ed9f8a3",
+    "scene-0048/seed43/depth_noise_020m/report.json": "b791ff0a001aa99e09bc1f4f7ccf7b80327e9014c1c18649bce1c3dcdcaf3947",
+    "scene-0048/seed43/detection_dropout_30pct/report.json": "9ed1b8a746f983037e703827e77b003cccca799b7174ebffc29a0ab63afc861f",
+    "scene-0048/seed43/lidar_dropout_80pct/report.json": "982a503771fb2b3b39d33885ad240031c87e145ca5b4bc02d50437e4c7b65494",
+    "scene-0048/seed43/pose_noise_025m_2deg/report.json": "8049ae517777133d31b00fd68ada2af8f68a41ae7134fe94b7e076728cffb650",
+    "scene-0048/seed43/three_frame_perception_blackout/report.json": "43d1f72ed84f6ee75066b40dbac435725548d4dfd2e37809d97e136198c2ee0f",
+    "scene-0048/seed43/unperturbed/report.json": "bfd2b8ed98dd6489cb2552ccb0646e73fe5bf97f35719dd6dd6223b51ee1a73b",
+    "scene-0049/seed17/depth_noise_020m/report.json": "40a1f9a41cb8d3929521db1e9be03ef00ffcce6575ce333885bb918cac1d7d4d",
+    "scene-0049/seed17/detection_dropout_30pct/report.json": "fba5cda435dc602bf0ff1a7f60719c2fdfdb81ded085bc0604019eb9b6a5e1f8",
+    "scene-0049/seed17/lidar_dropout_80pct/report.json": "e5d69caa5f58c9e0a84e26f02cfcfc60ecb513fdf87bca35a7f04ad3545ba6e3",
+    "scene-0049/seed17/pose_noise_025m_2deg/report.json": "b339c5c2bdcd022317f95e565727137c696516c13aa3f5f42013a6bf52c4ab08",
+    "scene-0049/seed17/three_frame_perception_blackout/report.json": "ca6b0e289de586d8121fa57c574ffc1fb267d203483e25581058e4cf0baad279",
+    "scene-0049/seed17/unperturbed/report.json": "64f0765b45bdb469ede9f6d0a3b45d8a92be7de5d9707dada29494394ed400ad",
+    "scene-0049/seed29/depth_noise_020m/report.json": "cf205d6d9e2714ad0f3631c5295f0f69e6d027f63691cb4167c0663dec7d84aa",
+    "scene-0049/seed29/detection_dropout_30pct/report.json": "1735b1916e5b3fb5575b7c8bb374086bcbc56642ad5190df260248352c1881ec",
+    "scene-0049/seed29/lidar_dropout_80pct/report.json": "6559b430a60656579ef7fe4c6e1d5c0e7a02f089edecd2765f028da4e6d2b9ed",
+    "scene-0049/seed29/pose_noise_025m_2deg/report.json": "4687fb5682a13bce4d8a2cce6c7aa5f5576d7db53e36b39172f7f0aa6c1d375f",
+    "scene-0049/seed29/three_frame_perception_blackout/report.json": "d523504abf8164550196a1aecd81c21f05044d73a3e7b5596940ea7ca045de1b",
+    "scene-0049/seed29/unperturbed/report.json": "a980862163ccac382e3cd89b5540e44e0c12b4a5a513e3c23030d3c5032f7c11",
+    "scene-0049/seed43/depth_noise_020m/report.json": "69742d977249cbacc34d54a5603c6e0d64c6b34fb61692de1e70a9659ebd752a",
+    "scene-0049/seed43/detection_dropout_30pct/report.json": "dc6dc8f900f4e90b3348f9e8cf96b2ecd56f2cca724bd760aee1bed7043325a5",
+    "scene-0049/seed43/lidar_dropout_80pct/report.json": "4a3dd378e32434ceb2b6a72a6e31068da4a244281b6b1aaaa3c19f41ddc15fef",
+    "scene-0049/seed43/pose_noise_025m_2deg/report.json": "1627f3b39dcdfeb2c184a4c330c92089d60b4c53a1570ef30f2a2d003b113b21",
+    "scene-0049/seed43/three_frame_perception_blackout/report.json": "842b8ed524f2bd9c42c7bca7d260f88dbb21dc2ad9cd68531c54a753422ffe4d",
+    "scene-0049/seed43/unperturbed/report.json": "39ec57916a708785896dda7adb47a5b26afe8c879b5b0da922aab38097fbca06",
+    "scene-0053/seed17/depth_noise_020m/report.json": "94e6b90ee1c77a45157967f547716a4c9ae3a361a6bcbc391557f88f2f010a4a",
+    "scene-0053/seed17/detection_dropout_30pct/report.json": "07a38aafc54a9c9f6d24058bd85f0d54e564fb65800b8cdec500869f8426d647",
+    "scene-0053/seed17/lidar_dropout_80pct/report.json": "4496e2bbf9c9b254d260191ee18464e7acc56300ba4eb375a2572e475a96d51b",
+    "scene-0053/seed17/pose_noise_025m_2deg/report.json": "deec1b3a13de357a95cffc0b4474977648c4acfaa534e1ff20fc14b0e57cfa5d",
+    "scene-0053/seed17/three_frame_perception_blackout/report.json": "3efaf725f7baece2b1fedc74f5e1e95f3d7dc1f88b9d681f216f88f53689bc23",
+    "scene-0053/seed17/unperturbed/report.json": "b10f68834bfdecbaa44dd8437057120e1db280970803e5ca012b74b814ebc6de",
+    "scene-0053/seed29/depth_noise_020m/report.json": "5bf75b1a5d7756273e08b82cddd8fd62e5e30ea302476d36786e5c38063d0632",
+    "scene-0053/seed29/detection_dropout_30pct/report.json": "c7784daa85df8a8ad70b0a051b9e6006bd7b16586dd548fd5010fb69350919e4",
+    "scene-0053/seed29/lidar_dropout_80pct/report.json": "b6d3971f218af48fb10518c402bcff0fa5097bf20fd214f673bdcad1651adae7",
+    "scene-0053/seed29/pose_noise_025m_2deg/report.json": "b7db95745c2537548c99f99a19a0ad48bce8489d2aef66ce982100638ee49bb1",
+    "scene-0053/seed29/three_frame_perception_blackout/report.json": "53a8f0d105a4a81bc20d8058e2762fd5b3c6cb5728f4e16d814a2105f5970b39",
+    "scene-0053/seed29/unperturbed/report.json": "f4b5fcd80e878e89d1151471459e6a30c3b2dbe84c492c7b5bfcb089f5e55ceb",
+    "scene-0053/seed43/depth_noise_020m/report.json": "eefd63b7ed2caf9a661da14adfb138302ed3978759128aee049cb3d39e8d39a5",
+    "scene-0053/seed43/detection_dropout_30pct/report.json": "aaf948977f8d2d1fd49119e7ff495970b37e3be03936f9f4407cf084942a7246",
+    "scene-0053/seed43/lidar_dropout_80pct/report.json": "54d2dd0470eca4f0bdc52ce7e6267f51942dac6dc781c1fd141f69ee34c1c06b",
+    "scene-0053/seed43/pose_noise_025m_2deg/report.json": "40685fb595e298c1db30506b648046a127f4c8306692b97060fbc343c5ca0208",
+    "scene-0053/seed43/three_frame_perception_blackout/report.json": "2af073897e3d9e793ed975c20d6d9a0ca15bc295513f40dc791c55e77974bbd4",
+    "scene-0053/seed43/unperturbed/report.json": "1036f614a882250b5979e2ba8e21bf858627259d3bc5cbe944edc58b06c43bc6",
+    "scene-0054/seed17/depth_noise_020m/report.json": "f0f6a06a0b884b0b54f2f56e1af17f2f5fca975c784383774cfd1d9f8c429067",
+    "scene-0054/seed17/detection_dropout_30pct/report.json": "bf9537a0eb391002a8653ba2b41e2a91ad17a563b9328ff21eadebce4761cf9e",
+    "scene-0054/seed17/lidar_dropout_80pct/report.json": "8150180271057bf93c79bb67dc76b2156ef63bf536006b0129aa0dcc1c47c301",
+    "scene-0054/seed17/pose_noise_025m_2deg/report.json": "65c4ec9bc906b3a175defaf430c8529dc9ed1786857f97d0e67de6d38235ece7",
+    "scene-0054/seed17/three_frame_perception_blackout/report.json": "ac7a242a63d39eead80b7155a3cd9fe0a42b1a43dfcc910825916fd72c68a292",
+    "scene-0054/seed17/unperturbed/report.json": "63d86a733d61f69ed922e02c447b4d68e49b690b6cbbe6db10425e89bc7eaadd",
+    "scene-0054/seed29/depth_noise_020m/report.json": "1067bdb5b49bbabcca3f4052dd7c2fe6d139c7d75c34e190837ef5dd1d6c8c9c",
+    "scene-0054/seed29/detection_dropout_30pct/report.json": "d079216e7c2d5a27d65f91f80bfd63dd75f7ee210686c039df9ac76cbb90d246",
+    "scene-0054/seed29/lidar_dropout_80pct/report.json": "dece77f33a68b3d937a2492d73ef29c6226b97de614a449e57d075ab6bdff271",
+    "scene-0054/seed29/pose_noise_025m_2deg/report.json": "b6bbffd51794cd41cf0d5600d606601c2ee47ef9917bf763a1d6c0bd3d0f16d8",
+    "scene-0054/seed29/three_frame_perception_blackout/report.json": "a1414d9ae5145d3979a06404fc7478b1c867f0eabd3399daa528d4931d936a4c",
+    "scene-0054/seed29/unperturbed/report.json": "616537c3377c5613e20a05e6a23225c1f37a48abc8ca2856a4fb9e0634dda23d",
+    "scene-0054/seed43/depth_noise_020m/report.json": "b6a77ee8eb9216f2ce3dff18cbb53604212f836102154d8739d71706c7c5161f",
+    "scene-0054/seed43/detection_dropout_30pct/report.json": "7a89f40da2e68d99c97deed8bb0034417ab197ca86854b91616ff3ed5efc85a8",
+    "scene-0054/seed43/lidar_dropout_80pct/report.json": "57bb3c2171c7ed13802bbddf7a88cd5044ad81d1a4b3c33dcf6ef15e967f94f6",
+    "scene-0054/seed43/pose_noise_025m_2deg/report.json": "ee8c009cf0756c01b8410b4ad7b1909051b394d268cb14df95039a185cf09bbd",
+    "scene-0054/seed43/three_frame_perception_blackout/report.json": "7d8c1189fd7b02a516fac0af4c44621e70391720abb23ff14349a6c2ed59578c",
+    "scene-0054/seed43/unperturbed/report.json": "555f1df51349faf0e73a27ac4dd365b250ca64903cc9985c2676f8db55781ac1",
+    "scene-0059/seed17/depth_noise_020m/report.json": "f0d592087ad4f0ec1d54fe3da48afc1a5430fb6a986e7ecf127e653ca1aa3db5",
+    "scene-0059/seed17/detection_dropout_30pct/report.json": "69d1cb018e42c3565f9c992aca6d0ad9542c30990512cc5254c8ce041e211d6f",
+    "scene-0059/seed17/lidar_dropout_80pct/report.json": "90e9a32bddb4ff6cb2cc3cae790fd54336efea2f75a2813fd72dee5fe8a7ab72",
+    "scene-0059/seed17/pose_noise_025m_2deg/report.json": "1ed180a3de107bb5c27ee1ce1b335522a13aee3d0c705bc9aa9c89c60f008713",
+    "scene-0059/seed17/three_frame_perception_blackout/report.json": "a48ca675269600a73f781cf146c9cdbe8fbee95a221f155c39bd6faf2f08c272",
+    "scene-0059/seed17/unperturbed/report.json": "b7414f769504ed501ed1ec4b70c1530370cfc0aec1839db684d0fa77dcacc5e8",
+    "scene-0059/seed29/depth_noise_020m/report.json": "747e97fa73b5e1cf74cb3f2ca306d7296b9a7e1c3cdd4159ec7832c48e085dcb",
+    "scene-0059/seed29/detection_dropout_30pct/report.json": "3dc91bc283c4d34da8b5df8498c20526719e1f950d46bf078e5920d7bfa2496e",
+    "scene-0059/seed29/lidar_dropout_80pct/report.json": "fef3db735214395a01a1c3b272acbd72179fa3913fedebdae8720c222c36d21d",
+    "scene-0059/seed29/pose_noise_025m_2deg/report.json": "b3d341a3b4ed36bdb96500c8f939a19f283a6303d8723f946762acecb274c274",
+    "scene-0059/seed29/three_frame_perception_blackout/report.json": "ebed45feb4b8bede5c6e842946f2b904520f9dff29a969943443c276f187eb82",
+    "scene-0059/seed29/unperturbed/report.json": "798ee7949c7d33a96df81118058d373f8101486559d79f7fe35db2a6492b9915",
+    "scene-0059/seed43/depth_noise_020m/report.json": "9054d40351461f8500ce6c3aa16d8c2f4bb1e7d2f8c55026e458f29fa8788093",
+    "scene-0059/seed43/detection_dropout_30pct/report.json": "5d950a5a2bf7f2a1873b436a187c0d325729233d5718fd3a7aaa1dd8de045704",
+    "scene-0059/seed43/lidar_dropout_80pct/report.json": "20cc37da276d52312ff678228e9d07cf1fa48a6f42f6e02d36f2187050a30fdd",
+    "scene-0059/seed43/pose_noise_025m_2deg/report.json": "bb40938e7a68d5fe401b2dc72375312181ca03c3c346bea395ac3159c300f41b",
+    "scene-0059/seed43/three_frame_perception_blackout/report.json": "90cb45c085a8d9fbb4642a553cf6c45157812bdb91c97894a996bb0dd4bca800",
+    "scene-0059/seed43/unperturbed/report.json": "a995f9151b5e0ab37a98f0603b73165a6b0ffb9c54e9c010c67e6d88bfe6172d",
+    "scene-0060/seed17/depth_noise_020m/report.json": "3107316b6473297b667ef5eb940104fda4f969ab3984a45f9d0024c4243820aa",
+    "scene-0060/seed17/detection_dropout_30pct/report.json": "8cbecc8a38f1dde3faab817505923128de863fe0944cccfb043cc74ca9449c75",
+    "scene-0060/seed17/lidar_dropout_80pct/report.json": "499b797b5399a72c2e6d29c4fd91e50a8ee64d584e22d252646b60de2133cb6e",
+    "scene-0060/seed17/pose_noise_025m_2deg/report.json": "0eabaa7d6f31b0e587f732af58ea9b11a89d683dab01b12d7c1e1147af906689",
+    "scene-0060/seed17/three_frame_perception_blackout/report.json": "c7103321b0c20699fff8a2afe5ad7db158d952596438301d99d061f965c35af3",
+    "scene-0060/seed17/unperturbed/report.json": "a0821f5d3e5608c6bc6f6fa8ef6460057cd55325e1b26cb00196c7492f3b56bb",
+    "scene-0060/seed29/depth_noise_020m/report.json": "3055ef790719698c82d9294ef3e3823214d017350b541a96476d9fd50bbda7a8",
+    "scene-0060/seed29/detection_dropout_30pct/report.json": "908b52b4d8701061a6ecd00159639adc58cebaf09c994bc024a7b8b09634ee56",
+    "scene-0060/seed29/lidar_dropout_80pct/report.json": "5650af066fa6094a93067d60ccd4c398b3fcb07fc0657fa02fc10f41c1458fb0",
+    "scene-0060/seed29/pose_noise_025m_2deg/report.json": "6597583c1148c753907ad3ffea7e52bbec784b80c633109bddcaccc5b35ebd16",
+    "scene-0060/seed29/three_frame_perception_blackout/report.json": "0ea0df90927de52e8102dc21b1371091882c722a001af19abfaacd21cb8653a8",
+    "scene-0060/seed29/unperturbed/report.json": "861a1c7e05c199b506dcb1ace3125968dcd558c7b978d4c025731dfa2e1a1128",
+    "scene-0060/seed43/depth_noise_020m/report.json": "2a29beab64529fe64b2d1b4791af9f79d5b1c79f31f424c95414e8f1153d8011",
+    "scene-0060/seed43/detection_dropout_30pct/report.json": "2c8e940f1b7be2a67bded98b232327f5e402c196e15c9fa6efba257d3bfaf301",
+    "scene-0060/seed43/lidar_dropout_80pct/report.json": "c21128cd1e6cfc2902d2763b674d023df0b59ceeb47c08947ba1426b3bb8a3ee",
+    "scene-0060/seed43/pose_noise_025m_2deg/report.json": "e985a33fa44dda4e1b82e365a370168985a757ec42e4a9d729a62c09c7f05048",
+    "scene-0060/seed43/three_frame_perception_blackout/report.json": "8676ab0ce8e14b6d600b6c20696f5e31f12a210a2caab435b2f16e3c343137f7",
+    "scene-0060/seed43/unperturbed/report.json": "22141341a62850ccaa52113ae633158a2a0d6ce4f0859741774ff3c75862a022",
+    "scene-0075/seed17/depth_noise_020m/report.json": "eef0c8ff1c65854bbd8650c56d6c344e9b06c4eb757aebfa2a4c748e1058821a",
+    "scene-0075/seed17/detection_dropout_30pct/report.json": "37effaed50b01465b3d6252be1f80f058d18f993e937917ce89cfa3e46990406",
+    "scene-0075/seed17/lidar_dropout_80pct/report.json": "52abeac550e7e26140dfe468647da44ea6ec8e060382b3d2612abf60c2fb046c",
+    "scene-0075/seed17/pose_noise_025m_2deg/report.json": "eb942a3e8ce97e0abc38230939cb8df239b1671daf0c97d8ee1b5ddbe79a684e",
+    "scene-0075/seed17/three_frame_perception_blackout/report.json": "e12619fbdbb2bec738390528aa13cddfcf9fbe757d6180ca2a544621ce8f4102",
+    "scene-0075/seed17/unperturbed/report.json": "50d3560994fd8dcc395e162b616b636719bdd7dd577583e32f7b0361a173ab13",
+    "scene-0075/seed29/depth_noise_020m/report.json": "634742f50855591c6e5dae1b04ee834402413c79f6bf07a736dd95ff16a62bf0",
+    "scene-0075/seed29/detection_dropout_30pct/report.json": "c6b64ab2459dff0d0e74f0cbc16ebfac6f6d703a43c94a1281d661b0189865e5",
+    "scene-0075/seed29/lidar_dropout_80pct/report.json": "a948df51145c8021c6ea76b20da24ac41713e1ca42504208fc9fd516b3269a23",
+    "scene-0075/seed29/pose_noise_025m_2deg/report.json": "9a30412c15d6a5470bfe4a44333b6a0be3713e37647de0b30844ad9c8dc23b0c",
+    "scene-0075/seed29/three_frame_perception_blackout/report.json": "6afb0b04af5c146541e37f3aba600ff2c566d68eda3b04d41df93083b7bb4a36",
+    "scene-0075/seed29/unperturbed/report.json": "61a1fcc1f925a5489f293f11244a83285a70a1e6288656dcec1a4327d0f13242",
+    "scene-0075/seed43/depth_noise_020m/report.json": "9142fe52456571230412195c2e5e4a755ce47873ca1d75bb476ed30cb09096ce",
+    "scene-0075/seed43/detection_dropout_30pct/report.json": "068b4d08cdbd0a95bc852e6a6870276ac05ed3439fb42e3571a20b3d9813b94c",
+    "scene-0075/seed43/lidar_dropout_80pct/report.json": "14b3a73267f62fe6cca436e8695d770462e3bdf4aa7eea4fc0d5d232e0047359",
+    "scene-0075/seed43/pose_noise_025m_2deg/report.json": "cd29d600b3fca0182e4f8da8b131bb50f2746d3fa7c1ef19574be698c62fedcf",
+    "scene-0075/seed43/three_frame_perception_blackout/report.json": "591bf01b01f8dd7774b778d263ab1211f1bb5b303f596c9b4e5c017faafce120",
+    "scene-0075/seed43/unperturbed/report.json": "e3f14ff4e918a2edaa8b39288c68b387b01219c0f5d64983a311c04e1a955857",
+    "scene-0092/seed17/depth_noise_020m/report.json": "0a50eba1427e99d884b01dae75ebaf746d1c973afa7b35043f2e6826c2ea7877",
+    "scene-0092/seed17/detection_dropout_30pct/report.json": "e01b2a6d58a4b52b9ed5e4b1755d4d18f0bf98f2ca4052ad147918446964d510",
+    "scene-0092/seed17/lidar_dropout_80pct/report.json": "c63f18177d98e4aa7ffddb9509d17578f18fd63eb4acff6ad4b5531f048f2c19",
+    "scene-0092/seed17/pose_noise_025m_2deg/report.json": "8a853b9b6e57265bc81d2140dfb4ea3b6516457f985e604e65803fdc199215b7",
+    "scene-0092/seed17/three_frame_perception_blackout/report.json": "aa4b597751c9b83a277e6fc17c6e82326e83c50047c67fa88bb4663943f0029c",
+    "scene-0092/seed17/unperturbed/report.json": "e70d4f4195e8c7ce1afc96eeea2936ef5b3c67a023e1c55327e83093e4f2841d",
+    "scene-0092/seed29/depth_noise_020m/report.json": "adc1b0f95e0984eb251cc8127189b57732d839f367d1a16601e34de22fc0f3c3",
+    "scene-0092/seed29/detection_dropout_30pct/report.json": "1d71f614533e59a5f8c9af83de723766691da3fe49f2dc3100bcbeee6ed98ac4",
+    "scene-0092/seed29/lidar_dropout_80pct/report.json": "98e3e91677d9d490b8ed0ce5926b32e19d391cdc0819b306a89ccea7093fa79c",
+    "scene-0092/seed29/pose_noise_025m_2deg/report.json": "5de836e4a19b1ab9ed7776f58b12d7140a771df58414771acd76afb9fe1539b0",
+    "scene-0092/seed29/three_frame_perception_blackout/report.json": "cdfb653b391582eb08f035340c57aa1e51ca02927d4f35406d9584a43aee4cfb",
+    "scene-0092/seed29/unperturbed/report.json": "f2d386422151d12c8b3fc46c52b07e04cacf22f5d99f142fa5e2df9dc8797716",
+    "scene-0092/seed43/depth_noise_020m/report.json": "5eee0fd03b4e896e00018534fe0b30c02ce44bca0d8d543af8c7e6ce726e5453",
+    "scene-0092/seed43/detection_dropout_30pct/report.json": "3835b7a8500617460f5a912a1c964a3e8a5269578ece6ad9badaaf51970097ce",
+    "scene-0092/seed43/lidar_dropout_80pct/report.json": "d5a9efb598ae251bcce6a392c8180f5482c736bee83bb5ebe9457923a72e826e",
+    "scene-0092/seed43/pose_noise_025m_2deg/report.json": "3198a2b365d1013fe6e8ea758493620b2561783897f360ca48f3eff519e647be",
+    "scene-0092/seed43/three_frame_perception_blackout/report.json": "2dbb89cffe35d8e1da8d3b0ded7eea720ad47b9fbd2c2f04cb6a281d3d2eb31b",
+    "scene-0092/seed43/unperturbed/report.json": "6790ca8534885b2953400523be768f649595bdb06c079eb4a8c786466a7e96e3",
+    "scene-0093/seed17/depth_noise_020m/report.json": "a4e526988462e9d72c297ae59e2316bee1e5cd4e3c6baadb10181213d7da0827",
+    "scene-0093/seed17/detection_dropout_30pct/report.json": "d93df9f0f0677b007b998dcf1cc4e12069a4346b708773791ce743e946ca4ac7",
+    "scene-0093/seed17/lidar_dropout_80pct/report.json": "ccf969136cc12cd895eb937872d1df62b9f82cb0850ad797c25850b5d6e576ba",
+    "scene-0093/seed17/pose_noise_025m_2deg/report.json": "02f94f70ad688f69d2ccf8b75381485d25ffe78ed594cc251302de851a5203b0",
+    "scene-0093/seed17/three_frame_perception_blackout/report.json": "a6ac3e2dcac115b86e412c37ed78d7df3b8d34619b931f84d5b0941ad3f18a48",
+    "scene-0093/seed17/unperturbed/report.json": "03e449b5b43b00d90e1bb9d830b3a1bd6f19b96594afbcbd0949eff989674fe1",
+    "scene-0093/seed29/depth_noise_020m/report.json": "6d6946ae9f8f01812544830b97a19d8812c03af0ce95def19feda428557a96d3",
+    "scene-0093/seed29/detection_dropout_30pct/report.json": "2389cb0da9306df6ce34558aee6a0fe07a5e758cdd8acf6c9004e4fb8eac2dc6",
+    "scene-0093/seed29/lidar_dropout_80pct/report.json": "32e563b273066acc9c6d9283429c614e9201503980c3d2f2aedecb135299c347",
+    "scene-0093/seed29/pose_noise_025m_2deg/report.json": "cdc2643e5f59e5cc2ff58e2e81af92bdc4371a9ac5b25761345d0dec3f931bcd",
+    "scene-0093/seed29/three_frame_perception_blackout/report.json": "0ad14d0d2498030977a4558f68cf8890490d4deff5273b3e863e59e6af90524c",
+    "scene-0093/seed29/unperturbed/report.json": "8d007c930962549cfcb2338bb918e1ef893c000379a16b007127bf1c71c62f29",
+    "scene-0093/seed43/depth_noise_020m/report.json": "eae0d2fbdca03d944ed3a62911a8a0f6d5dcaa953789172a584990476cb754bf",
+    "scene-0093/seed43/detection_dropout_30pct/report.json": "94b3c1060d99a371ab972c8585614aad378f917810f719e3a4a3539bfb21707e",
+    "scene-0093/seed43/lidar_dropout_80pct/report.json": "b29ea0e065818b3308f6109ad6a78c20b04284b074671b6d1734b32a1a5c49c4",
+    "scene-0093/seed43/pose_noise_025m_2deg/report.json": "740848b8e577f3b433ca21502c120a5e7980754dfd8ff2fc0ab8723b817833b8",
+    "scene-0093/seed43/three_frame_perception_blackout/report.json": "d6052c5c9846a823281ab1d8c6c6c409e9b9a70b2bcfd2da6d18f850cbd7849d",
+    "scene-0093/seed43/unperturbed/report.json": "21349e6078471f30a7e2561e4edf891f5824a8d77453778bc51a5cab65f34154",
+    "scene-0095/seed17/depth_noise_020m/report.json": "eaeb59ed0c0e4ec492d4d74d49669446add4e8e1f8d5b0a0f87818033f773fdc",
+    "scene-0095/seed17/detection_dropout_30pct/report.json": "3a3da656f81005652e6b167cdd49361e20e4bb7fd08ff98cfb691a3a38498fa2",
+    "scene-0095/seed17/lidar_dropout_80pct/report.json": "6d0dd689f53334828b0d51aafd0407a86b59f45d64e7f33173c9eb6aa58f186d",
+    "scene-0095/seed17/pose_noise_025m_2deg/report.json": "109bafe995d31f247e258a91686d033e2d9d105869894a5163f398411136d3d1",
+    "scene-0095/seed17/three_frame_perception_blackout/report.json": "ede6b84e9a613f945b0635f575b75d5ff9ccc62a9346df635aca200f8a7ee1c9",
+    "scene-0095/seed17/unperturbed/report.json": "346063278af5e75a812bc50730c0bf6ade04798e37fd8e3bb30bf3b6680de574",
+    "scene-0095/seed29/depth_noise_020m/report.json": "a141505bcd4aef4ff33f53f5023037961428c252f267625acd7af18883eeaa79",
+    "scene-0095/seed29/detection_dropout_30pct/report.json": "ddd501e7f70212e4e17f06be611b3556500d881568b20782ede3ee6f714eaba2",
+    "scene-0095/seed29/lidar_dropout_80pct/report.json": "b6bf25905a6b21ba3d669b904be11eae833b3df9a050a056cb8d30719b4a3a2d",
+    "scene-0095/seed29/pose_noise_025m_2deg/report.json": "e3b6185584ae2e9e7b3c68d24bf8cf1587c86607679ce7068a5ed2f6b4316c3e",
+    "scene-0095/seed29/three_frame_perception_blackout/report.json": "4af394ae614a0b433fd53590673944abfb0b495ed601c47d7053d5513600c9f0",
+    "scene-0095/seed29/unperturbed/report.json": "0b405e6a9bada048bcb1b9b19066d274d6b403bda7527bef9dc376b287d89637",
+    "scene-0095/seed43/depth_noise_020m/report.json": "df43c14c704933032c90310017099198ad7d4845839f11fdbe48e59296d21ae8",
+    "scene-0095/seed43/detection_dropout_30pct/report.json": "96ff6d62ead319822e417f299d75d4ac2313f29ce751696cc76dd6ec088c4c87",
+    "scene-0095/seed43/lidar_dropout_80pct/report.json": "5d31577cfe4c80597105736a703a7f0be0cecdf552e778c11074b8d8d1a1a1b0",
+    "scene-0095/seed43/pose_noise_025m_2deg/report.json": "aaca4b8dbcc324b1616a9d0da91e473fcdf4bb35ec515f5d53e8dccafca779a4",
+    "scene-0095/seed43/three_frame_perception_blackout/report.json": "cb995dc329b5626f97db81504c95e36eadd13d4afc04056a9d38ad818f42d61b",
+    "scene-0095/seed43/unperturbed/report.json": "8cfde8c7c806012fe63aeb4305de8b3cdc9730f79ccc2c12e8e9b766cb490843",
+    "scene-0096/seed17/depth_noise_020m/report.json": "26e05be352e4bf7471a4bbf66eadc585de812373484523d13f06a962912a9b19",
+    "scene-0096/seed17/detection_dropout_30pct/report.json": "3188a9f9f548ec95d89a335d79d7c206c72eb0d128f2487e66cb4639766c2c54",
+    "scene-0096/seed17/lidar_dropout_80pct/report.json": "ca74a1afc53a91e304abfa66bd44be478295db656855d55ecaef1ddc31742bc3",
+    "scene-0096/seed17/pose_noise_025m_2deg/report.json": "443766de5a7a8fefc7aa29559464fe0e69c23d32ab379cb93f80650c7ff9d134",
+    "scene-0096/seed17/three_frame_perception_blackout/report.json": "c8c93eb9a5b7c7f1a11d0f39550e6fb523e2c885af4c4922226fabc5f7c51b53",
+    "scene-0096/seed17/unperturbed/report.json": "5b0f72a563e92e1db755a81033f3fe4ba09edbe458694fed02df1873c960dd81",
+    "scene-0096/seed29/depth_noise_020m/report.json": "9864008ead084c198070ca24520b480acbc29a968a9f435dba7080f9d39032be",
+    "scene-0096/seed29/detection_dropout_30pct/report.json": "552b02ed2a25ca4f675d4fe1c70c4f16dbe5549bef12cceeace74f16f5de9182",
+    "scene-0096/seed29/lidar_dropout_80pct/report.json": "ff5a227cd627cd51fe044a81948de519cb001c9f2c53507c5fb690304d79788b",
+    "scene-0096/seed29/pose_noise_025m_2deg/report.json": "f06c9abef5fc0290ec0e1b5b63c61c3e56387b477849755a8260ec56025ddb46",
+    "scene-0096/seed29/three_frame_perception_blackout/report.json": "f4141da003132d3ecd37fa7da44f5c8c351077e87e9eb87d5564daaea5eba3f1",
+    "scene-0096/seed29/unperturbed/report.json": "514c2f8fa27241f64fce915faf2b6d851c37284075adb458586a7d194c3b6b53",
+    "scene-0096/seed43/depth_noise_020m/report.json": "d0d639f7f0f99a3768b86877d8e604e1771740662eb122b82a53399218e1e19d",
+    "scene-0096/seed43/detection_dropout_30pct/report.json": "770d6238fadc05117647afb0be394fde39cdaf253a01765230f9f8ffcf82b890",
+    "scene-0096/seed43/lidar_dropout_80pct/report.json": "6763c0c9d90810558c402cae56ef2cca8ed4b4a54346b2467316b37979babc8e",
+    "scene-0096/seed43/pose_noise_025m_2deg/report.json": "cb0b593658e269cc28894e80d9e97aa01a7373c2db2930febf0cdfadd78320dd",
+    "scene-0096/seed43/three_frame_perception_blackout/report.json": "19fbe94be205e2411b3a3dd9cbf3cdbc9df11b55503c099e1e8ed67fcea3c0d3",
+    "scene-0096/seed43/unperturbed/report.json": "cb8951dc8e7a47355dd02f1b2911544eb07485047ddf0cbb0a7120704b3be58e",
+    "scene-0097/seed17/depth_noise_020m/report.json": "85d4f551fa48a273fc409ffbba86eb969a092eb1b8a650664ea38897037e6b0d",
+    "scene-0097/seed17/detection_dropout_30pct/report.json": "2d9c88ace9ef8fb6da21bf6da7f10ed8068eb0257e2191778b6570f0571e7d6b",
+    "scene-0097/seed17/lidar_dropout_80pct/report.json": "611e60dd5c1730bbda6ff236a7d697869d9b176ae1861b62512603e9d80e07be",
+    "scene-0097/seed17/pose_noise_025m_2deg/report.json": "84770d68d032c5fd7872511d4456c94eb570ddd5bd3744d82e9a5d5b0976747f",
+    "scene-0097/seed17/three_frame_perception_blackout/report.json": "437b979a37d285b397f74023905798d8afc751c6f18a9d5b35a855ab5708b877",
+    "scene-0097/seed17/unperturbed/report.json": "ebb0482874c880220268fe4a8ebb04dbd44aa133b933d25a7c5c1b48becfa9c2",
+    "scene-0097/seed29/depth_noise_020m/report.json": "b7a3e7b100384177d65fbb96b9b329130fae1108984858927889a890810d8408",
+    "scene-0097/seed29/detection_dropout_30pct/report.json": "1202259aee446e1ac3536b58c519acdd0f994ebf26db13855818df500fd93b46",
+    "scene-0097/seed29/lidar_dropout_80pct/report.json": "7ff76e08f277044cc207c8a33f4ee0a198e70548d448046177eae2839c49f3de",
+    "scene-0097/seed29/pose_noise_025m_2deg/report.json": "1eaf7237cb1c9c346d2a33d97e99457556612f21c5f02263c8eeaa8318206fb5",
+    "scene-0097/seed29/three_frame_perception_blackout/report.json": "01a2b4b240d19e92d0bf97e88166fd23586810b7851cc822147203b3963d5948",
+    "scene-0097/seed29/unperturbed/report.json": "c2df3216465eb4ed65855e321095bad4ee43a87b06b23538821d6a9722e8563e",
+    "scene-0097/seed43/depth_noise_020m/report.json": "ea1b4b8380a44e55c7ca517fdab95bf93afbce088a42a7e08826a0a393766824",
+    "scene-0097/seed43/detection_dropout_30pct/report.json": "abf56218fb9214f40b1f88a3a807f56199b82760cf5b69b24089e5ab7c5b0e27",
+    "scene-0097/seed43/lidar_dropout_80pct/report.json": "29dd29191d6a6486556001bae42da2b71d5102c30f8735e4cc25863f8b6cd9d0",
+    "scene-0097/seed43/pose_noise_025m_2deg/report.json": "fadd7888dbf95800dd81c52cfed34b83e7e56801785915dc971035b05af0e079",
+    "scene-0097/seed43/three_frame_perception_blackout/report.json": "084adc395a1319ac32b879cba5c5dc4bca4f3dce2a04f4e416e6cb39440c4f92",
+    "scene-0097/seed43/unperturbed/report.json": "d4ffa9bd77d36fc9b7ab73e4a5e6b64387b3ff3d5a9b870644345f403795ecf6",
+    "scene-0098/seed17/depth_noise_020m/report.json": "be7f1e69c705172c48a2b4c2ff5244da63aa07aac3253a8448b20c2781a03663",
+    "scene-0098/seed17/detection_dropout_30pct/report.json": "42fec2940a0a09b44dce32c2e6356075543f03dd7d3f7ed6d46541f4f0921ebc",
+    "scene-0098/seed17/lidar_dropout_80pct/report.json": "3df9eac021a7e6a1a3e18e79777db6cb5fc59f3fcfcda5cc51031e7b06454c0a",
+    "scene-0098/seed17/pose_noise_025m_2deg/report.json": "6500e9dca159bb5a2ef0880c92d318855e691dfac4c9e7b14336ffa157223458",
+    "scene-0098/seed17/three_frame_perception_blackout/report.json": "378c2bd02e51ea3b5178abdbb1ea9877c6405354633bf9235e0c7fcd56d4dbda",
+    "scene-0098/seed17/unperturbed/report.json": "c62bcd46e395227d9e5b19515c98f79a250e950aa707760b6c5cb1fc2d500f18",
+    "scene-0098/seed29/depth_noise_020m/report.json": "5a3c0f29137358ef6c3085c8686ff5ddcbfacda21d0d8ca3cca7f843decb44ad",
+    "scene-0098/seed29/detection_dropout_30pct/report.json": "1c4fd87e2863414c17d5358541fe07ecfa8b786cc756b429a1b330a300c4e36d",
+    "scene-0098/seed29/lidar_dropout_80pct/report.json": "b2c4a2f7b9d7d8f1694035be3e33f29c76794ceee7a437d771e1cce1715a77c3",
+    "scene-0098/seed29/pose_noise_025m_2deg/report.json": "987dba295552c79b401c53cfad4d6de96caba1ad16b0d3c8f020c0262f503c1a",
+    "scene-0098/seed29/three_frame_perception_blackout/report.json": "257d7f3aecca355a86829c63cffc24d6f745200ddce05757f57eb5fb7cbe4483",
+    "scene-0098/seed29/unperturbed/report.json": "cb52af15e1b4205716a25f1770191cb717a3d63f4682068fc2f1dbec7d322a2a",
+    "scene-0098/seed43/depth_noise_020m/report.json": "22f3881a9572d00d38041aab62eeccd4402138ee79aa46f16dcddf03375c695a",
+    "scene-0098/seed43/detection_dropout_30pct/report.json": "0f138530b78c21fe6d6bda6e42dcadaac05aa4d5fd9ae22ddf8217748b3721b9",
+    "scene-0098/seed43/lidar_dropout_80pct/report.json": "81d495f8f8053e5bf4a7df4ba071360db3d8af269e378b40538174bd236ad60f",
+    "scene-0098/seed43/pose_noise_025m_2deg/report.json": "5e9cdec00116388d557886754fb241ffd02b0ce778082582f22869677e424d8b",
+    "scene-0098/seed43/three_frame_perception_blackout/report.json": "a99b6f9ea5bc28f6859ee59939a459c6b2becfffacb9aef20ada43af7fd1beaf",
+    "scene-0098/seed43/unperturbed/report.json": "66723b64ee4961e1842839bf38662038c75ec40b9a2f928c15379eaced9ecce1",
+    "scene-0099/seed17/depth_noise_020m/report.json": "2b4c38ad7f2ab33617a244a7db22467a64c244e50a5bbabfa4b60913735d8f45",
+    "scene-0099/seed17/detection_dropout_30pct/report.json": "084d31337aa47aa6722868f416bf6e59500ff38afa5ad815e3ea48e8cea2d5ab",
+    "scene-0099/seed17/lidar_dropout_80pct/report.json": "860268dbe0d154c73042614340a370828c1131503fe390fef877a73e2fe119a5",
+    "scene-0099/seed17/pose_noise_025m_2deg/report.json": "fbc94b73f88bf6de23c9e1882e0a19fa0f863628071ac4e68cc48b22e39ec9d5",
+    "scene-0099/seed17/three_frame_perception_blackout/report.json": "d9a51116eec2efb0ff836934928c652133194656e8e90e3734d1bfa959961a75",
+    "scene-0099/seed17/unperturbed/report.json": "5755554297b5e05ac711b916e2e1a04080419d3f786084b4a8d4d4ec926493a9",
+    "scene-0099/seed29/depth_noise_020m/report.json": "17a96fcd353785ceda1b62b019faa52734f8fc730ffc981b8de4b6c74ae051f1",
+    "scene-0099/seed29/detection_dropout_30pct/report.json": "ed85d66caae92f070b52dae88eb9c1e6ade4469feb19e66df5a128ff9ca5ebcc",
+    "scene-0099/seed29/lidar_dropout_80pct/report.json": "92c1b1faf4ff4b1a20562ef1aa69ffa3f7b6d51293304cff16c165a7565809e6",
+    "scene-0099/seed29/pose_noise_025m_2deg/report.json": "8094e96c6d09ffbe1a885540dfa9371c7dc2759dc8fd5c09fbe550c712097be5",
+    "scene-0099/seed29/three_frame_perception_blackout/report.json": "18bd10c3429bc0a465a2fd7bb5ffe5557308ca972f2e7c8975aade7bca8435c2",
+    "scene-0099/seed29/unperturbed/report.json": "8291d7b76a0a1e39f5aa838b974780171d6d0cdffc2a887b8578ac36dbe27821",
+    "scene-0099/seed43/depth_noise_020m/report.json": "41030eda5907d19a975b359f8c3b053bf51ca37a9fe181ce3537a530e74a85db",
+    "scene-0099/seed43/detection_dropout_30pct/report.json": "d529b13ba9af48e9e6f496b32ee4688b25276f78b1c6a9274ffe5563997ac8da",
+    "scene-0099/seed43/lidar_dropout_80pct/report.json": "7881105a05c5d54ccc04eb630a41a709708921707afc5f8ccdddfa5f9c3ee6eb",
+    "scene-0099/seed43/pose_noise_025m_2deg/report.json": "3da6823623932e2c189e604ffc147a7f3505d0c6be14d224c4a3563785d8a1be",
+    "scene-0099/seed43/three_frame_perception_blackout/report.json": "15b2409510b71f35bac5749091064715f73a74deeb9dbac58ee390e6cc694cca",
+    "scene-0099/seed43/unperturbed/report.json": "2905732e2fc05adca09e643398343cd0a25670e9cfc1694e8af50324f74dbc25",
+    "scene-0102/seed17/depth_noise_020m/report.json": "f82bd19c04fda646c17128fe6b4eaf14193cb16949e75ed234c2ad31ef706418",
+    "scene-0102/seed17/detection_dropout_30pct/report.json": "a319cdafecd484ef54cea886ec1130d9f38c71fc70c1470e1dab0ddadff440d7",
+    "scene-0102/seed17/lidar_dropout_80pct/report.json": "b460c9a5933b14f7c37c1bbe08e54166ee072d3be8b705cf1e7e2e8f77a4fc23",
+    "scene-0102/seed17/pose_noise_025m_2deg/report.json": "4a7626ec7b9ceb740f8282ed227b87c34d805b75c20ec3331d002a54d498cea5",
+    "scene-0102/seed17/three_frame_perception_blackout/report.json": "a8287e71301aab2568ad1b5aac37417789f929d8ac6f3cb1f96f12bfc89b84f0",
+    "scene-0102/seed17/unperturbed/report.json": "4ffa181203b1a07875f117ef5844b51d19e943fc977ec9564b9494e8ea85748a",
+    "scene-0102/seed29/depth_noise_020m/report.json": "22cd781d596c49557892160591dd440a990fd34c4d6f4225631df03da19de986",
+    "scene-0102/seed29/detection_dropout_30pct/report.json": "1573d19952ec976f84b0817a794e2f0c5aa96b9fff8d875ee6483b8a1f9e8fbe",
+    "scene-0102/seed29/lidar_dropout_80pct/report.json": "009cd547c97fd0a2adb855029f7dc47698cccd8b6bdc2737be9a7e11074e5543",
+    "scene-0102/seed29/pose_noise_025m_2deg/report.json": "18d259ce24d80767ab7bae8c4c1ce76a48344530ac152f7c0321355a40ca72cf",
+    "scene-0102/seed29/three_frame_perception_blackout/report.json": "ba6a28997923e97fd83322b02a9d229b32b041e2836698955da80799680bea45",
+    "scene-0102/seed29/unperturbed/report.json": "1ebfa3aeb7b34e9b211a2d2794fe39cdaf89090189b0eb7958807aee4948430a",
+    "scene-0102/seed43/depth_noise_020m/report.json": "31e17a2691dc57d1f1d6c19f5eb9dce45c6f5218bde93f329b59583d6471d836",
+    "scene-0102/seed43/detection_dropout_30pct/report.json": "9f188b6bc499bfcc66c08f4316c6a2dbdce2c173a9f1717f8876dea574eac5e4",
+    "scene-0102/seed43/lidar_dropout_80pct/report.json": "25de7272a84f7c1f568d5e1cc9f3dc58554d8a40bf75f66eb205eabe6de6664b",
+    "scene-0102/seed43/pose_noise_025m_2deg/report.json": "87483a4e2c02698b56c9a085e6d04bbaf21b51f1a79373f07c3fd9d27b652e94",
+    "scene-0102/seed43/three_frame_perception_blackout/report.json": "e77e53f0c6d3bf9519f4acaa9abd99e3a0b08e9ca5a4902c5731d5fe660bf171",
+    "scene-0102/seed43/unperturbed/report.json": "65af31e7c3e7aa418be4126b91a4980ac020a0e58fb28e6310490fac481ef6bd",
+    "scene-0129/seed17/depth_noise_020m/report.json": "8313c79044c5b2fe191680363eb630dbe7f8d205c7befb27d8a5d1698fb56131",
+    "scene-0129/seed17/detection_dropout_30pct/report.json": "99e5c49844cdac619ddb3b6180a169e9bdada1f5beeec188dcbcad500f67a599",
+    "scene-0129/seed17/lidar_dropout_80pct/report.json": "b4551f8139748050ac3fdc3ec70f6e9e4ab4632c1dfb5b2ab04a982c013c1d76",
+    "scene-0129/seed17/pose_noise_025m_2deg/report.json": "b7bd653e45e97ca7fa386513d82bfc0caf1c24677d58569d25f0d6bd5526d6ae",
+    "scene-0129/seed17/three_frame_perception_blackout/report.json": "ca87c12c387058371b1b9acce28445d5c7a4382043d9b18635826235c2c4e3bd",
+    "scene-0129/seed17/unperturbed/report.json": "b6294a9b338685317c31cf8975f855eea988939b83059d43cd19ac7c2141fc5d",
+    "scene-0129/seed29/depth_noise_020m/report.json": "0d9f436d4d35f4ecc90c072654fccf1dcf5668d5a1241801dca35707d6c0c94a",
+    "scene-0129/seed29/detection_dropout_30pct/report.json": "64b2fc3387d41d9acbcc8ab8c94e67b176a39be6bfbf35117cdc7b999cd295b0",
+    "scene-0129/seed29/lidar_dropout_80pct/report.json": "cc07894fa65a557b1a1e8c059c1e0aa945b2e96c291bdfdf0e852a27af9dd74e",
+    "scene-0129/seed29/pose_noise_025m_2deg/report.json": "d2f83a9b832f42809511b644a69bbfa09af468d3e9e6e3a3b87956f4644ec563",
+    "scene-0129/seed29/three_frame_perception_blackout/report.json": "e44342966473a1737cc8ea6330eef1dd924f78c1dee2634923ca8f0e5568693f",
+    "scene-0129/seed29/unperturbed/report.json": "10665a42335602284384bb044685d2ca84e10d2292059c752d9339e419ba049e",
+    "scene-0129/seed43/depth_noise_020m/report.json": "c96761088d6f278ccb603e78cdf6f248d106a22fcea5374a55dccdeb031efaa7",
+    "scene-0129/seed43/detection_dropout_30pct/report.json": "f6307fbd763d538f3d0c3d98599bbab9a96d82e7fa0ad993078a5eb797372c1b",
+    "scene-0129/seed43/lidar_dropout_80pct/report.json": "c7e6d0215732213a0465e450c24e57df836f800cf453bbb0de5cfab7541d677b",
+    "scene-0129/seed43/pose_noise_025m_2deg/report.json": "56bf4857984245f7c2d215e036e6e5a8c5009ed8c370d6c5545e67c9bc36fe14",
+    "scene-0129/seed43/three_frame_perception_blackout/report.json": "95037888655a1e952583ec61bd444057e57d8b8ce173d34c2114a68219a33547",
+    "scene-0129/seed43/unperturbed/report.json": "3d2c952f54e2a6b7dac8f57c678bfb79c360f13997b73965f4630af205fe3a98",
+    "scene-0135/seed17/depth_noise_020m/report.json": "a0ddef545a1f78e9993c2372ce12aaa766d32f44392623260a2eb64849a92e5a",
+    "scene-0135/seed17/detection_dropout_30pct/report.json": "9fc8fbc989a0cb50bccc2db2f8d2a48c65631b91ddde0e24909f93011a927426",
+    "scene-0135/seed17/lidar_dropout_80pct/report.json": "d2303be81d5c37fb02dc69b4db3091b70151cf42fb78eecb99d5d7773b0de808",
+    "scene-0135/seed17/pose_noise_025m_2deg/report.json": "e7040e2189682fcf18c5d86d564e53a23ae103e0f74adb116ead9f3abd53281a",
+    "scene-0135/seed17/three_frame_perception_blackout/report.json": "8deb9c2d4619ac4eaeee3490f055b7842fbc9344a07b30fafd4c4b36dba9a97e",
+    "scene-0135/seed17/unperturbed/report.json": "605484704c4c4b7cd2d94c89a4aafc12ef3014e93b7f9c7a761d1c5f1b90d3e6",
+    "scene-0135/seed29/depth_noise_020m/report.json": "9f9e8a88b781033702a3b78b903cfbf132d59c9d6ae6baae62801baa02308506",
+    "scene-0135/seed29/detection_dropout_30pct/report.json": "70ce90f6e12f74c6d48e1a0f7af365b4f128c88be1271960f08ca3a72c41ae12",
+    "scene-0135/seed29/lidar_dropout_80pct/report.json": "9b4dd9c52a2b6699b54441c23c55296c532c539b1e45706be09dcfd6e017e978",
+    "scene-0135/seed29/pose_noise_025m_2deg/report.json": "a5bfa33052864926c91db41283900dca96bd43e22d03958a7fc9c53a52d495c0",
+    "scene-0135/seed29/three_frame_perception_blackout/report.json": "ede3cacb638712178269baa7794cfa5452298bb24ffc6f4073542ebdfe1756e4",
+    "scene-0135/seed29/unperturbed/report.json": "0f45ffaa77d9249043f124282d31a348f47e43291cacb74bf2740bbbeb4657d3",
+    "scene-0135/seed43/depth_noise_020m/report.json": "8e3f53eb67d37603b672d9e32284ae1ade0695b69fdfe4d38d36ce9b14d9590d",
+    "scene-0135/seed43/detection_dropout_30pct/report.json": "f362bf78ebc6be805db28c894ff6d5047fba9e0766b59737625827bc72fdfaef",
+    "scene-0135/seed43/lidar_dropout_80pct/report.json": "fb2a1af1ba476df513e3c780619254d480f0d3fc10453484f00e42d5a0b18f66",
+    "scene-0135/seed43/pose_noise_025m_2deg/report.json": "8e8228bda13f7af35170bc0179e43adec116530c794a92ada7819f48a3142817",
+    "scene-0135/seed43/three_frame_perception_blackout/report.json": "be2a75ad7baff6fd8e00831797076730fed557ecf17cfbd340606bca599696d9",
+    "scene-0135/seed43/unperturbed/report.json": "7e34d9eef214dd613fa006d633f4fd890f8a5a44c6af918ce4fb52c090f16f30",
+    "scene-0174/seed17/depth_noise_020m/report.json": "7cb3cbb6e488a75a3f4095bfe2f206347df080856b8511624f6e6dd5c02eaf90",
+    "scene-0174/seed17/detection_dropout_30pct/report.json": "fd225df765a30cab403c63f60a4aa74a84ed9c649e10aed92f50b91d0a0a474c",
+    "scene-0174/seed17/lidar_dropout_80pct/report.json": "ca29dc0c93b1439f68b8872a0fe6e1a31e871d9073943033191ba63e74facee6",
+    "scene-0174/seed17/pose_noise_025m_2deg/report.json": "abe773eafb85d7d4a3b0fae6ac394fbeba41278e28cd92c97b35b9217c5714ec",
+    "scene-0174/seed17/three_frame_perception_blackout/report.json": "cad6c7ecd7061222d377e7a13c5146574fda2e69979d0f2d54898c1bc1fb9d99",
+    "scene-0174/seed17/unperturbed/report.json": "70236c10a32c5982ecf0388eec50cef38b70c8b6a69c7c28f26f7aac197d171b",
+    "scene-0174/seed29/depth_noise_020m/report.json": "1311ead194e5d8d2f0f384ebc0a5886732fc6ce15fe461e38be8cef3dfe5fdc2",
+    "scene-0174/seed29/detection_dropout_30pct/report.json": "1871b609eee64c881a8f21608120c302e48512870ea498c17ac67f58250a5a24",
+    "scene-0174/seed29/lidar_dropout_80pct/report.json": "b32379a8a63a507f65e1ef7003b5440b80f36219f3191b8ac3604065d5c81b76",
+    "scene-0174/seed29/pose_noise_025m_2deg/report.json": "bfec2dd7693c93571f1ed5aeb51c3ad5f597f3f4164a52e2479ec42448a1eb5c",
+    "scene-0174/seed29/three_frame_perception_blackout/report.json": "e321b8746946cddc7d6533f5181033a35de236ddf54a88110df487fbd81b3ba8",
+    "scene-0174/seed29/unperturbed/report.json": "07d1faaa44b239cf8b88e1e33a0890414eea7636b8c758c47a9ab2c1d3d0d6f6",
+    "scene-0174/seed43/depth_noise_020m/report.json": "cd5cfddbaad517a73a023faa3e8e331ac1cfed4eda201588c87975fea9855397",
+    "scene-0174/seed43/detection_dropout_30pct/report.json": "7356f4fabe71f56ba47cacfada7f77f189ff211f92540c8b0006d66b7d25ead6",
+    "scene-0174/seed43/lidar_dropout_80pct/report.json": "3e6fe52274bb3c2d5204ef9c5971be5572b23e7b902b343f94a9338b583e196c",
+    "scene-0174/seed43/pose_noise_025m_2deg/report.json": "6f345154994a74e0d263cda939c8b5ab9a6c4e73747341700208dbe2213a5775",
+    "scene-0174/seed43/three_frame_perception_blackout/report.json": "c3d3757f77b3effe0193a599604ed23c4095af22f0a2dfbdd544dcd9e62c282b",
+    "scene-0174/seed43/unperturbed/report.json": "30101f008a58640a3b77edc49a332769931bbbe23e6accf79f96781fd8c94187"
+  },
+  "statistics_source_sha256": "7644be161180280ca7f6503d0ffa535111e7f12dc7b66fa7b0e4819a129324d1",
+  "scenes": 38,
+  "logs": 11,
+  "frames": 1508,
+  "conditions": {
+    "depth_noise_020m": {
+      "recall": {
+        "estimate": 0.2990855611858582,
+        "ci95": [
+          0.22881838360287607,
+          0.3544364536207747
+        ],
+        "valid_resamples": 4000
+      },
+      "precision": {
+        "estimate": 0.43769178315717694,
+        "ci95": [
+          0.3822993434895015,
+          0.5021628990432774
+        ],
+        "valid_resamples": 4000
+      },
+      "center_error_m_mean": {
+        "estimate": 1.3014507348174151,
+        "ci95": [
+          1.1598441598835256,
+          1.3969737994470541
+        ],
+        "valid_resamples": 4000
+      },
+      "identity_switch_rate": {
+        "estimate": 0.03201024327784891,
+        "ci95": [
+          0.017128935609388083,
+          0.04865492673831152
+        ],
+        "valid_resamples": 4000
+      },
+      "duplicates_per_gt_observation": {
+        "estimate": 0.006989341254586755,
+        "ci95": [
+          0.003196978049959399,
+          0.01049753782018304
+        ],
+        "valid_resamples": 4000
+      }
+    },
+    "detection_dropout_30pct": {
+      "recall": {
+        "estimate": 0.25173277418603296,
+        "ci95": [
+          0.19161059345079148,
+          0.3004254021471665
+        ],
+        "valid_resamples": 4000
+      },
+      "precision": {
+        "estimate": 0.4027958993476235,
+        "ci95": [
+          0.3428079576821678,
+          0.4610773369413116
+        ],
+        "valid_resamples": 4000
+      },
+      "center_error_m_mean": {
+        "estimate": 1.2758053099475788,
+        "ci95": [
+          1.1922426636635488,
+          1.3687067108983302
+        ],
+        "valid_resamples": 4000
+      },
+      "identity_switch_rate": {
+        "estimate": 0.02916396629941672,
+        "ci95": [
+          0.014148982178058496,
+          0.04417785263736831
+        ],
+        "valid_resamples": 4000
+      },
+      "duplicates_per_gt_observation": {
+        "estimate": 0.004251849263206943,
+        "ci95": [
+          0.0020292573628289813,
+          0.006338973945742681
+        ],
+        "valid_resamples": 4000
+      }
+    },
+    "lidar_dropout_80pct": {
+      "recall": {
+        "estimate": 0.14223309453084046,
+        "ci95": [
+          0.08949347518173677,
+          0.18704112009045276
+        ],
+        "valid_resamples": 4000
+      },
+      "precision": {
+        "estimate": 0.4599736296854398,
+        "ci95": [
+          0.30791868848015297,
+          0.5545194000423181
+        ],
+        "valid_resamples": 4000
+      },
+      "center_error_m_mean": {
+        "estimate": 1.3796461751980564,
+        "ci95": [
+          1.2610413928647775,
+          1.4387902326637199
+        ],
+        "valid_resamples": 4000
+      },
+      "identity_switch_rate": {
+        "estimate": 0.022490400438837082,
+        "ci95": [
+          0.0,
+          0.05283024872992806
+        ],
+        "valid_resamples": 4000
+      },
+      "duplicates_per_gt_observation": {
+        "estimate": 0.002795736501834702,
+        "ci95": [
+          0.0008758353194967664,
+          0.004233625882927768
+        ],
+        "valid_resamples": 4000
+      }
+    },
+    "pose_noise_025m_2deg": {
+      "recall": {
+        "estimate": 0.28388374395713206,
+        "ci95": [
+          0.2185383072120253,
+          0.33576495811147117
+        ],
+        "valid_resamples": 4000
+      },
+      "precision": {
+        "estimate": 0.4163676746967367,
+        "ci95": [
+          0.36494419902972897,
+          0.4732345618380298
+        ],
+        "valid_resamples": 4000
+      },
+      "center_error_m_mean": {
+        "estimate": 1.4714610246890523,
+        "ci95": [
+          1.3756712292581081,
+          1.5827203127414284
+        ],
+        "valid_resamples": 4000
+      },
+      "identity_switch_rate": {
+        "estimate": 0.039352497906782025,
+        "ci95": [
+          0.02230023328827454,
+          0.0661053744885747
+        ],
+        "valid_resamples": 4000
+      },
+      "duplicates_per_gt_observation": {
+        "estimate": 0.007630030869590541,
+        "ci95": [
+          0.0036875180289884057,
+          0.01120838518748923
+        ],
+        "valid_resamples": 4000
+      }
+    },
+    "three_frame_perception_blackout": {
+      "recall": {
+        "estimate": 0.28603879084396294,
+        "ci95": [
+          0.2170638768021694,
+          0.3396752167414753
+        ],
+        "valid_resamples": 4000
+      },
+      "precision": {
+        "estimate": 0.44641396236705755,
+        "ci95": [
+          0.3876495066995302,
+          0.501290721051303
+        ],
+        "valid_resamples": 4000
+      },
+      "center_error_m_mean": {
+        "estimate": 1.290661764717798,
+        "ci95": [
+          1.1840605007798943,
+          1.3903219919629528
+        ],
+        "valid_resamples": 4000
+      },
+      "identity_switch_rate": {
+        "estimate": 0.027934461455815202,
+        "ci95": [
+          0.015597792805815556,
+          0.04341425859948815
+        ],
+        "valid_resamples": 4000
+      },
+      "duplicates_per_gt_observation": {
+        "estimate": 0.005242005940940066,
+        "ci95": [
+          0.002291338931898762,
+          0.007950548716443498
+        ],
+        "valid_resamples": 4000
+      }
+    },
+    "unperturbed": {
+      "recall": {
+        "estimate": 0.30059991845768536,
+        "ci95": [
+          0.2297787863594034,
+          0.3553253159553618
+        ],
+        "valid_resamples": 4000
+      },
+      "precision": {
+        "estimate": 0.44054630815194196,
+        "ci95": [
+          0.38506571045415794,
+          0.49976781040785107
+        ],
+        "valid_resamples": 4000
+      },
+      "center_error_m_mean": {
+        "estimate": 1.2827406030005781,
+        "ci95": [
+          1.1804914478979482,
+          1.381688576080286
+        ],
+        "valid_resamples": 4000
+      },
+      "identity_switch_rate": {
+        "estimate": 0.03020304568527919,
+        "ci95": [
+          0.017441601929297692,
+          0.04373565944668467
+        ],
+        "valid_resamples": 4000
+      },
+      "duplicates_per_gt_observation": {
+        "estimate": 0.006989341254586755,
+        "ci95": [
+          0.0030805046069089263,
+          0.01061075749269795
+        ],
+        "valid_resamples": 4000
+      }
+    }
+  },
+  "paired_differences": [
+    {
+      "condition": "depth_noise_020m",
+      "baseline": "unperturbed",
+      "metric": "recall",
+      "difference": -0.001514357271827138,
+      "ci95": [
+        -0.0037320494388292822,
+        0.0008095027907817626
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "condition": "depth_noise_020m",
+      "baseline": "unperturbed",
+      "metric": "precision",
+      "difference": -0.0028545249947650175,
+      "ci95": [
+        -0.007100680461244795,
+        0.005019050589541685
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "condition": "depth_noise_020m",
+      "baseline": "unperturbed",
+      "metric": "center_error_m_mean",
+      "difference": 0.018710131816837006,
+      "ci95": [
+        -0.08253795554523494,
+        0.05771380767821526
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "condition": "depth_noise_020m",
+      "baseline": "unperturbed",
+      "metric": "identity_switch_rate",
+      "difference": 0.0018071975925697224,
+      "ci95": [
+        -0.00215916237205356,
+        0.006492535398076239
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "condition": "depth_noise_020m",
+      "baseline": "unperturbed",
+      "metric": "duplicates_per_gt_observation",
+      "difference": 0.0,
+      "ci95": [
+        -0.00037162358972367226,
+        0.0005538450108248111
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "condition": "detection_dropout_30pct",
+      "baseline": "unperturbed",
+      "metric": "recall",
+      "difference": -0.048867144271652396,
+      "ci95": [
+        -0.05809996234468689,
+        -0.03657489072179709
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "condition": "detection_dropout_30pct",
+      "baseline": "unperturbed",
+      "metric": "precision",
+      "difference": -0.03775040880431846,
+      "ci95": [
+        -0.0538777915798697,
+        -0.02415086202545626
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "condition": "detection_dropout_30pct",
+      "baseline": "unperturbed",
+      "metric": "center_error_m_mean",
+      "difference": -0.006935293052999336,
+      "ci95": [
+        -0.020565207060566904,
+        0.016695327937593044
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "condition": "detection_dropout_30pct",
+      "baseline": "unperturbed",
+      "metric": "identity_switch_rate",
+      "difference": -0.0010390793858624688,
+      "ci95": [
+        -0.008306584437510747,
+        0.0047052983804141135
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "condition": "detection_dropout_30pct",
+      "baseline": "unperturbed",
+      "metric": "duplicates_per_gt_observation",
+      "difference": -0.0027374919913798123,
+      "ci95": [
+        -0.004470480497177647,
+        -0.0008221210647624443
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "condition": "lidar_dropout_80pct",
+      "baseline": "unperturbed",
+      "metric": "recall",
+      "difference": -0.1583668239268449,
+      "ci95": [
+        -0.19919670369188128,
+        -0.1214105985699894
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "condition": "lidar_dropout_80pct",
+      "baseline": "unperturbed",
+      "metric": "precision",
+      "difference": 0.019427321533497854,
+      "ci95": [
+        -0.09524340759471153,
+        0.0835521233272068
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "condition": "lidar_dropout_80pct",
+      "baseline": "unperturbed",
+      "metric": "center_error_m_mean",
+      "difference": 0.0969055721974783,
+      "ci95": [
+        -0.01573012711077769,
+        0.15580001769321802
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "condition": "lidar_dropout_80pct",
+      "baseline": "unperturbed",
+      "metric": "identity_switch_rate",
+      "difference": -0.007712645246442107,
+      "ci95": [
+        -0.02603881828506702,
+        0.018483208683852104
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "condition": "lidar_dropout_80pct",
+      "baseline": "unperturbed",
+      "metric": "duplicates_per_gt_observation",
+      "difference": -0.0041936047527520535,
+      "ci95": [
+        -0.006944549345417925,
+        -0.0012673988005466221
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "condition": "pose_noise_025m_2deg",
+      "baseline": "unperturbed",
+      "metric": "recall",
+      "difference": -0.016716174500553294,
+      "ci95": [
+        -0.022268527604391228,
+        -0.008877112415852411
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "condition": "pose_noise_025m_2deg",
+      "baseline": "unperturbed",
+      "metric": "precision",
+      "difference": -0.024178633455205267,
+      "ci95": [
+        -0.03189988655994184,
+        -0.012732454769664395
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "condition": "pose_noise_025m_2deg",
+      "baseline": "unperturbed",
+      "metric": "center_error_m_mean",
+      "difference": 0.18872042168847414,
+      "ci95": [
+        0.1686862338474813,
+        0.23319677737547007
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "condition": "pose_noise_025m_2deg",
+      "baseline": "unperturbed",
+      "metric": "identity_switch_rate",
+      "difference": 0.009149452221502836,
+      "ci95": [
+        0.0010040603299780483,
+        0.024566025147611754
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "condition": "pose_noise_025m_2deg",
+      "baseline": "unperturbed",
+      "metric": "duplicates_per_gt_observation",
+      "difference": 0.0006406896150037865,
+      "ci95": [
+        0.0001027846945693141,
+        0.001209582944974743
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "condition": "three_frame_perception_blackout",
+      "baseline": "unperturbed",
+      "metric": "recall",
+      "difference": -0.014561127613722413,
+      "ci95": [
+        -0.018443105108231043,
+        -0.010473583573134078
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "condition": "three_frame_perception_blackout",
+      "baseline": "unperturbed",
+      "metric": "precision",
+      "difference": 0.005867654215115592,
+      "ci95": [
+        -0.007215839834013939,
+        0.014032997837633888
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "condition": "three_frame_perception_blackout",
+      "baseline": "unperturbed",
+      "metric": "center_error_m_mean",
+      "difference": 0.007921161717219904,
+      "ci95": [
+        -0.002393174888198729,
+        0.014074853806726947
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "condition": "three_frame_perception_blackout",
+      "baseline": "unperturbed",
+      "metric": "identity_switch_rate",
+      "difference": -0.0022685842294639866,
+      "ci95": [
+        -0.005114816243362127,
+        0.0019630940787371343
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "condition": "three_frame_perception_blackout",
+      "baseline": "unperturbed",
+      "metric": "duplicates_per_gt_observation",
+      "difference": -0.0017473353136466885,
+      "ci95": [
+        -0.0030924218195635695,
+        -0.00046451435269567883
+      ],
+      "valid_resamples": 4000
+    }
+  ],
+  "seed_estimates": {
+    "17": {
+      "depth_noise_020m": {
+        "recall": 0.3003669404158658,
+        "precision": 0.43762729124236255,
+        "center_error_m_mean": 1.2994607843242976,
+        "identity_switch_rate": 0.03069838833461243,
+        "duplicates_per_gt_observation": 0.007164074785951424
+      },
+      "detection_dropout_30pct": {
+        "recall": 0.24532587803599512,
+        "precision": 0.38465753424657534,
+        "center_error_m_mean": 1.2878044184702513,
+        "identity_switch_rate": 0.034170854271356785,
+        "duplicates_per_gt_observation": 0.004368338284116722
+      },
+      "lidar_dropout_80pct": {
+        "recall": 0.14031102568582912,
+        "precision": 0.43148844707146694,
+        "center_error_m_mean": 1.3956047528993534,
+        "identity_switch_rate": 0.025295109612141653,
+        "duplicates_per_gt_observation": 0.0036694041586580466
+      },
+      "pose_noise_025m_2deg": {
+        "recall": 0.2834177878734929,
+        "precision": 0.41282769152456095,
+        "center_error_m_mean": 1.4597716858762013,
+        "identity_switch_rate": 0.037751677852348994,
+        "duplicates_per_gt_observation": 0.006115673597763411
+      },
+      "three_frame_perception_blackout": {
+        "recall": 0.28603879084396294,
+        "precision": 0.44641396236705755,
+        "center_error_m_mean": 1.2905895284130477,
+        "identity_switch_rate": 0.028203062046736505,
+        "duplicates_per_gt_observation": 0.005242005940940066
+      },
+      "unperturbed": {
+        "recall": 0.30054167394723047,
+        "precision": 0.44046094750320103,
+        "center_error_m_mean": 1.282402657602408,
+        "identity_switch_rate": 0.030464584920030464,
+        "duplicates_per_gt_observation": 0.006989341254586755
+      }
+    },
+    "29": {
+      "depth_noise_020m": {
+        "recall": 0.29861960510221913,
+        "precision": 0.43899306447469816,
+        "center_error_m_mean": 1.2985465800301503,
+        "identity_switch_rate": 0.030816640986132512,
+        "duplicates_per_gt_observation": 0.006639874191857418
+      },
+      "detection_dropout_30pct": {
+        "recall": 0.2542372881355932,
+        "precision": 0.4127659574468085,
+        "center_error_m_mean": 1.2751216215082586,
+        "identity_switch_rate": 0.03371868978805395,
+        "duplicates_per_gt_observation": 0.004543071815481391
+      },
+      "lidar_dropout_80pct": {
+        "recall": 0.1387384239035471,
+        "precision": 0.4743130227001195,
+        "center_error_m_mean": 1.3744139862085731,
+        "identity_switch_rate": 0.025252525252525252,
+        "duplicates_per_gt_observation": 0.0024462694391053645
+      },
+      "pose_noise_025m_2deg": {
+        "recall": 0.28656299143805697,
+        "precision": 0.42062067196717107,
+        "center_error_m_mean": 1.4711102062026533,
+        "identity_switch_rate": 0.038651315789473686,
+        "duplicates_per_gt_observation": 0.008212475974139438
+      },
+      "three_frame_perception_blackout": {
+        "recall": 0.28603879084396294,
+        "precision": 0.44641396236705755,
+        "center_error_m_mean": 1.2908124321368197,
+        "identity_switch_rate": 0.028203062046736505,
+        "duplicates_per_gt_observation": 0.005242005940940066
+      },
+      "unperturbed": {
+        "recall": 0.3007164074785951,
+        "precision": 0.4407170294494238,
+        "center_error_m_mean": 1.2835013849205978,
+        "identity_switch_rate": 0.030441400304414,
+        "duplicates_per_gt_observation": 0.006989341254586755
+      }
+    },
+    "43": {
+      "depth_noise_020m": {
+        "recall": 0.29827013803948976,
+        "precision": 0.43646126310406547,
+        "center_error_m_mean": 1.306362231846769,
+        "identity_switch_rate": 0.03450920245398773,
+        "duplicates_per_gt_observation": 0.007164074785951424
+      },
+      "detection_dropout_30pct": {
+        "recall": 0.2556351563865106,
+        "precision": 0.4115330520393812,
+        "center_error_m_mean": 1.2649700524721035,
+        "identity_switch_rate": 0.019943019943019943,
+        "duplicates_per_gt_observation": 0.0038441376900227153
+      },
+      "lidar_dropout_80pct": {
+        "recall": 0.14764983400314521,
+        "precision": 0.4763246899661781,
+        "center_error_m_mean": 1.369397204977357,
+        "identity_switch_rate": 0.01729559748427673,
+        "duplicates_per_gt_observation": 0.0022715359077406954
+      },
+      "pose_noise_025m_2deg": {
+        "recall": 0.28167045255984624,
+        "precision": 0.4156781846312532,
+        "center_error_m_mean": 1.4835797901184182,
+        "identity_switch_rate": 0.04170212765957447,
+        "duplicates_per_gt_observation": 0.008561943036868774
+      },
+      "three_frame_perception_blackout": {
+        "recall": 0.28603879084396294,
+        "precision": 0.44641396236705755,
+        "center_error_m_mean": 1.2905833336035266,
+        "identity_switch_rate": 0.0273972602739726,
+        "duplicates_per_gt_observation": 0.005242005940940066
+      },
+      "unperturbed": {
+        "recall": 0.30054167394723047,
+        "precision": 0.44046094750320103,
+        "center_error_m_mean": 1.282317324163659,
+        "identity_switch_rate": 0.0297029702970297,
+        "duplicates_per_gt_observation": 0.006989341254586755
+      }
+    }
+  },
+  "counts_fields": [
+    "true_positive",
+    "truth",
+    "predictions",
+    "sum_center_error_m",
+    "identity_switches",
+    "adjacent_matched_transitions",
+    "duplicate_nodes"
+  ],
+  "bootstrap": {
+    "unit": "采集log",
+    "clusters": 11,
+    "repetitions": 4000,
+    "seed": 17,
+    "paired": true
+  },
+  "interpretation": [
+    "3种子重复不增加独立场景/log；GT观测计数会重复3次",
+    "扰动保持同一GT和真实相机可见范围；不以规划失败自证不可达",
+    "中心误差为匹配对象条件均值；未匹配预测含关联不足，不全解释为误检",
+    "合成随机缺失及白噪声不是标定后的真实传感器误差分布",
+    "只评建图压力，不给实际到达、语义准确或动态道路安全信用"
+  ],
+  "navigation_arrival_evaluated": false,
+  "independent_test": false,
+  "stage12_complete": false,
+  "goal_complete": false
+}

@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "updated_utc": "2026-11-12T13:43:35.774346+00:00",
+  "cases": 684,
+  "actual_frame_condition_records": 27144,
+  "GT_observations_with_seed_and_condition_repetition": 103014,
+  "predicted_observations": 62193,
+  "source_files_checked": 1406,
+  "scenes": 38,
+  "logs": 11,
+  "all_frame_assignments_independently_recomputed": true,
+  "all_case_counts_and_ID_transitions_recomputed": true,
+  "all_30_estimates_and_intervals_recomputed": true,
+  "all_25_paired_differences_and_intervals_recomputed": true,
+  "files_sha256": "9736f65a93c992c04d6f2f253d4f41fb0a7f6292a2fe234e72792355d2ccca26",
+  "statistics_sha256": "5e3ddac7356f370d1cba8ba830bc2a094508d0eb98e141beb88e753b2ac48e6a",
+  "audit_source_sha256": "03845e7e7185f9a71d8d2827d713514724e4bc3cb84e191ed7ddeee7805b05b7",
+  "new_frontend_or_GPU_calls": 0,
+  "actual_arrivals": 0,
+  "new_test_opened": false,
+  "limitations": [
+    "独立重算共享SciPy优化器但不调用原质量评价函数，不是人工身份真值",
+    "3m同类XY中心代理评价；样本为38场景11log，三种子和六条件不增加独立场景",
+    "官方GT较相机晚33–42ms；离线合成扰动，不证明闭环故障恢复或到达安全"
+  ],
+  "goal_complete": false
+}

@@ -1,0 +1,53 @@
+{
+  "passed": true,
+  "port": 8768,
+  "checks": [
+    {
+      "viewport": "desktop",
+      "result": {
+        "overflow": false,
+        "error": "",
+        "rendered": "scene-0174_39_one_to_one_depth_robust_motion",
+        "color": "unknown",
+        "category": "unknown",
+        "source": "scene-0174 / 帧39；过去LiDAR证据版本 causal_dev_evidence_001；源预测SHA 5169c8c994a6a27a41179c5dfbb9328914431789edcbbc93ad70232ca94009dd",
+        "human": "已有真实提交：开发 0；自然指令 0。数量不等于可靠标签覆盖。",
+        "cropImages": 2
+      },
+      "browser_errors": [],
+      "empty_reviewer_refused_before_request": true,
+      "method_switch_clears_previous_identity_claim": true,
+      "wrong_index_HTTP": 400,
+      "wrong_evidence_HTTP": 400
+    },
+    {
+      "viewport": "mobile",
+      "result": {
+        "overflow": false,
+        "error": "",
+        "rendered": "scene-0174_39_one_to_one_depth_robust_motion",
+        "color": "unknown",
+        "category": "unknown",
+        "source": "scene-0174 / 帧39；过去LiDAR证据版本 causal_dev_evidence_001；源预测SHA 5169c8c994a6a27a41179c5dfbb9328914431789edcbbc93ad70232ca94009dd",
+        "human": "已有真实提交：开发 0；自然指令 0。数量不等于可靠标签覆盖。",
+        "cropImages": 2
+      },
+      "browser_errors": [],
+      "empty_reviewer_refused_before_request": true,
+      "method_switch_clears_previous_identity_claim": true,
+      "wrong_index_HTTP": 400,
+      "wrong_evidence_HTTP": 400
+    }
+  ],
+  "real_human_records_before": 0,
+  "real_human_records_after": 0,
+  "human_records_written_by_QA": 0,
+  "rejected_test_requests": 4,
+  "test_requests_explicitly_invalid": true,
+  "new_model_calls": 0,
+  "limitations": [
+    "没有模拟成功人工提交，标签正确性与真实用户审核仍待完成",
+    "浏览器测试只核对读取和拒绝路径；有效提交逻辑以临时合成结构单测核验，不作为人工标注"
+  ],
+  "goal_complete": false
+}

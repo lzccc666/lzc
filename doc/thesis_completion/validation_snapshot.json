@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-12T13:01:10.114049+00:00",
+  "updated_utc": "2026-11-12T13:53:22.360161+00:00",
   "goal_complete": false,
   "stage9_complete": false,
   "stage10_complete": false,
@@ -28,9 +28,11 @@
         "annotation/corrected_dev_evidence_001/index.json",
         "annotation/natural_command_review_001/manifest.json",
         "annotation/natural_command_review_001/browser_qa_001/report.json",
-        "annotation/reference_regions_reserved_full_003/acceptance_001.json"
+        "annotation/reference_regions_reserved_full_003/acceptance_001.json",
+        "task_protocol/development_human_review_versioning_001.md",
+        "visualizations/causal_development_review_002/review_manifest.json"
       ],
-      "remaining": "开发114帧证据包及439原始自然指令核验页可提交；后者覆盖30场景360原图410个不同像素裁剪，逐像素核验通过。桌面/手机无溢出，未知为默认，源SHA验证及空审核者拒绝通过。当前开发人工记录0，自然指令人工记录0；数量不等于一致性/可靠标签，测试不生成伪人工记录，真实标注和复核未完成；独立静态区域307/422正查询获证，115未知；后续81条查询有独立条件控制证书、797条仍未知；静态区域不直接当可达标签，人工颜色/细属性和歧义审核仍未齐"
+      "remaining": "开发114帧证据包及439原始自然指令核验页可提交；后者覆盖30场景360原图410个不同像素裁剪，逐像素核验通过。桌面/手机无溢出，未知为默认，源SHA验证及空审核者拒绝通过。当前开发人工记录0，自然指令人工记录0；数量不等于一致性/可靠标签，测试不生成伪人工记录，真实标注和复核未完成；独立静态区域307/422正查询获证，115未知；后续81条查询有独立条件控制证书、797条仍未知；静态区域不直接当可达标签，人工颜色/细属性和歧义审核仍未齐；新开发审核002绑定当前图版本和方法/节点，真实审核仍0，不以页面/自动像素审计替代人工"
     },
     "对象图质量": {
       "status": "过去LiDAR开发全量完成，封存未验收",
@@ -101,7 +103,7 @@
         "interactive_simulation/realtime_three_model_full_001/trial_records.jsonl",
         "statistics/plan_reuse_pilot_001/report.json"
       ],
-      "remaining": "冻结50任务×3种子×规则/base/new共450次，当前已保存222/450。所有角色相同前端、执行器、90秒预算与候选安全验证；单模型进程、源码冻结、失败不自动重试。预算24小时/20GB，磁盘低于6GB停止。单任务路线复用pilot规则/base到达、new超时，三者路线/选对/正确锁定成立，重排均0应用，不能据此宣称新模型改善。此批为颜色表达合成开发任务，不是新封存测试或复杂自然关系验收"
+      "remaining": "冻结50任务×3种子×规则/base/new共450次，当前已保存254/450。所有角色相同前端、执行器、90秒预算与候选安全验证；单模型进程、源码冻结、失败不自动重试。预算24小时/20GB，磁盘低于6GB停止。单任务路线复用pilot规则/base到达、new超时，三者路线/选对/正确锁定成立，重排均0应用，不能据此宣称新模型改善。此批为颜色表达合成开发任务，不是新封存测试或复杂自然关系验收"
     },
     "独立消融": {
       "status": "部分完成",
@@ -117,13 +119,13 @@
       "remaining": "已完成开发关联因子、关系/选择端证据门限、六地图条件及动态维护/短期过期实际消融，分别保留负结果；首达与联合/去安全接近点离线实验以新report为准。三任务缺一CUDA消融仍等待450主矩阵完成，尚无其模型调用；主比较300共享条件加450新缺一条件合成750项，不把排队视为完成。全部封存独立消融待验收；首达/联合/去安全接近点离线1115查询×3条件3345记录及配对核验已完成，非Hybrid控制或封存主表，不授予实际到达信用"
     },
     "故障安全": {
-      "status": "录制扰动全量完成，整体部分完成",
+      "status": "过去LiDAR离线故障全量完成，闭环故障安全仍缺",
       "evidence": [
-        "faults/recorded_fault_full_001/summary.json",
-        "statistics/recorded_fault_full_001/report.json",
-        "statistics/realtime_three_model_smoke_003/report.json"
+        "statistics/causal_fault_full_001/report.json",
+        "faults/causal_fault_full_001/audit_001/report.json",
+        "faults/causal_fault_full_001/audit_001/report.md"
       ],
-      "remaining": "38场景×3种子×6条件684次录制扰动及11log配对4000次bootstrap完成。LiDAR点缺失80%召回降低16.79个百分点；位姿噪声中心误差增加0.210m，配对区间0.187—0.253m。深度噪声小差异区间跨0。不是重新检测或到达实验，不为动态交通安全提供信用；完整真实时钟故障/主比较仍需完成"
+      "remaining": "684次真实CPU重建、27144帧条件记录及全部关联/30指标/25配对区间独立重算通过。LiDAR丢失80%召回−15.84pp（CI−19.92至−12.14），位姿扰动误差+0.1887m（CI0.1687至0.2332）。38场景11log、3种子不增独立样本；合成白噪声和随机缺失未经标定。仍缺闭环故障注入、制动/恢复和实际到达安全实验，不能以离线抗扰动替代"
     },
     "缓存": {
       "status": "冻结请求复跑完成，整体部分完成",
@@ -166,25 +168,24 @@
       "remaining": "第1—7章阶段稿47页、19张第6章三线表Word/Excel/PDF/CSV、7图、11处可编辑OMML公式。表6-19单列条件静态可达参考；4指定页实际目视通过。11处引文表述按一手内容限缩，另核对11组方法细节；A*最优性条件与预算搜索、Hybrid连续搜索来源与本项目前向适配分别说明，85会议/URL修正。删除重复h(n)引文表达使数学对象由12降至11，非公式丢失。85引用连续，全部正文主张仍未核完，无原生Word渲染或学校模板，完整主矩阵/封存/消融仍待验收"
     },
     "测试": {
-      "status": "阶段性通过，最终待验收",
+      "status": "项目311项通过，最终仍待全部实验结束",
       "evidence": [
-        "source_bundle/tests_full_024.log",
-        "source_bundle/ruff_completion_038.log",
-        "source_bundle/git_diff_check_027.log",
-        "source_bundle/causal_sensitivity_audit_001/report.json",
-        "visualizations/thesis_portal_browser_qa_005/report.json"
+        "source_bundle/tests_full_026.log",
+        "source_bundle/ruff_completion_040.log",
+        "source_bundle/git_diff_check_028.log",
+        "source_bundle/engineering_verification_027.md"
       ],
-      "remaining": "最新全量294通过/5依赖警告；新业务范围Ruff/diff通过。旧未改上游2脚本17条广域lint单列保留。门户004桌面/手机36状态行、无溢出/脚本错、全部past证据链接200，仅GET且人工记录未增加；命名冲突导致的QA004启动前失败日志保留，QA005实际通过。全部运行及最终工程验收仍未结束"
+      "remaining": "项目原定pytest -q tests实际311通过/5依赖警告，真实crop两项原机通过；无路径pytest误收集第三方/输出目录的104项收集错误原日志保留，未改历史文件凑通过。新审核版本/内容/方法/节点回归均临时结构，不当人工。Ruff业务范围/diff通过；完整矩阵、封存、独占性能及最终保护仍缺"
     },
     "旧产物保护": {
-      "status": "阶段性通过",
+      "status": "本轮全量复核通过，最终验收待全部实验结束",
       "evidence": [
         "baseline_before.json",
         "baseline_verification.json",
-        "source_bundle/protection_verify_009.log",
-        "source_bundle/github_sync_001/public_clone_verification_004.json"
+        "source_bundle/protection_verify_010.log",
+        "source_bundle/github_sync_001/public_clone_verification_005.json"
       ],
-      "remaining": "2026-11-12 12:08 UTC全量255170历史文件0改动/缺失，原checkout索引保持；新代码main ef79af8已匿名核验356源文件内容及权限一致，未公开数据/模型/原论文/凭据。主矩阵66源码仍未变，最终历史保护待所有任务完成后复核"
+      "remaining": "本轮重新流式核验255170历史文件，0改动/缺失；Git原索引保持，当前357业务源码已匿名核对。主矩阵66依赖及CPU队列冻结来源不改；仍需所有实验最终结束后复验，不以阶段快照代替最终保护验收"
     },
     "可视化": {
       "status": "部分完成",
@@ -209,15 +210,15 @@
       "remaining": "439条原始英文的360不同相机帧及对应过去LiDAR全部准确准备，720个输出SHA核验通过，30场景14log；最大LiDAR年龄0.016868s，无未来返回/深度填充，原RGB与归档字节相同。176条官方静态属性仍待任务适配与人工属性审核，不能算400条有效静止目标导航指令；封存方法调用0；439条原文人工任务范围/颜色/歧义核验页已就绪，尚无有效人工结论"
     },
     "参数与泛化": {
-      "status": "五项开发参数检查完成，整体部分完成",
+      "status": "过去LiDAR完整敏感性结束，泛化与封存仍缺",
       "evidence": [
-        "performance/selection_parameters_dev_001/report.json",
-        "performance/selection_parameters_dev_001/exploratory_subgroups.csv",
-        "performance/association_parameters_dev_full_001/summary.json",
-        "statistics/association_parameters_dev_full_001/report.json",
-        "performance/road_groups_dev_001/report.json"
+        "performance/causal_selection_parameters_full_001/report.json",
+        "statistics/causal_mapping_parameters_full_001/report.json",
+        "performance/causal_road_groups_full_001/report.json",
+        "source_bundle/causal_sensitivity_full_001/complete.json",
+        "source_bundle/causal_module_parameter_audit_001/report.json"
       ],
-      "remaining": "选择端Top-K/确认次数/深度支持/拒绝分数9设置×1115查询完成，基线逐查询一致；关联sim_threshold 0.25/0.35/0.45完成38场景114条件，其中76次实际重建、38次复用同seed17完整基线，共1508独立帧。11log配对4000次bootstrap：0.25匹配精确率+1.82个百分点（CI 0.51—2.69），召回差区间含0；0.45召回+0.77个百分点但匹配精确率−13.77、身份切换率+15.47个百分点。评价3m门限未变，未将设置应用到在运行导航。类别/遮挡/距离分组保留；道路泛化、封存和闭环参数效应仍缺；已完成当前位姿与HD先验派生道路探索分组，四方法1115查询全保留；联合规则直路33/279、连接区12/449、弯道0/5，弯道正查询仅2log。不是人工道路标签、组间检验或道路泛化完成证据"
+      "remaining": "9选择参数10035记录及114关联门限条件完整结束，后者76新重建+38同版基线。0.25精确率+0.745pp CI[−0.025,2.021]跨0，未重现旧未来输入的明确收益；0.45召回+0.472pp却精确率−14.45pp、身份率+16.07pp。弯道仅5正查询2log，不称泛化；5步完整队列完成，不改变冻结导航或开启新封存"
     },
     "地图消融": {
       "status": "开发离线六条件完成，封存未完成",
@@ -229,14 +230,14 @@
       "remaining": "38场景11log，最多每场景6条SHA预选实际212条正查询，176个不同几何查询、1272次实际规划。GT给定对象参考点，非安全终点。仅车道158路线/49完整车道合法，同时方向连接91路线/88合法，仍有3连接审计失败；矩形静态姿态全部未通过，未执行任何去保护条件，不能计锁定/到达或整车安全。封存主表待完成"
     },
     "动态维护消融": {
-      "status": "开发独立全量完成，封存未完成",
+      "status": "过去LiDAR完整开发消融通过，封存和导航收益仍缺",
       "evidence": [
-        "ablations/mapping_modules_dev_full_001/release.json",
-        "ablations/mapping_modules_dev_full_001/summary.json",
-        "statistics/mapping_modules_dev_full_001/report.json",
-        "statistics/mapping_modules_motion_dev_full_001/report.json"
+        "ablations/causal_modules_full_001/summary.json",
+        "statistics/causal_modules_full_001/report.json",
+        "statistics/causal_modules_motion_full_001/report.json",
+        "source_bundle/causal_module_parameter_audit_001/report.json"
       ],
-      "remaining": "38场景1508帧114条件，76次实际重建、38份完整同seed基线复用。减动态维护召回−4.93pp（11log配对CI −6.76至−2.61），中心误差+0.076m；关闭短期过期匹配精确率−3.05pp（CI −4.27至−1.80）。静/动/unknown官方组另存；禁用模块后运动均unknown，不记静态正确。未证明到达收益，封存仍缺"
+      "remaining": "114条件=76实际新重建+38同版seed17复用，38场景1508帧。减动态维护召回−5.21pp（CI−6.82至−3.30）、匹配精确率−13.09pp；减TTL精确率−3.89pp（CI−6.51至−1.99）。运动组静态/动态/unknown分开；关闭模块也关闭运动元数据，全部unknown不是独立分类收益证据。全帧关联/身份计数/区间独立重算，不给车辆执行到达信用"
     },
     "引用核验": {
       "status": "部分完成",
@@ -304,25 +305,21 @@
       "remaining": "固定64帧/33官方原始drive，真实CPU YOLO/MobileSAM/CLIP已完成64次；三类319GT，3m中心匹配247→262，召回77.43%→82.13%，drive配对95%差区间+1.48至+9.07pp；共同支持251对误差1.758→1.540m。卡车误差退化2.768→2.888m，深度未知16→18保留；Cyclist代理单列，不是官方AP、跨帧场景图或导航到达。公开预训练与KITTI重叠未知；封存未开启"
     },
     "代码与实验交接": {
-      "status": "当前业务源码已同步，长期Goal仍进行中",
+      "status": "本次359份源码导出与测试通过，发布随后核验",
       "evidence": [
-        "GPT_Work_写作交接.md",
         "工作交接_代码与实验.md",
-        "source_bundle/github_sync_001/push_report_004.json",
-        "source_bundle/github_sync_001/public_clone_verification_004.json",
-        "source_bundle/writing_handoff_package_002.json",
-        "GPT_Work_论文写作交接包_v2.zip"
+        "GPT_Work_写作交接.md"
       ],
-      "remaining": "最新main ef79af8，356份当前业务源文件字节和权限经匿名拉取核验一致；294原机测试/292导出通过、2数据依赖skip。新v2交接包191文件/8.23MiB，CRC及189清单SHA逐项通过，v1保留；包含causal完整建图/关系/检索。数据/模型/原论文/凭据未公开，原checkout索引不动；主矩阵/消融/人工/封存/独占性能等仍未完成，写作由后续GPT Work开展"
+      "remaining": "当前快照生成于提交前：359源文件字节/执行权限核对，311原机/309导出通过、2真实数据依赖skip；推送后以push_report_006和public_clone_verification_006为准。v3是旧357源码快照；长期Goal和全部阶段仍未验收。"
     },
     "结构化JSON校验": {
-      "status": "运行中快照通过，非最终验收",
+      "status": "当前运行中快照通过，非最终验收",
       "evidence": [
-        "source_bundle/json_snapshot_009/report.json",
+        "source_bundle/json_snapshot_011/report.json",
         "source_bundle/failed_json_payload_audit_001/report.json",
         "thesis/citation_http_payload_type_audit_002/report.json"
       ],
-      "remaining": "严格结构化快照67365文件/1001648JSONL记录，非法0、读中变动0；已完整纳入causal输入/重建/下游。仅核SHA排除3份HTTP429原始body和1份失败写出残片，原件保留、不计成功报告；活跃主矩阵子任务/追加文件及正在运行的causal故障单列排除，最终仍需复验"
+      "remaining": "严格快照75978文件/1227046记录，非法0、读中变动0；已完成的684故障与114模块/门限纳入。仍按已核SHA单列3份HTTP429原始body和1份失败写出残片；活跃导航/地图输出及追加日志排除，最终结束后需复验"
     },
     "开发集过去LiDAR重建": {
       "status": "本批开发重建已完成，整体未验收",
@@ -339,16 +336,15 @@
       "remaining": "固定38开发场景11log1508帧，过去100ms内最近LiDAR、缺测保留0掩码及全部GT分母；原RGB与真实前端SHA一致时复用，新增前端调用0。真实3帧smoke完成，2扫描/1缺测、独立重投影0不一致，六融合+单帧均0/2，负结果保留。完整转换→审计→七条件重建→log聚类统计有界顺序执行；关系/上限/四检索等待完整建图，不把排队当完成。官方sample GT晚约33–42ms仍是评价近似。 实际完整转换已结束：1470实测/38缺测，未来0，最大年龄0.063661秒。 完整开发建图与统计已实际结束；各条件、置信区间及缺测分组见独立报告，仍非封存或导航到达。"
     },
     "开发集过去LiDAR消融": {
-      "status": "完整故障已启动，其余顺序等待",
+      "status": "故障/动态/门限全量完成，地图/目标策略仍进行",
       "evidence": [
-        "task_protocol/development_causal_ablations_001.md",
-        "faults/causal_fault_smoke_001/summary.json",
-        "ablations/causal_modules_smoke_001/summary.json",
-        "ablations/causal_maps_smoke_001/summary.json",
-        "ablations/causal_goals_smoke_001/summary.json",
-        "source_bundle/causal_ablations_full_001/release.json"
+        "source_bundle/causal_ablations_full_001/release.json",
+        "source_bundle/causal_ablations_full_001/modules_exit.json",
+        "source_bundle/causal_sensitivity_full_001/complete.json",
+        "faults/causal_fault_full_001/audit_001/report.json",
+        "source_bundle/causal_module_parameter_audit_001/report.json"
       ],
-      "remaining": "已修复四个入口固定读取历史输入的问题，新增明确mapping/retrieval/baseline版本；复用基线必须帧SHA/seed17/配置一致。真实smoke6扰动、3建图条件、6地图条件、29查询87选择规划记录结束；四检索正0/19、负误选最高9/10保留。完整684扰动、114模块记录、约1272地图与3345选择记录等待前置完整下游结束，不计车辆安全或到达；源码与预算冻结，不自动重试；前置38场景关系/检索已实际结束，684扰动已开始重建"
+      "remaining": "684故障、114动态/TTL、114关联门限完整结束。两批114共享相同38基线，228条件视图9048帧、190不同实际案例7540帧，独立重算通过，不重复增加场景/log。六地图约1272点规划和三目标3345记录仍按另一有界冻结队列推进，不能将待执行条目计为完成"
     },
     "开发集过去LiDAR下游": {
       "status": "本批关系检索完成，完整封存仍缺",
@@ -373,13 +369,43 @@
       "remaining": "1115查询9参数实际10035记录，3选择条件3345记录，四方法道路分组完成。基线43/733、负误选8/382；确认5次降至34/733，拒绝0.7选对/误选均0；深度0.6选对不变、误选5/382，率差区间上界0，不宣称普遍改善。去结构化边52/733，仍保留几何回退，不能称关闭全部关系；其优势区间下界0，不支持结构化边收益。弯道仅5条正查询2log。零正查询真实运行12条件正指标null；38场景关联门限114条件等待新past故障基线，未换旧未来输入；导航源码/阈值不改，未开启测试，无到达信用"
     },
     "统一可视化": {
-      "status": "最新过去LiDAR门户通过阶段检查",
+      "status": "门户007与新审核002桌面/手机通过",
       "evidence": [
-        "visualizations/thesis_portal_004/index.html",
-        "visualizations/thesis_portal_004/causal_evidence.json",
-        "visualizations/thesis_portal_browser_qa_005/report.json"
+        "visualizations/thesis_portal_007/index.html",
+        "visualizations/thesis_portal_007/causal_evidence.json",
+        "visualizations/thesis_portal_browser_qa_009/report.json",
+        "visualizations/causal_review_browser_canonical_002/report.json"
       ],
-      "remaining": "门户004从冻结结果展示过去LiDAR建图/检索/参数/关系消融，旧未来输入单列；36项真实状态动态显示，4类导航指标分别解释，桌面/手机QA通过。完整450及后续450未全部进入163条旧执行查看器，不能称完整主矩阵可视化已交付"
+      "remaining": "门户分开当前过去LiDAR和历史未来LiDAR，新增684录制故障完整结果、全帧重算及114模块/门限报告；正式链接新审核002。桌面/手机无溢出和脚本错误，门户只GET，审核仅拒绝错SHA不创建人工记录；完整执行矩阵和封存仍未加入最终查看器"
+    },
+    "过去LiDAR动静态评价": {
+      "status": "全部开发帧评价完成，封存与人工身份仍缺",
+      "evidence": [
+        "mapping_evaluation/causal_motion_full_001/report.json",
+        "statistics/causal_motion_full_001/report.json",
+        "statistics/causal_motion_full_001/common_motion_by_log.csv",
+        "task_protocol/development_causal_diagnostics_001.md"
+      ],
+      "remaining": "38场景1508帧官方静态2556/动态3022/未知145观测全部保留。深度质量到稳健运动：匹配静态准确率29.65%→47.09%，动态68.24%→62.17%。双方共同匹配静态853观测254→398正确，差+16.88pp（11log配对CI9.14–21.72）；动态822观测561→511，差−6.08pp（CI−9.69至−1.37）。共同子集为初步组计数后的补充解释，非预注册独立主表；不能称全部运动状态改善或自动赋予安全信用。GT时间近似33–42ms与unknown保留"
+    },
+    "过去LiDAR错误证据": {
+      "status": "114预设帧自动证据及来源核验完成",
+      "evidence": [
+        "annotation/causal_dev_evidence_001/index.json",
+        "annotation/causal_dev_evidence_001/error_inventory.jsonl",
+        "annotation/causal_dev_evidence_001/audit_001/report.json"
+      ],
+      "remaining": "每开发场景首/中/末共114帧、385官方对象观测，不按成功筛选。855真实CLIP裁剪与855SAM掩膜逐像素核对，深度支持和源预测/身份记录一致。86中心匹配仍需身份审核、134深度不足、123无同类二维投影匹配、42定位或关联待核验；全部自动候选诊断，不是确证漏检或错合并。显示RGB是JPEG重编码副本，原真实输入另核；真实人工仍0，不修改审核服务或伪造记录"
+    },
+    "版本化开发人工核验": {
+      "status": "正式新入口可用，真实人工0",
+      "evidence": [
+        "task_protocol/development_human_review_versioning_001.md",
+        "visualizations/causal_development_review_002/index.html",
+        "visualizations/causal_review_browser_canonical_002/report.json",
+        "source_bundle/review_service_upgrade_002.json"
+      ],
+      "remaining": "8768新审核绑定过去LiDAR索引/证据/源预测/真实crop指纹，记录建图方法和明确节点；跨方法节点或缺身份依据拒绝，切换方法清空旧身份结论。桌面/手机仅读取和4份错误SHA真实POST，全部400、人工0新增。311项目测试通过，新增有效结构只在临时合成目录测试，不伪装真人。当前表单单位是已有检测，缺检测官方对象、跨帧长链和双人复核仍需独立记录；旧页面按旧来源保留"
     }
   }
 }

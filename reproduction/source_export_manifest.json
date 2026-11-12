@@ -179,6 +179,12 @@
       "executable": false
     },
     {
+      "path": "conceptgraph/completion/development_review.py",
+      "sha256": "5445f07cd710277040196467b0cecda664065a058c1b2ace4300ae60cae90484",
+      "bytes": 17386,
+      "executable": false
+    },
+    {
       "path": "conceptgraph/completion/development_selection_ablation.py",
       "sha256": "6e735544cecc3945c060325bb04273ac26c6a790e9e3e57c78d70f2326d239a1",
       "bytes": 8979,
@@ -522,8 +528,8 @@
     },
     {
       "path": "conceptgraph/completion/review_server.py",
-      "sha256": "07b844ae1477e9a417acb9c0f97a2b0adf35a6ad53e24ab149feece032ce3730",
-      "bytes": 6130,
+      "sha256": "d4e203d52e4b21c03677a60e6f57064ac5f426b8494c23e24126c2be3c904d03",
+      "bytes": 9807,
       "executable": false
     },
     {
@@ -612,8 +618,8 @@
     },
     {
       "path": "conceptgraph/completion/thesis_portal.py",
-      "sha256": "2ea8296c2220d911fb9dae83e28bdc117ef7c36eb624d13e18693ad6781d6b3b",
-      "bytes": 23245,
+      "sha256": "6401c209186a5395161974d66be2ee805452398c66b8fa6479cdee117faa908d",
+      "bytes": 25697,
       "executable": false
     },
     {
@@ -1985,6 +1991,12 @@
       "executable": false
     },
     {
+      "path": "tests/test_completion_development_review.py",
+      "sha256": "6fa1f7083286a5f2e7b81a6bfde23b90ef0e6eb0475108c828ae715d64e6d92f",
+      "bytes": 7342,
+      "executable": false
+    },
+    {
       "path": "tests/test_completion_fault_robustness.py",
       "sha256": "f71c21d119266bddbe9ab8ed8ff392d5d9a93a646615b51793ae6f8159e6d571",
       "bytes": 1163,
@@ -2194,5 +2206,5 @@
   "original_manuscript_published": false,
   "credentials_published": false,
   "goal_complete": false,
-  "updated_utc": "2026-11-12T13:01:10.364601+00:00"
+  "updated_utc": "2026-11-12T13:53:22.619517+00:00"
 }

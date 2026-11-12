@@ -5,9 +5,9 @@
       "viewport": "desktop",
       "result": {
         "overflow": false,
-        "statusRows": 36,
+        "statusRows": 40,
         "goal": "Goal仍在进行 · 必需条件未全部满足",
-        "main": "已保存尝试记录 220 / 450；尚未据部分样本计算最终结论。",
+        "main": "已保存尝试记录 253 / 450；尚未据部分样本计算最终结论。",
         "human": "真实提交：开发 0；自然指令 0。数量不等于可靠标签覆盖。",
         "paperLinks": [
           "http://127.0.0.1:8768/thesis/manuscript_delivery_016/%E5%AE%8C%E6%95%B4%E8%AE%BA%E6%96%87%E9%98%B6%E6%AE%B5%E6%95%B4%E5%90%88%E7%A8%BF.docx",
@@ -23,6 +23,10 @@
         "error": "",
         "unknownText": false,
         "causal_links": [
+          {
+            "path": "/visualizations/causal_development_review_002/index.html",
+            "status": 200
+          },
           {
             "path": "/statistics/causal_mapping_full_001/report.md",
             "status": 200
@@ -56,6 +60,30 @@
             "status": 200
           },
           {
+            "path": "/statistics/causal_fault_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/faults/causal_fault_full_001/audit_001/report.md",
+            "status": 200
+          },
+          {
+            "path": "/faults/causal_fault_full_001/audit_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/statistics/causal_modules_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/statistics/causal_mapping_parameters_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/visualizations/causal_development_review_002/review_manifest.json",
+            "status": 200
+          },
+          {
             "path": "/statistics/causal_mapping_full_001/report.json",
             "status": 200
           },
@@ -68,7 +96,51 @@
             "status": 200
           },
           {
-            "path": "/source_bundle/causal_sensitivity_audit_001/report.json",
+            "path": "/statistics/causal_fault_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/faults/causal_fault_full_001/audit_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/faults/causal_fault_full_001/audit_001/report.md",
+            "status": 200
+          },
+          {
+            "path": "/performance/causal_selection_parameters_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/statistics/causal_mapping_parameters_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/performance/causal_road_groups_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/source_bundle/causal_sensitivity_full_001/complete.json",
+            "status": 200
+          },
+          {
+            "path": "/source_bundle/causal_module_parameter_audit_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/ablations/causal_modules_full_001/summary.json",
+            "status": 200
+          },
+          {
+            "path": "/statistics/causal_modules_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/statistics/causal_modules_motion_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/source_bundle/causal_module_parameter_audit_001/report.json",
             "status": 200
           },
           {
@@ -116,27 +188,23 @@
             "status": 200
           },
           {
-            "path": "/task_protocol/development_causal_ablations_001.md",
-            "status": 200
-          },
-          {
-            "path": "/faults/causal_fault_smoke_001/summary.json",
-            "status": 200
-          },
-          {
-            "path": "/ablations/causal_modules_smoke_001/summary.json",
-            "status": 200
-          },
-          {
-            "path": "/ablations/causal_maps_smoke_001/summary.json",
-            "status": 200
-          },
-          {
-            "path": "/ablations/causal_goals_smoke_001/summary.json",
-            "status": 200
-          },
-          {
             "path": "/source_bundle/causal_ablations_full_001/release.json",
+            "status": 200
+          },
+          {
+            "path": "/source_bundle/causal_ablations_full_001/modules_exit.json",
+            "status": 200
+          },
+          {
+            "path": "/source_bundle/causal_sensitivity_full_001/complete.json",
+            "status": 200
+          },
+          {
+            "path": "/faults/causal_fault_full_001/audit_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/source_bundle/causal_module_parameter_audit_001/report.json",
             "status": 200
           },
           {
@@ -177,6 +245,46 @@
           },
           {
             "path": "/source_bundle/causal_sensitivity_negative_only_001/complete.json",
+            "status": 200
+          },
+          {
+            "path": "/visualizations/thesis_portal_004/causal_evidence.json",
+            "status": 200
+          },
+          {
+            "path": "/mapping_evaluation/causal_motion_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/statistics/causal_motion_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/statistics/causal_motion_full_001/common_motion_by_log.csv",
+            "status": 200
+          },
+          {
+            "path": "/task_protocol/development_causal_diagnostics_001.md",
+            "status": 200
+          },
+          {
+            "path": "/annotation/causal_dev_evidence_001/index.json",
+            "status": 200
+          },
+          {
+            "path": "/annotation/causal_dev_evidence_001/error_inventory.jsonl",
+            "status": 200
+          },
+          {
+            "path": "/annotation/causal_dev_evidence_001/audit_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/visualizations/causal_development_review_002/index.html",
+            "status": 200
+          },
+          {
+            "path": "/visualizations/causal_review_browser_canonical_002/report.json",
             "status": 200
           }
         ]
@@ -187,9 +295,9 @@
       "viewport": "mobile",
       "result": {
         "overflow": false,
-        "statusRows": 36,
+        "statusRows": 40,
         "goal": "Goal仍在进行 · 必需条件未全部满足",
-        "main": "已保存尝试记录 220 / 450；尚未据部分样本计算最终结论。",
+        "main": "已保存尝试记录 253 / 450；尚未据部分样本计算最终结论。",
         "human": "真实提交：开发 0；自然指令 0。数量不等于可靠标签覆盖。",
         "paperLinks": [
           "http://127.0.0.1:8768/thesis/manuscript_delivery_016/%E5%AE%8C%E6%95%B4%E8%AE%BA%E6%96%87%E9%98%B6%E6%AE%B5%E6%95%B4%E5%90%88%E7%A8%BF.docx",
@@ -205,6 +313,10 @@
         "error": "",
         "unknownText": false,
         "causal_links": [
+          {
+            "path": "/visualizations/causal_development_review_002/index.html",
+            "status": 200
+          },
           {
             "path": "/statistics/causal_mapping_full_001/report.md",
             "status": 200
@@ -238,6 +350,30 @@
             "status": 200
           },
           {
+            "path": "/statistics/causal_fault_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/faults/causal_fault_full_001/audit_001/report.md",
+            "status": 200
+          },
+          {
+            "path": "/faults/causal_fault_full_001/audit_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/statistics/causal_modules_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/statistics/causal_mapping_parameters_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/visualizations/causal_development_review_002/review_manifest.json",
+            "status": 200
+          },
+          {
             "path": "/statistics/causal_mapping_full_001/report.json",
             "status": 200
           },
@@ -250,7 +386,51 @@
             "status": 200
           },
           {
-            "path": "/source_bundle/causal_sensitivity_audit_001/report.json",
+            "path": "/statistics/causal_fault_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/faults/causal_fault_full_001/audit_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/faults/causal_fault_full_001/audit_001/report.md",
+            "status": 200
+          },
+          {
+            "path": "/performance/causal_selection_parameters_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/statistics/causal_mapping_parameters_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/performance/causal_road_groups_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/source_bundle/causal_sensitivity_full_001/complete.json",
+            "status": 200
+          },
+          {
+            "path": "/source_bundle/causal_module_parameter_audit_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/ablations/causal_modules_full_001/summary.json",
+            "status": 200
+          },
+          {
+            "path": "/statistics/causal_modules_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/statistics/causal_modules_motion_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/source_bundle/causal_module_parameter_audit_001/report.json",
             "status": 200
           },
           {
@@ -298,27 +478,23 @@
             "status": 200
           },
           {
-            "path": "/task_protocol/development_causal_ablations_001.md",
-            "status": 200
-          },
-          {
-            "path": "/faults/causal_fault_smoke_001/summary.json",
-            "status": 200
-          },
-          {
-            "path": "/ablations/causal_modules_smoke_001/summary.json",
-            "status": 200
-          },
-          {
-            "path": "/ablations/causal_maps_smoke_001/summary.json",
-            "status": 200
-          },
-          {
-            "path": "/ablations/causal_goals_smoke_001/summary.json",
-            "status": 200
-          },
-          {
             "path": "/source_bundle/causal_ablations_full_001/release.json",
+            "status": 200
+          },
+          {
+            "path": "/source_bundle/causal_ablations_full_001/modules_exit.json",
+            "status": 200
+          },
+          {
+            "path": "/source_bundle/causal_sensitivity_full_001/complete.json",
+            "status": 200
+          },
+          {
+            "path": "/faults/causal_fault_full_001/audit_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/source_bundle/causal_module_parameter_audit_001/report.json",
             "status": 200
           },
           {
@@ -359,6 +535,46 @@
           },
           {
             "path": "/source_bundle/causal_sensitivity_negative_only_001/complete.json",
+            "status": 200
+          },
+          {
+            "path": "/visualizations/thesis_portal_004/causal_evidence.json",
+            "status": 200
+          },
+          {
+            "path": "/mapping_evaluation/causal_motion_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/statistics/causal_motion_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/statistics/causal_motion_full_001/common_motion_by_log.csv",
+            "status": 200
+          },
+          {
+            "path": "/task_protocol/development_causal_diagnostics_001.md",
+            "status": 200
+          },
+          {
+            "path": "/annotation/causal_dev_evidence_001/index.json",
+            "status": 200
+          },
+          {
+            "path": "/annotation/causal_dev_evidence_001/error_inventory.jsonl",
+            "status": 200
+          },
+          {
+            "path": "/annotation/causal_dev_evidence_001/audit_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/visualizations/causal_development_review_002/index.html",
+            "status": 200
+          },
+          {
+            "path": "/visualizations/causal_review_browser_canonical_002/report.json",
             "status": 200
           }
         ]

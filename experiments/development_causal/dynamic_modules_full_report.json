@@ -1,0 +1,254 @@
+{
+  "conditions": {
+    "full": {
+      "recall": {
+        "estimate": 0.30054167394723047,
+        "ci95": [
+          0.22977846781302136,
+          0.3551782704323631
+        ],
+        "valid_resamples": 4000
+      },
+      "precision": {
+        "estimate": 0.44046094750320103,
+        "ci95": [
+          0.38506571045415794,
+          0.49976781040785107
+        ],
+        "valid_resamples": 4000
+      },
+      "center_error_m_mean": {
+        "estimate": 1.282402657602408,
+        "ci95": [
+          1.180288605522706,
+          1.3814937392521782
+        ],
+        "valid_resamples": 4000
+      },
+      "identity_switch_rate": {
+        "estimate": 0.030464584920030464,
+        "ci95": [
+          0.017581906729634004,
+          0.044343193666575215
+        ],
+        "valid_resamples": 4000
+      },
+      "duplicates_per_gt_observation": {
+        "estimate": 0.006989341254586755,
+        "ci95": [
+          0.0030805046069089263,
+          0.01061075749269795
+        ],
+        "valid_resamples": 4000
+      }
+    },
+    "without_dynamic_maintenance": {
+      "recall": {
+        "estimate": 0.24847108160055914,
+        "ci95": [
+          0.19496173299859196,
+          0.29306526528563254
+        ],
+        "valid_resamples": 4000
+      },
+      "precision": {
+        "estimate": 0.30960156760287394,
+        "ci95": [
+          0.2547377328301701,
+          0.36354386412828466
+        ],
+        "valid_resamples": 4000
+      },
+      "center_error_m_mean": {
+        "estimate": 1.349629233499917,
+        "ci95": [
+          1.2766080678106322,
+          1.4536762914817447
+        ],
+        "valid_resamples": 4000
+      },
+      "identity_switch_rate": {
+        "estimate": 0.035015447991761074,
+        "ci95": [
+          0.012987012987012988,
+          0.05344927826784283
+        ],
+        "valid_resamples": 4000
+      },
+      "duplicates_per_gt_observation": {
+        "estimate": 0.003319937095928709,
+        "ci95": [
+          0.0015725754994544015,
+          0.005257692697019832
+        ],
+        "valid_resamples": 4000
+      }
+    },
+    "without_short_term_expiry": {
+      "recall": {
+        "estimate": 0.30054167394723047,
+        "ci95": [
+          0.23008737488889747,
+          0.35487672434899176
+        ],
+        "valid_resamples": 4000
+      },
+      "precision": {
+        "estimate": 0.4015876721923885,
+        "ci95": [
+          0.3437400720918866,
+          0.4618343176478059
+        ],
+        "valid_resamples": 4000
+      },
+      "center_error_m_mean": {
+        "estimate": 1.2880135584675443,
+        "ci95": [
+          1.1834281787982222,
+          1.3818972987614602
+        ],
+        "valid_resamples": 4000
+      },
+      "identity_switch_rate": {
+        "estimate": 0.038871951219512195,
+        "ci95": [
+          0.01871427914744955,
+          0.05227309863339275
+        ],
+        "valid_resamples": 4000
+      },
+      "duplicates_per_gt_observation": {
+        "estimate": 0.0076882753800454305,
+        "ci95": [
+          0.0033336131564142904,
+          0.011617671453282552
+        ],
+        "valid_resamples": 4000
+      }
+    }
+  },
+  "paired_differences": [
+    {
+      "condition": "without_dynamic_maintenance",
+      "baseline": "full",
+      "metric": "recall",
+      "difference": -0.05207059234667133,
+      "ci95": [
+        -0.06815486881727047,
+        -0.03302850583809112
+      ]
+    },
+    {
+      "condition": "without_dynamic_maintenance",
+      "baseline": "full",
+      "metric": "precision",
+      "difference": -0.1308593799003271,
+      "ci95": [
+        -0.15642818812499373,
+        -0.11046564206518038
+      ]
+    },
+    {
+      "condition": "without_dynamic_maintenance",
+      "baseline": "full",
+      "metric": "center_error_m_mean",
+      "difference": 0.06722657589750902,
+      "ci95": [
+        0.027551843582058644,
+        0.13791828049797777
+      ]
+    },
+    {
+      "condition": "without_dynamic_maintenance",
+      "baseline": "full",
+      "metric": "identity_switch_rate",
+      "difference": 0.00455086307173061,
+      "ci95": [
+        -0.011910584926436447,
+        0.015259473863188131
+      ]
+    },
+    {
+      "condition": "without_dynamic_maintenance",
+      "baseline": "full",
+      "metric": "duplicates_per_gt_observation",
+      "difference": -0.003669404158658046,
+      "ci95": [
+        -0.005847984888564565,
+        -0.0010003881422783103
+      ]
+    },
+    {
+      "condition": "without_short_term_expiry",
+      "baseline": "full",
+      "metric": "recall",
+      "difference": 0.0,
+      "ci95": [
+        -0.0007032493163567341,
+        0.0013040998012125065
+      ]
+    },
+    {
+      "condition": "without_short_term_expiry",
+      "baseline": "full",
+      "metric": "precision",
+      "difference": -0.03887327531081253,
+      "ci95": [
+        -0.06507390556168863,
+        -0.019896306290463434
+      ]
+    },
+    {
+      "condition": "without_short_term_expiry",
+      "baseline": "full",
+      "metric": "center_error_m_mean",
+      "difference": 0.005610900865136381,
+      "ci95": [
+        -0.0020387970922651987,
+        0.010817278916311093
+      ]
+    },
+    {
+      "condition": "without_short_term_expiry",
+      "baseline": "full",
+      "metric": "identity_switch_rate",
+      "difference": 0.00840736629948173,
+      "ci95": [
+        0.0,
+        0.014210770379005352
+      ]
+    },
+    {
+      "condition": "without_short_term_expiry",
+      "baseline": "full",
+      "metric": "duplicates_per_gt_observation",
+      "difference": 0.0006989341254586756,
+      "ci95": [
+        0.0,
+        0.0011580943652077537
+      ]
+    }
+  ],
+  "source_release_sha256": "0ac9877e383fdf4ed6fd1e2ec0fb81ec18e7db5c06d414f738ca6b2e40225ca3",
+  "source_cases_sha256": "f0d5c15a1f21110b44889504646054187cada1dda938b730ae44dc56535d4c07",
+  "source_summary_sha256": "9d8655dcb3b6bcb6a5053dda22c52a7acfd6c4778842954472eb00a03390cec7",
+  "statistics_source_sha256": "ea02a63c815b229a9d1869a388011edfc9995a3e54d5fc643b7d6814d3ad6238",
+  "scenes": 38,
+  "logs": 11,
+  "bootstrap": {
+    "unit": "采集log",
+    "paired": true,
+    "seed": 17,
+    "repetitions": 4000
+  },
+  "limitations": [
+    "使用当前正式完整配置和相同前端；完整seed17记录复用，不增加独立样本",
+    "关闭动态模块也关闭运动元数据更新，unknown不得自动当作static；单独关闭TTL只改变过期策略",
+    "中心距离一对一诊断，不将全部未匹配预测叫作已确认误检或全部多身份关联叫作真实错合并",
+    "仅开发建图；未执行车辆或开启新封存测试，未改变正在运行的导航源码与配置",
+    "CPU与其他作业共享，无独占性能信用"
+  ],
+  "independent_test": false,
+  "actual_arrival_evaluated": false,
+  "goal_complete": false
+}

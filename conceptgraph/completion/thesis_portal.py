@@ -20,7 +20,7 @@ HTML = '''<!doctype html><html lang="zh-CN"><meta charset="utf-8">
 <p>当前入口汇集开发实验、运行中的完整矩阵、论文阶段稿与人工核验。新封存测试的开放和完成状态以验收文件为准。</p>
 <div class="four"><div><strong>生成路线</strong>规划器给出目标路径。</div><div><strong>选对对象</strong>独立关联到可接受实例。</div><div><strong>正确锁定</strong>持续观测确认正确身份。</div><div><strong>实际到达</strong>执行后满足身份、区域、姿态、速度与保持时间。</div></div>
 <div class="grid"><section><h2>完整真实时钟比较</h2><p id="main-progress">读取中</p><p id="main-last" class="muted"></p><p>50个冻结任务 × 3种子 × 规则/原始Qwen/新Adapter，共450次。完整结束前不展示总体优劣结论。</p><div class="links"><a href="/interactive_simulation/realtime_three_model_full_001/release.json">运行协议与源码指纹</a><a href="/interactive_simulation/realtime_three_model_full_001/trial_records.jsonl">全部已尝试记录</a><a href="/statistics/realtime_three_model_full_001/report.json">全量统计（完成后）</a></div><p class="muted">随后三种缺一语义条件新增450次，核验同版后与300份共享记录组成750条件；等待和复用不增加独立任务数。</p></section>
-<section><h2>真实人工核验</h2><p id="human">读取中</p><p>439条原始自然指令及开发证据可提交审核。自动证据、官方标签和真实人工记录分别保存；unknown不补写成肯定标签。</p><div class="links"><a href="/annotation/natural_command_review_001/index.html">打开自然指令核验页</a><a href="/visualizations/review.html">打开开发证据核验页</a></div><p class="muted">审核会写入单独的追加记录。当前同意使用页面不等于已产生审核结论。</p></section></div>
+<section><h2>真实人工核验</h2><p id="human">读取中</p><p>439条原始自然指令及开发证据可提交审核。自动证据、官方标签和真实人工记录分别保存；unknown不补写成肯定标签。</p><div class="links"><a href="/annotation/natural_command_review_001/index.html">打开自然指令核验页</a><a href="/visualizations/causal_development_review_002/index.html">打开过去LiDAR开发核验页</a><a href="/visualizations/review.html">旧开发核验页（旧深度输入）</a></div><p class="muted">审核会写入单独的追加记录。当前同意使用页面不等于已产生审核结论。</p></section></div>
 <section><h2>论文与可复现入口</h2><div id="paper-links" class="links"></div><p id="paper-status" class="muted"></p><div class="links"><a href="/visualizations/navigation_demo_004/index.html">三维感知与车辆执行查看器</a><a href="/reproducible_commands.md">复现及续跑命令</a><a href="/experiment_report.md">实验记录</a><a href="/remaining_issues.md">剩余必需工作</a><a href="/validation_report.json">逐项验收证据</a><a href="/baseline_verification.json">历史产物保护核验</a></div><p class="muted">查看器中的回放速度不是实时性能；163条保存开发试验包含重复复测，不增加独立样本。运行中的新矩阵尚未全部加入该查看器。</p></section>
 <section><h2>历史离线开发消融：旧未来LiDAR输入</h2><p>以下保留旧诊断口径；不能与新的过去LiDAR成绩混用，也不获得因果在线感知信用。</p><div class="scroll"><table><thead><tr><th>实验</th><th>真实记录与限制</th><th>证据</th></tr></thead><tbody>
 <tr><td>六种地图约束</td><td>38场景、212查询、1272次规划；176个不同几何查询。正确对象参考点由GT给定；完整约束仍有3条独立连接审计失败，静态矩形姿态全部未通过，未执行控制。</td><td><a href="/statistics/map_constraints_dev_full_001/report.json">统计</a><br><a href="/thesis/figures_constraints_002/图6-6.pdf">矢量图</a></td></tr>
@@ -124,7 +124,38 @@ def causal_section():
             '<a href="/ablations/causal_selection_ablation_full_001/report.json">关系边/证据消融</a>'
             '<a href="/performance/causal_road_groups_full_001/report.json">道路分组与样本量</a>'
             '<a href="/source_bundle/causal_sensitivity_audit_001/report.json">全查询完整性复核</a></div>')
-    note += '<p class="muted">录制故障、关联门限、动态模块及地图消融的后续批次按冻结队列推进；未完成的不按成功补齐。新封存测试仍未开启，本页无车辆到达信用。</p></section>'
+    fault = OUTPUT/'statistics/causal_fault_full_001/report.json'
+    fault_audit = OUTPUT/'faults/causal_fault_full_001/audit_001/report.json'
+    if fault.exists() and fault_audit.exists():
+        values = json.loads(fault.read_text())
+        audit = json.loads(fault_audit.read_text())
+        if not audit['passed'] or audit['statistics_sha256'] != digest(fault):
+            raise ValueError('故障统计与独立重算不一致')
+        paths += [fault, fault_audit]
+        def fault_delta(condition, metric, factor=1):
+            row = next(row for row in values['paired_differences']
+                if row['condition'] == condition and row['metric'] == metric)
+            return (f'{factor*row["difference"]:+.3f} '
+                f'[{factor*row["ci95"][0]:+.3f}, {factor*row["ci95"][1]:+.3f}]')
+        note += ('<h3>过去LiDAR录制故障：完整684次重建</h3>'
+            f'<p>{audit["actual_frame_condition_records"]}条实际帧条件记录全部独立重算，'
+            '38场景、11log、三种子不增加独立场景数。'
+            f'LiDAR丢失80%时召回差{fault_delta("lidar_dropout_80pct", "recall", 100)}个百分点；'
+            f'位姿扰动中心误差差{fault_delta("pose_noise_025m_2deg", "center_error_m_mean")}m。'
+            '括号为配对95%区间；合成缺失/白噪声未经真实传感器标定，不能代替闭环故障恢复。</p>'
+            '<div class="links"><a href="/statistics/causal_fault_full_001/report.json">六条件统计与区间</a>'
+            '<a href="/faults/causal_fault_full_001/audit_001/report.md">可读结果表</a>'
+            '<a href="/faults/causal_fault_full_001/audit_001/report.json">全帧独立重算</a></div>')
+    for title, report_path in [
+            ('动态维护/TTL完整建图消融', 'statistics/causal_modules_full_001/report.json'),
+            ('关联门限完整敏感性', 'statistics/causal_mapping_parameters_full_001/report.json'),
+            ('六地图约束完整开发诊断', 'statistics/causal_maps_full_001/report.json')]:
+        report = OUTPUT/report_path
+        if report.exists():
+            paths.append(report)
+            note += (f'<p><a href="/{html.escape(report_path)}">{title}</a>：'
+                '完整报告已生成，详见同版记录、分母、负结果与区间；不计车辆执行到达。</p>')
+    note += '<p class="muted">关联门限、动态模块及地图消融按冻结队列推进；未完成的不按成功补齐。新封存测试仍未开启，本页无车辆到达信用。</p></section>'
     return note, {str(path.relative_to(OUTPUT)): digest(path) for path in paths}
 
 
