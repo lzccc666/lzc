@@ -1,0 +1,315 @@
+{
+  "updated_utc": "2026-11-12T11:22:57.770596+00:00",
+  "goal_complete": false,
+  "stage9_complete": false,
+  "stage10_complete": false,
+  "stage11_complete": false,
+  "stage12_complete": false,
+  "new_test_opened": false,
+  "statuses": {
+    "任务定义": {
+      "status": "部分完成",
+      "evidence": [
+        "task_protocol/protocol_v1.json"
+      ],
+      "remaining": "独立到达评价器已接入运动学和三维渲染的真实前端闭环；完整任务和异步语义验证待完成"
+    },
+    "数据独立性": {
+      "status": "部分完成",
+      "evidence": [
+        "splits/split_audit_002/report.json",
+        "splits/reserved_crop_audit_001/report.json"
+      ],
+      "remaining": "30场景14新log1196帧；与历史同城轨迹至少50m；全图精确/近似0；4325新官方crop对9986历史官方crop+521真实训练验证crop，精确重复0、双哈希近似候选0；小/跨近裁面目标与视角变化限制单列，最终检测crop和自然表达审计仍缺"
+    },
+    "标签覆盖": {
+      "status": "材料及服务就绪，真实审核未完成",
+      "evidence": [
+        "annotation/corrected_dev_evidence_001/index.json",
+        "annotation/natural_command_review_001/manifest.json",
+        "annotation/natural_command_review_001/browser_qa_001/report.json",
+        "annotation/reference_regions_reserved_full_003/acceptance_001.json"
+      ],
+      "remaining": "开发114帧证据包及439原始自然指令核验页可提交；后者覆盖30场景360原图410个不同像素裁剪，逐像素核验通过。桌面/手机无溢出，未知为默认，源SHA验证及空审核者拒绝通过。当前开发人工记录0，自然指令人工记录0；数量不等于一致性/可靠标签，测试不生成伪人工记录，真实标注和复核未完成；独立静态区域307/422正查询获证，115未知；后续81条查询有独立条件控制证书、797条仍未知；静态区域不直接当可达标签，人工颜色/细属性和歧义审核仍未齐"
+    },
+    "对象图质量": {
+      "status": "部分完成",
+      "evidence": [
+        "mapping_evaluation/corrected_mapping_full_001/summary.json",
+        "statistics/robust_motion_001/report.json",
+        "mapping_evaluation/motion_robust_001/report.json"
+      ],
+      "remaining": "统一修正前端38场景1508帧及六条件已完成；深度聚类提升定位，但身份和运动分类仍有取舍；给定正确对象的300次执行诊断已完成；精确实例人工审核待真实提交；原1508输入存在帧内未来LiDAR，保留为离线配对诊断，不能计严格因果在线成绩"
+    },
+    "新训练": {
+      "status": "部分完成",
+      "evidence": [
+        "semantic_dataset/structured_supervision_002/manifest.json",
+        "training/three_task_v2_formal_seed17_001/training_report.json",
+        "training/three_task_v2_formal_seed29_001/training_report.json",
+        "training/three_task_v2_formal_seed43_001/training_report.json"
+      ],
+      "remaining": "首版三种子均完成；第二版统一v3三任务2398训练/603验证，正式种子已完成[17, 29, 43]；排序含720/180行但去置换只有120/44案例、20独立符号bank，无真实道路或人工颜色信用"
+    },
+    "公平模型对照": {
+      "status": "开发公平验证完成，整体部分完成",
+      "evidence": [
+        "main_experiments/fair_three_task_full_validation_001/report.json",
+        "statistics/fair_three_task_full_validation_001/report.json"
+      ],
+      "remaining": "五模型各603相同请求真实CUDA及三任务缓存0新增调用全部完成。新三种子完整解析均150/180；类别227/226/231（分母243），受控排序57/51/51（分母180）。只含2个真实验证log与6个符号bank，不是道路排序、自然指令或下游提升；主比较/消融仍缺"
+    },
+    "真实GPU": {
+      "status": "部分完成",
+      "evidence": [
+        "mapping_evaluation/frontend_corrected_dev_001/complete.json",
+        "training/structured_smoke_002/training_report.json",
+        "training/structured_formal_seed17_001/training_report.json",
+        "training/structured_formal_seed29_001/training_report.json",
+        "training/structured_formal_seed43_001/training_report.json"
+      ],
+      "remaining": "真实YOLO/MobileSAM/CLIP重跑1508帧，新Qwen CUDA训练smoke已完成；正式结果以各run原始报告为准"
+    },
+    "运动学执行": {
+      "status": "部分完成",
+      "evidence": [
+        "vehicle_execution/kinematic_oracle_full_001/summary.json",
+        "statistics/kinematic_oracle_001/report.json"
+      ],
+      "remaining": "50任务×3种子×2规划器300次完成；给定正确对象时Hybrid到达70/90，点A*62/90，差异配置聚类CI跨0；不是实际语义成绩"
+    },
+    "交互感知闭环": {
+      "status": "部分完成",
+      "evidence": [
+        "interactive_simulation/interactive_rule_full_002/results.jsonl",
+        "interactive_simulation/realtime_three_model_full_001/release.json"
+      ],
+      "remaining": "150次真实规则感知闭环已完成150次；完整结果结束=True。真实3D/16束LiDAR/同前端/增量图/车辆执行，不是沿线动画；原中断run及终止制动修复保留。三模型完整对照仍待完成"
+    },
+    "正确到达": {
+      "status": "最低功能通过，整体部分完成",
+      "evidence": [
+        "interactive_simulation/interactive_rule_full_002/summary.json",
+        "statistics/interactive_rule_full_002/report.json"
+      ],
+      "remaining": "完整50任务×3种子=150次规则感知闭环；90可达正任务路线68、选对对象90、正确锁定79、到达21；13不同正任务/8配置，满足10任务/5配置最低门槛，仍需原始Qwen/新Adapter主比较和消融"
+    },
+    "主对比": {
+      "status": "完整开发矩阵进行中，封存未开启",
+      "evidence": [
+        "interactive_simulation/realtime_three_model_full_001/release.json",
+        "interactive_simulation/realtime_three_model_full_001/trial_records.jsonl",
+        "statistics/plan_reuse_pilot_001/report.json"
+      ],
+      "remaining": "冻结50任务×3种子×规则/base/new共450次，当前已保存162/450。所有角色相同前端、执行器、90秒预算与候选安全验证；单模型进程、源码冻结、失败不自动重试。预算24小时/20GB，磁盘低于6GB停止。单任务路线复用pilot规则/base到达、new超时，三者路线/选对/正确锁定成立，重排均0应用，不能据此宣称新模型改善。此批为颜色表达合成开发任务，不是新封存测试或复杂自然关系验收"
+    },
+    "独立消融": {
+      "status": "部分完成",
+      "evidence": [
+        "mapping_evaluation/dev_factorial_002/summary.json",
+        "ablations/relation_evidence_dev_001/report.json",
+        "ablations/semantic_navigation_chain_001/release.json",
+        "statistics/map_constraints_dev_full_001/report.json",
+        "statistics/mapping_modules_dev_full_001/report.json",
+        "statistics/mapping_modules_motion_dev_full_001/report.json",
+        "ablations/goal_selection_dev_full_001/pairing_audit_001.json"
+      ],
+      "remaining": "已完成开发关联因子、关系/选择端证据门限、六地图条件及动态维护/短期过期实际消融，分别保留负结果；首达与联合/去安全接近点离线实验以新report为准。三任务缺一CUDA消融仍等待450主矩阵完成，尚无其模型调用；主比较300共享条件加450新缺一条件合成750项，不把排队视为完成。全部封存独立消融待验收；首达/联合/去安全接近点离线1115查询×3条件3345记录及配对核验已完成，非Hybrid控制或封存主表，不授予实际到达信用"
+    },
+    "故障安全": {
+      "status": "录制扰动全量完成，整体部分完成",
+      "evidence": [
+        "faults/recorded_fault_full_001/summary.json",
+        "statistics/recorded_fault_full_001/report.json",
+        "statistics/realtime_three_model_smoke_003/report.json"
+      ],
+      "remaining": "38场景×3种子×6条件684次录制扰动及11log配对4000次bootstrap完成。LiDAR点缺失80%召回降低16.79个百分点；位姿噪声中心误差增加0.210m，配对区间0.187—0.253m。深度噪声小差异区间跨0。不是重新检测或到达实验，不为动态交通安全提供信用；完整真实时钟故障/主比较仍需完成"
+    },
+    "缓存": {
+      "status": "冻结请求复跑完成，整体部分完成",
+      "evidence": [
+        "main_experiments/fair_three_task_full_validation_001/report.json"
+      ],
+      "remaining": "五模型×解析180/属性243/排序180的冻结请求全部复跑0新增调用。真实时钟产生不同请求与轨迹，未声称导航缓存复跑业务哈希一致；完整闭环缓存协议验收仍缺"
+    },
+    "统计": {
+      "status": "部分完成",
+      "evidence": [
+        "statistics/robust_motion_001/report.json",
+        "statistics/kinematic_oracle_002/report.json",
+        "statistics/interactive_rule_full_002/report.json",
+        "statistics/retrieval_baselines_dev_full_001/report.json",
+        "statistics/fair_three_task_full_validation_001/report.json",
+        "statistics/recorded_fault_full_001/report.json",
+        "statistics/map_constraints_dev_full_001/report.json",
+        "statistics/mapping_modules_dev_full_001/report.json",
+        "statistics/mapping_modules_motion_dev_full_001/report.json",
+        "ablations/goal_selection_dev_full_001/report.json"
+      ],
+      "remaining": "录制按log、执行按配置、受控排序按bank配对4000次bootstrap；语义真实验证仅2log，区间离散且不足泛化证据。三种子分别报告，未知身份与全部失败保留；封存/完整主比较仍缺"
+    },
+    "性能": {
+      "status": "部分完成",
+      "evidence": [
+        "mapping_evaluation/frontend_corrected_smoke_002/inputs/scene-0038/frontend_complete.json"
+      ],
+      "remaining": "仅前端开发smoke，完整单模型分阶段性能待测"
+    },
+    "论文": {
+      "status": "部分完成",
+      "evidence": [
+        "thesis/manuscript_delivery_016/delivery_manifest.json",
+        "thesis/manuscript_delivery_016/document_qa_001.json",
+        "thesis/manuscript_delivery_016/pdf_visual_qa_002/findings.json",
+        "thesis/claim_citation_review_015.json"
+      ],
+      "remaining": "第1—7章阶段稿47页、19张第6章三线表Word/Excel/PDF/CSV、7图、11处可编辑OMML公式。表6-19单列条件静态可达参考；4指定页实际目视通过。11处引文表述按一手内容限缩，另核对11组方法细节；A*最优性条件与预算搜索、Hybrid连续搜索来源与本项目前向适配分别说明，85会议/URL修正。删除重复h(n)引文表达使数学对象由12降至11，非公式丢失。85引用连续，全部正文主张仍未核完，无原生Word渲染或学校模板，完整主矩阵/封存/消融仍待验收"
+    },
+    "测试": {
+      "status": "阶段性通过，最终待验收",
+      "evidence": [
+        "source_bundle/tests_full_018.log",
+        "source_bundle/tests_kitti_002.log",
+        "source_bundle/ruff_completion_030.log",
+        "source_bundle/git_diff_check_021.log",
+        "source_bundle/json_snapshot_004/report.json"
+      ],
+      "remaining": "全量286测试通过、5条依赖警告；新增P2第四列/深度偏置、最近实测投影、底面中心转换、匹配/忽略/低支持分母与共同支持误差配对回归。Ruff和diff检查通过。新的JSON快照及完整闭环最终验收待完成"
+    },
+    "旧产物保护": {
+      "status": "阶段性通过",
+      "evidence": [
+        "baseline_before.json",
+        "baseline_verification.json",
+        "source_bundle/protection_verify_008.log"
+      ],
+      "remaining": "2026-11-12 11:12 UTC全量核验255170历史文件，0改动/缺失；主矩阵66冻结源码未改。用户已新增授权将当前代码同步指定GitHub仓库，原checkout分支/索引/dirty与历史材料保留；不发布数据、模型、原论文或凭据"
+    },
+    "可视化": {
+      "status": "部分完成",
+      "evidence": [
+        "visualizations/thesis_portal_003/manifest.json",
+        "visualizations/thesis_portal_browser_qa_003/report.json",
+        "visualizations/reference_reachability_reserved_002/manifest.json",
+        "visualizations/reference_reachability_browser_qa_002/report.json",
+        "visualizations/navigation_demo_004/manifest.json"
+      ],
+      "remaining": "统一只读入口003链接静态区域与条件控制参考，实时读取实际主矩阵、人工记录和论文016。参考页桌面/手机×已获证/unknown/无匹配6组通过，末态滑杆显示真实控制积分状态，0写入/0方法调用；QA001文案断言失败保留。全部GET、无溢出或脚本异常；旧导航查看器仍163试验7106帧，新450矩阵尚未完整更新其中"
+    },
+    "自然指令与输入": {
+      "status": "输入准备完成，标签及评测未完成",
+      "evidence": [
+        "data_manifest/talk2car_source_001/source_manifest.json",
+        "data_manifest/natural_distribution_audit_001/report.json",
+        "data_manifest/natural_original_inputs_full_001/complete.json",
+        "data_manifest/natural_original_inputs_full_001/sensor_qa_001.json",
+        "annotation/natural_command_review_001/manifest.json"
+      ],
+      "remaining": "439条原始英文的360不同相机帧及对应过去LiDAR全部准确准备，720个输出SHA核验通过，30场景14log；最大LiDAR年龄0.016868s，无未来返回/深度填充，原RGB与归档字节相同。176条官方静态属性仍待任务适配与人工属性审核，不能算400条有效静止目标导航指令；封存方法调用0；439条原文人工任务范围/颜色/歧义核验页已就绪，尚无有效人工结论"
+    },
+    "参数与泛化": {
+      "status": "五项开发参数检查完成，整体部分完成",
+      "evidence": [
+        "performance/selection_parameters_dev_001/report.json",
+        "performance/selection_parameters_dev_001/exploratory_subgroups.csv",
+        "performance/association_parameters_dev_full_001/summary.json",
+        "statistics/association_parameters_dev_full_001/report.json",
+        "performance/road_groups_dev_001/report.json"
+      ],
+      "remaining": "选择端Top-K/确认次数/深度支持/拒绝分数9设置×1115查询完成，基线逐查询一致；关联sim_threshold 0.25/0.35/0.45完成38场景114条件，其中76次实际重建、38次复用同seed17完整基线，共1508独立帧。11log配对4000次bootstrap：0.25匹配精确率+1.82个百分点（CI 0.51—2.69），召回差区间含0；0.45召回+0.77个百分点但匹配精确率−13.77、身份切换率+15.47个百分点。评价3m门限未变，未将设置应用到在运行导航。类别/遮挡/距离分组保留；道路泛化、封存和闭环参数效应仍缺；已完成当前位姿与HD先验派生道路探索分组，四方法1115查询全保留；联合规则直路33/279、连接区12/449、弯道0/5，弯道正查询仅2log。不是人工道路标签、组间检验或道路泛化完成证据"
+    },
+    "地图消融": {
+      "status": "开发离线六条件完成，封存未完成",
+      "evidence": [
+        "ablations/map_constraints_dev_full_001/release.json",
+        "ablations/map_constraints_dev_full_001/summary.json",
+        "statistics/map_constraints_dev_full_001/report.json"
+      ],
+      "remaining": "38场景11log，最多每场景6条SHA预选实际212条正查询，176个不同几何查询、1272次实际规划。GT给定对象参考点，非安全终点。仅车道158路线/49完整车道合法，同时方向连接91路线/88合法，仍有3连接审计失败；矩形静态姿态全部未通过，未执行任何去保护条件，不能计锁定/到达或整车安全。封存主表待完成"
+    },
+    "动态维护消融": {
+      "status": "开发独立全量完成，封存未完成",
+      "evidence": [
+        "ablations/mapping_modules_dev_full_001/release.json",
+        "ablations/mapping_modules_dev_full_001/summary.json",
+        "statistics/mapping_modules_dev_full_001/report.json",
+        "statistics/mapping_modules_motion_dev_full_001/report.json"
+      ],
+      "remaining": "38场景1508帧114条件，76次实际重建、38份完整同seed基线复用。减动态维护召回−4.93pp（11log配对CI −6.76至−2.61），中心误差+0.076m；关闭短期过期匹配精确率−3.05pp（CI −4.27至−1.80）。静/动/unknown官方组另存；禁用模块后运动均unknown，不记静态正确。未证明到达收益，封存仍缺"
+    },
+    "引用核验": {
+      "status": "部分完成",
+      "evidence": [
+        "thesis/citation_primary_fetch_009/manifest.json",
+        "thesis/citation_primary_fetch_010/manifest.json",
+        "thesis/citation_primary_fetch_012/manifest.json",
+        "thesis/citation_web_primary_014.json",
+        "thesis/claim_citation_review_015.json"
+      ],
+      "remaining": "当前35引用段已建清单；新收集一手页面/正文，11处引文限缩和11组细节复查已入016。009的69错arXiv、28与010的14/28反爬HTTP200、元数据only均不作内容支持；37全文为扫描，实际查看原页100/103，38和59首面、76首面实际查看。85直接下载/open超时保留，以作者页面和原PDF检索提取限缩来源，不声称全篇逐页取得。不能将旧68项首作者/标题/年份元数据通过当全文支持，全部正文主张尚未完成"
+    },
+    "选择规划消融": {
+      "status": "开发离线三条件完成，封存未完成",
+      "evidence": [
+        "ablations/goal_selection_dev_smoke_001/summary.json",
+        "ablations/goal_selection_dev_full_001/release.json",
+        "ablations/goal_selection_dev_full_001/summary.json",
+        "ablations/goal_selection_dev_full_001/report.json",
+        "ablations/goal_selection_dev_full_001/pairing_audit_001.json"
+      ],
+      "remaining": "全量1115查询×3条件共3345记录完成，联合与首达共享同一批实际规划池，去接近环只离线未执行。逐查询对象、路径、独立车道和矩形静态姿态保留；不计闭环到达或稳定锁定，点车道诊断不能替代Hybrid完整导航或封存主表；独立核对1115组共享实际候选点池与382份窗口/栅格SHA全部通过。联合38/733、首达36/733，差+0.27pp（CI 0—0.62），不认定确定优势；去接近点27/733，37已选终点0个满足预测框外2m，三条件矩形姿态均零通过。所有失败与unknown保留"
+    },
+    "独立静态区域": {
+      "status": "静态区域审计通过，完整可达标签未齐",
+      "evidence": [
+        "annotation/reference_regions_reserved_full_003/acceptance_001.json",
+        "annotation/reference_regions_reserved_full_003/audit_001/report.json",
+        "annotation/reference_regions_reserved_full_003/coverage_by_scene_and_cohort.csv",
+        "task_protocol/static_region_reference_001.md"
+      ],
+      "remaining": "30场景14log、878查询中422正查询，307有至少一个保守整车静态区域，115未知未获证；206正查询帧、603目标帧记录、216不同官方实例，共1647区域。独立原始地图/8620官方盒/163053扰动姿态核验通过。静态证书本身不提供可达结论，后续独立条件证书另列；不是动态交通安全、稳定锁定或实际到达。前两次全量失败保留，尚无人工审核"
+    },
+    "传感器因果性": {
+      "status": "预留输入修正审计完成，封存接入未完成",
+      "evidence": [
+        "data_manifest/development_timestamp_audit_001/report.json",
+        "data_manifest/reserved_timestamp_audit_001/report.json",
+        "data_manifest/reserved_causal_inputs_full_001/complete.json",
+        "data_manifest/reserved_causal_inputs_full_001/audit_001/report.json",
+        "data_manifest/causal_cross_input_audit_002/report.json"
+      ],
+      "remaining": "原开发1508帧LiDAR全部晚于相机33.136—42.356ms，原预留1196帧晚32.989—39.576ms；旧结果仅作离线配对诊断，不计严格因果在线证据。新1196相机原图/位姿保持，1166真实过去扫描、30首帧缺失显式空掩码，未来扫描0，最大年龄62.789ms。独立原始位姿/标定/3682文件SHA核验通过，实际resume零新增归档读取。与自然指令转换链重合44不同相机、47条指令的深度/原扫描SHA全部一致，不增加场景。仍需新封存入口接入及缺测处理，未运行封存方法"
+    },
+    "独立条件可达参考": {
+      "status": "部分条件证书通过，标签未齐",
+      "evidence": [
+        "annotation/reference_reachability_reserved_full_002/acceptance_001.json",
+        "annotation/reference_reachability_reserved_full_002/audit_001/report.json",
+        "annotation/reference_reachability_reserved_full_002/coverage_by_cohort_001.csv",
+        "task_protocol/conditional_reachability_reference_001.md",
+        "visualizations/reference_reachability_browser_qa_002/report.json"
+      ],
+      "remaining": "603目标帧记录完整保留，105控制参考/46142状态独立通过；878查询中81条件可达、797unknown，覆盖10场景，主构造53/600、挑战28/278。前提为已知后轴位置、静止及零转角、当前sample冻结盒、90秒与2秒保持；不是原记录非零速度或未来动态交通安全。旧候选1条车道连接拒绝、18超90秒、0.9秒保持不足均保留。实际车辆/感知导航到达/模型调用新增0，不能以搜索失败自证不可接近"
+    },
+    "KITTI跨数据集诊断": {
+      "status": "本次离线实验完成，非导航验收",
+      "evidence": [
+        "statistics/kitti_object_cpu_full_001/report.json",
+        "statistics/kitti_object_cpu_full_001/common_supported_pairs.json",
+        "visualizations/kitti_object_cpu_full_002/index.html",
+        "visualizations/kitti_browser_qa_002/report.json",
+        "task_protocol/kitti_transfer_001.md"
+      ],
+      "remaining": "固定64帧/33官方原始drive，真实CPU YOLO/MobileSAM/CLIP已完成64次；三类319GT，3m中心匹配247→262，召回77.43%→82.13%，drive配对95%差区间+1.48至+9.07pp；共同支持251对误差1.758→1.540m。卡车误差退化2.768→2.888m，深度未知16→18保留；Cyclist代理单列，不是官方AP、跨帧场景图或导航到达。公开预训练与KITTI重叠未知；封存未开启"
+    },
+    "代码与实验交接": {
+      "status": "材料准备中，整体未验收",
+      "evidence": [
+        "GPT_Work_写作交接.md",
+        "工作交接_代码与实验.md",
+        "source_bundle/github_sync_001/selection.json"
+      ],
+      "remaining": "用户指定GitHub公开仓库已可读，当前代码快照与实验证据交接正在准备；访问凭据只用于授权同步，不写入文件。完整真实时钟主比较、缺一消融、新封存和真实人工审核仍未完成；写作由后续GPT Work开展"
+    }
+  }
+}

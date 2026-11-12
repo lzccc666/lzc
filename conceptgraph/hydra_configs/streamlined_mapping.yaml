@@ -1,0 +1,23 @@
+defaults:
+ - base_mapping
+ - nuscenes
+ - sam
+ - _self_
+
+dataset_root: /root/autodl-tmp/lizichong/dataset/nuscenes_minimal
+scene_id: scene-0061
+
+gsa_variant: streamlined_yolo
+detection_folder_name: exp_${exp_suffix}/detections
+
+stride: 1
+exp_suffix: streamlined_yolo_outdoor_objects_v1
+save_video: false
+match_method: sim_sum
+sim_threshold: 0.0
+min_points_threshold: 8
+obj_min_detections: 1
+enable_dynamic_object_handling: true
+velocity_threshold: 0.5
+frame_dt: 1.0
+center_history_size: 8

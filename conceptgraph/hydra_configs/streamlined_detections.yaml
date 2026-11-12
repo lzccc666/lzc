@@ -1,0 +1,14 @@
+defaults:
+ - base_detections
+ - nuscenes
+ - sam
+ - _self_
+
+dataset_root: /root/autodl-tmp/lizichong/dataset/nuscenes_minimal
+scene_id: scene-0061
+classes_file: /root/autodl-tmp/lizichong/conceptgraph/vehicle_classes.txt
+
+
+stride: 1
+exp_suffix: streamlined_yolo_outdoor_objects_v1
+save_video: true

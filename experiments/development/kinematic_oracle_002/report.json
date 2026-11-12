@@ -1,0 +1,170 @@
+{
+  "source": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/vehicle_execution/kinematic_oracle_full_001/results.jsonl",
+  "source_sha256": "ff015aff766b61f96046f22d288777700bc4f26b5c606d4c7c28ff7783f59c0e",
+  "statistics_source_sha256": "e94fe427c979ca254ac2214cc3268786049f1b5b22b41a3ccea4a86924597214",
+  "trials": 300,
+  "methods": {
+    "hybrid_astar": {
+      "trials": 150,
+      "positive_trials": 90,
+      "positive_arrival": {
+        "estimate": 0.7777777777777778,
+        "ci95": [
+          0.7111111111111111,
+          0.8444444444444444
+        ],
+        "clusters": 10,
+        "denominator": 90,
+        "numerator": 70.0
+      },
+      "positive_route": {
+        "estimate": 0.7777777777777778,
+        "ci95": [
+          0.7111111111111111,
+          0.8444444444444444
+        ],
+        "clusters": 10,
+        "denominator": 90,
+        "numerator": 70.0
+      },
+      "statuses_by_kind": {
+        "inaccessible": {
+          "PLANNING_FAILED": 30
+        },
+        "no_match": {
+          "NO_MATCH_IN_SCOPE": 30
+        },
+        "reachable_positive": {
+          "ARRIVED": 70,
+          "PLANNING_FAILED": 20
+        }
+      },
+      "safety_denominator": "实际轨迹长度>0.01m的试验；原地等待/零路径不增加安全执行信用",
+      "executed_trials": 70,
+      "independent_audits_passed": 70,
+      "safety_rate_among_executed": 1.0,
+      "distinct_positive_tasks_arrived": 26,
+      "configs_with_positive_arrival": 10,
+      "seeds": {
+        "17": {
+          "positive_trials": 30,
+          "arrivals": 21,
+          "statuses": {
+            "ARRIVED": 21,
+            "PLANNING_FAILED": 9
+          }
+        },
+        "29": {
+          "positive_trials": 30,
+          "arrivals": 26,
+          "statuses": {
+            "ARRIVED": 26,
+            "PLANNING_FAILED": 4
+          }
+        },
+        "43": {
+          "positive_trials": 30,
+          "arrivals": 23,
+          "statuses": {
+            "ARRIVED": 23,
+            "PLANNING_FAILED": 7
+          }
+        }
+      }
+    },
+    "point_astar": {
+      "trials": 150,
+      "positive_trials": 90,
+      "positive_arrival": {
+        "estimate": 0.6888888888888889,
+        "ci95": [
+          0.5666666666666667,
+          0.8111111111111111
+        ],
+        "clusters": 10,
+        "denominator": 90,
+        "numerator": 62.0
+      },
+      "positive_route": {
+        "estimate": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "clusters": 10,
+        "denominator": 90,
+        "numerator": 90.0
+      },
+      "statuses_by_kind": {
+        "inaccessible": {
+          "PLANNING_FAILED": 30
+        },
+        "no_match": {
+          "NO_MATCH_IN_SCOPE": 30
+        },
+        "reachable_positive": {
+          "ARRIVED": 62,
+          "EXECUTION_FAILED": 28
+        }
+      },
+      "safety_denominator": "实际轨迹长度>0.01m的试验；原地等待/零路径不增加安全执行信用",
+      "executed_trials": 90,
+      "independent_audits_passed": 90,
+      "safety_rate_among_executed": 1.0,
+      "distinct_positive_tasks_arrived": 22,
+      "configs_with_positive_arrival": 10,
+      "seeds": {
+        "17": {
+          "positive_trials": 30,
+          "arrivals": 20,
+          "statuses": {
+            "ARRIVED": 20,
+            "EXECUTION_FAILED": 10
+          }
+        },
+        "29": {
+          "positive_trials": 30,
+          "arrivals": 21,
+          "statuses": {
+            "ARRIVED": 21,
+            "EXECUTION_FAILED": 9
+          }
+        },
+        "43": {
+          "positive_trials": 30,
+          "arrivals": 21,
+          "statuses": {
+            "ARRIVED": 21,
+            "EXECUTION_FAILED": 9
+          }
+        }
+      }
+    }
+  },
+  "paired_positive_arrival_differences": {
+    "hybrid_astar minus point_astar": {
+      "estimate": 0.08888888888888889,
+      "ci95": [
+        -0.07777777777777778,
+        0.25555555555555554
+      ],
+      "clusters": 10,
+      "denominator": 90,
+      "numerator": 8.0
+    }
+  },
+  "bootstrap": {
+    "unit": "synthetic scene configuration",
+    "repetitions": 4000,
+    "seed": 17
+  },
+  "gt_assisted_correct_object": true,
+  "full_perception_minimum_arrival_credit": 0,
+  "limitations": [
+    "10参数配置源自3种共享走廊家族；配置并非独立城市",
+    "帧、调用及seed不增加独立场景/任务计数",
+    "不给规划失败或没有执行的任务100%安全信用",
+    "给定正确对象的无匹配拒绝是GT上限，不能评价实际语义拒绝能力"
+  ],
+  "goal_complete": false
+}

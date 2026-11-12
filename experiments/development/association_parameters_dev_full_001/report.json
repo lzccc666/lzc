@@ -1,0 +1,267 @@
+{
+  "source_run": "association_parameters_dev_full_001",
+  "release_sha256": "cdb605ced7248f0f83d4d55fdaee09e218e56d36a4cf4386ff22c4ef8f02f671",
+  "summary_sha256": "2856949fddb355ce6c82d78cd40489751374cf7d792e0458f6dddd258cb4612a",
+  "case_records_sha256": "01516f123a1038781b3ee5dcad319ec5b6d1162d78822f7d46c24527f9db26d6",
+  "statistics_source_sha256": "531906bbfbf9807b091c992f95a4565de66e25555933432a239f97521db40bd6",
+  "scenes": 38,
+  "logs": 11,
+  "input_frames": 1508,
+  "cases": 114,
+  "conditions": {
+    "0.25": {
+      "recall": {
+        "estimate": 0.32028656299143804,
+        "ci95": [
+          0.24798590175109086,
+          0.37705245554612127
+        ],
+        "valid_resamples": 4000
+      },
+      "precision": {
+        "estimate": 0.445985401459854,
+        "ci95": [
+          0.3827983715622319,
+          0.5117910578798045
+        ],
+        "valid_resamples": 4000
+      },
+      "center_error_m_mean": {
+        "estimate": 1.2398871437742078,
+        "ci95": [
+          1.1585266977942583,
+          1.320649061633482
+        ],
+        "valid_resamples": 4000
+      },
+      "identity_switch_rate": {
+        "estimate": 0.03701067615658363,
+        "ci95": [
+          0.019416453325263164,
+          0.050516115225724814
+        ],
+        "valid_resamples": 4000
+      },
+      "duplicates_per_gt_observation": {
+        "estimate": 0.0064651406604927485,
+        "ci95": [
+          0.002761082625545913,
+          0.009914114399406393
+        ],
+        "valid_resamples": 4000
+      }
+    },
+    "0.35": {
+      "recall": {
+        "estimate": 0.3194128953346147,
+        "ci95": [
+          0.24762050223340704,
+          0.37596217087580397
+        ],
+        "valid_resamples": 4000
+      },
+      "precision": {
+        "estimate": 0.42780248069272175,
+        "ci95": [
+          0.36355079540612667,
+          0.4990659017515345
+        ],
+        "valid_resamples": 4000
+      },
+      "center_error_m_mean": {
+        "estimate": 1.2395832046811313,
+        "ci95": [
+          1.1566107564634582,
+          1.3202753266552993
+        ],
+        "valid_resamples": 4000
+      },
+      "identity_switch_rate": {
+        "estimate": 0.03642857142857143,
+        "ci95": [
+          0.02139985900137162,
+          0.05270318076288423
+        ],
+        "valid_resamples": 4000
+      },
+      "duplicates_per_gt_observation": {
+        "estimate": 0.00926087716232745,
+        "ci95": [
+          0.004585168011379405,
+          0.015140057292130055
+        ],
+        "valid_resamples": 4000
+      }
+    },
+    "0.45": {
+      "recall": {
+        "estimate": 0.32710117071466016,
+        "ci95": [
+          0.25257545609838594,
+          0.38442207970568165
+        ],
+        "valid_resamples": 4000
+      },
+      "precision": {
+        "estimate": 0.2900976290097629,
+        "ci95": [
+          0.24329987385800203,
+          0.3431404261224904
+        ],
+        "valid_resamples": 4000
+      },
+      "center_error_m_mean": {
+        "estimate": 1.225495221265602,
+        "ci95": [
+          1.1402139113161682,
+          1.3047233187668676
+        ],
+        "valid_resamples": 4000
+      },
+      "identity_switch_rate": {
+        "estimate": 0.19116632160110422,
+        "ci95": [
+          0.1293003140511868,
+          0.23540899102576152
+        ],
+        "valid_resamples": 4000
+      },
+      "duplicates_per_gt_observation": {
+        "estimate": 0.052420059409400664,
+        "ci95": [
+          0.03291318779738535,
+          0.07386536789769092
+        ],
+        "valid_resamples": 4000
+      }
+    }
+  },
+  "paired_differences": [
+    {
+      "threshold": 0.25,
+      "baseline": 0.35,
+      "metric": "recall",
+      "difference": 0.0008736676568233404,
+      "ci95": [
+        0.0,
+        0.0018773540270667314
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "threshold": 0.25,
+      "baseline": 0.35,
+      "metric": "precision",
+      "difference": 0.018182920767132238,
+      "ci95": [
+        0.005065935686939463,
+        0.026912273295704395
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "threshold": 0.25,
+      "baseline": 0.35,
+      "metric": "center_error_m_mean",
+      "difference": 0.0003039390930765773,
+      "ci95": [
+        -0.0008247394359839954,
+        0.0028694926852339724
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "threshold": 0.25,
+      "baseline": 0.35,
+      "metric": "identity_switch_rate",
+      "difference": 0.0005821047280121991,
+      "ci95": [
+        -0.006048229429667584,
+        0.005210938556905087
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "threshold": 0.25,
+      "baseline": 0.35,
+      "metric": "duplicates_per_gt_observation",
+      "difference": -0.0027957365018347023,
+      "ci95": [
+        -0.009132821763566078,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "threshold": 0.45,
+      "baseline": 0.35,
+      "metric": "recall",
+      "difference": 0.007688275380045462,
+      "ci95": [
+        0.0030366616175534268,
+        0.012106003480308642
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "threshold": 0.45,
+      "baseline": 0.35,
+      "metric": "precision",
+      "difference": -0.13770485168295887,
+      "ci95": [
+        -0.17002951485547874,
+        -0.10189784222713254
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "threshold": 0.45,
+      "baseline": 0.35,
+      "metric": "center_error_m_mean",
+      "difference": -0.014087983415529193,
+      "ci95": [
+        -0.03664034770002815,
+        0.004348036260125339
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "threshold": 0.45,
+      "baseline": 0.35,
+      "metric": "identity_switch_rate",
+      "difference": 0.1547377501725328,
+      "ci95": [
+        0.10043997192642724,
+        0.19410226475024037
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "threshold": 0.45,
+      "baseline": 0.35,
+      "metric": "duplicates_per_gt_observation",
+      "difference": 0.04315918224707321,
+      "ci95": [
+        0.026761280250928027,
+        0.05979793111688045
+      ],
+      "valid_resamples": 4000
+    }
+  ],
+  "bootstrap": {
+    "unit": "采集log",
+    "paired": true,
+    "repetitions": 4000,
+    "seed": 17
+  },
+  "fixed_seed": 17,
+  "limitations": [
+    "只改变推理sim_threshold，评估3米距离门限保持固定；并非改评价阈值制造收益",
+    "基线0.35复用相同观测/种子/配置的无扰动完整记录，未增加独立样本",
+    "CPU与真实时钟导航共享主机；不作为独占性能成绩，参数未应用于在运行的导航",
+    "开发范围敏感性分析，不是新封存主表或下游到达实验"
+  ],
+  "parameter_applied_to_running_navigation": false,
+  "independent_test": false,
+  "goal_complete": false
+}

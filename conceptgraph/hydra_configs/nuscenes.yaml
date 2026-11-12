@@ -1,0 +1,3 @@
+dataset_root: /root/autodl-tmp/lizichong/dataset/nuscenes_minimal
+dataset_config: /root/autodl-tmp/lizichong/conceptgraph/nuscenes/nuscenes.yaml
+scene_id: scene-0061

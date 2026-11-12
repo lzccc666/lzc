@@ -1,0 +1,89 @@
+defaults:
+ - qwen_semantic
+ - _self_
+
+dataset_root: /root/autodl-tmp/lizichong/dataset/nuscenes_minimal
+scene_id: scene-0061
+exp_suffix: streamlined_yolo_outdoor_objects_v1
+
+query_text: 去前方停车车辆附近
+vehicle_pose: [0.0, 0.0, 0.0]
+
+cachedir: ${dataset_root}/${scene_id}/exp_${exp_suffix}
+scene_map_path: ${cachedir}/map/scene_map_cfslam_pruned.pkl.gz
+scene_graph_json_path: ${cachedir}/scene_graph.json
+annotated_scenegraph_json_path: ${cachedir}/annotated_scenegraph.json
+scene_graph_edge_path: ${cachedir}/cfslam_scenegraph_edges.pkl
+bev_map_path: null
+lane_map_path: null
+lane_topology_path: null
+lane_projection_max_distance_m: 8.0
+lane_centerline_weight: 0.25
+lane_direction_tolerance_deg: 75.0
+
+output_dir: ${cachedir}/navigation
+
+grid_resolution: 0.5
+grid_padding_m: 10.0
+robot_radius_m: 1.0
+default_near_distance_m: 8.0
+relation_edge_minimum_confidence: 0.35
+relation_coordinate_frame: world
+relation_coordinate_frame_fallback: world
+relation_trajectory_path: null
+start_search_radius_m: 6.0
+goal_search_radius_m: 25.0
+allow_goal_fallback: true
+
+lambda_text: 0.55
+lambda_relation: 0.30
+lambda_distance_prior: 0.25
+semantic_cost_weight: 0.05
+clearance_cost_weight: 0.25
+path_smoothing_iterations: 2
+max_candidates: 8
+
+target_selection:
+  mode: joint_utility
+  top_k: 5
+  goal_candidates_per_object:
+    default: 12
+    vehicle: 16
+    pedestrian: 12
+    traffic sign: 8
+    traffic light: 8
+  class_approach_distance_m:
+    default: 1.5
+    vehicle: 2.0
+    truck: 2.5
+    bus: 3.0
+    pedestrian: 2.5
+    bicycle: 2.0
+    motorcycle: 2.0
+  min_clearance_m:
+    default: 0.75
+    vehicle: 1.0
+    pedestrian: 1.0
+  max_fallback_distance_m:
+    default: 3.0
+    vehicle: 4.0
+    pedestrian: 3.0
+  allow_global_fallback: false
+  utility_weights:
+    semantic_score: 0.35
+    relation_score: 0.15
+    path_cost: 0.25
+    clearance_score: 0.10
+    fallback_penalty: 0.10
+    dynamic_risk: 0.05
+  dynamic_class_penalties:
+    default: 0.0
+    car: 0.10
+    truck: 0.15
+    bus: 0.20
+    bicycle: 0.35
+    motorcycle: 0.45
+    pedestrian: 0.65
+    dynamic_motion: 0.25
+    short_term: 0.15
+  deterministic_tie_break: semantic_rank_node_id_goal_rc

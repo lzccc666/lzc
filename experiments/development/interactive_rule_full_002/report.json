@@ -1,0 +1,342 @@
+{
+  "source": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/interactive_simulation/interactive_rule_full_002/results.jsonl",
+  "source_sha256": "61bbb71fc92523c8616f54656ada2970768f3cff25e04b48c59bc9b28ecd6e5e",
+  "release_sha256": "3c7d491043afddbb7728cc4212db4b190407c9c8e9927c70e62ab21f87555734",
+  "statistics_source_sha256": "c0f192a184e024b42e4ea2ba59b24fada20bf3f1fc2fa92fdce92ba6ac98e611",
+  "trials": 150,
+  "tasks": 50,
+  "configs": 10,
+  "summary": {
+    "by_kind": {
+      "inaccessible": {
+        "trials": 30,
+        "unique_tasks": 10,
+        "configs": 10,
+        "statuses": {
+          "INSUFFICIENT_EVIDENCE_IN_OBSERVED_SCOPE": 30
+        },
+        "four_outcomes": {
+          "route_generated": {
+            "estimate": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "clusters": 10,
+            "denominator": 30,
+            "numerator": 0.0
+          },
+          "selected_object_evaluated_correct": {
+            "estimate": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "clusters": 10,
+            "denominator": 30,
+            "numerator": 0.0
+          },
+          "stable_correct_lock": {
+            "estimate": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "clusters": 10,
+            "denominator": 30,
+            "numerator": 0.0
+          },
+          "actual_full_perception_arrival": {
+            "estimate": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "clusters": 10,
+            "denominator": 30,
+            "numerator": 0.0
+          }
+        },
+        "any_lock": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "clusters": 10,
+          "denominator": 30,
+          "numerator": 0.0
+        },
+        "actually_moving_trials": 0,
+        "safety_among_moving": {
+          "estimate": null,
+          "ci95": null,
+          "clusters": 0,
+          "denominator": 0
+        },
+        "stationary_audited_trials": 30,
+        "all_audits_passed": 30,
+        "independent_audited_trials": 30,
+        "seeds": {
+          "17": {
+            "trials": 10,
+            "four_outcomes": {
+              "route_generated": 0,
+              "selected_object_evaluated_correct": 0,
+              "stable_correct_lock": 0,
+              "actual_full_perception_arrival": 0
+            }
+          },
+          "29": {
+            "trials": 10,
+            "four_outcomes": {
+              "route_generated": 0,
+              "selected_object_evaluated_correct": 0,
+              "stable_correct_lock": 0,
+              "actual_full_perception_arrival": 0
+            }
+          },
+          "43": {
+            "trials": 10,
+            "four_outcomes": {
+              "route_generated": 0,
+              "selected_object_evaluated_correct": 0,
+              "stable_correct_lock": 0,
+              "actual_full_perception_arrival": 0
+            }
+          }
+        }
+      },
+      "no_match": {
+        "trials": 30,
+        "unique_tasks": 10,
+        "configs": 10,
+        "statuses": {
+          "SEARCH_EXHAUSTED_WITHOUT_VERIFIED_MATCH": 30
+        },
+        "four_outcomes": {
+          "route_generated": {
+            "estimate": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "clusters": 10,
+            "denominator": 30,
+            "numerator": 0.0
+          },
+          "selected_object_evaluated_correct": {
+            "estimate": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "clusters": 10,
+            "denominator": 30,
+            "numerator": 0.0
+          },
+          "stable_correct_lock": {
+            "estimate": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "clusters": 10,
+            "denominator": 30,
+            "numerator": 0.0
+          },
+          "actual_full_perception_arrival": {
+            "estimate": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "clusters": 10,
+            "denominator": 30,
+            "numerator": 0.0
+          }
+        },
+        "any_lock": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "clusters": 10,
+          "denominator": 30,
+          "numerator": 0.0
+        },
+        "actually_moving_trials": 30,
+        "safety_among_moving": {
+          "estimate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "clusters": 10,
+          "denominator": 30,
+          "numerator": 30.0
+        },
+        "stationary_audited_trials": 0,
+        "all_audits_passed": 30,
+        "independent_audited_trials": 30,
+        "seeds": {
+          "17": {
+            "trials": 10,
+            "four_outcomes": {
+              "route_generated": 0,
+              "selected_object_evaluated_correct": 0,
+              "stable_correct_lock": 0,
+              "actual_full_perception_arrival": 0
+            }
+          },
+          "29": {
+            "trials": 10,
+            "four_outcomes": {
+              "route_generated": 0,
+              "selected_object_evaluated_correct": 0,
+              "stable_correct_lock": 0,
+              "actual_full_perception_arrival": 0
+            }
+          },
+          "43": {
+            "trials": 10,
+            "four_outcomes": {
+              "route_generated": 0,
+              "selected_object_evaluated_correct": 0,
+              "stable_correct_lock": 0,
+              "actual_full_perception_arrival": 0
+            }
+          }
+        }
+      },
+      "reachable_positive": {
+        "trials": 90,
+        "unique_tasks": 30,
+        "configs": 10,
+        "statuses": {
+          "PERCEPTION_OR_PLAN_LOST": 47,
+          "ARRIVED": 21,
+          "PLANNING_FAILED": 22
+        },
+        "four_outcomes": {
+          "route_generated": {
+            "estimate": 0.7555555555555555,
+            "ci95": [
+              0.5777777777777777,
+              0.9111111111111111
+            ],
+            "clusters": 10,
+            "denominator": 90,
+            "numerator": 68.0
+          },
+          "selected_object_evaluated_correct": {
+            "estimate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "clusters": 10,
+            "denominator": 90,
+            "numerator": 90.0
+          },
+          "stable_correct_lock": {
+            "estimate": 0.8777777777777778,
+            "ci95": [
+              0.7888888888888889,
+              0.9555555555555556
+            ],
+            "clusters": 10,
+            "denominator": 90,
+            "numerator": 79.0
+          },
+          "actual_full_perception_arrival": {
+            "estimate": 0.23333333333333334,
+            "ci95": [
+              0.12222222222222222,
+              0.35583333333333433
+            ],
+            "clusters": 10,
+            "denominator": 90,
+            "numerator": 21.0
+          }
+        },
+        "any_lock": {
+          "estimate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "clusters": 10,
+          "denominator": 90,
+          "numerator": 90.0
+        },
+        "actually_moving_trials": 90,
+        "safety_among_moving": {
+          "estimate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "clusters": 10,
+          "denominator": 90,
+          "numerator": 90.0
+        },
+        "stationary_audited_trials": 0,
+        "all_audits_passed": 90,
+        "independent_audited_trials": 90,
+        "seeds": {
+          "17": {
+            "trials": 30,
+            "four_outcomes": {
+              "route_generated": 23,
+              "selected_object_evaluated_correct": 30,
+              "stable_correct_lock": 25,
+              "actual_full_perception_arrival": 7
+            }
+          },
+          "29": {
+            "trials": 30,
+            "four_outcomes": {
+              "route_generated": 23,
+              "selected_object_evaluated_correct": 30,
+              "stable_correct_lock": 28,
+              "actual_full_perception_arrival": 7
+            }
+          },
+          "43": {
+            "trials": 30,
+            "four_outcomes": {
+              "route_generated": 22,
+              "selected_object_evaluated_correct": 30,
+              "stable_correct_lock": 26,
+              "actual_full_perception_arrival": 7
+            }
+          }
+        }
+      }
+    },
+    "functional_evidence": {
+      "arrivals": 21,
+      "distinct_positive_tasks": 13,
+      "scene_configs": 8,
+      "minimum_10_tasks_5_configs": true
+    },
+    "safety_denominator": "实际保存轨迹长度>0.01m；静止审计单列；零路径不获得100%安全信用",
+    "no_match_interpretation": "无匹配集合内任何锁定均为误锁；证据不足拒绝不等于已证明全道路无目标"
+  },
+  "bootstrap": {
+    "unit": "synthetic scene configuration",
+    "repetitions": 4000,
+    "seed": 17
+  },
+  "limitations": [
+    "10参数配置源自3种共享走廊家族，不代表10个独立真实城市",
+    "固定逻辑0.1s积分与0.5s感知调度；不作真实时钟异步Qwen成绩",
+    "真实YOLO/SAM/CLIP、实际RGB和稀疏LiDAR；HSV颜色基线和4.6m车长/车道对齐先验明确声明",
+    "每个任务的3种子不增加不同任务计数；失败或拒绝均保留"
+  ],
+  "gt_in_agent": false,
+  "stage11_complete": false,
+  "goal_complete": false
+}

@@ -1,0 +1,1 @@
+{"task_id": "config00-positive0", "seed": 17, "method": "hybrid_astar", "status": "ARRIVED", "actual_kinematic_arrival": true}

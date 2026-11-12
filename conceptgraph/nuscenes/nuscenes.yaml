@@ -1,0 +1,10 @@
+dataset_name: 'nuscenes'
+camera_params:
+  image_height: 900
+  image_width: 1600
+  fx: 0.0
+  fy: 0.0
+  cx: 0.0
+  cy: 0.0
+  png_depth_scale: 1000.0
+  crop_edge: 0

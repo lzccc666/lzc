@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "viewport": "desktop",
+      "result": {
+        "overflow": false,
+        "error": "",
+        "rows": 6,
+        "gt": false,
+        "depth": true,
+        "raw": "http://127.0.0.1:8768/mapping_evaluation/kitti_object_cpu_full_001/frames/000119/observations.json"
+      },
+      "errors": []
+    },
+    {
+      "viewport": "mobile",
+      "result": {
+        "overflow": false,
+        "error": "",
+        "rows": 6,
+        "gt": false,
+        "depth": true,
+        "raw": "http://127.0.0.1:8768/mapping_evaluation/kitti_object_cpu_full_001/frames/000119/observations.json"
+      },
+      "errors": []
+    }
+  ],
+  "read_only": true,
+  "human_records_created": 0,
+  "actual_navigation_credit": false,
+  "source_preview": "kitti_object_cpu_full_002"
+}

@@ -1,0 +1,200 @@
+{
+  "source": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/robust_motion_full_001",
+  "source_summary_sha256": "c1799091695e95744db442b9456b59d12e159933945137979f56cab8890c4835",
+  "scene_count": 38,
+  "log_count": 11,
+  "frames": 1508,
+  "metrics": {
+    "original_fusion": {
+      "true_positive": 1115,
+      "truth": 5723,
+      "predictions": 6265,
+      "duplicate_nodes": 39,
+      "identity_switches": 24,
+      "adjacent_matched_transitions": 713,
+      "nodes_associated_with_multiple_instances": 52,
+      "recall": 0.1948278874716058,
+      "precision": 0.1779728651237031,
+      "identity_switch_rate": 0.033660589060308554,
+      "center_error_m_mean": 1.6618327024870105
+    },
+    "one_to_one_depth_quality": {
+      "true_positive": 1838,
+      "truth": 5723,
+      "predictions": 4275,
+      "duplicate_nodes": 47,
+      "identity_switches": 44,
+      "adjacent_matched_transitions": 1407,
+      "nodes_associated_with_multiple_instances": 56,
+      "recall": 0.3211602306482614,
+      "precision": 0.42994152046783624,
+      "identity_switch_rate": 0.03127221037668799,
+      "center_error_m_mean": 1.2500199188386432
+    },
+    "one_to_one_depth_robust_motion": {
+      "true_positive": 1828,
+      "truth": 5723,
+      "predictions": 4273,
+      "duplicate_nodes": 53,
+      "identity_switches": 51,
+      "adjacent_matched_transitions": 1400,
+      "nodes_associated_with_multiple_instances": 54,
+      "recall": 0.3194128953346147,
+      "precision": 0.42780248069272175,
+      "identity_switch_rate": 0.03642857142857143,
+      "center_error_m_mean": 1.239583204681131
+    },
+    "single_frame": {
+      "true_positive": 718,
+      "truth": 5723,
+      "predictions": 2877,
+      "duplicate_nodes": 19,
+      "identity_switches": 321,
+      "adjacent_matched_transitions": 321,
+      "nodes_associated_with_multiple_instances": 0,
+      "recall": 0.12545867551983225,
+      "precision": 0.24956551963851234,
+      "identity_switch_rate": 1.0,
+      "center_error_m_mean": 1.6989167293210203
+    }
+  },
+  "paired_log_cluster_bootstrap": [
+    {
+      "method": "one_to_one_depth_quality",
+      "baseline": "original_fusion",
+      "metric": "recall",
+      "difference": 0.1263323431766556,
+      "ci95": [
+        0.07306276039813518,
+        0.175031971478286
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "one_to_one_depth_quality",
+      "baseline": "original_fusion",
+      "metric": "precision",
+      "difference": 0.25196865534413315,
+      "ci95": [
+        0.19680559510030804,
+        0.29910339339026687
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "one_to_one_depth_quality",
+      "baseline": "original_fusion",
+      "metric": "identity_switch_rate",
+      "difference": -0.0023883786836205664,
+      "ci95": [
+        -0.014747714336132091,
+        0.014319724267182362
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "one_to_one_depth_quality",
+      "baseline": "original_fusion",
+      "metric": "center_error_m_mean",
+      "difference": -0.4118127836483674,
+      "ci95": [
+        -0.541121557956252,
+        -0.2984874509767696
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "one_to_one_depth_robust_motion",
+      "baseline": "original_fusion",
+      "metric": "recall",
+      "difference": 0.12458500786300891,
+      "ci95": [
+        0.07279865724249648,
+        0.1718064602082153
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "one_to_one_depth_robust_motion",
+      "baseline": "original_fusion",
+      "metric": "precision",
+      "difference": 0.24982961556901864,
+      "ci95": [
+        0.19914738565909137,
+        0.30280485030402815
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "one_to_one_depth_robust_motion",
+      "baseline": "original_fusion",
+      "metric": "identity_switch_rate",
+      "difference": 0.0027679823682628737,
+      "ci95": [
+        -0.009407923247296755,
+        0.016936980692262637
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "one_to_one_depth_robust_motion",
+      "baseline": "original_fusion",
+      "metric": "center_error_m_mean",
+      "difference": -0.4222494978058795,
+      "ci95": [
+        -0.5427006403026957,
+        -0.29102482854383976
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "single_frame",
+      "baseline": "original_fusion",
+      "metric": "recall",
+      "difference": -0.06936921195177354,
+      "ci95": [
+        -0.0895237391564961,
+        -0.05454070864172079
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "single_frame",
+      "baseline": "original_fusion",
+      "metric": "precision",
+      "difference": 0.07159265451480923,
+      "ci95": [
+        0.04607154804261804,
+        0.08689529514057397
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "single_frame",
+      "baseline": "original_fusion",
+      "metric": "identity_switch_rate",
+      "difference": 0.9663394109396914,
+      "ci95": [
+        0.9472746741309565,
+        0.9859669522643818
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "single_frame",
+      "baseline": "original_fusion",
+      "metric": "center_error_m_mean",
+      "difference": 0.0370840268340098,
+      "ci95": [
+        -0.07428354177068612,
+        0.10715183271453332
+      ],
+      "valid_resamples": 4000
+    }
+  ],
+  "seed": 17,
+  "iterations": 4000,
+  "denominator": "GT是限定可见范围内的跨帧对象观测；独立聚类单位为采集log",
+  "statistical_limits": "11个开发log，区间不代表新测试泛化；未知关联不全计作误检；多实例节点是自动诊断",
+  "independent_test": false
+}

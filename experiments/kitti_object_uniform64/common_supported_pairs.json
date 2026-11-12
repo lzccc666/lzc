@@ -1,0 +1,2763 @@
+[
+  {
+    "drive": "2011_09_28_drive_0106_sync",
+    "frame_id": "000000",
+    "category": "pedestrian",
+    "prediction_index": 7,
+    "label_index": 0,
+    "errors_m": {
+      "mask_points_mean": 1.2980631332436754,
+      "mask_points_robust_mean": 0.3261184412844396
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0020_sync",
+    "frame_id": "000119",
+    "category": "car",
+    "prediction_index": 0,
+    "label_index": 0,
+    "errors_m": {
+      "mask_points_mean": 0.458453978015373,
+      "mask_points_robust_mean": 0.8206225651855037
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0020_sync",
+    "frame_id": "000119",
+    "category": "car",
+    "prediction_index": 1,
+    "label_index": 2,
+    "errors_m": {
+      "mask_points_mean": 0.7987749641738482,
+      "mask_points_robust_mean": 1.3744142797916195
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0101_sync",
+    "frame_id": "000237",
+    "category": "car",
+    "prediction_index": 0,
+    "label_index": 2,
+    "errors_m": {
+      "mask_points_mean": 1.869140861875447,
+      "mask_points_robust_mean": 0.9096022436203168
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0101_sync",
+    "frame_id": "000237",
+    "category": "car",
+    "prediction_index": 2,
+    "label_index": 1,
+    "errors_m": {
+      "mask_points_mean": 6.728885187521742,
+      "mask_points_robust_mean": 0.888115715687062
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0022_sync",
+    "frame_id": "000356",
+    "category": "car",
+    "prediction_index": 0,
+    "label_index": 1,
+    "errors_m": {
+      "mask_points_mean": 1.19137065669977,
+      "mask_points_robust_mean": 1.2758900177382673
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0022_sync",
+    "frame_id": "000356",
+    "category": "car",
+    "prediction_index": 1,
+    "label_index": 7,
+    "errors_m": {
+      "mask_points_mean": 0.35592133054782316,
+      "mask_points_robust_mean": 1.1732928468261816
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0022_sync",
+    "frame_id": "000356",
+    "category": "car",
+    "prediction_index": 4,
+    "label_index": 5,
+    "errors_m": {
+      "mask_points_mean": 2.2331507282967884,
+      "mask_points_robust_mean": 1.5636342780763492
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0022_sync",
+    "frame_id": "000356",
+    "category": "car",
+    "prediction_index": 5,
+    "label_index": 2,
+    "errors_m": {
+      "mask_points_mean": 0.756115364528534,
+      "mask_points_robust_mean": 1.165053996654254
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0022_sync",
+    "frame_id": "000356",
+    "category": "car",
+    "prediction_index": 6,
+    "label_index": 3,
+    "errors_m": {
+      "mask_points_mean": 1.5164210779593261,
+      "mask_points_robust_mean": 1.4828217670845645
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0022_sync",
+    "frame_id": "000356",
+    "category": "car",
+    "prediction_index": 7,
+    "label_index": 0,
+    "errors_m": {
+      "mask_points_mean": 0.6964256966000636,
+      "mask_points_robust_mean": 0.7861719718928257
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0022_sync",
+    "frame_id": "000356",
+    "category": "truck",
+    "prediction_index": 3,
+    "label_index": 4,
+    "errors_m": {
+      "mask_points_mean": 1.6083541986429744,
+      "mask_points_robust_mean": 1.3747097606541137
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0009_sync",
+    "frame_id": "000475",
+    "category": "car",
+    "prediction_index": 0,
+    "label_index": 1,
+    "errors_m": {
+      "mask_points_mean": 0.8836552793301871,
+      "mask_points_robust_mean": 0.3576705697169643
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0009_sync",
+    "frame_id": "000475",
+    "category": "car",
+    "prediction_index": 1,
+    "label_index": 2,
+    "errors_m": {
+      "mask_points_mean": 0.6546122548227035,
+      "mask_points_robust_mean": 0.8910783252150414
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0009_sync",
+    "frame_id": "000475",
+    "category": "car",
+    "prediction_index": 2,
+    "label_index": 0,
+    "errors_m": {
+      "mask_points_mean": 1.8895842816011381,
+      "mask_points_robust_mean": 1.2972640530945643
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0009_sync",
+    "frame_id": "000475",
+    "category": "car",
+    "prediction_index": 3,
+    "label_index": 3,
+    "errors_m": {
+      "mask_points_mean": 0.7948675904232435,
+      "mask_points_robust_mean": 1.057606024256292
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0009_sync",
+    "frame_id": "000475",
+    "category": "car",
+    "prediction_index": 4,
+    "label_index": 5,
+    "errors_m": {
+      "mask_points_mean": 0.37483207564207516,
+      "mask_points_robust_mean": 0.9748211433185929
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0009_sync",
+    "frame_id": "000475",
+    "category": "car",
+    "prediction_index": 5,
+    "label_index": 4,
+    "errors_m": {
+      "mask_points_mean": 4.187894668942517,
+      "mask_points_robust_mean": 0.6598991571127462
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0059_sync",
+    "frame_id": "000594",
+    "category": "car",
+    "prediction_index": 0,
+    "label_index": 0,
+    "errors_m": {
+      "mask_points_mean": 1.4831091207058225,
+      "mask_points_robust_mean": 1.4831091207058225
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0059_sync",
+    "frame_id": "000594",
+    "category": "car",
+    "prediction_index": 1,
+    "label_index": 1,
+    "errors_m": {
+      "mask_points_mean": 4.205497767132783,
+      "mask_points_robust_mean": 1.7360520960291703
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0084_sync",
+    "frame_id": "000712",
+    "category": "car",
+    "prediction_index": 0,
+    "label_index": 3,
+    "errors_m": {
+      "mask_points_mean": 4.143344361085996,
+      "mask_points_robust_mean": 0.8209080478419827
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0084_sync",
+    "frame_id": "000712",
+    "category": "car",
+    "prediction_index": 1,
+    "label_index": 2,
+    "errors_m": {
+      "mask_points_mean": 1.8128391554217758,
+      "mask_points_robust_mean": 0.7026864992125226
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0084_sync",
+    "frame_id": "000712",
+    "category": "car",
+    "prediction_index": 2,
+    "label_index": 7,
+    "errors_m": {
+      "mask_points_mean": 1.5132288276624521,
+      "mask_points_robust_mean": 1.5132288276624521
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0084_sync",
+    "frame_id": "000712",
+    "category": "car",
+    "prediction_index": 3,
+    "label_index": 0,
+    "errors_m": {
+      "mask_points_mean": 0.4880084959583769,
+      "mask_points_robust_mean": 1.1058553641528743
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0084_sync",
+    "frame_id": "000712",
+    "category": "car",
+    "prediction_index": 11,
+    "label_index": 6,
+    "errors_m": {
+      "mask_points_mean": 10.55213844405678,
+      "mask_points_robust_mean": 0.717063935988713
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0023_sync",
+    "frame_id": "000831",
+    "category": "car",
+    "prediction_index": 0,
+    "label_index": 10,
+    "errors_m": {
+      "mask_points_mean": 1.513259933635699,
+      "mask_points_robust_mean": 1.1412012224670665
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0023_sync",
+    "frame_id": "000831",
+    "category": "car",
+    "prediction_index": 1,
+    "label_index": 0,
+    "errors_m": {
+      "mask_points_mean": 6.305464778221253,
+      "mask_points_robust_mean": 1.4728162564449776
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0023_sync",
+    "frame_id": "000831",
+    "category": "car",
+    "prediction_index": 2,
+    "label_index": 3,
+    "errors_m": {
+      "mask_points_mean": 2.6431939289934747,
+      "mask_points_robust_mean": 0.5511849616048441
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0023_sync",
+    "frame_id": "000831",
+    "category": "car",
+    "prediction_index": 3,
+    "label_index": 2,
+    "errors_m": {
+      "mask_points_mean": 1.593255558820927,
+      "mask_points_robust_mean": 1.5977602237440836
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0023_sync",
+    "frame_id": "000831",
+    "category": "car",
+    "prediction_index": 4,
+    "label_index": 9,
+    "errors_m": {
+      "mask_points_mean": 0.7445193770352629,
+      "mask_points_robust_mean": 1.1121361892224122
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0023_sync",
+    "frame_id": "000831",
+    "category": "car",
+    "prediction_index": 5,
+    "label_index": 8,
+    "errors_m": {
+      "mask_points_mean": 5.38866403720991,
+      "mask_points_robust_mean": 5.497795774903497
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0023_sync",
+    "frame_id": "000831",
+    "category": "car",
+    "prediction_index": 6,
+    "label_index": 1,
+    "errors_m": {
+      "mask_points_mean": 0.8136792222488946,
+      "mask_points_robust_mean": 1.5082195569045942
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0023_sync",
+    "frame_id": "000831",
+    "category": "car",
+    "prediction_index": 9,
+    "label_index": 11,
+    "errors_m": {
+      "mask_points_mean": 2.7575968799408024,
+      "mask_points_robust_mean": 1.6425319757687926
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0023_sync",
+    "frame_id": "000831",
+    "category": "car",
+    "prediction_index": 10,
+    "label_index": 5,
+    "errors_m": {
+      "mask_points_mean": 2.840249519828492,
+      "mask_points_robust_mean": 2.866896667728436
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0061_sync",
+    "frame_id": "000950",
+    "category": "car",
+    "prediction_index": 0,
+    "label_index": 0,
+    "errors_m": {
+      "mask_points_mean": 1.635909649586389,
+      "mask_points_robust_mean": 1.635909649586389
+    }
+  },
+  {
+    "drive": "2011_09_28_drive_0002_sync",
+    "frame_id": "001069",
+    "category": "car",
+    "prediction_index": 0,
+    "label_index": 1,
+    "errors_m": {
+      "mask_points_mean": 0.5727582481094078,
+      "mask_points_robust_mean": 1.2979056559309357
+    }
+  },
+  {
+    "drive": "2011_09_28_drive_0002_sync",
+    "frame_id": "001069",
+    "category": "car",
+    "prediction_index": 2,
+    "label_index": 0,
+    "errors_m": {
+      "mask_points_mean": 1.233130109370416,
+      "mask_points_robust_mean": 2.030091108333154
+    }
+  },
+  {
+    "drive": "2011_09_28_drive_0002_sync",
+    "frame_id": "001069",
+    "category": "car",
+    "prediction_index": 13,
+    "label_index": 7,
+    "errors_m": {
+      "mask_points_mean": 4.1844617311277945,
+      "mask_points_robust_mean": 1.0818193254410338
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0095_sync",
+    "frame_id": "001187",
+    "category": "car",
+    "prediction_index": 0,
+    "label_index": 1,
+    "errors_m": {
+      "mask_points_mean": 0.6269434707452864,
+      "mask_points_robust_mean": 1.2646618879525195
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0095_sync",
+    "frame_id": "001187",
+    "category": "car",
+    "prediction_index": 1,
+    "label_index": 0,
+    "errors_m": {
+      "mask_points_mean": 1.3670596910575055,
+      "mask_points_robust_mean": 1.0385856694262736
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0095_sync",
+    "frame_id": "001187",
+    "category": "car",
+    "prediction_index": 2,
+    "label_index": 2,
+    "errors_m": {
+      "mask_points_mean": 0.14995145082210506,
+      "mask_points_robust_mean": 1.483084692042635
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0095_sync",
+    "frame_id": "001187",
+    "category": "car",
+    "prediction_index": 3,
+    "label_index": 3,
+    "errors_m": {
+      "mask_points_mean": 1.3967401347519977,
+      "mask_points_robust_mean": 1.008129980469308
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0095_sync",
+    "frame_id": "001187",
+    "category": "car",
+    "prediction_index": 4,
+    "label_index": 5,
+    "errors_m": {
+      "mask_points_mean": 2.3588793629541644,
+      "mask_points_robust_mean": 2.069896254945161
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0095_sync",
+    "frame_id": "001187",
+    "category": "car",
+    "prediction_index": 5,
+    "label_index": 4,
+    "errors_m": {
+      "mask_points_mean": 0.8230234671985281,
+      "mask_points_robust_mean": 1.700245260536263
+    }
+  },
+  {
+    "drive": "2011_10_03_drive_0047_sync",
+    "frame_id": "001306",
+    "category": "car",
+    "prediction_index": 0,
+    "label_index": 0,
+    "errors_m": {
+      "mask_points_mean": 0.9264465426380178,
+      "mask_points_robust_mean": 1.7020841540774956
+    }
+  },
+  {
+    "drive": "2011_10_03_drive_0047_sync",
+    "frame_id": "001306",
+    "category": "car",
+    "prediction_index": 1,
+    "label_index": 2,
+    "errors_m": {
+      "mask_points_mean": 3.6203085926060825,
+      "mask_points_robust_mean": 0.818124441759683
+    }
+  },
+  {
+    "drive": "2011_10_03_drive_0047_sync",
+    "frame_id": "001306",
+    "category": "car",
+    "prediction_index": 3,
+    "label_index": 3,
+    "errors_m": {
+      "mask_points_mean": 0.24326618537397543,
+      "mask_points_robust_mean": 1.151705753690344
+    }
+  },
+  {
+    "drive": "2011_10_03_drive_0047_sync",
+    "frame_id": "001306",
+    "category": "car",
+    "prediction_index": 4,
+    "label_index": 4,
+    "errors_m": {
+      "mask_points_mean": 0.5908427545002723,
+      "mask_points_robust_mean": 1.3219255951489337
+    }
+  },
+  {
+    "drive": "2011_10_03_drive_0047_sync",
+    "frame_id": "001306",
+    "category": "car",
+    "prediction_index": 5,
+    "label_index": 9,
+    "errors_m": {
+      "mask_points_mean": 12.157252963646247,
+      "mask_points_robust_mean": 1.4884518004117984
+    }
+  },
+  {
+    "drive": "2011_10_03_drive_0047_sync",
+    "frame_id": "001306",
+    "category": "car",
+    "prediction_index": 6,
+    "label_index": 5,
+    "errors_m": {
+      "mask_points_mean": 0.48087774267338085,
+      "mask_points_robust_mean": 1.7142472863001748
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0096_sync",
+    "frame_id": "001425",
+    "category": "car",
+    "prediction_index": 0,
+    "label_index": 1,
+    "errors_m": {
+      "mask_points_mean": 1.3512531465167703,
+      "mask_points_robust_mean": 0.48466941322741913
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0096_sync",
+    "frame_id": "001425",
+    "category": "car",
+    "prediction_index": 1,
+    "label_index": 0,
+    "errors_m": {
+      "mask_points_mean": 1.536556227434681,
+      "mask_points_robust_mean": 0.8309901281999602
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0091_sync",
+    "frame_id": "001543",
+    "category": "pedestrian",
+    "prediction_index": 2,
+    "label_index": 0,
+    "errors_m": {
+      "mask_points_mean": 1.158662832132267,
+      "mask_points_robust_mean": 0.05960955884625821
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0091_sync",
+    "frame_id": "001543",
+    "category": "pedestrian",
+    "prediction_index": 5,
+    "label_index": 2,
+    "errors_m": {
+      "mask_points_mean": 5.501271095167079,
+      "mask_points_robust_mean": 1.1680026934233327
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0091_sync",
+    "frame_id": "001543",
+    "category": "pedestrian",
+    "prediction_index": 6,
+    "label_index": 1,
+    "errors_m": {
+      "mask_points_mean": 0.2469731831406919,
+      "mask_points_robust_mean": 0.06779114881405224
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0039_sync",
+    "frame_id": "001662",
+    "category": "car",
+    "prediction_index": 0,
+    "label_index": 1,
+    "errors_m": {
+      "mask_points_mean": 0.4018715079434817,
+      "mask_points_robust_mean": 0.49556767871909363
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0039_sync",
+    "frame_id": "001662",
+    "category": "car",
+    "prediction_index": 1,
+    "label_index": 2,
+    "errors_m": {
+      "mask_points_mean": 0.9536247855402171,
+      "mask_points_robust_mean": 1.0363938915356783
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0039_sync",
+    "frame_id": "001662",
+    "category": "car",
+    "prediction_index": 2,
+    "label_index": 3,
+    "errors_m": {
+      "mask_points_mean": 0.7842847236293612,
+      "mask_points_robust_mean": 0.614076242061594
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0039_sync",
+    "frame_id": "001662",
+    "category": "car",
+    "prediction_index": 3,
+    "label_index": 0,
+    "errors_m": {
+      "mask_points_mean": 0.5270266023304679,
+      "mask_points_robust_mean": 0.6625777902671636
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0039_sync",
+    "frame_id": "001662",
+    "category": "car",
+    "prediction_index": 5,
+    "label_index": 5,
+    "errors_m": {
+      "mask_points_mean": 0.3120367079549225,
+      "mask_points_robust_mean": 0.8398059065620594
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0064_sync",
+    "frame_id": "001781",
+    "category": "car",
+    "prediction_index": 0,
+    "label_index": 0,
+    "errors_m": {
+      "mask_points_mean": 0.8355231380379009,
+      "mask_points_robust_mean": 0.9476161783593732
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0064_sync",
+    "frame_id": "001781",
+    "category": "car",
+    "prediction_index": 1,
+    "label_index": 2,
+    "errors_m": {
+      "mask_points_mean": 1.3957090045550804,
+      "mask_points_robust_mean": 0.7666707088386265
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0064_sync",
+    "frame_id": "001781",
+    "category": "car",
+    "prediction_index": 2,
+    "label_index": 1,
+    "errors_m": {
+      "mask_points_mean": 1.1946480261106611,
+      "mask_points_robust_mean": 1.0900042238410383
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0070_sync",
+    "frame_id": "001900",
+    "category": "car",
+    "prediction_index": 0,
+    "label_index": 0,
+    "errors_m": {
+      "mask_points_mean": 1.945607818642544,
+      "mask_points_robust_mean": 1.945607818642544
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0057_sync",
+    "frame_id": "002018",
+    "category": "car",
+    "prediction_index": 0,
+    "label_index": 8,
+    "errors_m": {
+      "mask_points_mean": 2.648205434315953,
+      "mask_points_robust_mean": 1.5147028889600944
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0057_sync",
+    "frame_id": "002018",
+    "category": "car",
+    "prediction_index": 1,
+    "label_index": 5,
+    "errors_m": {
+      "mask_points_mean": 3.1930108358680536,
+      "mask_points_robust_mean": 0.8383430517980167
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0057_sync",
+    "frame_id": "002018",
+    "category": "car",
+    "prediction_index": 2,
+    "label_index": 0,
+    "errors_m": {
+      "mask_points_mean": 1.4698287697201655,
+      "mask_points_robust_mean": 1.305988453561076
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0057_sync",
+    "frame_id": "002018",
+    "category": "car",
+    "prediction_index": 5,
+    "label_index": 4,
+    "errors_m": {
+      "mask_points_mean": 3.1079930047979754,
+      "mask_points_robust_mean": 1.9916169209611378
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0057_sync",
+    "frame_id": "002018",
+    "category": "car",
+    "prediction_index": 8,
+    "label_index": 2,
+    "errors_m": {
+      "mask_points_mean": 1.2937907678928078,
+      "mask_points_robust_mean": 1.2937907678928078
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0057_sync",
+    "frame_id": "002018",
+    "category": "car",
+    "prediction_index": 10,
+    "label_index": 3,
+    "errors_m": {
+      "mask_points_mean": 1.8222828496100567,
+      "mask_points_robust_mean": 1.8222828496100567
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0057_sync",
+    "frame_id": "002018",
+    "category": "car",
+    "prediction_index": 12,
+    "label_index": 1,
+    "errors_m": {
+      "mask_points_mean": 1.4556557996996256,
+      "mask_points_robust_mean": 1.4556557996996256
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0057_sync",
+    "frame_id": "002018",
+    "category": "car",
+    "prediction_index": 19,
+    "label_index": 7,
+    "errors_m": {
+      "mask_points_mean": 3.176970582044196,
+      "mask_points_robust_mean": 7.259578930016036
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0039_sync",
+    "frame_id": "002137",
+    "category": "car",
+    "prediction_index": 0,
+    "label_index": 1,
+    "errors_m": {
+      "mask_points_mean": 0.5979840868984392,
+      "mask_points_robust_mean": 0.6264647506973313
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0039_sync",
+    "frame_id": "002137",
+    "category": "car",
+    "prediction_index": 1,
+    "label_index": 0,
+    "errors_m": {
+      "mask_points_mean": 1.579560528144636,
+      "mask_points_robust_mean": 1.579560528144636
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0039_sync",
+    "frame_id": "002137",
+    "category": "car",
+    "prediction_index": 2,
+    "label_index": 2,
+    "errors_m": {
+      "mask_points_mean": 1.4700367449252942,
+      "mask_points_robust_mean": 1.631629354600173
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0039_sync",
+    "frame_id": "002137",
+    "category": "car",
+    "prediction_index": 5,
+    "label_index": 3,
+    "errors_m": {
+      "mask_points_mean": 0.3343076467447159,
+      "mask_points_robust_mean": 1.1587352658351573
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0061_sync",
+    "frame_id": "002256",
+    "category": "car",
+    "prediction_index": 0,
+    "label_index": 1,
+    "errors_m": {
+      "mask_points_mean": 0.2974515906768751,
+      "mask_points_robust_mean": 0.632163368276315
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0061_sync",
+    "frame_id": "002256",
+    "category": "car",
+    "prediction_index": 1,
+    "label_index": 0,
+    "errors_m": {
+      "mask_points_mean": 1.300979508980063,
+      "mask_points_robust_mean": 0.30395461341615726
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0061_sync",
+    "frame_id": "002256",
+    "category": "car",
+    "prediction_index": 2,
+    "label_index": 2,
+    "errors_m": {
+      "mask_points_mean": 0.8763336752370198,
+      "mask_points_robust_mean": 1.2178683595077375
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0061_sync",
+    "frame_id": "002256",
+    "category": "car",
+    "prediction_index": 3,
+    "label_index": 3,
+    "errors_m": {
+      "mask_points_mean": 1.2983904488190494,
+      "mask_points_robust_mean": 1.1432454168943325
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0061_sync",
+    "frame_id": "002256",
+    "category": "car",
+    "prediction_index": 4,
+    "label_index": 4,
+    "errors_m": {
+      "mask_points_mean": 0.7982481396074113,
+      "mask_points_robust_mean": 1.1035903712840625
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0104_sync",
+    "frame_id": "002375",
+    "category": "car",
+    "prediction_index": 0,
+    "label_index": 7,
+    "errors_m": {
+      "mask_points_mean": 0.5621946508756603,
+      "mask_points_robust_mean": 0.630510566818402
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0104_sync",
+    "frame_id": "002375",
+    "category": "car",
+    "prediction_index": 1,
+    "label_index": 1,
+    "errors_m": {
+      "mask_points_mean": 0.9758072688169085,
+      "mask_points_robust_mean": 0.6657319631662183
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0104_sync",
+    "frame_id": "002375",
+    "category": "car",
+    "prediction_index": 2,
+    "label_index": 2,
+    "errors_m": {
+      "mask_points_mean": 1.2738871554951958,
+      "mask_points_robust_mean": 0.962588010107939
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0104_sync",
+    "frame_id": "002375",
+    "category": "car",
+    "prediction_index": 3,
+    "label_index": 4,
+    "errors_m": {
+      "mask_points_mean": 0.45956360469668905,
+      "mask_points_robust_mean": 1.1947336890587588
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0104_sync",
+    "frame_id": "002375",
+    "category": "car",
+    "prediction_index": 5,
+    "label_index": 0,
+    "errors_m": {
+      "mask_points_mean": 0.22025929737145714,
+      "mask_points_robust_mean": 1.5026754858843592
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0104_sync",
+    "frame_id": "002375",
+    "category": "car",
+    "prediction_index": 7,
+    "label_index": 10,
+    "errors_m": {
+      "mask_points_mean": 0.6876626691760658,
+      "mask_points_robust_mean": 1.6958752154632264
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0104_sync",
+    "frame_id": "002375",
+    "category": "car",
+    "prediction_index": 8,
+    "label_index": 5,
+    "errors_m": {
+      "mask_points_mean": 3.454082551833364,
+      "mask_points_robust_mean": 1.1405804899237655
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0104_sync",
+    "frame_id": "002375",
+    "category": "car",
+    "prediction_index": 10,
+    "label_index": 6,
+    "errors_m": {
+      "mask_points_mean": 0.9666115847959437,
+      "mask_points_robust_mean": 0.6600380157560837
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0104_sync",
+    "frame_id": "002375",
+    "category": "car",
+    "prediction_index": 13,
+    "label_index": 3,
+    "errors_m": {
+      "mask_points_mean": 1.3746995344910968,
+      "mask_points_robust_mean": 1.0513143988477627
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0104_sync",
+    "frame_id": "002375",
+    "category": "truck",
+    "prediction_index": 6,
+    "label_index": 8,
+    "errors_m": {
+      "mask_points_mean": 2.217666462294942,
+      "mask_points_robust_mean": 2.304196347983261
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0064_sync",
+    "frame_id": "002612",
+    "category": "car",
+    "prediction_index": 0,
+    "label_index": 2,
+    "errors_m": {
+      "mask_points_mean": 0.2821005237189804,
+      "mask_points_robust_mean": 0.9143601935862873
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0064_sync",
+    "frame_id": "002612",
+    "category": "car",
+    "prediction_index": 1,
+    "label_index": 6,
+    "errors_m": {
+      "mask_points_mean": 1.7926278188456548,
+      "mask_points_robust_mean": 2.061308059104249
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0064_sync",
+    "frame_id": "002612",
+    "category": "car",
+    "prediction_index": 3,
+    "label_index": 3,
+    "errors_m": {
+      "mask_points_mean": 2.228816982772704,
+      "mask_points_robust_mean": 1.0887472929531739
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0064_sync",
+    "frame_id": "002612",
+    "category": "car",
+    "prediction_index": 4,
+    "label_index": 4,
+    "errors_m": {
+      "mask_points_mean": 1.9830876857214121,
+      "mask_points_robust_mean": 1.192736833872725
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0064_sync",
+    "frame_id": "002612",
+    "category": "car",
+    "prediction_index": 5,
+    "label_index": 0,
+    "errors_m": {
+      "mask_points_mean": 0.537496236317081,
+      "mask_points_robust_mean": 0.6738806622574722
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0104_sync",
+    "frame_id": "002731",
+    "category": "car",
+    "prediction_index": 0,
+    "label_index": 7,
+    "errors_m": {
+      "mask_points_mean": 0.8066298874675984,
+      "mask_points_robust_mean": 0.85378068670006
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0104_sync",
+    "frame_id": "002731",
+    "category": "car",
+    "prediction_index": 1,
+    "label_index": 1,
+    "errors_m": {
+      "mask_points_mean": 0.5373384255889195,
+      "mask_points_robust_mean": 0.7034311128700516
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0104_sync",
+    "frame_id": "002731",
+    "category": "car",
+    "prediction_index": 2,
+    "label_index": 0,
+    "errors_m": {
+      "mask_points_mean": 0.4166350137666947,
+      "mask_points_robust_mean": 1.2222914478904476
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0104_sync",
+    "frame_id": "002731",
+    "category": "car",
+    "prediction_index": 3,
+    "label_index": 2,
+    "errors_m": {
+      "mask_points_mean": 1.755873996070834,
+      "mask_points_robust_mean": 1.1227505426997948
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0104_sync",
+    "frame_id": "002731",
+    "category": "car",
+    "prediction_index": 4,
+    "label_index": 4,
+    "errors_m": {
+      "mask_points_mean": 0.6638527066771326,
+      "mask_points_robust_mean": 1.2432298508217794
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0104_sync",
+    "frame_id": "002731",
+    "category": "car",
+    "prediction_index": 8,
+    "label_index": 10,
+    "errors_m": {
+      "mask_points_mean": 0.4739199834992235,
+      "mask_points_robust_mean": 1.7013200958053822
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0104_sync",
+    "frame_id": "002731",
+    "category": "car",
+    "prediction_index": 9,
+    "label_index": 5,
+    "errors_m": {
+      "mask_points_mean": 2.458116992594655,
+      "mask_points_robust_mean": 5.732047954434361
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0104_sync",
+    "frame_id": "002731",
+    "category": "car",
+    "prediction_index": 10,
+    "label_index": 6,
+    "errors_m": {
+      "mask_points_mean": 0.4924219436064605,
+      "mask_points_robust_mean": 0.7421480015241508
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0104_sync",
+    "frame_id": "002731",
+    "category": "car",
+    "prediction_index": 11,
+    "label_index": 3,
+    "errors_m": {
+      "mask_points_mean": 0.5201395475758936,
+      "mask_points_robust_mean": 1.1616919641964116
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0104_sync",
+    "frame_id": "002731",
+    "category": "truck",
+    "prediction_index": 7,
+    "label_index": 8,
+    "errors_m": {
+      "mask_points_mean": 2.269768265607709,
+      "mask_points_robust_mean": 2.269768265607709
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0018_sync",
+    "frame_id": "002850",
+    "category": "car",
+    "prediction_index": 1,
+    "label_index": 0,
+    "errors_m": {
+      "mask_points_mean": 1.6095979460312388,
+      "mask_points_robust_mean": 1.6095979460312388
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0117_sync",
+    "frame_id": "002968",
+    "category": "car",
+    "prediction_index": 0,
+    "label_index": 1,
+    "errors_m": {
+      "mask_points_mean": 2.501471795111248,
+      "mask_points_robust_mean": 0.6634731533976225
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0117_sync",
+    "frame_id": "002968",
+    "category": "car",
+    "prediction_index": 1,
+    "label_index": 0,
+    "errors_m": {
+      "mask_points_mean": 1.4512364001797866,
+      "mask_points_robust_mean": 1.4512364001797866
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0117_sync",
+    "frame_id": "002968",
+    "category": "car",
+    "prediction_index": 5,
+    "label_index": 4,
+    "errors_m": {
+      "mask_points_mean": 8.682971136878965,
+      "mask_points_robust_mean": 8.17345166554925
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0064_sync",
+    "frame_id": "003087",
+    "category": "car",
+    "prediction_index": 0,
+    "label_index": 0,
+    "errors_m": {
+      "mask_points_mean": 1.4109326678103744,
+      "mask_points_robust_mean": 0.8937061978475684
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0064_sync",
+    "frame_id": "003087",
+    "category": "car",
+    "prediction_index": 1,
+    "label_index": 7,
+    "errors_m": {
+      "mask_points_mean": 0.7755298010887535,
+      "mask_points_robust_mean": 1.0492216220877086
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0064_sync",
+    "frame_id": "003087",
+    "category": "car",
+    "prediction_index": 2,
+    "label_index": 2,
+    "errors_m": {
+      "mask_points_mean": 0.16479665804691923,
+      "mask_points_robust_mean": 1.0089272071487827
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0064_sync",
+    "frame_id": "003087",
+    "category": "car",
+    "prediction_index": 3,
+    "label_index": 4,
+    "errors_m": {
+      "mask_points_mean": 1.6719555528176924,
+      "mask_points_robust_mean": 1.328916576964127
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0064_sync",
+    "frame_id": "003087",
+    "category": "car",
+    "prediction_index": 4,
+    "label_index": 1,
+    "errors_m": {
+      "mask_points_mean": 0.5340533925360336,
+      "mask_points_robust_mean": 1.2970760559237242
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0064_sync",
+    "frame_id": "003087",
+    "category": "car",
+    "prediction_index": 5,
+    "label_index": 6,
+    "errors_m": {
+      "mask_points_mean": 1.4362705043682213,
+      "mask_points_robust_mean": 1.7125790253335906
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0064_sync",
+    "frame_id": "003087",
+    "category": "car",
+    "prediction_index": 6,
+    "label_index": 5,
+    "errors_m": {
+      "mask_points_mean": 2.540332281920943,
+      "mask_points_robust_mean": 1.3330237321391714
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0106_sync",
+    "frame_id": "003206",
+    "category": "car",
+    "prediction_index": 0,
+    "label_index": 2,
+    "errors_m": {
+      "mask_points_mean": 0.8741496490546815,
+      "mask_points_robust_mean": 1.1393268370283727
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0106_sync",
+    "frame_id": "003206",
+    "category": "car",
+    "prediction_index": 1,
+    "label_index": 3,
+    "errors_m": {
+      "mask_points_mean": 4.146843237461905,
+      "mask_points_robust_mean": 4.4741409417807505
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0106_sync",
+    "frame_id": "003206",
+    "category": "car",
+    "prediction_index": 2,
+    "label_index": 6,
+    "errors_m": {
+      "mask_points_mean": 0.5915076232927924,
+      "mask_points_robust_mean": 1.0280733395574
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0106_sync",
+    "frame_id": "003206",
+    "category": "car",
+    "prediction_index": 4,
+    "label_index": 4,
+    "errors_m": {
+      "mask_points_mean": 0.4165260141475953,
+      "mask_points_robust_mean": 0.8734358954159924
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0106_sync",
+    "frame_id": "003206",
+    "category": "car",
+    "prediction_index": 5,
+    "label_index": 7,
+    "errors_m": {
+      "mask_points_mean": 1.9658818834928453,
+      "mask_points_robust_mean": 1.2387584838594272
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0106_sync",
+    "frame_id": "003206",
+    "category": "car",
+    "prediction_index": 10,
+    "label_index": 8,
+    "errors_m": {
+      "mask_points_mean": 1.2425013142339498,
+      "mask_points_robust_mean": 5.137324622135894
+    }
+  },
+  {
+    "drive": "2011_09_28_drive_0045_sync",
+    "frame_id": "003324",
+    "category": "pedestrian",
+    "prediction_index": 1,
+    "label_index": 2,
+    "errors_m": {
+      "mask_points_mean": 0.613104753445364,
+      "mask_points_robust_mean": 0.16718815682927923
+    }
+  },
+  {
+    "drive": "2011_09_28_drive_0045_sync",
+    "frame_id": "003324",
+    "category": "pedestrian",
+    "prediction_index": 2,
+    "label_index": 1,
+    "errors_m": {
+      "mask_points_mean": 0.08750182022009466,
+      "mask_points_robust_mean": 0.08750182022009466
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0022_sync",
+    "frame_id": "003443",
+    "category": "car",
+    "prediction_index": 0,
+    "label_index": 0,
+    "errors_m": {
+      "mask_points_mean": 0.32213470400661187,
+      "mask_points_robust_mean": 0.32213470400661187
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0022_sync",
+    "frame_id": "003443",
+    "category": "car",
+    "prediction_index": 1,
+    "label_index": 2,
+    "errors_m": {
+      "mask_points_mean": 0.7296559816925398,
+      "mask_points_robust_mean": 1.137883996902875
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0022_sync",
+    "frame_id": "003443",
+    "category": "car",
+    "prediction_index": 2,
+    "label_index": 3,
+    "errors_m": {
+      "mask_points_mean": 0.4735806517464529,
+      "mask_points_robust_mean": 1.1915017075234915
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0022_sync",
+    "frame_id": "003443",
+    "category": "car",
+    "prediction_index": 3,
+    "label_index": 4,
+    "errors_m": {
+      "mask_points_mean": 1.2080332462712289,
+      "mask_points_robust_mean": 1.551888913401688
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0022_sync",
+    "frame_id": "003443",
+    "category": "car",
+    "prediction_index": 5,
+    "label_index": 5,
+    "errors_m": {
+      "mask_points_mean": 1.0759608450586546,
+      "mask_points_robust_mean": 1.0759608450586546
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0022_sync",
+    "frame_id": "003443",
+    "category": "car",
+    "prediction_index": 6,
+    "label_index": 6,
+    "errors_m": {
+      "mask_points_mean": 2.0704400118936532,
+      "mask_points_robust_mean": 2.0704400118936532
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0032_sync",
+    "frame_id": "003562",
+    "category": "car",
+    "prediction_index": 0,
+    "label_index": 1,
+    "errors_m": {
+      "mask_points_mean": 1.1799391379166622,
+      "mask_points_robust_mean": 0.9787527952225579
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0036_sync",
+    "frame_id": "003681",
+    "category": "car",
+    "prediction_index": 0,
+    "label_index": 1,
+    "errors_m": {
+      "mask_points_mean": 1.6220882400429069,
+      "mask_points_robust_mean": 0.7936541381107322
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0036_sync",
+    "frame_id": "003681",
+    "category": "car",
+    "prediction_index": 1,
+    "label_index": 2,
+    "errors_m": {
+      "mask_points_mean": 2.0380470270508786,
+      "mask_points_robust_mean": 0.959441969070157
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0036_sync",
+    "frame_id": "003681",
+    "category": "car",
+    "prediction_index": 2,
+    "label_index": 3,
+    "errors_m": {
+      "mask_points_mean": 0.4340297475697681,
+      "mask_points_robust_mean": 1.5069125498933538
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0036_sync",
+    "frame_id": "003681",
+    "category": "car",
+    "prediction_index": 3,
+    "label_index": 4,
+    "errors_m": {
+      "mask_points_mean": 0.8250853229285694,
+      "mask_points_robust_mean": 0.866836458160344
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0036_sync",
+    "frame_id": "003681",
+    "category": "car",
+    "prediction_index": 4,
+    "label_index": 0,
+    "errors_m": {
+      "mask_points_mean": 2.0794186251288043,
+      "mask_points_robust_mean": 0.8182613631777178
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0117_sync",
+    "frame_id": "003799",
+    "category": "car",
+    "prediction_index": 0,
+    "label_index": 1,
+    "errors_m": {
+      "mask_points_mean": 0.31199709463684083,
+      "mask_points_robust_mean": 0.5462518910892722
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0117_sync",
+    "frame_id": "003799",
+    "category": "car",
+    "prediction_index": 1,
+    "label_index": 2,
+    "errors_m": {
+      "mask_points_mean": 0.5465812345470231,
+      "mask_points_robust_mean": 0.5653849574089912
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0117_sync",
+    "frame_id": "003799",
+    "category": "car",
+    "prediction_index": 3,
+    "label_index": 3,
+    "errors_m": {
+      "mask_points_mean": 0.8899693327165591,
+      "mask_points_robust_mean": 2.35686783287245
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0117_sync",
+    "frame_id": "003799",
+    "category": "car",
+    "prediction_index": 5,
+    "label_index": 4,
+    "errors_m": {
+      "mask_points_mean": 1.929919200082193,
+      "mask_points_robust_mean": 1.4789458405071536
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0096_sync",
+    "frame_id": "003918",
+    "category": "car",
+    "prediction_index": 0,
+    "label_index": 0,
+    "errors_m": {
+      "mask_points_mean": 1.3757880473504969,
+      "mask_points_robust_mean": 0.806797003753351
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0015_sync",
+    "frame_id": "004037",
+    "category": "car",
+    "prediction_index": 2,
+    "label_index": 1,
+    "errors_m": {
+      "mask_points_mean": 0.7259867136392257,
+      "mask_points_robust_mean": 0.7259867136392257
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0015_sync",
+    "frame_id": "004037",
+    "category": "car",
+    "prediction_index": 3,
+    "label_index": 3,
+    "errors_m": {
+      "mask_points_mean": 1.4306822344335315,
+      "mask_points_robust_mean": 1.83062654225623
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0015_sync",
+    "frame_id": "004037",
+    "category": "truck",
+    "prediction_index": 0,
+    "label_index": 0,
+    "errors_m": {
+      "mask_points_mean": 1.9589818059221342,
+      "mask_points_robust_mean": 2.706750222705623
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0009_sync",
+    "frame_id": "004156",
+    "category": "car",
+    "prediction_index": 0,
+    "label_index": 2,
+    "errors_m": {
+      "mask_points_mean": 0.7100687093432133,
+      "mask_points_robust_mean": 0.5169685274568732
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0009_sync",
+    "frame_id": "004156",
+    "category": "car",
+    "prediction_index": 1,
+    "label_index": 3,
+    "errors_m": {
+      "mask_points_mean": 0.7766901211283982,
+      "mask_points_robust_mean": 0.7453866627242846
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0009_sync",
+    "frame_id": "004156",
+    "category": "car",
+    "prediction_index": 2,
+    "label_index": 1,
+    "errors_m": {
+      "mask_points_mean": 0.42691801215166425,
+      "mask_points_robust_mean": 1.8035892084139473
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0009_sync",
+    "frame_id": "004156",
+    "category": "car",
+    "prediction_index": 3,
+    "label_index": 4,
+    "errors_m": {
+      "mask_points_mean": 1.7256851335296925,
+      "mask_points_robust_mean": 1.1380905062644866
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0009_sync",
+    "frame_id": "004156",
+    "category": "car",
+    "prediction_index": 4,
+    "label_index": 0,
+    "errors_m": {
+      "mask_points_mean": 1.7596734418233007,
+      "mask_points_robust_mean": 1.6904955056888749
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0009_sync",
+    "frame_id": "004156",
+    "category": "car",
+    "prediction_index": 7,
+    "label_index": 6,
+    "errors_m": {
+      "mask_points_mean": 5.225847082464578,
+      "mask_points_robust_mean": 7.1353235216479725
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0009_sync",
+    "frame_id": "004156",
+    "category": "car",
+    "prediction_index": 11,
+    "label_index": 7,
+    "errors_m": {
+      "mask_points_mean": 4.840269718242626,
+      "mask_points_robust_mean": 6.088438409266064
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0015_sync",
+    "frame_id": "004274",
+    "category": "car",
+    "prediction_index": 0,
+    "label_index": 2,
+    "errors_m": {
+      "mask_points_mean": 0.753961248348249,
+      "mask_points_robust_mean": 1.9438580981649254
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0015_sync",
+    "frame_id": "004274",
+    "category": "car",
+    "prediction_index": 7,
+    "label_index": 3,
+    "errors_m": {
+      "mask_points_mean": 11.631287350250556,
+      "mask_points_robust_mean": 2.112883880138
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0039_sync",
+    "frame_id": "004393",
+    "category": "car",
+    "prediction_index": 0,
+    "label_index": 0,
+    "errors_m": {
+      "mask_points_mean": 0.6513385345078286,
+      "mask_points_robust_mean": 0.8784308944727572
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0039_sync",
+    "frame_id": "004393",
+    "category": "car",
+    "prediction_index": 1,
+    "label_index": 1,
+    "errors_m": {
+      "mask_points_mean": 1.0176251623899153,
+      "mask_points_robust_mean": 1.807504433433882
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0091_sync",
+    "frame_id": "004512",
+    "category": "pedestrian",
+    "prediction_index": 9,
+    "label_index": 2,
+    "errors_m": {
+      "mask_points_mean": 3.11343921155222,
+      "mask_points_robust_mean": 0.08086879697837852
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0101_sync",
+    "frame_id": "004630",
+    "category": "car",
+    "prediction_index": 0,
+    "label_index": 1,
+    "errors_m": {
+      "mask_points_mean": 0.5030942343132294,
+      "mask_points_robust_mean": 0.9980149612383143
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0101_sync",
+    "frame_id": "004630",
+    "category": "car",
+    "prediction_index": 2,
+    "label_index": 3,
+    "errors_m": {
+      "mask_points_mean": 1.3915968354394095,
+      "mask_points_robust_mean": 1.3915968354394095
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0096_sync",
+    "frame_id": "004749",
+    "category": "car",
+    "prediction_index": 0,
+    "label_index": 0,
+    "errors_m": {
+      "mask_points_mean": 0.5416783538498878,
+      "mask_points_robust_mean": 0.5887014858164805
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0096_sync",
+    "frame_id": "004749",
+    "category": "car",
+    "prediction_index": 1,
+    "label_index": 1,
+    "errors_m": {
+      "mask_points_mean": 1.0712124599438144,
+      "mask_points_robust_mean": 1.496323849518554
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0096_sync",
+    "frame_id": "004749",
+    "category": "car",
+    "prediction_index": 4,
+    "label_index": 5,
+    "errors_m": {
+      "mask_points_mean": 1.6885305412551108,
+      "mask_points_robust_mean": 1.6885305412551108
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0064_sync",
+    "frame_id": "004868",
+    "category": "car",
+    "prediction_index": 0,
+    "label_index": 0,
+    "errors_m": {
+      "mask_points_mean": 0.22092015613825092,
+      "mask_points_robust_mean": 0.7888996247835828
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0064_sync",
+    "frame_id": "004868",
+    "category": "car",
+    "prediction_index": 1,
+    "label_index": 2,
+    "errors_m": {
+      "mask_points_mean": 0.6248548597836593,
+      "mask_points_robust_mean": 1.602753830658108
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0018_sync",
+    "frame_id": "004987",
+    "category": "car",
+    "prediction_index": 1,
+    "label_index": 0,
+    "errors_m": {
+      "mask_points_mean": 1.4140975060272254,
+      "mask_points_robust_mean": 1.881371523920969
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0022_sync",
+    "frame_id": "005105",
+    "category": "car",
+    "prediction_index": 0,
+    "label_index": 2,
+    "errors_m": {
+      "mask_points_mean": 0.19021500007395958,
+      "mask_points_robust_mean": 0.9241895772856158
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0022_sync",
+    "frame_id": "005105",
+    "category": "car",
+    "prediction_index": 1,
+    "label_index": 1,
+    "errors_m": {
+      "mask_points_mean": 1.5179293543405128,
+      "mask_points_robust_mean": 0.40596061483507145
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0022_sync",
+    "frame_id": "005105",
+    "category": "car",
+    "prediction_index": 6,
+    "label_index": 0,
+    "errors_m": {
+      "mask_points_mean": 2.838566987887097,
+      "mask_points_robust_mean": 1.7694674197756841
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0096_sync",
+    "frame_id": "005224",
+    "category": "car",
+    "prediction_index": 0,
+    "label_index": 0,
+    "errors_m": {
+      "mask_points_mean": 1.5718574416852085,
+      "mask_points_robust_mean": 0.5767328541625956
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0101_sync",
+    "frame_id": "005343",
+    "category": "car",
+    "prediction_index": 0,
+    "label_index": 1,
+    "errors_m": {
+      "mask_points_mean": 1.5331149628119933,
+      "mask_points_robust_mean": 1.8137455770822797
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0101_sync",
+    "frame_id": "005343",
+    "category": "truck",
+    "prediction_index": 2,
+    "label_index": 0,
+    "errors_m": {
+      "mask_points_mean": 5.785043687847787,
+      "mask_points_robust_mean": 5.785043687847787
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0051_sync",
+    "frame_id": "005462",
+    "category": "car",
+    "prediction_index": 2,
+    "label_index": 1,
+    "errors_m": {
+      "mask_points_mean": 1.777720986814523,
+      "mask_points_robust_mean": 1.777720986814523
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0023_sync",
+    "frame_id": "005580",
+    "category": "car",
+    "prediction_index": 0,
+    "label_index": 9,
+    "errors_m": {
+      "mask_points_mean": 1.0310343771550228,
+      "mask_points_robust_mean": 1.6423643371878607
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0023_sync",
+    "frame_id": "005580",
+    "category": "car",
+    "prediction_index": 1,
+    "label_index": 5,
+    "errors_m": {
+      "mask_points_mean": 1.3817265401550354,
+      "mask_points_robust_mean": 1.3803812467699168
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0023_sync",
+    "frame_id": "005580",
+    "category": "car",
+    "prediction_index": 2,
+    "label_index": 8,
+    "errors_m": {
+      "mask_points_mean": 1.3614280685799982,
+      "mask_points_robust_mean": 1.7136360372414203
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0023_sync",
+    "frame_id": "005580",
+    "category": "car",
+    "prediction_index": 3,
+    "label_index": 7,
+    "errors_m": {
+      "mask_points_mean": 1.0524584491961044,
+      "mask_points_robust_mean": 2.23134836688287
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0023_sync",
+    "frame_id": "005580",
+    "category": "car",
+    "prediction_index": 4,
+    "label_index": 6,
+    "errors_m": {
+      "mask_points_mean": 0.27319246440953326,
+      "mask_points_robust_mean": 0.4398393694942341
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0023_sync",
+    "frame_id": "005580",
+    "category": "car",
+    "prediction_index": 6,
+    "label_index": 1,
+    "errors_m": {
+      "mask_points_mean": 0.42224997103764067,
+      "mask_points_robust_mean": 1.5284953384310875
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0023_sync",
+    "frame_id": "005580",
+    "category": "car",
+    "prediction_index": 7,
+    "label_index": 4,
+    "errors_m": {
+      "mask_points_mean": 0.34191140705256745,
+      "mask_points_robust_mean": 1.1211364229306642
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0023_sync",
+    "frame_id": "005580",
+    "category": "car",
+    "prediction_index": 10,
+    "label_index": 0,
+    "errors_m": {
+      "mask_points_mean": 2.263080225329766,
+      "mask_points_robust_mean": 1.6855729819766425
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0070_sync",
+    "frame_id": "005818",
+    "category": "pedestrian",
+    "prediction_index": 1,
+    "label_index": 0,
+    "errors_m": {
+      "mask_points_mean": 1.557696799261808,
+      "mask_points_robust_mean": 0.06526393166862518
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0036_sync",
+    "frame_id": "006055",
+    "category": "car",
+    "prediction_index": 0,
+    "label_index": 1,
+    "errors_m": {
+      "mask_points_mean": 4.376762391651825,
+      "mask_points_robust_mean": 0.70737945568712
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0036_sync",
+    "frame_id": "006055",
+    "category": "car",
+    "prediction_index": 1,
+    "label_index": 2,
+    "errors_m": {
+      "mask_points_mean": 1.7358789533064067,
+      "mask_points_robust_mean": 0.6016603263919604
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0036_sync",
+    "frame_id": "006055",
+    "category": "car",
+    "prediction_index": 2,
+    "label_index": 3,
+    "errors_m": {
+      "mask_points_mean": 2.0409458931055604,
+      "mask_points_robust_mean": 0.7742232771057158
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0036_sync",
+    "frame_id": "006055",
+    "category": "car",
+    "prediction_index": 3,
+    "label_index": 5,
+    "errors_m": {
+      "mask_points_mean": 1.5546814552007804,
+      "mask_points_robust_mean": 1.6196637667034832
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0036_sync",
+    "frame_id": "006055",
+    "category": "car",
+    "prediction_index": 4,
+    "label_index": 4,
+    "errors_m": {
+      "mask_points_mean": 0.14935613733668268,
+      "mask_points_robust_mean": 1.5554356226000672
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0036_sync",
+    "frame_id": "006055",
+    "category": "car",
+    "prediction_index": 5,
+    "label_index": 0,
+    "errors_m": {
+      "mask_points_mean": 1.79777759385343,
+      "mask_points_robust_mean": 1.7879476782160413
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0036_sync",
+    "frame_id": "006055",
+    "category": "car",
+    "prediction_index": 6,
+    "label_index": 12,
+    "errors_m": {
+      "mask_points_mean": 1.3329778523685414,
+      "mask_points_robust_mean": 0.9370394868718935
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0036_sync",
+    "frame_id": "006055",
+    "category": "car",
+    "prediction_index": 8,
+    "label_index": 10,
+    "errors_m": {
+      "mask_points_mean": 1.0930771056281783,
+      "mask_points_robust_mean": 0.6091263055911853
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0036_sync",
+    "frame_id": "006055",
+    "category": "car",
+    "prediction_index": 11,
+    "label_index": 6,
+    "errors_m": {
+      "mask_points_mean": 1.9717698706241535,
+      "mask_points_robust_mean": 0.874814965069882
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0036_sync",
+    "frame_id": "006055",
+    "category": "car",
+    "prediction_index": 13,
+    "label_index": 9,
+    "errors_m": {
+      "mask_points_mean": 0.6860943368540824,
+      "mask_points_robust_mean": 5.948818773165336
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0091_sync",
+    "frame_id": "006174",
+    "category": "pedestrian",
+    "prediction_index": 5,
+    "label_index": 1,
+    "errors_m": {
+      "mask_points_mean": 1.54087159249269,
+      "mask_points_robust_mean": 0.10045803649578787
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0091_sync",
+    "frame_id": "006174",
+    "category": "pedestrian",
+    "prediction_index": 7,
+    "label_index": 2,
+    "errors_m": {
+      "mask_points_mean": 1.8094301434089608,
+      "mask_points_robust_mean": 0.12124173107589943
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0011_sync",
+    "frame_id": "006293",
+    "category": "car",
+    "prediction_index": 0,
+    "label_index": 0,
+    "errors_m": {
+      "mask_points_mean": 0.43303355101533364,
+      "mask_points_robust_mean": 1.5110980624054593
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0093_sync",
+    "frame_id": "006530",
+    "category": "car",
+    "prediction_index": 0,
+    "label_index": 0,
+    "errors_m": {
+      "mask_points_mean": 7.2366596412174795,
+      "mask_points_robust_mean": 2.05172308905951
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0093_sync",
+    "frame_id": "006530",
+    "category": "car",
+    "prediction_index": 1,
+    "label_index": 2,
+    "errors_m": {
+      "mask_points_mean": 0.4710496941617428,
+      "mask_points_robust_mean": 0.5409157222258363
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0093_sync",
+    "frame_id": "006530",
+    "category": "car",
+    "prediction_index": 2,
+    "label_index": 1,
+    "errors_m": {
+      "mask_points_mean": 0.6988549056626241,
+      "mask_points_robust_mean": 1.0255555607414597
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0093_sync",
+    "frame_id": "006530",
+    "category": "car",
+    "prediction_index": 3,
+    "label_index": 3,
+    "errors_m": {
+      "mask_points_mean": 1.5805708840858,
+      "mask_points_robust_mean": 1.4837197020561457
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0093_sync",
+    "frame_id": "006530",
+    "category": "car",
+    "prediction_index": 4,
+    "label_index": 4,
+    "errors_m": {
+      "mask_points_mean": 0.3299874078342746,
+      "mask_points_robust_mean": 0.9814559965699767
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0093_sync",
+    "frame_id": "006530",
+    "category": "car",
+    "prediction_index": 7,
+    "label_index": 5,
+    "errors_m": {
+      "mask_points_mean": 0.8224921559077444,
+      "mask_points_robust_mean": 0.31728718524409144
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0009_sync",
+    "frame_id": "006649",
+    "category": "car",
+    "prediction_index": 0,
+    "label_index": 4,
+    "errors_m": {
+      "mask_points_mean": 2.850287677992867,
+      "mask_points_robust_mean": 0.988997534328788
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0009_sync",
+    "frame_id": "006649",
+    "category": "car",
+    "prediction_index": 1,
+    "label_index": 0,
+    "errors_m": {
+      "mask_points_mean": 0.24022262299924957,
+      "mask_points_robust_mean": 0.37654916645286024
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0009_sync",
+    "frame_id": "006649",
+    "category": "car",
+    "prediction_index": 2,
+    "label_index": 3,
+    "errors_m": {
+      "mask_points_mean": 1.0858179959431848,
+      "mask_points_robust_mean": 0.8061221846326809
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0009_sync",
+    "frame_id": "006649",
+    "category": "car",
+    "prediction_index": 3,
+    "label_index": 2,
+    "errors_m": {
+      "mask_points_mean": 2.230776027898786,
+      "mask_points_robust_mean": 0.851059475733015
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0009_sync",
+    "frame_id": "006649",
+    "category": "car",
+    "prediction_index": 4,
+    "label_index": 5,
+    "errors_m": {
+      "mask_points_mean": 0.796439369659369,
+      "mask_points_robust_mean": 0.16709195993001633
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0009_sync",
+    "frame_id": "006649",
+    "category": "car",
+    "prediction_index": 10,
+    "label_index": 1,
+    "errors_m": {
+      "mask_points_mean": 4.120381586381873,
+      "mask_points_robust_mean": 6.2702822715119195
+    }
+  },
+  {
+    "drive": "2011_09_29_drive_0071_sync",
+    "frame_id": "006768",
+    "category": "car",
+    "prediction_index": 3,
+    "label_index": 6,
+    "errors_m": {
+      "mask_points_mean": 1.2876891653373794,
+      "mask_points_robust_mean": 1.5657198376539512
+    }
+  },
+  {
+    "drive": "2011_09_29_drive_0071_sync",
+    "frame_id": "006768",
+    "category": "pedestrian",
+    "prediction_index": 12,
+    "label_index": 5,
+    "errors_m": {
+      "mask_points_mean": 1.5769855672661413,
+      "mask_points_robust_mean": 0.09350263969127254
+    }
+  },
+  {
+    "drive": "2011_09_29_drive_0071_sync",
+    "frame_id": "006768",
+    "category": "pedestrian",
+    "prediction_index": 13,
+    "label_index": 2,
+    "errors_m": {
+      "mask_points_mean": 3.284237847864593,
+      "mask_points_robust_mean": 0.07000170406195616
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0084_sync",
+    "frame_id": "006886",
+    "category": "car",
+    "prediction_index": 0,
+    "label_index": 0,
+    "errors_m": {
+      "mask_points_mean": 1.7586824025450356,
+      "mask_points_robust_mean": 0.5660831859354799
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0084_sync",
+    "frame_id": "006886",
+    "category": "car",
+    "prediction_index": 1,
+    "label_index": 3,
+    "errors_m": {
+      "mask_points_mean": 0.1741811721022281,
+      "mask_points_robust_mean": 0.8081870384316362
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0084_sync",
+    "frame_id": "006886",
+    "category": "car",
+    "prediction_index": 3,
+    "label_index": 1,
+    "errors_m": {
+      "mask_points_mean": 1.367046957409781,
+      "mask_points_robust_mean": 1.6863098449591722
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0084_sync",
+    "frame_id": "006886",
+    "category": "car",
+    "prediction_index": 4,
+    "label_index": 4,
+    "errors_m": {
+      "mask_points_mean": 5.379454534776971,
+      "mask_points_robust_mean": 0.972435143769023
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0084_sync",
+    "frame_id": "006886",
+    "category": "car",
+    "prediction_index": 12,
+    "label_index": 9,
+    "errors_m": {
+      "mask_points_mean": 1.515015293438718,
+      "mask_points_robust_mean": 1.515015293438718
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0084_sync",
+    "frame_id": "006886",
+    "category": "car",
+    "prediction_index": 20,
+    "label_index": 8,
+    "errors_m": {
+      "mask_points_mean": 18.7226468151297,
+      "mask_points_robust_mean": 29.207870873557127
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0023_sync",
+    "frame_id": "007005",
+    "category": "car",
+    "prediction_index": 0,
+    "label_index": 3,
+    "errors_m": {
+      "mask_points_mean": 2.2402779017468593,
+      "mask_points_robust_mean": 0.7375936566051013
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0023_sync",
+    "frame_id": "007005",
+    "category": "car",
+    "prediction_index": 1,
+    "label_index": 2,
+    "errors_m": {
+      "mask_points_mean": 1.1679939875753265,
+      "mask_points_robust_mean": 0.8596148012396463
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0023_sync",
+    "frame_id": "007005",
+    "category": "car",
+    "prediction_index": 2,
+    "label_index": 0,
+    "errors_m": {
+      "mask_points_mean": 1.621787936522603,
+      "mask_points_robust_mean": 1.6295497932053753
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0023_sync",
+    "frame_id": "007005",
+    "category": "car",
+    "prediction_index": 3,
+    "label_index": 1,
+    "errors_m": {
+      "mask_points_mean": 2.342645163759814,
+      "mask_points_robust_mean": 1.5389564386822912
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0023_sync",
+    "frame_id": "007005",
+    "category": "car",
+    "prediction_index": 4,
+    "label_index": 8,
+    "errors_m": {
+      "mask_points_mean": 2.0362288357907397,
+      "mask_points_robust_mean": 2.0362288357907397
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0023_sync",
+    "frame_id": "007005",
+    "category": "car",
+    "prediction_index": 6,
+    "label_index": 4,
+    "errors_m": {
+      "mask_points_mean": 0.8247600199785871,
+      "mask_points_robust_mean": 0.8071083016896073
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0023_sync",
+    "frame_id": "007005",
+    "category": "car",
+    "prediction_index": 7,
+    "label_index": 6,
+    "errors_m": {
+      "mask_points_mean": 0.9127304682859905,
+      "mask_points_robust_mean": 4.002742111529748
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0023_sync",
+    "frame_id": "007005",
+    "category": "car",
+    "prediction_index": 9,
+    "label_index": 7,
+    "errors_m": {
+      "mask_points_mean": 1.0317284762139938,
+      "mask_points_robust_mean": 1.177723141260642
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0057_sync",
+    "frame_id": "007124",
+    "category": "car",
+    "prediction_index": 0,
+    "label_index": 0,
+    "errors_m": {
+      "mask_points_mean": 1.9328749320374485,
+      "mask_points_robust_mean": 1.2874786952481727
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0057_sync",
+    "frame_id": "007124",
+    "category": "car",
+    "prediction_index": 1,
+    "label_index": 4,
+    "errors_m": {
+      "mask_points_mean": 0.8559536322633036,
+      "mask_points_robust_mean": 0.7536165349777033
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0057_sync",
+    "frame_id": "007124",
+    "category": "car",
+    "prediction_index": 2,
+    "label_index": 3,
+    "errors_m": {
+      "mask_points_mean": 0.7758755873711863,
+      "mask_points_robust_mean": 1.5461626641045116
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0057_sync",
+    "frame_id": "007124",
+    "category": "car",
+    "prediction_index": 3,
+    "label_index": 1,
+    "errors_m": {
+      "mask_points_mean": 6.780985330426306,
+      "mask_points_robust_mean": 1.644928092990219
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0057_sync",
+    "frame_id": "007124",
+    "category": "car",
+    "prediction_index": 6,
+    "label_index": 5,
+    "errors_m": {
+      "mask_points_mean": 1.0757648348875168,
+      "mask_points_robust_mean": 1.6437925072189958
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0057_sync",
+    "frame_id": "007124",
+    "category": "car",
+    "prediction_index": 9,
+    "label_index": 2,
+    "errors_m": {
+      "mask_points_mean": 1.551789909116817,
+      "mask_points_robust_mean": 1.7452104003180073
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0057_sync",
+    "frame_id": "007124",
+    "category": "car",
+    "prediction_index": 10,
+    "label_index": 6,
+    "errors_m": {
+      "mask_points_mean": 1.7791624318806223,
+      "mask_points_robust_mean": 2.0430804396783446
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0036_sync",
+    "frame_id": "007243",
+    "category": "car",
+    "prediction_index": 0,
+    "label_index": 0,
+    "errors_m": {
+      "mask_points_mean": 3.8114185472402418,
+      "mask_points_robust_mean": 0.7527889010735316
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0036_sync",
+    "frame_id": "007243",
+    "category": "car",
+    "prediction_index": 1,
+    "label_index": 3,
+    "errors_m": {
+      "mask_points_mean": 1.0196436891790917,
+      "mask_points_robust_mean": 1.0995451975364925
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0036_sync",
+    "frame_id": "007243",
+    "category": "car",
+    "prediction_index": 2,
+    "label_index": 5,
+    "errors_m": {
+      "mask_points_mean": 0.5891435288046327,
+      "mask_points_robust_mean": 0.8567700943259626
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0036_sync",
+    "frame_id": "007243",
+    "category": "car",
+    "prediction_index": 3,
+    "label_index": 1,
+    "errors_m": {
+      "mask_points_mean": 1.1874279229225053,
+      "mask_points_robust_mean": 1.6094391022389494
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0036_sync",
+    "frame_id": "007243",
+    "category": "car",
+    "prediction_index": 4,
+    "label_index": 4,
+    "errors_m": {
+      "mask_points_mean": 1.1656287890014705,
+      "mask_points_robust_mean": 1.1978188029551042
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0036_sync",
+    "frame_id": "007243",
+    "category": "car",
+    "prediction_index": 5,
+    "label_index": 9,
+    "errors_m": {
+      "mask_points_mean": 0.44223075779060983,
+      "mask_points_robust_mean": 5.721347430948328
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0036_sync",
+    "frame_id": "007243",
+    "category": "car",
+    "prediction_index": 6,
+    "label_index": 10,
+    "errors_m": {
+      "mask_points_mean": 1.9827642345699115,
+      "mask_points_robust_mean": 1.6729021130546706
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0036_sync",
+    "frame_id": "007243",
+    "category": "car",
+    "prediction_index": 7,
+    "label_index": 11,
+    "errors_m": {
+      "mask_points_mean": 0.8909382318356982,
+      "mask_points_robust_mean": 1.7023650242203903
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0036_sync",
+    "frame_id": "007243",
+    "category": "car",
+    "prediction_index": 12,
+    "label_index": 2,
+    "errors_m": {
+      "mask_points_mean": 1.1602820623373735,
+      "mask_points_robust_mean": 2.0208070989345166
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0096_sync",
+    "frame_id": "007361",
+    "category": "car",
+    "prediction_index": 0,
+    "label_index": 0,
+    "errors_m": {
+      "mask_points_mean": 1.3293242429679022,
+      "mask_points_robust_mean": 0.4679100232118079
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0096_sync",
+    "frame_id": "007361",
+    "category": "car",
+    "prediction_index": 1,
+    "label_index": 2,
+    "errors_m": {
+      "mask_points_mean": 2.163463269046681,
+      "mask_points_robust_mean": 2.7238870969211804
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0023_sync",
+    "frame_id": "007480",
+    "category": "car",
+    "prediction_index": 0,
+    "label_index": 4,
+    "errors_m": {
+      "mask_points_mean": 2.5334590830664525,
+      "mask_points_robust_mean": 1.6150381541682197
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0023_sync",
+    "frame_id": "007480",
+    "category": "car",
+    "prediction_index": 1,
+    "label_index": 12,
+    "errors_m": {
+      "mask_points_mean": 0.5927511342490615,
+      "mask_points_robust_mean": 1.3302950070488706
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0023_sync",
+    "frame_id": "007480",
+    "category": "car",
+    "prediction_index": 3,
+    "label_index": 0,
+    "errors_m": {
+      "mask_points_mean": 1.235062602900287,
+      "mask_points_robust_mean": 2.086299690278219
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0023_sync",
+    "frame_id": "007480",
+    "category": "car",
+    "prediction_index": 4,
+    "label_index": 6,
+    "errors_m": {
+      "mask_points_mean": 1.9722649695592767,
+      "mask_points_robust_mean": 1.0277649682798833
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0023_sync",
+    "frame_id": "007480",
+    "category": "car",
+    "prediction_index": 6,
+    "label_index": 5,
+    "errors_m": {
+      "mask_points_mean": 2.433665455561466,
+      "mask_points_robust_mean": 1.0150874858989294
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0023_sync",
+    "frame_id": "007480",
+    "category": "car",
+    "prediction_index": 8,
+    "label_index": 8,
+    "errors_m": {
+      "mask_points_mean": 1.4173562091009282,
+      "mask_points_robust_mean": 1.199346699672374
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0023_sync",
+    "frame_id": "007480",
+    "category": "car",
+    "prediction_index": 9,
+    "label_index": 13,
+    "errors_m": {
+      "mask_points_mean": 2.6007890128992854,
+      "mask_points_robust_mean": 1.4598944364284905
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0023_sync",
+    "frame_id": "007480",
+    "category": "car",
+    "prediction_index": 10,
+    "label_index": 10,
+    "errors_m": {
+      "mask_points_mean": 0.6672697263880117,
+      "mask_points_robust_mean": 1.76555737995983
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0023_sync",
+    "frame_id": "007480",
+    "category": "car",
+    "prediction_index": 13,
+    "label_index": 1,
+    "errors_m": {
+      "mask_points_mean": 0.9572781118953373,
+      "mask_points_robust_mean": 0.6798918403768859
+    }
+  },
+  {
+    "drive": "2011_09_26_drive_0023_sync",
+    "frame_id": "007480",
+    "category": "car",
+    "prediction_index": 15,
+    "label_index": 2,
+    "errors_m": {
+      "mask_points_mean": 1.348606796599979,
+      "mask_points_robust_mean": 2.2677390370286648
+    }
+  }
+]

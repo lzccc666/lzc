@@ -1,0 +1,103 @@
+schema_version: stage5-config-v1
+output_root: /root/autodl-tmp/lizichong/outputs/project_v2/incremental_navigation
+query_text: 前往小汽车附近
+
+scenes:
+  scene-0916:
+    snapshot_first_frame: 3
+    snapshot_last_frame: 40
+  scene-0003:
+    snapshot_first_frame: 1
+    snapshot_last_frame: 39
+
+online:
+  target_change_distance_m: 0.75
+  qwen_enabled: false
+  qwen_async_workers: 2
+  qwen_candidate_change_ratio: 0.34
+  qwen_min_submit_interval_frames: 2
+  qwen_query_min_confidence: 0.60
+  qwen_apply_object_attributes: true
+  qwen_attribute_min_observations: 3
+  qwen_attribute_refresh_interval_frames: 30
+  qwen_attribute_retry_interval_frames: 10
+  qwen_attribute_max_pending: 2
+  qwen_attribute_max_submissions_per_frame: 1
+  qwen_attribute_min_confidence: 0.60
+  qwen_apply_rerank: true
+  qwen_rerank_min_confidence: 0.60
+  qwen_rerank_score_margin: 0.13
+  relation_coordinate_frame: world
+
+qwen_online:
+  enabled: false
+  model_name_or_path: /root/autodl-tmp/lizichong/checkpoint/Qwen2-VL-2B-Instruct
+  adapter_path: /root/autodl-tmp/lizichong/outputs/project_v2/qwen_eval/finetune_v2/best_adapter
+  model_revision: local-qwen2-vl-2b-instruct
+  adapter_revision: finetune-v2-best-adapter
+  device: cuda:0
+  use_qwen_caption: false
+  use_qwen_object_attributes: true
+  use_qwen_relation: false
+  use_qwen_query_parse: true
+  use_qwen_rerank: true
+  timeout_s: 30.0
+  max_new_tokens: 192
+  max_images: 4
+  do_sample: false
+  async_workers: 2
+  prompt_profile: finetune_v2
+  torch_dtype: bfloat16
+  max_image_side: 448
+  cache_dir: /root/autodl-tmp/lizichong/outputs/project_v2/qwen_online_closed_loop/cache
+  log_dir: /root/autodl-tmp/lizichong/outputs/project_v2/qwen_online_closed_loop/qwen_audit
+  frame_period_s: 0.5
+  drain_timeout_s: 90.0
+
+state_machine:
+  confirmation_observations: 3
+  confirmation_confidence: 0.20
+  minimum_persistent_frames: 3
+  provisional_missing_tolerance_frames: 0
+  locked_missing_tolerance_frames: 1
+  target_lost_after_frames: 4
+  target_loss_state: SEARCHING
+  better_target_min_confidence: 0.45
+  better_target_score_margin: 0.12
+  better_target_persistence_frames: 3
+
+replan:
+  trigger_priority:
+    - path_blocked
+    - target_changed
+    - better_target_persisted
+    - target_confirmed
+    - manual_request
+    - vehicle_moved
+    - periodic_interval
+  cooldown_frames: 2
+  cooldown_bypass_triggers:
+    - path_blocked
+    - target_changed
+    - better_target_persisted
+    - target_confirmed
+    - manual_request
+  debounce_frames:
+    target_confirmed: 1
+    target_changed: 1
+    better_target_persisted: 1
+    path_blocked: 1
+    vehicle_moved: 1
+    periodic_interval: 1
+    manual_request: 1
+  vehicle_moved_distance_m: 5.0
+  periodic_interval_frames: 10
+
+replay:
+  manual_replan_offset_frames: 14
+  deterministic_runs: 2
+  center_match_tolerance_m: 1.5
+  center_match_max_tolerance_m: 4.0
+  center_match_min_fraction: 0.75
+  node_count_tolerance: 3
+  category_count_tolerance: 2

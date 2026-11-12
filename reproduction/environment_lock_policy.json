@@ -1,0 +1,8 @@
+{
+  "pip_entries": 469,
+  "portable_pinned_entries": 144,
+  "excluded_local_or_unpinned": 325,
+  "cuda_runtime_external": true,
+  "python": "3.10",
+  "installed_project_command": "pip install -e ."
+}
