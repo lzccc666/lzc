@@ -1,0 +1,581 @@
+{
+  "conditions": {
+    "baseline": {
+      "positive_selection": {
+        "estimate": 0.058663028649386086,
+        "ci95": [
+          0.014651211361737677,
+          0.12088074167720186
+        ],
+        "valid_resamples": 4000,
+        "count": 43,
+        "denominator": 733
+      },
+      "no_match_false_selection": {
+        "estimate": 0.020942408376963352,
+        "ci95": [
+          0.0039678618482966305,
+          0.04289566356099417
+        ],
+        "valid_resamples": 4000,
+        "count": 8,
+        "denominator": 382
+      },
+      "positive_topk_coverage": {
+        "estimate": 0.06412005457025921,
+        "ci95": [
+          0.014651211361737677,
+          0.12584255931934685
+        ],
+        "valid_resamples": 4000,
+        "count": 47,
+        "denominator": 733
+      }
+    },
+    "top_k_1": {
+      "positive_selection": {
+        "estimate": 0.058663028649386086,
+        "ci95": [
+          0.014651211361737677,
+          0.12088074167720186
+        ],
+        "valid_resamples": 4000,
+        "count": 43,
+        "denominator": 733
+      },
+      "no_match_false_selection": {
+        "estimate": 0.020942408376963352,
+        "ci95": [
+          0.0039678618482966305,
+          0.04289566356099417
+        ],
+        "valid_resamples": 4000,
+        "count": 8,
+        "denominator": 382
+      },
+      "positive_topk_coverage": {
+        "estimate": 0.058663028649386086,
+        "ci95": [
+          0.014651211361737677,
+          0.12088074167720186
+        ],
+        "valid_resamples": 4000,
+        "count": 43,
+        "denominator": 733
+      }
+    },
+    "top_k_5": {
+      "positive_selection": {
+        "estimate": 0.058663028649386086,
+        "ci95": [
+          0.014651211361737677,
+          0.12088074167720186
+        ],
+        "valid_resamples": 4000,
+        "count": 43,
+        "denominator": 733
+      },
+      "no_match_false_selection": {
+        "estimate": 0.020942408376963352,
+        "ci95": [
+          0.0039678618482966305,
+          0.04289566356099417
+        ],
+        "valid_resamples": 4000,
+        "count": 8,
+        "denominator": 382
+      },
+      "positive_topk_coverage": {
+        "estimate": 0.06412005457025921,
+        "ci95": [
+          0.014651211361737677,
+          0.12584255931934685
+        ],
+        "valid_resamples": 4000,
+        "count": 47,
+        "denominator": 733
+      }
+    },
+    "minimum_observations_1": {
+      "positive_selection": {
+        "estimate": 0.058663028649386086,
+        "ci95": [
+          0.014651211361737677,
+          0.12088074167720186
+        ],
+        "valid_resamples": 4000,
+        "count": 43,
+        "denominator": 733
+      },
+      "no_match_false_selection": {
+        "estimate": 0.020942408376963352,
+        "ci95": [
+          0.0039678618482966305,
+          0.04289566356099417
+        ],
+        "valid_resamples": 4000,
+        "count": 8,
+        "denominator": 382
+      },
+      "positive_topk_coverage": {
+        "estimate": 0.06412005457025921,
+        "ci95": [
+          0.014651211361737677,
+          0.12584255931934685
+        ],
+        "valid_resamples": 4000,
+        "count": 47,
+        "denominator": 733
+      }
+    },
+    "minimum_observations_5": {
+      "positive_selection": {
+        "estimate": 0.04638472032742155,
+        "ci95": [
+          0.008229945873624035,
+          0.1012172501738929
+        ],
+        "valid_resamples": 4000,
+        "count": 34,
+        "denominator": 733
+      },
+      "no_match_false_selection": {
+        "estimate": 0.01832460732984293,
+        "ci95": [
+          0.003952569169960474,
+          0.03973773779055963
+        ],
+        "valid_resamples": 4000,
+        "count": 7,
+        "denominator": 382
+      },
+      "positive_topk_coverage": {
+        "estimate": 0.04911323328785812,
+        "ci95": [
+          0.008229945873624035,
+          0.10240473547909733
+        ],
+        "valid_resamples": 4000,
+        "count": 36,
+        "denominator": 733
+      }
+    },
+    "minimum_depth_support_fraction_0.2": {
+      "positive_selection": {
+        "estimate": 0.058663028649386086,
+        "ci95": [
+          0.014651211361737677,
+          0.12088074167720186
+        ],
+        "valid_resamples": 4000,
+        "count": 43,
+        "denominator": 733
+      },
+      "no_match_false_selection": {
+        "estimate": 0.020942408376963352,
+        "ci95": [
+          0.0039678618482966305,
+          0.04289566356099417
+        ],
+        "valid_resamples": 4000,
+        "count": 8,
+        "denominator": 382
+      },
+      "positive_topk_coverage": {
+        "estimate": 0.06412005457025921,
+        "ci95": [
+          0.014651211361737677,
+          0.12584255931934685
+        ],
+        "valid_resamples": 4000,
+        "count": 47,
+        "denominator": 733
+      }
+    },
+    "minimum_depth_support_fraction_0.6": {
+      "positive_selection": {
+        "estimate": 0.058663028649386086,
+        "ci95": [
+          0.014651211361737677,
+          0.12088074167720186
+        ],
+        "valid_resamples": 4000,
+        "count": 43,
+        "denominator": 733
+      },
+      "no_match_false_selection": {
+        "estimate": 0.013089005235602094,
+        "ci95": [
+          0.0,
+          0.02619169096209913
+        ],
+        "valid_resamples": 4000,
+        "count": 5,
+        "denominator": 382
+      },
+      "positive_topk_coverage": {
+        "estimate": 0.06412005457025921,
+        "ci95": [
+          0.014651211361737677,
+          0.12584255931934685
+        ],
+        "valid_resamples": 4000,
+        "count": 47,
+        "denominator": 733
+      }
+    },
+    "rejection_score_0.5": {
+      "positive_selection": {
+        "estimate": 0.058663028649386086,
+        "ci95": [
+          0.014651211361737677,
+          0.12088074167720186
+        ],
+        "valid_resamples": 4000,
+        "count": 43,
+        "denominator": 733
+      },
+      "no_match_false_selection": {
+        "estimate": 0.020942408376963352,
+        "ci95": [
+          0.0039678618482966305,
+          0.04289566356099417
+        ],
+        "valid_resamples": 4000,
+        "count": 8,
+        "denominator": 382
+      },
+      "positive_topk_coverage": {
+        "estimate": 0.06412005457025921,
+        "ci95": [
+          0.014651211361737677,
+          0.12584255931934685
+        ],
+        "valid_resamples": 4000,
+        "count": 47,
+        "denominator": 733
+      }
+    },
+    "rejection_score_0.7": {
+      "positive_selection": {
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "valid_resamples": 4000,
+        "count": 0,
+        "denominator": 733
+      },
+      "no_match_false_selection": {
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "valid_resamples": 4000,
+        "count": 0,
+        "denominator": 382
+      },
+      "positive_topk_coverage": {
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "valid_resamples": 4000,
+        "count": 0,
+        "denominator": 733
+      }
+    }
+  },
+  "paired_differences": [
+    {
+      "condition": "top_k_1",
+      "baseline": "baseline",
+      "metric": "positive_selection",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "condition": "top_k_1",
+      "baseline": "baseline",
+      "metric": "no_match_false_selection",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "condition": "top_k_1",
+      "baseline": "baseline",
+      "metric": "positive_topk_coverage",
+      "difference": -0.005457025920873125,
+      "ci95": [
+        -0.012345917345917352,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "condition": "top_k_5",
+      "baseline": "baseline",
+      "metric": "positive_selection",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "condition": "top_k_5",
+      "baseline": "baseline",
+      "metric": "no_match_false_selection",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "condition": "top_k_5",
+      "baseline": "baseline",
+      "metric": "positive_topk_coverage",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "condition": "minimum_observations_1",
+      "baseline": "baseline",
+      "metric": "positive_selection",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "condition": "minimum_observations_1",
+      "baseline": "baseline",
+      "metric": "no_match_false_selection",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "condition": "minimum_observations_1",
+      "baseline": "baseline",
+      "metric": "positive_topk_coverage",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "condition": "minimum_observations_5",
+      "baseline": "baseline",
+      "metric": "positive_selection",
+      "difference": -0.012278308321964533,
+      "ci95": [
+        -0.022535438071261706,
+        -0.00411522633744856
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "condition": "minimum_observations_5",
+      "baseline": "baseline",
+      "metric": "no_match_false_selection",
+      "difference": -0.0026178010471204216,
+      "ci95": [
+        -0.006884978336993294,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "condition": "minimum_observations_5",
+      "baseline": "baseline",
+      "metric": "positive_topk_coverage",
+      "difference": -0.015006821282401092,
+      "ci95": [
+        -0.024051776727161814,
+        -0.00509337860780985
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "condition": "minimum_depth_support_fraction_0.2",
+      "baseline": "baseline",
+      "metric": "positive_selection",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "condition": "minimum_depth_support_fraction_0.2",
+      "baseline": "baseline",
+      "metric": "no_match_false_selection",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "condition": "minimum_depth_support_fraction_0.2",
+      "baseline": "baseline",
+      "metric": "positive_topk_coverage",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "condition": "minimum_depth_support_fraction_0.6",
+      "baseline": "baseline",
+      "metric": "positive_selection",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "condition": "minimum_depth_support_fraction_0.6",
+      "baseline": "baseline",
+      "metric": "no_match_false_selection",
+      "difference": -0.007853403141361258,
+      "ci95": [
+        -0.0297029702970297,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "condition": "minimum_depth_support_fraction_0.6",
+      "baseline": "baseline",
+      "metric": "positive_topk_coverage",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "condition": "rejection_score_0.5",
+      "baseline": "baseline",
+      "metric": "positive_selection",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "condition": "rejection_score_0.5",
+      "baseline": "baseline",
+      "metric": "no_match_false_selection",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "condition": "rejection_score_0.5",
+      "baseline": "baseline",
+      "metric": "positive_topk_coverage",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "condition": "rejection_score_0.7",
+      "baseline": "baseline",
+      "metric": "positive_selection",
+      "difference": -0.058663028649386086,
+      "ci95": [
+        -0.12088074167720185,
+        -0.014651211361737675
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "condition": "rejection_score_0.7",
+      "baseline": "baseline",
+      "metric": "no_match_false_selection",
+      "difference": -0.020942408376963352,
+      "ci95": [
+        -0.04289566356099417,
+        -0.00396786184829663
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "condition": "rejection_score_0.7",
+      "baseline": "baseline",
+      "metric": "positive_topk_coverage",
+      "difference": -0.06412005457025921,
+      "ci95": [
+        -0.12584255931934685,
+        -0.014651211361737675
+      ],
+      "valid_resamples": 4000
+    }
+  ],
+  "paired_queries": 1115,
+  "retrieval_run": "causal_retrieval_full_001",
+  "scenes": 38,
+  "logs": 11,
+  "raw_sha256": "09a1f9b33774972edc8f96aa5c2f5ec923c51efb4cee9c1b066aa748a573ebef",
+  "baseline_all_queries_verified": true,
+  "bootstrap": {
+    "unit": "采集log",
+    "paired": true,
+    "repetitions": 4000,
+    "seed": 17
+  },
+  "elapsed_s": 4.80401985347271,
+  "parameter_applied_to_running_navigation": false,
+  "limitations": [
+    "仅选择端；未改变关联阈值/重新建图，不覆盖车辆闭环参数",
+    "Top-K改变候选包含率，不赋予oracle重排或正确到达信用",
+    "类别/遮挡/距离分组为探索性计数，未补齐道路泛化；unknown保持独立",
+    "未按开发最佳设置修改已冻结的450次导航版本；无封存方法调用"
+  ],
+  "independent_test": false,
+  "stage12_complete": false,
+  "goal_complete": false
+}

@@ -1,0 +1,27 @@
+........................................................................ [ 24%]
+........................................................................ [ 48%]
+........................................................................ [ 73%]
+........................................................................ [ 97%]
+......                                                                   [100%]
+=============================== warnings summary ===============================
+../../miniconda3/envs/conceptgraph/lib/python3.10/site-packages/torchvision/datapoints/__init__.py:12
+  /root/miniconda3/envs/conceptgraph/lib/python3.10/site-packages/torchvision/datapoints/__init__.py:12: UserWarning: The torchvision.datapoints and torchvision.transforms.v2 namespaces are still Beta. While we do not expect major breaking changes, some APIs may still change according to user feedback. Please submit any feedback you may have in this issue: https://github.com/pytorch/vision/issues/6753, and you can also check out https://github.com/pytorch/vision/issues/7319 to learn more about the APIs that we suspect might involve future changes. You can silence this warning by calling torchvision.disable_beta_transforms_warning().
+    warnings.warn(_BETA_TRANSFORMS_WARNING)
+
+../../miniconda3/envs/conceptgraph/lib/python3.10/site-packages/torchvision/transforms/v2/__init__.py:54
+  /root/miniconda3/envs/conceptgraph/lib/python3.10/site-packages/torchvision/transforms/v2/__init__.py:54: UserWarning: The torchvision.datapoints and torchvision.transforms.v2 namespaces are still Beta. While we do not expect major breaking changes, some APIs may still change according to user feedback. Please submit any feedback you may have in this issue: https://github.com/pytorch/vision/issues/6753, and you can also check out https://github.com/pytorch/vision/issues/7319 to learn more about the APIs that we suspect might involve future changes. You can silence this warning by calling torchvision.disable_beta_transforms_warning().
+    warnings.warn(_BETA_TRANSFORMS_WARNING)
+
+tests/navigation/test_completion_protocol.py::test_new_motion_protocol_requires_temporal_evidence_for_static_vehicle
+  /root/miniconda3/envs/conceptgraph/lib/python3.10/site-packages/faiss/loader.py:28: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    if LooseVersion(numpy.__version__) >= "1.19":
+
+tests/navigation/test_completion_protocol.py::test_new_motion_protocol_requires_temporal_evidence_for_static_vehicle
+  /root/miniconda3/envs/conceptgraph/lib/python3.10/site-packages/setuptools/_distutils/version.py:337: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    other = LooseVersion(other)
+
+tests/nuscenes/test_empty_detection_preprocessing.py::test_sam_inplace_resize_cannot_corrupt_yolo_boxes_or_crops
+  SupervisionWarnings: A `Detections` object was created with a mask of type float32. Masks of type other than `bool` are deprecated and may produce unexpected behavior. Starting from `supervision-0.28.0`, passing a mask with `dtype` different from `bool` to `Detections` will raise a `ValueError` during validation instead of being accepted with a warning. To migrate, please ensure your masks are boolean, for example by using `mask = np.array(..., dtype=bool)` or by converting existing masks with `mask = mask.astype(bool)` before creating the `Detections` object. If you did not create the mask manually, please report the issue to the `supervision` team.
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+294 passed, 5 warnings in 14.83s

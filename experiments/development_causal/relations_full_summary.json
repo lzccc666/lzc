@@ -1,0 +1,965 @@
+{
+  "scenes": [
+    {
+      "scene": "scene-0012",
+      "methods": {
+        "direct_geometry": {
+          "true_positive": 0,
+          "predicted": 0,
+          "truth": 12,
+          "unresolved_edges": 12
+        },
+        "structured": {
+          "true_positive": 0,
+          "predicted": 0,
+          "truth": 12,
+          "unresolved_edges": 12
+        },
+        "incremental": {
+          "true_positive": 0,
+          "predicted": 0,
+          "truth": 12,
+          "unresolved_edges": 12
+        }
+      },
+      "source": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0012/frames.jsonl",
+      "sha256": "b1fdc42f8d0c03f08770ee359025c720d34324f4af1d6fee2dc5402ac6e224fd"
+    },
+    {
+      "scene": "scene-0013",
+      "methods": {
+        "direct_geometry": {
+          "true_positive": 0,
+          "predicted": 0,
+          "truth": 170,
+          "unresolved_edges": 64
+        },
+        "structured": {
+          "true_positive": 0,
+          "predicted": 0,
+          "truth": 170,
+          "unresolved_edges": 64
+        },
+        "incremental": {
+          "true_positive": 0,
+          "predicted": 0,
+          "truth": 170,
+          "unresolved_edges": 76
+        }
+      },
+      "source": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0013/frames.jsonl",
+      "sha256": "18e8912374da5dd90eca58739462df327936362fe05f197422edf996de9f66a1"
+    },
+    {
+      "scene": "scene-0014",
+      "methods": {
+        "direct_geometry": {
+          "true_positive": 0,
+          "predicted": 0,
+          "truth": 0,
+          "unresolved_edges": 0
+        },
+        "structured": {
+          "true_positive": 0,
+          "predicted": 0,
+          "truth": 0,
+          "unresolved_edges": 0
+        },
+        "incremental": {
+          "true_positive": 0,
+          "predicted": 0,
+          "truth": 0,
+          "unresolved_edges": 0
+        }
+      },
+      "source": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0014/frames.jsonl",
+      "sha256": "bf247aafda4eaaaba5fcd4cda92b6c73be1f4d84c5b14873c3bf9679fac3c1ad"
+    },
+    {
+      "scene": "scene-0015",
+      "methods": {
+        "direct_geometry": {
+          "true_positive": 0,
+          "predicted": 0,
+          "truth": 56,
+          "unresolved_edges": 132
+        },
+        "structured": {
+          "true_positive": 0,
+          "predicted": 0,
+          "truth": 56,
+          "unresolved_edges": 126
+        },
+        "incremental": {
+          "true_positive": 0,
+          "predicted": 0,
+          "truth": 56,
+          "unresolved_edges": 138
+        }
+      },
+      "source": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0015/frames.jsonl",
+      "sha256": "fef3c4c214c93b8cbb6c95a3e359592e25b6e3818edde52ed7c04054e1a06e6b"
+    },
+    {
+      "scene": "scene-0016",
+      "methods": {
+        "direct_geometry": {
+          "true_positive": 56,
+          "predicted": 60,
+          "truth": 550,
+          "unresolved_edges": 238
+        },
+        "structured": {
+          "true_positive": 56,
+          "predicted": 60,
+          "truth": 550,
+          "unresolved_edges": 238
+        },
+        "incremental": {
+          "true_positive": 56,
+          "predicted": 60,
+          "truth": 550,
+          "unresolved_edges": 238
+        }
+      },
+      "source": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0016/frames.jsonl",
+      "sha256": "b31f03e7e27d6eaba8e98be14b481046a45f203dc25226a8928599c46c031519"
+    },
+    {
+      "scene": "scene-0019",
+      "methods": {
+        "direct_geometry": {
+          "true_positive": 0,
+          "predicted": 0,
+          "truth": 2036,
+          "unresolved_edges": 0
+        },
+        "structured": {
+          "true_positive": 0,
+          "predicted": 0,
+          "truth": 2036,
+          "unresolved_edges": 0
+        },
+        "incremental": {
+          "true_positive": 0,
+          "predicted": 0,
+          "truth": 2036,
+          "unresolved_edges": 0
+        }
+      },
+      "source": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0019/frames.jsonl",
+      "sha256": "14dbae585142256eeb601988fbcc8353670e50418ac7d88f451a5cc6e3fa7d54"
+    },
+    {
+      "scene": "scene-0020",
+      "methods": {
+        "direct_geometry": {
+          "true_positive": 2,
+          "predicted": 2,
+          "truth": 288,
+          "unresolved_edges": 36
+        },
+        "structured": {
+          "true_positive": 2,
+          "predicted": 2,
+          "truth": 288,
+          "unresolved_edges": 34
+        },
+        "incremental": {
+          "true_positive": 2,
+          "predicted": 2,
+          "truth": 288,
+          "unresolved_edges": 34
+        }
+      },
+      "source": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0020/frames.jsonl",
+      "sha256": "cbd4c75bf02670517381899ee6fe00654e48c7d67d3ebaaf6ae2c31d520d3b6a"
+    },
+    {
+      "scene": "scene-0021",
+      "methods": {
+        "direct_geometry": {
+          "true_positive": 0,
+          "predicted": 0,
+          "truth": 574,
+          "unresolved_edges": 6
+        },
+        "structured": {
+          "true_positive": 0,
+          "predicted": 0,
+          "truth": 574,
+          "unresolved_edges": 6
+        },
+        "incremental": {
+          "true_positive": 0,
+          "predicted": 0,
+          "truth": 574,
+          "unresolved_edges": 6
+        }
+      },
+      "source": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0021/frames.jsonl",
+      "sha256": "d1904b9be22b3560c318d838b984fb375f1e733910d1a771ab6b21bbe96886d9"
+    },
+    {
+      "scene": "scene-0025",
+      "methods": {
+        "direct_geometry": {
+          "true_positive": 28,
+          "predicted": 32,
+          "truth": 830,
+          "unresolved_edges": 0
+        },
+        "structured": {
+          "true_positive": 28,
+          "predicted": 32,
+          "truth": 830,
+          "unresolved_edges": 0
+        },
+        "incremental": {
+          "true_positive": 28,
+          "predicted": 32,
+          "truth": 830,
+          "unresolved_edges": 0
+        }
+      },
+      "source": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0025/frames.jsonl",
+      "sha256": "904806c76b1b2c094e01f79794dacf5b2facc788e6e212665273b528044d5d63"
+    },
+    {
+      "scene": "scene-0026",
+      "methods": {
+        "direct_geometry": {
+          "true_positive": 6,
+          "predicted": 6,
+          "truth": 608,
+          "unresolved_edges": 24
+        },
+        "structured": {
+          "true_positive": 6,
+          "predicted": 10,
+          "truth": 608,
+          "unresolved_edges": 26
+        },
+        "incremental": {
+          "true_positive": 6,
+          "predicted": 10,
+          "truth": 608,
+          "unresolved_edges": 26
+        }
+      },
+      "source": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0026/frames.jsonl",
+      "sha256": "5029459bb4550c87a66ad0dba5c757b09acc7cd4a092766f128da2a3b92898a2"
+    },
+    {
+      "scene": "scene-0027",
+      "methods": {
+        "direct_geometry": {
+          "true_positive": 12,
+          "predicted": 12,
+          "truth": 1956,
+          "unresolved_edges": 22
+        },
+        "structured": {
+          "true_positive": 12,
+          "predicted": 12,
+          "truth": 1956,
+          "unresolved_edges": 22
+        },
+        "incremental": {
+          "true_positive": 12,
+          "predicted": 12,
+          "truth": 1956,
+          "unresolved_edges": 22
+        }
+      },
+      "source": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0027/frames.jsonl",
+      "sha256": "6364bd0bc4b59694f768a6b0837dd6c72d2d0991b68091a42a1b287655c7da99"
+    },
+    {
+      "scene": "scene-0030",
+      "methods": {
+        "direct_geometry": {
+          "true_positive": 8,
+          "predicted": 8,
+          "truth": 48,
+          "unresolved_edges": 10
+        },
+        "structured": {
+          "true_positive": 8,
+          "predicted": 12,
+          "truth": 48,
+          "unresolved_edges": 8
+        },
+        "incremental": {
+          "true_positive": 8,
+          "predicted": 12,
+          "truth": 48,
+          "unresolved_edges": 8
+        }
+      },
+      "source": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0030/frames.jsonl",
+      "sha256": "80f669cf846575b31e45549071332be09ca44ab03d8fffa1ab66c4d0505d08b8"
+    },
+    {
+      "scene": "scene-0032",
+      "methods": {
+        "direct_geometry": {
+          "true_positive": 0,
+          "predicted": 0,
+          "truth": 0,
+          "unresolved_edges": 0
+        },
+        "structured": {
+          "true_positive": 0,
+          "predicted": 0,
+          "truth": 0,
+          "unresolved_edges": 0
+        },
+        "incremental": {
+          "true_positive": 0,
+          "predicted": 0,
+          "truth": 0,
+          "unresolved_edges": 0
+        }
+      },
+      "source": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0032/frames.jsonl",
+      "sha256": "e58d917463f12728808c079d6810b6f7b4358cccc5cffebf2ad0175958f65ec4"
+    },
+    {
+      "scene": "scene-0035",
+      "methods": {
+        "direct_geometry": {
+          "true_positive": 20,
+          "predicted": 20,
+          "truth": 406,
+          "unresolved_edges": 136
+        },
+        "structured": {
+          "true_positive": 18,
+          "predicted": 24,
+          "truth": 406,
+          "unresolved_edges": 148
+        },
+        "incremental": {
+          "true_positive": 18,
+          "predicted": 26,
+          "truth": 406,
+          "unresolved_edges": 156
+        }
+      },
+      "source": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0035/frames.jsonl",
+      "sha256": "baedef906e65b183ee0d366e2ae6470e32eea3cbdef8d524e1ac641e0058b5cf"
+    },
+    {
+      "scene": "scene-0038",
+      "methods": {
+        "direct_geometry": {
+          "true_positive": 42,
+          "predicted": 58,
+          "truth": 426,
+          "unresolved_edges": 224
+        },
+        "structured": {
+          "true_positive": 44,
+          "predicted": 60,
+          "truth": 426,
+          "unresolved_edges": 224
+        },
+        "incremental": {
+          "true_positive": 44,
+          "predicted": 68,
+          "truth": 426,
+          "unresolved_edges": 226
+        }
+      },
+      "source": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0038/frames.jsonl",
+      "sha256": "ec3ccc301b06c7cfac5efa6e7688a0fc8007761ab0f98e8ae83882d8d6166e2b"
+    },
+    {
+      "scene": "scene-0039",
+      "methods": {
+        "direct_geometry": {
+          "true_positive": 42,
+          "predicted": 48,
+          "truth": 158,
+          "unresolved_edges": 38
+        },
+        "structured": {
+          "true_positive": 40,
+          "predicted": 50,
+          "truth": 158,
+          "unresolved_edges": 30
+        },
+        "incremental": {
+          "true_positive": 40,
+          "predicted": 50,
+          "truth": 158,
+          "unresolved_edges": 32
+        }
+      },
+      "source": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0039/frames.jsonl",
+      "sha256": "d05f116b7c8de8736aae0512d6c50eef63b2b48cf6cc1e619c0ca27eb01da6de"
+    },
+    {
+      "scene": "scene-0042",
+      "methods": {
+        "direct_geometry": {
+          "true_positive": 2,
+          "predicted": 4,
+          "truth": 264,
+          "unresolved_edges": 30
+        },
+        "structured": {
+          "true_positive": 2,
+          "predicted": 4,
+          "truth": 264,
+          "unresolved_edges": 30
+        },
+        "incremental": {
+          "true_positive": 2,
+          "predicted": 4,
+          "truth": 264,
+          "unresolved_edges": 30
+        }
+      },
+      "source": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0042/frames.jsonl",
+      "sha256": "89c98c92dace43a66d06147a81a89643c2e8d0e46441f02143ebbb7f881e0e45"
+    },
+    {
+      "scene": "scene-0043",
+      "methods": {
+        "direct_geometry": {
+          "true_positive": 38,
+          "predicted": 54,
+          "truth": 1534,
+          "unresolved_edges": 668
+        },
+        "structured": {
+          "true_positive": 36,
+          "predicted": 56,
+          "truth": 1534,
+          "unresolved_edges": 690
+        },
+        "incremental": {
+          "true_positive": 36,
+          "predicted": 58,
+          "truth": 1534,
+          "unresolved_edges": 710
+        }
+      },
+      "source": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0043/frames.jsonl",
+      "sha256": "4e59b4faebfc5ac5693df64caacc78a9145dfb4d20f25d615da07aa07abb8008"
+    },
+    {
+      "scene": "scene-0044",
+      "methods": {
+        "direct_geometry": {
+          "true_positive": 4,
+          "predicted": 4,
+          "truth": 56,
+          "unresolved_edges": 158
+        },
+        "structured": {
+          "true_positive": 4,
+          "predicted": 4,
+          "truth": 56,
+          "unresolved_edges": 174
+        },
+        "incremental": {
+          "true_positive": 4,
+          "predicted": 4,
+          "truth": 56,
+          "unresolved_edges": 174
+        }
+      },
+      "source": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0044/frames.jsonl",
+      "sha256": "7d99271519b46334ba25296ea01137ae135739d865a24cedb6bc0f1542c25d91"
+    },
+    {
+      "scene": "scene-0047",
+      "methods": {
+        "direct_geometry": {
+          "true_positive": 0,
+          "predicted": 0,
+          "truth": 254,
+          "unresolved_edges": 24
+        },
+        "structured": {
+          "true_positive": 0,
+          "predicted": 0,
+          "truth": 254,
+          "unresolved_edges": 22
+        },
+        "incremental": {
+          "true_positive": 0,
+          "predicted": 0,
+          "truth": 254,
+          "unresolved_edges": 22
+        }
+      },
+      "source": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0047/frames.jsonl",
+      "sha256": "2388853c7bace00f460a0462c66a4b62631cc826580a1ca380a7f8ae58c7b3e8"
+    },
+    {
+      "scene": "scene-0048",
+      "methods": {
+        "direct_geometry": {
+          "true_positive": 0,
+          "predicted": 0,
+          "truth": 40,
+          "unresolved_edges": 28
+        },
+        "structured": {
+          "true_positive": 0,
+          "predicted": 0,
+          "truth": 40,
+          "unresolved_edges": 26
+        },
+        "incremental": {
+          "true_positive": 0,
+          "predicted": 0,
+          "truth": 40,
+          "unresolved_edges": 26
+        }
+      },
+      "source": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0048/frames.jsonl",
+      "sha256": "93f82423c35bc48802e7b9cd3a2d6bad875a54c468f1d355f918d80212b3cdf0"
+    },
+    {
+      "scene": "scene-0049",
+      "methods": {
+        "direct_geometry": {
+          "true_positive": 0,
+          "predicted": 0,
+          "truth": 32,
+          "unresolved_edges": 24
+        },
+        "structured": {
+          "true_positive": 0,
+          "predicted": 0,
+          "truth": 32,
+          "unresolved_edges": 24
+        },
+        "incremental": {
+          "true_positive": 0,
+          "predicted": 0,
+          "truth": 32,
+          "unresolved_edges": 24
+        }
+      },
+      "source": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0049/frames.jsonl",
+      "sha256": "8b324dd602f04b0f1fe3f072786273dcaa00e65ea8edf1406ad34d80497c450f"
+    },
+    {
+      "scene": "scene-0053",
+      "methods": {
+        "direct_geometry": {
+          "true_positive": 206,
+          "predicted": 218,
+          "truth": 818,
+          "unresolved_edges": 310
+        },
+        "structured": {
+          "true_positive": 204,
+          "predicted": 230,
+          "truth": 818,
+          "unresolved_edges": 348
+        },
+        "incremental": {
+          "true_positive": 204,
+          "predicted": 242,
+          "truth": 818,
+          "unresolved_edges": 384
+        }
+      },
+      "source": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0053/frames.jsonl",
+      "sha256": "fbd1f08d30a64b54be8ba14dd89b5935edf0d0f54a0c7a92ae43c10639ff54dd"
+    },
+    {
+      "scene": "scene-0054",
+      "methods": {
+        "direct_geometry": {
+          "true_positive": 88,
+          "predicted": 96,
+          "truth": 370,
+          "unresolved_edges": 1246
+        },
+        "structured": {
+          "true_positive": 88,
+          "predicted": 104,
+          "truth": 370,
+          "unresolved_edges": 1350
+        },
+        "incremental": {
+          "true_positive": 88,
+          "predicted": 104,
+          "truth": 370,
+          "unresolved_edges": 1398
+        }
+      },
+      "source": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0054/frames.jsonl",
+      "sha256": "e3486e4c1e407c18d2f41310663146d6a56d6efa6ee6736ea1d05302c384e2a2"
+    },
+    {
+      "scene": "scene-0059",
+      "methods": {
+        "direct_geometry": {
+          "true_positive": 48,
+          "predicted": 52,
+          "truth": 640,
+          "unresolved_edges": 844
+        },
+        "structured": {
+          "true_positive": 48,
+          "predicted": 56,
+          "truth": 640,
+          "unresolved_edges": 814
+        },
+        "incremental": {
+          "true_positive": 48,
+          "predicted": 56,
+          "truth": 640,
+          "unresolved_edges": 826
+        }
+      },
+      "source": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0059/frames.jsonl",
+      "sha256": "beffd925290d1a2ca4e0d2b1eabaee7f0f46d02d017e3d8f36f607437bd4e608"
+    },
+    {
+      "scene": "scene-0060",
+      "methods": {
+        "direct_geometry": {
+          "true_positive": 0,
+          "predicted": 0,
+          "truth": 0,
+          "unresolved_edges": 36
+        },
+        "structured": {
+          "true_positive": 0,
+          "predicted": 0,
+          "truth": 0,
+          "unresolved_edges": 40
+        },
+        "incremental": {
+          "true_positive": 0,
+          "predicted": 0,
+          "truth": 0,
+          "unresolved_edges": 42
+        }
+      },
+      "source": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0060/frames.jsonl",
+      "sha256": "031063c8c920822081a39f21e61138695d674b38d51d1799630136c1f791d1ea"
+    },
+    {
+      "scene": "scene-0075",
+      "methods": {
+        "direct_geometry": {
+          "true_positive": 18,
+          "predicted": 20,
+          "truth": 492,
+          "unresolved_edges": 88
+        },
+        "structured": {
+          "true_positive": 18,
+          "predicted": 26,
+          "truth": 492,
+          "unresolved_edges": 92
+        },
+        "incremental": {
+          "true_positive": 18,
+          "predicted": 26,
+          "truth": 492,
+          "unresolved_edges": 92
+        }
+      },
+      "source": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0075/frames.jsonl",
+      "sha256": "60d3efc8dbafbef2b4f2e4cfe2763cca41a0a5025dac5d498f0326de7420bbcf"
+    },
+    {
+      "scene": "scene-0092",
+      "methods": {
+        "direct_geometry": {
+          "true_positive": 0,
+          "predicted": 0,
+          "truth": 512,
+          "unresolved_edges": 204
+        },
+        "structured": {
+          "true_positive": 0,
+          "predicted": 0,
+          "truth": 512,
+          "unresolved_edges": 206
+        },
+        "incremental": {
+          "true_positive": 0,
+          "predicted": 0,
+          "truth": 512,
+          "unresolved_edges": 206
+        }
+      },
+      "source": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0092/frames.jsonl",
+      "sha256": "13be06ed58c3119baa04235eadcb81566778a384b8cb99ef4d6b466de5a49bb6"
+    },
+    {
+      "scene": "scene-0093",
+      "methods": {
+        "direct_geometry": {
+          "true_positive": 8,
+          "predicted": 8,
+          "truth": 386,
+          "unresolved_edges": 160
+        },
+        "structured": {
+          "true_positive": 6,
+          "predicted": 8,
+          "truth": 386,
+          "unresolved_edges": 174
+        },
+        "incremental": {
+          "true_positive": 6,
+          "predicted": 8,
+          "truth": 386,
+          "unresolved_edges": 176
+        }
+      },
+      "source": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0093/frames.jsonl",
+      "sha256": "6e11b781012f575d89e1b2b183ed2ab85a76b17d342d60c6416fb458d8652dbf"
+    },
+    {
+      "scene": "scene-0095",
+      "methods": {
+        "direct_geometry": {
+          "true_positive": 742,
+          "predicted": 816,
+          "truth": 1060,
+          "unresolved_edges": 1842
+        },
+        "structured": {
+          "true_positive": 746,
+          "predicted": 904,
+          "truth": 1060,
+          "unresolved_edges": 2004
+        },
+        "incremental": {
+          "true_positive": 746,
+          "predicted": 912,
+          "truth": 1060,
+          "unresolved_edges": 2020
+        }
+      },
+      "source": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0095/frames.jsonl",
+      "sha256": "7d950002d1493838392510068c7d5fb25681b4c1cf36369da17e82b3aec8aa0b"
+    },
+    {
+      "scene": "scene-0096",
+      "methods": {
+        "direct_geometry": {
+          "true_positive": 96,
+          "predicted": 108,
+          "truth": 310,
+          "unresolved_edges": 206
+        },
+        "structured": {
+          "true_positive": 94,
+          "predicted": 116,
+          "truth": 310,
+          "unresolved_edges": 226
+        },
+        "incremental": {
+          "true_positive": 94,
+          "predicted": 132,
+          "truth": 310,
+          "unresolved_edges": 236
+        }
+      },
+      "source": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0096/frames.jsonl",
+      "sha256": "743bb98526ec0374f42b4944b8201e11a43bee3cc09c92196874c826e992fbb8"
+    },
+    {
+      "scene": "scene-0097",
+      "methods": {
+        "direct_geometry": {
+          "true_positive": 226,
+          "predicted": 242,
+          "truth": 416,
+          "unresolved_edges": 438
+        },
+        "structured": {
+          "true_positive": 224,
+          "predicted": 260,
+          "truth": 416,
+          "unresolved_edges": 440
+        },
+        "incremental": {
+          "true_positive": 224,
+          "predicted": 262,
+          "truth": 416,
+          "unresolved_edges": 444
+        }
+      },
+      "source": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0097/frames.jsonl",
+      "sha256": "4e5b25b326cc247d7dcfb8c6533a7e3b4bfbc023bc60161176f5ee217372df50"
+    },
+    {
+      "scene": "scene-0098",
+      "methods": {
+        "direct_geometry": {
+          "true_positive": 64,
+          "predicted": 92,
+          "truth": 336,
+          "unresolved_edges": 170
+        },
+        "structured": {
+          "true_positive": 66,
+          "predicted": 104,
+          "truth": 336,
+          "unresolved_edges": 194
+        },
+        "incremental": {
+          "true_positive": 66,
+          "predicted": 106,
+          "truth": 336,
+          "unresolved_edges": 194
+        }
+      },
+      "source": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0098/frames.jsonl",
+      "sha256": "b2f37a3123b8211330f2e14cc69e20c926904a3e718bffbf15be7547162f1ba9"
+    },
+    {
+      "scene": "scene-0099",
+      "methods": {
+        "direct_geometry": {
+          "true_positive": 106,
+          "predicted": 112,
+          "truth": 746,
+          "unresolved_edges": 962
+        },
+        "structured": {
+          "true_positive": 104,
+          "predicted": 122,
+          "truth": 746,
+          "unresolved_edges": 1078
+        },
+        "incremental": {
+          "true_positive": 104,
+          "predicted": 136,
+          "truth": 746,
+          "unresolved_edges": 1126
+        }
+      },
+      "source": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0099/frames.jsonl",
+      "sha256": "cd7efea14540a652e93d71c2efc35012b14e046297359683ad6392b0e8cadbb5"
+    },
+    {
+      "scene": "scene-0102",
+      "methods": {
+        "direct_geometry": {
+          "true_positive": 0,
+          "predicted": 0,
+          "truth": 864,
+          "unresolved_edges": 28
+        },
+        "structured": {
+          "true_positive": 0,
+          "predicted": 0,
+          "truth": 864,
+          "unresolved_edges": 28
+        },
+        "incremental": {
+          "true_positive": 0,
+          "predicted": 0,
+          "truth": 864,
+          "unresolved_edges": 28
+        }
+      },
+      "source": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0102/frames.jsonl",
+      "sha256": "4c9a1414c9987461342975777ef0d085749fe29c9afd977c63fe50197a433898"
+    },
+    {
+      "scene": "scene-0129",
+      "methods": {
+        "direct_geometry": {
+          "true_positive": 50,
+          "predicted": 58,
+          "truth": 126,
+          "unresolved_edges": 162
+        },
+        "structured": {
+          "true_positive": 50,
+          "predicted": 58,
+          "truth": 126,
+          "unresolved_edges": 176
+        },
+        "incremental": {
+          "true_positive": 50,
+          "predicted": 60,
+          "truth": 126,
+          "unresolved_edges": 178
+        }
+      },
+      "source": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0129/frames.jsonl",
+      "sha256": "a78b84b971771d9f68b4b7cdc5fe8ce3b50b7f967a7b2832016b626e3c3a5afb"
+    },
+    {
+      "scene": "scene-0135",
+      "methods": {
+        "direct_geometry": {
+          "true_positive": 10,
+          "predicted": 12,
+          "truth": 606,
+          "unresolved_edges": 88
+        },
+        "structured": {
+          "true_positive": 10,
+          "predicted": 12,
+          "truth": 606,
+          "unresolved_edges": 90
+        },
+        "incremental": {
+          "true_positive": 10,
+          "predicted": 12,
+          "truth": 606,
+          "unresolved_edges": 94
+        }
+      },
+      "source": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0135/frames.jsonl",
+      "sha256": "cee03cd03b4bd01b54cbb5c23ce556320ae56fe8032db9e4f46d70fe531545be"
+    },
+    {
+      "scene": "scene-0174",
+      "methods": {
+        "direct_geometry": {
+          "true_positive": 28,
+          "predicted": 30,
+          "truth": 342,
+          "unresolved_edges": 228
+        },
+        "structured": {
+          "true_positive": 28,
+          "predicted": 34,
+          "truth": 342,
+          "unresolved_edges": 254
+        },
+        "incremental": {
+          "true_positive": 28,
+          "predicted": 34,
+          "truth": 342,
+          "unresolved_edges": 256
+        }
+      },
+      "source": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0174/frames.jsonl",
+      "sha256": "5169c8c994a6a27a41179c5dfbb9328914431789edcbbc93ad70232ca94009dd"
+    }
+  ],
+  "frame_count": 1508,
+  "truth_source": "官方实例位置、可见范围与预定几何关系定义；独立于预测图，非人工关系标签",
+  "coordinate_frame": "相机+Z投影的当前驾驶员前向，左为其逆时针垂向；世界坐标另评",
+  "relation_truth_definition": {
+    "max_distance_m": 12,
+    "near_m": 6,
+    "component_min_m": 1
+  },
+  "unresolved_policy": "关联未知单列；同时给出把未知全计错误的精确率下界",
+  "incremental_consistent_frames": 1396,
+  "stage9_complete": false
+}

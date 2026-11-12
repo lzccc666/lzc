@@ -1,0 +1,112 @@
+{
+  "source_sha256": "34326efc57fa10840c566d03687df3ec5ab9824465c8d133919898dc56d9e2ae",
+  "summaries": {
+    "parameters": {
+      "rows": 10035,
+      "queries": 1115,
+      "conditions": 9,
+      "counts": {
+        "baseline": {
+          "positive_correct": 43,
+          "positive_queries": 733,
+          "negative_false": 8,
+          "negative_queries": 382
+        },
+        "top_k_1": {
+          "positive_correct": 43,
+          "positive_queries": 733,
+          "negative_false": 8,
+          "negative_queries": 382
+        },
+        "top_k_5": {
+          "positive_correct": 43,
+          "positive_queries": 733,
+          "negative_false": 8,
+          "negative_queries": 382
+        },
+        "minimum_observations_1": {
+          "positive_correct": 43,
+          "positive_queries": 733,
+          "negative_false": 8,
+          "negative_queries": 382
+        },
+        "minimum_observations_5": {
+          "positive_correct": 34,
+          "positive_queries": 733,
+          "negative_false": 7,
+          "negative_queries": 382
+        },
+        "minimum_depth_support_fraction_0.2": {
+          "positive_correct": 43,
+          "positive_queries": 733,
+          "negative_false": 8,
+          "negative_queries": 382
+        },
+        "minimum_depth_support_fraction_0.6": {
+          "positive_correct": 43,
+          "positive_queries": 733,
+          "negative_false": 5,
+          "negative_queries": 382
+        },
+        "rejection_score_0.5": {
+          "positive_correct": 43,
+          "positive_queries": 733,
+          "negative_false": 8,
+          "negative_queries": 382
+        },
+        "rejection_score_0.7": {
+          "positive_correct": 0,
+          "positive_queries": 733,
+          "negative_false": 0,
+          "negative_queries": 382
+        }
+      },
+      "release_sha256": "a0698992907b25513b10f8e11edc78394d4fdd84f68fc44e9e97a8b112fcd0fb",
+      "records_sha256": "09a1f9b33774972edc8f96aa5c2f5ec923c51efb4cee9c1b066aa748a573ebef"
+    },
+    "ablation": {
+      "rows": 3345,
+      "queries": 1115,
+      "conditions": 3,
+      "counts": {
+        "full_joint_rule": {
+          "positive_correct": 43,
+          "positive_queries": 733,
+          "negative_false": 8,
+          "negative_queries": 382
+        },
+        "without_relation_edges": {
+          "positive_correct": 52,
+          "positive_queries": 733,
+          "negative_false": 8,
+          "negative_queries": 382
+        },
+        "without_depth_evidence_gate": {
+          "positive_correct": 43,
+          "positive_queries": 733,
+          "negative_false": 8,
+          "negative_queries": 382
+        }
+      },
+      "release_sha256": "29263c1fda258d1a4fd1399082fd6d9117256fd39fc8c6f72f47001cd0c54e8e",
+      "records_sha256": "9c171a92c77dd2aff8d656b0b80d693732f5ec07c361bae47dd66e66023ab49c"
+    }
+  },
+  "independently_checked_source_frames": 1508,
+  "main_frozen_sources_unchanged": 66,
+  "sensitivity_frozen_sources_unchanged": 29,
+  "changed_relation_selections": 17,
+  "relation_ablation_scope": "只去结构化关系边；原选择器仍允许几何回退，不能声称关闭全部关系推理",
+  "upstream_broad_lint": {
+    "errors": 17,
+    "unchanged_files": [
+      "conceptgraph/scenegraph/build_scenegraph_cfslam.py",
+      "conceptgraph/slam/cfslam_pipeline_batch.py"
+    ],
+    "status": "旧公开版本同样存在，本轮未改动；新业务范围Ruff通过"
+  },
+  "evaluation_association_scope": "只核对已保存官方一对一关联的隔离打分，不新增人工身份或同步GT信用",
+  "independent_test": false,
+  "actual_arrivals": 0,
+  "goal_complete": false
+}

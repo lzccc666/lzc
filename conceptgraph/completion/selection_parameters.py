@@ -12,6 +12,7 @@ import time
 import numpy as np
 
 from conceptgraph.completion.navigation_diagnostics import to_nodes
+from conceptgraph.completion.retrieval_statistics import interval, nullable_number
 from conceptgraph.completion.stage9 import OUTPUT, available_development, digest, dump
 from conceptgraph.navigation.semantic import parse_navigation_query, rank_candidate_targets
 from conceptgraph.scenegraph.relations import build_relations
@@ -51,19 +52,25 @@ def estimates(values):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--run-id', required=True)
+    parser.add_argument('--retrieval-run', default='retrieval_baselines_dev_full_001')
     args = parser.parse_args()
     begun = time.monotonic()
-    source = OUTPUT/'main_experiments/retrieval_baselines_dev_full_001'
+    source = OUTPUT/'main_experiments'/args.retrieval_run
     frozen = json.loads((source/'release.json').read_text())['source_frames_sha256']
     queries = defaultdict(list)
     for row in map(json.loads, (source/'queries.jsonl').open()):
         if row['method'] == 'existing_object_joint_rule':
             queries[(row['scene'], row['frame_idx'])].append(row)
+    keys = [(r['scene'], r['frame_idx'], r['query_index']) for group in queries.values() for r in group]
+    expected_queries = len(keys)
+    if not expected_queries or len(set(keys)) != expected_queries:
+        raise ValueError('开发查询为空或重复')
     dest = OUTPUT/'performance'/args.run_id
     dest.mkdir(parents=True, exist_ok=False)
-    dump(dest/'release.json', dict(settings=SETTINGS, source_queries_sha256=digest(source/'queries.jsonl'),
+    dump(dest/'release.json', dict(settings=SETTINGS, retrieval_run=args.retrieval_run,
+        source_queries_sha256=digest(source/'queries.jsonl'),
         source_frames_sha256=frozen, source_sha256=digest(__file__), wall_budget_s=600,
-        storage_budget_bytes=20000000, paired_queries=1115, expected_rows=1115*len(SETTINGS),
+        storage_budget_bytes=20000000, paired_queries=expected_queries, expected_rows=expected_queries*len(SETTINGS),
         design='选择端单因素检查；Top-K只改变候选覆盖与后续排序上限，未假设它会改变首选',
         grouping='官方可接受目标类别、可见性最差值与距自车最近距离；无匹配单列；道路分组尚缺',
         association_threshold_evaluated=False, mapper_rebuilt=False, parameter_applied_to_running_navigation=False,
@@ -113,7 +120,7 @@ def main():
                         gt_in_inference=False, arrival_evaluated=False))
             if time.monotonic()-begun > 600:
                 raise TimeoutError('frozen selection parameter wall budget')
-    if baseline_checked != 1115 or len(rows) != 1115*len(SETTINGS):
+    if baseline_checked != expected_queries or len(rows) != expected_queries*len(SETTINGS):
         raise ValueError('incomplete paired development sweep')
     with (dest/'queries.jsonl').open('x') as handle:
         for row in rows:
@@ -137,15 +144,13 @@ def main():
         results[method] = {}
         for m, metric in enumerate(['positive_selection', 'no_match_false_selection', 'positive_topk_coverage']):
             values = rates[:, j, m]
-            valid = values[np.isfinite(values)]
-            results[method][metric] = dict(estimate=float(points[j, m]), ci95=np.quantile(valid, [.025, .975]).tolist(),
-                valid_resamples=len(valid), count=int(totals[:, j, [0, 2, 4][m]].sum()),
+            results[method][metric] = dict(estimate=nullable_number(points[j, m]), **interval(values),
+                count=int(totals[:, j, [0, 2, 4][m]].sum()),
                 denominator=int(totals[:, j, [1, 3, 1][m]].sum()))
             if j:
                 difference = rates[:, j, m]-rates[:, 0, m]
                 paired.append(dict(condition=method, baseline='baseline', metric=metric,
-                    difference=float(points[j, m]-points[0, m]),
-                    ci95=np.quantile(difference[np.isfinite(difference)], [.025, .975]).tolist()))
+                    difference=nullable_number(points[j, m]-points[0, m]), **interval(difference)))
     with (dest/'source_data_by_log.csv').open('x') as handle:
         writer = csv.writer(handle)
         writer.writerow(['log', 'condition', 'positive_correct', 'positive_queries', 'negative_false', 'negative_queries', 'positive_topk'])
@@ -157,7 +162,8 @@ def main():
         writer.writerow(['condition', 'grouping', 'group', 'positive_correct', 'positive_queries', 'negative_false', 'negative_queries', 'positive_topk'])
         for group, members in sorted(subgroups.items()):
             writer.writerow([*group, *counts(members).tolist()])
-    dump(dest/'report.json', dict(conditions=results, paired_differences=paired, paired_queries=1115,
+    dump(dest/'report.json', dict(conditions=results, paired_differences=paired, paired_queries=expected_queries,
+        retrieval_run=args.retrieval_run,
         scenes=len(scene_logs), logs=len(logs), raw_sha256=digest(dest/'queries.jsonl'), baseline_all_queries_verified=True,
         bootstrap=dict(unit='采集log', paired=True, repetitions=4000, seed=17),
         elapsed_s=time.monotonic()-begun, parameter_applied_to_running_navigation=False,

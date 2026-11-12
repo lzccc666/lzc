@@ -1,0 +1,377 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "viewport": "desktop",
+      "result": {
+        "overflow": false,
+        "statusRows": 36,
+        "goal": "Goal仍在进行 · 必需条件未全部满足",
+        "main": "已保存尝试记录 220 / 450；尚未据部分样本计算最终结论。",
+        "human": "真实提交：开发 0；自然指令 0。数量不等于可靠标签覆盖。",
+        "paperLinks": [
+          "http://127.0.0.1:8768/thesis/manuscript_delivery_016/%E5%AE%8C%E6%95%B4%E8%AE%BA%E6%96%87%E9%98%B6%E6%AE%B5%E6%95%B4%E5%90%88%E7%A8%BF.docx",
+          "http://127.0.0.1:8768/thesis/manuscript_delivery_016/%E5%AE%8C%E6%95%B4%E8%AE%BA%E6%96%87%E9%98%B6%E6%AE%B5%E6%95%B4%E5%90%88%E7%A8%BF.pdf",
+          "http://127.0.0.1:8768/thesis/manuscript_delivery_016/%E5%AE%8C%E6%95%B4%E8%AE%BA%E6%96%87%E9%98%B6%E6%AE%B5%E6%95%B4%E5%90%88%E7%A8%BF.md"
+        ],
+        "four": [
+          "生成路线",
+          "选对对象",
+          "正确锁定",
+          "实际到达"
+        ],
+        "error": "",
+        "unknownText": false,
+        "causal_links": [
+          {
+            "path": "/statistics/causal_mapping_full_001/report.md",
+            "status": 200
+          },
+          {
+            "path": "/statistics/causal_retrieval_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/mapping_evaluation/causal_relations_full_001/summary.json",
+            "status": 200
+          },
+          {
+            "path": "/data_manifest/development_causal_inputs_full_001/audit_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/performance/causal_selection_parameters_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/ablations/causal_selection_ablation_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/performance/causal_road_groups_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/source_bundle/causal_sensitivity_audit_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/statistics/causal_mapping_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/statistics/causal_mapping_full_001/per_frame_method.csv",
+            "status": 200
+          },
+          {
+            "path": "/data_manifest/development_causal_inputs_full_001/audit_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/source_bundle/causal_sensitivity_audit_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/data_manifest/reserved_causal_inputs_full_001/complete.json",
+            "status": 200
+          },
+          {
+            "path": "/data_manifest/reserved_causal_inputs_full_001/audit_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/data_manifest/causal_cross_input_audit_002/report.json",
+            "status": 200
+          },
+          {
+            "path": "/task_protocol/development_causal_mapping_001.md",
+            "status": 200
+          },
+          {
+            "path": "/data_manifest/development_causal_inputs_smoke_001/audit_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/mapping_evaluation/causal_mapping_smoke_001/summary.json",
+            "status": 200
+          },
+          {
+            "path": "/statistics/causal_mapping_smoke_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/source_bundle/development_causal_pipeline_full_001/release.json",
+            "status": 200
+          },
+          {
+            "path": "/source_bundle/causal_downstream_full_001/release.json",
+            "status": 200
+          },
+          {
+            "path": "/data_manifest/development_causal_inputs_full_001/complete.json",
+            "status": 200
+          },
+          {
+            "path": "/statistics/causal_mapping_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/task_protocol/development_causal_ablations_001.md",
+            "status": 200
+          },
+          {
+            "path": "/faults/causal_fault_smoke_001/summary.json",
+            "status": 200
+          },
+          {
+            "path": "/ablations/causal_modules_smoke_001/summary.json",
+            "status": 200
+          },
+          {
+            "path": "/ablations/causal_maps_smoke_001/summary.json",
+            "status": 200
+          },
+          {
+            "path": "/ablations/causal_goals_smoke_001/summary.json",
+            "status": 200
+          },
+          {
+            "path": "/source_bundle/causal_ablations_full_001/release.json",
+            "status": 200
+          },
+          {
+            "path": "/source_bundle/causal_downstream_full_001/complete.json",
+            "status": 200
+          },
+          {
+            "path": "/statistics/causal_retrieval_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/mapping_evaluation/causal_relations_full_001/summary.json",
+            "status": 200
+          },
+          {
+            "path": "/replay/causal_selection_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/task_protocol/development_causal_sensitivity_001.md",
+            "status": 200
+          },
+          {
+            "path": "/performance/causal_selection_parameters_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/ablations/causal_selection_ablation_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/performance/causal_road_groups_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/source_bundle/causal_sensitivity_full_001/release.json",
+            "status": 200
+          },
+          {
+            "path": "/source_bundle/causal_sensitivity_negative_only_001/complete.json",
+            "status": 200
+          }
+        ]
+      },
+      "page_errors": []
+    },
+    {
+      "viewport": "mobile",
+      "result": {
+        "overflow": false,
+        "statusRows": 36,
+        "goal": "Goal仍在进行 · 必需条件未全部满足",
+        "main": "已保存尝试记录 220 / 450；尚未据部分样本计算最终结论。",
+        "human": "真实提交：开发 0；自然指令 0。数量不等于可靠标签覆盖。",
+        "paperLinks": [
+          "http://127.0.0.1:8768/thesis/manuscript_delivery_016/%E5%AE%8C%E6%95%B4%E8%AE%BA%E6%96%87%E9%98%B6%E6%AE%B5%E6%95%B4%E5%90%88%E7%A8%BF.docx",
+          "http://127.0.0.1:8768/thesis/manuscript_delivery_016/%E5%AE%8C%E6%95%B4%E8%AE%BA%E6%96%87%E9%98%B6%E6%AE%B5%E6%95%B4%E5%90%88%E7%A8%BF.pdf",
+          "http://127.0.0.1:8768/thesis/manuscript_delivery_016/%E5%AE%8C%E6%95%B4%E8%AE%BA%E6%96%87%E9%98%B6%E6%AE%B5%E6%95%B4%E5%90%88%E7%A8%BF.md"
+        ],
+        "four": [
+          "生成路线",
+          "选对对象",
+          "正确锁定",
+          "实际到达"
+        ],
+        "error": "",
+        "unknownText": false,
+        "causal_links": [
+          {
+            "path": "/statistics/causal_mapping_full_001/report.md",
+            "status": 200
+          },
+          {
+            "path": "/statistics/causal_retrieval_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/mapping_evaluation/causal_relations_full_001/summary.json",
+            "status": 200
+          },
+          {
+            "path": "/data_manifest/development_causal_inputs_full_001/audit_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/performance/causal_selection_parameters_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/ablations/causal_selection_ablation_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/performance/causal_road_groups_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/source_bundle/causal_sensitivity_audit_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/statistics/causal_mapping_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/statistics/causal_mapping_full_001/per_frame_method.csv",
+            "status": 200
+          },
+          {
+            "path": "/data_manifest/development_causal_inputs_full_001/audit_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/source_bundle/causal_sensitivity_audit_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/data_manifest/reserved_causal_inputs_full_001/complete.json",
+            "status": 200
+          },
+          {
+            "path": "/data_manifest/reserved_causal_inputs_full_001/audit_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/data_manifest/causal_cross_input_audit_002/report.json",
+            "status": 200
+          },
+          {
+            "path": "/task_protocol/development_causal_mapping_001.md",
+            "status": 200
+          },
+          {
+            "path": "/data_manifest/development_causal_inputs_smoke_001/audit_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/mapping_evaluation/causal_mapping_smoke_001/summary.json",
+            "status": 200
+          },
+          {
+            "path": "/statistics/causal_mapping_smoke_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/source_bundle/development_causal_pipeline_full_001/release.json",
+            "status": 200
+          },
+          {
+            "path": "/source_bundle/causal_downstream_full_001/release.json",
+            "status": 200
+          },
+          {
+            "path": "/data_manifest/development_causal_inputs_full_001/complete.json",
+            "status": 200
+          },
+          {
+            "path": "/statistics/causal_mapping_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/task_protocol/development_causal_ablations_001.md",
+            "status": 200
+          },
+          {
+            "path": "/faults/causal_fault_smoke_001/summary.json",
+            "status": 200
+          },
+          {
+            "path": "/ablations/causal_modules_smoke_001/summary.json",
+            "status": 200
+          },
+          {
+            "path": "/ablations/causal_maps_smoke_001/summary.json",
+            "status": 200
+          },
+          {
+            "path": "/ablations/causal_goals_smoke_001/summary.json",
+            "status": 200
+          },
+          {
+            "path": "/source_bundle/causal_ablations_full_001/release.json",
+            "status": 200
+          },
+          {
+            "path": "/source_bundle/causal_downstream_full_001/complete.json",
+            "status": 200
+          },
+          {
+            "path": "/statistics/causal_retrieval_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/mapping_evaluation/causal_relations_full_001/summary.json",
+            "status": 200
+          },
+          {
+            "path": "/replay/causal_selection_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/task_protocol/development_causal_sensitivity_001.md",
+            "status": 200
+          },
+          {
+            "path": "/performance/causal_selection_parameters_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/ablations/causal_selection_ablation_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/performance/causal_road_groups_full_001/report.json",
+            "status": 200
+          },
+          {
+            "path": "/source_bundle/causal_sensitivity_full_001/release.json",
+            "status": 200
+          },
+          {
+            "path": "/source_bundle/causal_sensitivity_negative_only_001/complete.json",
+            "status": 200
+          }
+        ]
+      },
+      "page_errors": []
+    }
+  ],
+  "read_only_requests": true,
+  "human_records_written": 0,
+  "limitations": [
+    "运行中矩阵的完整统计尚不存在，404由页面以未完成处理",
+    "未在本次浏览器检查中跑导航或创建人工审核",
+    "论文入口随后从validation_report动态读取，以实际最新版本为准"
+  ],
+  "goal_complete": false
+}

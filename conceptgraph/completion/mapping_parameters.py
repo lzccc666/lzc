@@ -10,12 +10,15 @@ import time
 from omegaconf import OmegaConf
 
 from conceptgraph.completion.fault_robustness import mapping_config, run_case
+from conceptgraph.completion.mapping_module_ablation import validate_baseline_frames
 from conceptgraph.completion.stage9 import OUTPUT, PROJECT, available_development, digest, dump
 
 
 def main():
     parser=argparse.ArgumentParser()
     parser.add_argument('--run-id',required=True)
+    parser.add_argument('--mapping-run',default='robust_motion_full_001')
+    parser.add_argument('--baseline-fault-run',default='recorded_fault_full_001')
     parser.add_argument('--scene',action='append')
     parser.add_argument('--wall-budget-s',type=float,default=1800)
     args=parser.parse_args()
@@ -26,14 +29,21 @@ def main():
         raise ValueError('only fixed unique development scenes allowed')
     dest=OUTPUT/'performance'/args.run_id
     dest.mkdir(parents=True,exist_ok=False)
-    baseline=OUTPUT/'faults/recorded_fault_full_001'
-    sources=[OUTPUT/'mapping_evaluation/robust_motion_full_001'/s/'frames.jsonl' for s in scenes]
+    baseline=OUTPUT/'faults'/args.baseline_fault_run
+    sources=[OUTPUT/'mapping_evaluation'/args.mapping_run/s/'frames.jsonl' for s in scenes]
+    baseline_release=json.loads((baseline/'release.json').read_text())
+    validate_baseline_frames({str(p):digest(p) for p in sources},baseline_release)
+    if baseline_release.get('inference_config')!=OmegaConf.to_container(mapping_config()):
+        raise ValueError('复用基线推理配置不同')
     modules=[Path(__file__),PROJECT/'conceptgraph/completion/fault_robustness.py',
         PROJECT/'conceptgraph/slam/streamlined_mapping.py',PROJECT/'conceptgraph/slam/mapping.py',
         PROJECT/'conceptgraph/slam/utils.py',PROJECT/'conceptgraph/completion/depth.py',
         PROJECT/'conceptgraph/completion/association.py',PROJECT/'conceptgraph/completion/motion.py',
-        PROJECT/'conceptgraph/completion/quality.py',PROJECT/'conceptgraph/completion/stage9.py']
-    release=dict(thresholds=[.25,.35,.45],new_inference_thresholds=[.25,.45],seed=17,
+        PROJECT/'conceptgraph/completion/quality.py',PROJECT/'conceptgraph/completion/stage9.py',
+        PROJECT/'conceptgraph/completion/mapping_module_ablation.py']
+    release=dict(mapping_run=args.mapping_run,baseline_fault_run=args.baseline_fault_run,
+        baseline_release_sha256=digest(baseline/'release.json'),
+        thresholds=[.25,.35,.45],new_inference_thresholds=[.25,.45],seed=17,
         baseline_reuse='已完成录制故障无扰动条件seed17，原配置sim_threshold=0.35；逐场景SHA冻结，不重复算新数据',
         baseline_reports={s:digest(baseline/s/'seed17/unperturbed/report.json') for s in scenes},
         source_frames_sha256={str(p):digest(p) for p in sources},

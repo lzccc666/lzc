@@ -1,0 +1,353 @@
+{
+  "retrieval_run": "causal_retrieval_full_001",
+  "road_groups": {
+    "curved_lane": {
+      "category_nearest_current_detection": {
+        "positive_correct": 1,
+        "positive_queries": 5,
+        "negative_false": 2,
+        "negative_queries": 9,
+        "positive_selection": {
+          "estimate": 0.2,
+          "ci95": [
+            0.0,
+            0.25
+          ],
+          "contributing_logs": 2,
+          "valid_resamples": 3538
+        },
+        "no_match_false_selection": {
+          "estimate": 0.2222222222222222,
+          "ci95": [
+            0.0,
+            0.6
+          ],
+          "contributing_logs": 4,
+          "valid_resamples": 3972
+        }
+      },
+      "clip_current_crop": {
+        "positive_correct": 1,
+        "positive_queries": 5,
+        "negative_false": 5,
+        "negative_queries": 9,
+        "positive_selection": {
+          "estimate": 0.2,
+          "ci95": [
+            0.0,
+            0.25
+          ],
+          "contributing_logs": 2,
+          "valid_resamples": 3538
+        },
+        "no_match_false_selection": {
+          "estimate": 0.5555555555555556,
+          "ci95": [
+            0.16666666666666666,
+            0.9816666666666606
+          ],
+          "contributing_logs": 4,
+          "valid_resamples": 3972
+        }
+      },
+      "existing_object_joint_rule": {
+        "positive_correct": 0,
+        "positive_queries": 5,
+        "negative_false": 0,
+        "negative_queries": 9,
+        "positive_selection": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "contributing_logs": 2,
+          "valid_resamples": 3538
+        },
+        "no_match_false_selection": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "contributing_logs": 4,
+          "valid_resamples": 3972
+        }
+      },
+      "vlmaps_style_sparse_clip_grid": {
+        "positive_correct": 0,
+        "positive_queries": 5,
+        "negative_false": 7,
+        "negative_queries": 9,
+        "positive_selection": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "contributing_logs": 2,
+          "valid_resamples": 3538
+        },
+        "no_match_false_selection": {
+          "estimate": 0.7777777777777778,
+          "ci95": [
+            0.3333333333333333,
+            1.0
+          ],
+          "contributing_logs": 4,
+          "valid_resamples": 3972
+        }
+      }
+    },
+    "junction_or_connector": {
+      "category_nearest_current_detection": {
+        "positive_correct": 73,
+        "positive_queries": 449,
+        "negative_false": 75,
+        "negative_queries": 242,
+        "positive_selection": {
+          "estimate": 0.16258351893095768,
+          "ci95": [
+            0.11678079951861445,
+            0.22153892215568863
+          ],
+          "contributing_logs": 10,
+          "valid_resamples": 4000
+        },
+        "no_match_false_selection": {
+          "estimate": 0.30991735537190085,
+          "ci95": [
+            0.2290992506842554,
+            0.41305072463768117
+          ],
+          "contributing_logs": 10,
+          "valid_resamples": 4000
+        }
+      },
+      "clip_current_crop": {
+        "positive_correct": 62,
+        "positive_queries": 449,
+        "negative_false": 171,
+        "negative_queries": 242,
+        "positive_selection": {
+          "estimate": 0.13808463251670378,
+          "ci95": [
+            0.10262199274092781,
+            0.16778561536471412
+          ],
+          "contributing_logs": 10,
+          "valid_resamples": 4000
+        },
+        "no_match_false_selection": {
+          "estimate": 0.7066115702479339,
+          "ci95": [
+            0.6190476190476191,
+            0.8026362120088956
+          ],
+          "contributing_logs": 10,
+          "valid_resamples": 4000
+        }
+      },
+      "existing_object_joint_rule": {
+        "positive_correct": 7,
+        "positive_queries": 449,
+        "negative_false": 4,
+        "negative_queries": 242,
+        "positive_selection": {
+          "estimate": 0.015590200445434299,
+          "ci95": [
+            0.005479452054794521,
+            0.026263955342902715
+          ],
+          "contributing_logs": 10,
+          "valid_resamples": 4000
+        },
+        "no_match_false_selection": {
+          "estimate": 0.01652892561983471,
+          "ci95": [
+            0.0,
+            0.05294215037008181
+          ],
+          "contributing_logs": 10,
+          "valid_resamples": 4000
+        }
+      },
+      "vlmaps_style_sparse_clip_grid": {
+        "positive_correct": 52,
+        "positive_queries": 449,
+        "negative_false": 184,
+        "negative_queries": 242,
+        "positive_selection": {
+          "estimate": 0.11581291759465479,
+          "ci95": [
+            0.08490050520672233,
+            0.14975981110568312
+          ],
+          "contributing_logs": 10,
+          "valid_resamples": 4000
+        },
+        "no_match_false_selection": {
+          "estimate": 0.7603305785123967,
+          "ci95": [
+            0.6975081491671401,
+            0.8296302138100246
+          ],
+          "contributing_logs": 10,
+          "valid_resamples": 4000
+        }
+      }
+    },
+    "straight_lane": {
+      "category_nearest_current_detection": {
+        "positive_correct": 102,
+        "positive_queries": 279,
+        "negative_false": 54,
+        "negative_queries": 131,
+        "positive_selection": {
+          "estimate": 0.3655913978494624,
+          "ci95": [
+            0.22485003528581513,
+            0.4825601582687339
+          ],
+          "contributing_logs": 11,
+          "valid_resamples": 4000
+        },
+        "no_match_false_selection": {
+          "estimate": 0.4122137404580153,
+          "ci95": [
+            0.22218614718614718,
+            0.5290331957989498
+          ],
+          "contributing_logs": 11,
+          "valid_resamples": 4000
+        }
+      },
+      "clip_current_crop": {
+        "positive_correct": 61,
+        "positive_queries": 279,
+        "negative_false": 99,
+        "negative_queries": 131,
+        "positive_selection": {
+          "estimate": 0.21863799283154123,
+          "ci95": [
+            0.14965852482725372,
+            0.3376667251667252
+          ],
+          "contributing_logs": 11,
+          "valid_resamples": 4000
+        },
+        "no_match_false_selection": {
+          "estimate": 0.7557251908396947,
+          "ci95": [
+            0.6031520562770563,
+            0.8552631578947368
+          ],
+          "contributing_logs": 11,
+          "valid_resamples": 4000
+        }
+      },
+      "existing_object_joint_rule": {
+        "positive_correct": 36,
+        "positive_queries": 279,
+        "negative_false": 4,
+        "negative_queries": 131,
+        "positive_selection": {
+          "estimate": 0.12903225806451613,
+          "ci95": [
+            0.02,
+            0.27054102430856286
+          ],
+          "contributing_logs": 11,
+          "valid_resamples": 4000
+        },
+        "no_match_false_selection": {
+          "estimate": 0.030534351145038167,
+          "ci95": [
+            0.0,
+            0.05532505910165486
+          ],
+          "contributing_logs": 11,
+          "valid_resamples": 4000
+        }
+      },
+      "vlmaps_style_sparse_clip_grid": {
+        "positive_correct": 51,
+        "positive_queries": 279,
+        "negative_false": 107,
+        "negative_queries": 131,
+        "positive_selection": {
+          "estimate": 0.1827956989247312,
+          "ci95": [
+            0.13636154361292482,
+            0.27317285876347136
+          ],
+          "contributing_logs": 11,
+          "valid_resamples": 4000
+        },
+        "no_match_false_selection": {
+          "estimate": 0.816793893129771,
+          "ci95": [
+            0.7419287634408602,
+            0.8902534298780488
+          ],
+          "contributing_logs": 11,
+          "valid_resamples": 4000
+        }
+      }
+    }
+  },
+  "all_development_baseline_counts": {
+    "category_nearest_current_detection": [
+      176,
+      733,
+      131,
+      382
+    ],
+    "clip_current_crop": [
+      124,
+      733,
+      275,
+      382
+    ],
+    "existing_object_joint_rule": [
+      43,
+      733,
+      8,
+      382
+    ],
+    "vlmaps_style_sparse_clip_grid": [
+      103,
+      733,
+      298,
+      382
+    ]
+  },
+  "original_query_records": 4460,
+  "paired_unique_queries": 1115,
+  "scenes": 38,
+  "logs": 11,
+  "distinct_frames": 382,
+  "frame_groups": {
+    "junction_or_connector": 242,
+    "curved_lane": 9,
+    "straight_lane": 131
+  },
+  "frame_records_sha256": "1e7ea56abcb21f5ed24acd25c0b0aaee721c742f8f97a387a086ee131302ff68",
+  "elapsed_s": 4.471258221194148,
+  "bootstrap": {
+    "unit": "采集log",
+    "paired_grouped_counts": true,
+    "repetitions": 4000,
+    "seed": 17
+  },
+  "limitations": [
+    "地图派生局部道路组是探索代理，不是人工道路标签或独立因果泛化实验",
+    "候选中心线64点且必须落在车道多边形并距线≤3m；未满足者unknown，不强制归组",
+    "同一采集log可跨组，组内置信区间不能当作组间显著差异检验；贡献log过少的区间尤其有限",
+    "只汇总已完成四基线开发检索，不涉及Qwen新调用、控制、正确锁定或到达",
+    "未因分组结论修改冻结导航或开启新封存测试"
+  ],
+  "independent_test": false,
+  "performance_credit": false,
+  "goal_complete": false
+}

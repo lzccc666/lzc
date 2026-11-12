@@ -19,10 +19,10 @@
 |模块|实际完成的实验|可以使用的结论与限制|主要证据|
 |---|---|---|---|
 |真实前端|38开发场景、11个log、1508帧YOLO/MobileSAM/CLIP真实重跑|修复SAM原地修改YOLO框的别名问题；检测框、掩膜、真实crop和图像哈希一致性可追溯|`mapping_evaluation/frontend_corrected_dev_001/`及`source_bundle/tests_full_018.log`|
-|对象定位与融合|同前端、多条件全量开发重建|原融合召回19.48%、匹配精确率17.80%、中心误差1.662m；深度支持条件32.12%、42.99%、1.250m。身份变化24→44，不能声称全部对象维护指标都改善|`statistics/corrected_mapping_001/report.json`、`statistics/robust_motion_001/report.json`|
-|关系|直接几何、结构化与增量关系独立评估|直接F1约0.2020，结构化约0.1993，增量约0.1988。实现一致率不是语义正确率，不能宣称复杂关系必然更准确|`mapping_evaluation/relations_depth_both_axes_001/`、`mapping_evaluation/relations_exactgeometry_001/`、`ablations/relation_evidence_dev_001/report.json`|
+|对象定位与融合|相同真实RGB前端、过去LiDAR七条件全量重建|原融合17.23%/16.49%/1.696m；深度质量30.11%/43.68%/1.303m（依次召回、匹配精确率、中心误差）。5723跨帧GT全部保留；召回+12.88pp、误差−0.393m，11log配对区间支持定位改善，身份变化率区间跨0|`statistics/causal_mapping_full_001/report.json`、`per_frame_method.csv`|
+|关系|过去LiDAR的直接几何、结构化、增量完整评价|F1分别0.19030/0.18780/0.18718；结构化未改善。未知端点8886/9418/9660，精确率下界0.17634/0.16488/0.16066必须保留；1396/1508一致仅实现检查|`mapping_evaluation/causal_relations_full_001/summary.json`|
 |语义模型|新v2 Adapter种子17/29/43各240步真实CUDA训练；五模型各603个相同输入请求|新三种子完整解析均150/180，真实crop类别227/226/231（分母243），受控排序57/51/51（分母180）。只有2个真实验证log，排序含符号bank；不能外推真实道路目标或导航收益|`main_experiments/fair_three_task_full_validation_001/report.json`、`statistics/fair_three_task_full_validation_001/report.json`|
-|检索|38场景、1115查询，733正/382负|最近类别/CLIP/稀疏VLMaps式适配/联合规则正选对211/149/132/45，负误选141/308/330/8。联合规则用较低覆盖换较少误选，不是正目标准确率最优；稀疏适配不是完整VLMaps复现|`statistics/retrieval_baselines_dev_full_001/report.json`|
+|检索|过去LiDAR38场景1115查询，733正/382负|类别最近/CLIP/稀疏VLMaps式适配/联合规则选对176/124/103/43，负误选131/275/298/8。联合候选覆盖47/733，正确解析无收益；不同方法关联口径有差异|`statistics/causal_retrieval_full_001/report.json`、`replay/causal_selection_full_001/report.json`|
 |车辆规划上限|50冻结任务×3种子×2规划器=300次|给定正确对象时Hybrid在90正试验到达70次，点A*62次；配置聚类差异区间跨0。GT辅助，不计真实语义导航成绩|`statistics/kinematic_oracle_002/report.json`|
 |真实感知执行功能|50任务×3种子=150次规则闭环；10配置共享3种道路家族|90可达正试验路线68、选对90、稳定正确锁定79、实际到达21；13不同正任务、8配置满足最低功能门槛。无匹配与不可接近各30试验分开；原地等待不计自主识别不可达或运动安全信用|`statistics/interactive_rule_full_002/report.json`、`interactive_simulation/interactive_rule_full_002/summary.json`|
 |KITTI新增|固定64帧、33个原始drive、真实CPU前端，两条件共享输入|car/truck/pedestrian共319个GT；3m中心召回247/319→262/319，即77.43%→82.13%；251个共同支持的二维匹配中心误差1.758m→1.540m。卡车误差2.768m→2.888m，没有改善；低深度支持16→18保留|`statistics/kitti_object_cpu_full_001/report.json`、`records.json`、`common_supported_pairs.json`|
@@ -31,9 +31,9 @@ KITTI方法差异按33个drive配对4000次bootstrap：召回差+4.70个百分�
 
 ## 必须保留的范围与负结果
 
-- 原1508开发帧LiDAR比相机晚约33—42ms，旧融合、关系、检索和故障实验只能写为离线配对诊断。新预留1196帧已转换为1166真实过去扫描与30显式缺测，独立核验通过，但没有运行封存方法；不要把旧数据回写成严格因果在线证据。
-- 联合选择38/733与首个可达36/733，配对差异区间包含0。去安全接近点只离线，不实际执行关闭保护的条件。
-- 六地图条件共1272次点规划；方向连接约束减少路线覆盖但提高点车道合法率，仍有3条连接审计失败；这些姿态未通过矩形整车检查。不能把点路径合法解释为整车可执行。
+- 开发1508帧已重新转换为1470过去扫描、38显式缺测，独立重投影0差异。当前表中的融合/关系/检索使用这批输入；官方sample GT仍较相机晚33.136–42.356ms，须披露评价近似。旧未来LiDAR融合/故障/地图/参数结果只能作历史离线诊断。新预留1196帧为1166过去扫描/30缺测，已独立审计，但尚无封存方法调用。
+- 旧未来LiDAR离线联合选择38/733与首个可达36/733，配对差异区间包含0。去安全接近点只离线，不实际执行关闭保护的条件。
+- 旧未来LiDAR六地图条件共1272次点规划；方向连接约束减少路线覆盖但提高点车道合法率，仍有3条连接审计失败；这些姿态未通过矩形整车检查。不能把点路径合法解释为整车可执行。
 - 运动状态来自多帧。单帧crop不能作为可靠静动态真值；颜色/细属性/歧义没有人工记录时保持unknown。
 - 新Adapter初版存在提示过拟合，真实负结果已保留。v2结构化验证改善不能替代完整下游主比较；当前尚不能声称新Adapter提高导航到达率。
 - 当前三维环境是控制动作改变位姿、RGB、16束LiDAR的真实渲染与低速自行车模型执行，使用CC0 ToyCar。不是CARLA、真实车辆、完整动力学或任意动态交通安全验证。
@@ -56,25 +56,22 @@ KITTI方法差异按33个drive配对4000次bootstrap：召回差+4.70个百分�
 
 写作时可围绕已有方法和真实改动组织论证，但创新性和最终结论必须由一手文献比较与完整结果支持。请先依据证据制定框架，再起草；不得把剩余项用预期结果补齐，也不得将此交接材料直接当作正式论文正文。
 
-代码仓库已同步：https://github.com/lzccc666/lzc ，远端main提交`60cd334a1df6a77e7a4652ad0244db43a5588e01`。详细入口在仓库`README_THESIS_COMPLETION.md`。运行中的矩阵与未提交人工标注不因公开代码而变为完成。文献抓取009中38/59/65的HTTP429空body误用.json后缀，005扫描失败保留；类型核验002将其明确列为原始失败响应，不能作为JSON元数据或正文支持。
+代码仓库： https://github.com/lzccc666/lzc 。当前提交与匿名核验以 `source_bundle/github_sync_001/push_report_005.json`、`public_clone_verification_005.json` 的实际存在和通过状态为准；若尚未生成，最近已核验版本为ef79af8，不能称本轮新增代码已同步。论文写作不因公开代码而获得实验完成信用。
 
+文献抓取009中38/59/65的HTTP429空body误用.json后缀，原失败保留；类型核验002明确其为原始失败响应。另有检索零正查询时旧生成器写NaN失败的残片保留；新版本以null输出、真实负查询试运行通过。以上均不得当成功证据。
 
-## 开发集过去LiDAR续跑补充（2026-11-12）
+## 新输入下的参数与消融交接
 
-新增development_causal_inputs/audit/mapping/statistics/pipeline/downstream模块。固定38开发场景11log1508相机帧，逐帧复用相同RGB真实检测，新前端调用为0；按相机之前100ms内最近实测扫描重投影，缺测保留，旧未来LiDAR结果继续仅作离线诊断。真实3帧试运行已完成转换、独立原始表选帧/标定/像素重投影（0不一致）、七建图条件及关系/四检索调用；该片段对象0/2，无正查询的检索指标为null，失败NaN写出原件保留并修复。全量293 tests通过，5依赖警告。
+当前主表已替换为过去LiDAR开发版本。完整输入证据：1470实测、38缺测、未来0，像素差0，7659文件SHA通过；resume实际0归档读取/0新增输出。RGB不变并核验原真实检测来源，新增前端模型调用0。官方sample GT仍晚于相机33.136–42.356ms，只作披露这一评价近似的开发诊断。
 
-完整流水线已真实启动（source_bundle/development_causal_pipeline_full_001），转换后自动执行独立审计、38场景七条件重建、11log配对统计；causal_downstream_full_001等待其完成后运行关系、选择上限、四方法检索及统计。不能把排队当完成，最终状态查各complete/report。官方sample GT仍较相机晚约33–42ms，必须披露评价时间近似。本批不提供路径、锁定、实际到达或新封存信用。
+- 七建图条件：原融合986/5723（17.23%）、匹配精确率16.49%、中心误差1.696m；深度质量1723/5723（30.11%）、43.68%、1.303m。召回差+12.88pp，11log配对CI[8.12,18.08]pp；误差差−0.393m，CI[−0.543,−0.270]m。身份率差区间跨0，不称改善。缺测首帧130次GT观测均保留失败。
+- 四检索：1115查询（733正/382负）；类别最近/CLIP/简化VLMaps式网格/联合选对176/124/103/43，负误选131/275/298/8。联合候选覆盖47/733，正确解析与现有深度门限无增益。关系直接/结构化/增量F1为0.19030/0.18780/0.18718，未知端点及精确率下界保留。
+- 参数：9设置×1115=10035记录，基线逐查询复现。Top-K 1→3的正确候选覆盖43→47/733，但首选均43；确认5次选对降至34；深度比例0.6选对仍43，负误选8→5/382，配对区间上界0；拒绝0.7选对/误选均0，不称高安全性。
+- 关系边/证据消融：3×1115=3345记录。去结构化边选对52/733，对43的差+1.23pp，CI[0,2.57]pp；仍有几何回退，不能称移除全部关系推理或证明结构化边贡献。去证据门限不变。17条选择变化均实际复算，所有13380条记录的键、身份打分与计数核对通过。
+- 地图道路代理分组：直道36/279、路口/连接7/449、弯道0/5；弯道只有2个贡献log，不作泛化结论。类别、可见性和距离探索分组随参数报告提供。
 
-可查日志：source_bundle/development_causal_pipeline_full_001.log、source_bundle/development_causal_pipeline_full_001/{convert,audit,mapping,statistics}.log、source_bundle/causal_downstream_full_001.log。输入输出与审计位于data_manifest/development_causal_inputs_full_001；结果位于mapping_evaluation/causal_mapping_full_001、statistics/causal_mapping_full_001。旧GPT_Work_论文写作交接包_v1.zip保留原检查点，不包含此后新增实验；工作目录与validation_report.json是动态进展入口。
+证据：`statistics/causal_mapping_full_001`、`statistics/causal_retrieval_full_001`、`mapping_evaluation/causal_relations_full_001`、`performance/causal_selection_parameters_full_001`、`ablations/causal_selection_ablation_full_001`、`performance/causal_road_groups_full_001`、`source_bundle/causal_sensitivity_audit_001`。没有路线、正确锁定或车辆实际到达信用。旧未来LiDAR的19.48%→32.12%等数值继续保留历史口径，不能混用为当前成绩。
 
-新增代码快照已于2026-11-12T12:09:31.779896+00:00同步GitHub main `7706d7358b5cd74a33feda6d5fe32c8b48a6d3e7`（增量源文件总数356；当前原机293测试，隔离导出291通过/2真实数据依赖跳过）。原checkout索引保持，真实完整实验仍在后台；不是Goal完成证明。
+`source_bundle/causal_ablations_after_downstream_001.py` 正在执行684录制扰动，随后114动态模块条件、六地图、三选择接近条件。`source_bundle/causal_sensitivity_sequence_001.py --preset full` 的前三项已结束，等待同源故障全批完成后实际重建76关联门限条件并复用38个同版基线。对应release中的全部源码和协议也须冻结，不能仅保护主导航66源码。故障注入是离线建图，不计闭环故障安全。
 
-
-开发causal完整输入及独立审计现已结束：38场景11log1508帧，1470真实过去扫描、38缺测，未来0，年龄3.870–63.661ms；1508帧独立重投影像素差0，7659文件SHA通过。实际resume 0归档读取/0新增输出。官方sample GT偏移实测33.136–42.356ms，保留评价时间近似。
-
-新增显式输入版本入口：fault_robustness --mapping-run；mapping_module_ablation --mapping-run和--baseline-fault-run（必须帧SHA/seed17/配置相同）；map_constraint_ablation和goal_selection_ablation --retrieval-run。默认旧版本保留，禁止用旧未来LiDAR完整条件作新causal消融基线。source_bundle/causal_ablations_after_downstream_001.py已启动等待，同版完整causal下游结束后顺序做684扰动、114模块记录、六地图及三目标接近条件；协议development_causal_ablations_001.md。真实smoke均完成，未把排队当结果。全量tests294通过，5依赖警告。全部阶段仍未验收。
-
-
-完整38场景过去LiDAR重建统计已结束（statistics/causal_mapping_full_001）：5723个跨帧GT观测全保留，38个缺测帧130个GT观测均0匹配。原融合986/5723（17.23%）、匹配精确率16.49%、中心误差1.696m；深度质量1723/5723（30.11%）、43.68%、1.303m。召回差+12.88pp，11log配对95%CI[8.12,18.08]pp；中心误差差−0.393m，CI[−0.543,−0.270]m。原始身份变化30/615、深度44/1312，率差区间跨0，不称身份改善。稳健运动条件1720/5723、44.05%、1.282m，保留召回略降与身份未知。以上是开发集同输入方法比较；官方sample GT时间近似仍在，未开启新封存，也未做车辆到达。
-
-旧未来LiDAR诊断的19.48%→32.12%等数据仅保留原离线口径，不能混用为当前过去LiDAR成绩。新统计包含七条件及实测/缺测分组、10556帧—方法行与4000次log配对bootstrap；关系及四检索在同批输入上顺序推进，后续完整录制故障/消融按冻结队列执行。
+新的门户004明确区分当前过去LiDAR与历史未来LiDAR，结果从固定报告读取，提供全部负结果和配对区间入口。旧v1/v2写作包是其生成时快照，保留不改；新增结果以当前工作目录和后续版本包为准。

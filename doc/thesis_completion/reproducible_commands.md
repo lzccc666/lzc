@@ -260,4 +260,17 @@ LD_LIBRARY_PATH=/root/miniconda3/envs/conceptgraph/lib OPENBLAS_NUM_THREADS=1 OM
 
 新增显式输入版本入口：fault_robustness --mapping-run；mapping_module_ablation --mapping-run和--baseline-fault-run（必须帧SHA/seed17/配置相同）；map_constraint_ablation和goal_selection_ablation --retrieval-run。默认旧版本保留，禁止用旧未来LiDAR完整条件作新causal消融基线。source_bundle/causal_ablations_after_downstream_001.py已启动等待，同版完整causal下游结束后顺序做684扰动、114模块记录、六地图及三目标接近条件；协议development_causal_ablations_001.md。真实smoke均完成，未把排队当结果。全量tests294通过，5依赖警告。全部阶段仍未验收。
 
-公开克隆需另外提供合法原始nuScenes数据、原开发身份和真实前端SHA记录；先把doc/thesis_completion中的development_causal_*_001.md复制至本机outputs/project_v2/thesis_completion_v1/task_protocol同名位置。公共仓库不含这些传感器和模型数据，不声称无数据的一键全量复现。
+
+## 过去LiDAR敏感性与关系边消融
+
+本机 `source_bundle/causal_sensitivity_sequence_001.py --preset full` 已在执行/等待；禁止重复启动或使用已有run-id覆盖。先检查其release、各exit和complete，以及同源 `faults/causal_fault_full_001/summary.json`。它只用CPU、不改变冻结导航与参数，不开放新测试。全量命令也可从相应 `*_command.json`逐项复现；异机先准备相同输入与协议。
+
+```bash
+python -m conceptgraph.completion.selection_parameters --run-id YOUR_NEW_RUN --retrieval-run causal_retrieval_full_001
+python -m conceptgraph.completion.development_selection_ablation --run-id YOUR_NEW_ABLATION --retrieval-run causal_retrieval_full_001
+python -m conceptgraph.completion.road_group_statistics --run-id YOUR_NEW_GROUP --retrieval-run causal_retrieval_full_001
+python -m conceptgraph.completion.mapping_parameters --run-id YOUR_NEW_ASSOCIATION --mapping-run causal_mapping_full_001 --baseline-fault-run causal_fault_full_001 --wall-budget-s 3600
+python -m conceptgraph.completion.mapping_parameter_statistics --input-run YOUR_NEW_ASSOCIATION --run-id YOUR_NEW_STATS
+```
+
+关联基线须同观测SHA、seed17、配置，不能替换旧未来LiDAR结果。9参数实际10035行；关系边条件保留几何回退，不能称关闭全部关系推理。零正查询指标必须null，真实负查询验证见 `source_bundle/causal_sensitivity_negative_only_001`。门户004展示最新past主结果，旧门户及失败浏览器命名冲突日志保留。

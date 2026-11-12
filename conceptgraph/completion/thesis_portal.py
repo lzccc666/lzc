@@ -22,7 +22,7 @@ HTML = '''<!doctype html><html lang="zh-CN"><meta charset="utf-8">
 <div class="grid"><section><h2>完整真实时钟比较</h2><p id="main-progress">读取中</p><p id="main-last" class="muted"></p><p>50个冻结任务 × 3种子 × 规则/原始Qwen/新Adapter，共450次。完整结束前不展示总体优劣结论。</p><div class="links"><a href="/interactive_simulation/realtime_three_model_full_001/release.json">运行协议与源码指纹</a><a href="/interactive_simulation/realtime_three_model_full_001/trial_records.jsonl">全部已尝试记录</a><a href="/statistics/realtime_three_model_full_001/report.json">全量统计（完成后）</a></div><p class="muted">随后三种缺一语义条件新增450次，核验同版后与300份共享记录组成750条件；等待和复用不增加独立任务数。</p></section>
 <section><h2>真实人工核验</h2><p id="human">读取中</p><p>439条原始自然指令及开发证据可提交审核。自动证据、官方标签和真实人工记录分别保存；unknown不补写成肯定标签。</p><div class="links"><a href="/annotation/natural_command_review_001/index.html">打开自然指令核验页</a><a href="/visualizations/review.html">打开开发证据核验页</a></div><p class="muted">审核会写入单独的追加记录。当前同意使用页面不等于已产生审核结论。</p></section></div>
 <section><h2>论文与可复现入口</h2><div id="paper-links" class="links"></div><p id="paper-status" class="muted"></p><div class="links"><a href="/visualizations/navigation_demo_004/index.html">三维感知与车辆执行查看器</a><a href="/reproducible_commands.md">复现及续跑命令</a><a href="/experiment_report.md">实验记录</a><a href="/remaining_issues.md">剩余必需工作</a><a href="/validation_report.json">逐项验收证据</a><a href="/baseline_verification.json">历史产物保护核验</a></div><p class="muted">查看器中的回放速度不是实时性能；163条保存开发试验包含重复复测，不增加独立样本。运行中的新矩阵尚未全部加入该查看器。</p></section>
-<section><h2>新增离线开发消融</h2><div class="scroll"><table><thead><tr><th>实验</th><th>真实记录与限制</th><th>证据</th></tr></thead><tbody>
+<section><h2>历史离线开发消融：旧未来LiDAR输入</h2><p>以下保留旧诊断口径；不能与新的过去LiDAR成绩混用，也不获得因果在线感知信用。</p><div class="scroll"><table><thead><tr><th>实验</th><th>真实记录与限制</th><th>证据</th></tr></thead><tbody>
 <tr><td>六种地图约束</td><td>38场景、212查询、1272次规划；176个不同几何查询。正确对象参考点由GT给定；完整约束仍有3条独立连接审计失败，静态矩形姿态全部未通过，未执行控制。</td><td><a href="/statistics/map_constraints_dev_full_001/report.json">统计</a><br><a href="/thesis/figures_constraints_002/图6-6.pdf">矢量图</a></td></tr>
 <tr><td>动态维护与过期</td><td>114条件记录，76次新重建、38份同版基线复用；减动态维护召回下降4.93个百分点。运动unknown保留，未证明车辆到达收益。</td><td><a href="/statistics/mapping_modules_dev_full_001/report.json">总体统计</a><br><a href="/statistics/mapping_modules_motion_dev_full_001/report.json">官方动静态组</a><br><a href="/thesis/figures_constraints_002/图6-7.pdf">矢量图</a></td></tr>
 <tr><td>首达、联合与接近点</td><td id="selection-progress">全量结果读取中；进行中不计完成。</td><td><a href="/ablations/goal_selection_dev_full_001/release.json">冻结协议</a><br><a href="/ablations/goal_selection_dev_full_001/report.json">全量统计（完成后）</a></td></tr>
@@ -47,6 +47,87 @@ $('refresh').onclick=()=>refresh().catch(e=>$('error').textContent=String(e));re
 </script>'''
 
 
+def causal_section():
+    """只从已完成报告读取过去LiDAR结果，固定生成时的证据指纹。"""
+    paths = [OUTPUT/'statistics/causal_mapping_full_001/report.json',
+        OUTPUT/'statistics/causal_retrieval_full_001/report.json',
+        OUTPUT/'data_manifest/development_causal_inputs_full_001/audit_001/report.json',
+        OUTPUT/'mapping_evaluation/causal_relations_full_001/summary.json']
+    if not all(path.exists() for path in paths):
+        return '', None
+    mapping = json.loads(paths[0].read_text())
+    retrieval = json.loads(paths[1].read_text())
+    relations = json.loads(paths[3].read_text())
+    methods = mapping['methods']
+    order = ['category_nearest_current_detection', 'clip_current_crop',
+        'vlmaps_style_sparse_clip_grid', 'existing_object_joint_rule']
+    # 方法标识与源报告一致；缺失时停止生成，不能用预期数字替代结果。
+    actual_order = []
+    for prefix in order:
+        found = [name for name in retrieval['methods'] if name == prefix]
+        if len(found) != 1:
+            raise ValueError('四方法检索标识不完整或重复：'+prefix)
+        actual_order.append(found[0])
+    correct = '/'.join(str(retrieval['methods'][name]['positive_selection']['numerator']) for name in actual_order)
+    false = '/'.join(str(retrieval['methods'][name]['no_match_false_selection']['numerator']) for name in actual_order)
+    def relation_f1(name):
+        total = {key: sum(scene['methods'][name][key] for scene in relations['scenes'])
+            for key in ['true_positive', 'predicted', 'truth']}
+        denominator = total['predicted']+total['truth']
+        return f"{2*total['true_positive']/denominator:.5f}" if denominator else 'unknown'
+    def metrics(name):
+        values = methods[name]['all']
+        return (f"召回{100*values['recall']['value']:.2f}%，匹配精确率"
+            f"{100*values['matched_prediction_precision']['value']:.2f}%，中心误差"
+            f"{values['center_error_m_mean']['value']:.3f}m")
+    note = ('<section><h2>当前开发主结果：相机之前的实测LiDAR</h2>'
+        '<p>38场景、11采集log、1508帧；1470帧有过去扫描，38帧缺测保留。'
+        '独立重投影逐像素0差异，无未来深度。官方sample GT仍较相机晚33–42ms，评价时间近似继续披露。</p>'
+        '<div class="scroll"><table><thead><tr><th>条件</th><th>已完成结果</th></tr></thead><tbody>'
+        f'<tr><td>原始融合</td><td>{metrics("original_fusion")}</td></tr>'
+        f'<tr><td>深度质量</td><td>{metrics("one_to_one_depth_quality")}</td></tr>'
+        '<tr><td>范围</td><td>5723次跨帧GT观测全部保留，缺测首帧130次GT观测均0匹配；身份变化率差区间跨0。'
+        '开发定位改善不等于正确锁定或实际到达。</td></tr></tbody></table></div>'
+        f'<p>{retrieval["paired_queries"]}条查询。类别最近/CLIP/简化VLMaps式网格/联合规则选对{correct}，'
+        f'负误选{false}；关系结构化F1 {relation_f1("structured")}，直接几何{relation_f1("direct_geometry")}，未知端点保留。</p>'
+        '<div class="links"><a href="/statistics/causal_mapping_full_001/report.md">七条件建图与区间</a>'
+        '<a href="/statistics/causal_retrieval_full_001/report.json">四方法完整检索</a>'
+        '<a href="/mapping_evaluation/causal_relations_full_001/summary.json">关系与未知端点</a>'
+        '<a href="/data_manifest/development_causal_inputs_full_001/audit_001/report.json">独立输入审计</a></div>')
+    sensitivity = OUTPUT/'performance/causal_selection_parameters_full_001/report.json'
+    selection = OUTPUT/'ablations/causal_selection_ablation_full_001/report.json'
+    roads = OUTPUT/'performance/causal_road_groups_full_001/report.json'
+    if all(path.exists() for path in [sensitivity, selection, roads]):
+        paths += [sensitivity, selection, roads]
+        parameters = json.loads(sensitivity.read_text())
+        ablations = json.loads(selection.read_text())
+        groups = json.loads(roads.read_text())
+        conditions = parameters['conditions']
+        observations = conditions['minimum_observations_5']['positive_selection']
+        rejected = conditions['rejection_score_0.7']
+        depth = conditions['minimum_depth_support_fraction_0.6']
+        without = ablations['conditions']['without_relation_edges']
+        curve = groups['road_groups'].get('curved_lane', {}).get('existing_object_joint_rule', {})
+        note += ('<h3>同输入参数、关系边与道路分组</h3>'
+            f'<p>{len(conditions)}参数×{parameters["paired_queries"]}查询='
+            f'{len(conditions)*parameters["paired_queries"]}条，'
+            f'{len(ablations["conditions"])}选择条件{len(ablations["conditions"])*ablations["paired_queries"]}条；'
+            f'基线逐查询复现。确认5次选对{observations["count"]}/{observations["denominator"]}；'
+            f'拒绝分0.7选对{rejected["positive_selection"]["count"]}、误选{rejected["no_match_false_selection"]["count"]}。'
+            f'深度支持比例0.6选对{depth["positive_selection"]["count"]}/{depth["positive_selection"]["denominator"]}、'
+            f'负误选{depth["no_match_false_selection"]["count"]}/{depth["no_match_false_selection"]["denominator"]}，差异区间含0。'
+            f'去结构化边后{without["positive_selected_correct"]}/{without["positive_queries"]}，'
+            '仍保留几何回退，其差异区间下界0，不能声称关系边改善。'
+            f'弯道仅{curve.get("positive_queries", "unknown")}条正查询、'
+            f'{curve.get("positive_selection", {}).get("contributing_logs", "unknown")}log，不支持道路泛化结论。</p><div class="links">'
+            '<a href="/performance/causal_selection_parameters_full_001/report.json">全部参数与配对区间</a>'
+            '<a href="/ablations/causal_selection_ablation_full_001/report.json">关系边/证据消融</a>'
+            '<a href="/performance/causal_road_groups_full_001/report.json">道路分组与样本量</a>'
+            '<a href="/source_bundle/causal_sensitivity_audit_001/report.json">全查询完整性复核</a></div>')
+    note += '<p class="muted">录制故障、关联门限、动态模块及地图消融的后续批次按冻结队列推进；未完成的不按成功补齐。新封存测试仍未开启，本页无车辆到达信用。</p></section>'
+    return note, {str(path.relative_to(OUTPUT)): digest(path) for path in paths}
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--run-id', required=True)
@@ -58,6 +139,9 @@ def main():
     dest = OUTPUT/'visualizations'/args.run_id
     dest.mkdir(parents=True,exist_ok=False)
     content = HTML
+    causal_note, causal_evidence = causal_section()
+    content = content.replace('<section><h2>历史离线开发消融：旧未来LiDAR输入</h2>',
+        causal_note+'<section><h2>历史离线开发消融：旧未来LiDAR输入</h2>')
     region_evidence = None
     if args.region_run and args.region_preview:
         region = OUTPUT/'annotation'/args.region_run
@@ -116,6 +200,8 @@ def main():
         dump(dest/'region_evidence.json', region_evidence)
     if reference_evidence:
         dump(dest/'reference_evidence.json', reference_evidence)
+    if causal_evidence:
+        dump(dest/'causal_evidence.json', causal_evidence)
     print('http://localhost:8768/visualizations/'+args.run_id+'/index.html')
 
 

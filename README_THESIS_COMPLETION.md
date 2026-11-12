@@ -18,9 +18,12 @@ KITTI已实际完成固定64帧、33原始drive的YOLO/MobileSAM/CLIP与LiDAR定
 
 服务器本轮结果目录为`outputs/project_v2/thesis_completion_v1/`，其中大量原始证据没有上传；文档中此目录下的路径指向服务器文件，不能假设公共代码库包含完整训练和实验数据。原项目checkout、分支、索引与历史结果保留，本快照没有发布未经审计的原Git历史。
 
+过去LiDAR开发全量已结束：38场景11log1508帧（1470实测、38显式缺测），全部重投影0像素差，7659文件SHA核验。[建图结果](experiments/development_causal/mapping_full_report.md)保留5723个GT观测及130个缺测首帧失败。原融合召回17.23%、匹配精确率16.49%、中心误差1.696m；深度质量30.11%、43.68%、1.303m。身份变化率差区间跨0，不称改善。官方sample GT晚于相机33–42ms的评价近似仍在。
 
-开发集新增过去LiDAR转换及独立重投影审计，参见`conceptgraph/completion/development_causal_*.py`和`doc/thesis_completion/development_causal_mapping_001.md`。相同RGB与检测SHA核验后复用原真实前端；缺测不补未来深度，新前端调用0。3帧真实smoke及独立投影/七条件建图/四检索已运行，首段对象0/2的负结果保留。38场景1508帧正式流水线和关系/检索继续有界运行；完成状态以服务器complete/report为准，公开快照不将排队视为完成。官方sample GT仍晚于相机33–42ms，评价近似需披露。
+同批1115查询（733正/382负）的[四方法检索](experiments/development_causal/retrieval_full_report.json)已结束：类别最近/CLIP/简化VLMaps式网格/联合选对176/124/103/43、负误选131/275/298/8。结构化关系F1 0.18780低于直接几何0.19030，未知端点保留。不是完整VLMaps复现，也不提供正确锁定或车辆到达信用。
 
-完整开发causal输入与独立审计已完成：1470实测/38缺测、未来0、全部1508帧重投影0差异。七条件建图及后续下游/消融仍执行中；新消融入口要求明确输入版本，复用基线严格检查相同帧SHA、seed17和配置。`reproduction/causal_ablation_sequence.py`是本机顺序队列源码，运行需要前置数据及输出协议，不是无数据的一键主实验。
+[9参数敏感性](experiments/development_causal/selection_parameters_full_report.json)实际10035记录，[关系边/证据消融](experiments/development_causal/selection_ablation_full_report.json)3345记录。确认5次选对34/733；拒绝分0.7选对和误选均0。去结构化关系边后52/733、对基线差异区间[0,2.57]pp，仍保留几何回退，不能称关闭全部关系或证明结构化边收益。[道路分组](experiments/development_causal/road_groups_full_report.json)的弯道仅5正查询2log，不宣称泛化。
 
-过去LiDAR七条件开发重建已完整结束：[结果](experiments/development_causal/mapping_full_report.md)。原融合召回17.23%、精确率16.49%、中心误差1.696m；深度质量30.11%、43.68%、1.303m，11log配对区间支持定位改善，身份变化改善未确定。全5723次GT观测保留，包括38缺测首帧的130次失败；不是新封存或导航到达。
+本次导出357份当前项目源码，字节和执行权限逐项核验。原机294测试通过；导出环境另有2个真实数据依赖skip。业务范围Ruff通过；2个未改动上游脚本广域Ruff仍17条历史问题，完整性审计明确记录。公开CSV仅CRLF改LF，逐字段相同，原机实验CSV不动。
+
+`reproduction/causal_ablation_sequence.py`与`causal_sensitivity_sequence.py`为本机冻结顺序队列，须先准备相同数据、模型和输出协议，不能当无数据的一键实验。新past录制扰动及其余动态/地图/关联消融仍推进；真实时钟450主矩阵和后续450缺一仍未结束，人工标签和新封存等仍未验收。门户004在服务器8768端口提供当前与历史范围分开的只读证据入口，快照不会自动更新。

@@ -57,9 +57,10 @@ def count(rows):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--run-id', required=True)
+    parser.add_argument('--retrieval-run', default='retrieval_baselines_dev_full_001')
     args = parser.parse_args()
     begun = time.monotonic()
-    source = OUTPUT/'main_experiments/retrieval_baselines_dev_full_001'
+    source = OUTPUT/'main_experiments'/args.retrieval_run
     release = json.loads((source/'release.json').read_text())
     queries = [json.loads(s) for s in (source/'queries.jsonl').open()]
     wanted = {(r['scene'], r['frame_idx']) for r in queries}
@@ -72,7 +73,8 @@ def main():
     locations = {s: logs[scenes[s]['log_token']]['location'] for s, _ in wanted}
     destination = OUTPUT/'performance'/args.run_id
     destination.mkdir(parents=True, exist_ok=False)
-    dump(destination/'release.json', dict(source_query_sha256=digest(source/'queries.jsonl'),
+    dump(destination/'release.json', dict(retrieval_run=args.retrieval_run,
+        source_query_sha256=digest(source/'queries.jsonl'),
         source_frames_sha256=release['source_frames_sha256'], source_sha256=digest(__file__),
         prior_builder_sha256=digest(PROJECT/'conceptgraph/completion/map_constraint_ablation.py'),
         map_sha256={loc: digest(PROJECT/'dataset/nuscenes_map_expansion/expansion'/f'{loc}.json') for loc in sorted(set(locations.values()))},
@@ -134,7 +136,8 @@ def main():
         writer.writerow(['log', 'road_group', 'method', 'positive_correct', 'positive_queries', 'negative_false', 'negative_queries'])
         writer.writerows(rows)
     baseline = {m: count([r for r in queries if r['method'] == m]).tolist() for m in methods}
-    dump(destination/'report.json', dict(road_groups=results, all_development_baseline_counts=baseline,
+    dump(destination/'report.json', dict(retrieval_run=args.retrieval_run,
+        road_groups=results, all_development_baseline_counts=baseline,
         original_query_records=len(queries), paired_unique_queries=len({(r['scene'], r['frame_idx'], r['query_index']) for r in queries}),
         scenes=len(locations), logs=len(all_logs), distinct_frames=len(groups),
         frame_groups=dict(Counter(g['group'] for g in groups.values())), frame_records_sha256=digest(destination/'frames.jsonl'),

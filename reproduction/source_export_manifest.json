@@ -5,6 +5,90 @@
   "snapshot_role": "当前代码及已完成开发实验交接；不是全部Goal完成",
   "source_files": [
     {
+      "path": ".gitignore",
+      "sha256": "6efef67967a3901dda1e87fb74ee5521ebba5987c033f1eb932f7e2759c473bc",
+      "bytes": 3637,
+      "executable": false
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "bbb50dd0e42f0180461db2088dc07e6374d3ad4fe6961167b07093000894a509",
+      "bytes": 1071,
+      "executable": false
+    },
+    {
+      "path": "README.md",
+      "sha256": "96a3f679dc57042b41772d59c88ec569fc2226d6db253abf00fb273f41e83032",
+      "bytes": 20640,
+      "executable": false
+    },
+    {
+      "path": "README_kitti360_minimal.md",
+      "sha256": "e2ba7bdff38b7f2b7101b8c79e51c9934e07f18a0c6d51d09271bfa9f12d1c08",
+      "bytes": 2113,
+      "executable": false
+    },
+    {
+      "path": "README_nuscenes_minimal.md",
+      "sha256": "1463495e43acd5d15082ac8056dd389ae37144c8d904d95a6fe0a84902182f7d",
+      "bytes": 2057,
+      "executable": false
+    },
+    {
+      "path": "README_streamlined_detection.md",
+      "sha256": "197900f0dbe53cfd7688a911902d38184a814d7648d2f54511caf8e20f8691ae",
+      "bytes": 2627,
+      "executable": false
+    },
+    {
+      "path": "assets/splash-final.png",
+      "sha256": "75c3530bf635cff65c420cc3d105bdf33d4962604e4dd950d598bab1e8319c81",
+      "bytes": 1736523,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/README_kitti360_minimal.md",
+      "sha256": "e2ba7bdff38b7f2b7101b8c79e51c9934e07f18a0c6d51d09271bfa9f12d1c08",
+      "bytes": 2113,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/README_nuscenes_minimal.md",
+      "sha256": "1463495e43acd5d15082ac8056dd389ae37144c8d904d95a6fe0a84902182f7d",
+      "bytes": 2057,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/README_semantic_navigation.md",
+      "sha256": "48e6e8bb77e3a7663e7dc80fc07c08238f4ef1abb97b48a70d2403c8385a38c5",
+      "bytes": 1351,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/README_streamlined_detection.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/ai2thor/rearrange.py",
+      "sha256": "ad48d93e376307b56e0ce1383ee93d219a5eba563bad9bd6d9595badb3df3619",
+      "bytes": 7081,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/ai2thor/utils.py",
+      "sha256": "c9ffadbdb222360f9663cfcf875517d25ce0ae2b8c7e749f4eff4a2b93b4ec88",
+      "bytes": 2470,
+      "executable": false
+    },
+    {
       "path": "conceptgraph/completion/__init__.py",
       "sha256": "a3debef145047f171c0df66ff40be0884c42ae7817017a8f53d734b7483ab5e5",
       "bytes": 67,
@@ -59,6 +143,48 @@
       "executable": false
     },
     {
+      "path": "conceptgraph/completion/development_causal_audit.py",
+      "sha256": "55f09a472af5314fd4a058a259b5b04c1ccbf3c5fde38d6c5c77c57a6c0e2900",
+      "bytes": 13289,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/completion/development_causal_downstream.py",
+      "sha256": "acfe0b982d5031d1a353529ed4892cdae5f41b912ab2c89d2d741724b4b6bb41",
+      "bytes": 8465,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/completion/development_causal_inputs.py",
+      "sha256": "4c7c03b1b668dea412bb5414cdb73c0805915eee20cbcdc9c9a68f51863fceb9",
+      "bytes": 21184,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/completion/development_causal_mapping.py",
+      "sha256": "b00cd9fd4f75e58bb950c0c6fb9d951db45ae2bfa50df1a13dab1f01068974d0",
+      "bytes": 4784,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/completion/development_causal_pipeline.py",
+      "sha256": "fe3daf1fdebd22bba16e63654c04beaa278655f07826674517b6b5ef3a5b69dd",
+      "bytes": 6798,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/completion/development_causal_statistics.py",
+      "sha256": "3f071a5da62bbd8ef2624aec3d07456b60955b999bed351da4f8498d64299a4f",
+      "bytes": 10147,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/completion/development_selection_ablation.py",
+      "sha256": "6e735544cecc3945c060325bb04273ac26c6a790e9e3e57c78d70f2326d239a1",
+      "bytes": 8979,
+      "executable": false
+    },
+    {
       "path": "conceptgraph/completion/evidence.py",
       "sha256": "7010f1c26093c0483d2ee4bfac16e933a0809eaa2a6d27d60cc428acc05b7748",
       "bytes": 1165,
@@ -66,8 +192,8 @@
     },
     {
       "path": "conceptgraph/completion/fault_robustness.py",
-      "sha256": "9935d548bb4f71e27a37f64b63741fcbb4d40cc8923449ce4a5bd357af8fdb6d",
-      "bytes": 10017,
+      "sha256": "c4cd34b4a8c94be0f01ca9145eaf0b0be11a88b4b6d52de985442fba0bb2a50e",
+      "bytes": 10114,
       "executable": false
     },
     {
@@ -90,8 +216,8 @@
     },
     {
       "path": "conceptgraph/completion/goal_selection_ablation.py",
-      "sha256": "e02abe3c552306b8180340a512a5666371d62c8cf8aad922470989a2a332a4f7",
-      "bytes": 17642,
+      "sha256": "7c78c920f0db40580fc514e6abfd26ab63fa33931ddf7401cc91b6c796084bd1",
+      "bytes": 17748,
       "executable": false
     },
     {
@@ -168,8 +294,8 @@
     },
     {
       "path": "conceptgraph/completion/map_constraint_ablation.py",
-      "sha256": "2a806649cfd895683f9564728c35ca1666102d5ad422bfb80eade369919584cd",
-      "bytes": 24139,
+      "sha256": "7d9471cc181fc98cb7f5f00f9473e5c88b4944e8443473e8139ff89c620863fb",
+      "bytes": 24246,
       "executable": false
     },
     {
@@ -180,8 +306,8 @@
     },
     {
       "path": "conceptgraph/completion/mapping_module_ablation.py",
-      "sha256": "1f7e92ba0437c8d6fece5eba81835693c451b0e299aa40bdb79ca4d185ebe9e8",
-      "bytes": 9576,
+      "sha256": "ea02a63c815b229a9d1869a388011edfc9995a3e54d5fc643b7d6814d3ad6238",
+      "bytes": 10467,
       "executable": false
     },
     {
@@ -198,8 +324,8 @@
     },
     {
       "path": "conceptgraph/completion/mapping_parameters.py",
-      "sha256": "a22f88743f7f39d1610ee41bb1cf044709fb3dea53350d5cbec1ba8534207077",
-      "bytes": 5622,
+      "sha256": "9ecd85c22d578930c6bb8b9f03616e97cd0287c755912992f328d1b793aba876",
+      "bytes": 6377,
       "executable": false
     },
     {
@@ -390,8 +516,8 @@
     },
     {
       "path": "conceptgraph/completion/retrieval_statistics.py",
-      "sha256": "694f4670d12a1d69f55a3b692c5bd48d2d0bb326e0ad0e323d4b0b302d7132d6",
-      "bytes": 5761,
+      "sha256": "dd5ea18b586a9a7f7f40bed98ba48f55398af19385d4eb2f0f31dfdb8f0c5689",
+      "bytes": 5898,
       "executable": false
     },
     {
@@ -402,8 +528,8 @@
     },
     {
       "path": "conceptgraph/completion/road_group_statistics.py",
-      "sha256": "ee9f8b4efd4239d7c198f814af0e41a0d3cb8f8f3dd1e77f32ad92cab7368321",
-      "bytes": 9132,
+      "sha256": "26cb0fa01e3fa15f7399f826505cd889aa6dc541d08a84f89749057459864fd0",
+      "bytes": 9289,
       "executable": false
     },
     {
@@ -414,8 +540,8 @@
     },
     {
       "path": "conceptgraph/completion/selection_parameters.py",
-      "sha256": "9458b847b1aacdfba4aa89a22b180ebb6b753328fe66ceb40f58d70f33eb5f82",
-      "bytes": 10724,
+      "sha256": "e60991a03bf12b1877be356d253c5cbb27fb19f5a0ffadd8d3cab998500509e0",
+      "bytes": 11127,
       "executable": false
     },
     {
@@ -486,8 +612,8 @@
     },
     {
       "path": "conceptgraph/completion/thesis_portal.py",
-      "sha256": "47c9f954aeeed8be859f87d5d01c3d1d71bf47623e985ef707ca3746bfb370e4",
-      "bytes": 16213,
+      "sha256": "2ea8296c2220d911fb9dae83e28bdc117ef7c36eb624d13e18693ad6781d6b3b",
+      "bytes": 23245,
       "executable": false
     },
     {
@@ -497,9 +623,123 @@
       "executable": false
     },
     {
+      "path": "conceptgraph/configs/slam_pipeline/base.yaml",
+      "sha256": "304aab5011cb40b0ade7733eb68f717321eee0fb0d5bacca36546b82018076ad",
+      "bytes": 3143,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/dataset/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/dataset/dataconfigs/ai2thor/ai2thor.yaml",
+      "sha256": "c6e85b2fe73b243e07d9e7fb2eda4fbb9b5c73fb65bf479093ac92ae1204858c",
+      "bytes": 182,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/dataset/dataconfigs/azure/ali_kinect.yaml",
+      "sha256": "2cb80af0908564da7ac541b4c75e5daea09880774545631d494f57cd61bf3cba",
+      "bytes": 207,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/dataset/dataconfigs/azure/smoketest.yaml",
+      "sha256": "1518e1b1837023cb2afd7394d59d054095f1c125d733b44f12387c025c9bc1d4",
+      "bytes": 248,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/dataset/dataconfigs/hm3d-openeqa.yaml",
+      "sha256": "2240c03fd986e2660f019551132d934028f220ed761715d940055403a9034358",
+      "bytes": 163,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/dataset/dataconfigs/hm3d.yaml",
+      "sha256": "d52a1305a0a92d2861773bc6cec9340998f0fff22739d134fbaf70044d77aaf2",
+      "bytes": 210,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/dataset/dataconfigs/icl.yaml",
+      "sha256": "fc8d4c6ac7f0fbcc7eea06e85bcb219ae610ba28db5b7d39a9e30516dfea0519",
+      "bytes": 196,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/dataset/dataconfigs/multiscan.yaml",
+      "sha256": "9b4fff97676ab3dbe00a94735ca4101f2dcee3bf87bb229de32ddcb147da565e",
+      "bytes": 270,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/dataset/dataconfigs/realsense/manipulator_config.yaml",
+      "sha256": "41dd91e057c65a5259e12cfece78fa26e3ea56d5664fadd708f87de3ce7b0d36",
+      "bytes": 198,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/dataset/dataconfigs/replica/replica.yaml",
+      "sha256": "cbe326b08ef36cfc133f3b262fc00d17ba3702677dfd4e1e2ff9d3bbe94bb8f0",
+      "bytes": 592,
+      "executable": true
+    },
+    {
+      "path": "conceptgraph/dataset/dataconfigs/scannet/base.yaml",
+      "sha256": "f35afc60de273ca7b90e983e9210b26c0b0f6820d832b45577e7b379aec3626b",
+      "bytes": 237,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/dataset/datasets_common.py",
+      "sha256": "4a59b9eb1a606dbd88e262f0aa6e2717049e16bd001b6b4d969baf2f75c5179b",
+      "bytes": 51124,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/dataset/preprocess_r3d_file.py",
+      "sha256": "90988073eb87536d981aa05ea44c63975457242b90804689f6f4f641afb8130e",
+      "bytes": 6657,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/dataset/replica_constants.py",
+      "sha256": "9b4188eb4834f5c31f41f8f76c7a5bc91a250d9f6255e18b9fa207981bb91663",
+      "bytes": 2345,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/dataset/save_record3d.py",
+      "sha256": "b065998d5efd306e34bb56905a2a917779b21bd42b94dce128786c9cbde93337",
+      "bytes": 6477,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/hydra_configs/base_detections.yaml",
+      "sha256": "0872105ee4e6152fcec55188f5665845d5d31463ee9970771276cf69f7ce5476",
+      "bytes": 408,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/hydra_configs/base_mapping.yaml",
+      "sha256": "12e4216ad29eee0677f172d9a279de7bfaaa946ebc959ab1d3204031fb5621c0",
+      "bytes": 3150,
+      "executable": false
+    },
+    {
       "path": "conceptgraph/hydra_configs/incremental_navigation.yaml",
       "sha256": "14551182f5f2a6efe7e3912ee33568d3650045a0feaa3337b7da5a45b155c643",
       "bytes": 2936,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/hydra_configs/nuscenes.yaml",
+      "sha256": "50e234ff2c3c7682a78a5dfa7a11282d268ea15fc14490485d490a57d0debc3d",
+      "bytes": 166,
       "executable": false
     },
     {
@@ -515,9 +755,69 @@
       "executable": false
     },
     {
+      "path": "conceptgraph/hydra_configs/replica.yaml",
+      "sha256": "9ce285f6565e549fe1213778ce4ca7bc2639d856ca902d94b6b972668f4ab313",
+      "bytes": 203,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/hydra_configs/sam.yaml",
+      "sha256": "9381072f341d9921169b2df08c3901a028adea7a4cced3790d6b78cdc42f754f",
+      "bytes": 195,
+      "executable": false
+    },
+    {
       "path": "conceptgraph/hydra_configs/scenegraph_relations.yaml",
       "sha256": "6174777eedc4436daac4bf7ebdbba89983752e77f619bc0d121100b7e11ed119",
       "bytes": 1177,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/hydra_configs/semantic_navigation.yaml",
+      "sha256": "e8ca45cdbb10507e9391c3331b6a2bd377b19a501a6e489293c842e3ad6231f1",
+      "bytes": 2161,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/hydra_configs/streamlined_detections.yaml",
+      "sha256": "90ac2ccd86505cd81a66071fba00717e6c904acfafba9b07d0ede3836ea0671f",
+      "bytes": 297,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/hydra_configs/streamlined_mapping.yaml",
+      "sha256": "76237fb25765dfb257b9f4b05b278cb8d197649c936f2bb2a4265ed695146b60",
+      "bytes": 488,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/llava/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/llava/llava_model.py",
+      "sha256": "38679e6a30b518632b210c8d6b1c3d300e3de6d993ef0fde71b74bb0a1a58a6b",
+      "bytes": 32493,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/navigation/__init__.py",
+      "sha256": "1a641541de8ad170f2fcdc70d7338a2397c8fe9695ef805cf97b196fa95ad1a2",
+      "bytes": 779,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/navigation/evaluation.py",
+      "sha256": "9fd0e526b61f01ef094f079c47efbbe4244f4ef63c66c70ebc6e4da67de50541",
+      "bytes": 16053,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/navigation/io.py",
+      "sha256": "86555960cdc263365497399fce47bdf0e6609626b9eb5be4d532100016c25fb4",
+      "bytes": 3052,
       "executable": false
     },
     {
@@ -551,9 +851,27 @@
       "executable": false
     },
     {
+      "path": "conceptgraph/navigation/pipeline.py",
+      "sha256": "c4a6fdb6ea848024a2f98ab7a8b98a602ebd4ab59102aafa8c9e62ffb0fb2a13",
+      "bytes": 40985,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/navigation/planner.py",
+      "sha256": "585ddc41d7ca1bfc8508dce8cdae1cde81ed5b4982ab3b6dbaa478a4f393bb54",
+      "bytes": 30851,
+      "executable": false
+    },
+    {
       "path": "conceptgraph/navigation/replan_policy.py",
       "sha256": "8765b64d87df117b11655f57f66d54fed9b0a4a4dfc74e03fdb4de75f06f9c45",
       "bytes": 7765,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/navigation/semantic.py",
+      "sha256": "1070d7458dbddd0063ae8bbfb7bea7548e2329bf1005794704f704ee0cfd68ee",
+      "bytes": 42329,
       "executable": false
     },
     {
@@ -566,6 +884,12 @@
       "path": "conceptgraph/navigation/target_selector.py",
       "sha256": "0a9e5ebfbdf89d1641863ee7b47a458475896e140cd1d7cc632161803c8855d2",
       "bytes": 47532,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/navigation/types.py",
+      "sha256": "0524d36a7909f4819a56723ac74482c6e61e7b79b780adb8f63fcb9a19370034",
+      "bytes": 7544,
       "executable": false
     },
     {
@@ -605,9 +929,33 @@
       "executable": false
     },
     {
+      "path": "conceptgraph/nuscenes/nuscenes.yaml",
+      "sha256": "3f2f5ee339ef9141d97c6b69327e8ad5ca608c5ebfcb3cef6ef0039ef77b9d28",
+      "bytes": 160,
+      "executable": false
+    },
+    {
       "path": "conceptgraph/nuscenes/scene_selector.py",
       "sha256": "e0cf003f41d9e05fea6561c30a9e37220b75eacd2ed3ad2aa7ed90722c89e3d7",
       "bytes": 43487,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/replica_room0.json",
+      "sha256": "2653108a21a7a73e954efd565b0cbcb7fe86644c424a3511967dd3c843ba3ec4",
+      "bytes": 611,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/scannet200_classes.txt",
+      "sha256": "4e4c4ef1e39dad24538b8feeba5be43abca39b21c5e5492ca6413f2908ec49ad",
+      "bytes": 1959,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/scenegraph/GPTPrompt.py",
+      "sha256": "759c4c6deabc932435620e4824e5ae1611d43ad091c8b95a252729957a4b8c5e",
+      "bytes": 4943,
       "executable": false
     },
     {
@@ -617,9 +965,27 @@
       "executable": false
     },
     {
+      "path": "conceptgraph/scenegraph/build_scenegraph_cfslam.py",
+      "sha256": "57ed768feb4c918afee4433ed8813a4904cbcddeb41918b024e870ce3ce37b30",
+      "bytes": 49092,
+      "executable": false
+    },
+    {
       "path": "conceptgraph/scenegraph/incremental_graph.py",
       "sha256": "904fedec44a276080b083ed3459982e7c177f747bbfd0186fa0164e2f1b91f68",
       "bytes": 21510,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/scenegraph/merge_duplicate_objects.py",
+      "sha256": "a4e207b0929addb0c12c38ecb680aba4bc854b35685f90bcc51b19ff4ca9b34e",
+      "bytes": 3543,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/scenegraph/prompts/concept_graphs_planner.txt",
+      "sha256": "7e674ebe352345cdc5e55211c5f6359159aaa73a0a01e8dd78ba0e803f198afb",
+      "bytes": 1401,
       "executable": false
     },
     {
@@ -632,6 +998,24 @@
       "path": "conceptgraph/scenegraph/visualization.py",
       "sha256": "900724cb576eb5ac340f90357c5b1176bb2c0859dd4665b4f9159049fb68a752",
       "bytes": 3594,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/scripts/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/scripts/animate_mapping_interactive.py",
+      "sha256": "6cd6bffeb173c50377ea8e3e8624e56293749b3a57ade527de9231713532087e",
+      "bytes": 12621,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/scripts/animate_mapping_save.py",
+      "sha256": "2fb07c0efb8f0cfe469362c8dbd52570d5004bd04dcaa53ba3a9b7d93cd54c13",
+      "bytes": 9000,
       "executable": false
     },
     {
@@ -689,15 +1073,63 @@
       "executable": false
     },
     {
+      "path": "conceptgraph/scripts/build_nuscenes_bev_map.py",
+      "sha256": "ca69a5822fb4ea70321f28c8079f4035db1fc9591d144ef2bea8170770771f51",
+      "bytes": 7249,
+      "executable": false
+    },
+    {
       "path": "conceptgraph/scripts/build_nuscenes_subset_manifest.py",
       "sha256": "de53de1568df6a9ae770fc85d34b416805db2d5bc381dfd6ffe2ebbf568ea3ca",
       "bytes": 6329,
       "executable": false
     },
     {
+      "path": "conceptgraph/scripts/build_qwen_finetune_dataset.py",
+      "sha256": "8d7f934a8cde27b136500a34d4cbb71e9cbc8686c09e1e833461a1887b526129",
+      "bytes": 28457,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/scripts/build_scenegraph_from_map_stub.py",
+      "sha256": "383098c0ab17c4a84e312f45b687166354b91b69d3e775b38140a54f1669139c",
+      "bytes": 19611,
+      "executable": false
+    },
+    {
       "path": "conceptgraph/scripts/convert_lane_expansion.py",
       "sha256": "4ae60a7e26ae799df8aede9fe05a2a16101765eab38f0e5338859d97930c8592",
       "bytes": 6151,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/scripts/convert_nuscenes_to_rgbd.py",
+      "sha256": "cb36d7ab00dd90754a562bf787dfa1fa690e88efbad95d703c5455c5320de034",
+      "bytes": 15500,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/scripts/create_semantic_navigation_fixture.py",
+      "sha256": "c662e169e797b76cfd8188ce6aa0be3a0edf8d0d43cb832288e832c27c4ad21a",
+      "bytes": 3310,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/scripts/debug_dynamic_object_handling.py",
+      "sha256": "e967ad9fc8ec06c3393b839b85c400fb363d1bed9b5c550643df8fda81082f4e",
+      "bytes": 4641,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/scripts/eval_replica_semseg.py",
+      "sha256": "cb5cceefb9accc89bf8364a867413e9c1b3992eb8d9cef1a9b74c0cb2818953b",
+      "bytes": 13056,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/scripts/extract_nuscenes_scene_blobs.py",
+      "sha256": "88ff1c9961a7e182ae0df1faef8fe796ed7c9052859fca9bd63b8edf207cce02",
+      "bytes": 4696,
       "executable": false
     },
     {
@@ -716,6 +1148,24 @@
       "path": "conceptgraph/scripts/finalize_qwen_finetune_v2.py",
       "sha256": "a09e792fc5ed459d435b17aa44aed88d0d48ba6067ae67ed4ec713b86526b682",
       "bytes": 21797,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/scripts/generate_ai2thor_dataset.py",
+      "sha256": "978d9be3c70e80855fc9742c04612208bc5f562c238f280e65b1fcf158376f66",
+      "bytes": 17487,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/scripts/generate_gsa_results.py",
+      "sha256": "1ac88168e6b3def3c19137a6fd8fe8b6516602185a13b34faa1c37c0792b3400",
+      "bytes": 24233,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/scripts/generate_scenegraph_stub_responses.py",
+      "sha256": "9c1f8c6673aeb700494b994a778255f01fea87d7abf1043c5897112c3b7623c7",
+      "bytes": 1692,
       "executable": false
     },
     {
@@ -767,6 +1217,12 @@
       "executable": false
     },
     {
+      "path": "conceptgraph/scripts/normalize_qwen_responses.py",
+      "sha256": "fb623de22a6ff45c17a95257b388749e21d778bab8c74641cc71d1c0d0b2e736",
+      "bytes": 2522,
+      "executable": false
+    },
+    {
       "path": "conceptgraph/scripts/prepare_lane_expansion.py",
       "sha256": "3f939d7815eabaeb0e7ff48d192e88e2b01fa661663f6a7aa2c8ea69224f50f1",
       "bytes": 3913,
@@ -779,6 +1235,18 @@
       "executable": false
     },
     {
+      "path": "conceptgraph/scripts/preprocess_kitti360_to_minimal.py",
+      "sha256": "783cbec53b6d951217a27d2edfd654bffe943aa7998006817c55789c1941c602",
+      "bytes": 7347,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/scripts/preprocess_nuscenes_to_minimal.py",
+      "sha256": "ec7aaceb64d673a53ab63401dc9c8b9d786ed2a9d8bf3e942c6052dfa45d42cb",
+      "bytes": 10184,
+      "executable": false
+    },
+    {
       "path": "conceptgraph/scripts/probe_lane_expansion_multimodal.py",
       "sha256": "643fef7c7b2d94915f2ac614bb47be05ad50f94cc2074d084c6dbc8dfa2fe479",
       "bytes": 4967,
@@ -788,6 +1256,12 @@
       "path": "conceptgraph/scripts/qa_stage3_visualizations.py",
       "sha256": "7af5781d571afb7bf2f81f63e67d852dbfa8431427e16a75d28cb5cf49d033fb",
       "bytes": 8964,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/scripts/refresh_existing_nuscenes_scenegraphs.py",
+      "sha256": "82d39abe5cde744e67982a71bdd7b8dcdb1a3c0dcd363322fbdb07b3856d759c",
+      "bytes": 4086,
       "executable": false
     },
     {
@@ -851,6 +1325,24 @@
       "executable": false
     },
     {
+      "path": "conceptgraph/scripts/run_nuscenes_experiment_suite.py",
+      "sha256": "132cb9e4181919d2aa13acfefa00532b1b6b5aae664d13b83242ab742f7514b6",
+      "bytes": 11460,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/scripts/run_nuscenes_navigation_examples.py",
+      "sha256": "a4cfb23e8afe1ca4cefdf136937f4c201ffb655fd28d0892b1d5387302e453a4",
+      "bytes": 19897,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/scripts/run_post_filter_merge.py",
+      "sha256": "6c2d63318d0ffcb222658d4b36c8ddfc3efc1d54c741d4d56185616e89464075",
+      "bytes": 2372,
+      "executable": false
+    },
+    {
       "path": "conceptgraph/scripts/run_project_v2_integration_regression.py",
       "sha256": "784024c2667d17e6b4d3dedf4a4d0177651fc351aa660a78fab29e73e4ed50af",
       "bytes": 87246,
@@ -875,6 +1367,18 @@
       "executable": false
     },
     {
+      "path": "conceptgraph/scripts/run_semantic_navigation.py",
+      "sha256": "5b953ba871830060aaee4247fbaf69aa1dc169236a284b0591448a08ff722f75",
+      "bytes": 1258,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/scripts/run_slam_rgb.py",
+      "sha256": "2e9f9ca3129eafbe2b4081115d523b1337372111f2546012b5da80a55216342f",
+      "bytes": 4303,
+      "executable": false
+    },
+    {
       "path": "conceptgraph/scripts/run_stage2_offline_navigation.py",
       "sha256": "2895078d0020315122e47203c044ef51ca03d4497ee9006cc00ffa1c62c83352",
       "bytes": 11535,
@@ -893,6 +1397,36 @@
       "executable": false
     },
     {
+      "path": "conceptgraph/scripts/scannet_process/README.md",
+      "sha256": "36473a60af91bf7cd9ecc3efe0f136e8c9a2096906f22b102c204c197604666b",
+      "bytes": 774,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/scripts/scannet_process/SensorData.py",
+      "sha256": "16a0a5857e8833140e4c292776674bf8b350c0659d1c9d4ae3f55bff0d7fd412",
+      "bytes": 5561,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/scripts/scannet_process/reader.py",
+      "sha256": "f54cbd2bc2c25a618703003e72878b2b1364cd64b5df63f17d8e8cbef7e00412",
+      "bytes": 1438,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/scripts/select_nuscenes_parking_scenes.py",
+      "sha256": "098eb4ffc7489b1d701104b4c0f32e21129ed6598c70befc4d6058b3b367a5f4",
+      "bytes": 2864,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/scripts/streamlined_detections.py",
+      "sha256": "b487c303cc86e0f3658891c0a1f7a31237fa5042fa99838d7a13cefe4ed1e4c7",
+      "bytes": 7229,
+      "executable": false
+    },
+    {
       "path": "conceptgraph/scripts/summarize_lane_expansion.py",
       "sha256": "09a5839eea7881524828091a35a6763759a908e3126a2840b32c7de5e109ecad",
       "bytes": 29331,
@@ -905,6 +1439,18 @@
       "executable": false
     },
     {
+      "path": "conceptgraph/scripts/visualize_cfslam_interact_llava.py",
+      "sha256": "dc6de2970f2630bc26bef3df3eae99d6ea29cd787d53f4c0d2f0d6c992a2d2f5",
+      "bytes": 6767,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/scripts/visualize_cfslam_results.py",
+      "sha256": "19e604f7cb0653980eea6f057022521dbd56d866bf9cb3a9889b696315657e82",
+      "bytes": 11817,
+      "executable": false
+    },
+    {
       "path": "conceptgraph/scripts/visualize_lane_expansion.py",
       "sha256": "24592417d45f94b32a3f10e777a599fb36157c6e5688c3f1fa731e64b982459f",
       "bytes": 18082,
@@ -914,6 +1460,126 @@
       "path": "conceptgraph/scripts/visualize_lane_qwen_experiment.py",
       "sha256": "336424dda5900c0b7b9a2aa511c8da1fbd45196bff532a8a96db33eee94f68a0",
       "bytes": 15866,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/scripts/visualize_scenegraph.py",
+      "sha256": "f798d7f53d420cbae734fe567c7e23dbf51d4f2c621208c48fe77676dd742a69",
+      "bytes": 23495,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/scripts/visualize_scenegraph_3d.py",
+      "sha256": "9052b1e076e1227f14b756fcfc3489dcf2135776c447aaf540380eef70903cb8",
+      "bytes": 10736,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/scripts/visualize_scenegraph_3d_interactive.py",
+      "sha256": "d7f4ed8afdf686c6bc9f3a147259a8b10b617e774a5ef0dd4cee39113f8c0af9",
+      "bytes": 18993,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/slam/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/slam/cfslam_pipeline_batch.py",
+      "sha256": "e9fd5760ccd1ccdea413dc809056e084b77aac5b6582b47b19aca3cf5f27385a",
+      "bytes": 16583,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/slam/mapping.py",
+      "sha256": "95089084ed1ff4c2ec4bfd3414edec6c4a2145a16135373b66db7e9fed6d99d7",
+      "bytes": 9097,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/slam/slam_classes.py",
+      "sha256": "d4cbffa641a1e4c47e0189e0962463113e9d80739606cee8731f3c0f9755da0e",
+      "bytes": 7338,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/slam/streamlined_mapping.py",
+      "sha256": "ee8bf3af95408267b9fc005c3edd06e3977b043a4dce3566a768165dc2193fd7",
+      "bytes": 21699,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/slam/utils.py",
+      "sha256": "40b3954ecb467b3e470ab86262225c6c15778863bb9b48a28d038e00a495c45a",
+      "bytes": 34093,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/utils/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/utils/ai2thor.py",
+      "sha256": "7df4c3ef2ece8105af6ade06a35646f57782f6feeecea3b6a5639d40c337ac71",
+      "bytes": 13349,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/utils/eval.py",
+      "sha256": "ce785c53cb0533863e284b7941f194850291a228c2fbb691486b921438c7ece3",
+      "bytes": 3627,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/utils/general_utils.py",
+      "sha256": "54863efb566c330c7255dcb1aa2205f7f4850462de43edd8d3a308518faa5f77",
+      "bytes": 3803,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/utils/geometry.py",
+      "sha256": "c8d766a0e58ab4607a4b356cc96acdb2cc24ba9351fb142b56b30b0ee44ab8c4",
+      "bytes": 5401,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/utils/image.py",
+      "sha256": "d4e63160b5210bf6196457c5532a1eef1f11b5306cbc1fa2ba0bb22d778e8474",
+      "bytes": 615,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/utils/ious.py",
+      "sha256": "487e3887746b7402dd25d74bcdadc89112373ffb4e9a6b1a8571485a44d94a9c",
+      "bytes": 18565,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/utils/model_utils.py",
+      "sha256": "d11de07c9247feb6c8183c70bc7c5d890c2abfe140225a33708dd785a19d4d71",
+      "bytes": 7756,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/utils/vis.py",
+      "sha256": "429414dd4153a6f3c53af917c04db7e8be43a61265eb2de38fb759af35638ea0",
+      "bytes": 18693,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/vehicle_classes.txt",
+      "sha256": "6f42f64d2817016109c3920cd3183baf690edaf4706af464712a4ea841185fcb",
+      "bytes": 110,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/vlm/__init__.py",
+      "sha256": "3c0cc18f6752181c459af894dfc462dcf5e376060531efc3c9196fa6ce8245c5",
+      "bytes": 551,
       "executable": false
     },
     {
@@ -932,6 +1598,18 @@
       "path": "conceptgraph/vlm/qwen_finetune_v2.py",
       "sha256": "84d8a5f4ad5a9e50a8c7aef286991d0e7f034ff7f2c7e8f6a0650e6868bd7c90",
       "bytes": 29737,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/vlm/qwen_semantic_delegate.py",
+      "sha256": "c5d95d971456b96ec41dadbd156c0678005c9c5d0a3a678d805eb11ccf36517a",
+      "bytes": 38360,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/vlm/qwen_vl_chat.py",
+      "sha256": "f95c0fe08c30307f22b27062cb1ee06b34113251a0fde0575b3fc424dd5b2360",
+      "bytes": 5611,
       "executable": false
     },
     {
@@ -1085,10 +1763,52 @@
       "executable": false
     },
     {
+      "path": "env_vars.bash.template",
+      "sha256": "fdc076acefc43e9f54f0d613b88cb128ece103d23aea5ced539879e68d29a718",
+      "bytes": 498,
+      "executable": false
+    },
+    {
+      "path": "environment.yml",
+      "sha256": "ade6ea2f1299b2299c2d1a4d63590f238b313a94e1a2bc1abcc03d772537e23b",
+      "bytes": 20089,
+      "executable": false
+    },
+    {
+      "path": "scripts/run_nuscenes_mapconstrained_batch.sh",
+      "sha256": "54a80bf27843970fca89a654aea46057bc0521acbc261bd65e3d17b8fe9d3a8f",
+      "bytes": 4268,
+      "executable": true
+    },
+    {
+      "path": "scripts/run_nuscenes_qwen_semantics_batch.sh",
+      "sha256": "fff9769d42907448a9fdd51044cb87f310841a9bfa0047ac36d124530ec26555",
+      "bytes": 1874,
+      "executable": false
+    },
+    {
+      "path": "scripts/train_qwen_lora_semantic_delegate.py",
+      "sha256": "85ff3dd8b7754f502b0cd898e1449dd8bdf585eed121ab5bcc1772019745067f",
+      "bytes": 30950,
+      "executable": false
+    },
+    {
       "path": "scripts/train_qwen_lora_semantic_delegate_v2.py",
       "sha256": "8c1be2e371d15c248a32835f09e07948d6025473531d417710516aaef9ea0e6a",
       "bytes": 34328,
       "executable": false
+    },
+    {
+      "path": "setup.py",
+      "sha256": "18245420ccad076d0facf050ec232229e352dd36e15ade1a27ed928c3c719bd9",
+      "bytes": 275,
+      "executable": false
+    },
+    {
+      "path": "setup_environment.sh",
+      "sha256": "6a89df6f1ac208e642c294e384d52cb2e038569c25aea589fe70691e5bb1499d",
+      "bytes": 2240,
+      "executable": true
     },
     {
       "path": "tests/README.md",
@@ -1259,6 +1979,12 @@
       "executable": false
     },
     {
+      "path": "tests/test_completion_development_causal.py",
+      "sha256": "d52e554734c4d835160db33d73552c8691bb55bba770f158282a8f9c48ca9fb0",
+      "bytes": 7201,
+      "executable": false
+    },
+    {
       "path": "tests/test_completion_fault_robustness.py",
       "sha256": "f71c21d119266bddbe9ab8ed8ff392d5d9a93a646615b51793ae6f8159e6d571",
       "bytes": 1163,
@@ -1419,684 +2145,6 @@
       "sha256": "b7581a7d2e5b34ac211613cd19afab7b2769ead30fc4e95abf4d7e934627f0ad",
       "bytes": 5180,
       "executable": false
-    },
-    {
-      "path": ".gitignore",
-      "sha256": "6efef67967a3901dda1e87fb74ee5521ebba5987c033f1eb932f7e2759c473bc",
-      "bytes": 3637,
-      "executable": false
-    },
-    {
-      "path": "LICENSE",
-      "sha256": "bbb50dd0e42f0180461db2088dc07e6374d3ad4fe6961167b07093000894a509",
-      "bytes": 1071,
-      "executable": false
-    },
-    {
-      "path": "README.md",
-      "sha256": "96a3f679dc57042b41772d59c88ec569fc2226d6db253abf00fb273f41e83032",
-      "bytes": 20640,
-      "executable": false
-    },
-    {
-      "path": "README_kitti360_minimal.md",
-      "sha256": "e2ba7bdff38b7f2b7101b8c79e51c9934e07f18a0c6d51d09271bfa9f12d1c08",
-      "bytes": 2113,
-      "executable": false
-    },
-    {
-      "path": "README_nuscenes_minimal.md",
-      "sha256": "1463495e43acd5d15082ac8056dd389ae37144c8d904d95a6fe0a84902182f7d",
-      "bytes": 2057,
-      "executable": false
-    },
-    {
-      "path": "README_streamlined_detection.md",
-      "sha256": "197900f0dbe53cfd7688a911902d38184a814d7648d2f54511caf8e20f8691ae",
-      "bytes": 2627,
-      "executable": false
-    },
-    {
-      "path": "assets/splash-final.png",
-      "sha256": "75c3530bf635cff65c420cc3d105bdf33d4962604e4dd950d598bab1e8319c81",
-      "bytes": 1736523,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/README_kitti360_minimal.md",
-      "sha256": "e2ba7bdff38b7f2b7101b8c79e51c9934e07f18a0c6d51d09271bfa9f12d1c08",
-      "bytes": 2113,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/README_nuscenes_minimal.md",
-      "sha256": "1463495e43acd5d15082ac8056dd389ae37144c8d904d95a6fe0a84902182f7d",
-      "bytes": 2057,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/README_semantic_navigation.md",
-      "sha256": "48e6e8bb77e3a7663e7dc80fc07c08238f4ef1abb97b48a70d2403c8385a38c5",
-      "bytes": 1351,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/README_streamlined_detection.md",
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "bytes": 0,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/__init__.py",
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "bytes": 0,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/ai2thor/rearrange.py",
-      "sha256": "ad48d93e376307b56e0ce1383ee93d219a5eba563bad9bd6d9595badb3df3619",
-      "bytes": 7081,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/ai2thor/utils.py",
-      "sha256": "c9ffadbdb222360f9663cfcf875517d25ce0ae2b8c7e749f4eff4a2b93b4ec88",
-      "bytes": 2470,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/configs/slam_pipeline/base.yaml",
-      "sha256": "304aab5011cb40b0ade7733eb68f717321eee0fb0d5bacca36546b82018076ad",
-      "bytes": 3143,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/dataset/__init__.py",
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "bytes": 0,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/dataset/dataconfigs/ai2thor/ai2thor.yaml",
-      "sha256": "c6e85b2fe73b243e07d9e7fb2eda4fbb9b5c73fb65bf479093ac92ae1204858c",
-      "bytes": 182,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/dataset/dataconfigs/azure/ali_kinect.yaml",
-      "sha256": "2cb80af0908564da7ac541b4c75e5daea09880774545631d494f57cd61bf3cba",
-      "bytes": 207,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/dataset/dataconfigs/azure/smoketest.yaml",
-      "sha256": "1518e1b1837023cb2afd7394d59d054095f1c125d733b44f12387c025c9bc1d4",
-      "bytes": 248,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/dataset/dataconfigs/hm3d-openeqa.yaml",
-      "sha256": "2240c03fd986e2660f019551132d934028f220ed761715d940055403a9034358",
-      "bytes": 163,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/dataset/dataconfigs/hm3d.yaml",
-      "sha256": "d52a1305a0a92d2861773bc6cec9340998f0fff22739d134fbaf70044d77aaf2",
-      "bytes": 210,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/dataset/dataconfigs/icl.yaml",
-      "sha256": "fc8d4c6ac7f0fbcc7eea06e85bcb219ae610ba28db5b7d39a9e30516dfea0519",
-      "bytes": 196,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/dataset/dataconfigs/multiscan.yaml",
-      "sha256": "9b4fff97676ab3dbe00a94735ca4101f2dcee3bf87bb229de32ddcb147da565e",
-      "bytes": 270,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/dataset/dataconfigs/realsense/manipulator_config.yaml",
-      "sha256": "41dd91e057c65a5259e12cfece78fa26e3ea56d5664fadd708f87de3ce7b0d36",
-      "bytes": 198,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/dataset/dataconfigs/replica/replica.yaml",
-      "sha256": "cbe326b08ef36cfc133f3b262fc00d17ba3702677dfd4e1e2ff9d3bbe94bb8f0",
-      "bytes": 592,
-      "executable": true
-    },
-    {
-      "path": "conceptgraph/dataset/dataconfigs/scannet/base.yaml",
-      "sha256": "f35afc60de273ca7b90e983e9210b26c0b0f6820d832b45577e7b379aec3626b",
-      "bytes": 237,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/dataset/datasets_common.py",
-      "sha256": "4a59b9eb1a606dbd88e262f0aa6e2717049e16bd001b6b4d969baf2f75c5179b",
-      "bytes": 51124,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/dataset/preprocess_r3d_file.py",
-      "sha256": "90988073eb87536d981aa05ea44c63975457242b90804689f6f4f641afb8130e",
-      "bytes": 6657,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/dataset/replica_constants.py",
-      "sha256": "9b4188eb4834f5c31f41f8f76c7a5bc91a250d9f6255e18b9fa207981bb91663",
-      "bytes": 2345,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/dataset/save_record3d.py",
-      "sha256": "b065998d5efd306e34bb56905a2a917779b21bd42b94dce128786c9cbde93337",
-      "bytes": 6477,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/hydra_configs/base_detections.yaml",
-      "sha256": "0872105ee4e6152fcec55188f5665845d5d31463ee9970771276cf69f7ce5476",
-      "bytes": 408,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/hydra_configs/base_mapping.yaml",
-      "sha256": "12e4216ad29eee0677f172d9a279de7bfaaa946ebc959ab1d3204031fb5621c0",
-      "bytes": 3150,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/hydra_configs/nuscenes.yaml",
-      "sha256": "50e234ff2c3c7682a78a5dfa7a11282d268ea15fc14490485d490a57d0debc3d",
-      "bytes": 166,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/hydra_configs/replica.yaml",
-      "sha256": "9ce285f6565e549fe1213778ce4ca7bc2639d856ca902d94b6b972668f4ab313",
-      "bytes": 203,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/hydra_configs/sam.yaml",
-      "sha256": "9381072f341d9921169b2df08c3901a028adea7a4cced3790d6b78cdc42f754f",
-      "bytes": 195,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/hydra_configs/semantic_navigation.yaml",
-      "sha256": "e8ca45cdbb10507e9391c3331b6a2bd377b19a501a6e489293c842e3ad6231f1",
-      "bytes": 2161,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/hydra_configs/streamlined_detections.yaml",
-      "sha256": "90ac2ccd86505cd81a66071fba00717e6c904acfafba9b07d0ede3836ea0671f",
-      "bytes": 297,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/hydra_configs/streamlined_mapping.yaml",
-      "sha256": "76237fb25765dfb257b9f4b05b278cb8d197649c936f2bb2a4265ed695146b60",
-      "bytes": 488,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/llava/__init__.py",
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "bytes": 0,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/llava/llava_model.py",
-      "sha256": "38679e6a30b518632b210c8d6b1c3d300e3de6d993ef0fde71b74bb0a1a58a6b",
-      "bytes": 32493,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/navigation/__init__.py",
-      "sha256": "1a641541de8ad170f2fcdc70d7338a2397c8fe9695ef805cf97b196fa95ad1a2",
-      "bytes": 779,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/navigation/evaluation.py",
-      "sha256": "9fd0e526b61f01ef094f079c47efbbe4244f4ef63c66c70ebc6e4da67de50541",
-      "bytes": 16053,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/navigation/io.py",
-      "sha256": "86555960cdc263365497399fce47bdf0e6609626b9eb5be4d532100016c25fb4",
-      "bytes": 3052,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/navigation/pipeline.py",
-      "sha256": "c4a6fdb6ea848024a2f98ab7a8b98a602ebd4ab59102aafa8c9e62ffb0fb2a13",
-      "bytes": 40985,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/navigation/planner.py",
-      "sha256": "585ddc41d7ca1bfc8508dce8cdae1cde81ed5b4982ab3b6dbaa478a4f393bb54",
-      "bytes": 30851,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/navigation/semantic.py",
-      "sha256": "1070d7458dbddd0063ae8bbfb7bea7548e2329bf1005794704f704ee0cfd68ee",
-      "bytes": 42329,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/navigation/types.py",
-      "sha256": "0524d36a7909f4819a56723ac74482c6e61e7b79b780adb8f63fcb9a19370034",
-      "bytes": 7544,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/nuscenes/nuscenes.yaml",
-      "sha256": "3f2f5ee339ef9141d97c6b69327e8ad5ca608c5ebfcb3cef6ef0039ef77b9d28",
-      "bytes": 160,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/replica_room0.json",
-      "sha256": "2653108a21a7a73e954efd565b0cbcb7fe86644c424a3511967dd3c843ba3ec4",
-      "bytes": 611,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/scannet200_classes.txt",
-      "sha256": "4e4c4ef1e39dad24538b8feeba5be43abca39b21c5e5492ca6413f2908ec49ad",
-      "bytes": 1959,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/scenegraph/GPTPrompt.py",
-      "sha256": "759c4c6deabc932435620e4824e5ae1611d43ad091c8b95a252729957a4b8c5e",
-      "bytes": 4943,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/scenegraph/build_scenegraph_cfslam.py",
-      "sha256": "57ed768feb4c918afee4433ed8813a4904cbcddeb41918b024e870ce3ce37b30",
-      "bytes": 49092,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/scenegraph/merge_duplicate_objects.py",
-      "sha256": "a4e207b0929addb0c12c38ecb680aba4bc854b35685f90bcc51b19ff4ca9b34e",
-      "bytes": 3543,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/scenegraph/prompts/concept_graphs_planner.txt",
-      "sha256": "7e674ebe352345cdc5e55211c5f6359159aaa73a0a01e8dd78ba0e803f198afb",
-      "bytes": 1401,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/scripts/__init__.py",
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "bytes": 0,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/scripts/animate_mapping_interactive.py",
-      "sha256": "6cd6bffeb173c50377ea8e3e8624e56293749b3a57ade527de9231713532087e",
-      "bytes": 12621,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/scripts/animate_mapping_save.py",
-      "sha256": "2fb07c0efb8f0cfe469362c8dbd52570d5004bd04dcaa53ba3a9b7d93cd54c13",
-      "bytes": 9000,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/scripts/build_nuscenes_bev_map.py",
-      "sha256": "ca69a5822fb4ea70321f28c8079f4035db1fc9591d144ef2bea8170770771f51",
-      "bytes": 7249,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/scripts/build_qwen_finetune_dataset.py",
-      "sha256": "8d7f934a8cde27b136500a34d4cbb71e9cbc8686c09e1e833461a1887b526129",
-      "bytes": 28457,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/scripts/build_scenegraph_from_map_stub.py",
-      "sha256": "383098c0ab17c4a84e312f45b687166354b91b69d3e775b38140a54f1669139c",
-      "bytes": 19611,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/scripts/convert_nuscenes_to_rgbd.py",
-      "sha256": "cb36d7ab00dd90754a562bf787dfa1fa690e88efbad95d703c5455c5320de034",
-      "bytes": 15500,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/scripts/create_semantic_navigation_fixture.py",
-      "sha256": "c662e169e797b76cfd8188ce6aa0be3a0edf8d0d43cb832288e832c27c4ad21a",
-      "bytes": 3310,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/scripts/debug_dynamic_object_handling.py",
-      "sha256": "e967ad9fc8ec06c3393b839b85c400fb363d1bed9b5c550643df8fda81082f4e",
-      "bytes": 4641,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/scripts/eval_replica_semseg.py",
-      "sha256": "cb5cceefb9accc89bf8364a867413e9c1b3992eb8d9cef1a9b74c0cb2818953b",
-      "bytes": 13056,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/scripts/extract_nuscenes_scene_blobs.py",
-      "sha256": "88ff1c9961a7e182ae0df1faef8fe796ed7c9052859fca9bd63b8edf207cce02",
-      "bytes": 4696,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/scripts/generate_ai2thor_dataset.py",
-      "sha256": "978d9be3c70e80855fc9742c04612208bc5f562c238f280e65b1fcf158376f66",
-      "bytes": 17487,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/scripts/generate_gsa_results.py",
-      "sha256": "1ac88168e6b3def3c19137a6fd8fe8b6516602185a13b34faa1c37c0792b3400",
-      "bytes": 24233,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/scripts/generate_scenegraph_stub_responses.py",
-      "sha256": "9c1f8c6673aeb700494b994a778255f01fea87d7abf1043c5897112c3b7623c7",
-      "bytes": 1692,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/scripts/normalize_qwen_responses.py",
-      "sha256": "fb623de22a6ff45c17a95257b388749e21d778bab8c74641cc71d1c0d0b2e736",
-      "bytes": 2522,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/scripts/preprocess_kitti360_to_minimal.py",
-      "sha256": "783cbec53b6d951217a27d2edfd654bffe943aa7998006817c55789c1941c602",
-      "bytes": 7347,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/scripts/preprocess_nuscenes_to_minimal.py",
-      "sha256": "ec7aaceb64d673a53ab63401dc9c8b9d786ed2a9d8bf3e942c6052dfa45d42cb",
-      "bytes": 10184,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/scripts/refresh_existing_nuscenes_scenegraphs.py",
-      "sha256": "82d39abe5cde744e67982a71bdd7b8dcdb1a3c0dcd363322fbdb07b3856d759c",
-      "bytes": 4086,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/scripts/run_nuscenes_experiment_suite.py",
-      "sha256": "132cb9e4181919d2aa13acfefa00532b1b6b5aae664d13b83242ab742f7514b6",
-      "bytes": 11460,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/scripts/run_nuscenes_navigation_examples.py",
-      "sha256": "a4cfb23e8afe1ca4cefdf136937f4c201ffb655fd28d0892b1d5387302e453a4",
-      "bytes": 19897,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/scripts/run_post_filter_merge.py",
-      "sha256": "6c2d63318d0ffcb222658d4b36c8ddfc3efc1d54c741d4d56185616e89464075",
-      "bytes": 2372,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/scripts/run_semantic_navigation.py",
-      "sha256": "5b953ba871830060aaee4247fbaf69aa1dc169236a284b0591448a08ff722f75",
-      "bytes": 1258,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/scripts/run_slam_rgb.py",
-      "sha256": "2e9f9ca3129eafbe2b4081115d523b1337372111f2546012b5da80a55216342f",
-      "bytes": 4303,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/scripts/scannet_process/README.md",
-      "sha256": "36473a60af91bf7cd9ecc3efe0f136e8c9a2096906f22b102c204c197604666b",
-      "bytes": 774,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/scripts/scannet_process/SensorData.py",
-      "sha256": "16a0a5857e8833140e4c292776674bf8b350c0659d1c9d4ae3f55bff0d7fd412",
-      "bytes": 5561,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/scripts/scannet_process/reader.py",
-      "sha256": "f54cbd2bc2c25a618703003e72878b2b1364cd64b5df63f17d8e8cbef7e00412",
-      "bytes": 1438,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/scripts/select_nuscenes_parking_scenes.py",
-      "sha256": "098eb4ffc7489b1d701104b4c0f32e21129ed6598c70befc4d6058b3b367a5f4",
-      "bytes": 2864,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/scripts/streamlined_detections.py",
-      "sha256": "b487c303cc86e0f3658891c0a1f7a31237fa5042fa99838d7a13cefe4ed1e4c7",
-      "bytes": 7229,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/scripts/visualize_cfslam_interact_llava.py",
-      "sha256": "dc6de2970f2630bc26bef3df3eae99d6ea29cd787d53f4c0d2f0d6c992a2d2f5",
-      "bytes": 6767,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/scripts/visualize_cfslam_results.py",
-      "sha256": "19e604f7cb0653980eea6f057022521dbd56d866bf9cb3a9889b696315657e82",
-      "bytes": 11817,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/scripts/visualize_scenegraph.py",
-      "sha256": "f798d7f53d420cbae734fe567c7e23dbf51d4f2c621208c48fe77676dd742a69",
-      "bytes": 23495,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/scripts/visualize_scenegraph_3d.py",
-      "sha256": "9052b1e076e1227f14b756fcfc3489dcf2135776c447aaf540380eef70903cb8",
-      "bytes": 10736,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/scripts/visualize_scenegraph_3d_interactive.py",
-      "sha256": "d7f4ed8afdf686c6bc9f3a147259a8b10b617e774a5ef0dd4cee39113f8c0af9",
-      "bytes": 18993,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/slam/__init__.py",
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "bytes": 0,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/slam/cfslam_pipeline_batch.py",
-      "sha256": "e9fd5760ccd1ccdea413dc809056e084b77aac5b6582b47b19aca3cf5f27385a",
-      "bytes": 16583,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/slam/mapping.py",
-      "sha256": "95089084ed1ff4c2ec4bfd3414edec6c4a2145a16135373b66db7e9fed6d99d7",
-      "bytes": 9097,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/slam/slam_classes.py",
-      "sha256": "d4cbffa641a1e4c47e0189e0962463113e9d80739606cee8731f3c0f9755da0e",
-      "bytes": 7338,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/slam/streamlined_mapping.py",
-      "sha256": "ee8bf3af95408267b9fc005c3edd06e3977b043a4dce3566a768165dc2193fd7",
-      "bytes": 21699,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/slam/utils.py",
-      "sha256": "40b3954ecb467b3e470ab86262225c6c15778863bb9b48a28d038e00a495c45a",
-      "bytes": 34093,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/utils/__init__.py",
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "bytes": 0,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/utils/ai2thor.py",
-      "sha256": "7df4c3ef2ece8105af6ade06a35646f57782f6feeecea3b6a5639d40c337ac71",
-      "bytes": 13349,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/utils/eval.py",
-      "sha256": "ce785c53cb0533863e284b7941f194850291a228c2fbb691486b921438c7ece3",
-      "bytes": 3627,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/utils/general_utils.py",
-      "sha256": "54863efb566c330c7255dcb1aa2205f7f4850462de43edd8d3a308518faa5f77",
-      "bytes": 3803,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/utils/geometry.py",
-      "sha256": "c8d766a0e58ab4607a4b356cc96acdb2cc24ba9351fb142b56b30b0ee44ab8c4",
-      "bytes": 5401,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/utils/image.py",
-      "sha256": "d4e63160b5210bf6196457c5532a1eef1f11b5306cbc1fa2ba0bb22d778e8474",
-      "bytes": 615,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/utils/ious.py",
-      "sha256": "487e3887746b7402dd25d74bcdadc89112373ffb4e9a6b1a8571485a44d94a9c",
-      "bytes": 18565,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/utils/model_utils.py",
-      "sha256": "d11de07c9247feb6c8183c70bc7c5d890c2abfe140225a33708dd785a19d4d71",
-      "bytes": 7756,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/utils/vis.py",
-      "sha256": "429414dd4153a6f3c53af917c04db7e8be43a61265eb2de38fb759af35638ea0",
-      "bytes": 18693,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/vehicle_classes.txt",
-      "sha256": "6f42f64d2817016109c3920cd3183baf690edaf4706af464712a4ea841185fcb",
-      "bytes": 110,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/vlm/__init__.py",
-      "sha256": "3c0cc18f6752181c459af894dfc462dcf5e376060531efc3c9196fa6ce8245c5",
-      "bytes": 551,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/vlm/qwen_semantic_delegate.py",
-      "sha256": "c5d95d971456b96ec41dadbd156c0678005c9c5d0a3a678d805eb11ccf36517a",
-      "bytes": 38360,
-      "executable": false
-    },
-    {
-      "path": "conceptgraph/vlm/qwen_vl_chat.py",
-      "sha256": "f95c0fe08c30307f22b27062cb1ee06b34113251a0fde0575b3fc424dd5b2360",
-      "bytes": 5611,
-      "executable": false
-    },
-    {
-      "path": "env_vars.bash.template",
-      "sha256": "fdc076acefc43e9f54f0d613b88cb128ece103d23aea5ced539879e68d29a718",
-      "bytes": 498,
-      "executable": false
-    },
-    {
-      "path": "environment.yml",
-      "sha256": "ade6ea2f1299b2299c2d1a4d63590f238b313a94e1a2bc1abcc03d772537e23b",
-      "bytes": 20089,
-      "executable": false
-    },
-    {
-      "path": "scripts/run_nuscenes_mapconstrained_batch.sh",
-      "sha256": "54a80bf27843970fca89a654aea46057bc0521acbc261bd65e3d17b8fe9d3a8f",
-      "bytes": 4268,
-      "executable": true
-    },
-    {
-      "path": "scripts/run_nuscenes_qwen_semantics_batch.sh",
-      "sha256": "fff9769d42907448a9fdd51044cb87f310841a9bfa0047ac36d124530ec26555",
-      "bytes": 1874,
-      "executable": false
-    },
-    {
-      "path": "scripts/train_qwen_lora_semantic_delegate.py",
-      "sha256": "85ff3dd8b7754f502b0cd898e1449dd8bdf585eed121ab5bcc1772019745067f",
-      "bytes": 30950,
-      "executable": false
-    },
-    {
-      "path": "setup.py",
-      "sha256": "18245420ccad076d0facf050ec232229e352dd36e15ade1a27ed928c3c719bd9",
-      "bytes": 275,
-      "executable": false
-    },
-    {
-      "path": "setup_environment.sh",
-      "sha256": "6a89df6f1ac208e642c294e384d52cb2e038569c25aea589fe70691e5bb1499d",
-      "bytes": 2240,
-      "executable": true
     }
   ],
   "copied_small_evidence": {
@@ -2145,5 +2193,6 @@
   "model_weights_published": false,
   "original_manuscript_published": false,
   "credentials_published": false,
-  "goal_complete": false
+  "goal_complete": false,
+  "updated_utc": "2026-11-12T13:01:10.364601+00:00"
 }
