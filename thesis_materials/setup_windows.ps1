@@ -1,7 +1,7 @@
 [CmdletBinding()]
 param(
-    [string]$CodeDir = 'D:\study\Python.Project\lzc',
-    [string]$MaterialsDir = 'D:\study\Python.Project\lzc_thesis_materials'
+    [string]$CodeDir = 'D:\study\Python.Project\lzc\code',
+    [string]$MaterialsDir = 'D:\study\Python.Project\lzc\thesis_materials'
 )
 $ErrorActionPreference = 'Stop'
 $Repository = 'https://github.com/lzccc666/lzc.git'

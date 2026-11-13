@@ -6,8 +6,8 @@
   "files": [
     {
       "path": "00_先读我.md",
-      "sha256": "70a8af2263d83fca44ed78bf88757f7bdc8a2000bfd40b9406737ea4a6cc2ddd",
-      "bytes": 1409
+      "sha256": "e33d25597a4044c86e0742ecf7834a5e610df8ead5a2baf57ba1eac7e7d131f7",
+      "bytes": 1435
     },
     {
       "path": "01_项目框架与调用链.md",
@@ -16,68 +16,68 @@
     },
     {
       "path": "02_模块详解/M01_数据、时间与坐标.md",
-      "sha256": "51bf044e2218091adaa74a8ee65f4a00abddfe955cc48c1ff8a3156e16f00ccf",
-      "bytes": 4971
+      "sha256": "9e95264b5195a39d0c89edad2a85b39e094b8c449063b7f35a3c70af88177e85",
+      "bytes": 4976
     },
     {
       "path": "02_模块详解/M02_真实感知与深度证据.md",
-      "sha256": "97982544bbf9cb42b883a0d7f30af1558523f17e06d5ad8dc4507bc2659a0abc",
-      "bytes": 3024
+      "sha256": "09d499a7a28b7e791a166e3fda3aced67a159df822711c7728e82e86f18d8bb7",
+      "bytes": 3028
     },
     {
       "path": "02_模块详解/M03_增量对象建图与跨帧关联.md",
-      "sha256": "6963df60e9b9a418fbd4ea5008c6c266e06e41fdc71b3729430e864b918b6b1f",
-      "bytes": 3869
+      "sha256": "1bab8f3761a9b507b81011bd2616e27d135feba3f96577c71552093337febe43",
+      "bytes": 3874
     },
     {
       "path": "02_模块详解/M04_关系图与增量关系维护.md",
-      "sha256": "33d05b3504c4a4172b8c16a936d7c1ae8c263afa01eecddc34f519d877723292",
-      "bytes": 2735
+      "sha256": "04b1a9dc1d76cf2f3a8df2b5698d7a9592d7493872d8a213f9d81cec7579a9d2",
+      "bytes": 2738
     },
     {
       "path": "02_模块详解/M05_语言解析、属性与候选重排.md",
-      "sha256": "94a8d3bd8989e40ab97cfacfad89586eb5006e10c867023fd8de113d8e9be384",
-      "bytes": 4257
+      "sha256": "51551d6295cba92ab5938a1ab7f847f92983d4e6642f61409f8e66369f52a24c",
+      "bytes": 4261
     },
     {
       "path": "02_模块详解/M06_训练数据与公平模型对照.md",
-      "sha256": "9f1d17d87c0227099e89ca84a9dd14e5804e6d6b1275cf69c1595fefde874460",
-      "bytes": 4996
+      "sha256": "fc50d7218417cde1e07de790be14b1aa671c92ed53a514492ff03066624c5d9f",
+      "bytes": 5002
     },
     {
       "path": "02_模块详解/M07_目标选择、拒绝与稳定锁定.md",
-      "sha256": "f33924cc3220b9ae229e502c251d379052a72c00dcce20f85960df877af941e6",
-      "bytes": 4609
+      "sha256": "dc13c1c7cd58c7abe1afc20bc6c8a378cc5cf968ddec833885f51fed25769797",
+      "bytes": 4614
     },
     {
       "path": "02_模块详解/M08_车辆运动规划与控制.md",
-      "sha256": "e4fd51678c06470795761ad82af81fb98b10cc7f66f5c3d88358f4d531a8db46",
-      "bytes": 5148
+      "sha256": "580d25d503a65f8c53279c0c7ecee712fc6c1636523acf91971656f079308233",
+      "bytes": 5154
     },
     {
       "path": "02_模块详解/M09_可交互环境与实际感知闭环.md",
-      "sha256": "8b45fd7f35168d612791620810fa62ccdf49b39b2a1e6615552752b4f23a97d3",
-      "bytes": 4566
+      "sha256": "3149ce1bc320657961119f5e74a9d527d1f78a7db914ff4bc2f76c1df99252a0",
+      "bytes": 4570
     },
     {
       "path": "02_模块详解/M10_真实时钟、缓存与故障安全.md",
-      "sha256": "64e42c843c96884172956057048560b202e4ec00b57c68078f355f77d1d9e18c",
-      "bytes": 5360
+      "sha256": "fb86601027ec9ab5b85981c54941aea419aa12944ab8cec74096cebfd8ddc064",
+      "bytes": 5366
     },
     {
       "path": "02_模块详解/M11_独立真值、到达与统计评价.md",
-      "sha256": "20c2c0d734fb610cba9a44aff7939b0c420499a8b15c2123dee617d82bbc9f92",
-      "bytes": 5203
+      "sha256": "85b02edf15080aed08bfb7cebf778c2acdb43e025fe3acde161b21e320661884",
+      "bytes": 5208
     },
     {
       "path": "02_模块详解/M12_KITTI跨数据集诊断.md",
-      "sha256": "d0b6d0462d0e342b34687c70c1ddb2b4629c2e88bcdacbc4f667dceed151ed83",
-      "bytes": 3923
+      "sha256": "06b02d54ce996ea54e2d033009f5b12bfd20544222c62bdad52cc95a43e21d10",
+      "bytes": 3927
     },
     {
       "path": "02_模块详解/M13_可视化、人工采集与复现交付.md",
-      "sha256": "3a7becb364f6f0b5d815384d7c25c6cf00844865f2e530be3db27784626192ea",
-      "bytes": 4874
+      "sha256": "75d31b769ad6aacaefb915170d81116b7b074ae3ecf5b68c5073c5e516246dc9",
+      "bytes": 4879
     },
     {
       "path": "03_模块代码位置索引.md",
@@ -101,13 +101,13 @@
     },
     {
       "path": "07_Windows克隆与使用.md",
-      "sha256": "a13657ef88064a2b9b8d9be5489bae88917d84c607fb723e3cf4d8232a28f0db",
-      "bytes": 1521
+      "sha256": "cd39e09be4a525959165fc0ef77509492584ffce663237d95b33a80771deed68",
+      "bytes": 1533
     },
     {
       "path": "setup_windows.ps1",
-      "sha256": "4db986fbb68ebb3e4fe1cf20662f419024e8d853732696829b01e39eeea11259",
-      "bytes": 5465
+      "sha256": "93185238f7a82f8f4a31f02a534aee57458fded5b17c9cee8639cef874d92620",
+      "bytes": 5470
     },
     {
       "path": "代码文件清单.json",
@@ -116,15 +116,20 @@
     },
     {
       "path": "代码符号索引.csv",
-      "sha256": "47ad0694abbee2b68b66e61af56c40aa7c09787371e0315b7787be949690f1fe",
-      "bytes": 919138
+      "sha256": "3234665749b768706a257d8d6e79a56b8e3c7246d399629fffa349068ad191d3",
+      "bytes": 928505
     },
     {
       "path": "代码符号索引.json",
-      "sha256": "15620dbdf63b5052c68eb29364b5c1508f5f4452f5ec78c73cf8436c64a54edd",
-      "bytes": 1384873
+      "sha256": "f59233a06a9d4fd4e6fe323389c84a7228b5768fadd9009748b29f70905947a1",
+      "bytes": 1398925
     }
   ],
   "windows_executed": false,
-  "goal_resumed": false
+  "goal_resumed": false,
+  "windows_layout": {
+    "root": "D:\\study\\Python.Project\\lzc",
+    "code": "D:\\study\\Python.Project\\lzc\\code",
+    "materials": "D:\\study\\Python.Project\\lzc\\thesis_materials"
+  }
 }
