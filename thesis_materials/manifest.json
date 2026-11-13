@@ -1,0 +1,130 @@
+{
+  "source_baseline_commit": "b8d3d18a6c7b53c5322ea5308c37bcb283fa8f1e",
+  "code_inventory": "代码文件清单.json",
+  "modules": 13,
+  "symbols": 2342,
+  "files": [
+    {
+      "path": "00_先读我.md",
+      "sha256": "70a8af2263d83fca44ed78bf88757f7bdc8a2000bfd40b9406737ea4a6cc2ddd",
+      "bytes": 1409
+    },
+    {
+      "path": "01_项目框架与调用链.md",
+      "sha256": "71961f3f1e2f763c2eb08250b40a2cb973de76bfee4c12e7857b9faffcce2030",
+      "bytes": 2474
+    },
+    {
+      "path": "02_模块详解/M01_数据、时间与坐标.md",
+      "sha256": "51bf044e2218091adaa74a8ee65f4a00abddfe955cc48c1ff8a3156e16f00ccf",
+      "bytes": 4971
+    },
+    {
+      "path": "02_模块详解/M02_真实感知与深度证据.md",
+      "sha256": "97982544bbf9cb42b883a0d7f30af1558523f17e06d5ad8dc4507bc2659a0abc",
+      "bytes": 3024
+    },
+    {
+      "path": "02_模块详解/M03_增量对象建图与跨帧关联.md",
+      "sha256": "6963df60e9b9a418fbd4ea5008c6c266e06e41fdc71b3729430e864b918b6b1f",
+      "bytes": 3869
+    },
+    {
+      "path": "02_模块详解/M04_关系图与增量关系维护.md",
+      "sha256": "33d05b3504c4a4172b8c16a936d7c1ae8c263afa01eecddc34f519d877723292",
+      "bytes": 2735
+    },
+    {
+      "path": "02_模块详解/M05_语言解析、属性与候选重排.md",
+      "sha256": "94a8d3bd8989e40ab97cfacfad89586eb5006e10c867023fd8de113d8e9be384",
+      "bytes": 4257
+    },
+    {
+      "path": "02_模块详解/M06_训练数据与公平模型对照.md",
+      "sha256": "9f1d17d87c0227099e89ca84a9dd14e5804e6d6b1275cf69c1595fefde874460",
+      "bytes": 4996
+    },
+    {
+      "path": "02_模块详解/M07_目标选择、拒绝与稳定锁定.md",
+      "sha256": "f33924cc3220b9ae229e502c251d379052a72c00dcce20f85960df877af941e6",
+      "bytes": 4609
+    },
+    {
+      "path": "02_模块详解/M08_车辆运动规划与控制.md",
+      "sha256": "e4fd51678c06470795761ad82af81fb98b10cc7f66f5c3d88358f4d531a8db46",
+      "bytes": 5148
+    },
+    {
+      "path": "02_模块详解/M09_可交互环境与实际感知闭环.md",
+      "sha256": "8b45fd7f35168d612791620810fa62ccdf49b39b2a1e6615552752b4f23a97d3",
+      "bytes": 4566
+    },
+    {
+      "path": "02_模块详解/M10_真实时钟、缓存与故障安全.md",
+      "sha256": "64e42c843c96884172956057048560b202e4ec00b57c68078f355f77d1d9e18c",
+      "bytes": 5360
+    },
+    {
+      "path": "02_模块详解/M11_独立真值、到达与统计评价.md",
+      "sha256": "20c2c0d734fb610cba9a44aff7939b0c420499a8b15c2123dee617d82bbc9f92",
+      "bytes": 5203
+    },
+    {
+      "path": "02_模块详解/M12_KITTI跨数据集诊断.md",
+      "sha256": "d0b6d0462d0e342b34687c70c1ddb2b4629c2e88bcdacbc4f667dceed151ed83",
+      "bytes": 3923
+    },
+    {
+      "path": "02_模块详解/M13_可视化、人工采集与复现交付.md",
+      "sha256": "3a7becb364f6f0b5d815384d7c25c6cf00844865f2e530be3db27784626192ea",
+      "bytes": 4874
+    },
+    {
+      "path": "03_模块代码位置索引.md",
+      "sha256": "942d73f772d485af3fb851bc6d23358b156e4ea185de04f3ea58fa5133fd5f13",
+      "bytes": 8163
+    },
+    {
+      "path": "04_实验与结论依据.md",
+      "sha256": "33c7a81246bd26b43482839a7be2d18165d4a024ec6c0d0a09e772db428490bb",
+      "bytes": 3390
+    },
+    {
+      "path": "05_论文框架材料与写作边界.md",
+      "sha256": "0b457dc058280c4e7637db52e8600b815d759f834f9643d2b53161463198f22f",
+      "bytes": 3086
+    },
+    {
+      "path": "06_术语与评价口径.md",
+      "sha256": "c72473a97d74a42e505159875128b09aab77ccfd19a26d5aa16cb2e3c20c713c",
+      "bytes": 1618
+    },
+    {
+      "path": "07_Windows克隆与使用.md",
+      "sha256": "a13657ef88064a2b9b8d9be5489bae88917d84c607fb723e3cf4d8232a28f0db",
+      "bytes": 1521
+    },
+    {
+      "path": "setup_windows.ps1",
+      "sha256": "4db986fbb68ebb3e4fe1cf20662f419024e8d853732696829b01e39eeea11259",
+      "bytes": 5465
+    },
+    {
+      "path": "代码文件清单.json",
+      "sha256": "07e59995b1718e2d93c32d2dcc7bd695f9cbda6ba7e0a85916de4765cd3a4ce6",
+      "bytes": 78344
+    },
+    {
+      "path": "代码符号索引.csv",
+      "sha256": "47ad0694abbee2b68b66e61af56c40aa7c09787371e0315b7787be949690f1fe",
+      "bytes": 919138
+    },
+    {
+      "path": "代码符号索引.json",
+      "sha256": "15620dbdf63b5052c68eb29364b5c1508f5f4452f5ec78c73cf8436c64a54edd",
+      "bytes": 1384873
+    }
+  ],
+  "windows_executed": false,
+  "goal_resumed": false
+}

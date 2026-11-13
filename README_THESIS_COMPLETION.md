@@ -16,3 +16,6 @@
 网页的完整RGB/深度/日志浏览需要原始数据服务；服务器最新入口为8768端口`/visualizations/thesis_portal_017/index.html`，实时交互8769，独立人工审核8770。Git内不包含完整传感器记录。
 
 本仓库内验收快照冻结于推送之前，发布事实以Git提交记录及服务器同步回执为准。原先的分批进度README归档在`doc/thesis_completion/history_before_030/`，不能把历史“等待中”当成当前状态。
+
+
+论文准备资料（不含论文正文）见 [thesis_materials/00_先读我.md](thesis_materials/00_先读我.md)。包括框架、13个模块详解、代码位置与符号索引、实验依据及写作边界。Windows克隆和独立资料目录生成说明见 [Windows使用说明](thesis_materials/07_Windows克隆与使用.md)。
