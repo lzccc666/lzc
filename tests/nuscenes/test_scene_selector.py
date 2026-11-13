@@ -358,9 +358,16 @@ def test_num_scenes_must_be_positive(tmp_path: Path) -> None:
         result.select(0)
 
 
-def test_output_directory_cannot_escape_project_v2(tmp_path: Path) -> None:
+def test_output_directory_cannot_escape_project_v2(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    allowed = tmp_path / "outputs" / "project_v2"
+    monkeypatch.setattr(
+        "conceptgraph.scripts.build_nuscenes_subset_manifest.PROJECT_V2_ROOT", allowed
+    )
     with pytest.raises(ValueError, match="outputs/project_v2"):
         validate_output_dir(tmp_path)
+    assert validate_output_dir(allowed / "subset") == (allowed / "subset").resolve()
 
 
 def test_version_directory_is_preferred_over_same_named_child(tmp_path: Path) -> None:

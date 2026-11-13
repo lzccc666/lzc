@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "actual_saved_executions_recovered": 18,
+  "distinct_connections": 36,
+  "all_match_independent_audit": true,
+  "original_run_unchanged": true,
+  "original_run_source_archive_SHA_verified": true,
+  "current_source_sha256": "f0200cebffa5ed8aa4f02686a4e9f89f3494ff5bed99dc414db9c2e7475e0299",
+  "change": "只改完成后输出计数字段，不改规划/控制/守卫",
+  "semantic_arrival_credit": 0,
+  "goal_complete": false
+}

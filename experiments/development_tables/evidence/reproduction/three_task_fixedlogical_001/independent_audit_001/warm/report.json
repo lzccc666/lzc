@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "four_outcomes": {
+    "route_generated": true,
+    "selected_object_evaluated_correct": true,
+    "stable_correct_lock": true,
+    "actual_full_perception_arrival": false
+  },
+  "controls": 301,
+  "perception_frames": 61,
+  "actual_reported_Qwen_calls": 0,
+  "independent_hold_s": 1.200000000000017,
+  "task_schema_valid_counts": {
+    "query_parse": 1,
+    "object_attributes": 1,
+    "candidate_rerank": 1
+  },
+  "fallback_counts": {},
+  "actual_source_imports_verified": 56,
+  "input_files_checked": 183,
+  "identity_criterion": "原粗类别XY2.5米Hungarian重算，非新人工实例真值",
+  "goal_complete": false
+}

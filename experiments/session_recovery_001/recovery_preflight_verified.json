@@ -1,0 +1,31 @@
+{
+  "verified_utc": "2026-11-13T08:03:14.778635+00:00",
+  "passed": true,
+  "main_records": 450,
+  "minus_records": 402,
+  "common_sources": 66,
+  "source_set_equality": false,
+  "source_compatibility": {
+    "passed": true,
+    "exact_source_set_equality": false,
+    "common_source_files": 66,
+    "extra_source_files": [
+      "conceptgraph/navigation/reference_guided_vehicle.py"
+    ],
+    "common_source_SHA_unchanged": true,
+    "explicit_extra_module_references": [],
+    "dynamic_loading_calls": [
+      {
+        "source": "conceptgraph/completion/kinematic_benchmark.py",
+        "line": 115,
+        "function": "__import__",
+        "module": "hashlib"
+      }
+    ],
+    "same_task_weights_selection_protocol": true,
+    "limit": "静态调用检查和入口导入探针不等于完整运行时模块跟踪；源集合不等仍明确保留。"
+  },
+  "supervisor_frozen_hashes_passed": true,
+  "actual_model_calls": 0,
+  "goal_complete": false
+}

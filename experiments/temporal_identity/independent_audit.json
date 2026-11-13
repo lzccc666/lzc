@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "checked": {
+    "frames": 1508,
+    "scenes": 38,
+    "return_events": 2028,
+    "censored_tails": 1628,
+    "identity_cases": 532,
+    "estimate_intervals": 112,
+    "paired_difference_intervals": 96
+  },
+  "by_log_rows": 154,
+  "official_commit": "12c8791b303e0a0b50f753af204249e622d0281a",
+  "original_reference_files_preserved": true,
+  "compatibility_changes": [
+    {
+      "path": "trackeval/metrics/identity.py",
+      "replacements": 3,
+      "original_sha256": "e76b1bdcbf5b193662431596a984cf70a5be32e903eb5f2a3d9921b4762f93ba",
+      "compatibility_sha256": "33b4ef7e11a24c47c6060eb2464cb92167aea42e8c0e6f652b10ca317872028c"
+    }
+  ],
+  "source_report_sha256": "62e6667882206c8c84ac2ac925e0dc796a0b663dcc44c7a7116cbb158c2d498a",
+  "source_scene_rows_sha256": "432b89e81fc4de84c52cf1f16720fa38aa3e579273d79f108afd4bbf76f05673",
+  "audit_source_sha256": "1eb5f28862a204cc920b1f98f3b64221f20d346c91d448ab544d674907a7edfb",
+  "independent_checks": [
+    "math.hypot中心门限与所有合法边",
+    "官方TrackEval扩展FN/FP身份代价矩阵",
+    "保存逐帧匹配上的独立返回/尾段枚举",
+    "11log固定重采样与全部估计/差值区间",
+    "逐log CSV"
+  ],
+  "limits": [
+    "原逐帧一对一匹配复用，未宣称第二份独立Hungarian关联实现",
+    "全序列评价用未来GT只在离线评价，不进入因果推理",
+    "不是人工身份/遮挡审核，也不是官方nuScenes成绩"
+  ],
+  "CPU_shared": true,
+  "elapsed_wall_s": 2.475343568250537,
+  "model_calls": 0,
+  "goal_complete": false
+}

@@ -1,0 +1,47 @@
+{
+  "passed": true,
+  "created_utc": "2026-11-12T18:40:52.064668+00:00",
+  "trials": 228,
+  "planned_routes": 39,
+  "planned_intervals": 17495,
+  "planned_routes_with_padded_body_certificate": 39,
+  "body_unknown_or_failed_routes": 0,
+  "padded_rectangular_body_margin_m": 0.05,
+  "independent_input_files": 256,
+  "source_files_sha256": "8d3a5dc6d986c8951dca3dad8deb2393010c58903e7d00855924ec11abf62b95",
+  "descriptive_metrics": {
+    "reference_guided::planned_length_m": {
+      "count": 39,
+      "median": 46.49999997203008,
+      "maximum": 62.499999910335326
+    },
+    "reference_guided::max_curvature_per_m": {
+      "count": 39,
+      "median": 0.00923411481887015,
+      "maximum": 0.07033892941006215
+    },
+    "reference_guided::max_steering_rad": {
+      "count": 39,
+      "median": 0.02492709466409727,
+      "maximum": 0.18775354593877525
+    },
+    "reference_guided::max_steering_rate_radps": {
+      "count": 39,
+      "median": 0.12506975180371452,
+      "maximum": 0.3508730114467883
+    }
+  },
+  "original_planner_zero_routes_has_no_paired_curvature_or_tracking_difference": true,
+  "controls_are_inferred_admissible_witness_not_original_proposal_commands": true,
+  "actual_executed_control_audit_is_separate": true,
+  "new_executions": 0,
+  "new_model_calls": 0,
+  "semantic_arrival_credit": 0,
+  "wall_CPU_shared_s": 4.597011137753725,
+  "limits": [
+    "本检查复用已独立于执行器的连续车身实现，属于规划状态输入/余量核验，不是第三种车身算法",
+    "未知证书不计通过；规划几何与实际控制跟踪、方向和连接分开评价",
+    "开发诊断、人工地图起点和静态预测障碍，不是新封存、语义到达或动态交通安全"
+  ],
+  "goal_complete": false
+}

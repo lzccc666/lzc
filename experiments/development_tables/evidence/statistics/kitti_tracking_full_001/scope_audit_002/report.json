@@ -1,0 +1,108 @@
+{
+  "passed": true,
+  "by_sequence": [
+    {
+      "sequence": "0000",
+      "frames": 30,
+      "raw_label_categories": {
+        "DontCare": 85,
+        "Van": 60,
+        "Cyclist": 30
+      },
+      "valid_primary_GT_observations": 0,
+      "valid_primary_unique_instances": 0,
+      "valid_primary_instances": [],
+      "all_raw_tracked_instances": 3,
+      "actual_frontend_2D_categories": {
+        "car": 137,
+        "bicycle": 124,
+        "traffic sign": 20,
+        "truck": 9,
+        "pedestrian": 46,
+        "traffic light": 10,
+        "motorcycle": 57,
+        "bus": 8
+      },
+      "object_counts": {
+        "single_frame": 95,
+        "original_fusion": 197,
+        "one_to_one_depth_robust_motion": 177
+      }
+    },
+    {
+      "sequence": "0005",
+      "frames": 30,
+      "raw_label_categories": {
+        "DontCare": 90,
+        "Car": 74,
+        "Cyclist": 30,
+        "Van": 24
+      },
+      "valid_primary_GT_observations": 74,
+      "valid_primary_unique_instances": 4,
+      "valid_primary_instances": [
+        "0005:15",
+        "0005:31",
+        "0005:32",
+        "0005:33"
+      ],
+      "all_raw_tracked_instances": 6,
+      "actual_frontend_2D_categories": {
+        "car": 122,
+        "truck": 10,
+        "bus": 58,
+        "road": 20,
+        "pedestrian": 2,
+        "traffic sign": 12,
+        "traffic light": 9
+      },
+      "object_counts": {
+        "single_frame": 56,
+        "original_fusion": 111,
+        "one_to_one_depth_robust_motion": 95
+      }
+    },
+    {
+      "sequence": "0013",
+      "frames": 30,
+      "raw_label_categories": {
+        "DontCare": 106,
+        "Cyclist": 20,
+        "Person": 20
+      },
+      "valid_primary_GT_observations": 0,
+      "valid_primary_unique_instances": 0,
+      "valid_primary_instances": [],
+      "all_raw_tracked_instances": 2,
+      "actual_frontend_2D_categories": {
+        "bicycle": 92,
+        "traffic light": 31,
+        "traffic sign": 46,
+        "motorcycle": 90,
+        "car": 7,
+        "pedestrian": 18
+      },
+      "object_counts": {
+        "single_frame": 7,
+        "original_fusion": 11,
+        "one_to_one_depth_robust_motion": 7
+      }
+    }
+  ],
+  "valid_primary_GT_observations": 74,
+  "positive_GT_sequences": 1,
+  "total_sequences": 3,
+  "labels_read_only_after_frontend": true,
+  "selected_windows_unchanged": true,
+  "uncertainty_limits": [
+    "全部74次主类别GT观测只出现在0005；0000和0013仍完整保留，不重选有利样本",
+    "三个固定短窗口仅支持一个序列内主类别召回诊断，不能报告三独立正场景泛化提升",
+    "序列bootstrap有2845/4000次含正GT，召回与匹配误差差值区间退化；退化不代表高置信跨场景改善",
+    "全门限IDF1包含其他两序列预测，受DontCare/Van等未支持标签影响；不能解读成完整官方追踪榜单",
+    "不存在官方列表间隔返回机会时保持率unknown，两个方法匹配间隔事件不等于两个官方遮挡恢复实验",
+    "类别映射不改成将Van强行加入主要car指标；原始全部标签与检测保留供另立敏感性版本"
+  ],
+  "source_sha256": "57df2d340e768bc525ecc5bb6c2bbe00f7bd0a778fcab82d2a51730cd31a821c",
+  "inference_unchanged": true,
+  "goal_complete": false
+}

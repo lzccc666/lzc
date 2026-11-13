@@ -1,0 +1,17 @@
+﻿a,b,metric,difference_pp,ci95_low_pp,ci95_high_pp,denominator,config_clusters
+new_full,new_minus_attributes,route_generated,-2.2222222222222223,-5.555555555555555,0.0,90,10
+new_full,new_minus_attributes,selected_object_evaluated_correct,0.0,-3.3333333333333335,3.3333333333333335,90,10
+new_full,new_minus_attributes,stable_correct_lock,1.1111111111111112,-2.2222222222222223,4.444444444444445,90,10
+new_full,new_minus_attributes,actual_full_perception_arrival,-1.1111111111111112,-6.666666666666667,5.555555555555555,90,10
+new_full,new_minus_parse,route_generated,-15.555555555555555,-28.888888888888886,0.0,90,10
+new_full,new_minus_parse,selected_object_evaluated_correct,-47.77777777777778,-60.0,-33.33333333333333,90,10
+new_full,new_minus_parse,stable_correct_lock,-44.44444444444444,-58.88888888888889,-27.77777777777778,90,10
+new_full,new_minus_parse,actual_full_perception_arrival,-48.888888888888886,-65.55555555555556,-33.33333333333333,90,10
+new_full,new_minus_rerank,route_generated,-3.3333333333333335,-6.666666666666667,0.0,90,10
+new_full,new_minus_rerank,selected_object_evaluated_correct,-4.444444444444445,-8.88888888888889,0.0,90,10
+new_full,new_minus_rerank,stable_correct_lock,-4.444444444444445,-7.777777777777778,-1.1111111111111112,90,10
+new_full,new_minus_rerank,actual_full_perception_arrival,-2.2222222222222223,-6.666666666666667,3.3333333333333335,90,10
+new_full,rule,route_generated,-26.666666666666668,-33.33333333333333,-18.88888888888889,90,10
+new_full,rule,selected_object_evaluated_correct,-56.666666666666664,-63.33333333333333,-48.888888888888886,90,10
+new_full,rule,stable_correct_lock,-55.55555555555556,-63.33333333333333,-46.666666666666664,90,10
+new_full,rule,actual_full_perception_arrival,-51.11111111111111,-66.69444444444443,-35.55555555555556,90,10

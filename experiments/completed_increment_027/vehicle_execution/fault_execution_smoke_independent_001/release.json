@@ -1,0 +1,17 @@
+{
+  "source_run": "realtime_faults_gpu_smoke_001",
+  "expected": 6,
+  "sources": {
+    "outputs/project_v2/thesis_completion_v1/source_bundle/semantic_minus_execution_audit_001.py": "96194fcffa6d0fedfcb0fd56ed4fbfe9039364b8fb1e138e397a6ac6229dbec3",
+    "conceptgraph/completion/independent_continuous_body.py": "6225ef52af83bb2f2cfb45bc4a204977f9cc5f7d3170aadd35af58715b419fbf",
+    "conceptgraph/completion/execution_direction_audit.py": "52ececb3797c2ba7f44544fb7e6f23fe743c1c7818fdb46542052c4ce2b02503",
+    "outputs/project_v2/thesis_completion_v1/task_protocol/semantic_minus_execution_audit_001.md": "0cd75a675b6400e9d3283c9fce756a36949a3d5b6f3080a8f01c7f2325e90fb3",
+    "outputs/project_v2/thesis_completion_v1/source_bundle/fault_execution_independent_audit_001.py": "f597101bde0a7bddc896a257dcf55003fd6ad9a21599ae7d2b15614496ddbe6c"
+  },
+  "input_release_sha256": "5dbf5e67f4db1c5d768f9e09bd7d963b02fb20cf7815d3fc5df2bf3ef3c67dcd",
+  "budget_wall_s": 1800,
+  "budget_bytes": 1000000000,
+  "minimum_free_bytes": 6000000000,
+  "actual_model_calls": 0,
+  "goal_complete": false
+}

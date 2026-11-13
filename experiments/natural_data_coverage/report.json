@@ -1,0 +1,72 @@
+{
+  "created_utc": "2026-11-12T16:53:07.660050+00:00",
+  "candidates": 146,
+  "original_commands": 2308,
+  "annotations_found": 2308,
+  "official_motion_counts": {
+    "dynamic": 1083,
+    "unknown": 369,
+    "static": 856
+  },
+  "thresholds": [
+    {
+      "minimum_distance_m": 0,
+      "eligible_scenes": 146,
+      "raw_original_commands": 2308,
+      "officially_static_commands": 856,
+      "scenes_with_20_raw": 34,
+      "logs_with_20_raw": 11,
+      "scenes_with_20_officially_static": 2,
+      "logs_with_20_officially_static": 2
+    },
+    {
+      "minimum_distance_m": 20,
+      "eligible_scenes": 74,
+      "raw_original_commands": 1207,
+      "officially_static_commands": 401,
+      "scenes_with_20_raw": 16,
+      "logs_with_20_raw": 7,
+      "scenes_with_20_officially_static": 0,
+      "logs_with_20_officially_static": 0
+    },
+    {
+      "minimum_distance_m": 50,
+      "eligible_scenes": 66,
+      "raw_original_commands": 1097,
+      "officially_static_commands": 364,
+      "scenes_with_20_raw": 15,
+      "logs_with_20_raw": 6,
+      "scenes_with_20_officially_static": 0,
+      "logs_with_20_officially_static": 0
+    },
+    {
+      "minimum_distance_m": 100,
+      "eligible_scenes": 42,
+      "raw_original_commands": 739,
+      "officially_static_commands": 230,
+      "scenes_with_20_raw": 11,
+      "logs_with_20_raw": 6,
+      "scenes_with_20_officially_static": 0,
+      "logs_with_20_officially_static": 0
+    }
+  ],
+  "selected_scenes": 30,
+  "selected_original_commands": 439,
+  "selected_scenes_with_20_raw": 3,
+  "selected_scenes_with_20_officially_static": 0,
+  "source_release_sha256": "68a9e7dded9245e1838b552ef1e877ba592e1ea4d88bef8432a568527f1e22fb",
+  "scene_coverage_sha256": "754f64909d31905f6777ff7467ac6ab9a11eb5e8d921b2d24db6c54a2c54d137",
+  "command_motion_metadata_sha256": "b928ff7125841e853beb100895718b9980deeee05b8404467db111a1a7265668",
+  "selection_only_can_satisfy_20_scenes_10_logs": false,
+  "limitations": [
+    "原文规模只是上限，尚未审核静止目标接近语义、歧义、颜色、可达性与表达家族",
+    "官方单帧运动属性不是持续静止的人工证据",
+    "不同距离阈值只作诊断；既定50米隔离与30场景选场保持不变"
+  ],
+  "new_human_annotations": 0,
+  "model_calls": 0,
+  "method_inference_executed": false,
+  "new_test_opened": false,
+  "goal_complete": false,
+  "wall_s": 7.850082688033581
+}

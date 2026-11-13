@@ -1,0 +1,50 @@
+{
+  "passed": true,
+  "created_utc": "2026-11-12T17:52:18.295284+00:00",
+  "trials": 228,
+  "scenes": 38,
+  "logs": 11,
+  "source_sha256": "c29dcfc9544ac8a03245e215355bcb62090d0d24f2b0666709d37c41e07776ad",
+  "totals": {
+    "control_intervals": 6351,
+    "rear_arc_independent_certified_intervals": 6351,
+    "rear_arc_independent_unknown_intervals": 0,
+    "rear_arc_independent_violation_intervals": 0,
+    "distinct_assigned_connections": 36
+  },
+  "source_files": 272,
+  "files_manifest_sha256": "2ca26bb2104e4cee73546fa028485dc5d9f80b4667070d8d2c0d1c65b39446a9",
+  "methods": {
+    "hybrid_astar": {
+      "trials": 114,
+      "actual_motion": 0,
+      "reference_pose_reached": 0,
+      "independently_confirmed_reference_pose": 0
+    },
+    "point_astar": {
+      "trials": 114,
+      "actual_motion": 18,
+      "reference_pose_reached": 9,
+      "independently_confirmed_reference_pose": 9
+    }
+  },
+  "hybrid_minus_point_reference_reached_rate": -0.07894736842105263,
+  "paired_log_cluster_95ci": [
+    -0.18181818181818182,
+    0.0
+  ],
+  "bootstrap_replicates": 4000,
+  "bootstrap_seed": 5723,
+  "raw_counter_interpretation": "declared_lane_transitions_exercised是候选连接控制区间数；实际完整车道见证的不同过渡次数见accepted_distinct_connections，不能混用",
+  "reference_pose_is_not_semantic_arrival": true,
+  "new_executions": 0,
+  "new_model_calls": 0,
+  "actual_semantic_arrival_credit": 0,
+  "wall_CPU_shared_s": 5.112401841208339,
+  "limits": [
+    "独立连续车身证书由不同于执行器的积分/几何实现产生，本检查只复核其账目和输入，非第三种车身算法",
+    "后轴轨迹用不同的圆弧中点方框界复核，未决保留；方向全线段锥过宽时仅给unknown",
+    "人工参考起始与地图路线，静态预测障碍，非录制实车后轴、感知闭环或语义正确到达"
+  ],
+  "goal_complete": false
+}

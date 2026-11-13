@@ -1,0 +1,7 @@
+﻿condition,denominator,triggered,unknown,blackout_stopped
+无注入基线,30,0,0,
+断流4秒,30,29,0,29
+LiDAR丢失80%,30,29,1,
+深度噪声0.2米,30,30,0,
+位姿噪声0.25米/2度,30,29,0,
+检测丢失30%,30,30,0,

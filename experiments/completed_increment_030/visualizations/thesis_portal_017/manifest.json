@@ -1,0 +1,12 @@
+{
+  "source_sha256": "84be92cc317c6d2c576236561dc6c054542e216093ead0edb777ffddcbdfa060",
+  "source_path": "source_bundle/thesis_portal_completed_017.py",
+  "parent_html_sha256": "37ee5922e9c96fb32ac01d02f921a44e83eac7e0a96ff22cf544946caaadf68b",
+  "html_sha256": "3e46adeef4826ee559ba8421fc4c35e574dc99549c94904d6c53e30da56234e5",
+  "created_utc": "2026-11-13T16:18:31.680350+00:00",
+  "completed_main_trials": 450,
+  "GPU_fault_trials": 180,
+  "read_only": true,
+  "manuscript_text_written": false,
+  "goal_complete": false
+}

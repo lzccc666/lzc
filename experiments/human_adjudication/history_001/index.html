@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>自然指令独立标签审核</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f3f5f7;color:#172a3b;font:16px system-ui}main{max-width:1200px;margin:auto;padding:18px}h1{font-size:25px}.panel{background:#fff;padding:16px;border-radius:10px;margin:12px 0}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}label{display:block;margin:8px 0}input,select,textarea,button{font:inherit;padding:8px;max-width:100%;min-width:0}select,textarea{width:100%}textarea{min-height:90px}button{cursor:pointer}canvas{width:100%;height:auto;background:#ddd}p,#status,#objects,#selected{overflow-wrap:anywhere}#status{white-space:pre-wrap}.muted{font-size:14px;color:#52667a}#objects{max-height:260px;overflow:auto}input[type=range]{width:100%}fieldset{border:0;margin:0;padding:0}a{color:#125bb0}
+</style>
+<main><h1>自然指令独立标签审核</h1>
+<p>审核本人实际观察过的图像与时序，确认指令可接受目标和语义。官方框只供标注身份对应，默认隐藏；不展示方法预测。模糊属性保持unknown。提交会追加记录，原始表达和旧审核均保留。</p>
+<div class="panel"><p id="counts">读取审核状态……</p><label>待审核的真实原始提交<select id="submission"></select></label><p id="command"></p><p id="source" class="muted"></p></div>
+<div class="panel"><div class="grid"><label>预览场景<select id="scene"></select></label><label><input type="checkbox" id="showTruth"> 显示官方投影框（仅供标签审核）</label></div>
+<canvas id="rgb" aria-label="原始RGB；官方框默认关闭"></canvas><input id="frame" type="range" min="0" value="0" aria-label="证据帧">
+<p id="frameInfo"></p><p id="viewed" class="muted"></p><p class="muted">运动标签应查看多帧。无匹配结论只适用于指令时刻已观察前缀。标注可参考后续画面，运行端不得读取后续画面。官方框与相机时间存在已声明的近似对齐，投影框不等于像素掩膜。</p>
+<div id="objects"></div><p id="selected"></p><button id="clear">清除所选实例</button></div>
+<form class="panel" id="form"><fieldset id="fields"><div class="grid">
+<label>真实审核者<input id="reviewer" maxlength="120" autocomplete="name"></label>
+<label>决定<select id="decision"><option value="needs_evidence">证据不足，继续保留</option><option value="accept">接受标签</option><option value="reject">不属于有效任务</option></select></label>
+<label>任务状态<select id="task_state"><option value="insufficient_evidence">证据不足</option><option value="approach_static_target">接近静止目标</option><option value="no_match_in_observed_prefix">已观察范围内无匹配</option><option value="target_not_yet_seen">目标尚未出现</option><option value="temporarily_occluded">暂时遮挡</option><option value="target_present_inaccessible">目标存在但不可接近</option><option value="out_of_scope">任务范围外</option></select></label>
+<label>歧义<select id="ambiguity"><option value="unknown">unknown</option><option value="unique">唯一可接受目标</option><option value="multiple_acceptable">多个目标均可接受</option><option value="underspecified">指令不足以确定集合</option></select></label>
+<label>多帧运动<select id="observed_motion"><option value="unknown">unknown</option><option value="static">所查看时间范围内静止</option><option value="dynamic">运动</option></select></label>
+<label>可见颜色<select id="observed_color"><option>unknown</option><option>white</option><option>black</option><option>gray</option><option>silver</option><option>red</option><option>blue</option><option>green</option><option>yellow</option><option>orange</option><option>brown</option><option>purple</option><option>other</option></select></label>
+<label>目标粗类别（与实例类别核对）<input id="target_category" value="unknown"></label>
+<label>细属性；不涉及填none，无法确认填unknown<input id="fine_attribute" value="unknown"></label>
+<label>关系及参考坐标；不涉及填none<input id="relation" value="unknown"></label>
+<label>锚点官方实例ID；多个用英文逗号分隔<input id="anchor_instances" value="unknown"></label>
+<label>否定语义；不涉及填none<input id="negation" value="unknown"></label>
+<label>表达家族标记；待独立划分审核<input id="expression_family" value="unknown"></label></div>
+<p>本指令实际要求的语义字段（请完整勾选）：</p><div class="grid" id="required"></div>
+<label>观察依据、歧义说明和未解决问题<textarea id="evidence_note" maxlength="2000"></textarea></label>
+<label><input type="checkbox" id="attest"> 我亲自查看证据、完整标记指令要求，未使用待评价模型输出作为标签；未知项已保留。</label>
+<button type="submit" id="submit">追加审核记录</button></fieldset><p id="status" role="status"></p>
+<p class="muted">审核通过不自动解封测试。表达家族和数据划分、每场景覆盖、导航独立可达性与版本冻结仍需验收；审核者姓名为自述，不冒充已独立核实身份。</p></form></main>
+<script>
+const $=id=>document.getElementById(id);let data=null,source=null,frameData=null,image=null,epoch=0,campaignSha='',viewed=new Set,chosen=new Set;
+const semantic=['target_category','fine_attribute','relation','anchor_instances','negation','expression_family'];
+for(const [value,label] of [['color','颜色'],['fine_attribute','细属性'],['relation','关系'],['anchor','锚点'],['negation','否定']]){let l=document.createElement('label'),i=document.createElement('input');i.type='checkbox';i.value=value;i.name='required';l.append(i,' '+label);$('required').append(l)}
+async function api(url){let r=await fetch(url);let j=await r.json();if(!r.ok)throw Error(j.error||r.status);return j}
+function draw(){if(!image||!frameData)return;const c=$('rgb'),ctx=c.getContext('2d');ctx.drawImage(image,0,0);if($('showTruth').checked){ctx.strokeStyle='#dc3328';ctx.fillStyle='#dc3328';ctx.lineWidth=3;ctx.font='17px sans-serif';for(const o of frameData.objects){if(!o.box_xywh)continue;ctx.strokeRect(...o.box_xywh);ctx.fillText(o.category+' '+o.instance_token.slice(0,8),o.box_xywh[0],Math.max(18,o.box_xywh[1]))}}}
+function selected(){ $('selected').textContent='已选可接受官方实例：'+([...chosen].join(', ')||'无') }
+async function showFrame(){const current=++epoch,scene=$('scene').value,index=Number($('frame').value);image=null;frameData=null;
+try{const f=await api('/api/adjudication_frame?'+new URLSearchParams({scene,frame:index}));if(current!==epoch)return;frameData=f;const img=new Image;img.onload=()=>{if(current!==epoch)return;image=img;$('rgb').width=img.naturalWidth;$('rgb').height=img.naturalHeight;viewed.add(index);draw();$('viewed').textContent='本次已实际加载证据帧：'+[...viewed].sort((a,b)=>a-b).join(', ')};img.onerror=()=>{$('status').textContent='RGB读取失败，不能把这一帧计为已查看。'};img.src='/'+f.rgb;
+$('frameInfo').textContent=scene+' · 帧 '+index+' · 时间 '+f.camera_timestamp_s+' s';$('objects').replaceChildren();for(const o of f.objects){let l=document.createElement('label'),i=document.createElement('input');i.type='checkbox';i.checked=chosen.has(o.instance_token);i.disabled=!source;i.onchange=()=>{if(i.checked)chosen.add(o.instance_token);else chosen.delete(o.instance_token);selected()};l.append(i,' '+o.category+' · '+o.instance_token+' · 官方运动 '+o.official_motion);$('objects').append(l)}selected();}catch(e){$('status').textContent=e.message}}
+function sceneChanged(){viewed.clear();chosen.clear();$('frame').max=Math.max(...data.scenes[$('scene').value]);$('frame').value=0;showFrame()}
+function pick(){source=data.submissions.find(s=>s.submission_id===$('submission').value)||null;$('fields').disabled=!source;$('scene').disabled=!!source;viewed.clear();chosen.clear();$('showTruth').checked=false;$('status').textContent='';
+if(source){$('scene').value=source.scene;$('frame').max=Math.max(...data.scenes[source.scene]);$('frame').value=source.frame_idx;$('command').textContent=source.command;$('source').textContent=source.scene+' · 作者 '+source.author+' · 原始ID '+source.submission_id;}else{$('command').textContent='尚无真实原始提交。可预览画面；审核提交已禁用。';$('source').textContent='请先通过原8768采集页面提交本人自然表达。';$('frame').value=0;$('frame').max=Math.max(...data.scenes[$('scene').value]);}showFrame()}
+async function refresh(keep=null){data=await api('/api/adjudication_submissions');const stats=await api('/api/adjudication_status');$('counts').textContent='原始表达 '+stats.original_submissions+' 条；已审核 '+stats.reviewed_submissions+' 条；标签可用于检索审核 '+stats.label_eligible_for_retrieval+' 条；合格封存样本 '+stats.qualified_test_queries+' 条。';$('scene').replaceChildren(...Object.keys(data.scenes).map(s=>{let o=document.createElement('option');o.value=s;o.textContent=s;return o}));$('submission').replaceChildren(...data.submissions.map(s=>{let o=document.createElement('option');o.value=s.submission_id;o.textContent=s.scene+' · '+s.command;return o}));if(keep)$('submission').value=keep;pick()}
+$('scene').onchange=sceneChanged;$('frame').oninput=showFrame;$('showTruth').onchange=draw;$('clear').onclick=()=>{chosen.clear();selected();showFrame()};
+$('form').onsubmit=async e=>{e.preventDefault();if(!source||!image)return;const id=source.submission_id;const previous=data.reviews.filter(r=>r.source_submission_id===id).sort((a,b)=>a.server_received_utc.localeCompare(b.server_received_utc)).at(-1);
+let payload={campaign:'human_natural_adjudication_001',campaign_sha256:campaignSha,source_submission_id:id,source_sha256:source.source_sha256,reviewer:$('reviewer').value,evidence_note:$('evidence_note').value,decision:$('decision').value,task_state:$('task_state').value,ambiguity:$('ambiguity').value,observed_motion:$('observed_motion').value,observed_color:$('observed_color').value,accepted_instance_tokens:[...chosen],viewed_frames:[...viewed],required_fields:[...document.querySelectorAll('input[name=required]:checked')].map(i=>i.value),human_review_attested:$('attest').checked,supersedes_review_id:previous?previous.review_id:null};for(const name of semantic)payload[name]=$(name).value;
+$('submit').disabled=true;try{let r=await fetch('/api/adjudications',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}),result=await r.json();if(!r.ok)throw Error(result.error||r.status);await refresh(id);$('status').textContent='审核已追加：'+result.review_id+'；未解决字段：'+JSON.stringify(result.unresolved_fields)+'。封存测试仍未开启。';$('attest').checked=false;}catch(err){$('status').textContent='未保存：'+err.message}finally{$('submit').disabled=false}};
+fetch('manifest.sha256').then(r=>{if(!r.ok)throw Error('批次指纹读取失败');return r.text()}).then(async hash=>{campaignSha=hash.trim();await refresh()}).catch(e=>{$('status').textContent='初始化失败：'+e.message});
+</script></html>

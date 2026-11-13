@@ -1,0 +1,13 @@
+{
+  "source_sha256": "0ff8ee4b9a7a28677d73340698e91534c4d02274f552fe213ffa389ecda670f1",
+  "html_sha256": "93a954e85e4cc6b6df7980c261060d5659f3cb4a29cd3461eba23c4a8faebc2a",
+  "created_utc": "2026-11-12T20:43:51.526308+00:00",
+  "completed_main_trials": 450,
+  "manuscript_text_written": false,
+  "natural_review_and_collection_separate": true,
+  "read_only": true,
+  "live_status_from_saved_evidence": true,
+  "missing_results_not_success": true,
+  "human_submission_written_by_portal": false,
+  "goal_complete": false
+}

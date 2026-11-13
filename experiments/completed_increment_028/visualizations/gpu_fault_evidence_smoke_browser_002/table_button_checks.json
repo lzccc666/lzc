@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "mobile_table_buttons": [
+    "realtime_faults_gpu_smoke_001_baseline_config00_positive0_s17",
+    "realtime_faults_gpu_smoke_001_detection_dropout_30pct_config00_positive0_s17",
+    "realtime_faults_gpu_smoke_001_sensor_blackout_4s_config00_positive0_s17",
+    "realtime_faults_gpu_smoke_001_lidar_dropout_80pct_config00_positive0_s17",
+    "realtime_faults_gpu_smoke_001_depth_noise_02m_config00_positive0_s17",
+    "realtime_faults_gpu_smoke_001_pose_noise_025m_2deg_config00_positive0_s17"
+  ],
+  "horizontal_overflow": false,
+  "actual_model_calls": 0,
+  "goal_complete": false
+}

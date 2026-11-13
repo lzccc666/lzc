@@ -1,0 +1,115 @@
+{
+  "passed": true,
+  "synthetic_fixture_only": true,
+  "selected_submission_changed": true,
+  "saved_source_id_matches_second_submission": true,
+  "bound_frames": [
+    0,
+    1,
+    2
+  ],
+  "bound_instance": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "synthetic_POST_requests": 1,
+  "formal_POST_requests": 0,
+  "actual_human_labels_added": 0,
+  "formal_before": {
+    "campaign": "human_natural_adjudication_001",
+    "original_submissions": 0,
+    "synthetic_fixture": false,
+    "review_records": 0,
+    "reviewed_submissions": 0,
+    "label_eligible_for_retrieval": 0,
+    "by_scene": {},
+    "qualified_test_queries": 0,
+    "new_test_opened": false,
+    "qualified_status": "审核记录先保留；表达家族/划分、覆盖、导航独立几何和release仍须验收",
+    "human_identity_independently_verified": false,
+    "goal_complete": false
+  },
+  "formal_after": {
+    "campaign": "human_natural_adjudication_001",
+    "original_submissions": 0,
+    "synthetic_fixture": false,
+    "review_records": 0,
+    "reviewed_submissions": 0,
+    "label_eligible_for_retrieval": 0,
+    "by_scene": {},
+    "qualified_test_queries": 0,
+    "new_test_opened": false,
+    "qualified_status": "审核记录先保留；表达家族/划分、覆盖、导航独立几何和release仍须验收",
+    "human_identity_independently_verified": false,
+    "goal_complete": false
+  },
+  "requests": [
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:33333/"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:33333/annotation/human_natural_adjudication_001/index.html"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:33333/annotation/human_natural_adjudication_001/manifest.sha256"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:33333/api/adjudication_submissions"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:33333/api/adjudication_status"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:33333/api/adjudication_frame?scene=fixture-scene&frame=0"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:33333/images/0.png"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:33333/api/adjudication_frame?scene=fixture-scene&frame=0"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:33333/api/adjudication_frame?scene=fixture-scene&frame=0"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:33333/api/adjudication_frame?scene=fixture-scene&frame=1"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:33333/images/1.png"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:33333/api/adjudication_frame?scene=fixture-scene&frame=2"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:33333/images/2.png"
+    },
+    {
+      "method": "POST",
+      "url": "http://127.0.0.1:33333/api/adjudications"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:33333/api/adjudication_submissions"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:33333/api/adjudication_status"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:33333/api/adjudication_frame?scene=fixture-scene&frame=0"
+    }
+  ],
+  "new_test_opened": false,
+  "goal_complete": false
+}

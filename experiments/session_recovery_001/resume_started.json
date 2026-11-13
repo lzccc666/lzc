@@ -1,0 +1,20 @@
+{
+  "time_utc": "2026-11-13T07:52:57.009237+00:00",
+  "pid": 453560,
+  "start_tick": "1384272982",
+  "command": [
+    "/root/miniconda3/envs/conceptgraph/bin/python",
+    "-m",
+    "conceptgraph.completion.realtime_matrix",
+    "--run-id",
+    "realtime_semantic_minus_full_001",
+    "--preset",
+    "semantic-minus",
+    "--resume"
+  ],
+  "verified_original_sources": 67,
+  "verified_completed_records": 396,
+  "original_processes_missing": true,
+  "prior_partial_trial_preserved": true,
+  "goal_complete": false
+}

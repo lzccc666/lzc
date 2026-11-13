@@ -1,0 +1,1198 @@
+{
+  "source_sha256": {
+    "outputs/project_v2/thesis_completion_v1/source_bundle/reference_guided_vehicle_run_002.py": "73758bd1322932cef2a452a1d9e7f8efb2ec82a643474db1e7b3b3b486dbd7ac",
+    "conceptgraph/navigation/reference_guided_vehicle.py": "fe65de18c10b7dd4ea2d07df0f3edcfc65772b6fbd4cca10b0f91139276cd9f3",
+    "conceptgraph/completion/canonical_vehicle_corridor.py": "1a3f9112ef8c89b7b20c7305fd571ef9afcb5d6d0ce6c166056fb8e6c692e2fd",
+    "conceptgraph/completion/topology_vehicle.py": "f0200cebffa5ed8aa4f02686a4e9f89f3494ff5bed99dc414db9c2e7475e0299",
+    "conceptgraph/completion/execution_direction_audit.py": "52ececb3797c2ba7f44544fb7e6f23fe743c1c7818fdb46542052c4ce2b02503",
+    "conceptgraph/completion/independent_continuous_body.py": "6225ef52af83bb2f2cfb45bc4a204977f9cc5f7d3170aadd35af58715b419fbf",
+    "conceptgraph/completion/kinematic_benchmark.py": "3f5805c14288992719aa0a4bb967e6211c195cbea8da0e7cbbccf60c4a031045",
+    "conceptgraph/navigation/vehicle_geometry.py": "ae93a8ae8e9af6d874eafad1d57e5b2e65f54f45b0c90ccbdcc32d79743a9378",
+    "conceptgraph/navigation/vehicle_planner.py": "1f17b4c03b9989b3ffd0133469619fb66eb522d9b89ff8071ebb547f49f29b95"
+  },
+  "tasks_sha256": "fab2f114e9cdff7df3f9bdc0b3ae926795eb15172e3dd4700182d62e530ab591",
+  "tasks_manifest_sha256": "37dab63777f74315b684f6bdcda16cbc8141c4fee7ff422d2a2a82f3296bbb08",
+  "protocol_sha256": "9b90ff057560044f6ac939ad0a808019a77aaefe602abbf46b8dd27e64d5a83b",
+  "guided_v1_protocol_sha256": "42d941362cb47ebaecefceb2e1213dd1a00bd431c1db9c3aee4e3c0e3ead5b40",
+  "canonicalization_exact_duplicate_XY_only": true,
+  "v1_results_retained": true,
+  "original_task_protocol_sha256": "4e6c6e6cf6978dfb9d8e1f8f17bab40daa2a21037d45440faa07650e4e8927ff",
+  "method_order": "(task_index*3+seed_index)奇偶交替；不按结果",
+  "planner_methods": [
+    "hybrid_astar",
+    "reference_guided"
+  ],
+  "posthoc_development_not_new_test": true,
+  "smoke_addendum_sha256": "8450918453b721c1197440606bef426a3439f5be775115aee6f4a337b9d6e561",
+  "control_smoke_sha256": "adbf12736fd0a10df3825832cbe1055b146af4288f057036f9f7eae57f388363",
+  "control_smoke_protocol_sha256": "50d7518eec4201ffe6609fe10c16d3c8504a39d6218d68edc7b603e71f8e8fbf",
+  "mode": "full",
+  "expected_trials": 228,
+  "vehicle": {
+    "wheelbase_m": 2.7,
+    "front_from_rear_axle_m": 3.7,
+    "rear_overhang_m": 0.9,
+    "width_m": 1.85,
+    "max_speed_mps": 2.0,
+    "max_acceleration_mps2": 1.0,
+    "max_braking_mps2": 2.0,
+    "max_steering_rad": 0.5585053606381855,
+    "max_steering_rate_radps": 0.4363323129985824,
+    "dt_s": 0.1
+  },
+  "plans": [
+    {
+      "task_id": "scene-0012-HD-connection",
+      "seed": 17,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0012-HD-connection",
+      "seed": 17,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0012-HD-connection",
+      "seed": 29,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0012-HD-connection",
+      "seed": 29,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0012-HD-connection",
+      "seed": 43,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0012-HD-connection",
+      "seed": 43,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0013-HD-connection",
+      "seed": 17,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0013-HD-connection",
+      "seed": 17,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0013-HD-connection",
+      "seed": 29,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0013-HD-connection",
+      "seed": 29,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0013-HD-connection",
+      "seed": 43,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0013-HD-connection",
+      "seed": 43,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0014-HD-connection",
+      "seed": 17,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0014-HD-connection",
+      "seed": 17,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0014-HD-connection",
+      "seed": 29,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0014-HD-connection",
+      "seed": 29,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0014-HD-connection",
+      "seed": 43,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0014-HD-connection",
+      "seed": 43,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0015-HD-connection",
+      "seed": 17,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0015-HD-connection",
+      "seed": 17,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0015-HD-connection",
+      "seed": 29,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0015-HD-connection",
+      "seed": 29,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0015-HD-connection",
+      "seed": 43,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0015-HD-connection",
+      "seed": 43,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0016-HD-connection",
+      "seed": 17,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0016-HD-connection",
+      "seed": 17,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0016-HD-connection",
+      "seed": 29,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0016-HD-connection",
+      "seed": 29,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0016-HD-connection",
+      "seed": 43,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0016-HD-connection",
+      "seed": 43,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0019-HD-connection",
+      "seed": 17,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0019-HD-connection",
+      "seed": 17,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0019-HD-connection",
+      "seed": 29,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0019-HD-connection",
+      "seed": 29,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0019-HD-connection",
+      "seed": 43,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0019-HD-connection",
+      "seed": 43,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0020-HD-connection",
+      "seed": 17,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0020-HD-connection",
+      "seed": 17,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0020-HD-connection",
+      "seed": 29,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0020-HD-connection",
+      "seed": 29,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0020-HD-connection",
+      "seed": 43,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0020-HD-connection",
+      "seed": 43,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0021-HD-connection",
+      "seed": 17,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0021-HD-connection",
+      "seed": 17,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0021-HD-connection",
+      "seed": 29,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0021-HD-connection",
+      "seed": 29,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0021-HD-connection",
+      "seed": 43,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0021-HD-connection",
+      "seed": 43,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0025-HD-connection",
+      "seed": 17,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0025-HD-connection",
+      "seed": 17,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0025-HD-connection",
+      "seed": 29,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0025-HD-connection",
+      "seed": 29,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0025-HD-connection",
+      "seed": 43,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0025-HD-connection",
+      "seed": 43,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0026-HD-connection",
+      "seed": 17,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0026-HD-connection",
+      "seed": 17,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0026-HD-connection",
+      "seed": 29,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0026-HD-connection",
+      "seed": 29,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0026-HD-connection",
+      "seed": 43,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0026-HD-connection",
+      "seed": 43,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0027-HD-connection",
+      "seed": 17,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0027-HD-connection",
+      "seed": 17,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0027-HD-connection",
+      "seed": 29,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0027-HD-connection",
+      "seed": 29,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0027-HD-connection",
+      "seed": 43,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0027-HD-connection",
+      "seed": 43,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0030-HD-connection",
+      "seed": 17,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0030-HD-connection",
+      "seed": 17,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0030-HD-connection",
+      "seed": 29,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0030-HD-connection",
+      "seed": 29,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0030-HD-connection",
+      "seed": 43,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0030-HD-connection",
+      "seed": 43,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0032-HD-connection",
+      "seed": 17,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0032-HD-connection",
+      "seed": 17,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0032-HD-connection",
+      "seed": 29,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0032-HD-connection",
+      "seed": 29,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0032-HD-connection",
+      "seed": 43,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0032-HD-connection",
+      "seed": 43,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0035-HD-connection",
+      "seed": 17,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0035-HD-connection",
+      "seed": 17,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0035-HD-connection",
+      "seed": 29,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0035-HD-connection",
+      "seed": 29,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0035-HD-connection",
+      "seed": 43,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0035-HD-connection",
+      "seed": 43,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0038-HD-connection",
+      "seed": 17,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0038-HD-connection",
+      "seed": 17,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0038-HD-connection",
+      "seed": 29,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0038-HD-connection",
+      "seed": 29,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0038-HD-connection",
+      "seed": 43,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0038-HD-connection",
+      "seed": 43,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0039-HD-connection",
+      "seed": 17,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0039-HD-connection",
+      "seed": 17,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0039-HD-connection",
+      "seed": 29,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0039-HD-connection",
+      "seed": 29,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0039-HD-connection",
+      "seed": 43,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0039-HD-connection",
+      "seed": 43,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0042-HD-connection",
+      "seed": 17,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0042-HD-connection",
+      "seed": 17,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0042-HD-connection",
+      "seed": 29,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0042-HD-connection",
+      "seed": 29,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0042-HD-connection",
+      "seed": 43,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0042-HD-connection",
+      "seed": 43,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0043-HD-connection",
+      "seed": 17,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0043-HD-connection",
+      "seed": 17,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0043-HD-connection",
+      "seed": 29,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0043-HD-connection",
+      "seed": 29,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0043-HD-connection",
+      "seed": 43,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0043-HD-connection",
+      "seed": 43,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0044-HD-connection",
+      "seed": 17,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0044-HD-connection",
+      "seed": 17,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0044-HD-connection",
+      "seed": 29,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0044-HD-connection",
+      "seed": 29,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0044-HD-connection",
+      "seed": 43,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0044-HD-connection",
+      "seed": 43,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0047-HD-connection",
+      "seed": 17,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0047-HD-connection",
+      "seed": 17,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0047-HD-connection",
+      "seed": 29,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0047-HD-connection",
+      "seed": 29,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0047-HD-connection",
+      "seed": 43,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0047-HD-connection",
+      "seed": 43,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0048-HD-connection",
+      "seed": 17,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0048-HD-connection",
+      "seed": 17,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0048-HD-connection",
+      "seed": 29,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0048-HD-connection",
+      "seed": 29,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0048-HD-connection",
+      "seed": 43,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0048-HD-connection",
+      "seed": 43,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0049-HD-connection",
+      "seed": 17,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0049-HD-connection",
+      "seed": 17,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0049-HD-connection",
+      "seed": 29,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0049-HD-connection",
+      "seed": 29,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0049-HD-connection",
+      "seed": 43,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0049-HD-connection",
+      "seed": 43,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0053-HD-connection",
+      "seed": 17,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0053-HD-connection",
+      "seed": 17,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0053-HD-connection",
+      "seed": 29,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0053-HD-connection",
+      "seed": 29,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0053-HD-connection",
+      "seed": 43,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0053-HD-connection",
+      "seed": 43,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0054-HD-connection",
+      "seed": 17,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0054-HD-connection",
+      "seed": 17,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0054-HD-connection",
+      "seed": 29,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0054-HD-connection",
+      "seed": 29,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0054-HD-connection",
+      "seed": 43,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0054-HD-connection",
+      "seed": 43,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0059-HD-connection",
+      "seed": 17,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0059-HD-connection",
+      "seed": 17,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0059-HD-connection",
+      "seed": 29,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0059-HD-connection",
+      "seed": 29,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0059-HD-connection",
+      "seed": 43,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0059-HD-connection",
+      "seed": 43,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0060-HD-connection",
+      "seed": 17,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0060-HD-connection",
+      "seed": 17,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0060-HD-connection",
+      "seed": 29,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0060-HD-connection",
+      "seed": 29,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0060-HD-connection",
+      "seed": 43,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0060-HD-connection",
+      "seed": 43,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0075-HD-connection",
+      "seed": 17,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0075-HD-connection",
+      "seed": 17,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0075-HD-connection",
+      "seed": 29,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0075-HD-connection",
+      "seed": 29,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0075-HD-connection",
+      "seed": 43,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0075-HD-connection",
+      "seed": 43,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0092-HD-connection",
+      "seed": 17,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0092-HD-connection",
+      "seed": 17,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0092-HD-connection",
+      "seed": 29,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0092-HD-connection",
+      "seed": 29,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0092-HD-connection",
+      "seed": 43,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0092-HD-connection",
+      "seed": 43,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0093-HD-connection",
+      "seed": 17,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0093-HD-connection",
+      "seed": 17,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0093-HD-connection",
+      "seed": 29,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0093-HD-connection",
+      "seed": 29,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0093-HD-connection",
+      "seed": 43,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0093-HD-connection",
+      "seed": 43,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0095-HD-connection",
+      "seed": 17,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0095-HD-connection",
+      "seed": 17,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0095-HD-connection",
+      "seed": 29,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0095-HD-connection",
+      "seed": 29,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0095-HD-connection",
+      "seed": 43,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0095-HD-connection",
+      "seed": 43,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0096-HD-connection",
+      "seed": 17,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0096-HD-connection",
+      "seed": 17,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0096-HD-connection",
+      "seed": 29,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0096-HD-connection",
+      "seed": 29,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0096-HD-connection",
+      "seed": 43,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0096-HD-connection",
+      "seed": 43,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0097-HD-connection",
+      "seed": 17,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0097-HD-connection",
+      "seed": 17,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0097-HD-connection",
+      "seed": 29,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0097-HD-connection",
+      "seed": 29,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0097-HD-connection",
+      "seed": 43,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0097-HD-connection",
+      "seed": 43,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0098-HD-connection",
+      "seed": 17,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0098-HD-connection",
+      "seed": 17,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0098-HD-connection",
+      "seed": 29,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0098-HD-connection",
+      "seed": 29,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0098-HD-connection",
+      "seed": 43,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0098-HD-connection",
+      "seed": 43,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0099-HD-connection",
+      "seed": 17,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0099-HD-connection",
+      "seed": 17,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0099-HD-connection",
+      "seed": 29,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0099-HD-connection",
+      "seed": 29,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0099-HD-connection",
+      "seed": 43,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0099-HD-connection",
+      "seed": 43,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0102-HD-connection",
+      "seed": 17,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0102-HD-connection",
+      "seed": 17,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0102-HD-connection",
+      "seed": 29,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0102-HD-connection",
+      "seed": 29,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0102-HD-connection",
+      "seed": 43,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0102-HD-connection",
+      "seed": 43,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0129-HD-connection",
+      "seed": 17,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0129-HD-connection",
+      "seed": 17,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0129-HD-connection",
+      "seed": 29,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0129-HD-connection",
+      "seed": 29,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0129-HD-connection",
+      "seed": 43,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0129-HD-connection",
+      "seed": 43,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0135-HD-connection",
+      "seed": 17,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0135-HD-connection",
+      "seed": 17,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0135-HD-connection",
+      "seed": 29,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0135-HD-connection",
+      "seed": 29,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0135-HD-connection",
+      "seed": 43,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0135-HD-connection",
+      "seed": 43,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0174-HD-connection",
+      "seed": 17,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0174-HD-connection",
+      "seed": 17,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0174-HD-connection",
+      "seed": 29,
+      "method": "hybrid_astar"
+    },
+    {
+      "task_id": "scene-0174-HD-connection",
+      "seed": 29,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0174-HD-connection",
+      "seed": 43,
+      "method": "reference_guided"
+    },
+    {
+      "task_id": "scene-0174-HD-connection",
+      "seed": 43,
+      "method": "hybrid_astar"
+    }
+  ],
+  "wall_budget_s": 3600,
+  "storage_budget_bytes": 1073741824,
+  "minimum_free_bytes": 6442450944,
+  "planner_wall_budget_s": 3,
+  "planner_max_expansions": 2000,
+  "maximum_control_steps": 900,
+  "CPU_shared": true,
+  "CUDA_visible": "",
+  "gt_assisted_map_route": true,
+  "actual_perception_run": false,
+  "new_test_opened": false,
+  "actual_semantic_arrival_credit": 0,
+  "goal_complete": false
+}

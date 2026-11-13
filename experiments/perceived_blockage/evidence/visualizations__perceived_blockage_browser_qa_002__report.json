@@ -1,0 +1,415 @@
+{
+  "passed": true,
+  "cases": 4,
+  "viewports": 2,
+  "checks": [
+    {
+      "viewport": "desktop",
+      "run": "perceived_blockage_cpu_001_rule_blockage",
+      "observation": {
+        "run": "perceived_blockage_cpu_001_rule_blockage",
+        "method": "白目标规则（未暴露）",
+        "mode": "observation",
+        "frameIndex": 17,
+        "tickIndex": 0,
+        "perceptionFrame": 17,
+        "perceptionCompletedWall": 249.14684419706464,
+        "displayedState": {
+          "x": 15.437902205814357,
+          "y": -3.3401982024124566,
+          "yaw_rad": -0.21415165064325103,
+          "speed_mps": 0,
+          "steering_rad": -5.995204332975851e-15,
+          "time_s": 228.3999999999913
+        },
+        "prefix": 2284,
+        "controlWall": null,
+        "ready": true,
+        "GT": false
+      },
+      "control": {
+        "snapshot": {
+          "run": "perceived_blockage_cpu_001_rule_blockage",
+          "method": "白目标规则（未暴露）",
+          "mode": "control",
+          "frameIndex": 17,
+          "tickIndex": 2483,
+          "perceptionFrame": 17,
+          "perceptionCompletedWall": 249.14684419706464,
+          "displayedState": {
+            "x": 15.44767377617211,
+            "y": -3.3423233877557754,
+            "yaw_rad": -0.21415165064325103,
+            "speed_mps": 0,
+            "steering_rad": -5.995204332975851e-15,
+            "time_s": 248.39999999999017
+          },
+          "prefix": 2484,
+          "controlWall": 249.20048725418746,
+          "ready": true,
+          "GT": false
+        },
+        "overflow": false,
+        "error": ""
+      }
+    },
+    {
+      "viewport": "desktop",
+      "run": "perceived_blockage_cpu_001_delayed_actual_rank",
+      "observation": {
+        "run": "perceived_blockage_cpu_001_delayed_actual_rank",
+        "method": "白目标排序（未提交）",
+        "mode": "observation",
+        "frameIndex": 15,
+        "tickIndex": 0,
+        "perceptionFrame": 15,
+        "perceptionCompletedWall": 240.18609112873673,
+        "displayedState": {
+          "x": 15.13067339102931,
+          "y": -3.273380060568292,
+          "yaw_rad": -0.21415165064364095,
+          "speed_mps": 0,
+          "steering_rad": -2.3980817331903363e-15,
+          "time_s": 219.7999999999918
+        },
+        "prefix": 2198,
+        "controlWall": null,
+        "ready": true,
+        "GT": false
+      },
+      "control": {
+        "snapshot": {
+          "run": "perceived_blockage_cpu_001_delayed_actual_rank",
+          "method": "白目标排序（未提交）",
+          "mode": "control",
+          "frameIndex": 15,
+          "tickIndex": 2393,
+          "perceptionFrame": 15,
+          "perceptionCompletedWall": 240.18609112873673,
+          "displayedState": {
+            "x": 15.316333227826625,
+            "y": -3.3137585820914275,
+            "yaw_rad": -0.21415165064364095,
+            "speed_mps": 0,
+            "steering_rad": -1.1990408665951693e-15,
+            "time_s": 239.39999999999068
+          },
+          "prefix": 2394,
+          "controlWall": 240.19861552864313,
+          "ready": true,
+          "GT": false
+        },
+        "overflow": false,
+        "error": ""
+      }
+    },
+    {
+      "viewport": "desktop",
+      "run": "perceived_blockage_cpu_002_rule_blockage",
+      "observation": {
+        "run": "perceived_blockage_cpu_002_rule_blockage",
+        "method": "红目标规则",
+        "mode": "observation",
+        "frameIndex": 9,
+        "tickIndex": 0,
+        "perceptionFrame": 9,
+        "perceptionCompletedWall": 114.33265021070838,
+        "displayedState": {
+          "x": 13.599244791042475,
+          "y": -2.9403149035979896,
+          "yaw_rad": -0.21415165064341402,
+          "speed_mps": 0.1,
+          "steering_rad": 3.4772185131259895e-14,
+          "time_s": 106.09999999999825
+        },
+        "prefix": 1061,
+        "controlWall": null,
+        "ready": true,
+        "GT": false
+      },
+      "control": {
+        "snapshot": {
+          "run": "perceived_blockage_cpu_002_rule_blockage",
+          "method": "红目标规则",
+          "mode": "control",
+          "frameIndex": 9,
+          "tickIndex": 2451,
+          "perceptionFrame": 26,
+          "perceptionCompletedWall": 245.93983600474894,
+          "displayedState": {
+            "x": 13.604130576221351,
+            "y": -2.94137749626965,
+            "yaw_rad": -0.21415165064341402,
+            "speed_mps": 0,
+            "steering_rad": 3.4772185131259895e-14,
+            "time_s": 245.19999999999035
+          },
+          "prefix": 2452,
+          "controlWall": 245.9489715732634,
+          "ready": true,
+          "GT": false
+        },
+        "overflow": false,
+        "error": ""
+      }
+    },
+    {
+      "viewport": "desktop",
+      "run": "perceived_blockage_cpu_002_delayed_actual_rank",
+      "observation": {
+        "run": "perceived_blockage_cpu_002_delayed_actual_rank",
+        "method": "红目标迟到排序",
+        "mode": "observation",
+        "frameIndex": 9,
+        "tickIndex": 0,
+        "perceptionFrame": 9,
+        "perceptionCompletedWall": 125.98374436795712,
+        "displayedState": {
+          "x": 8.1771905025803,
+          "y": -1.761090901451336,
+          "yaw_rad": -0.21415165064333808,
+          "speed_mps": 0.2,
+          "steering_rad": -1.630695578569431e-13,
+          "time_s": 113.9999999999978
+        },
+        "prefix": 1140,
+        "controlWall": null,
+        "ready": true,
+        "GT": false
+      },
+      "control": {
+        "snapshot": {
+          "run": "perceived_blockage_cpu_002_delayed_actual_rank",
+          "method": "红目标迟到排序",
+          "mode": "control",
+          "frameIndex": 9,
+          "tickIndex": 2478,
+          "perceptionFrame": 20,
+          "perceptionCompletedWall": 248.57130348868668,
+          "displayedState": {
+            "x": 8.186962072938055,
+            "y": -1.763216086794656,
+            "yaw_rad": -0.21415165064333852,
+            "speed_mps": 0,
+            "steering_rad": -1.630695578569431e-13,
+            "time_s": 247.8999999999902
+          },
+          "prefix": 2479,
+          "controlWall": 248.65912627615035,
+          "ready": true,
+          "GT": false
+        },
+        "overflow": false,
+        "error": ""
+      }
+    },
+    {
+      "viewport": "mobile",
+      "run": "perceived_blockage_cpu_001_rule_blockage",
+      "observation": {
+        "run": "perceived_blockage_cpu_001_rule_blockage",
+        "method": "白目标规则（未暴露）",
+        "mode": "observation",
+        "frameIndex": 17,
+        "tickIndex": 0,
+        "perceptionFrame": 17,
+        "perceptionCompletedWall": 249.14684419706464,
+        "displayedState": {
+          "x": 15.437902205814357,
+          "y": -3.3401982024124566,
+          "yaw_rad": -0.21415165064325103,
+          "speed_mps": 0,
+          "steering_rad": -5.995204332975851e-15,
+          "time_s": 228.3999999999913
+        },
+        "prefix": 2284,
+        "controlWall": null,
+        "ready": true,
+        "GT": false
+      },
+      "control": {
+        "snapshot": {
+          "run": "perceived_blockage_cpu_001_rule_blockage",
+          "method": "白目标规则（未暴露）",
+          "mode": "control",
+          "frameIndex": 17,
+          "tickIndex": 2483,
+          "perceptionFrame": 17,
+          "perceptionCompletedWall": 249.14684419706464,
+          "displayedState": {
+            "x": 15.44767377617211,
+            "y": -3.3423233877557754,
+            "yaw_rad": -0.21415165064325103,
+            "speed_mps": 0,
+            "steering_rad": -5.995204332975851e-15,
+            "time_s": 248.39999999999017
+          },
+          "prefix": 2484,
+          "controlWall": 249.20048725418746,
+          "ready": true,
+          "GT": false
+        },
+        "overflow": false,
+        "error": ""
+      }
+    },
+    {
+      "viewport": "mobile",
+      "run": "perceived_blockage_cpu_001_delayed_actual_rank",
+      "observation": {
+        "run": "perceived_blockage_cpu_001_delayed_actual_rank",
+        "method": "白目标排序（未提交）",
+        "mode": "observation",
+        "frameIndex": 15,
+        "tickIndex": 0,
+        "perceptionFrame": 15,
+        "perceptionCompletedWall": 240.18609112873673,
+        "displayedState": {
+          "x": 15.13067339102931,
+          "y": -3.273380060568292,
+          "yaw_rad": -0.21415165064364095,
+          "speed_mps": 0,
+          "steering_rad": -2.3980817331903363e-15,
+          "time_s": 219.7999999999918
+        },
+        "prefix": 2198,
+        "controlWall": null,
+        "ready": true,
+        "GT": false
+      },
+      "control": {
+        "snapshot": {
+          "run": "perceived_blockage_cpu_001_delayed_actual_rank",
+          "method": "白目标排序（未提交）",
+          "mode": "control",
+          "frameIndex": 15,
+          "tickIndex": 2393,
+          "perceptionFrame": 15,
+          "perceptionCompletedWall": 240.18609112873673,
+          "displayedState": {
+            "x": 15.316333227826625,
+            "y": -3.3137585820914275,
+            "yaw_rad": -0.21415165064364095,
+            "speed_mps": 0,
+            "steering_rad": -1.1990408665951693e-15,
+            "time_s": 239.39999999999068
+          },
+          "prefix": 2394,
+          "controlWall": 240.19861552864313,
+          "ready": true,
+          "GT": false
+        },
+        "overflow": false,
+        "error": ""
+      }
+    },
+    {
+      "viewport": "mobile",
+      "run": "perceived_blockage_cpu_002_rule_blockage",
+      "observation": {
+        "run": "perceived_blockage_cpu_002_rule_blockage",
+        "method": "红目标规则",
+        "mode": "observation",
+        "frameIndex": 9,
+        "tickIndex": 0,
+        "perceptionFrame": 9,
+        "perceptionCompletedWall": 114.33265021070838,
+        "displayedState": {
+          "x": 13.599244791042475,
+          "y": -2.9403149035979896,
+          "yaw_rad": -0.21415165064341402,
+          "speed_mps": 0.1,
+          "steering_rad": 3.4772185131259895e-14,
+          "time_s": 106.09999999999825
+        },
+        "prefix": 1061,
+        "controlWall": null,
+        "ready": true,
+        "GT": false
+      },
+      "control": {
+        "snapshot": {
+          "run": "perceived_blockage_cpu_002_rule_blockage",
+          "method": "红目标规则",
+          "mode": "control",
+          "frameIndex": 9,
+          "tickIndex": 2451,
+          "perceptionFrame": 26,
+          "perceptionCompletedWall": 245.93983600474894,
+          "displayedState": {
+            "x": 13.604130576221351,
+            "y": -2.94137749626965,
+            "yaw_rad": -0.21415165064341402,
+            "speed_mps": 0,
+            "steering_rad": 3.4772185131259895e-14,
+            "time_s": 245.19999999999035
+          },
+          "prefix": 2452,
+          "controlWall": 245.9489715732634,
+          "ready": true,
+          "GT": false
+        },
+        "overflow": false,
+        "error": ""
+      }
+    },
+    {
+      "viewport": "mobile",
+      "run": "perceived_blockage_cpu_002_delayed_actual_rank",
+      "observation": {
+        "run": "perceived_blockage_cpu_002_delayed_actual_rank",
+        "method": "红目标迟到排序",
+        "mode": "observation",
+        "frameIndex": 9,
+        "tickIndex": 0,
+        "perceptionFrame": 9,
+        "perceptionCompletedWall": 125.98374436795712,
+        "displayedState": {
+          "x": 8.1771905025803,
+          "y": -1.761090901451336,
+          "yaw_rad": -0.21415165064333808,
+          "speed_mps": 0.2,
+          "steering_rad": -1.630695578569431e-13,
+          "time_s": 113.9999999999978
+        },
+        "prefix": 1140,
+        "controlWall": null,
+        "ready": true,
+        "GT": false
+      },
+      "control": {
+        "snapshot": {
+          "run": "perceived_blockage_cpu_002_delayed_actual_rank",
+          "method": "红目标迟到排序",
+          "mode": "control",
+          "frameIndex": 9,
+          "tickIndex": 2478,
+          "perceptionFrame": 20,
+          "perceptionCompletedWall": 248.57130348868668,
+          "displayedState": {
+            "x": 8.186962072938055,
+            "y": -1.763216086794656,
+            "yaw_rad": -0.21415165064333852,
+            "speed_mps": 0,
+            "steering_rad": -1.630695578569431e-13,
+            "time_s": 247.8999999999902
+          },
+          "prefix": 2479,
+          "controlWall": 248.65912627615035,
+          "ready": true,
+          "GT": false
+        },
+        "overflow": false,
+        "error": ""
+      }
+    }
+  ],
+  "requests": 114,
+  "all_requests_GET": true,
+  "GT_hidden_by_default": true,
+  "actual_model_calls": 0,
+  "new_control_commands": 0,
+  "human_labels_created": 0,
+  "new_arrival_credit": 0,
+  "goal_complete": false
+}

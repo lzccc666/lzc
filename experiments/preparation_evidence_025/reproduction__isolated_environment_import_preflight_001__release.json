@@ -1,0 +1,14 @@
+{
+  "command": [
+    "/root/miniconda3/envs/conceptgraph/bin/python",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/isolated_environment_import_preflight_001.py",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/reproduction/isolated_environment_import_preflight_001",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/reproduction/portable_executed_001/checkout"
+  ],
+  "source_sha256": "1db86cec6f860c634f334ce5ff7e0eddf3db2786a472c54a896fbc28d6e1d517",
+  "maximum_wall_s": 90,
+  "maximum_new_storage_bytes": 20000000,
+  "actual_model_calls_expected": 0,
+  "independent_environment_executed": false,
+  "goal_complete": false
+}

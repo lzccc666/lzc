@@ -1,0 +1,14 @@
+{
+  "affected": [
+    "HDmap_reference_guided_preview_001",
+    "HDmap_reference_guided_preview_002"
+  ],
+  "bug": "回放读取old original_candidate_connection_intervals，实际新字段connection_candidate_intervals未读取，候选区间错误显示0；完整连接和原始实验数据未错",
+  "prior_browser_QA_did_not_assert_candidate_counter": true,
+  "old_pages_and_QA_preserved": true,
+  "current_v1": "HDmap_reference_guided_preview_v1_fixed_001",
+  "current_v2": "HDmap_reference_guided_preview_003",
+  "new_QA_checks_original_candidate_and_distinct_connections": true,
+  "semantic_arrival_credit": 0,
+  "goal_complete": false
+}

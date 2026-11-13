@@ -1,0 +1,16 @@
+{
+  "updated_utc": "2026-11-13T00:54:55.107836+00:00",
+  "previous_failed_export": "experiment_tables/development_evidence_001",
+  "failed_export_reason": "Playwright默认浏览器路径不存在；改用现有只读浏览器，无新安装",
+  "previous_table_package": "experiment_tables/development_evidence_002",
+  "previous_incorrect_note": "KITTI Object training均匀64帧、33个原始drive；CPU真实前端。同类别最大基数一对一；2D IoU>=0.5；3D相机0中心距离<=3m；不是官方KITTI AP。条件中心误差使用共同251对；检测匹配集合误差不能混为同一指标。预训练重叠未知，导航到达信用0。保留Truck条件误差恶化；无有效分母用未知，不填0。bicycle行是Cyclist代理，20个GT、0匹配，不纳入T08的319个主类别GT；代理不等同Cyclist完整检测能力。",
+  "corrected_note": "KITTI Object training均匀64帧、33个原始drive；CPU真实前端。同类别最大基数一对一；2D IoU>=0.5；3D相机0中心距离<=3m；不是官方KITTI AP。条件中心误差使用共同251对；检测匹配集合误差不能混为同一指标。预训练重叠未知，导航到达信用0。保留Truck条件误差恶化；无有效分母用未知，不填0。bicycle行是Cyclist代理，20个GT，普通/稳健3D匹配分别6/7；2D共同条件对均为0，不纳入T08的319个主类别GT；代理不等同Cyclist完整检测能力。",
+  "correction": "Cyclist代理3D关联为6/20与7/20；2D共同条件定位对为0，不能混写为3D匹配0",
+  "raw_numbers_changed": false,
+  "model_rerun": false,
+  "previous_versions_preserved": true,
+  "validation_scope": "旧审核核对数据与格式，未捕获该表注错误；人工版面复查发现后修正并新增断言",
+  "old_table_sha256": "cefeb735a7ab54ecda17c6a722173a67d8bded3c3e4f774d18620c6c56086038",
+  "new_table_sha256": "69aa9f9b3d12a75bda4cab8f09d38fe6965730cf9dd6d6c6a0e2438b64d73cb8",
+  "goal_complete": false
+}

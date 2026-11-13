@@ -1,0 +1,57 @@
+{
+  "complete": true,
+  "jobs": [
+    {
+      "job": "01_navigation",
+      "command": [
+        "/root/miniconda3/envs/conceptgraph/bin/python",
+        "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/prepare_isolated_environment_navigation_003.py",
+        "--environment",
+        "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/reproduction/isolated_cpu_environment_004",
+        "--destination",
+        "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/reproduction/isolated_cpu_executed_002",
+        "--execute"
+      ],
+      "cwd": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1",
+      "returncode": 0
+    },
+    {
+      "job": "02_independent_navigation_audit",
+      "command": [
+        "/root/miniconda3/envs/conceptgraph/bin/python",
+        "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/isolated_environment_navigation_audit_003.py"
+      ],
+      "cwd": "/root/autodl-tmp/lizichong",
+      "returncode": 0
+    },
+    {
+      "job": "03_main_table_recompute",
+      "command": [
+        "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/reproduction/isolated_cpu_environment_004/environment/bin/python",
+        "-m",
+        "conceptgraph.completion.realtime_matrix_statistics",
+        "--input-run",
+        "realtime_three_model_full_001",
+        "--run-id",
+        "isolated_environment_main450_recompute_001"
+      ],
+      "cwd": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/reproduction/isolated_cpu_executed_002/checkout",
+      "returncode": 0
+    }
+  ],
+  "new_environment_installed": true,
+  "successful_small_task_reproduction": true,
+  "independent_navigation_audit_sha256": "306835f58831df3b7c99547014dcf56f27746a92a26fe136cc5cc8152b003f72",
+  "main_450_recomputed_in_new_environment": true,
+  "main_statistics_byte_identical": true,
+  "environment_installed_manifest_sha256": "403b916315304b7a870cf376660b816a437562e9531a314241be2f038169aa0b",
+  "actual_new_Python_environment": true,
+  "actual_new_operating_system": false,
+  "manuscript_text_written": false,
+  "new_test_opened": false,
+  "new_independent_scene_credit": 0,
+  "frozen_main_table_credit": false,
+  "execution_elapsed_s": 557.5106205493212,
+  "elapsed_s_including_wait": 557.603562688455,
+  "goal_complete": false
+}

@@ -1,0 +1,129 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "viewport": "desktop",
+      "state": {
+        "overflow": false,
+        "status": "",
+        "truthVisible": false,
+        "submitDisabled": true,
+        "scene": "scene-0252",
+        "evidence": "本次已实际加载证据帧：0",
+        "originalText": "尚无真实原始提交。可预览画面；审核提交已禁用。"
+      },
+      "page_errors": [],
+      "responses": 11
+    },
+    {
+      "viewport": "mobile",
+      "state": {
+        "overflow": false,
+        "status": "",
+        "truthVisible": false,
+        "submitDisabled": true,
+        "scene": "scene-0252",
+        "evidence": "本次已实际加载证据帧：0",
+        "originalText": "尚无真实原始提交。可预览画面；审核提交已禁用。"
+      },
+      "page_errors": [],
+      "responses": 11
+    }
+  ],
+  "requests": [
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8770/"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8770/annotation/human_natural_adjudication_001/index.html"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8770/annotation/human_natural_adjudication_001/manifest.sha256"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8770/api/adjudication_submissions"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8770/api/adjudication_status"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8770/api/adjudication_frame?scene=scene-0248&frame=0"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8770/data_manifest/reserved_causal_inputs_full_001/converted/scene-0248/color/000000.jpg"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8770/api/adjudication_frame?scene=scene-0248&frame=2"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8770/data_manifest/reserved_causal_inputs_full_001/converted/scene-0248/color/000002.jpg"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8770/api/adjudication_frame?scene=scene-0252&frame=0"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8770/data_manifest/reserved_causal_inputs_full_001/converted/scene-0252/color/000000.jpg"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8770/"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8770/annotation/human_natural_adjudication_001/index.html"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8770/annotation/human_natural_adjudication_001/manifest.sha256"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8770/api/adjudication_submissions"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8770/api/adjudication_status"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8770/api/adjudication_frame?scene=scene-0248&frame=0"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8770/data_manifest/reserved_causal_inputs_full_001/converted/scene-0248/color/000000.jpg"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8770/api/adjudication_frame?scene=scene-0248&frame=2"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8770/data_manifest/reserved_causal_inputs_full_001/converted/scene-0248/color/000002.jpg"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8770/api/adjudication_frame?scene=scene-0252&frame=0"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8770/data_manifest/reserved_causal_inputs_full_001/converted/scene-0252/color/000000.jpg"
+    }
+  ],
+  "all_requests_GET": true,
+  "actual_human_records_created": 0,
+  "model_calls_added": 0,
+  "official_truth_hidden_by_default": true,
+  "no_source_submit_disabled": true,
+  "goal_complete": false
+}

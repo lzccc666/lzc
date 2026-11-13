@@ -1,0 +1,54 @@
+[
+  {
+    "original": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/semantic_source_compatibility_003.py",
+    "original_sha256": "c9839e5871cdb600ceab9f40feba3c3660a494e17daf743d47347ef56c1a3224",
+    "recovered": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/session_recovery_001/semantic_source_compatibility_004.py",
+    "recovered_sha256": "baa532b4b6412e14fcb4ca0c2ef2bde95c71fa5ce75111fb9b038676817a4bf1",
+    "changes": [
+      "ROOT = OUT/'ablations/semantic_navigation_chain_003'",
+      "    save(ROOT/'worker_started.json',",
+      "        assert 'AssertionError' in text and \"other['source_sha256']==release['source_sha256']\" in text",
+      "original_failure_preserved=True, compatibility_evidence=evidence",
+      "semantic_ablation_combined_003",
+      "str(OUT/'source_bundle/semantic_compatibility_evidence_check_003.py')],",
+      "statistics/semantic_compatibility_evidence_check_003/report.json",
+      "original_version_failed_source_set_equality=True, explicit_compatibility_version=3",
+      "ablations/semantic_navigation_chain_003/complete.json",
+      ".complete.compatibility_003.tmp"
+    ]
+  },
+  {
+    "original": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/realtime_fault_after_semantics_001.py",
+    "original_sha256": "aec9a2551b444e4989a783299edfd005f0c1ede3bc0993754ac7cb8ddeee9aeb",
+    "recovered": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/session_recovery_001/realtime_fault_after_semantics_002.py",
+    "recovered_sha256": "0c262053c97eee2cdceb65cd7f1460c4002895017a0c87cee6c1d883916ea01e",
+    "changes": [
+      "faults/realtime_fault_after_semantics_001",
+      "    for run,smoke,wall,storage in runs:\n        command=[sys.executable,str(script),'--run-id',run,'--prepare-only','--wall-budget-s',str(wall),'--storage-budget-gb',str(storage)]\n        if smoke:command+=['--smoke']\n        subprocess.run(command,cwd=PROJECT,check=True)\n"
+    ]
+  },
+  {
+    "original": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/runtime_profile_after_faults_001.py",
+    "original_sha256": "96e5ee3dcd87daa6a506c0f290ef689756e581802cfbf72af7d8a424b3a2df82",
+    "recovered": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/session_recovery_001/runtime_profile_after_faults_002.py",
+    "recovered_sha256": "b21c8b9a279035dc55ec98803935f45175e7113a3cc5d4c0104497738455767a",
+    "changes": [
+      "performance/runtime_profile_after_faults_001",
+      "prior={str(p):start_tick(p) for p in [26469,38569,199838]};assert all(prior.values())",
+      "faults/realtime_fault_after_semantics_001/complete.json"
+    ]
+  },
+  {
+    "original": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/isolated_environment_after_GPU_001.py",
+    "original_sha256": "dca0fb75f1cc7df3e453b2048ce5afc8bb2117138c9f5443032d2af8e2a9b110",
+    "recovered": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/session_recovery_001/isolated_environment_after_GPU_002.py",
+    "recovered_sha256": "635dbf147ddb3fb14c4b2674a49120ba184b935616c946d00beaa4e72874830b",
+    "changes": [
+      "ORIGINALS = {\n    268029: '1379768112', 38569: '1375457897', 288085: '1380200568',\n    199838: '1378262585', 211077: '1378476126', 327549: '1381066932',\n}",
+      "reproduction/isolated_environment_after_GPU_001",
+      "ablations/semantic_navigation_chain_003/complete.json",
+      "faults/realtime_fault_after_semantics_001/complete.json",
+      "performance/runtime_profile_after_faults_001/complete.json"
+    ]
+  }
+]

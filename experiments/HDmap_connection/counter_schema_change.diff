@@ -1,0 +1,45 @@
+--- before
++++ after
+@@ -88,6 +88,29 @@
+                     reason=None if possible else 'no_continuous_forward_connected_lane_assignment')
+ 
+ 
++def reconstruct_lane_assignment(records, final_stage=None):
++    """回溯贯穿全程的同一见证；重叠区的多个候选区间不会重复增加过渡数。"""
++    if not records:
++        return dict(status='not_exercised', lane_stage_path=[], distinct_connections=0)
++    possible = records[-1]['lane_transition']['next_stages']
++    if not possible or (final_stage is not None and final_stage not in possible):
++        return dict(status='unknown_no_complete_assignment', lane_stage_path=[], distinct_connections=None)
++    path = [min(possible) if final_stage is None else final_stage]
++    for record in reversed(records):
++        witnesses = [w for w in record['lane_transition'].get('witnesses', []) if w['to_stage'] == path[-1]]
++        if not witnesses:
++            return dict(status='unknown_no_complete_assignment', lane_stage_path=[], distinct_connections=None)
++        source = min(w['from_stage'] for w in witnesses)
++        if not 0 <= path[-1]-source <= 1:
++            raise ValueError('车道见证包含跳级或逆向连接')
++        path.append(source)
++    path.reverse()
++    if path[0] != 0:
++        return dict(status='unknown_missing_entry_assignment', lane_stage_path=[], distinct_connections=None)
++    return dict(status='complete', lane_stage_path=path,
++                distinct_connections=sum(a != b for a, b in zip(path, path[1:])))
++
++
+ def execute_corridor(start, path, goal_xy, goal_yaw, corridor, *, spec=VehicleSpec(), maximum_steps=900):
+     """实际积分控制；到达只称参考位姿到达，绝不获得正确对象语义到达信用。"""
+     states, records = [start], []
+@@ -146,8 +169,11 @@
+         if latched and state.speed_mps == 0:
+             status = 'SAFETY_GUARD_STOPPED'
+             break
++    assignment = reconstruct_lane_assignment(records, len(corridor.lanes)-1 if status == 'REFERENCE_POSE_REACHED' else None)
+     return dict(status=status, records=records, states=[asdict(s) for s in states],
+         reference_pose_reached=status == 'REFERENCE_POSE_REACHED', actual_semantic_arrival_credit=False,
+         actual_model_calls=0, actual_path_length_m=sum(math.dist([a.x, a.y], [b.x, b.y]) for a, b in zip(states, states[1:])),
+-        declared_lane_transitions_exercised=sum(any(w['declared_connection_checked'] for w in r['lane_transition'].get('witnesses', [])) for r in records),
++        connection_candidate_intervals=sum(any(w['declared_connection_checked'] for w in r['lane_transition'].get('witnesses', [])) for r in records),
++        accepted_lane_stage_path=assignment['lane_stage_path'], accepted_distinct_connections=assignment['distinct_connections'],
++        connection_assignment_status=assignment['status'],
+         final_lane_indices=sorted(active), final_state=asdict(state), goal_complete=False)

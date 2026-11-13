@@ -1,0 +1,14 @@
+{
+  "attempted": 450,
+  "expected": 450,
+  "processes_with_result": 449,
+  "process_failures": 1,
+  "trial_records_sha256": "f9d6b9ebfb51d79b0d1e6855531173e26e44eb420a8519bc5ebeab067cf77ae6",
+  "elapsed_s": 46388.94631326571,
+  "saved_trial_bytes": 8228910918,
+  "full_frozen_development_matrix_finished": true,
+  "independent_test": false,
+  "stage11_complete": false,
+  "stage12_complete": false,
+  "goal_complete": false
+}

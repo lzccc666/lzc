@@ -1,0 +1,11 @@
+{
+  "passed": false,
+  "reason": "390px手机视口中新增原始故障日志链接未换行，scrollWidth=692",
+  "desktop_width": 1440,
+  "desktop_scroll_width": 1440,
+  "mobile_width": 390,
+  "mobile_scroll_width": 692,
+  "source_viewer": "gpu_fault_evidence_smoke_002",
+  "original_failed_output_preserved": true,
+  "goal_complete": false
+}

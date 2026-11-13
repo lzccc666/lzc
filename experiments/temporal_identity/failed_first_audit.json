@@ -1,0 +1,11 @@
+{
+  "error": "AssertionError()",
+  "checked": {
+    "frames": 518,
+    "scenes": 13,
+    "return_events": 433,
+    "censored_tails": 267,
+    "identity_cases": 172
+  },
+  "goal_complete": false
+}

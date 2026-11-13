@@ -1,0 +1,59 @@
+{
+  "passed": true,
+  "created_utc": "2026-11-12T16:32:58.568033+00:00",
+  "source_sha256": "4f7bc5341f36ae2847bddb22562d1c6a28f05515ea02a8b0578d9907208cd25d",
+  "cohorts": [
+    {
+      "cohort": "rule",
+      "cases": 150,
+      "intervals": 30806,
+      "moving_control_records": 26059,
+      "old_arrivals": 21,
+      "status_counts": {
+        "certificate_safe": 150
+      }
+    },
+    {
+      "cohort": "fault_cpu",
+      "cases": 6,
+      "intervals": 2270,
+      "moving_control_records": 1150,
+      "old_arrivals": 6,
+      "status_counts": {
+        "certificate_safe": 6
+      }
+    }
+  ],
+  "totals": {
+    "parked_obstacle_polygons_verified": 468,
+    "barrier_polygons_verified": 30,
+    "cases": 156,
+    "intervals": 33076,
+    "moving_controls": 27209
+  },
+  "max_state_residuals": {
+    "x": 4.065774206196693e-08,
+    "y": 3.419567925211364e-07,
+    "yaw_rad": 3.3306690738754696e-16,
+    "speed_mps": 0,
+    "steering_rad": 0,
+    "time_s": 0
+  },
+  "maximum_observed_subdivision_depth": 0,
+  "input_and_artifact_SHA_files": 940,
+  "files_manifest_sha256": "7343a236f7a89a89ea61223a9ee0032b6de9e91c1b8345722b49317e2cc67fb8",
+  "independent_scope": [
+    "全部50任务×3种子/六故障条件集合不漏不重",
+    "目标矩形以独立affine变换及面积/位置核对",
+    "静态屏障尺寸与18m位置",
+    "33076个区间逐条编号/分母与原执行长度核对",
+    "全部控制残差/数值余量/证书状态汇总",
+    "原始执行/感知/结果SHA及派生产物SHA"
+  ],
+  "limits": [
+    "没有第三次独立重写连续证书或重跑模型；这是输入与账目审计",
+    "未独立重评语言身份/区域保持/拓扑方向；不增加到达",
+    "双精度GEOS，不是形式化区间算术"
+  ],
+  "goal_complete": false
+}

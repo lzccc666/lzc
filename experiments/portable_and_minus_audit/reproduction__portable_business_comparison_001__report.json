@@ -1,0 +1,73 @@
+{
+  "passed": false,
+  "updated_utc": "2026-11-12T23:04:59.018743+00:00",
+  "comparisons": {
+    "initial_state.json": {
+      "equal": true,
+      "original_sha256": "f2ae68a9f107e1d23fb7c6efc24a9de190bda3e69fffa458ebf45d83e2509368",
+      "portable_sha256": "f2ae68a9f107e1d23fb7c6efc24a9de190bda3e69fffa458ebf45d83e2509368",
+      "original_records": 1,
+      "portable_records": 1
+    },
+    "perception.jsonl": {
+      "equal": false,
+      "original_sha256": "35695ba12ac61cc07462fe974a25aba6e834f44bee7c7c741c9bb2d504511886",
+      "portable_sha256": "f88f600ce0d9715c85575f6132d7187e6637a1520d54bb2dfca3f1865a2cfc96",
+      "original_records": 38,
+      "portable_records": 38
+    },
+    "execution.jsonl": {
+      "equal": true,
+      "original_sha256": "bf2812389f234e874bdbf9b388b83ca6c5a6bbb60878fbdef77e8768e943f725",
+      "portable_sha256": "bf2812389f234e874bdbf9b388b83ca6c5a6bbb60878fbdef77e8768e943f725",
+      "original_records": 187,
+      "portable_records": 187
+    },
+    "thread_observations.jsonl": {
+      "equal": true,
+      "original_sha256": "ef5702ebb8d289b2cb112d0d60d12e73ba97e53cd239d59e2e6d1ca21067eded",
+      "portable_sha256": "ef5702ebb8d289b2cb112d0d60d12e73ba97e53cd239d59e2e6d1ca21067eded",
+      "original_records": 38,
+      "portable_records": 38
+    },
+    "four_outcomes": {
+      "equal": true,
+      "original": {
+        "route_generated": true,
+        "selected_object_evaluated_correct": true,
+        "stable_correct_lock": true,
+        "actual_full_perception_arrival": true
+      },
+      "portable": {
+        "route_generated": true,
+        "selected_object_evaluated_correct": true,
+        "stable_correct_lock": true,
+        "actual_full_perception_arrival": true
+      }
+    },
+    "terminal_state": {
+      "equal": true
+    }
+  },
+  "ignored_timing_fields": [
+    "completed_wall_elapsed_s",
+    "duration_s",
+    "frontend_mapping_duration_s"
+  ],
+  "ignored_business_fields": [],
+  "path_prefix_normalization": [
+    "<CASE>",
+    "<SOURCE>"
+  ],
+  "numerical_tolerance_used": false,
+  "original_actual_frontend_calls": 38,
+  "portable_actual_frontend_calls": 38,
+  "Qwen_backend_calls_both_runs": 0,
+  "full_three_task_Qwen_cache_gate_closed": false,
+  "actual_sensor_and_frontend_executed_in_both": true,
+  "new_independent_scenes": 0,
+  "frozen_main_table_credit": false,
+  "source_sha256": "a8adf72558bdb2701d603d98ded0a968b0ec880bea1d2166e5c06b45f301a96b",
+  "source_files_sha256": "026740431634efbdc0a37c84524d5eb20791d434f37478f8b8b7ba4caeda4800",
+  "goal_complete": false
+}

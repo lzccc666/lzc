@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "created_utc": "2026-11-12T19:31:46.629325+00:00",
+  "cases": 450,
+  "totals": {
+    "reused_certificates": 395,
+    "reused_intervals": 292406,
+    "previously_reported_arrivals": 93,
+    "reported_arrivals_with_body_certificate": 93,
+    "reconstructed_initials": 54,
+    "stationary_prefix_records": 68,
+    "newly_audited_intervals": 41523,
+    "unknown_missing_complete_results": 1
+  },
+  "status_counts": {
+    "certificate_safe": 449,
+    "unknown_missing_complete_evidence": 1
+  },
+  "maximum_reconstructed_initial_residual": 8.673617379884035e-19,
+  "source_sha256": "0fc223c31befa08eafa7a43d341ff6a9589566f721627214c12c57353c3a71f3",
+  "SHA_files": 2415,
+  "files_manifest_sha256": "732d168e82df86fac9f426ef47e2c855c04e313248a3b1cb42682c3de79fae3e",
+  "RNG_crosscheck": "Generator(PCG64(seed)).standard_normal(3), explicit scales",
+  "initial_is_reconstructed_not_observed": true,
+  "old_strict_unknowns_preserved": true,
+  "actual_model_calls": 0,
+  "new_executions": 0,
+  "new_arrivals": 0,
+  "goal_complete": false
+}

@@ -1,0 +1,34 @@
+{
+  "checked_at": "2026-11-13T21:33:48.072792+08:00",
+  "supervisor_identity_verified_live": true,
+  "files_checked_for_existence_and_size": 29494,
+  "total_source_bytes": 1516087988,
+  "file_errors": [],
+  "package_versions_checked": 143,
+  "package_version_errors": {},
+  "frozen_source_hashes_checked": 94,
+  "frozen_source_hash_errors": [],
+  "frontend_rgb_hashes_checked": 12,
+  "frontend_rgb_hash_errors": [],
+  "adapter_weight_hash_errors": [],
+  "reserved_output_collisions": [],
+  "disk_free_bytes": 24454258688,
+  "existing_requirement_violations": [
+    {
+      "package": "opencv-python",
+      "requirement": "numpy>=2; python_version >= \"3.9\"",
+      "installed": "1.26.4"
+    }
+  ],
+  "plan_sha256": "e760db7fb913b5149abe3aa2007b1d92055fbd97bd3f73e067e0e7a67bd9ad65",
+  "actual_environment_installations": 0,
+  "actual_model_calls": 0,
+  "limitations": [
+    "仅预检安装源文件存在性及尺寸；全部包内容哈希由实际安装逐项计算和复核",
+    "NumPy与OpenCV元数据约束冲突原样保留，尚未在新环境验证实际前端",
+    "不代表正式性能测试或新环境复现已完成"
+  ],
+  "goal_complete": false,
+  "elapsed_s": 0.6621249318122864,
+  "preflight_passed": true
+}

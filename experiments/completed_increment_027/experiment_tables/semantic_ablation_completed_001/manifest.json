@@ -1,0 +1,25 @@
+{
+  "evidence_sha256": {
+    "statistics/semantic_ablation_combined_004/report.json": "f738b31c525fb8238700ab01120b382dccee85655dd472ab45f56e9fe18ff689",
+    "statistics/semantic_ablation_combined_004/audited_trials.jsonl": "737a7e1d1e7157f9c5b79a4c6c075c82f5021ad5dd1721710a122b30a2817ccc",
+    "interactive_simulation/semantic_ablation_combined_004/trial_records.jsonl": "e2f8d748ee5eefa6f3cd264182f81a16e45571981d8ae25fbc5a34539db40602",
+    "statistics/semantic_compatibility_evidence_check_004/report.json": "3aa08cca0e56df7c46ad84afdaafed2ccb9b89a3a592648cbd71ee8efc89f925",
+    "ablations/semantic_navigation_chain_004/complete.json": "5bcdf9af2fb78cd8c675e37c4ac6a330eb3b3227ebd6362983a9569bf6ed3e81",
+    "vehicle_execution/semantic_minus_execution_full_002/report.json": "3e61c565553fb04e8da73d558b7e1d8a35af17ceb46c0da0fae28b1382af7a86",
+    "interactive_simulation/realtime_semantic_minus_full_001/summary.json": "ebb1839a266dcfe57b161893c3540d126cf45b7812f202bd142fe9ff3ad512e6"
+  },
+  "generator_sha256": "aa675c8b59976df1cba77753b912a6e0b77c85232819a5c2e0cf94bfa7161794",
+  "rows": 15,
+  "paired_rows": 16,
+  "original_trials": 750,
+  "new_trials": 450,
+  "reused_main_trials": 300,
+  "output_sha256": {
+    "four_outcomes.csv": "45adb74c4f4af5ba890d42d9c519c41657a423fdb05610f9d32e1ef3de7dd96c",
+    "paired_differences.csv": "adff120b6a745515a83412057dca29bbcec2e92e3f5904917004ead1e6157f11",
+    "README.md": "3c0f2145da1b50d9a6b985c554f56da44f37f181f2a985cbfcad91bc9d291d49"
+  },
+  "no_new_model_calls": true,
+  "no_new_test_opened": true,
+  "goal_complete": false
+}

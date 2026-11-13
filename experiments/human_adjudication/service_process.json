@@ -1,0 +1,16 @@
+{
+  "pid": 430242,
+  "start_ticks": "1383380054",
+  "command": [
+    "/root/miniconda3/envs/conceptgraph/bin/python",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/human_query_adjudication_001.py",
+    "--port",
+    "8770"
+  ],
+  "started_utc": "2026-11-13T05:24:08.484068+00:00",
+  "source_sha256": "e621dce8d02c08e04364d09f579b0869f825c1cfbabd3aeb6e5bf7dc72fc1538",
+  "port": 8770,
+  "original_8768_service_replaced": false,
+  "actual_human_records_created_by_startup": 0,
+  "goal_complete": false
+}

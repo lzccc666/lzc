@@ -1,0 +1,10 @@
+{
+  "supervisor_pid": 455071,
+  "supervisor_tick": "1384309653",
+  "audit_sha256": "2612cd7a3f3a3af865b57e006d6567ee17b0b8306fe1496c8032ae9a914f3474",
+  "worker_sha256": "1b6ad34c36cef7528b7d121ebe3af4caa480533a90e908baff9358da949b5770",
+  "wait_budget_s": 86400,
+  "execution_budget_s": 1800,
+  "model_calls": 0,
+  "goal_complete": false
+}

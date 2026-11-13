@@ -1,0 +1,72 @@
+{
+  "passed": true,
+  "updated_utc": "2026-11-12T23:45:34.254191+00:00",
+  "comparisons": {
+    "initial": {
+      "equal": true,
+      "cold_sha256": "f2ae68a9f107e1d23fb7c6efc24a9de190bda3e69fffa458ebf45d83e2509368",
+      "warm_sha256": "f2ae68a9f107e1d23fb7c6efc24a9de190bda3e69fffa458ebf45d83e2509368"
+    },
+    "frames": {
+      "equal": true,
+      "cold_sha256": "fa1f805c847b09f5ae101a166638fe74e8866e6769f21f2ba2822958005de895",
+      "warm_sha256": "fa1f805c847b09f5ae101a166638fe74e8866e6769f21f2ba2822958005de895"
+    },
+    "execution": {
+      "equal": true,
+      "cold_sha256": "51aa27e83d519f9677e949d9a80ace353dc9962f2ecaa98d6e69f7d9d61ff543",
+      "warm_sha256": "51aa27e83d519f9677e949d9a80ace353dc9962f2ecaa98d6e69f7d9d61ff543"
+    },
+    "requests": {
+      "equal": true,
+      "cold_sha256": "f0e551c88208927b8c0bd1ac3834448f96e001eddb127a9244972b505ac55bed",
+      "warm_sha256": "f0e551c88208927b8c0bd1ac3834448f96e001eddb127a9244972b505ac55bed"
+    },
+    "sensors": {
+      "equal": true,
+      "cold_sha256": "4ffe6a7d552ce81310c0865625195569ce0518f2eb4ac77f44630b064a1ebeab",
+      "warm_sha256": "4ffe6a7d552ce81310c0865625195569ce0518f2eb4ac77f44630b064a1ebeab"
+    },
+    "detection_payloads": {
+      "equal": true,
+      "cold_sha256": "66b6bb5f8b15619345b2f6ca1c9817be875272e5ab789aa8e1037eb6ba817016",
+      "warm_sha256": "66b6bb5f8b15619345b2f6ca1c9817be875272e5ab789aa8e1037eb6ba817016"
+    },
+    "four": {
+      "equal": true,
+      "cold_sha256": "65c14b4ebc58b9f425a426002d4ce7ba04f956da25da237810eb100301e46869",
+      "warm_sha256": "65c14b4ebc58b9f425a426002d4ce7ba04f956da25da237810eb100301e46869"
+    },
+    "final": {
+      "equal": true,
+      "cold_sha256": "0507c97f1a0ed15885db69bfba43042caa6e2a2e7b8f5e174860ab28cff3ec02",
+      "warm_sha256": "0507c97f1a0ed15885db69bfba43042caa6e2a2e7b8f5e174860ab28cff3ec02"
+    }
+  },
+  "actual_cold_CPU_Qwen_calls": 3,
+  "actual_warm_Qwen_calls": 0,
+  "real_frontend_both_runs": true,
+  "exact_cache_file_set_and_content_unchanged": true,
+  "full_three_task_fixedlogical_small_task_gate": true,
+  "detector_containers_compared": 61,
+  "gzip_only_mtime_difference_verified": true,
+  "original_raw_and_normalized_model_outputs_compared": true,
+  "removed_business_fields": [],
+  "numerical_tolerance_used": false,
+  "nonbusiness_normalizations": [
+    "实测duration_s/latency",
+    "case角色路径及依赖路径SHA重算",
+    "已核验的完整检测pickle内容代替gzip容器mtime",
+    "缓存hit/status/diagnostic单列核验，比较同一cache key"
+  ],
+  "grid_business_state": null,
+  "grid_reason": "本链车辆规划使用冻结连续道路/障碍几何；无另外保存的占用栅格。Hybrid搜索离散化源码相同。",
+  "real_clock_async": false,
+  "shared_CPU": true,
+  "GPU_performance_credit": false,
+  "new_independent_tasks": 0,
+  "frozen_main_table_credit": false,
+  "human_labels_added": 0,
+  "source_sha256": "24cba2dfa31d63f624b458e171279a09fa4354b94491533166020d8475a78b73",
+  "goal_complete": false
+}

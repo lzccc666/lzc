@@ -1,0 +1,69 @@
+{
+  "complete": false,
+  "jobs": [
+    {
+      "job": "00_environment_install",
+      "command": [
+        "/root/miniconda3/envs/conceptgraph/bin/python",
+        "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/isolated_cpu_environment_pack_004.py",
+        "--destination",
+        "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/reproduction/isolated_cpu_environment_004",
+        "--install"
+      ],
+      "cwd": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1",
+      "returncode": 0
+    },
+    {
+      "job": "01_navigation",
+      "command": [
+        "/root/miniconda3/envs/conceptgraph/bin/python",
+        "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/prepare_isolated_environment_navigation_002.py",
+        "--environment",
+        "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/reproduction/isolated_cpu_environment_004",
+        "--destination",
+        "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/reproduction/isolated_cpu_executed_001",
+        "--execute"
+      ],
+      "cwd": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1",
+      "returncode": 1
+    },
+    {
+      "job": "02_independent_navigation_audit",
+      "command": [
+        "/root/miniconda3/envs/conceptgraph/bin/python",
+        "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/isolated_environment_navigation_audit_002.py"
+      ],
+      "cwd": "/root/autodl-tmp/lizichong",
+      "returncode": 1
+    },
+    {
+      "job": "03_main_table_recompute",
+      "command": [
+        "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/reproduction/isolated_cpu_environment_004/environment/bin/python",
+        "-m",
+        "conceptgraph.completion.realtime_matrix_statistics",
+        "--input-run",
+        "realtime_three_model_full_001",
+        "--run-id",
+        "isolated_environment_main450_recompute_001"
+      ],
+      "cwd": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/reproduction/isolated_cpu_executed_001/checkout",
+      "returncode": 0
+    }
+  ],
+  "new_environment_installed": true,
+  "successful_small_task_reproduction": false,
+  "independent_navigation_audit_sha256": null,
+  "main_450_recomputed_in_new_environment": true,
+  "main_statistics_byte_identical": true,
+  "environment_installed_manifest_sha256": "65a222870495919137618b0a8c1dcf93533b804ff89594eb59b137efa0f9d4fd",
+  "actual_new_Python_environment": true,
+  "actual_new_operating_system": false,
+  "manuscript_text_written": false,
+  "new_test_opened": false,
+  "new_independent_scene_credit": 0,
+  "frozen_main_table_credit": false,
+  "execution_elapsed_s": 126.05143246613443,
+  "elapsed_s_including_wait": 126.14454781450331,
+  "goal_complete": false
+}

@@ -1,0 +1,22 @@
+{
+  "updated_utc": "2026-11-12T23:01:52.302101+00:00",
+  "pid": 326628,
+  "start_ticks": "1381042890",
+  "same_process": true,
+  "actual_cwd": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/reproduction/portable_executed_001/checkout",
+  "environment": {
+    "CUDA_VISIBLE_DEVICES": "",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "LP_NUM_THREADS": "1",
+    "PYOPENGL_PLATFORM": "osmesa",
+    "PYTHONPATH": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/software_render_runtime_001/python_deps"
+  },
+  "GPU_compute_pids": [
+    "327943"
+  ],
+  "worker_is_GPU_compute": false,
+  "source_input_has_no_outputs": true,
+  "source_input_has_no_Git": true,
+  "goal_complete": false
+}

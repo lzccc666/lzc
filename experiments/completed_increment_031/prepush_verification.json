@@ -1,0 +1,11 @@
+{
+  "checked_utc": "2026-11-13T16:38:48.018778+00:00",
+  "passed": true,
+  "structured_scan_sha256": "8cca5bcba3d8a78c89acb459c24a3bbb85498a82c3e5657e1310af85d8db23f2",
+  "source_files": 390,
+  "code_unchanged_since_tests": true,
+  "secret_scanned_files": 1395,
+  "root_index_unchanged": true,
+  "post_scan_published_JSON_validated": true,
+  "goal_complete": false
+}

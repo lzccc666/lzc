@@ -1,0 +1,1856 @@
+[
+  {
+    "id": "T01",
+    "title": "真实感知主矩阵：正条件四项结果计数",
+    "columns": [
+      {
+        "key": "method",
+        "label": "方法",
+        "kind": "text"
+      },
+      {
+        "key": "denominator",
+        "label": "尝试数",
+        "kind": "int"
+      },
+      {
+        "key": "route_generated",
+        "label": "生成路线数",
+        "kind": "int"
+      },
+      {
+        "key": "selected_object_evaluated_correct",
+        "label": "选对对象数",
+        "kind": "int"
+      },
+      {
+        "key": "stable_correct_lock",
+        "label": "正确锁定数",
+        "kind": "int"
+      },
+      {
+        "key": "actual_full_perception_arrival",
+        "label": "实际正确到达数",
+        "kind": "int"
+      },
+      {
+        "key": "missing",
+        "label": "完整结果缺失数",
+        "kind": "int"
+      }
+    ],
+    "rows": [
+      {
+        "method": "规则",
+        "denominator": 90,
+        "route_generated": 83,
+        "selected_object_evaluated_correct": 84,
+        "stable_correct_lock": 82,
+        "actual_full_perception_arrival": 50,
+        "missing": 0
+      },
+      {
+        "method": "基础Qwen",
+        "denominator": 90,
+        "route_generated": 66,
+        "selected_object_evaluated_correct": 72,
+        "stable_correct_lock": 66,
+        "actual_full_perception_arrival": 39,
+        "missing": 1
+      },
+      {
+        "method": "新Adapter",
+        "denominator": 90,
+        "route_generated": 59,
+        "selected_object_evaluated_correct": 33,
+        "stable_correct_lock": 32,
+        "actual_full_perception_arrival": 4,
+        "missing": 0
+      }
+    ],
+    "sources": [
+      "statistics/realtime_three_model_full_001/report.json",
+      "statistics/realtime_three_model_full_001/trials.csv"
+    ],
+    "note": "每方法30个正任务×3种子=90次尝试；10配置共享3走廊家族。450次总尝试中基础Qwen有1次进程超时无完整结果，空业务值不改写为False，分母保留。对象正确性沿用固定自动GT关联；这些是开发合成颜色任务，不是人工自然指令或新封存。",
+    "role": "开发证据，非新封存测试"
+  },
+  {
+    "id": "T02",
+    "title": "主矩阵：正条件四项结果比例与聚类区间",
+    "columns": [
+      {
+        "key": "method",
+        "label": "方法",
+        "kind": "text"
+      },
+      {
+        "key": "metric",
+        "label": "指标",
+        "kind": "text"
+      },
+      {
+        "key": "success",
+        "label": "成功数",
+        "kind": "int"
+      },
+      {
+        "key": "denominator",
+        "label": "尝试数",
+        "kind": "int"
+      },
+      {
+        "key": "rate",
+        "label": "比例",
+        "kind": "rate"
+      },
+      {
+        "key": "lower",
+        "label": "95%下限",
+        "kind": "rate"
+      },
+      {
+        "key": "upper",
+        "label": "95%上限",
+        "kind": "rate"
+      }
+    ],
+    "rows": [
+      {
+        "method": "规则",
+        "metric": "生成路线",
+        "success": 83,
+        "denominator": 90,
+        "rate": 0.9222222222222223,
+        "lower": 0.8444444444444444,
+        "upper": 1.0
+      },
+      {
+        "method": "规则",
+        "metric": "选对对象",
+        "success": 84,
+        "denominator": 90,
+        "rate": 0.9333333333333333,
+        "lower": 0.8666666666666667,
+        "upper": 1.0
+      },
+      {
+        "method": "规则",
+        "metric": "正确锁定",
+        "success": 82,
+        "denominator": 90,
+        "rate": 0.9111111111111111,
+        "lower": 0.8333333333333334,
+        "upper": 0.9777777777777777
+      },
+      {
+        "method": "规则",
+        "metric": "实际正确到达",
+        "success": 50,
+        "denominator": 90,
+        "rate": 0.5555555555555556,
+        "lower": 0.4111111111111111,
+        "upper": 0.6888888888888889
+      },
+      {
+        "method": "基础Qwen",
+        "metric": "生成路线",
+        "success": 66,
+        "denominator": 90,
+        "rate": 0.7333333333333333,
+        "lower": 0.5333333333333333,
+        "upper": 0.9
+      },
+      {
+        "method": "基础Qwen",
+        "metric": "选对对象",
+        "success": 72,
+        "denominator": 90,
+        "rate": 0.8,
+        "lower": 0.6333333333333333,
+        "upper": 0.9444444444444444
+      },
+      {
+        "method": "基础Qwen",
+        "metric": "正确锁定",
+        "success": 66,
+        "denominator": 90,
+        "rate": 0.7333333333333333,
+        "lower": 0.5333333333333333,
+        "upper": 0.9
+      },
+      {
+        "method": "基础Qwen",
+        "metric": "实际正确到达",
+        "success": 39,
+        "denominator": 90,
+        "rate": 0.43333333333333335,
+        "lower": 0.25555555555555554,
+        "upper": 0.6222222222222222
+      },
+      {
+        "method": "新Adapter",
+        "metric": "生成路线",
+        "success": 59,
+        "denominator": 90,
+        "rate": 0.6555555555555556,
+        "lower": 0.6222222222222222,
+        "upper": 0.6888888888888889
+      },
+      {
+        "method": "新Adapter",
+        "metric": "选对对象",
+        "success": 33,
+        "denominator": 90,
+        "rate": 0.36666666666666664,
+        "lower": 0.3333333333333333,
+        "upper": 0.4
+      },
+      {
+        "method": "新Adapter",
+        "metric": "正确锁定",
+        "success": 32,
+        "denominator": 90,
+        "rate": 0.35555555555555557,
+        "lower": 0.3333333333333333,
+        "upper": 0.3888888888888889
+      },
+      {
+        "method": "新Adapter",
+        "metric": "实际正确到达",
+        "success": 4,
+        "denominator": 90,
+        "rate": 0.044444444444444446,
+        "lower": 0.0,
+        "upper": 0.1
+      }
+    ],
+    "sources": [
+      "statistics/realtime_three_model_full_001/report.json"
+    ],
+    "note": "按配置配对聚类bootstrap，4000次，seed17；区间沿用冻结统计。每方法30个正任务×3种子=90次尝试；10配置共享3走廊家族。450次总尝试中基础Qwen有1次进程超时无完整结果，空业务值不改写为False，分母保留。对象正确性沿用固定自动GT关联；这些是开发合成颜色任务，不是人工自然指令或新封存。",
+    "role": "开发证据，非新封存测试"
+  },
+  {
+    "id": "T03",
+    "title": "主矩阵：正条件配对差值",
+    "columns": [
+      {
+        "key": "a",
+        "label": "方法A",
+        "kind": "text"
+      },
+      {
+        "key": "b",
+        "label": "方法B",
+        "kind": "text"
+      },
+      {
+        "key": "metric",
+        "label": "指标",
+        "kind": "text"
+      },
+      {
+        "key": "difference",
+        "label": "A−B/百分点",
+        "kind": "pp"
+      },
+      {
+        "key": "lower",
+        "label": "95%下限/百分点",
+        "kind": "pp"
+      },
+      {
+        "key": "upper",
+        "label": "95%上限/百分点",
+        "kind": "pp"
+      },
+      {
+        "key": "denominator",
+        "label": "配对尝试",
+        "kind": "int"
+      }
+    ],
+    "rows": [
+      {
+        "a": "基础Qwen",
+        "b": "新Adapter",
+        "metric": "生成路线",
+        "difference": 0.07777777777777778,
+        "lower": -0.1,
+        "upper": 0.23333333333333334,
+        "denominator": 90
+      },
+      {
+        "a": "基础Qwen",
+        "b": "新Adapter",
+        "metric": "选对对象",
+        "difference": 0.43333333333333335,
+        "lower": 0.26638888888888895,
+        "upper": 0.5888888888888889,
+        "denominator": 90
+      },
+      {
+        "a": "基础Qwen",
+        "b": "新Adapter",
+        "metric": "正确锁定",
+        "difference": 0.37777777777777777,
+        "lower": 0.17777777777777778,
+        "upper": 0.5555555555555556,
+        "denominator": 90
+      },
+      {
+        "a": "基础Qwen",
+        "b": "新Adapter",
+        "metric": "实际正确到达",
+        "difference": 0.3888888888888889,
+        "lower": 0.18888888888888888,
+        "upper": 0.6,
+        "denominator": 90
+      },
+      {
+        "a": "基础Qwen",
+        "b": "规则",
+        "metric": "生成路线",
+        "difference": -0.18888888888888888,
+        "lower": -0.3111111111111111,
+        "upper": -0.07777777777777778,
+        "denominator": 90
+      },
+      {
+        "a": "基础Qwen",
+        "b": "规则",
+        "metric": "选对对象",
+        "difference": -0.13333333333333333,
+        "lower": -0.24444444444444444,
+        "upper": -0.044444444444444446,
+        "denominator": 90
+      },
+      {
+        "a": "基础Qwen",
+        "b": "规则",
+        "metric": "正确锁定",
+        "difference": -0.17777777777777778,
+        "lower": -0.3,
+        "upper": -0.07777777777777778,
+        "denominator": 90
+      },
+      {
+        "a": "基础Qwen",
+        "b": "规则",
+        "metric": "实际正确到达",
+        "difference": -0.12222222222222222,
+        "lower": -0.26666666666666666,
+        "upper": 0.044444444444444446,
+        "denominator": 90
+      },
+      {
+        "a": "新Adapter",
+        "b": "规则",
+        "metric": "生成路线",
+        "difference": -0.26666666666666666,
+        "lower": -0.3333333333333333,
+        "upper": -0.18888888888888888,
+        "denominator": 90
+      },
+      {
+        "a": "新Adapter",
+        "b": "规则",
+        "metric": "选对对象",
+        "difference": -0.5666666666666667,
+        "lower": -0.6333333333333333,
+        "upper": -0.4888888888888889,
+        "denominator": 90
+      },
+      {
+        "a": "新Adapter",
+        "b": "规则",
+        "metric": "正确锁定",
+        "difference": -0.5555555555555556,
+        "lower": -0.6333333333333333,
+        "upper": -0.4666666666666667,
+        "denominator": 90
+      },
+      {
+        "a": "新Adapter",
+        "b": "规则",
+        "metric": "实际正确到达",
+        "difference": -0.5111111111111111,
+        "lower": -0.6669444444444443,
+        "upper": -0.35555555555555557,
+        "denominator": 90
+      }
+    ],
+    "sources": [
+      "statistics/realtime_three_model_full_001/report.json"
+    ],
+    "note": "正负号均按A−B，包含新Adapter下降的全部结果；区间跨零不作显著性主张。每方法30个正任务×3种子=90次尝试；10配置共享3走廊家族。450次总尝试中基础Qwen有1次进程超时无完整结果，空业务值不改写为False，分母保留。对象正确性沿用固定自动GT关联；这些是开发合成颜色任务，不是人工自然指令或新封存。",
+    "role": "开发证据，非新封存测试"
+  },
+  {
+    "id": "T04",
+    "title": "主矩阵：全部任务类型及失败分母",
+    "columns": [
+      {
+        "key": "method",
+        "label": "方法",
+        "kind": "text"
+      },
+      {
+        "key": "kind",
+        "label": "任务类型",
+        "kind": "text"
+      },
+      {
+        "key": "denominator",
+        "label": "尝试数",
+        "kind": "int"
+      },
+      {
+        "key": "route_generated",
+        "label": "生成路线数",
+        "kind": "int"
+      },
+      {
+        "key": "selected_object_evaluated_correct",
+        "label": "选对对象数",
+        "kind": "int"
+      },
+      {
+        "key": "stable_correct_lock",
+        "label": "正确锁定数",
+        "kind": "int"
+      },
+      {
+        "key": "actual_full_perception_arrival",
+        "label": "实际正确到达数",
+        "kind": "int"
+      },
+      {
+        "key": "missing",
+        "label": "完整结果缺失数",
+        "kind": "int"
+      }
+    ],
+    "rows": [
+      {
+        "method": "规则",
+        "kind": "inaccessible",
+        "denominator": 30,
+        "route_generated": 0,
+        "selected_object_evaluated_correct": 0,
+        "stable_correct_lock": 0,
+        "actual_full_perception_arrival": 0,
+        "missing": 0
+      },
+      {
+        "method": "规则",
+        "kind": "no_match",
+        "denominator": 30,
+        "route_generated": 0,
+        "selected_object_evaluated_correct": 0,
+        "stable_correct_lock": 0,
+        "actual_full_perception_arrival": 0,
+        "missing": 0
+      },
+      {
+        "method": "规则",
+        "kind": "reachable_positive",
+        "denominator": 90,
+        "route_generated": 83,
+        "selected_object_evaluated_correct": 84,
+        "stable_correct_lock": 82,
+        "actual_full_perception_arrival": 50,
+        "missing": 0
+      },
+      {
+        "method": "基础Qwen",
+        "kind": "inaccessible",
+        "denominator": 30,
+        "route_generated": 0,
+        "selected_object_evaluated_correct": 0,
+        "stable_correct_lock": 0,
+        "actual_full_perception_arrival": 0,
+        "missing": 0
+      },
+      {
+        "method": "基础Qwen",
+        "kind": "no_match",
+        "denominator": 30,
+        "route_generated": 0,
+        "selected_object_evaluated_correct": 0,
+        "stable_correct_lock": 0,
+        "actual_full_perception_arrival": 0,
+        "missing": 0
+      },
+      {
+        "method": "基础Qwen",
+        "kind": "reachable_positive",
+        "denominator": 90,
+        "route_generated": 66,
+        "selected_object_evaluated_correct": 72,
+        "stable_correct_lock": 66,
+        "actual_full_perception_arrival": 39,
+        "missing": 1
+      },
+      {
+        "method": "新Adapter",
+        "kind": "inaccessible",
+        "denominator": 30,
+        "route_generated": 0,
+        "selected_object_evaluated_correct": 0,
+        "stable_correct_lock": 0,
+        "actual_full_perception_arrival": 0,
+        "missing": 0
+      },
+      {
+        "method": "新Adapter",
+        "kind": "no_match",
+        "denominator": 30,
+        "route_generated": 0,
+        "selected_object_evaluated_correct": 0,
+        "stable_correct_lock": 0,
+        "actual_full_perception_arrival": 0,
+        "missing": 0
+      },
+      {
+        "method": "新Adapter",
+        "kind": "reachable_positive",
+        "denominator": 90,
+        "route_generated": 59,
+        "selected_object_evaluated_correct": 33,
+        "stable_correct_lock": 32,
+        "actual_full_perception_arrival": 4,
+        "missing": 0
+      }
+    ],
+    "sources": [
+      "statistics/realtime_three_model_full_001/report.json",
+      "statistics/realtime_three_model_full_001/trials.csv"
+    ],
+    "note": "reachable_positive=可达正条件；inaccessible=不可达；no_match=无匹配。负条件的无到达不是算法失败的通用定义，不能把拒绝合并成到达成功率。每方法30个正任务×3种子=90次尝试；10配置共享3走廊家族。450次总尝试中基础Qwen有1次进程超时无完整结果，空业务值不改写为False，分母保留。对象正确性沿用固定自动GT关联；这些是开发合成颜色任务，不是人工自然指令或新封存。",
+    "role": "开发证据，非新封存测试"
+  },
+  {
+    "id": "T05",
+    "title": "过去时刻LiDAR场景图：全帧对象评价",
+    "columns": [
+      {
+        "key": "method",
+        "label": "方法",
+        "kind": "text"
+      },
+      {
+        "key": "truth",
+        "label": "GT观测",
+        "kind": "int"
+      },
+      {
+        "key": "predictions",
+        "label": "预测观测",
+        "kind": "int"
+      },
+      {
+        "key": "tp",
+        "label": "匹配数",
+        "kind": "int"
+      },
+      {
+        "key": "recall",
+        "label": "召回",
+        "kind": "rate"
+      },
+      {
+        "key": "fraction",
+        "label": "匹配预测比例",
+        "kind": "rate"
+      },
+      {
+        "key": "error",
+        "label": "匹配中心误差/m",
+        "kind": "float"
+      },
+      {
+        "key": "duplicates",
+        "label": "重复节点",
+        "kind": "int"
+      }
+    ],
+    "rows": [
+      {
+        "method": "一对一与深度质量",
+        "truth": 5723,
+        "predictions": 3945,
+        "tp": 1723,
+        "recall": 0.3010658745413245,
+        "fraction": 0.4367553865652725,
+        "error": 1.302627219185374,
+        "duplicates": 37
+      },
+      {
+        "method": "深度稳健运动组合",
+        "truth": 5723,
+        "predictions": 3905,
+        "tp": 1720,
+        "recall": 0.30054167394723047,
+        "fraction": 0.44046094750320103,
+        "error": 1.282402657602408,
+        "duplicates": 40
+      },
+      {
+        "method": "一对一无过期",
+        "truth": 5723,
+        "predictions": 6247,
+        "tp": 1006,
+        "recall": 0.1757819325528569,
+        "fraction": 0.16103729790299343,
+        "error": 1.6960017800089462,
+        "duplicates": 46
+      },
+      {
+        "method": "一对一与时间戳",
+        "truth": 5723,
+        "predictions": 5548,
+        "tp": 953,
+        "recall": 0.16652105539052944,
+        "fraction": 0.17177361211247297,
+        "error": 1.6939450156379532,
+        "duplicates": 40
+      },
+      {
+        "method": "原融合",
+        "truth": 5723,
+        "predictions": 5980,
+        "tp": 986,
+        "recall": 0.1722872619255635,
+        "fraction": 0.16488294314381272,
+        "error": 1.6956498927187718,
+        "duplicates": 34
+      },
+      {
+        "method": "单帧",
+        "truth": 5723,
+        "predictions": 2769,
+        "tp": 640,
+        "recall": 0.11182946007338808,
+        "fraction": 0.2311303719754424,
+        "error": 1.7397304501706095,
+        "duplicates": 15
+      },
+      {
+        "method": "仅时间戳",
+        "truth": 5723,
+        "predictions": 5989,
+        "tp": 983,
+        "recall": 0.1717630613314695,
+        "fraction": 0.1641342461178828,
+        "error": 1.6990098161491654,
+        "duplicates": 39
+      }
+    ],
+    "sources": [
+      "statistics/causal_mapping_full_001/report.json"
+    ],
+    "note": "38开发场景、11采集log、1508帧；1470帧有过去LiDAR，38缺失帧仍保留。官方GT沿用原sample时刻，较相机晚约33–42ms；动态误差作为时间近似单列，不称完整严格同步GT；范围内未匹配预测含评测关联不足，不全部等同真实误检。不评价导航到达。",
+    "role": "开发证据，非新封存测试"
+  },
+  {
+    "id": "T06",
+    "title": "全连续序列身份：门控口径与未知返回",
+    "columns": [
+      {
+        "key": "method",
+        "label": "方法",
+        "kind": "text"
+      },
+      {
+        "key": "support",
+        "label": "支持口径",
+        "kind": "text"
+      },
+      {
+        "key": "idtp",
+        "label": "IDTP",
+        "kind": "int"
+      },
+      {
+        "key": "idfn",
+        "label": "IDFN",
+        "kind": "int"
+      },
+      {
+        "key": "idfp",
+        "label": "IDFP",
+        "kind": "int"
+      },
+      {
+        "key": "idf1",
+        "label": "IDF1",
+        "kind": "rate"
+      },
+      {
+        "key": "return_opportunities",
+        "label": "返回机会",
+        "kind": "int"
+      },
+      {
+        "key": "return_unknown",
+        "label": "返回未知",
+        "kind": "int"
+      }
+    ],
+    "rows": [
+      {
+        "method": "一对一与深度质量",
+        "support": "全部门控",
+        "idtp": 1558,
+        "idfn": 4165,
+        "idfp": 2387,
+        "idf1": 0.32230037236243275,
+        "return_opportunities": 167,
+        "return_unknown": 148
+      },
+      {
+        "method": "一对一与深度质量",
+        "support": "互唯一门控",
+        "idtp": 1456,
+        "idfn": 4267,
+        "idfp": 2489,
+        "idf1": 0.30119983450558546,
+        "return_opportunities": 167,
+        "return_unknown": 148
+      },
+      {
+        "method": "深度稳健运动组合",
+        "support": "全部门控",
+        "idtp": 1555,
+        "idfn": 4168,
+        "idfp": 2350,
+        "idf1": 0.3230162027420025,
+        "return_opportunities": 167,
+        "return_unknown": 148
+      },
+      {
+        "method": "深度稳健运动组合",
+        "support": "互唯一门控",
+        "idtp": 1450,
+        "idfn": 4273,
+        "idfp": 2455,
+        "idf1": 0.30120481927710846,
+        "return_opportunities": 167,
+        "return_unknown": 148
+      },
+      {
+        "method": "一对一无过期",
+        "support": "全部门控",
+        "idtp": 776,
+        "idfn": 4947,
+        "idfp": 5471,
+        "idf1": 0.12965747702589808,
+        "return_opportunities": 167,
+        "return_unknown": 157
+      },
+      {
+        "method": "一对一无过期",
+        "support": "互唯一门控",
+        "idtp": 694,
+        "idfn": 5029,
+        "idfp": 5553,
+        "idf1": 0.11595655806182122,
+        "return_opportunities": 167,
+        "return_unknown": 157
+      },
+      {
+        "method": "一对一与时间戳",
+        "support": "全部门控",
+        "idtp": 727,
+        "idfn": 4996,
+        "idfp": 4821,
+        "idf1": 0.12900363765415668,
+        "return_opportunities": 167,
+        "return_unknown": 159
+      },
+      {
+        "method": "一对一与时间戳",
+        "support": "互唯一门控",
+        "idtp": 651,
+        "idfn": 5072,
+        "idfp": 4897,
+        "idf1": 0.1155177002927868,
+        "return_opportunities": 167,
+        "return_unknown": 159
+      },
+      {
+        "method": "原融合",
+        "support": "全部门控",
+        "idtp": 769,
+        "idfn": 4954,
+        "idfp": 5211,
+        "idf1": 0.13141929419806886,
+        "return_opportunities": 167,
+        "return_unknown": 157
+      },
+      {
+        "method": "原融合",
+        "support": "互唯一门控",
+        "idtp": 693,
+        "idfn": 5030,
+        "idfp": 5287,
+        "idf1": 0.11843117149448859,
+        "return_opportunities": 167,
+        "return_unknown": 157
+      },
+      {
+        "method": "单帧",
+        "support": "全部门控",
+        "idtp": 214,
+        "idfn": 5509,
+        "idfp": 2555,
+        "idf1": 0.05040037682524729,
+        "return_opportunities": 167,
+        "return_unknown": 163
+      },
+      {
+        "method": "单帧",
+        "support": "互唯一门控",
+        "idtp": 192,
+        "idfn": 5531,
+        "idfp": 2577,
+        "idf1": 0.045219029674988226,
+        "return_opportunities": 167,
+        "return_unknown": 163
+      },
+      {
+        "method": "仅时间戳",
+        "support": "全部门控",
+        "idtp": 761,
+        "idfn": 4962,
+        "idfp": 5228,
+        "idf1": 0.12995218579234974,
+        "return_opportunities": 167,
+        "return_unknown": 157
+      },
+      {
+        "method": "仅时间戳",
+        "support": "互唯一门控",
+        "idtp": 680,
+        "idfn": 5043,
+        "idfp": 5309,
+        "idf1": 0.11612021857923498,
+        "return_opportunities": 167,
+        "return_unknown": 157
+      }
+    ],
+    "sources": [
+      "statistics/temporal_identity_full_001/report.json"
+    ],
+    "note": "38开发场景、11log；3m同类别XY中心门控适配，非官方MOT成绩。IDFP是该门控身份定义的计数；不直接等同完整检测误检率。IDF1受检测覆盖影响；自动关联不是人工身份真值，未知返回不计作成功或错误。",
+    "role": "开发证据，非新封存测试"
+  },
+  {
+    "id": "T07",
+    "title": "公平三任务验证：全部模型及三个新训练种子",
+    "columns": [
+      {
+        "key": "task",
+        "label": "任务",
+        "kind": "text"
+      },
+      {
+        "key": "model",
+        "label": "模型/种子",
+        "kind": "text"
+      },
+      {
+        "key": "correct",
+        "label": "正确数",
+        "kind": "int"
+      },
+      {
+        "key": "requests",
+        "label": "相同请求",
+        "kind": "int"
+      },
+      {
+        "key": "accuracy",
+        "label": "准确率",
+        "kind": "rate"
+      },
+      {
+        "key": "lower",
+        "label": "95%下限",
+        "kind": "rate"
+      },
+      {
+        "key": "upper",
+        "label": "95%上限",
+        "kind": "rate"
+      },
+      {
+        "key": "clusters",
+        "label": "聚类数",
+        "kind": "int"
+      }
+    ],
+    "rows": [
+      {
+        "task": "candidate_rerank",
+        "model": "基础Qwen",
+        "correct": 38,
+        "requests": 180,
+        "accuracy": 0.2111111111111111,
+        "lower": 0.11666666666666667,
+        "upper": 0.32222222222222224,
+        "clusters": 6
+      },
+      {
+        "task": "candidate_rerank",
+        "model": "旧Adapter",
+        "correct": 39,
+        "requests": 180,
+        "accuracy": 0.21666666666666667,
+        "lower": 0.11666666666666667,
+        "upper": 0.3333333333333333,
+        "clusters": 6
+      },
+      {
+        "task": "candidate_rerank",
+        "model": "新Adapter/17",
+        "correct": 57,
+        "requests": 180,
+        "accuracy": 0.31666666666666665,
+        "lower": 0.18333333333333332,
+        "upper": 0.4668055555555561,
+        "clusters": 6
+      },
+      {
+        "task": "candidate_rerank",
+        "model": "新Adapter/29",
+        "correct": 51,
+        "requests": 180,
+        "accuracy": 0.2833333333333333,
+        "lower": 0.16111111111111112,
+        "upper": 0.41708333333333486,
+        "clusters": 6
+      },
+      {
+        "task": "candidate_rerank",
+        "model": "新Adapter/43",
+        "correct": 51,
+        "requests": 180,
+        "accuracy": 0.2833333333333333,
+        "lower": 0.16111111111111112,
+        "upper": 0.4222222222222222,
+        "clusters": 6
+      },
+      {
+        "task": "object_attributes",
+        "model": "基础Qwen",
+        "correct": 214,
+        "requests": 243,
+        "accuracy": 0.8806584362139918,
+        "lower": 0.8571428571428571,
+        "upper": 0.8877005347593583,
+        "clusters": 2
+      },
+      {
+        "task": "object_attributes",
+        "model": "旧Adapter",
+        "correct": 213,
+        "requests": 243,
+        "accuracy": 0.8765432098765432,
+        "lower": 0.8571428571428571,
+        "upper": 0.8823529411764706,
+        "clusters": 2
+      },
+      {
+        "task": "object_attributes",
+        "model": "新Adapter/17",
+        "correct": 227,
+        "requests": 243,
+        "accuracy": 0.934156378600823,
+        "lower": 0.93048128342246,
+        "upper": 0.9464285714285714,
+        "clusters": 2
+      },
+      {
+        "task": "object_attributes",
+        "model": "新Adapter/29",
+        "correct": 226,
+        "requests": 243,
+        "accuracy": 0.9300411522633745,
+        "lower": 0.9251336898395722,
+        "upper": 0.9464285714285714,
+        "clusters": 2
+      },
+      {
+        "task": "object_attributes",
+        "model": "新Adapter/43",
+        "correct": 231,
+        "requests": 243,
+        "accuracy": 0.9506172839506173,
+        "lower": 0.9464285714285714,
+        "upper": 0.9518716577540107,
+        "clusters": 2
+      },
+      {
+        "task": "query_parse",
+        "model": "基础Qwen",
+        "correct": 8,
+        "requests": 180,
+        "accuracy": 0.044444444444444446,
+        "lower": 0.0196078431372549,
+        "upper": 0.05426356589147287,
+        "clusters": 2
+      },
+      {
+        "task": "query_parse",
+        "model": "旧Adapter",
+        "correct": 74,
+        "requests": 180,
+        "accuracy": 0.4111111111111111,
+        "lower": 0.3798449612403101,
+        "upper": 0.49019607843137253,
+        "clusters": 2
+      },
+      {
+        "task": "query_parse",
+        "model": "新Adapter/17",
+        "correct": 150,
+        "requests": 180,
+        "accuracy": 0.8333333333333334,
+        "lower": 0.8217054263565892,
+        "upper": 0.8627450980392157,
+        "clusters": 2
+      },
+      {
+        "task": "query_parse",
+        "model": "新Adapter/29",
+        "correct": 150,
+        "requests": 180,
+        "accuracy": 0.8333333333333334,
+        "lower": 0.8217054263565892,
+        "upper": 0.8627450980392157,
+        "clusters": 2
+      },
+      {
+        "task": "query_parse",
+        "model": "新Adapter/43",
+        "correct": 150,
+        "requests": 180,
+        "accuracy": 0.8333333333333334,
+        "lower": 0.8217054263565892,
+        "upper": 0.8627450980392157,
+        "clusters": 2
+      }
+    ],
+    "sources": [
+      "statistics/fair_three_task_full_validation_001/report.json"
+    ],
+    "note": "query_parse=指令解析；object_attributes此处只计crop粗类别；candidate_rerank=候选排序。每模型603相同请求；包含缓存复用，不等于603次新CUDA调用。解析为构造语法，crop和解析只有2验证log，排序为6受控符号bank，区间不稳定。无人工颜色细属性准确率信用，也不代表导航改善。",
+    "role": "开发证据，非新封存测试"
+  },
+  {
+    "id": "T08",
+    "title": "KITTI Object：对象定位诊断",
+    "columns": [
+      {
+        "key": "method",
+        "label": "方法",
+        "kind": "text"
+      },
+      {
+        "key": "truth",
+        "label": "GT数",
+        "kind": "int"
+      },
+      {
+        "key": "predictions",
+        "label": "预测数",
+        "kind": "int"
+      },
+      {
+        "key": "matched",
+        "label": "3D匹配",
+        "kind": "int"
+      },
+      {
+        "key": "recall",
+        "label": "3D召回",
+        "kind": "rate"
+      },
+      {
+        "key": "pairs",
+        "label": "共同条件对",
+        "kind": "int"
+      },
+      {
+        "key": "conditional_error",
+        "label": "共同条件误差/m",
+        "kind": "float"
+      }
+    ],
+    "rows": [
+      {
+        "method": "mask点均值",
+        "truth": 319,
+        "predictions": 365,
+        "matched": 247,
+        "recall": 0.774294670846395,
+        "pairs": 251,
+        "conditional_error": 1.757596527083328
+      },
+      {
+        "method": "mask点稳健均值",
+        "truth": 319,
+        "predictions": 365,
+        "matched": 262,
+        "recall": 0.8213166144200627,
+        "pairs": 251,
+        "conditional_error": 1.539655934237799
+      }
+    ],
+    "sources": [
+      "statistics/kitti_object_cpu_full_001/report.json"
+    ],
+    "note": "KITTI Object training均匀64帧、33个原始drive；CPU真实前端。同类别最大基数一对一；2D IoU>=0.5；3D相机0中心距离<=3m；不是官方KITTI AP。条件中心误差使用共同251对；检测匹配集合误差不能混为同一指标。预训练重叠未知，导航到达信用0。",
+    "role": "开发证据，非新封存测试"
+  },
+  {
+    "id": "T09",
+    "title": "KITTI Object：稳健均值减普通均值的配对差",
+    "columns": [
+      {
+        "key": "metric",
+        "label": "指标",
+        "kind": "text"
+      },
+      {
+        "key": "unit",
+        "label": "单位",
+        "kind": "text"
+      },
+      {
+        "key": "difference",
+        "label": "差值",
+        "kind": "float"
+      },
+      {
+        "key": "lower",
+        "label": "95%下限",
+        "kind": "float"
+      },
+      {
+        "key": "upper",
+        "label": "95%上限",
+        "kind": "float"
+      },
+      {
+        "key": "resamples",
+        "label": "有效重采样",
+        "kind": "int"
+      }
+    ],
+    "rows": [
+      {
+        "metric": "recall_3d",
+        "unit": "百分点",
+        "difference": 4.702194357366762,
+        "lower": 1.4835854229270793,
+        "upper": 9.065799639454026,
+        "resamples": 4000
+      },
+      {
+        "metric": "precision_3d_all_detections",
+        "unit": "百分点",
+        "difference": 4.109589041095896,
+        "lower": 1.324459511545611,
+        "upper": 7.837494402149573,
+        "resamples": 4000
+      },
+      {
+        "metric": "conditional_center_error_m",
+        "unit": "m",
+        "difference": -0.21794059284552914,
+        "lower": -0.4441017720376354,
+        "upper": -0.047420101393901064,
+        "resamples": 4000
+      }
+    ],
+    "sources": [
+      "statistics/kitti_object_cpu_full_001/report.json"
+    ],
+    "note": "按原始drive配对聚类bootstrap，4000次，seed17；召回/匹配预测比例差在本表已×100为百分点，误差差保留米，CSV同口径。负误差表示下降。KITTI Object training均匀64帧、33个原始drive；CPU真实前端。同类别最大基数一对一；2D IoU>=0.5；3D相机0中心距离<=3m；不是官方KITTI AP。条件中心误差使用共同251对；检测匹配集合误差不能混为同一指标。预训练重叠未知，导航到达信用0。",
+    "role": "开发证据，非新封存测试"
+  },
+  {
+    "id": "T10",
+    "title": "KITTI Object：逐类结果及负结果",
+    "columns": [
+      {
+        "key": "category",
+        "label": "类别",
+        "kind": "text"
+      },
+      {
+        "key": "method",
+        "label": "方法",
+        "kind": "text"
+      },
+      {
+        "key": "truth",
+        "label": "GT数",
+        "kind": "int"
+      },
+      {
+        "key": "matched",
+        "label": "匹配数",
+        "kind": "int"
+      },
+      {
+        "key": "recall",
+        "label": "召回",
+        "kind": "rate"
+      },
+      {
+        "key": "pairs",
+        "label": "条件对数",
+        "kind": "int"
+      },
+      {
+        "key": "error",
+        "label": "条件误差/m",
+        "kind": "float"
+      }
+    ],
+    "rows": [
+      {
+        "category": "car",
+        "method": "mask点均值",
+        "truth": 279,
+        "matched": 231,
+        "recall": 0.8279569892473119,
+        "pairs": 234,
+        "error": 1.7330285294803596
+      },
+      {
+        "category": "car",
+        "method": "mask点稳健均值",
+        "truth": 279,
+        "matched": 243,
+        "recall": 0.8709677419354839,
+        "pairs": 234,
+        "error": 1.5795112074764943
+      },
+      {
+        "category": "truck",
+        "method": "mask点均值",
+        "truth": 9,
+        "matched": 4,
+        "recall": 0.4444444444444444,
+        "pairs": 5,
+        "error": 2.7679628840631088
+      },
+      {
+        "category": "truck",
+        "method": "mask点稳健均值",
+        "truth": 9,
+        "matched": 4,
+        "recall": 0.4444444444444444,
+        "pairs": 5,
+        "error": 2.888093656959698
+      },
+      {
+        "category": "pedestrian",
+        "method": "mask点均值",
+        "truth": 31,
+        "matched": 12,
+        "recall": 0.3870967741935484,
+        "pairs": 12,
+        "error": 1.8156864982662986
+      },
+      {
+        "category": "pedestrian",
+        "method": "mask点稳健均值",
+        "truth": 31,
+        "matched": 15,
+        "recall": 0.4838709677419355,
+        "pairs": 12,
+        "error": 0.20062905494911468
+      },
+      {
+        "category": "bicycle",
+        "method": "mask点均值",
+        "truth": 20,
+        "matched": 6,
+        "recall": 0.3,
+        "pairs": 0,
+        "error": null
+      },
+      {
+        "category": "bicycle",
+        "method": "mask点稳健均值",
+        "truth": 20,
+        "matched": 7,
+        "recall": 0.35,
+        "pairs": 0,
+        "error": null
+      }
+    ],
+    "sources": [
+      "statistics/kitti_object_cpu_full_001/report.json"
+    ],
+    "note": "KITTI Object training均匀64帧、33个原始drive；CPU真实前端。同类别最大基数一对一；2D IoU>=0.5；3D相机0中心距离<=3m；不是官方KITTI AP。条件中心误差使用共同251对；检测匹配集合误差不能混为同一指标。预训练重叠未知，导航到达信用0。保留Truck条件误差恶化；无有效分母用未知，不填0。bicycle行是Cyclist代理，20个GT，普通/稳健3D匹配分别6/7；2D共同条件对均为0，不纳入T08的319个主类别GT；代理不等同Cyclist完整检测能力。",
+    "role": "开发证据，非新封存测试"
+  },
+  {
+    "id": "T11",
+    "title": "KITTI Tracking：连续车载窗口对象评价",
+    "columns": [
+      {
+        "key": "method",
+        "label": "方法",
+        "kind": "text"
+      },
+      {
+        "key": "truth",
+        "label": "支持GT观测",
+        "kind": "int"
+      },
+      {
+        "key": "predictions",
+        "label": "预测观测",
+        "kind": "int"
+      },
+      {
+        "key": "tp",
+        "label": "匹配数",
+        "kind": "int"
+      },
+      {
+        "key": "unmatched",
+        "label": "未匹配预测",
+        "kind": "int"
+      },
+      {
+        "key": "recall",
+        "label": "召回",
+        "kind": "rate"
+      },
+      {
+        "key": "fraction",
+        "label": "匹配预测比例",
+        "kind": "rate"
+      },
+      {
+        "key": "error",
+        "label": "匹配误差/m",
+        "kind": "float"
+      }
+    ],
+    "rows": [
+      {
+        "method": "单帧",
+        "truth": 74,
+        "predictions": 158,
+        "tp": 4,
+        "unmatched": 154,
+        "recall": 0.05405405405405406,
+        "fraction": 0.02531645569620253,
+        "error": 1.9076520765929503
+      },
+      {
+        "method": "原融合",
+        "truth": 74,
+        "predictions": 319,
+        "tp": 5,
+        "unmatched": 314,
+        "recall": 0.06756756756756757,
+        "fraction": 0.01567398119122257,
+        "error": 1.7839033730703284
+      },
+      {
+        "method": "深度稳健运动组合",
+        "truth": 74,
+        "predictions": 279,
+        "tp": 63,
+        "unmatched": 216,
+        "recall": 0.8513513513513513,
+        "fraction": 0.22580645161290322,
+        "error": 1.3212375358183235
+      }
+    ],
+    "sources": [
+      "statistics/kitti_tracking_full_001/report.json"
+    ],
+    "note": "0000/0005/0013各中心30帧，共90帧；仅0005具有本主类别GT，合计74观测/4实例，其余原始Van/DontCare等保留，不能称三个有效正例序列。一个RGB与Object重合，不计独立样本。未匹配包含DontCare/未支持类别，匹配预测比例不是完整精确率；非官方KITTI AP/HOTA，无导航到达信用。",
+    "role": "开发证据，非新封存测试"
+  },
+  {
+    "id": "T12",
+    "title": "KITTI Tracking：身份计数及IDF1",
+    "columns": [
+      {
+        "key": "method",
+        "label": "方法",
+        "kind": "text"
+      },
+      {
+        "key": "support",
+        "label": "支持口径",
+        "kind": "text"
+      },
+      {
+        "key": "idtp",
+        "label": "IDTP",
+        "kind": "int"
+      },
+      {
+        "key": "idfn",
+        "label": "IDFN",
+        "kind": "int"
+      },
+      {
+        "key": "idfp",
+        "label": "IDFP",
+        "kind": "int"
+      },
+      {
+        "key": "idf1",
+        "label": "IDF1",
+        "kind": "rate"
+      },
+      {
+        "key": "lower",
+        "label": "95%下限",
+        "kind": "rate"
+      },
+      {
+        "key": "upper",
+        "label": "95%上限",
+        "kind": "rate"
+      }
+    ],
+    "rows": [
+      {
+        "method": "深度稳健运动组合",
+        "support": "全部门控",
+        "idtp": 63,
+        "idfn": 11,
+        "idfp": 216,
+        "idf1": 0.35694050991501414,
+        "lower": 0.0,
+        "upper": 0.7455621301775148
+      },
+      {
+        "method": "深度稳健运动组合",
+        "support": "互唯一门控",
+        "idtp": 63,
+        "idfn": 11,
+        "idfp": 216,
+        "idf1": 0.35694050991501414,
+        "lower": 0.0,
+        "upper": 0.7455621301775148
+      },
+      {
+        "method": "原融合",
+        "support": "全部门控",
+        "idtp": 5,
+        "idfn": 69,
+        "idfp": 314,
+        "idf1": 0.02544529262086514,
+        "lower": 0.0,
+        "upper": 0.05405405405405406
+      },
+      {
+        "method": "原融合",
+        "support": "互唯一门控",
+        "idtp": 5,
+        "idfn": 69,
+        "idfp": 314,
+        "idf1": 0.02544529262086514,
+        "lower": 0.0,
+        "upper": 0.05405405405405406
+      },
+      {
+        "method": "单帧",
+        "support": "全部门控",
+        "idtp": 2,
+        "idfn": 72,
+        "idfp": 156,
+        "idf1": 0.017241379310344827,
+        "lower": 0.0,
+        "upper": 0.03076923076923077
+      },
+      {
+        "method": "单帧",
+        "support": "互唯一门控",
+        "idtp": 2,
+        "idfn": 72,
+        "idfp": 156,
+        "idf1": 0.017241379310344827,
+        "lower": 0.0,
+        "upper": 0.03076923076923077
+      }
+    ],
+    "sources": [
+      "statistics/kitti_tracking_full_001/report.json"
+    ],
+    "note": "序列聚类bootstrap4000次，只有一个正例序列导致区间退化/不稳定，不能作为充分跨场景显著性证据。0000/0005/0013各中心30帧，共90帧；仅0005具有本主类别GT，合计74观测/4实例，其余原始Van/DontCare等保留，不能称三个有效正例序列。一个RGB与Object重合，不计独立样本。未匹配包含DontCare/未支持类别，匹配预测比例不是完整精确率；非官方KITTI AP/HOTA，无导航到达信用。",
+    "role": "开发证据，非新封存测试"
+  },
+  {
+    "id": "T13",
+    "title": "CPU语义异步故障：实际暴露与执行计数",
+    "columns": [
+      {
+        "key": "version",
+        "label": "协议版",
+        "kind": "text"
+      },
+      {
+        "key": "condition",
+        "label": "条件",
+        "kind": "text"
+      },
+      {
+        "key": "exposed",
+        "label": "暴露满足",
+        "kind": "bool"
+      },
+      {
+        "key": "calls",
+        "label": "Qwen调用",
+        "kind": "int"
+      },
+      {
+        "key": "frontend",
+        "label": "真实前端",
+        "kind": "int"
+      },
+      {
+        "key": "controls",
+        "label": "控制区间",
+        "kind": "int"
+      },
+      {
+        "key": "expired_queue",
+        "label": "排队过期",
+        "kind": "int"
+      },
+      {
+        "key": "certified",
+        "label": "独立到达证据",
+        "kind": "bool"
+      }
+    ],
+    "rows": [
+      {
+        "version": "001",
+        "condition": "baseline",
+        "exposed": true,
+        "calls": 3,
+        "frontend": 14,
+        "controls": 1794,
+        "expired_queue": 0,
+        "certified": false
+      },
+      {
+        "version": "001",
+        "condition": "backend_exception",
+        "exposed": true,
+        "calls": 3,
+        "frontend": 8,
+        "controls": 990,
+        "expired_queue": 0,
+        "certified": true
+      },
+      {
+        "version": "003",
+        "condition": "empty_output",
+        "exposed": true,
+        "calls": 3,
+        "frontend": 14,
+        "controls": 1862,
+        "expired_queue": 0,
+        "certified": true
+      },
+      {
+        "version": "003",
+        "condition": "malformed_output",
+        "exposed": true,
+        "calls": 3,
+        "frontend": 14,
+        "controls": 1814,
+        "expired_queue": 0,
+        "certified": true
+      },
+      {
+        "version": "003",
+        "condition": "backend_timeout",
+        "exposed": true,
+        "calls": 3,
+        "frontend": 14,
+        "controls": 1877,
+        "expired_queue": 0,
+        "certified": false
+      },
+      {
+        "version": "003",
+        "condition": "late_and_queue_expiry",
+        "exposed": true,
+        "calls": 1,
+        "frontend": 14,
+        "controls": 1831,
+        "expired_queue": 2,
+        "certified": true
+      },
+      {
+        "version": "003",
+        "condition": "binding_changed",
+        "exposed": true,
+        "calls": 3,
+        "frontend": 14,
+        "controls": 1818,
+        "expired_queue": 0,
+        "certified": true
+      },
+      {
+        "version": "003",
+        "condition": "expired_before_delivery",
+        "exposed": true,
+        "calls": 3,
+        "frontend": 14,
+        "controls": 1881,
+        "expired_queue": 0,
+        "certified": true
+      },
+      {
+        "version": "002",
+        "condition": "expired_before_delivery",
+        "exposed": false,
+        "calls": 2,
+        "frontend": 7,
+        "controls": 808,
+        "expired_queue": 0,
+        "certified": true
+      }
+    ],
+    "sources": [
+      "faults/semantic_async_cpu_003/delivery_001/summary.json"
+    ],
+    "note": "同一config00-positive0/seed17的CPU集成，共24次实际Qwen、113次真实前端、14675控制区间；001原终止协议，003固定180秒故障观察窗，002提前到达而故障未暴露的负结果保留。排队过期请求不算模型调用。共享CPU、TTL15秒，不替代正式GPU/TTL1.5秒故障；不增加独立任务或导航到达数。",
+    "role": "开发证据，非新封存测试"
+  },
+  {
+    "id": "T14",
+    "title": "CPU语义异步故障：原四项结果与保持证据",
+    "columns": [
+      {
+        "key": "version",
+        "label": "协议版",
+        "kind": "text"
+      },
+      {
+        "key": "condition",
+        "label": "条件",
+        "kind": "text"
+      },
+      {
+        "key": "route_generated",
+        "label": "生成路线",
+        "kind": "bool"
+      },
+      {
+        "key": "selected_object_evaluated_correct",
+        "label": "选对对象",
+        "kind": "bool"
+      },
+      {
+        "key": "stable_correct_lock",
+        "label": "正确锁定",
+        "kind": "bool"
+      },
+      {
+        "key": "actual_full_perception_arrival",
+        "label": "实际正确到达",
+        "kind": "bool"
+      },
+      {
+        "key": "hold",
+        "label": "完整区间保持/s",
+        "kind": "float"
+      }
+    ],
+    "rows": [
+      {
+        "version": "001",
+        "condition": "baseline",
+        "route_generated": true,
+        "selected_object_evaluated_correct": true,
+        "stable_correct_lock": true,
+        "actual_full_perception_arrival": false,
+        "hold": 0.0
+      },
+      {
+        "version": "001",
+        "condition": "backend_exception",
+        "route_generated": true,
+        "selected_object_evaluated_correct": true,
+        "stable_correct_lock": true,
+        "actual_full_perception_arrival": true,
+        "hold": 3.799999999999784
+      },
+      {
+        "version": "003",
+        "condition": "empty_output",
+        "route_generated": true,
+        "selected_object_evaluated_correct": true,
+        "stable_correct_lock": true,
+        "actual_full_perception_arrival": true,
+        "hold": 18.699999999998937
+      },
+      {
+        "version": "003",
+        "condition": "malformed_output",
+        "route_generated": true,
+        "selected_object_evaluated_correct": true,
+        "stable_correct_lock": true,
+        "actual_full_perception_arrival": true,
+        "hold": 19.89999999999887
+      },
+      {
+        "version": "003",
+        "condition": "backend_timeout",
+        "route_generated": true,
+        "selected_object_evaluated_correct": true,
+        "stable_correct_lock": true,
+        "actual_full_perception_arrival": false,
+        "hold": 0.0
+      },
+      {
+        "version": "003",
+        "condition": "late_and_queue_expiry",
+        "route_generated": true,
+        "selected_object_evaluated_correct": true,
+        "stable_correct_lock": true,
+        "actual_full_perception_arrival": true,
+        "hold": 18.79999999999893
+      },
+      {
+        "version": "003",
+        "condition": "binding_changed",
+        "route_generated": true,
+        "selected_object_evaluated_correct": true,
+        "stable_correct_lock": true,
+        "actual_full_perception_arrival": true,
+        "hold": 19.999999999998863
+      },
+      {
+        "version": "003",
+        "condition": "expired_before_delivery",
+        "route_generated": true,
+        "selected_object_evaluated_correct": true,
+        "stable_correct_lock": true,
+        "actual_full_perception_arrival": true,
+        "hold": 18.699999999998937
+      },
+      {
+        "version": "002",
+        "condition": "expired_before_delivery",
+        "route_generated": true,
+        "selected_object_evaluated_correct": true,
+        "stable_correct_lock": true,
+        "actual_full_perception_arrival": true,
+        "hold": 9.299999999999471
+      }
+    ],
+    "sources": [
+      "faults/semantic_async_cpu_003/delivery_001/summary.json"
+    ],
+    "note": "同一config00-positive0/seed17的CPU集成，共24次实际Qwen、113次真实前端、14675控制区间；001原终止协议，003固定180秒故障观察窗，002提前到达而故障未暴露的负结果保留。排队过期请求不算模型调用。共享CPU、TTL15秒，不替代正式GPU/TTL1.5秒故障；不增加独立任务或导航到达数。保持来自全区间车体/目标身份/方向/速度独立复核。故障回退到达不能归为模型准确率或故障改善导航。",
+    "role": "开发证据，非新封存测试"
+  },
+  {
+    "id": "T15",
+    "title": "固定逻辑三任务缓存：冷与热实际复现",
+    "columns": [
+      {
+        "key": "mode",
+        "label": "模式",
+        "kind": "text"
+      },
+      {
+        "key": "calls",
+        "label": "新增Qwen",
+        "kind": "int"
+      },
+      {
+        "key": "frontend",
+        "label": "真实前端",
+        "kind": "int"
+      },
+      {
+        "key": "controls",
+        "label": "控制区间",
+        "kind": "int"
+      },
+      {
+        "key": "route_generated",
+        "label": "生成路线",
+        "kind": "bool"
+      },
+      {
+        "key": "selected_object_evaluated_correct",
+        "label": "选对对象",
+        "kind": "bool"
+      },
+      {
+        "key": "stable_correct_lock",
+        "label": "正确锁定",
+        "kind": "bool"
+      },
+      {
+        "key": "actual_full_perception_arrival",
+        "label": "实际正确到达",
+        "kind": "bool"
+      },
+      {
+        "key": "hold",
+        "label": "保持/s",
+        "kind": "float"
+      }
+    ],
+    "rows": [
+      {
+        "mode": "cold",
+        "calls": 3,
+        "frontend": 61,
+        "controls": 301,
+        "route_generated": true,
+        "selected_object_evaluated_correct": true,
+        "stable_correct_lock": true,
+        "actual_full_perception_arrival": false,
+        "hold": 1.200000000000017
+      },
+      {
+        "mode": "warm",
+        "calls": 0,
+        "frontend": 61,
+        "controls": 301,
+        "route_generated": true,
+        "selected_object_evaluated_correct": true,
+        "stable_correct_lock": true,
+        "actual_full_perception_arrival": false,
+        "hold": 1.200000000000017
+      }
+    ],
+    "sources": [
+      "reproduction/three_task_fixedlogical_001/independent_audit_001/report.json",
+      "reproduction/three_task_fixedlogical_001/independent_audit_001/cold/report.json",
+      "reproduction/three_task_fixedlogical_001/independent_audit_001/warm/report.json"
+    ],
+    "note": "同一小任务冷/热各61次新前端、301控制；冷3次CPU Qwen，热0且未加载Qwen。8类业务证据逐字一致，61个gzip容器解压业务字节一致，仅头部mtime有差。两次均预算结束未到达，保持仅1.2秒，不能按2秒阈值计到达。逻辑时钟同步协议，不是GPU真实异步性能。",
+    "role": "开发证据，非新封存测试"
+  }
+]

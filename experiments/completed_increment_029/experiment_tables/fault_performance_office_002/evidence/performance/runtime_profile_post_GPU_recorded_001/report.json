@@ -1,0 +1,98 @@
+{
+  "mode": "recorded",
+  "device": "cpu",
+  "variant": "new",
+  "stages": {
+    "Hybrid_Astar_planning/warm": {
+      "calls": 2,
+      "failures": 0,
+      "median_s": 3.8715002225,
+      "p95_s": 4.92953086835,
+      "summed_s": 7.743000445,
+      "successful_calls_per_measured_s": 0.2582978025387418
+    },
+    "bicycle_state_update/warm": {
+      "calls": 391,
+      "failures": 0,
+      "median_s": 2.41e-05,
+      "p95_s": 2.62375e-05,
+      "summed_s": 0.009538480999999986,
+      "successful_calls_per_measured_s": 40991.85184727008
+    },
+    "incremental_relations/warm": {
+      "calls": 10,
+      "failures": 0,
+      "median_s": 0.0007691155000000001,
+      "p95_s": 0.00202026065,
+      "summed_s": 0.010597427000000001,
+      "successful_calls_per_measured_s": 943.6252780981647
+    },
+    "mapping_update/warm": {
+      "calls": 10,
+      "failures": 0,
+      "median_s": 0.009738273499999998,
+      "p95_s": 0.01718903565,
+      "summed_s": 0.11101732099999999,
+      "successful_calls_per_measured_s": 90.07603417128037
+    },
+    "observed_LiDAR_obstacles/warm": {
+      "calls": 10,
+      "failures": 0,
+      "median_s": 0.005530864,
+      "p95_s": 0.007094906599999998,
+      "summed_s": 0.055762943999999995,
+      "successful_calls_per_measured_s": 179.3305604524754
+    },
+    "perception_mapping_planning_total/warm": {
+      "calls": 10,
+      "failures": 0,
+      "median_s": 0.1930515835,
+      "p95_s": 4.167739658649998,
+      "summed_s": 10.393484403999999,
+      "successful_calls_per_measured_s": 0.9621412426569319
+    },
+    "rule_candidate_ranking/warm": {
+      "calls": 10,
+      "failures": 0,
+      "median_s": 0.0005772305,
+      "p95_s": 0.0017410181999999996,
+      "summed_s": 0.007337705,
+      "successful_calls_per_measured_s": 1362.8239347316362
+    },
+    "tracking_control/warm": {
+      "calls": 10,
+      "failures": 0,
+      "median_s": 0.000837273,
+      "p95_s": 0.0036839297999999984,
+      "summed_s": 0.015214821000000002,
+      "successful_calls_per_measured_s": 657.2538710774185
+    },
+    "verified_candidate_chain/warm": {
+      "calls": 10,
+      "failures": 0,
+      "median_s": 0.12039720200000001,
+      "p95_s": 2.9330331277999946,
+      "summed_s": 6.1608924290000004,
+      "successful_calls_per_measured_s": 1.6231414710195062
+    }
+  },
+  "actual": {
+    "recorded_perception_calls": 10,
+    "recomputed_saved_control_states": 391,
+    "new_frontend_calls": 0,
+    "new_closed_loop_executions": 0,
+    "arrival_credit": false
+  },
+  "peak_torch_GPU_allocated_MiB": null,
+  "peak_torch_GPU_reserved_MiB": null,
+  "unique_CUDA_process_verified": false,
+  "samples_are_stage_invocations_not_independent_scenes": true,
+  "nested_stage_times_not_additive": true,
+  "GPU_sync_added_at_frontend_and_semantic_boundaries": false,
+  "CPU_shared_host_no_exclusive_performance_credit": true,
+  "external_GPU_activity_between_half_second_samples_not_excluded": false,
+  "cold_OS_page_cache_not_guaranteed": true,
+  "end_to_end_throughput_credit": false,
+  "independent_test": false,
+  "goal_complete": false
+}

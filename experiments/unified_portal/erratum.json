@@ -1,0 +1,21 @@
+{
+  "updated_utc": "2026-11-12T20:47:08.882508+00:00",
+  "current_portal": "thesis_portal_013",
+  "older_portals_preserved": [
+    "thesis_portal_008",
+    "thesis_portal_009",
+    "thesis_portal_010",
+    "thesis_portal_011",
+    "thesis_portal_012"
+  ],
+  "failed_009": "命令误填区域目录，未生成页面；正确源为reference_regions_reserved_full_003",
+  "failed_010": "缺少JS结束括号，浏览器发现并保留；011修复",
+  "refined_011_012_013": "011检查通过但手机分数换行；012修复数字、方法名称仍多行，QA016行高判据不适当；013方法单行且QA017以文本Range检查分数。",
+  "current_browser_QA_sha256": "6d96bdf5dff09ef31ad4f146747aa1ee4df28f92f57e69c2995524528f39712a",
+  "only_GET": true,
+  "actual_model_calls": 0,
+  "new_executions": 0,
+  "new_arrivals": 0,
+  "manuscript_text_written": false,
+  "goal_complete": false
+}

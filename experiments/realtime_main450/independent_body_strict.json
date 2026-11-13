@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "created_utc": "2026-11-12T19:25:50.871886+00:00",
+  "cases": 450,
+  "totals": {
+    "independent_parked_rectangle_checks": 1350,
+    "independent_barrier_checks": 90,
+    "audited_intervals": 292406,
+    "moving_control_records": 101818,
+    "moving_cases": 315,
+    "certificate_safe_cases": 395,
+    "previously_reported_arrivals": 93,
+    "arrivals_with_body_certificate": 86,
+    "unknown_missing_initial_states": 54,
+    "unknown_missing_complete_results": 1
+  },
+  "status_counts": {
+    "certificate_safe": 395,
+    "unknown_missing_initial_state": 54,
+    "unknown_missing_complete_evidence": 1
+  },
+  "maximum_state_residuals": {
+    "x": 2.8816950170540423e-07,
+    "y": 3.3502440288657453e-07,
+    "yaw_rad": 3.3306690738754696e-16,
+    "speed_mps": 0,
+    "steering_rad": 0,
+    "time_s": 0
+  },
+  "deepest_subdivision": 0,
+  "SHA_files": 2651,
+  "files_manifest_sha256": "aceceeb3019197e01fc6fe0f912d27404306bfa73a8156148f7d9a24f2c92402",
+  "source_sha256": "5669c44aedb95f6cebac4f772555951f3fa11f7e4fd882d88e4bba47ba176eff",
+  "wall_CPU_shared_s": 8.439789067953825,
+  "actual_model_calls": 0,
+  "new_executions": 0,
+  "new_arrivals": 0,
+  "limits": [
+    "逐区间证书和输入账目审核；没有第三套连续车身算法",
+    "缺结果保留未知，原始部分轨迹不增加完整安全证据信用",
+    "不重评语言身份、区域保持或方向；双精度GEOS不是形式化区间算术"
+  ],
+  "goal_complete": false
+}

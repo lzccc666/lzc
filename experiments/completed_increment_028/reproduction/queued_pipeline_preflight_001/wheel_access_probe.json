@@ -1,0 +1,21 @@
+{
+  "recorded_at": "2026-11-13T21:34:56.126406+08:00",
+  "method": "HEAD",
+  "results": [
+    {
+      "package": "torch",
+      "http_status": 200,
+      "content_length": 195422835
+    },
+    {
+      "package": "torchvision",
+      "http_status": 200,
+      "content_length": 1469503
+    }
+  ],
+  "payload_downloaded": false,
+  "payload_hash_verified": false,
+  "wheel_source": "使用隔离环境002冻结plan中的两个官方URL",
+  "installation_completed": false,
+  "goal_complete": false
+}

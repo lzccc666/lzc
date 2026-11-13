@@ -1,0 +1,10 @@
+﻿version,condition,exposed,calls,frontend,controls,expired_queue,certified
+001,baseline,True,3,14,1794,0,False
+001,backend_exception,True,3,8,990,0,True
+003,empty_output,True,3,14,1862,0,True
+003,malformed_output,True,3,14,1814,0,True
+003,backend_timeout,True,3,14,1877,0,False
+003,late_and_queue_expiry,True,1,14,1831,2,True
+003,binding_changed,True,3,14,1818,0,True
+003,expired_before_delivery,True,3,14,1881,0,True
+002,expired_before_delivery,False,2,7,808,0,True

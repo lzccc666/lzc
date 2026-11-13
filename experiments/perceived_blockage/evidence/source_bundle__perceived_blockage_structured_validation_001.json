@@ -1,0 +1,15 @@
+{
+  "passed_with_explicit_historical_partial": true,
+  "valid_structured_files": 218,
+  "valid_JSON_or_JSONL_records": 10273,
+  "expected_failed_partials": {
+    "faults/perceived_blockage_cpu_002/rule_blockage/independent_audit_001/barrier_sensor_and_path_details.json": {
+      "error": "Expecting value: line 5 column 16 (char 70)",
+      "sha256": "e3b95bb77d79befd71b9cd54d0494397f02c333098bd3e054434f26eb9817501",
+      "expected_historical_failed_partial": true
+    }
+  },
+  "failed_partial_deleted_or_modified": false,
+  "actual_new_model_calls": 0,
+  "goal_complete": false
+}

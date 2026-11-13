@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "viewport": "desktop",
+      "actual_label": "当前条件：lidar_dropout_80pct；当帧故障生效：否；实际触发：未知（缺少完整终态）；进程超时：是",
+      "outcomes": [
+        "生成路线：结果未保存",
+        "选对对象：结果未保存",
+        "正确锁定：结果未保存",
+        "实际到达：结果未保存"
+      ],
+      "unknown_not_false": true,
+      "missing_results_not_success": true
+    },
+    {
+      "viewport": "mobile",
+      "actual_label": "当前条件：lidar_dropout_80pct；当帧故障生效：否；实际触发：未知（缺少完整终态）；进程超时：是",
+      "outcomes": [
+        "生成路线：结果未保存",
+        "选对对象：结果未保存",
+        "正确锁定：结果未保存",
+        "实际到达：结果未保存"
+      ],
+      "unknown_not_false": true,
+      "missing_results_not_success": true
+    }
+  ],
+  "actual_failed_run": "realtime_faults_gpu_full_001_lidar_dropout_80pct_config01_positive0_s29",
+  "failed_process_wall_s": 240.49840424768627,
+  "original_raw_sources": {
+    "perception.jsonl": "c960c3cb5f5c9f20d4752008dee927cba4152c4bed2e139e3b380ea9b3b919d4",
+    "execution.jsonl": "f1edb5d386dfea61356feb82def132e7c0d2412fd15454f44e6383b6fb45313a"
+  },
+  "viewer_source_sha256": "41755d29e80821efb033e235fcaaddf8a37d78e15dd73ae9f2866deb85631687",
+  "checker_source_sha256": "9e564ff4dc24785a913573413e8638401a9d8b7947532876e84001039d6e860a",
+  "route_injection_is_UI_fixture": true,
+  "production_matrix_modified": false,
+  "actual_model_calls": 0,
+  "new_executions": 0,
+  "new_arrivals": 0,
+  "page_errors": [],
+  "goal_complete": false
+}

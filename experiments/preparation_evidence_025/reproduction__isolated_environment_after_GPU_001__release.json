@@ -1,0 +1,36 @@
+{
+  "prepared_utc": "2026-11-13T05:03:20.305000+00:00",
+  "source_sha256": {
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/isolated_cpu_environment_pack_002.py": "72570494138dfaff5405997af55dd28cf425ebc8a9663234cbd5d024241e9593",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/standalone_cpu_runner_003.py": "372275da9b3d637ad5dbafe23d4421b7074664144eadef72bbe4e54c7d47da66",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/prepare_isolated_environment_navigation_001.py": "dd34c4e60ddc89575383e43feaf3d2aeb8e9dd475af7c6803f42790018b94d79",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/isolated_environment_navigation_audit_001.py": "df0270bcab22d23e19bf31c91ddc87efb27a8047e3324a3c1b0fa1d5ce3334c1",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/isolated_environment_after_GPU_001.py": "dca0fb75f1cc7df3e453b2048ce5afc8bb2117138c9f5443032d2af8e2a9b110",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/reproduction/isolated_cpu_environment_002/plan.json": "e760db7fb913b5149abe3aa2007b1d92055fbd97bd3f73e067e0e7a67bd9ad65",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/reproduction/standalone_portable_release_001/release.json": "eedccf68bde715ea4ff5f5dac96c861ee921cf2b24350284562b240b5dcf1a32"
+  },
+  "queue_process_pid": 425561,
+  "queue_process_start_ticks": "1383255247",
+  "original_process_start_ticks": {
+    "268029": "1379768112",
+    "38569": "1375457897",
+    "288085": "1380200568",
+    "199838": "1378262585",
+    "211077": "1378476126",
+    "327549": "1381066932"
+  },
+  "maximum_wait_s": 176400,
+  "maximum_execution_wall_s": 7200,
+  "minimum_free_bytes_before_install": 11000000000,
+  "minimum_free_bytes_during_execution": 6000000000,
+  "new_environment_storage_budget_bytes": 5000000000,
+  "navigation_storage_budget_bytes": 500000000,
+  "model_policy": "新环境CPU前端；不启动Qwen，不初始化CUDA；原GPU队列全部终止且GPU空闲后启动",
+  "earlier_failures_preserved_and_not_assumed_successful": true,
+  "frozen_main_table_credit": false,
+  "new_independent_scene_credit": 0,
+  "shared_base_Python_standard_library_and_native_libraries_declared": true,
+  "queued_work_is_not_completed": true,
+  "new_test_opened": false,
+  "goal_complete": false
+}

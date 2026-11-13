@@ -1,0 +1,87 @@
+{
+  "statistics/realtime_three_model_full_001/report.json": {
+    "sha256": "84343e10311932d4f5efac759ebfbdd0b9cfd57ea01a196ebc75192f8c6ac32a",
+    "bytes": 33399,
+    "package_path": "evidence/statistics/realtime_three_model_full_001/report.json"
+  },
+  "statistics/realtime_three_model_full_001/trials.csv": {
+    "sha256": "8fc8372c97cf9c375201d6950723516f1d159429136b06de109d88c62d446904",
+    "bytes": 71755,
+    "package_path": "evidence/statistics/realtime_three_model_full_001/trials.csv"
+  },
+  "statistics/causal_mapping_full_001/report.json": {
+    "sha256": "577e0cdc3ab6ea293a6d232c6304312151229165c7d83b70c9d82ec08ec3dac9",
+    "bytes": 59520,
+    "package_path": "evidence/statistics/causal_mapping_full_001/report.json"
+  },
+  "statistics/temporal_identity_full_001/report.json": {
+    "sha256": "62e6667882206c8c84ac2ac925e0dc796a0b663dcc44c7a7116cbb158c2d498a",
+    "bytes": 81573,
+    "package_path": "evidence/statistics/temporal_identity_full_001/report.json"
+  },
+  "statistics/fair_three_task_full_validation_001/report.json": {
+    "sha256": "edeae971bf93f20e9306a6fb12d1566f2b778fa83c1f8ac2bf3041fbeab4552c",
+    "bytes": 374241,
+    "package_path": "evidence/statistics/fair_three_task_full_validation_001/report.json"
+  },
+  "statistics/kitti_object_cpu_full_001/report.json": {
+    "sha256": "f9d721a62720bdf668133c29d9c4e09e1834056346c81ad6df616d272deb8d24",
+    "bytes": 23964,
+    "package_path": "evidence/statistics/kitti_object_cpu_full_001/report.json"
+  },
+  "statistics/kitti_tracking_full_001/report.json": {
+    "sha256": "692eaf9ea640621b8500bb8053655e8bdfc0f5e6076ef9998001ca4c664e7de0",
+    "bytes": 31212,
+    "package_path": "evidence/statistics/kitti_tracking_full_001/report.json"
+  },
+  "faults/semantic_async_cpu_003/delivery_001/summary.json": {
+    "sha256": "1227289b76bdc1e4295ac3527bacf4fa9685afdb581760b61c5860a53c060fbf",
+    "bytes": 18116,
+    "package_path": "evidence/faults/semantic_async_cpu_003/delivery_001/summary.json"
+  },
+  "reproduction/three_task_fixedlogical_001/independent_audit_001/report.json": {
+    "sha256": "df70c27a06d6814228c689d2e543ff149c83a9d518f976460ff35eeb5899ce16",
+    "bytes": 3035,
+    "package_path": "evidence/reproduction/three_task_fixedlogical_001/independent_audit_001/report.json"
+  },
+  "reproduction/three_task_fixedlogical_001/independent_audit_001/cold/report.json": {
+    "sha256": "feb995728a570eb05de6d93b68382724be78712081f04b2adf4220b12218b6b5",
+    "bytes": 648,
+    "package_path": "evidence/reproduction/three_task_fixedlogical_001/independent_audit_001/cold/report.json"
+  },
+  "reproduction/three_task_fixedlogical_001/independent_audit_001/warm/report.json": {
+    "sha256": "26d61c73aee262ae0e8e26614279f72a37b85db4ceba2b9b8e4edf2e73d66179",
+    "bytes": 648,
+    "package_path": "evidence/reproduction/three_task_fixedlogical_001/independent_audit_001/warm/report.json"
+  },
+  "statistics/main_matrix_evidence_check_001/report.json": {
+    "sha256": "fa12f3273131c9694e04d53a8e6b08601bc31f5e90ead02e1a9fcb1180950574",
+    "bytes": 1483,
+    "package_path": "evidence/statistics/main_matrix_evidence_check_001/report.json"
+  },
+  "statistics/kitti_tracking_full_001/independent_audit_002/report.json": {
+    "sha256": "070e5a16b07af77855e7403972a65ebd27584172363e6df99498af698ef536db",
+    "bytes": 1288,
+    "package_path": "evidence/statistics/kitti_tracking_full_001/independent_audit_002/report.json"
+  },
+  "statistics/kitti_tracking_full_001/scope_audit_002/report.json": {
+    "sha256": "a1fb2a50722d05a0ac3dd2b99bf050ee515b8fec7e2d15ce21fa394f321db958",
+    "bytes": 3280,
+    "package_path": "evidence/statistics/kitti_tracking_full_001/scope_audit_002/report.json"
+  },
+  "statistics/kitti_tracking_full_001/identity_by_sequence.json": {
+    "sha256": "53b2561e678ec149f5ac9b8c1777c041125de56df3d9ffac091a6c6e9d70503d",
+    "bytes": 16213,
+    "package_path": "evidence/statistics/kitti_tracking_full_001/identity_by_sequence.json"
+  },
+  "statistics/kitti_tracking_full_001/identity_rows.json": {
+    "sha256": "03c538ded4cfdd97af7f3e87826e97fd0643b62fa6f192d6300bf76a69cc1d5c",
+    "bytes": 17941,
+    "package_path": "evidence/statistics/kitti_tracking_full_001/identity_rows.json"
+  },
+  "faults/semantic_async_cpu_003/delivery_001/independent_call_and_execution_ledger_001.json": {
+    "sha256": "ff45d7c7f25c4bc3337771b3da3fd7e4a62c4e61424be4becf2035a5c19cbcd6",
+    "bytes": 25170,
+    "package_path": "evidence/faults/semantic_async_cpu_003/delivery_001/independent_call_and_execution_ledger_001.json"
+  }
+}

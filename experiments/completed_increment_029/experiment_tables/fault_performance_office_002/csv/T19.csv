@@ -1,0 +1,7 @@
+﻿condition,denominator,route_generated,selected_object_evaluated_correct,stable_correct_lock,actual_full_perception_arrival
+无注入基线,30,30,30,30,3
+断流4秒,30,30,30,28,0
+LiDAR丢失80%,30,29,29,28,1
+深度噪声0.2米,30,30,30,30,2
+位姿噪声0.25米/2度,30,29,30,29,2
+检测丢失30%,30,30,30,30,2

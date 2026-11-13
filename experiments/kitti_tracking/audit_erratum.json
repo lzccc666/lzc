@@ -1,0 +1,14 @@
+{
+  "failed": "independent_audit_001/interrupted.json",
+  "original_failure": {
+    "error": "AssertionError()",
+    "goal_complete": false
+  },
+  "replacement": "independent_audit_002/report.json",
+  "change": "只把独立浮点区间比较从逐位相等改成绝对1e-12且rtol0；整数计数与有效重采样数仍精确相等",
+  "maximum_interval_difference_rounded_femtounits": 0,
+  "model_calls_added": 0,
+  "results_rewritten": false,
+  "primary_report_unchanged_sha256": "692eaf9ea640621b8500bb8053655e8bdfc0f5e6076ef9998001ca4c664e7de0",
+  "goal_complete": false
+}

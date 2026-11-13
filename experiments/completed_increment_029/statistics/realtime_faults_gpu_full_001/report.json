@@ -1,0 +1,1550 @@
+{
+  "source_run": "realtime_faults_gpu_full_001",
+  "source_release_sha256": "8f19f317f6bd4c7ef91011043df3c44bab4309c9bda5f4125ceb27a80d9acd7c",
+  "source_summary_sha256": "c6231a070003b6774af8aa6ba3f66f21759c95ee2081b27ff355b20eb0afb61c",
+  "source_records_sha256": "0a9913e10df2da0dfeb1fb067fe79959634cfaddd2143ecd53adf5ea64c2f528",
+  "statistics_source_sha256": "49e94d16ccb9843520bd8595e882fda0e167e8f3160001123cd0211ad7787b59",
+  "audited_trials_sha256": "280333b1c6c7e26b59b741404277761f05170a22a283789812c31ef1948a2eb0",
+  "trials": 180,
+  "methods": {
+    "baseline": {
+      "by_kind": {
+        "reachable_positive": {
+          "trials": 30,
+          "unique_tasks": 10,
+          "configs": 10,
+          "statuses": {
+            "SEARCH_EXHAUSTED_WITHOUT_VERIFIED_MATCH": 7,
+            "WALL_CLOCK_TIMEOUT": 20,
+            "ARRIVED": 3
+          },
+          "four_outcomes": {
+            "route_generated": {
+              "estimate": 1.0,
+              "ci95": [
+                1.0,
+                1.0
+              ],
+              "clusters": 10,
+              "denominator": 30,
+              "numerator": 30.0
+            },
+            "selected_object_evaluated_correct": {
+              "estimate": 1.0,
+              "ci95": [
+                1.0,
+                1.0
+              ],
+              "clusters": 10,
+              "denominator": 30,
+              "numerator": 30.0
+            },
+            "stable_correct_lock": {
+              "estimate": 1.0,
+              "ci95": [
+                1.0,
+                1.0
+              ],
+              "clusters": 10,
+              "denominator": 30,
+              "numerator": 30.0
+            },
+            "actual_full_perception_arrival": {
+              "estimate": 0.1,
+              "ci95": [
+                0.0,
+                0.2
+              ],
+              "clusters": 10,
+              "denominator": 30,
+              "numerator": 3.0
+            }
+          },
+          "any_lock": {
+            "estimate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "clusters": 10,
+            "denominator": 30,
+            "numerator": 30.0
+          },
+          "actually_moving_trials": 30,
+          "safety_among_moving": {
+            "estimate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "clusters": 10,
+            "denominator": 30,
+            "numerator": 30.0
+          },
+          "stationary_audited_trials": 0,
+          "all_audits_passed": 30,
+          "independent_audited_trials": 30,
+          "seeds": {
+            "17": {
+              "trials": 10,
+              "four_outcomes": {
+                "route_generated": 10,
+                "selected_object_evaluated_correct": 10,
+                "stable_correct_lock": 10,
+                "actual_full_perception_arrival": 0
+              }
+            },
+            "29": {
+              "trials": 10,
+              "four_outcomes": {
+                "route_generated": 10,
+                "selected_object_evaluated_correct": 10,
+                "stable_correct_lock": 10,
+                "actual_full_perception_arrival": 3
+              }
+            },
+            "43": {
+              "trials": 10,
+              "four_outcomes": {
+                "route_generated": 10,
+                "selected_object_evaluated_correct": 10,
+                "stable_correct_lock": 10,
+                "actual_full_perception_arrival": 0
+              }
+            }
+          }
+        }
+      },
+      "functional_evidence": {
+        "arrivals": 3,
+        "distinct_positive_tasks": 3,
+        "scene_configs": 3,
+        "minimum_10_tasks_5_configs": false
+      },
+      "safety_denominator": "实际保存轨迹长度>0.01m；静止审计单列；零路径不获得100%安全信用",
+      "no_match_interpretation": "无匹配集合内任何锁定均为误锁；证据不足拒绝不等于已证明全道路无目标"
+    },
+    "depth_noise_02m": {
+      "by_kind": {
+        "reachable_positive": {
+          "trials": 30,
+          "unique_tasks": 10,
+          "configs": 10,
+          "statuses": {
+            "WALL_CLOCK_TIMEOUT": 14,
+            "SEARCH_EXHAUSTED_WITHOUT_VERIFIED_MATCH": 14,
+            "ARRIVED": 2
+          },
+          "four_outcomes": {
+            "route_generated": {
+              "estimate": 1.0,
+              "ci95": [
+                1.0,
+                1.0
+              ],
+              "clusters": 10,
+              "denominator": 30,
+              "numerator": 30.0
+            },
+            "selected_object_evaluated_correct": {
+              "estimate": 1.0,
+              "ci95": [
+                1.0,
+                1.0
+              ],
+              "clusters": 10,
+              "denominator": 30,
+              "numerator": 30.0
+            },
+            "stable_correct_lock": {
+              "estimate": 1.0,
+              "ci95": [
+                1.0,
+                1.0
+              ],
+              "clusters": 10,
+              "denominator": 30,
+              "numerator": 30.0
+            },
+            "actual_full_perception_arrival": {
+              "estimate": 0.06666666666666667,
+              "ci95": [
+                0.0,
+                0.16666666666666666
+              ],
+              "clusters": 10,
+              "denominator": 30,
+              "numerator": 2.0
+            }
+          },
+          "any_lock": {
+            "estimate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "clusters": 10,
+            "denominator": 30,
+            "numerator": 30.0
+          },
+          "actually_moving_trials": 30,
+          "safety_among_moving": {
+            "estimate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "clusters": 10,
+            "denominator": 30,
+            "numerator": 30.0
+          },
+          "stationary_audited_trials": 0,
+          "all_audits_passed": 30,
+          "independent_audited_trials": 30,
+          "seeds": {
+            "17": {
+              "trials": 10,
+              "four_outcomes": {
+                "route_generated": 10,
+                "selected_object_evaluated_correct": 10,
+                "stable_correct_lock": 10,
+                "actual_full_perception_arrival": 0
+              }
+            },
+            "29": {
+              "trials": 10,
+              "four_outcomes": {
+                "route_generated": 10,
+                "selected_object_evaluated_correct": 10,
+                "stable_correct_lock": 10,
+                "actual_full_perception_arrival": 2
+              }
+            },
+            "43": {
+              "trials": 10,
+              "four_outcomes": {
+                "route_generated": 10,
+                "selected_object_evaluated_correct": 10,
+                "stable_correct_lock": 10,
+                "actual_full_perception_arrival": 0
+              }
+            }
+          }
+        }
+      },
+      "functional_evidence": {
+        "arrivals": 2,
+        "distinct_positive_tasks": 2,
+        "scene_configs": 2,
+        "minimum_10_tasks_5_configs": false
+      },
+      "safety_denominator": "实际保存轨迹长度>0.01m；静止审计单列；零路径不获得100%安全信用",
+      "no_match_interpretation": "无匹配集合内任何锁定均为误锁；证据不足拒绝不等于已证明全道路无目标"
+    },
+    "detection_dropout_30pct": {
+      "by_kind": {
+        "reachable_positive": {
+          "trials": 30,
+          "unique_tasks": 10,
+          "configs": 10,
+          "statuses": {
+            "WALL_CLOCK_TIMEOUT": 18,
+            "ARRIVED": 2,
+            "SEARCH_EXHAUSTED_WITHOUT_VERIFIED_MATCH": 10
+          },
+          "four_outcomes": {
+            "route_generated": {
+              "estimate": 1.0,
+              "ci95": [
+                1.0,
+                1.0
+              ],
+              "clusters": 10,
+              "denominator": 30,
+              "numerator": 30.0
+            },
+            "selected_object_evaluated_correct": {
+              "estimate": 1.0,
+              "ci95": [
+                1.0,
+                1.0
+              ],
+              "clusters": 10,
+              "denominator": 30,
+              "numerator": 30.0
+            },
+            "stable_correct_lock": {
+              "estimate": 1.0,
+              "ci95": [
+                1.0,
+                1.0
+              ],
+              "clusters": 10,
+              "denominator": 30,
+              "numerator": 30.0
+            },
+            "actual_full_perception_arrival": {
+              "estimate": 0.06666666666666667,
+              "ci95": [
+                0.0,
+                0.16666666666666666
+              ],
+              "clusters": 10,
+              "denominator": 30,
+              "numerator": 2.0
+            }
+          },
+          "any_lock": {
+            "estimate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "clusters": 10,
+            "denominator": 30,
+            "numerator": 30.0
+          },
+          "actually_moving_trials": 30,
+          "safety_among_moving": {
+            "estimate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "clusters": 10,
+            "denominator": 30,
+            "numerator": 30.0
+          },
+          "stationary_audited_trials": 0,
+          "all_audits_passed": 30,
+          "independent_audited_trials": 30,
+          "seeds": {
+            "17": {
+              "trials": 10,
+              "four_outcomes": {
+                "route_generated": 10,
+                "selected_object_evaluated_correct": 10,
+                "stable_correct_lock": 10,
+                "actual_full_perception_arrival": 0
+              }
+            },
+            "29": {
+              "trials": 10,
+              "four_outcomes": {
+                "route_generated": 10,
+                "selected_object_evaluated_correct": 10,
+                "stable_correct_lock": 10,
+                "actual_full_perception_arrival": 2
+              }
+            },
+            "43": {
+              "trials": 10,
+              "four_outcomes": {
+                "route_generated": 10,
+                "selected_object_evaluated_correct": 10,
+                "stable_correct_lock": 10,
+                "actual_full_perception_arrival": 0
+              }
+            }
+          }
+        }
+      },
+      "functional_evidence": {
+        "arrivals": 2,
+        "distinct_positive_tasks": 2,
+        "scene_configs": 2,
+        "minimum_10_tasks_5_configs": false
+      },
+      "safety_denominator": "实际保存轨迹长度>0.01m；静止审计单列；零路径不获得100%安全信用",
+      "no_match_interpretation": "无匹配集合内任何锁定均为误锁；证据不足拒绝不等于已证明全道路无目标"
+    },
+    "lidar_dropout_80pct": {
+      "by_kind": {
+        "reachable_positive": {
+          "trials": 30,
+          "unique_tasks": 10,
+          "configs": 10,
+          "statuses": {
+            "WALL_CLOCK_TIMEOUT": 18,
+            "ARRIVED": 1,
+            "SEARCH_EXHAUSTED_WITHOUT_VERIFIED_MATCH": 9,
+            "SAFETY_STOP": 1,
+            "PROCESS_FAILED_NO_RESULT": 1
+          },
+          "four_outcomes": {
+            "route_generated": {
+              "estimate": 0.9666666666666667,
+              "ci95": [
+                0.9,
+                1.0
+              ],
+              "clusters": 10,
+              "denominator": 30,
+              "numerator": 29.0
+            },
+            "selected_object_evaluated_correct": {
+              "estimate": 0.9666666666666667,
+              "ci95": [
+                0.9,
+                1.0
+              ],
+              "clusters": 10,
+              "denominator": 30,
+              "numerator": 29.0
+            },
+            "stable_correct_lock": {
+              "estimate": 0.9333333333333333,
+              "ci95": [
+                0.8333333333333334,
+                1.0
+              ],
+              "clusters": 10,
+              "denominator": 30,
+              "numerator": 28.0
+            },
+            "actual_full_perception_arrival": {
+              "estimate": 0.03333333333333333,
+              "ci95": [
+                0.0,
+                0.1
+              ],
+              "clusters": 10,
+              "denominator": 30,
+              "numerator": 1.0
+            }
+          },
+          "any_lock": {
+            "estimate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "clusters": 10,
+            "denominator": 30,
+            "numerator": 30.0
+          },
+          "actually_moving_trials": 30,
+          "safety_among_moving": {
+            "estimate": 0.9666666666666667,
+            "ci95": [
+              0.9,
+              1.0
+            ],
+            "clusters": 10,
+            "denominator": 30,
+            "numerator": 29.0
+          },
+          "stationary_audited_trials": 0,
+          "all_audits_passed": 29,
+          "independent_audited_trials": 30,
+          "seeds": {
+            "17": {
+              "trials": 10,
+              "four_outcomes": {
+                "route_generated": 10,
+                "selected_object_evaluated_correct": 10,
+                "stable_correct_lock": 10,
+                "actual_full_perception_arrival": 0
+              }
+            },
+            "29": {
+              "trials": 10,
+              "four_outcomes": {
+                "route_generated": 9,
+                "selected_object_evaluated_correct": 9,
+                "stable_correct_lock": 8,
+                "actual_full_perception_arrival": 1
+              }
+            },
+            "43": {
+              "trials": 10,
+              "four_outcomes": {
+                "route_generated": 10,
+                "selected_object_evaluated_correct": 10,
+                "stable_correct_lock": 10,
+                "actual_full_perception_arrival": 0
+              }
+            }
+          }
+        }
+      },
+      "functional_evidence": {
+        "arrivals": 1,
+        "distinct_positive_tasks": 1,
+        "scene_configs": 1,
+        "minimum_10_tasks_5_configs": false
+      },
+      "safety_denominator": "实际保存轨迹长度>0.01m；静止审计单列；零路径不获得100%安全信用",
+      "no_match_interpretation": "无匹配集合内任何锁定均为误锁；证据不足拒绝不等于已证明全道路无目标"
+    },
+    "pose_noise_025m_2deg": {
+      "by_kind": {
+        "reachable_positive": {
+          "trials": 30,
+          "unique_tasks": 10,
+          "configs": 10,
+          "statuses": {
+            "WALL_CLOCK_TIMEOUT": 18,
+            "SEARCH_EXHAUSTED_WITHOUT_VERIFIED_MATCH": 10,
+            "ARRIVED": 2
+          },
+          "four_outcomes": {
+            "route_generated": {
+              "estimate": 0.9666666666666667,
+              "ci95": [
+                0.9,
+                1.0
+              ],
+              "clusters": 10,
+              "denominator": 30,
+              "numerator": 29.0
+            },
+            "selected_object_evaluated_correct": {
+              "estimate": 1.0,
+              "ci95": [
+                1.0,
+                1.0
+              ],
+              "clusters": 10,
+              "denominator": 30,
+              "numerator": 30.0
+            },
+            "stable_correct_lock": {
+              "estimate": 0.9666666666666667,
+              "ci95": [
+                0.9,
+                1.0
+              ],
+              "clusters": 10,
+              "denominator": 30,
+              "numerator": 29.0
+            },
+            "actual_full_perception_arrival": {
+              "estimate": 0.06666666666666667,
+              "ci95": [
+                0.0,
+                0.16666666666666666
+              ],
+              "clusters": 10,
+              "denominator": 30,
+              "numerator": 2.0
+            }
+          },
+          "any_lock": {
+            "estimate": 0.9666666666666667,
+            "ci95": [
+              0.9,
+              1.0
+            ],
+            "clusters": 10,
+            "denominator": 30,
+            "numerator": 29.0
+          },
+          "actually_moving_trials": 30,
+          "safety_among_moving": {
+            "estimate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "clusters": 10,
+            "denominator": 30,
+            "numerator": 30.0
+          },
+          "stationary_audited_trials": 0,
+          "all_audits_passed": 30,
+          "independent_audited_trials": 30,
+          "seeds": {
+            "17": {
+              "trials": 10,
+              "four_outcomes": {
+                "route_generated": 10,
+                "selected_object_evaluated_correct": 10,
+                "stable_correct_lock": 10,
+                "actual_full_perception_arrival": 0
+              }
+            },
+            "29": {
+              "trials": 10,
+              "four_outcomes": {
+                "route_generated": 9,
+                "selected_object_evaluated_correct": 10,
+                "stable_correct_lock": 9,
+                "actual_full_perception_arrival": 2
+              }
+            },
+            "43": {
+              "trials": 10,
+              "four_outcomes": {
+                "route_generated": 10,
+                "selected_object_evaluated_correct": 10,
+                "stable_correct_lock": 10,
+                "actual_full_perception_arrival": 0
+              }
+            }
+          }
+        }
+      },
+      "functional_evidence": {
+        "arrivals": 2,
+        "distinct_positive_tasks": 2,
+        "scene_configs": 2,
+        "minimum_10_tasks_5_configs": false
+      },
+      "safety_denominator": "实际保存轨迹长度>0.01m；静止审计单列；零路径不获得100%安全信用",
+      "no_match_interpretation": "无匹配集合内任何锁定均为误锁；证据不足拒绝不等于已证明全道路无目标"
+    },
+    "sensor_blackout_4s": {
+      "by_kind": {
+        "reachable_positive": {
+          "trials": 30,
+          "unique_tasks": 10,
+          "configs": 10,
+          "statuses": {
+            "WALL_CLOCK_TIMEOUT": 22,
+            "SEARCH_EXHAUSTED_WITHOUT_VERIFIED_MATCH": 8
+          },
+          "four_outcomes": {
+            "route_generated": {
+              "estimate": 1.0,
+              "ci95": [
+                1.0,
+                1.0
+              ],
+              "clusters": 10,
+              "denominator": 30,
+              "numerator": 30.0
+            },
+            "selected_object_evaluated_correct": {
+              "estimate": 1.0,
+              "ci95": [
+                1.0,
+                1.0
+              ],
+              "clusters": 10,
+              "denominator": 30,
+              "numerator": 30.0
+            },
+            "stable_correct_lock": {
+              "estimate": 0.9333333333333333,
+              "ci95": [
+                0.8333333333333334,
+                1.0
+              ],
+              "clusters": 10,
+              "denominator": 30,
+              "numerator": 28.0
+            },
+            "actual_full_perception_arrival": {
+              "estimate": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "clusters": 10,
+              "denominator": 30,
+              "numerator": 0.0
+            }
+          },
+          "any_lock": {
+            "estimate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "clusters": 10,
+            "denominator": 30,
+            "numerator": 30.0
+          },
+          "actually_moving_trials": 30,
+          "safety_among_moving": {
+            "estimate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "clusters": 10,
+            "denominator": 30,
+            "numerator": 30.0
+          },
+          "stationary_audited_trials": 0,
+          "all_audits_passed": 30,
+          "independent_audited_trials": 30,
+          "seeds": {
+            "17": {
+              "trials": 10,
+              "four_outcomes": {
+                "route_generated": 10,
+                "selected_object_evaluated_correct": 10,
+                "stable_correct_lock": 10,
+                "actual_full_perception_arrival": 0
+              }
+            },
+            "29": {
+              "trials": 10,
+              "four_outcomes": {
+                "route_generated": 10,
+                "selected_object_evaluated_correct": 10,
+                "stable_correct_lock": 8,
+                "actual_full_perception_arrival": 0
+              }
+            },
+            "43": {
+              "trials": 10,
+              "four_outcomes": {
+                "route_generated": 10,
+                "selected_object_evaluated_correct": 10,
+                "stable_correct_lock": 10,
+                "actual_full_perception_arrival": 0
+              }
+            }
+          }
+        }
+      },
+      "functional_evidence": {
+        "arrivals": 0,
+        "distinct_positive_tasks": 0,
+        "scene_configs": 0,
+        "minimum_10_tasks_5_configs": false
+      },
+      "safety_denominator": "实际保存轨迹长度>0.01m；静止审计单列；零路径不获得100%安全信用",
+      "no_match_interpretation": "无匹配集合内任何锁定均为误锁；证据不足拒绝不等于已证明全道路无目标"
+    }
+  },
+  "paired_positive_differences": [
+    {
+      "a": "baseline",
+      "b": "depth_noise_02m",
+      "metric": "route_generated",
+      "estimate": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 0.0
+    },
+    {
+      "a": "baseline",
+      "b": "depth_noise_02m",
+      "metric": "selected_object_evaluated_correct",
+      "estimate": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 0.0
+    },
+    {
+      "a": "baseline",
+      "b": "depth_noise_02m",
+      "metric": "stable_correct_lock",
+      "estimate": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 0.0
+    },
+    {
+      "a": "baseline",
+      "b": "depth_noise_02m",
+      "metric": "actual_full_perception_arrival",
+      "estimate": 0.03333333333333333,
+      "ci95": [
+        -0.06666666666666667,
+        0.13333333333333333
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 1.0
+    },
+    {
+      "a": "baseline",
+      "b": "detection_dropout_30pct",
+      "metric": "route_generated",
+      "estimate": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 0.0
+    },
+    {
+      "a": "baseline",
+      "b": "detection_dropout_30pct",
+      "metric": "selected_object_evaluated_correct",
+      "estimate": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 0.0
+    },
+    {
+      "a": "baseline",
+      "b": "detection_dropout_30pct",
+      "metric": "stable_correct_lock",
+      "estimate": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 0.0
+    },
+    {
+      "a": "baseline",
+      "b": "detection_dropout_30pct",
+      "metric": "actual_full_perception_arrival",
+      "estimate": 0.03333333333333333,
+      "ci95": [
+        0.0,
+        0.1
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 1.0
+    },
+    {
+      "a": "baseline",
+      "b": "lidar_dropout_80pct",
+      "metric": "route_generated",
+      "estimate": 0.03333333333333333,
+      "ci95": [
+        0.0,
+        0.1
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 1.0
+    },
+    {
+      "a": "baseline",
+      "b": "lidar_dropout_80pct",
+      "metric": "selected_object_evaluated_correct",
+      "estimate": 0.03333333333333333,
+      "ci95": [
+        0.0,
+        0.1
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 1.0
+    },
+    {
+      "a": "baseline",
+      "b": "lidar_dropout_80pct",
+      "metric": "stable_correct_lock",
+      "estimate": 0.06666666666666667,
+      "ci95": [
+        0.0,
+        0.16666666666666666
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 2.0
+    },
+    {
+      "a": "baseline",
+      "b": "lidar_dropout_80pct",
+      "metric": "actual_full_perception_arrival",
+      "estimate": 0.06666666666666667,
+      "ci95": [
+        0.0,
+        0.16666666666666666
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 2.0
+    },
+    {
+      "a": "baseline",
+      "b": "pose_noise_025m_2deg",
+      "metric": "route_generated",
+      "estimate": 0.03333333333333333,
+      "ci95": [
+        0.0,
+        0.1
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 1.0
+    },
+    {
+      "a": "baseline",
+      "b": "pose_noise_025m_2deg",
+      "metric": "selected_object_evaluated_correct",
+      "estimate": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 0.0
+    },
+    {
+      "a": "baseline",
+      "b": "pose_noise_025m_2deg",
+      "metric": "stable_correct_lock",
+      "estimate": 0.03333333333333333,
+      "ci95": [
+        0.0,
+        0.1
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 1.0
+    },
+    {
+      "a": "baseline",
+      "b": "pose_noise_025m_2deg",
+      "metric": "actual_full_perception_arrival",
+      "estimate": 0.03333333333333333,
+      "ci95": [
+        -0.1,
+        0.16666666666666666
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 1.0
+    },
+    {
+      "a": "baseline",
+      "b": "sensor_blackout_4s",
+      "metric": "route_generated",
+      "estimate": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 0.0
+    },
+    {
+      "a": "baseline",
+      "b": "sensor_blackout_4s",
+      "metric": "selected_object_evaluated_correct",
+      "estimate": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 0.0
+    },
+    {
+      "a": "baseline",
+      "b": "sensor_blackout_4s",
+      "metric": "stable_correct_lock",
+      "estimate": 0.06666666666666667,
+      "ci95": [
+        0.0,
+        0.16666666666666666
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 2.0
+    },
+    {
+      "a": "baseline",
+      "b": "sensor_blackout_4s",
+      "metric": "actual_full_perception_arrival",
+      "estimate": 0.1,
+      "ci95": [
+        0.0,
+        0.2
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 3.0
+    },
+    {
+      "a": "depth_noise_02m",
+      "b": "detection_dropout_30pct",
+      "metric": "route_generated",
+      "estimate": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 0.0
+    },
+    {
+      "a": "depth_noise_02m",
+      "b": "detection_dropout_30pct",
+      "metric": "selected_object_evaluated_correct",
+      "estimate": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 0.0
+    },
+    {
+      "a": "depth_noise_02m",
+      "b": "detection_dropout_30pct",
+      "metric": "stable_correct_lock",
+      "estimate": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 0.0
+    },
+    {
+      "a": "depth_noise_02m",
+      "b": "detection_dropout_30pct",
+      "metric": "actual_full_perception_arrival",
+      "estimate": 0.0,
+      "ci95": [
+        -0.1,
+        0.1
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 0.0
+    },
+    {
+      "a": "depth_noise_02m",
+      "b": "lidar_dropout_80pct",
+      "metric": "route_generated",
+      "estimate": 0.03333333333333333,
+      "ci95": [
+        0.0,
+        0.1
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 1.0
+    },
+    {
+      "a": "depth_noise_02m",
+      "b": "lidar_dropout_80pct",
+      "metric": "selected_object_evaluated_correct",
+      "estimate": 0.03333333333333333,
+      "ci95": [
+        0.0,
+        0.1
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 1.0
+    },
+    {
+      "a": "depth_noise_02m",
+      "b": "lidar_dropout_80pct",
+      "metric": "stable_correct_lock",
+      "estimate": 0.06666666666666667,
+      "ci95": [
+        0.0,
+        0.16666666666666666
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 2.0
+    },
+    {
+      "a": "depth_noise_02m",
+      "b": "lidar_dropout_80pct",
+      "metric": "actual_full_perception_arrival",
+      "estimate": 0.03333333333333333,
+      "ci95": [
+        0.0,
+        0.1
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 1.0
+    },
+    {
+      "a": "depth_noise_02m",
+      "b": "pose_noise_025m_2deg",
+      "metric": "route_generated",
+      "estimate": 0.03333333333333333,
+      "ci95": [
+        0.0,
+        0.1
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 1.0
+    },
+    {
+      "a": "depth_noise_02m",
+      "b": "pose_noise_025m_2deg",
+      "metric": "selected_object_evaluated_correct",
+      "estimate": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 0.0
+    },
+    {
+      "a": "depth_noise_02m",
+      "b": "pose_noise_025m_2deg",
+      "metric": "stable_correct_lock",
+      "estimate": 0.03333333333333333,
+      "ci95": [
+        0.0,
+        0.1
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 1.0
+    },
+    {
+      "a": "depth_noise_02m",
+      "b": "pose_noise_025m_2deg",
+      "metric": "actual_full_perception_arrival",
+      "estimate": 0.0,
+      "ci95": [
+        -0.1,
+        0.1
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 0.0
+    },
+    {
+      "a": "depth_noise_02m",
+      "b": "sensor_blackout_4s",
+      "metric": "route_generated",
+      "estimate": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 0.0
+    },
+    {
+      "a": "depth_noise_02m",
+      "b": "sensor_blackout_4s",
+      "metric": "selected_object_evaluated_correct",
+      "estimate": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 0.0
+    },
+    {
+      "a": "depth_noise_02m",
+      "b": "sensor_blackout_4s",
+      "metric": "stable_correct_lock",
+      "estimate": 0.06666666666666667,
+      "ci95": [
+        0.0,
+        0.16666666666666666
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 2.0
+    },
+    {
+      "a": "depth_noise_02m",
+      "b": "sensor_blackout_4s",
+      "metric": "actual_full_perception_arrival",
+      "estimate": 0.06666666666666667,
+      "ci95": [
+        0.0,
+        0.16666666666666666
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 2.0
+    },
+    {
+      "a": "detection_dropout_30pct",
+      "b": "lidar_dropout_80pct",
+      "metric": "route_generated",
+      "estimate": 0.03333333333333333,
+      "ci95": [
+        0.0,
+        0.1
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 1.0
+    },
+    {
+      "a": "detection_dropout_30pct",
+      "b": "lidar_dropout_80pct",
+      "metric": "selected_object_evaluated_correct",
+      "estimate": 0.03333333333333333,
+      "ci95": [
+        0.0,
+        0.1
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 1.0
+    },
+    {
+      "a": "detection_dropout_30pct",
+      "b": "lidar_dropout_80pct",
+      "metric": "stable_correct_lock",
+      "estimate": 0.06666666666666667,
+      "ci95": [
+        0.0,
+        0.16666666666666666
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 2.0
+    },
+    {
+      "a": "detection_dropout_30pct",
+      "b": "lidar_dropout_80pct",
+      "metric": "actual_full_perception_arrival",
+      "estimate": 0.03333333333333333,
+      "ci95": [
+        0.0,
+        0.1
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 1.0
+    },
+    {
+      "a": "detection_dropout_30pct",
+      "b": "pose_noise_025m_2deg",
+      "metric": "route_generated",
+      "estimate": 0.03333333333333333,
+      "ci95": [
+        0.0,
+        0.1
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 1.0
+    },
+    {
+      "a": "detection_dropout_30pct",
+      "b": "pose_noise_025m_2deg",
+      "metric": "selected_object_evaluated_correct",
+      "estimate": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 0.0
+    },
+    {
+      "a": "detection_dropout_30pct",
+      "b": "pose_noise_025m_2deg",
+      "metric": "stable_correct_lock",
+      "estimate": 0.03333333333333333,
+      "ci95": [
+        0.0,
+        0.1
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 1.0
+    },
+    {
+      "a": "detection_dropout_30pct",
+      "b": "pose_noise_025m_2deg",
+      "metric": "actual_full_perception_arrival",
+      "estimate": 0.0,
+      "ci95": [
+        -0.13333333333333333,
+        0.13333333333333333
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 0.0
+    },
+    {
+      "a": "detection_dropout_30pct",
+      "b": "sensor_blackout_4s",
+      "metric": "route_generated",
+      "estimate": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 0.0
+    },
+    {
+      "a": "detection_dropout_30pct",
+      "b": "sensor_blackout_4s",
+      "metric": "selected_object_evaluated_correct",
+      "estimate": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 0.0
+    },
+    {
+      "a": "detection_dropout_30pct",
+      "b": "sensor_blackout_4s",
+      "metric": "stable_correct_lock",
+      "estimate": 0.06666666666666667,
+      "ci95": [
+        0.0,
+        0.16666666666666666
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 2.0
+    },
+    {
+      "a": "detection_dropout_30pct",
+      "b": "sensor_blackout_4s",
+      "metric": "actual_full_perception_arrival",
+      "estimate": 0.06666666666666667,
+      "ci95": [
+        0.0,
+        0.16666666666666666
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 2.0
+    },
+    {
+      "a": "lidar_dropout_80pct",
+      "b": "pose_noise_025m_2deg",
+      "metric": "route_generated",
+      "estimate": 0.0,
+      "ci95": [
+        -0.1,
+        0.1
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 0.0
+    },
+    {
+      "a": "lidar_dropout_80pct",
+      "b": "pose_noise_025m_2deg",
+      "metric": "selected_object_evaluated_correct",
+      "estimate": -0.03333333333333333,
+      "ci95": [
+        -0.1,
+        0.0
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": -1.0
+    },
+    {
+      "a": "lidar_dropout_80pct",
+      "b": "pose_noise_025m_2deg",
+      "metric": "stable_correct_lock",
+      "estimate": -0.03333333333333333,
+      "ci95": [
+        -0.1,
+        0.0
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": -1.0
+    },
+    {
+      "a": "lidar_dropout_80pct",
+      "b": "pose_noise_025m_2deg",
+      "metric": "actual_full_perception_arrival",
+      "estimate": -0.03333333333333333,
+      "ci95": [
+        -0.13333333333333333,
+        0.06666666666666667
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": -1.0
+    },
+    {
+      "a": "lidar_dropout_80pct",
+      "b": "sensor_blackout_4s",
+      "metric": "route_generated",
+      "estimate": -0.03333333333333333,
+      "ci95": [
+        -0.1,
+        0.0
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": -1.0
+    },
+    {
+      "a": "lidar_dropout_80pct",
+      "b": "sensor_blackout_4s",
+      "metric": "selected_object_evaluated_correct",
+      "estimate": -0.03333333333333333,
+      "ci95": [
+        -0.1,
+        0.0
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": -1.0
+    },
+    {
+      "a": "lidar_dropout_80pct",
+      "b": "sensor_blackout_4s",
+      "metric": "stable_correct_lock",
+      "estimate": 0.0,
+      "ci95": [
+        -0.1,
+        0.1
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 0.0
+    },
+    {
+      "a": "lidar_dropout_80pct",
+      "b": "sensor_blackout_4s",
+      "metric": "actual_full_perception_arrival",
+      "estimate": 0.03333333333333333,
+      "ci95": [
+        0.0,
+        0.1
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 1.0
+    },
+    {
+      "a": "pose_noise_025m_2deg",
+      "b": "sensor_blackout_4s",
+      "metric": "route_generated",
+      "estimate": -0.03333333333333333,
+      "ci95": [
+        -0.1,
+        0.0
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": -1.0
+    },
+    {
+      "a": "pose_noise_025m_2deg",
+      "b": "sensor_blackout_4s",
+      "metric": "selected_object_evaluated_correct",
+      "estimate": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 0.0
+    },
+    {
+      "a": "pose_noise_025m_2deg",
+      "b": "sensor_blackout_4s",
+      "metric": "stable_correct_lock",
+      "estimate": 0.03333333333333333,
+      "ci95": [
+        0.0,
+        0.1
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 1.0
+    },
+    {
+      "a": "pose_noise_025m_2deg",
+      "b": "sensor_blackout_4s",
+      "metric": "actual_full_perception_arrival",
+      "estimate": 0.06666666666666667,
+      "ci95": [
+        0.0,
+        0.16666666666666666
+      ],
+      "clusters": 10,
+      "denominator": 30,
+      "numerator": 2.0
+    }
+  ],
+  "missing_complete_results": {
+    "lidar_dropout_80pct": 1
+  },
+  "unknown_business_fields": "缺报告时四项业务字段为null；成功分子无信用，冻结正任务分母仍保留",
+  "incomplete_execution_safety": "失败进程即使有轨迹前缀也不增加完整安全执行信用；未知不等于已证明碰撞",
+  "semantic_application_counts": {
+    "baseline": {
+      "query_parse": 26,
+      "object_attributes": 53,
+      "candidate_rerank": 0
+    },
+    "depth_noise_02m": {
+      "query_parse": 24,
+      "object_attributes": 54,
+      "candidate_rerank": 0
+    },
+    "detection_dropout_30pct": {
+      "query_parse": 25,
+      "object_attributes": 47,
+      "candidate_rerank": 0
+    },
+    "lidar_dropout_80pct": {
+      "query_parse": 27,
+      "object_attributes": 55,
+      "candidate_rerank": 1
+    },
+    "pose_noise_025m_2deg": {
+      "query_parse": 28,
+      "object_attributes": 36,
+      "candidate_rerank": 0
+    },
+    "sensor_blackout_4s": {
+      "query_parse": 29,
+      "object_attributes": 51,
+      "candidate_rerank": 0
+    }
+  },
+  "bootstrap": {
+    "unit": "合成场景配置",
+    "repetitions": 4000,
+    "seed": 17,
+    "paired": true
+  },
+  "limitations": [
+    "开发合成颜色任务，10配置共享3走廊家族，不是自然指令或新封存测试",
+    "三种子/帧/调用不增加独立任务数；全部失败和拒绝保留",
+    "后台语义真实单调时钟运行，运动为0.1s独立心跳，不宣称硬实时",
+    "CPU与其他开发作业共享；墙钟含模型调度与资源影响，不作为独占性能表",
+    "此处核验原始证据指纹并读取原独立执行审计，未新增人工实例正确性信用"
+  ],
+  "independent_test": false,
+  "stage11_complete": false,
+  "stage12_complete": false,
+  "goal_complete": false
+}

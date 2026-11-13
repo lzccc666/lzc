@@ -1,0 +1,385 @@
+{
+  "passed": true,
+  "created_utc": "2026-11-12T21:34:35.382820+00:00",
+  "viewer": "thesis_portal_015",
+  "manifest_sha256": "125cac0f1c1a306de98d054ffa2bc4e7c7f15337a1fc8065a1bf0ff429248b68",
+  "completed_evidence_sha256": "f8f1aebf5360d8b9c7b942bd404f0a7c174d298f7f283499e1b0e6e93c9270e6",
+  "QA_source_sha256": "7a0b829938ea290b9e23633be10038a6d01d7a7a8a4474eb49d64a653dcffc38",
+  "checks": [
+    {
+      "viewport": "desktop",
+      "main_four_outcomes": {
+        "rule": [
+          "83/90",
+          "84/90",
+          "82/90",
+          "50/90"
+        ],
+        "base_full": [
+          "66/90",
+          "72/90",
+          "66/90",
+          "39/90"
+        ],
+        "new_full": [
+          "59/90",
+          "33/90",
+          "32/90",
+          "4/90"
+        ]
+      },
+      "no_body_overflow": true,
+      "paper_links_hidden_for_deferred_manuscript": true,
+      "three_label_counts_separate": true,
+      "live_progress_not_process_claim": true,
+      "missing_completion_not_success": true,
+      "invalid_log_shows_unknown": true,
+      "failed_validation_clears_stale_rows": true,
+      "refresh_recovers": true,
+      "incomplete_last_line_ignored": true,
+      "status_rows": 53,
+      "page_errors": []
+    },
+    {
+      "viewport": "mobile",
+      "main_four_outcomes": {
+        "rule": [
+          "83/90",
+          "84/90",
+          "82/90",
+          "50/90"
+        ],
+        "base_full": [
+          "66/90",
+          "72/90",
+          "66/90",
+          "39/90"
+        ],
+        "new_full": [
+          "59/90",
+          "33/90",
+          "32/90",
+          "4/90"
+        ]
+      },
+      "no_body_overflow": true,
+      "paper_links_hidden_for_deferred_manuscript": true,
+      "three_label_counts_separate": true,
+      "live_progress_not_process_claim": true,
+      "missing_completion_not_success": true,
+      "invalid_log_shows_unknown": true,
+      "failed_validation_clears_stale_rows": true,
+      "refresh_recovers": true,
+      "incomplete_last_line_ignored": true,
+      "status_rows": 53,
+      "page_errors": []
+    }
+  ],
+  "completed_input_files_SHA_verified": 14,
+  "static_HTTP_links": [
+    {
+      "path": "/visualizations/realtime_main450_preview_003/index.html",
+      "status": 200
+    },
+    {
+      "path": "/statistics/realtime_three_model_full_001/trials.csv",
+      "status": 200
+    },
+    {
+      "path": "/statistics/main_matrix_evidence_check_001/report.json",
+      "status": 200
+    },
+    {
+      "path": "/vehicle_execution/main_goal_hold_evidence_check_002/report.json",
+      "status": 200
+    },
+    {
+      "path": "/visualizations/realtime_main450_browser_qa_001/report.json",
+      "status": 200
+    },
+    {
+      "path": "/visualizations/kitti_object_cpu_full_002/index.html",
+      "status": 200
+    },
+    {
+      "path": "/statistics/kitti_object_cpu_full_001/report.json",
+      "status": 200
+    },
+    {
+      "path": "/statistics/temporal_identity_full_001/report.md",
+      "status": 200
+    },
+    {
+      "path": "/statistics/temporal_identity_full_001/audit_002/report.json",
+      "status": 200
+    },
+    {
+      "path": "/visualizations/HDmap_reference_guided_preview_003/index.html",
+      "status": 200
+    },
+    {
+      "path": "/vehicle_execution/HDmap_reference_guided_audit_002/report.json",
+      "status": 200
+    },
+    {
+      "path": "/interactive_simulation/realtime_three_model_full_001/release.json",
+      "status": 200
+    },
+    {
+      "path": "/interactive_simulation/realtime_three_model_full_001/trial_records.jsonl",
+      "status": 200
+    },
+    {
+      "path": "/statistics/realtime_three_model_full_001/report.json",
+      "status": 200
+    },
+    {
+      "path": "/annotation/natural_command_review_001/index.html",
+      "status": 200
+    },
+    {
+      "path": "/annotation/human_natural_collection_001/index.html",
+      "status": 200
+    },
+    {
+      "path": "/visualizations/causal_development_review_002/index.html",
+      "status": 200
+    },
+    {
+      "path": "/visualizations/review.html",
+      "status": 200
+    },
+    {
+      "path": "/visualizations/navigation_demo_004/index.html",
+      "status": 200
+    },
+    {
+      "path": "/实验完成度与交付清单_011.md",
+      "status": 200
+    },
+    {
+      "path": "/主矩阵450_回放与复现交接_002.md",
+      "status": 200
+    },
+    {
+      "path": "/reproducible_commands.md",
+      "status": 200
+    },
+    {
+      "path": "/experiment_report.md",
+      "status": 200
+    },
+    {
+      "path": "/remaining_issues.md",
+      "status": 200
+    },
+    {
+      "path": "/validation_report.json",
+      "status": 200
+    },
+    {
+      "path": "/baseline_verification.json",
+      "status": 200
+    },
+    {
+      "path": "/statistics/causal_mapping_full_001/report.md",
+      "status": 200
+    },
+    {
+      "path": "/statistics/causal_retrieval_full_001/report.json",
+      "status": 200
+    },
+    {
+      "path": "/mapping_evaluation/causal_relations_full_001/summary.json",
+      "status": 200
+    },
+    {
+      "path": "/data_manifest/development_causal_inputs_full_001/audit_001/report.json",
+      "status": 200
+    },
+    {
+      "path": "/performance/causal_selection_parameters_full_001/report.json",
+      "status": 200
+    },
+    {
+      "path": "/ablations/causal_selection_ablation_full_001/report.json",
+      "status": 200
+    },
+    {
+      "path": "/performance/causal_road_groups_full_001/report.json",
+      "status": 200
+    },
+    {
+      "path": "/source_bundle/causal_sensitivity_audit_001/report.json",
+      "status": 200
+    },
+    {
+      "path": "/statistics/causal_fault_full_001/report.json",
+      "status": 200
+    },
+    {
+      "path": "/faults/causal_fault_full_001/audit_001/report.md",
+      "status": 200
+    },
+    {
+      "path": "/faults/causal_fault_full_001/audit_001/report.json",
+      "status": 200
+    },
+    {
+      "path": "/task_protocol/camera_time_gt_sensitivity_001.md",
+      "status": 200
+    },
+    {
+      "path": "/mapping_evaluation/camera_time_gt_dev_full_001/report.json",
+      "status": 200
+    },
+    {
+      "path": "/mapping_evaluation/camera_time_gt_dev_full_001/audit_001/report.md",
+      "status": 200
+    },
+    {
+      "path": "/statistics/causal_maps_full_001/report.json",
+      "status": 200
+    },
+    {
+      "path": "/ablations/causal_maps_full_001/audit_002/report.md",
+      "status": 200
+    },
+    {
+      "path": "/statistics/causal_modules_full_001/report.json",
+      "status": 200
+    },
+    {
+      "path": "/statistics/causal_mapping_parameters_full_001/report.json",
+      "status": 200
+    },
+    {
+      "path": "/statistics/map_constraints_dev_full_001/report.json",
+      "status": 200
+    },
+    {
+      "path": "/thesis/figures_constraints_002/图6-6.pdf",
+      "status": 200
+    },
+    {
+      "path": "/statistics/mapping_modules_dev_full_001/report.json",
+      "status": 200
+    },
+    {
+      "path": "/statistics/mapping_modules_motion_dev_full_001/report.json",
+      "status": 200
+    },
+    {
+      "path": "/thesis/figures_constraints_002/图6-7.pdf",
+      "status": 200
+    },
+    {
+      "path": "/ablations/goal_selection_dev_full_001/release.json",
+      "status": 200
+    },
+    {
+      "path": "/ablations/goal_selection_dev_full_001/report.json",
+      "status": 200
+    },
+    {
+      "path": "/performance/road_groups_dev_001/report.json",
+      "status": 200
+    },
+    {
+      "path": "/thesis/citation_corrections_007.json",
+      "status": 200
+    },
+    {
+      "path": "/thesis/claim_citation_review_008.json",
+      "status": 200
+    },
+    {
+      "path": "/interactive_simulation/realtime_semantic_minus_full_001/release.json",
+      "status": 200
+    },
+    {
+      "path": "/ablations/semantic_navigation_chain_003/preflight.json",
+      "status": 200
+    },
+    {
+      "path": "/task_protocol/semantic_source_compatibility_003.md",
+      "status": 200
+    },
+    {
+      "path": "/faults/realtime_fault_after_semantics_001/release.json",
+      "status": 200
+    },
+    {
+      "path": "/performance/runtime_profile_after_faults_001/release.json",
+      "status": 200
+    },
+    {
+      "path": "/visualizations/reference_regions_reserved_001/index.html",
+      "status": 200
+    },
+    {
+      "path": "/annotation/reference_regions_reserved_full_003/summary.json",
+      "status": 200
+    },
+    {
+      "path": "/annotation/reference_regions_reserved_full_003/audit_001/report.json",
+      "status": 200
+    },
+    {
+      "path": "/visualizations/reference_reachability_reserved_002/index.html",
+      "status": 200
+    },
+    {
+      "path": "/annotation/reference_reachability_reserved_full_002/acceptance_001.json",
+      "status": 200
+    },
+    {
+      "path": "/task_protocol/conditional_reachability_reference_001.md",
+      "status": 200
+    },
+    {
+      "path": "http://127.0.0.1:8769/",
+      "status": 200
+    },
+    {
+      "path": "/交互仿真_操作与复现_001.md",
+      "status": 200
+    },
+    {
+      "path": "/visualizations/live_navigation_browser_qa_001/report.json",
+      "status": 200
+    },
+    {
+      "path": "/vehicle_execution/live_navigation_independent_audit_001/report.json",
+      "status": 200
+    }
+  ],
+  "only_GET": true,
+  "browser_requests": 94,
+  "human_before": {
+    "human_submissions": 0,
+    "development_submissions": 0,
+    "natural_submissions": 0,
+    "storage": "annotation/human_submissions",
+    "natural_storage": "annotation/human_natural_submissions"
+  },
+  "human_after": {
+    "human_submissions": 0,
+    "development_submissions": 0,
+    "natural_submissions": 0,
+    "storage": "annotation/human_submissions",
+    "natural_storage": "annotation/human_natural_submissions"
+  },
+  "human_records_written": 0,
+  "actual_model_calls": 0,
+  "new_executions": 0,
+  "new_arrivals": 0,
+  "CPU_shared_wall_s": 1.990801790729165,
+  "CUDA_visible": "",
+  "limits": [
+    "门户显示的是生成时核验的冻结开发证据及即时追加数量，不能据数量证明进程目前存活",
+    "缺失/损坏降级使用浏览器拦截的合成HTTP响应，不写真实文件或人工记录",
+    "未完成的消融/GPU故障/独占性能仍须真实运行和后续独立审核"
+  ],
+  "goal_complete": false
+}

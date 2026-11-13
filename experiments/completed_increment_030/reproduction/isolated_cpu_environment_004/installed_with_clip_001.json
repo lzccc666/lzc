@@ -1,0 +1,30 @@
+{
+  "installed": true,
+  "plan_sha256": "a7e41f259a17cd974705665abd5bd28190a89549bdd1d7db9d172c32b00bb1a8",
+  "copied_files": 39301,
+  "copied_bytes": 5638835532,
+  "environment": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/reproduction/isolated_cpu_environment_004/environment",
+  "python": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/reproduction/isolated_cpu_environment_004/environment/bin/python",
+  "interpreter_probe": {
+    "prefix": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/reproduction/isolated_cpu_environment_004/environment",
+    "base_prefix": "/root/miniconda3/envs/conceptgraph",
+    "torch": "2.0.1+cu118",
+    "torchvision": "0.15.2+cu118",
+    "segment_anything": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/reproduction/isolated_cpu_environment_004/environment/lib/python3.10/site-packages/segment_anything/__init__.py",
+    "CUDA_initialized": false
+  },
+  "saved_bytes": 5732803989,
+  "elapsed_s": 30.84764184243977,
+  "original_environment_modified": false,
+  "original_site_packages_in_sys_path": false,
+  "editable_finders_copied": false,
+  "original_conda_standard_library_and_native_system_libraries_shared": true,
+  "complete_navigation_reproduction_executed": false,
+  "actual_frontend_calls": 0,
+  "actual_model_calls": 0,
+  "goal_complete": false,
+  "dependency_patch": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/reproduction/isolated_cpu_environment_004/dependency_patch_clip_001/report.json",
+  "dependency_patch_sha256": "aa97f70702231c9c6229007598dab18b1fde3610e4b2e7ec5104b095f7c982f2",
+  "base_installed_manifest_sha256": "65a222870495919137618b0a8c1dcf93533b804ff89594eb59b137efa0f9d4fd",
+  "late_import_dependency_added": "clip==1.0"
+}

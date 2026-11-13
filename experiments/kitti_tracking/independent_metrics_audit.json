@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "updated_utc": "2026-11-12T22:15:48.236782+00:00",
+  "checks": {
+    "frames": 90,
+    "sequences": 3,
+    "frame_method_metrics": 270,
+    "return_events": 2,
+    "censored_tails": 3,
+    "identity_cases": 18,
+    "identity_intervals": 48,
+    "floating_interval_max_abs_difference_femtounits": 0,
+    "object_paired_intervals": 8,
+    "identity_paired_intervals": 32
+  },
+  "independent_frame_assignment": true,
+  "TrackEval_counts_equal": true,
+  "all_denominators_retained": true,
+  "paired_sequence_bootstrap_recomputed": true,
+  "source_sha256": {
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/statistics/kitti_tracking_full_001/0000_frames.jsonl": "25f8ec65ada18433593c7af041e4f2078edbc822ccf38074454db2a7d5a0026d",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/statistics/kitti_tracking_full_001/0005_frames.jsonl": "175c45520370448a8758a4f06a4c92581eb166e13589e8b3396e3c1cae40d2e3",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/statistics/kitti_tracking_full_001/0013_frames.jsonl": "4ba8c4be175371d0c46368dbdc186691b38a58c85cb27f2c445dd318a6306bee"
+  },
+  "wall_s": 0.7226940635591745,
+  "official_KITTI_protocol": false,
+  "navigation_arrivals": 0,
+  "goal_complete": false
+}

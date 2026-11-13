@@ -1,0 +1,42 @@
+{
+  "task_id": "config00-positive0",
+  "seed": 17,
+  "status": "BUDGET_STOP",
+  "route_generated": true,
+  "selected_object_evaluated_correct": true,
+  "stable_correct_lock": true,
+  "actual_full_perception_arrival": false,
+  "final_state": {
+    "x": 17.38324010462492,
+    "y": -3.763283074035278,
+    "yaw_rad": -0.21415165064351926,
+    "speed_mps": 0.0,
+    "steering_rad": -2.424926836195555e-13,
+    "time_s": 30.100000000000158
+  },
+  "actual_frontend_calls": 61,
+  "saved_control_intervals": 301,
+  "actual_Qwen_backend_calls": 0,
+  "Qwen_calls": 0,
+  "Qwen_tasks": [
+    "candidate_rerank",
+    "object_attributes",
+    "query_parse"
+  ],
+  "semantic_applied_counts": {
+    "candidate_rerank": 1,
+    "object_attributes": 1,
+    "query_parse": 1
+  },
+  "cache_all_hits": true,
+  "actual_Qwen_device": "cpu",
+  "gt_in_agent": false,
+  "CUDA_initialized": false,
+  "torch_threads_final": 1,
+  "real_clock_async": false,
+  "wall_s": 837.9321242067963,
+  "performance_credit": false,
+  "independent_scenes_added": 0,
+  "frozen_main_table_credit": false,
+  "goal_complete": false
+}

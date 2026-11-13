@@ -1,0 +1,535 @@
+{
+  "passed": true,
+  "independent_matrix_corner_formula": true,
+  "original_navigation_geometry_called": false,
+  "barrier_creation_body_clear": true,
+  "nonzero_tangent_old_path_body_witnesses": [
+    {
+      "index": 23,
+      "rear_axle_xy": [
+        9.516113451759647,
+        -2.0522886642728833
+      ],
+      "yaw_rad": -0.21415165064340977,
+      "intersection_area_m2": 0.16680967284273834,
+      "rear_axle_point_inside_barrier": false
+    },
+    {
+      "index": 24,
+      "rear_axle_xy": [
+        9.63911706550166,
+        -2.0790402986089718
+      ],
+      "yaw_rad": -0.21415165064341243,
+      "intersection_area_m2": 0.39968594256345047,
+      "rear_axle_point_inside_barrier": false
+    },
+    {
+      "index": 25,
+      "rear_axle_xy": [
+        9.76272469937999,
+        -2.1059232992141226
+      ],
+      "yaw_rad": -0.21415165064341446,
+      "intersection_area_m2": 0.6337057718260575,
+      "rear_axle_point_inside_barrier": false
+    },
+    {
+      "index": 26,
+      "rear_axle_xy": [
+        9.886845750374192,
+        -2.1329179611479763
+      ],
+      "yaw_rad": -0.2141516506434181,
+      "intersection_area_m2": 0.8686976266992721,
+      "rear_axle_point_inside_barrier": false
+    },
+    {
+      "index": 27,
+      "rear_axle_xy": [
+        10.011403205916883,
+        -2.1600075352112276
+      ],
+      "yaw_rad": -0.21415165064341887,
+      "intersection_area_m2": 1.1045157033415056,
+      "rear_axle_point_inside_barrier": false
+    },
+    {
+      "index": 28,
+      "rear_axle_xy": [
+        10.13633160532579,
+        -2.1871777845844664
+      ],
+      "yaw_rad": -0.21415165064341884,
+      "intersection_area_m2": 1.3410360684874016,
+      "rear_axle_point_inside_barrier": false
+    },
+    {
+      "index": 29,
+      "rear_axle_xy": [
+        10.261575307020982,
+        -2.214416607971195
+      ],
+      "yaw_rad": -0.2141516506434193,
+      "intersection_area_m2": 1.578153378861418,
+      "rear_axle_point_inside_barrier": false
+    },
+    {
+      "index": 30,
+      "rear_axle_xy": [
+        10.387087015659514,
+        -2.2417137192693897
+      ],
+      "yaw_rad": -0.21415165064342104,
+      "intersection_area_m2": 1.8157780926793263,
+      "rear_axle_point_inside_barrier": false
+    },
+    {
+      "index": 31,
+      "rear_axle_xy": [
+        10.512826530199886,
+        -2.2690603752923306
+      ],
+      "yaw_rad": -0.21415165064342093,
+      "intersection_area_m2": 2.05383409942455,
+      "rear_axle_point_inside_barrier": false
+    },
+    {
+      "index": 32,
+      "rear_axle_xy": [
+        10.638759679756824,
+        -2.296449144331306
+      ],
+      "yaw_rad": -0.21415165064341918,
+      "intersection_area_m2": 2.292256705157992,
+      "rear_axle_point_inside_barrier": false
+    },
+    {
+      "index": 33,
+      "rear_axle_xy": [
+        10.76485741907784,
+        -2.32387370943391
+      ],
+      "yaw_rad": -0.21415165064341854,
+      "intersection_area_m2": 2.5309909200314147,
+      "rear_axle_point_inside_barrier": false
+    },
+    {
+      "index": 34,
+      "rear_axle_xy": [
+        10.891095059698324,
+        -2.351328701190599
+      ],
+      "yaw_rad": -0.2141516506434179,
+      "intersection_area_m2": 2.7699900026738273,
+      "rear_axle_point_inside_barrier": false
+    },
+    {
+      "index": 35,
+      "rear_axle_xy": [
+        11.017451616423356,
+        -2.37880955560326
+      ],
+      "yaw_rad": -0.2141516506434157,
+      "intersection_area_m2": 3.009214222919879,
+      "rear_axle_point_inside_barrier": false
+    },
+    {
+      "index": 36,
+      "rear_axle_xy": [
+        11.143909251837254,
+        -2.4063123932734967
+      ],
+      "yaw_rad": -0.21415165064341607,
+      "intersection_area_m2": 3.2486298101290187,
+      "rear_axle_point_inside_barrier": false
+    },
+    {
+      "index": 37,
+      "rear_axle_xy": [
+        11.270452804136687,
+        -2.4338339167126732
+      ],
+      "yaw_rad": -0.2141516506434134,
+      "intersection_area_m2": 3.4882080592567877,
+      "rear_axle_point_inside_barrier": false
+    },
+    {
+      "index": 38,
+      "rear_axle_xy": [
+        11.397069385788825,
+        -2.4613713230554484
+      ],
+      "yaw_rad": -0.21415165064341432,
+      "intersection_area_m2": 3.7000410782743414,
+      "rear_axle_point_inside_barrier": false
+    },
+    {
+      "index": 39,
+      "rear_axle_xy": [
+        11.523748042390762,
+        -2.4889222298662825
+      ],
+      "yaw_rad": -0.21415165064341307,
+      "intersection_area_m2": 3.7000410782743405,
+      "rear_axle_point_inside_barrier": false
+    },
+    {
+      "index": 40,
+      "rear_axle_xy": [
+        11.65047946270003,
+        -2.516484612074967
+      ],
+      "yaw_rad": -0.21415165064341032,
+      "intersection_area_m2": 3.7000410782743445,
+      "rear_axle_point_inside_barrier": false
+    },
+    {
+      "index": 41,
+      "rear_axle_xy": [
+        11.777255732160528,
+        -2.5440567483718235
+      ],
+      "yaw_rad": -0.2141516506434109,
+      "intersection_area_m2": 3.700041078274342,
+      "rear_axle_point_inside_barrier": false
+    },
+    {
+      "index": 42,
+      "rear_axle_xy": [
+        11.90407012339957,
+        -2.5716371756436267
+      ],
+      "yaw_rad": -0.21415165064341024,
+      "intersection_area_m2": 3.700041078274344,
+      "rear_axle_point_inside_barrier": false
+    },
+    {
+      "index": 43,
+      "rear_axle_xy": [
+        12.030916918150377,
+        -2.5992246502441345
+      ],
+      "yaw_rad": -0.21415165064340963,
+      "intersection_area_m2": 3.700041078274344,
+      "rear_axle_point_inside_barrier": false
+    },
+    {
+      "index": 44,
+      "rear_axle_xy": [
+        12.157791255886183,
+        -2.6268181150740415
+      ],
+      "yaw_rad": -0.21415165064340655,
+      "intersection_area_m2": 3.7000410782743414,
+      "rear_axle_point_inside_barrier": false
+    },
+    {
+      "index": 45,
+      "rear_axle_xy": [
+        12.284689005159239,
+        -2.6544166715989372
+      ],
+      "yaw_rad": -0.2141516506434086,
+      "intersection_area_m2": 3.700041078274343,
+      "rear_axle_point_inside_barrier": false
+    },
+    {
+      "index": 46,
+      "rear_axle_xy": [
+        12.411606654238955,
+        -2.682019556064574
+      ],
+      "yaw_rad": -0.21415165064340458,
+      "intersection_area_m2": 3.70004107827434,
+      "rear_axle_point_inside_barrier": false
+    },
+    {
+      "index": 47,
+      "rear_axle_xy": [
+        12.538541218154336,
+        -2.70962611927984
+      ],
+      "yaw_rad": -0.21415165064340472,
+      "intersection_area_m2": 3.700041078274341,
+      "rear_axle_point_inside_barrier": false
+    },
+    {
+      "index": 48,
+      "rear_axle_xy": [
+        12.66549015968003,
+        -2.737235809432291
+      ],
+      "yaw_rad": -0.2141516506434054,
+      "intersection_area_m2": 3.7000410782743396,
+      "rear_axle_point_inside_barrier": false
+    },
+    {
+      "index": 49,
+      "rear_axle_xy": [
+        12.792451322174488,
+        -2.7648481574813495
+      ],
+      "yaw_rad": -0.2141516506434069,
+      "intersection_area_m2": 3.7000410782743405,
+      "rear_axle_point_inside_barrier": false
+    },
+    {
+      "index": 50,
+      "rear_axle_xy": [
+        12.919422872492397,
+        -2.7924627647425244
+      ],
+      "yaw_rad": -0.21415165064340574,
+      "intersection_area_m2": 3.7000410782743405,
+      "rear_axle_point_inside_barrier": false
+    },
+    {
+      "index": 51,
+      "rear_axle_xy": [
+        13.046403252460241,
+        -2.820079292333998
+      ],
+      "yaw_rad": -0.21415165064340305,
+      "intersection_area_m2": 3.700041078274342,
+      "rear_axle_point_inside_barrier": true
+    },
+    {
+      "index": 52,
+      "rear_axle_xy": [
+        13.173391137630528,
+        -2.8476974522062255
+      ],
+      "yaw_rad": -0.21415165064339997,
+      "intersection_area_m2": 3.7000410782743396,
+      "rear_axle_point_inside_barrier": true
+    },
+    {
+      "index": 53,
+      "rear_axle_xy": [
+        13.300385402222894,
+        -2.8753169995170937
+      ],
+      "yaw_rad": -0.2141516506434021,
+      "intersection_area_m2": 3.700041078274341,
+      "rear_axle_point_inside_barrier": true
+    },
+    {
+      "index": 54,
+      "rear_axle_xy": [
+        13.427385089324023,
+        -2.9029377261508067
+      ],
+      "yaw_rad": -0.2141516506434009,
+      "intersection_area_m2": 3.7000410782743405,
+      "rear_axle_point_inside_barrier": true
+    },
+    {
+      "index": 55,
+      "rear_axle_xy": [
+        13.554389385557604,
+        -2.930559455208938
+      ],
+      "yaw_rad": -0.21415165064339925,
+      "intersection_area_m2": 3.7000410782743414,
+      "rear_axle_point_inside_barrier": true
+    },
+    {
+      "index": 56,
+      "rear_axle_xy": [
+        13.681397599553769,
+        -2.958182036327824
+      ],
+      "yaw_rad": -0.2141516506433974,
+      "intersection_area_m2": 3.7000410782743436,
+      "rear_axle_point_inside_barrier": true
+    },
+    {
+      "index": 57,
+      "rear_axle_xy": [
+        13.808409143648129,
+        -2.9858053416983523
+      ],
+      "yaw_rad": -0.2141516506433996,
+      "intersection_area_m2": 3.7000410782743396,
+      "rear_axle_point_inside_barrier": true
+    },
+    {
+      "index": 58,
+      "rear_axle_xy": [
+        13.935423518325955,
+        -3.0134292626827763
+      ],
+      "yaw_rad": -0.21415165064339806,
+      "intersection_area_m2": 3.6763841906847206,
+      "rear_axle_point_inside_barrier": true
+    },
+    {
+      "index": 59,
+      "rear_axle_xy": [
+        14.062440298999727,
+        -3.0410537069390116
+      ],
+      "yaw_rad": -0.2141516506433972,
+      "intersection_area_m2": 3.4359100031760414,
+      "rear_axle_point_inside_barrier": true
+    },
+    {
+      "index": 60,
+      "rear_axle_xy": [
+        14.189459124770053,
+        -3.0686785959762863
+      ],
+      "yaw_rad": -0.214151650643396,
+      "intersection_area_m2": 3.195431943793661,
+      "rear_axle_point_inside_barrier": true
+    },
+    {
+      "index": 61,
+      "rear_axle_xy": [
+        14.316479688872452,
+        -3.096303863077445
+      ],
+      "yaw_rad": -0.2141516506433965,
+      "intersection_area_m2": 2.954950593318637,
+      "rear_axle_point_inside_barrier": true
+    },
+    {
+      "index": 62,
+      "rear_axle_xy": [
+        14.44350173055711,
+        -3.1239294515329044
+      ],
+      "yaw_rad": -0.214151650643396,
+      "intersection_area_m2": 2.714466445414871,
+      "rear_axle_point_inside_barrier": true
+    },
+    {
+      "index": 63,
+      "rear_axle_xy": [
+        14.570525028186688,
+        -3.1515553131395198
+      ],
+      "yaw_rad": -0.21415165064339586,
+      "intersection_area_m2": 2.473979919696671,
+      "rear_axle_point_inside_barrier": true
+    },
+    {
+      "index": 64,
+      "rear_axle_xy": [
+        14.697549393369451,
+        -3.179181406924618
+      ],
+      "yaw_rad": -0.21415165064339703,
+      "intersection_area_m2": 2.2334913728361974,
+      "rear_axle_point_inside_barrier": true
+    },
+    {
+      "index": 65,
+      "rear_axle_xy": [
+        14.82457466597242,
+        -3.2068076980614264
+      ],
+      "yaw_rad": -0.21415165064339545,
+      "intersection_area_m2": 1.9930011080047965,
+      "rear_axle_point_inside_barrier": true
+    },
+    {
+      "index": 66,
+      "rear_axle_xy": [
+        14.951600709882564,
+        -3.2344341569471884
+      ],
+      "yaw_rad": -0.21415165064339597,
+      "intersection_area_m2": 1.7525093828981038,
+      "rear_axle_point_inside_barrier": true
+    },
+    {
+      "index": 67,
+      "rear_axle_xy": [
+        15.078627409403806,
+        -3.262060758419561
+      ],
+      "yaw_rad": -0.2141516506433963,
+      "intersection_area_m2": 1.5120164165574175,
+      "rear_axle_point_inside_barrier": false
+    },
+    {
+      "index": 68,
+      "rear_axle_xy": [
+        15.205654666194482,
+        -3.2896874810905525
+      ],
+      "yaw_rad": -0.2141516506433964,
+      "intersection_area_m2": 1.271522395167834,
+      "rear_axle_point_inside_barrier": false
+    },
+    {
+      "index": 69,
+      "rear_axle_xy": [
+        15.332682396664177,
+        -3.3173143067803705
+      ],
+      "yaw_rad": -0.2141516506433955,
+      "intersection_area_m2": 1.0310274769866874,
+      "rear_axle_point_inside_barrier": false
+    },
+    {
+      "index": 70,
+      "rear_axle_xy": [
+        15.459710529761038,
+        -3.3449412200361905
+      ],
+      "yaw_rad": -0.2141516506433965,
+      "intersection_area_m2": 0.7905317965327112,
+      "rear_axle_point_inside_barrier": false
+    },
+    {
+      "index": 71,
+      "rear_axle_xy": [
+        15.58673900509099,
+        -3.3725682077231127
+      ],
+      "yaw_rad": -0.2141516506433966,
+      "intersection_area_m2": 0.5500354681468322,
+      "rear_axle_point_inside_barrier": false
+    },
+    {
+      "index": 72,
+      "rear_axle_xy": [
+        15.71376777131907,
+        -3.4001952586764714
+      ],
+      "yaw_rad": -0.21415165064339825,
+      "intersection_area_m2": 0.3095385890188358,
+      "rear_axle_point_inside_barrier": false
+    },
+    {
+      "index": 73,
+      "rear_axle_xy": [
+        15.840796784810557,
+        -3.4278223634063014
+      ],
+      "yaw_rad": -0.2141516506433952,
+      "intersection_area_m2": 0.06904124176004106,
+      "rear_axle_point_inside_barrier": false
+    }
+  ],
+  "region_heading_samples_checked": 17205,
+  "sample_scope": "数值交叉检查，连续全集结论依赖记录的解析界，不以采样替代全集证明",
+  "universal_slab_proof_margins": {
+    "front_m": 7.029274677380583,
+    "rear_m": -2.9860158764508693,
+    "lateral_m": 45.73612729630366
+  },
+  "sampled_goal_body_intersections": 0,
+  "every_acceptable_region_disconnected_from_start": true,
+  "all_goal_body_poses_intersect_wall_analytic": false,
+  "all_acceptable_poses_independently_unreachable": true,
+  "original_rear_axle_centerline_connected": false,
+  "original_results_changed": false,
+  "new_model_calls": 0,
+  "new_navigation_runs": 0,
+  "new_arrival_credit": 0,
+  "goal_complete": false
+}

@@ -1,0 +1,77 @@
+[
+  {
+    "title": "T01 真实感知主矩阵：正条件四项结果计数",
+    "horizontal": false,
+    "height_px": 285.96875
+  },
+  {
+    "title": "T02 主矩阵：正条件四项结果比例与聚类区间",
+    "horizontal": false,
+    "height_px": 560.6875
+  },
+  {
+    "title": "T03 主矩阵：正条件配对差值",
+    "horizontal": false,
+    "height_px": 560.6875
+  },
+  {
+    "title": "T04 主矩阵：全部任务类型及失败分母",
+    "horizontal": false,
+    "height_px": 490.28125
+  },
+  {
+    "title": "T05 过去时刻LiDAR场景图：全帧对象评价",
+    "horizontal": false,
+    "height_px": 387.9375
+  },
+  {
+    "title": "T06 全连续序列身份：门控口径与未知返回",
+    "horizontal": false,
+    "height_px": 608.875
+  },
+  {
+    "title": "T07 公平三任务验证：全部模型及三个新训练种子",
+    "horizontal": false,
+    "height_px": 655.375
+  },
+  {
+    "title": "T08 KITTI Object：对象定位诊断",
+    "horizontal": false,
+    "height_px": 230.125
+  },
+  {
+    "title": "T09 KITTI Object：稳健均值减普通均值的配对差",
+    "horizontal": false,
+    "height_px": 276.625
+  },
+  {
+    "title": "T10 KITTI Object：逐类结果及负结果",
+    "horizontal": false,
+    "height_px": 434.4375
+  },
+  {
+    "title": "T11 KITTI Tracking：连续车载窗口对象评价",
+    "horizontal": false,
+    "height_px": 276.625
+  },
+  {
+    "title": "T12 KITTI Tracking：身份计数及IDF1",
+    "horizontal": false,
+    "height_px": 371.3125
+  },
+  {
+    "title": "T13 CPU语义异步故障：实际暴露与执行计数",
+    "horizontal": false,
+    "height_px": 466
+  },
+  {
+    "title": "T14 CPU语义异步故障：原四项结果与保持证据",
+    "horizontal": false,
+    "height_px": 466
+  },
+  {
+    "title": "T15 固定逻辑三任务缓存：冷与热实际复现",
+    "horizontal": false,
+    "height_px": 293.625
+  }
+]

@@ -1,0 +1,67 @@
+{
+  "passed": true,
+  "updated_utc": "2026-11-13T01:33:18.161796+00:00",
+  "condition": "delayed_actual_rank",
+  "exposure_checks": {
+    "physical_motion_before_fault": true,
+    "sensor_gap_braked_to_zero": true,
+    "physical_barrier_created": true,
+    "prior_target_path_blocked": true,
+    "center_or_vehicle_goal_region_unreachable": true,
+    "actual_LiDAR_barrier_points": true,
+    "measured_obstacle_published": true,
+    "actual_CPU_rank_completed": true,
+    "original_valid_rank_envelope": true,
+    "actual_rank_delivered_after_observed_blockage": true,
+    "changed_safe_context_rejected": true
+  },
+  "all_required_fault_exposure": true,
+  "old_rear_axle_centerline_intersects_barrier": true,
+  "old_vehicle_path_intersects_barrier": true,
+  "rear_axle_point_geometry_disconnected": true,
+  "all_acceptable_goal_body_poses_blocked": false,
+  "independent_goal_body_slab_proof": {
+    "region_min_longitudinal": 2.4553491201110296,
+    "region_max_longitudinal": 4.855349120111031,
+    "minimum_body_front_longitudinal": 6.029274677380583,
+    "maximum_body_rear_longitudinal": 3.9860158764508693,
+    "wall_longitudinal_interval": [
+      -1,
+      1
+    ],
+    "vehicle_and_region_lateral_bound_m": 4.263872703696346,
+    "wall_lateral_half_width_m": 50,
+    "heading_tolerance_rad": 0.2617993877991494,
+    "region_and_wall_heading_aligned": true,
+    "all_region_poses_rectangles_intersect_wall": false
+  },
+  "continuous_body_including_barrier": true,
+  "moving_direction": true,
+  "final_speed_zero": true,
+  "all_completed_frames_clear_blocked_route": true,
+  "semantic_rank_schema_valid": true,
+  "semantic_context_rejected": true,
+  "actual_controls_after_rank_return": 1321,
+  "actual_controls": 2479,
+  "actual_frontend_calls": 21,
+  "actual_CPU_Qwen_calls": 1,
+  "actual_GPU_calls": 0,
+  "original_four_outcomes": {
+    "route_generated": true,
+    "selected_object_evaluated_correct": true,
+    "stable_correct_lock": true,
+    "actual_full_perception_arrival": false
+  },
+  "result_is_development_combined_fault": true,
+  "formal_GPU_fault_gate": false,
+  "new_independent_tasks": 0,
+  "actual_arrival_credit_added": 0,
+  "goal_complete": false,
+  "source_sha256": "8f2b58c90348e9930ea935fba8466a6f19a60665c8851149b377400a98563c8d",
+  "limitations": [
+    "一次固定配置/任务/种子的开发组合故障；不宣称运动中突发障碍或全部动态交通安全",
+    "先TTL间断停车再出现屏障；CPU TTL15秒不是正式GPU1.5秒",
+    "屏障按全时段保守检查，独立逐区间整车审核覆盖其出生后的实际轨迹",
+    "真实前端和真实模型分列，无GPU/人工标签/新封存或独占性能信用"
+  ]
+}

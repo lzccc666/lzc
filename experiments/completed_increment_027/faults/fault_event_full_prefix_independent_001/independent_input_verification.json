@@ -1,0 +1,11 @@
+{
+  "checked_at": "2026-11-13T21:02:00.443798+08:00",
+  "passed": true,
+  "cases": 105,
+  "raw_input_hashes_verified": 525,
+  "untriggered_blackout_cases": [
+    "realtime_faults_gpu_full_001_sensor_blackout_4s_config08_positive0_s29"
+  ],
+  "partial_not_final": true,
+  "goal_complete": false
+}

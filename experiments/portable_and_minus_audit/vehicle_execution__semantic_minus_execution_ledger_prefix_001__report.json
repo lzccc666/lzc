@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "updated_utc": "2026-11-12T23:00:29.684719+00:00",
+  "audited_prefix_cases": 125,
+  "expected_cohort_cases": 450,
+  "full_cohort_verified": false,
+  "source_progress_can_continue": true,
+  "strict_observed_initials": 109,
+  "reconstructed_initials": 16,
+  "control_intervals": 96952,
+  "moving_intervals": 37305,
+  "counts": {
+    "body_certificate_safe": 125,
+    "direction_not_exercised_stationary": 22,
+    "reported_arrivals": 12,
+    "certified_reported_arrivals": 12,
+    "direction_certificate_forward": 103
+  },
+  "unresolved_reported_arrivals": [],
+  "source_release_sha256": "f521c207d546c57b9afb9e444887f029d074eba3c7eb60b2a8bc4da73458eb27",
+  "audited_prefix_sha256": "458bb91963bcb7b0d66ff55fc7ffa09cd7a1c6a3b28b7cb425f5ac4fc86a12ab",
+  "SHA_files": 750,
+  "files_manifest_sha256": "ce62ba2240e4f54ed61c89355067c3be01ee5cec75d612908c0a13e31b240027",
+  "source_sha256": "a5a7e04080a9f2731bc49c5cb014d0081187972c2e1d2a042034b8dccea29c58",
+  "original_result_values_unchanged": true,
+  "actual_model_calls": 0,
+  "new_executions": 0,
+  "new_arrivals": 0,
+  "initial_RNG_independent_crosscheck": "explicit PCG64 standard_normal(3) and explicit scales",
+  "conservative_hold_times_recomputed_from_saved_interval_witnesses": true,
+  "safety_status_is_not_assumed_from_passed_ledger": true,
+  "goal_complete": false
+}

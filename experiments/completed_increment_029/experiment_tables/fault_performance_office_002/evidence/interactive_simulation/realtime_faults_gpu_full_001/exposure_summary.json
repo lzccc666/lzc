@@ -1,0 +1,43 @@
+{
+  "conditions": {
+    "baseline": {
+      "frozen_trials": 30,
+      "triggered": 0,
+      "unknown": 0,
+      "blackout_stopped": 0
+    },
+    "sensor_blackout_4s": {
+      "frozen_trials": 30,
+      "triggered": 29,
+      "unknown": 0,
+      "blackout_stopped": 29
+    },
+    "lidar_dropout_80pct": {
+      "frozen_trials": 30,
+      "triggered": 29,
+      "unknown": 1,
+      "blackout_stopped": 0
+    },
+    "depth_noise_02m": {
+      "frozen_trials": 30,
+      "triggered": 30,
+      "unknown": 0,
+      "blackout_stopped": 0
+    },
+    "pose_noise_025m_2deg": {
+      "frozen_trials": 30,
+      "triggered": 29,
+      "unknown": 0,
+      "blackout_stopped": 0
+    },
+    "detection_dropout_30pct": {
+      "frozen_trials": 30,
+      "triggered": 30,
+      "unknown": 0,
+      "blackout_stopped": 0
+    }
+  },
+  "exposure_is_not_arrival": true,
+  "no_unexposed_safety_credit": true,
+  "goal_complete": false
+}

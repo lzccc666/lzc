@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "updated_utc": "2026-11-13T05:04:35.100611+00:00",
+  "business_source_files_unchanged": 390,
+  "original_index_unchanged": true,
+  "original_processes_same": {
+    "268029": true,
+    "38569": true,
+    "288085": true,
+    "199838": true,
+    "211077": true,
+    "327549": true
+  },
+  "queued_process_pid": 425561,
+  "queued_process_start_ticks": "1383255247",
+  "queue_live": true,
+  "frozen_helpers_and_manifests_verified": 7,
+  "release_sha256": "af019ad70e43abd8206ba2f1e2767606bd5214115361879348afd8de5aa240c5",
+  "plan_sha256": "e760db7fb913b5149abe3aa2007b1d92055fbd97bd3f73e067e0e7a67bd9ad65",
+  "files_planned": 29494,
+  "bytes_planned": 1516087988,
+  "runtime_PyOpenGL_version": "3.1.7",
+  "actual_packages_installed": 0,
+  "actual_new_environment_navigation_executions": 0,
+  "actual_model_calls_added": 0,
+  "large_downloads_started": false,
+  "CPU_import_probe_passed": true,
+  "old_plan_001_preserved_and_not_installed": true,
+  "goal_complete": false
+}

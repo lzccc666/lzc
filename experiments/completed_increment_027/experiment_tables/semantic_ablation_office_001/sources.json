@@ -1,0 +1,32 @@
+{
+  "statistics/semantic_ablation_combined_004/report.json": {
+    "sha256": "f738b31c525fb8238700ab01120b382dccee85655dd472ab45f56e9fe18ff689",
+    "bytes": 60768,
+    "package_path": "evidence/statistics/semantic_ablation_combined_004/report.json"
+  },
+  "statistics/semantic_ablation_combined_004/trials.csv": {
+    "sha256": "6c051b90af5839820e2790e4bc9a01223b5c51f655d634b7d432a6beb21f6e7e",
+    "bytes": 125009,
+    "package_path": "evidence/statistics/semantic_ablation_combined_004/trials.csv"
+  },
+  "statistics/realtime_three_model_full_001/trials.csv": {
+    "sha256": "8fc8372c97cf9c375201d6950723516f1d159429136b06de109d88c62d446904",
+    "bytes": 71755,
+    "package_path": "evidence/statistics/realtime_three_model_full_001/trials.csv"
+  },
+  "statistics/semantic_compatibility_evidence_check_004/report.json": {
+    "sha256": "3aa08cca0e56df7c46ad84afdaafed2ccb9b89a3a592648cbd71ee8efc89f925",
+    "bytes": 1811,
+    "package_path": "evidence/statistics/semantic_compatibility_evidence_check_004/report.json"
+  },
+  "ablations/semantic_navigation_chain_004/complete.json": {
+    "sha256": "5bcdf9af2fb78cd8c675e37c4ac6a330eb3b3227ebd6362983a9569bf6ed3e81",
+    "bytes": 975,
+    "package_path": "evidence/ablations/semantic_navigation_chain_004/complete.json"
+  },
+  "vehicle_execution/semantic_minus_execution_full_002/report.json": {
+    "sha256": "3e61c565553fb04e8da73d558b7e1d8a35af17ceb46c0da0fae28b1382af7a86",
+    "bytes": 1787,
+    "package_path": "evidence/vehicle_execution/semantic_minus_execution_full_002/report.json"
+  }
+}

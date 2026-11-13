@@ -1,0 +1,15 @@
+{
+  "source_sha256": {
+    "outputs/project_v2/thesis_completion_v1/source_bundle/reference_guided_vehicle_run_001.py": "e036d4d2c8fa3975664142ff455d55277ffe4fc089edf7d0a12157fc74b07670",
+    "conceptgraph/navigation/reference_guided_vehicle.py": "fe65de18c10b7dd4ea2d07df0f3edcfc65772b6fbd4cca10b0f91139276cd9f3",
+    "conceptgraph/completion/topology_vehicle.py": "f0200cebffa5ed8aa4f02686a4e9f89f3494ff5bed99dc414db9c2e7475e0299",
+    "conceptgraph/completion/execution_direction_audit.py": "52ececb3797c2ba7f44544fb7e6f23fe743c1c7818fdb46542052c4ce2b02503",
+    "conceptgraph/completion/independent_continuous_body.py": "6225ef52af83bb2f2cfb45bc4a204977f9cc5f7d3170aadd35af58715b419fbf",
+    "conceptgraph/completion/kinematic_benchmark.py": "3f5805c14288992719aa0a4bb967e6211c195cbea8da0e7cbbccf60c4a031045",
+    "conceptgraph/navigation/vehicle_geometry.py": "ae93a8ae8e9af6d874eafad1d57e5b2e65f54f45b0c90ccbdcc32d79743a9378",
+    "conceptgraph/navigation/vehicle_planner.py": "1f17b4c03b9989b3ffd0133469619fb66eb522d9b89ff8071ebb547f49f29b95"
+  },
+  "archive_sha256": "b024bd5da2d0a945a584aec97c3541efa64f2dbaacb4347eebaaf5f573c4cc4c",
+  "source_files": 8,
+  "captured_before_execution": true
+}

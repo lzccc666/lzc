@@ -1,0 +1,301 @@
+[
+  {
+    "id": "T16",
+    "title": "语义消融：四类正任务结果（计数）",
+    "columns": [
+      {
+        "key": "method",
+        "label": "条件",
+        "kind": "text"
+      },
+      {
+        "key": "denominator",
+        "label": "正任务分母",
+        "kind": "int"
+      },
+      {
+        "key": "route_generated",
+        "label": "生成路线",
+        "kind": "int"
+      },
+      {
+        "key": "selected_object_evaluated_correct",
+        "label": "选对对象",
+        "kind": "int"
+      },
+      {
+        "key": "stable_correct_lock",
+        "label": "正确锁定",
+        "kind": "int"
+      },
+      {
+        "key": "actual_full_perception_arrival",
+        "label": "实际正确到达",
+        "kind": "int"
+      }
+    ],
+    "rows": [
+      {
+        "method": "规则",
+        "denominator": 90,
+        "route_generated": 83,
+        "selected_object_evaluated_correct": 84,
+        "stable_correct_lock": 82,
+        "actual_full_perception_arrival": 50
+      },
+      {
+        "method": "新Adapter完整",
+        "denominator": 90,
+        "route_generated": 59,
+        "selected_object_evaluated_correct": 33,
+        "stable_correct_lock": 32,
+        "actual_full_perception_arrival": 4
+      },
+      {
+        "method": "关闭解析",
+        "denominator": 90,
+        "route_generated": 73,
+        "selected_object_evaluated_correct": 76,
+        "stable_correct_lock": 72,
+        "actual_full_perception_arrival": 48
+      },
+      {
+        "method": "关闭属性",
+        "denominator": 90,
+        "route_generated": 61,
+        "selected_object_evaluated_correct": 33,
+        "stable_correct_lock": 31,
+        "actual_full_perception_arrival": 5
+      },
+      {
+        "method": "关闭重排",
+        "denominator": 90,
+        "route_generated": 62,
+        "selected_object_evaluated_correct": 37,
+        "stable_correct_lock": 36,
+        "actual_full_perception_arrival": 6
+      }
+    ],
+    "sources": [
+      "statistics/semantic_ablation_combined_004/report.json",
+      "statistics/semantic_compatibility_evidence_check_004/report.json",
+      "vehicle_execution/semantic_minus_execution_full_002/report.json"
+    ],
+    "note": "每条件50任务×3种子，正任务90、无匹配30、不可接近30。450新增+300复用记录，不增加独立任务数。1例不可接近中断保留为失败。59次新增到达有保持证据；59例初态显式重建。开发颜色任务，10配置共享3道路家族；非新封存测试。",
+    "role": "开发证据，非新封存测试"
+  },
+  {
+    "id": "T17",
+    "title": "配对消融差异：完整新Adapter减对照（百分点）",
+    "columns": [
+      {
+        "key": "comparison",
+        "label": "差值方向",
+        "kind": "text"
+      },
+      {
+        "key": "metric",
+        "label": "指标",
+        "kind": "text"
+      },
+      {
+        "key": "difference",
+        "label": "差值/百分点",
+        "kind": "float"
+      },
+      {
+        "key": "low",
+        "label": "95%CI下限/百分点",
+        "kind": "float"
+      },
+      {
+        "key": "high",
+        "label": "95%CI上限/百分点",
+        "kind": "float"
+      },
+      {
+        "key": "denominator",
+        "label": "配对正任务数",
+        "kind": "int"
+      }
+    ],
+    "rows": [
+      {
+        "comparison": "完整减关闭解析",
+        "metric": "生成路线",
+        "difference": -15.555555555555555,
+        "low": -28.888888888888886,
+        "high": 0.0,
+        "denominator": 90
+      },
+      {
+        "comparison": "完整减关闭解析",
+        "metric": "选对对象",
+        "difference": -47.77777777777778,
+        "low": -60.0,
+        "high": -33.33333333333333,
+        "denominator": 90
+      },
+      {
+        "comparison": "完整减关闭解析",
+        "metric": "正确锁定",
+        "difference": -44.44444444444444,
+        "low": -58.88888888888889,
+        "high": -27.77777777777778,
+        "denominator": 90
+      },
+      {
+        "comparison": "完整减关闭解析",
+        "metric": "实际正确到达",
+        "difference": -48.888888888888886,
+        "low": -65.55555555555556,
+        "high": -33.33333333333333,
+        "denominator": 90
+      },
+      {
+        "comparison": "完整减关闭属性",
+        "metric": "生成路线",
+        "difference": -2.2222222222222223,
+        "low": -5.555555555555555,
+        "high": 0.0,
+        "denominator": 90
+      },
+      {
+        "comparison": "完整减关闭属性",
+        "metric": "选对对象",
+        "difference": 0.0,
+        "low": -3.3333333333333335,
+        "high": 3.3333333333333335,
+        "denominator": 90
+      },
+      {
+        "comparison": "完整减关闭属性",
+        "metric": "正确锁定",
+        "difference": 1.1111111111111112,
+        "low": -2.2222222222222223,
+        "high": 4.444444444444445,
+        "denominator": 90
+      },
+      {
+        "comparison": "完整减关闭属性",
+        "metric": "实际正确到达",
+        "difference": -1.1111111111111112,
+        "low": -6.666666666666667,
+        "high": 5.555555555555555,
+        "denominator": 90
+      }
+    ],
+    "sources": [
+      "statistics/semantic_ablation_combined_004/report.json"
+    ],
+    "note": "配置聚类配对bootstrap，10配置、4000次、seed17；负值表示完整新Adapter较低。单位已转换为百分点，不是百分比相对变化。未作多重比较校正；共享道路家族限制泛化。实时资源/轨迹变化属于闭环条件差异，不视为单字段严格因果效应。",
+    "role": "开发证据，非新封存测试"
+  },
+  {
+    "id": "T18",
+    "title": "配对消融差异：完整新Adapter减对照（百分点）",
+    "columns": [
+      {
+        "key": "comparison",
+        "label": "差值方向",
+        "kind": "text"
+      },
+      {
+        "key": "metric",
+        "label": "指标",
+        "kind": "text"
+      },
+      {
+        "key": "difference",
+        "label": "差值/百分点",
+        "kind": "float"
+      },
+      {
+        "key": "low",
+        "label": "95%CI下限/百分点",
+        "kind": "float"
+      },
+      {
+        "key": "high",
+        "label": "95%CI上限/百分点",
+        "kind": "float"
+      },
+      {
+        "key": "denominator",
+        "label": "配对正任务数",
+        "kind": "int"
+      }
+    ],
+    "rows": [
+      {
+        "comparison": "完整减关闭重排",
+        "metric": "生成路线",
+        "difference": -3.3333333333333335,
+        "low": -6.666666666666667,
+        "high": 0.0,
+        "denominator": 90
+      },
+      {
+        "comparison": "完整减关闭重排",
+        "metric": "选对对象",
+        "difference": -4.444444444444445,
+        "low": -8.88888888888889,
+        "high": 0.0,
+        "denominator": 90
+      },
+      {
+        "comparison": "完整减关闭重排",
+        "metric": "正确锁定",
+        "difference": -4.444444444444445,
+        "low": -7.777777777777778,
+        "high": -1.1111111111111112,
+        "denominator": 90
+      },
+      {
+        "comparison": "完整减关闭重排",
+        "metric": "实际正确到达",
+        "difference": -2.2222222222222223,
+        "low": -6.666666666666667,
+        "high": 3.3333333333333335,
+        "denominator": 90
+      },
+      {
+        "comparison": "完整减规则",
+        "metric": "生成路线",
+        "difference": -26.666666666666668,
+        "low": -33.33333333333333,
+        "high": -18.88888888888889,
+        "denominator": 90
+      },
+      {
+        "comparison": "完整减规则",
+        "metric": "选对对象",
+        "difference": -56.666666666666664,
+        "low": -63.33333333333333,
+        "high": -48.888888888888886,
+        "denominator": 90
+      },
+      {
+        "comparison": "完整减规则",
+        "metric": "正确锁定",
+        "difference": -55.55555555555556,
+        "low": -63.33333333333333,
+        "high": -46.666666666666664,
+        "denominator": 90
+      },
+      {
+        "comparison": "完整减规则",
+        "metric": "实际正确到达",
+        "difference": -51.11111111111111,
+        "low": -66.69444444444443,
+        "high": -35.55555555555556,
+        "denominator": 90
+      }
+    ],
+    "sources": [
+      "statistics/semantic_ablation_combined_004/report.json"
+    ],
+    "note": "配置聚类配对bootstrap，10配置、4000次、seed17；负值表示完整新Adapter较低。单位已转换为百分点，不是百分比相对变化。未作多重比较校正；共享道路家族限制泛化。实时资源/轨迹变化属于闭环条件差异，不视为单字段严格因果效应。",
+    "role": "开发证据，非新封存测试"
+  }
+]

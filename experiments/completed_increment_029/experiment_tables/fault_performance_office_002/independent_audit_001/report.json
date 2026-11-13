@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "tables": 7,
+  "rows": 57,
+  "numeric_and_text_cells_checked": 291,
+  "PDF_pages": 7,
+  "sources_verified": 17,
+  "performance_stages_recomputed": 40,
+  "failed_process_kept_in_denominator": true,
+  "actual_new_model_calls": 0,
+  "source_sha256": "3f4eac47af180d12d8eac722149e86dc4fde71e12e8209ab1513fd5e93589db6",
+  "goal_complete": false
+}

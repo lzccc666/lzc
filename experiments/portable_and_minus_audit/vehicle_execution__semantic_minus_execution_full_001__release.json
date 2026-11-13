@@ -1,0 +1,24 @@
+{
+  "created_utc": "2026-11-12T22:58:38.811120+00:00",
+  "source_sha256": {
+    "outputs/project_v2/thesis_completion_v1/source_bundle/semantic_minus_execution_audit_001.py": "96194fcffa6d0fedfcb0fd56ed4fbfe9039364b8fb1e138e397a6ac6229dbec3",
+    "conceptgraph/completion/independent_continuous_body.py": "6225ef52af83bb2f2cfb45bc4a204977f9cc5f7d3170aadd35af58715b419fbf",
+    "conceptgraph/completion/execution_direction_audit.py": "52ececb3797c2ba7f44544fb7e6f23fe743c1c7818fdb46542052c4ce2b02503",
+    "outputs/project_v2/thesis_completion_v1/task_protocol/semantic_minus_execution_audit_001.md": "0cd75a675b6400e9d3283c9fce756a36949a3d5b6f3080a8f01c7f2325e90fb3"
+  },
+  "original_release_sha256": "3645c313ad731626c8c624f470e0a81073971bfc14c784b2d1c3ec9898347fa5",
+  "task_release_sha256": "7c4613be58378f48abc2533b82aab7b5c3d090c996a5a1b10f535555b18394c7",
+  "expected_trials": 450,
+  "limit": null,
+  "follow": true,
+  "producer_pid": 268029,
+  "producer_start_ticks": "1379768112",
+  "budget_execution_wall_s": 3600,
+  "budget_wait_s": 90000,
+  "budget_bytes": 2000000000,
+  "minimum_free_bytes": 6000000000,
+  "CUDA_visible": "",
+  "actual_model_calls": 0,
+  "new_executions": 0,
+  "goal_complete": false
+}

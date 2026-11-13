@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "created_utc": "2026-11-12T20:30:58.698276+00:00",
+  "trials": 450,
+  "method_count": 3,
+  "tasks": 50,
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "configs": 10,
+  "counts": {
+    "saved_control_records": 334607,
+    "saved_perception_records": 57460,
+    "missing_complete_results": 1
+  },
+  "independently_recomputed_cluster_statistics": 66,
+  "SHA_files": 2320,
+  "files_manifest_sha256": "b333cd4ce1c573ca399186a4a90d77a54adfd4cd4987123f51c94ce8a8aba49b",
+  "source_sha256": "9bde7cf0f95b67dea5f5990e9c1d8080f96622e03a09b08fd04992064fe41107",
+  "methods": {
+    "base_full": {
+      "arrivals": 39,
+      "distinct_positive_tasks": 17,
+      "scene_configs": 9,
+      "minimum_10_tasks_5_configs": true
+    },
+    "new_full": {
+      "arrivals": 4,
+      "distinct_positive_tasks": 4,
+      "scene_configs": 3,
+      "minimum_10_tasks_5_configs": false
+    },
+    "rule": {
+      "arrivals": 50,
+      "distinct_positive_tasks": 27,
+      "scene_configs": 10,
+      "minimum_10_tasks_5_configs": true
+    }
+  },
+  "wall_CPU_shared_s": 54.41965567134321,
+  "actual_model_calls": 0,
+  "new_executions": 0,
+  "new_arrivals": 0,
+  "limits": [
+    "输入、分母和统计复核，不是第三套运动学/车身或身份真值审核",
+    "完整失败保留，未知字段不给成功信用；配置和种子不增加独立真实场景数",
+    "开发合成任务，不是新自然语言封存测试，未增加正确到达"
+  ],
+  "goal_complete": false
+}

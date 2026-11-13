@@ -1,0 +1,37 @@
+[
+  {
+    "title": "T19 完整GPU故障矩阵：四类结果计数",
+    "horizontal": false,
+    "height_px": 395.59375
+  },
+  {
+    "title": "T20 故障实际暴露与断流停车核验",
+    "horizontal": false,
+    "height_px": 419.875
+  },
+  {
+    "title": "T21 实际到达配对差值：无注入基线减故障",
+    "horizontal": false,
+    "height_px": 324.8125
+  },
+  {
+    "title": "T22 基础Qwen：固定输入分阶段运行时间",
+    "horizontal": false,
+    "height_px": 497.5625
+  },
+  {
+    "title": "T23 旧Adapter：固定输入分阶段运行时间",
+    "horizontal": false,
+    "height_px": 497.5625
+  },
+  {
+    "title": "T24 新Adapter：固定输入分阶段运行时间",
+    "horizontal": false,
+    "height_px": 497.5625
+  },
+  {
+    "title": "T25 感知前端：固定输入分阶段运行时间",
+    "horizontal": false,
+    "height_px": 497.5625
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "updated_utc": "2026-11-13T00:54:55.107836+00:00",
+  "package_complete": true,
+  "independent_validation_passed": true,
+  "audit_sha256": "089ffcf6a80a54f3730e1b8c1da46ea8848d0877c4877d9a834f75906b8d1a55",
+  "tables": 15,
+  "data_rows": 114,
+  "pdf_pages": 15,
+  "inspected_preview_pages": [
+    1,
+    7,
+    10,
+    13
+  ],
+  "editable_cells_verified": 862,
+  "frozen_source_snapshots": 17,
+  "original_raw_result_files_verified": 449,
+  "missing_original_results": 1,
+  "corrected_Cyclist_note": true,
+  "extra_Qwen_calls": 0,
+  "new_experiments": 0,
+  "manuscript_text_written": false,
+  "new_test_opened": false,
+  "goal_complete": false
+}

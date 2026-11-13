@@ -1,0 +1,26 @@
+{
+  "records": [
+    {
+      "original_path": "statistics/causal_retrieval_smoke_001/report.json",
+      "sha256": "5be2124bf95e4e78e93cec08db7afcbdb9067cc52114ab7e6c423c7cf529fdf5",
+      "bytes": 578,
+      "status": "FAILED_PARTIAL_JSON_WRITE",
+      "manifest": "statistics/causal_retrieval_smoke_001/failed_write_manifest.json",
+      "manifest_sha256": "1d2a0cb3e4f634d60dd637ffe3de2d101a05ae3652edc7e65da619fdf4118d7d",
+      "classification": "已知失败的JSON写出原始残片；保留字节，不计结构化成功报告",
+      "successful_report": "statistics/causal_retrieval_smoke_002/report.json"
+    },
+    {
+      "original_path": "faults/perceived_blockage_cpu_002/rule_blockage/independent_audit_001/barrier_sensor_and_path_details.json",
+      "sha256": "e3b95bb77d79befd71b9cd54d0494397f02c333098bd3e054434f26eb9817501",
+      "bytes": 70,
+      "status": "FAILED_PARTIAL_JSON_WRITE",
+      "manifest": "source_bundle/failed_json_payload_audit_002/blockage_failed_write_manifest.json",
+      "manifest_sha256": "ad08aa1516fbfb8b7f15307abb3aa1e7708ee19a10fe1c0d5b1a60ee6bb4f3ab",
+      "classification": "原先已单独登记，通用校验器注册表遗漏；保留原失败字节，不计成功结果",
+      "successful_report": "faults/perceived_blockage_cpu_002/rule_blockage/independent_audit_003/report.json"
+    }
+  ],
+  "goal_complete": false,
+  "predecessor_sha256": "8adaa47921e8e2ff62ab888c97b9715e97937cbd00e9c6ca06c4dd8ab008528f"
+}

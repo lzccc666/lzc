@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "frame_pairs": 494,
+  "weighted_RMSE_recomputed": true,
+  "original_evidence_hashes_rechecked": true,
+  "processes_live": {
+    "455071": true,
+    "515523": true,
+    "516013": true
+  },
+  "time": "2026-11-13T21:04:24.117010+08:00",
+  "goal_complete": false
+}

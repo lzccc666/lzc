@@ -1,0 +1,16 @@
+{
+  "checked_utc": "2026-11-13T16:29:25.127974+00:00",
+  "passed": true,
+  "source_files": 390,
+  "source_byte_identical": true,
+  "export_files_scanned": 1392,
+  "secret_scan_passed": true,
+  "tests_export_passed": 450,
+  "tests_export_skipped": 2,
+  "skip_reason": "未公开真实crop数据依赖，未用伪造数据代替",
+  "tests_log_sha256": "870ed6263940d111f172e4f1b3a43cf89e3be719e8fb826c4d74ed5ff935609e",
+  "diff_check_passed": true,
+  "root_index_unchanged": true,
+  "code_pushed": false,
+  "goal_complete": false
+}

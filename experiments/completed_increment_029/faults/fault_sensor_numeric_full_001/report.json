@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "source_run": "realtime_faults_gpu_full_001",
+  "cases": 180,
+  "complete_cohort": true,
+  "frame_pairs": 19212,
+  "missing_results": 1,
+  "actual_model_calls": 0,
+  "new_arrival_credit": false,
+  "distribution_normality_not_claimed": true,
+  "empirical_RMS_not_configured_standard_deviation": true,
+  "source_sha256": "2612cd7a3f3a3af865b57e006d6567ee17b0b8306fe1496c8032ae9a914f3474",
+  "input_records_sha256": "0a9913e10df2da0dfeb1fb067fe79959634cfaddd2143ecd53adf5ea64c2f528",
+  "frame_ledger_sha256": "7abf9e8ab4322fdcbdfe90e0f38427609e623a098fe4ffc85fb5282f293d96c7",
+  "cases_sha256": "a7f31853f0718958c8614672449ae84ade61fac57f44f3ad69bd65d7617614a7",
+  "goal_complete": false
+}

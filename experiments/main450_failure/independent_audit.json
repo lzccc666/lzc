@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "created_utc": "2026-11-12T21:04:36.791947+00:00",
+  "trials": 450,
+  "frames": 57460,
+  "reconstructed_empty_saved_mapping_frames": 30538,
+  "selected_mapping_frames_matched_original": 13922,
+  "original_source_files_SHA_checked": 2672,
+  "response_records_checked": 1317,
+  "smoke_full_prefixes_equal": [
+    "trials.jsonl",
+    "frames.jsonl",
+    "responses.jsonl"
+  ],
+  "CSV_rows_checked": 450,
+  "paired_config_intervals_checked": 27,
+  "coverage_groups_checked": 9,
+  "train_parse_rows_checked": 1400,
+  "validation_parse_rows_checked": 180,
+  "source_report_sha256": "4ab910b50815c0ea35c0162bf1659d341e66a66a0d1a4a3a4274c80686286a13",
+  "coverage_report_sha256": "2057c293a2059b12d9d87fdf6a44bb0eb47d5c18624248aa2847774e4d9db2c8",
+  "audit_source_sha256": "3c046fbbbb54b8d1bcfc88e448770440ee59492a7681ebb88e3ced7f4225b9f5",
+  "actual_model_calls": 0,
+  "new_executions": 0,
+  "new_arrivals": 0,
+  "CPU_shared_wall_s": 40.256509963423014,
+  "limits": [
+    "全部节点匹配仍使用相同类别/2.5m阈值和SciPy后端，不是第三种实例真值或人工审核",
+    "逐帧阶段和响应分母独立重算，不新增模块因果贡献或正确到达信用",
+    "不改原保存的空映射、失败响应与原主450结果"
+  ],
+  "goal_complete": false
+}

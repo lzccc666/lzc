@@ -1,0 +1,1174 @@
+{
+  "status": "certificate_safe",
+  "passed": true,
+  "counts": {
+    "actual_envelope_evaluations": 54,
+    "certificate_safe": 67,
+    "geometry_cache_hits": 13
+  },
+  "intervals": [
+    {
+      "index": 0,
+      "start_time_s": 0.0,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 1.942890293094024e-16,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 1,
+      "start_time_s": 0.1,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 0.0,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 2,
+      "start_time_s": 0.2,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 0.0,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 3,
+      "start_time_s": 0.30000000000000004,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 0.0,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 4,
+      "start_time_s": 0.4,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 0.0,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 5,
+      "start_time_s": 0.5,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 0.0,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 6,
+      "start_time_s": 0.6,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 0.0,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 7,
+      "start_time_s": 0.7,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 0.0,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 8,
+      "start_time_s": 0.7999999999999999,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 0.0,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 9,
+      "start_time_s": 0.8999999999999999,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 0.0,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 10,
+      "start_time_s": 0.9999999999999999,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 0.0,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 11,
+      "start_time_s": 1.0999999999999999,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 0.0,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 12,
+      "start_time_s": 1.2,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 0.0,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 13,
+      "start_time_s": 1.3,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 0.0,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 14,
+      "start_time_s": 1.4000000000000001,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 0.0,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 15,
+      "start_time_s": 1.5000000000000002,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 0.0,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 16,
+      "start_time_s": 1.6000000000000003,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 0.0,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 17,
+      "start_time_s": 1.7000000000000004,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 0.0,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 18,
+      "start_time_s": 1.8000000000000005,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 0.0,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 19,
+      "start_time_s": 1.9000000000000006,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 0.0,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 20,
+      "start_time_s": 2.0000000000000004,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 0.0,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 21,
+      "start_time_s": 2.1000000000000005,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 0.0,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 22,
+      "start_time_s": 2.2000000000000006,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 0.0,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 23,
+      "start_time_s": 2.3000000000000007,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 0.0,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 24,
+      "start_time_s": 2.400000000000001,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 0.0,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 25,
+      "start_time_s": 2.500000000000001,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 0.0,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 26,
+      "start_time_s": 2.600000000000001,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 0.0,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 27,
+      "start_time_s": 2.700000000000001,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 0.0,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 28,
+      "start_time_s": 2.800000000000001,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 0.0,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 29,
+      "start_time_s": 2.9000000000000012,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 0.0,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 30,
+      "start_time_s": 3.0000000000000013,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 0.0,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 31,
+      "start_time_s": 3.1000000000000014,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 0.0,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 32,
+      "start_time_s": 3.2000000000000015,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 0.0,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 33,
+      "start_time_s": 3.3000000000000016,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 0.0,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 34,
+      "start_time_s": 3.4000000000000017,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 0.0,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 35,
+      "start_time_s": 3.5000000000000018,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 0.0,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 36,
+      "start_time_s": 3.600000000000002,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 0.0,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 37,
+      "start_time_s": 3.700000000000002,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 0.0,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 38,
+      "start_time_s": 3.800000000000002,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 0.0,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 39,
+      "start_time_s": 3.900000000000002,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 0.0,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 40,
+      "start_time_s": 4.000000000000002,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 0.0,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 41,
+      "start_time_s": 4.100000000000001,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 0.0,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 42,
+      "start_time_s": 4.200000000000001,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 0.0,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 43,
+      "start_time_s": 4.300000000000001,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 0.0,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 44,
+      "start_time_s": 4.4,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 0.0,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 45,
+      "start_time_s": 4.5,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 2.7755575615628914e-17,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 46,
+      "start_time_s": 4.6,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 5.551115123125783e-17,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 47,
+      "start_time_s": 4.699999999999999,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 5.551115123125783e-17,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 48,
+      "start_time_s": 4.799999999999999,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 5.551115123125783e-17,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 49,
+      "start_time_s": 4.899999999999999,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 5.551115123125783e-17,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 50,
+      "start_time_s": 4.999999999999998,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 5.551115123125783e-17,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 51,
+      "start_time_s": 5.099999999999998,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 5.551115123125783e-17,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 52,
+      "start_time_s": 5.1999999999999975,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 5.551115123125783e-17,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 53,
+      "start_time_s": 5.299999999999997,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 5.551115123125783e-17,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 54,
+      "start_time_s": 5.399999999999997,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 5.551115123125783e-17,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 55,
+      "start_time_s": 5.4999999999999964,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 5.551115123125783e-17,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 56,
+      "start_time_s": 5.599999999999996,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 5.551115123125783e-17,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 57,
+      "start_time_s": 5.699999999999996,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 5.551115123125783e-17,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 58,
+      "start_time_s": 5.799999999999995,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 5.551115123125783e-17,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 59,
+      "start_time_s": 5.899999999999995,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 5.551115123125783e-17,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 60,
+      "start_time_s": 5.999999999999995,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 2.220446049250313e-16,
+        "yaw_rad": 5.551115123125783e-17,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 61,
+      "start_time_s": 6.099999999999994,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 5.551115123125783e-17,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 62,
+      "start_time_s": 6.199999999999994,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 2.7755575615628914e-17,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 63,
+      "start_time_s": 6.299999999999994,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 2.7755575615628914e-17,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 64,
+      "start_time_s": 6.399999999999993,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 2.7755575615628914e-17,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 65,
+      "start_time_s": 6.499999999999993,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 0.0,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    },
+    {
+      "index": 66,
+      "start_time_s": 6.5999999999999925,
+      "state_residuals": {
+        "x": 0.0,
+        "y": 0.0,
+        "yaw_rad": 0.0,
+        "speed_mps": 0.0,
+        "steering_rad": 0.0,
+        "time_s": 0.0
+      },
+      "status": "certificate_safe",
+      "envelope_evaluations": 1,
+      "deepest_subdivision": 0,
+      "unresolved_leaf_count": 0,
+      "unresolved_examples": []
+    }
+  ],
+  "audited_intervals": 67,
+  "max_state_residuals": {
+    "x": 0.0,
+    "y": 2.220446049250313e-16,
+    "yaw_rad": 1.942890293094024e-16,
+    "speed_mps": 0.0,
+    "steering_rad": 0.0,
+    "time_s": 0.0
+  },
+  "initial_only_geometry": null,
+  "numerical_padding_m": 2e-06,
+  "tolerances": {
+    "x": 1e-06,
+    "y": 1e-06,
+    "yaw_rad": 1e-07,
+    "speed_mps": 1e-08,
+    "steering_rad": 1e-08,
+    "time_s": 1e-07
+  },
+  "maximum_subdivision_depth": 12,
+  "new_execution": false,
+  "arrival_credit": 0,
+  "dynamic_safety_claim": false,
+  "goal_complete": false
+}

@@ -1,0 +1,106 @@
+"""导出已结束开发消融的四结果、配对差异与证据索引；不运行模型。"""
+import csv
+import hashlib
+import json
+from pathlib import Path
+
+P = Path('/root/autodl-tmp/lizichong')
+OUTPUT_ROOT = P / 'outputs/project_v2/thesis_completion_v1'
+FIELDS = ['route_generated', 'selected_object_evaluated_correct',
+          'stable_correct_lock', 'actual_full_perception_arrival']
+LABELS = {'rule': '规则', 'new_full': '新Adapter完整',
+          'new_minus_parse': '关闭解析', 'new_minus_attributes': '关闭属性',
+          'new_minus_rerank': '关闭重排'}
+
+
+def sha(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def read(path):
+    return json.loads(path.read_text())
+
+
+def main():
+    source = OUTPUT_ROOT / 'statistics/semantic_ablation_combined_004'
+    report = read(source / 'report.json')
+    rows = [json.loads(s) for s in (source / 'audited_trials.jsonl').read_text().splitlines()]
+    raw_path = OUTPUT_ROOT / 'interactive_simulation/semantic_ablation_combined_004/trial_records.jsonl'
+    raw = [json.loads(s) for s in raw_path.read_text().splitlines()]
+    chain = read(OUTPUT_ROOT / 'ablations/semantic_navigation_chain_004/complete.json')
+    assert sha(source / 'report.json') == chain['statistics_report_sha256']
+    audit_path = OUTPUT_ROOT / 'statistics/semantic_compatibility_evidence_check_004/report.json'
+    audit = read(audit_path)
+    assert sha(audit_path) == chain['independent_audit_sha256']
+    assert audit['passed'] and audit['trials'] == len(rows) == len(raw) == 750
+    assert sha(raw_path) == report['source_records_sha256']
+    assert sha(source / 'audited_trials.jsonl') == report['audited_trials_sha256']
+    evidence = [source / 'report.json', source / 'audited_trials.jsonl', raw_path,
+                audit_path, OUTPUT_ROOT / 'ablations/semantic_navigation_chain_004/complete.json',
+                OUTPUT_ROOT / 'vehicle_execution/semantic_minus_execution_full_002/report.json',
+                OUTPUT_ROOT / 'interactive_simulation/realtime_semantic_minus_full_001/summary.json']
+    records = []
+    for method, label in LABELS.items():
+        for kind, expected in [('reachable_positive', 90), ('no_match', 30), ('inaccessible', 30)]:
+            subset = [r for r in rows if r['method'] == method and r['kind'] == kind]
+            assert len(subset) == expected
+            values = {k: sum(bool(r[k]) for r in subset) for k in FIELDS}
+            for key, number in values.items():
+                assert report['methods'][method]['by_kind'][kind]['four_outcomes'][key]['numerator'] == number
+            records.append(dict(method=method, label=label, kind=kind, denominator=expected,
+                                missing=sum(r['result_missing'] for r in subset), **values))
+    paired = []
+    for pair in report['paired_positive_differences']:
+        if pair['a'] != 'new_full':
+            continue
+        a = {(r['task_id'], r['seed']): r for r in rows
+             if r['method'] == pair['a'] and r['kind'] == 'reachable_positive'}
+        b = {(r['task_id'], r['seed']): r for r in rows
+             if r['method'] == pair['b'] and r['kind'] == 'reachable_positive'}
+        assert set(a) == set(b) and len(a) == len(b) == 90
+        delta = sum(int(a[k][pair['metric']]) - int(b[k][pair['metric']]) for k in a)
+        assert delta == pair['numerator'] and abs(delta / 90 - pair['estimate']) < 1e-12
+        paired.append(dict(a=pair['a'], b=pair['b'], metric=pair['metric'],
+                           difference_pp=100 * pair['estimate'],
+                           ci95_low_pp=100 * pair['ci95'][0], ci95_high_pp=100 * pair['ci95'][1],
+                           denominator=90, config_clusters=10))
+    dest = OUTPUT_ROOT / 'experiment_tables/semantic_ablation_completed_001'
+    dest.mkdir(exist_ok=False)
+    for filename, data in [('four_outcomes.csv', records), ('paired_differences.csv', paired)]:
+        with (dest / filename).open('x', newline='', encoding='utf-8-sig') as f:
+            writer = csv.DictWriter(f, fieldnames=list(data[0]))
+            writer.writeheader()
+            writer.writerows(data)
+    positive = [r for r in records if r['kind'] == 'reachable_positive']
+    text = '''# 已完成开发语义消融交付
+
+这是实验交接记录，不是论文正文。450新增消融尝试加300复用主对比记录，共750；没有新增独立场景。每条件50任务×3种子，其中正任务分母90，无匹配30、不可接近30。全部失败保留。
+
+|条件|生成路线|选对对象|正确锁定|实际到达|
+|---|---:|---:|---:|---:|
+'''
+    for r in positive:
+        text += '|' + r['label'] + '|' + '|'.join(str(r[k]) for k in FIELDS) + '|\n'
+    text += '''
+关闭解析的到达率比完整新Adapter高48.89个百分点，按10配置配对聚类bootstrap的95%区间为[33.33,65.56]个百分点；对应原表“完整减关闭解析”为负值。关闭属性和关闭重排的到达差异区间均跨0，不能宣称相应模块提升。关闭解析48/90与规则50/90的差异区间跨0，不能声称优于规则。应用次数不作为贡献大小。
+
+关闭解析是在冻结配置中关闭Qwen解析、使用既有解析路径；下游轨迹、传感器和调用时序会随选择改变。该结果支持优先检查解析输出及其接入，不能把所有差异归为单个字段的严格因果效应。新Adapter仍保留为下游无收益的负结果，不以本表重新选择新封存测试方法。
+
+450新增消融中449有完整结果、1例会话中断保留为失败；中断为不可接近任务，不影响90正任务分母，也不获得安全信用。新增消融59次报告到达均通过独立身份/连续车身/方向/停车保持审计；59份初始状态为显式重建，不能称原始观测。规则到达证据属于主对比，已单独核验。
+
+66个共同推理源文件SHA一致，消融快照额外包含一个共同调用链未引用文件，源集合不完全相同；兼容核验的静态分析不能冒充完整运行时模块跟踪。原父进程在断言之前中断，版本004明确记录恢复，不虚构断言失败日志。
+
+这些是开发合成颜色任务，10配置共享3道路家族；配置置信区间不代表独立道路家族泛化，未做多重比较校正。人工标签、新封存自然查询与独立测试尚未验收。GPU故障/独占性能是独立队列，此表不称其已完成。goal_complete=false。
+'''
+    (dest / 'README.md').write_text(text)
+    manifest = dict(evidence_sha256={str(p.relative_to(OUTPUT_ROOT)): sha(p) for p in evidence},
+                    generator_sha256=sha(Path(__file__)), rows=15, paired_rows=len(paired),
+                    original_trials=750, new_trials=450, reused_main_trials=300,
+                    output_sha256={p.name: sha(p) for p in dest.iterdir() if p.is_file()},
+                    no_new_model_calls=True, no_new_test_opened=True, goal_complete=False)
+    (dest / 'manifest.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2))
+    print(json.dumps(dict(destination=str(dest), rows=15, paired_rows=len(paired), goal_complete=False)))
+
+
+if __name__ == '__main__':
+    main()

@@ -1,0 +1,64 @@
+{
+  "passed": true,
+  "created_utc": "2026-11-13T09:28:29.892203+00:00",
+  "trials": 750,
+  "method_count": 5,
+  "tasks": 50,
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "configs": 10,
+  "counts": {
+    "saved_control_records": 567303,
+    "saved_perception_records": 106763,
+    "missing_complete_results": 1
+  },
+  "independently_recomputed_cluster_statistics": 130,
+  "SHA_files": 3821,
+  "files_manifest_sha256": "276b0ceec31e9e1726c669386734a969a3ead7ec0a52613444a13050c9b4fb0a",
+  "source_sha256": "6958e69f1dc8f39b4d23ae5a456799136716daee2e79db1bd9932cddf93149c0",
+  "methods": {
+    "new_full": {
+      "arrivals": 4,
+      "distinct_positive_tasks": 4,
+      "scene_configs": 3,
+      "minimum_10_tasks_5_configs": false
+    },
+    "new_minus_attributes": {
+      "arrivals": 5,
+      "distinct_positive_tasks": 5,
+      "scene_configs": 5,
+      "minimum_10_tasks_5_configs": false
+    },
+    "new_minus_parse": {
+      "arrivals": 48,
+      "distinct_positive_tasks": 23,
+      "scene_configs": 10,
+      "minimum_10_tasks_5_configs": true
+    },
+    "new_minus_rerank": {
+      "arrivals": 6,
+      "distinct_positive_tasks": 6,
+      "scene_configs": 6,
+      "minimum_10_tasks_5_configs": false
+    },
+    "rule": {
+      "arrivals": 50,
+      "distinct_positive_tasks": 27,
+      "scene_configs": 10,
+      "minimum_10_tasks_5_configs": true
+    }
+  },
+  "wall_CPU_shared_s": 96.35243114642799,
+  "actual_model_calls": 0,
+  "new_executions": 0,
+  "new_arrivals": 0,
+  "limits": [
+    "输入、分母和统计复核，不是第三套运动学/车身或身份真值审核",
+    "完整失败保留，未知字段不给成功信用；配置和种子不增加独立真实场景数",
+    "开发合成任务，不是新自然语言封存测试，未增加正确到达"
+  ],
+  "goal_complete": false
+}

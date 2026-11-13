@@ -1,0 +1,32 @@
+{
+  "prepared_at": "2026-11-13T21:46:50.534747+08:00",
+  "source_sha256": {
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/gpu_fault_evidence_viewer_003.py": "bd4e986a470bfd345a0dfd87b930297d736f87223604f354479960200b51ca9c",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/gpu_fault_viewer_browser_001.py": "091d6f49bcb66210999b0c586492d083329b318b120e195b600b1893be096051",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/gpu_fault_viewer_after_audits_001.py": "752281155bf0e64bae27a45f95efbc4de25974457d1a9bb3e78c56db13c7226c",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/visualizations/gpu_fault_evidence_smoke_browser_002/report.json": "26a74d74fbe1fdba72ddf3d3dc4f23f5fe4e5d270286a5c982f31c713065adf9",
+    "/root/autodl-tmp/lizichong/conceptgraph/completion/navigation_demo.py": "b58fb396f620951e3afbd5550ee99225a3d502ac18437f8aa660b0d0049df48b",
+    "/root/autodl-tmp/lizichong/conceptgraph/completion/stage9.py": "466a5b34dfd039e691232dc02e01869ab700b46ae8162f8fb05232c30a805dd5",
+    "/root/autodl-tmp/lizichong/conceptgraph/completion/kinematic_benchmark.py": "3f5805c14288992719aa0a4bb967e6211c195cbea8da0e7cbbccf60c4a031045"
+  },
+  "prerequisite_processes": {
+    "455071": "1384309653",
+    "515523": "1386124772",
+    "516013": "1386139671",
+    "516513": "1386155601"
+  },
+  "required_complete_files": [
+    "faults/fault_event_final_audit_queue_001/complete.json",
+    "faults/fault_sensor_final_audit_queue_001/complete.json",
+    "faults/fault_execution_final_audit_queue_001/complete.json"
+  ],
+  "maximum_wait_s": 86400,
+  "generation_timeout_s": 2400,
+  "browser_timeout_s": 2400,
+  "case_and_image_budget_bytes": 2000000000,
+  "minimum_free_bytes": 6000000000,
+  "execution_policy": "等待恢复监督器（含性能与新环境）和三个独立审计进程退出，核对完整审计，再生成及核验180例页面",
+  "actual_model_calls": 0,
+  "queued_not_complete": true,
+  "goal_complete": false
+}

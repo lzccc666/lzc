@@ -1,0 +1,10 @@
+﻿version,condition,route_generated,selected_object_evaluated_correct,stable_correct_lock,actual_full_perception_arrival,hold
+001,baseline,True,True,True,False,0.0
+001,backend_exception,True,True,True,True,3.799999999999784
+003,empty_output,True,True,True,True,18.699999999998937
+003,malformed_output,True,True,True,True,19.89999999999887
+003,backend_timeout,True,True,True,False,0.0
+003,late_and_queue_expiry,True,True,True,True,18.79999999999893
+003,binding_changed,True,True,True,True,19.999999999998863
+003,expired_before_delivery,True,True,True,True,18.699999999998937
+002,expired_before_delivery,True,True,True,True,9.299999999999471

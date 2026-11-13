@@ -1,0 +1,107 @@
+{
+  "generator_sha256": "d253b2e5a19b7760341615a27512e06c765a4f10cfadd2b7eb5ced7fb24c0a1b",
+  "export_helper_sha256": "941c81bbc15ccd12c7b4be6ead7df682d3427e230095cf1e8b105d99d5f69bc2",
+  "tables": 7,
+  "rows": 57,
+  "sources": {
+    "statistics/realtime_faults_gpu_full_001/report.json": {
+      "sha256": "9eaa32e3fc450c342469424aaf2f7b6f5e80286ab40aaf08abcb216af0b6b872",
+      "bytes": 40108,
+      "package_path": "evidence/statistics/realtime_faults_gpu_full_001/report.json"
+    },
+    "statistics/realtime_faults_gpu_full_001/trials.csv": {
+      "sha256": "52f10fda1cc8c26217f16aeeae224531f4e1158c4107ac2b8c4ebc192a48f3a1",
+      "bytes": 31651,
+      "package_path": "evidence/statistics/realtime_faults_gpu_full_001/trials.csv"
+    },
+    "statistics/realtime_three_model_full_001/trials.csv": {
+      "sha256": "8fc8372c97cf9c375201d6950723516f1d159429136b06de109d88c62d446904",
+      "bytes": 71755,
+      "package_path": "evidence/statistics/realtime_three_model_full_001/trials.csv"
+    },
+    "interactive_simulation/realtime_faults_gpu_full_001/exposure_summary.json": {
+      "sha256": "2fc9eb72d4f5a34d2a758e8e5934cb42046c67cb6eba1ff4d9d2cebaf7ee1ee8",
+      "bytes": 917,
+      "package_path": "evidence/interactive_simulation/realtime_faults_gpu_full_001/exposure_summary.json"
+    },
+    "faults/fault_event_full_independent_001/report.json": {
+      "sha256": "1e42342ac3722b057e579d55a2d971427c17635e15c896692984aa6a0eb73e08",
+      "bytes": 1087,
+      "package_path": "evidence/faults/fault_event_full_independent_001/report.json"
+    },
+    "faults/fault_sensor_numeric_full_001/report.json": {
+      "sha256": "f30cfca9ec57b4c20356fd6c7b635f3eb994501bde630d5deb24be399766d5a9",
+      "bytes": 708,
+      "package_path": "evidence/faults/fault_sensor_numeric_full_001/report.json"
+    },
+    "vehicle_execution/fault_execution_full_independent_001/report.json": {
+      "sha256": "6f333f356d7b76fed736a6624140f9d8b1a52c47ed3a57ceb5a7314e2a63c632",
+      "bytes": 1479,
+      "package_path": "evidence/vehicle_execution/fault_execution_full_independent_001/report.json"
+    },
+    "performance/runtime_profile_after_faults_002/complete.json": {
+      "sha256": "ad2635ffc35061779c0eb5f62dbd3f7f0f2ef545aa12d57eea8b586d54d551e1",
+      "bytes": 20112,
+      "package_path": "evidence/performance/runtime_profile_after_faults_002/complete.json"
+    },
+    "performance/runtime_profile_gpu_base_001/report.json": {
+      "sha256": "f3b8dfc9fa70c852ec3b5f6175f6b5899cc5fa6fe6c8c3ec28a994f16286b68a",
+      "bytes": 3330,
+      "package_path": "evidence/performance/runtime_profile_gpu_base_001/report.json"
+    },
+    "performance/runtime_profile_gpu_base_001/timings.jsonl": {
+      "sha256": "ab1de4565d7b0033464f2ac4d4d087289daf73e1e82a368a4550f8aab31280fd",
+      "bytes": 27019,
+      "package_path": "evidence/performance/runtime_profile_gpu_base_001/timings.jsonl"
+    },
+    "performance/runtime_profile_gpu_old_001/report.json": {
+      "sha256": "dc126f515485e780058cdc6dedd5c5750ae462884ec6aca5e75816604e3538c4",
+      "bytes": 3344,
+      "package_path": "evidence/performance/runtime_profile_gpu_old_001/report.json"
+    },
+    "performance/runtime_profile_gpu_old_001/timings.jsonl": {
+      "sha256": "c703eb861919d8d67b441b871a9fcc24472693e8b8a11c9616d04cd5b18e74c6",
+      "bytes": 26873,
+      "package_path": "evidence/performance/runtime_profile_gpu_old_001/timings.jsonl"
+    },
+    "performance/runtime_profile_gpu_new_001/report.json": {
+      "sha256": "d1a193ab5e397b916c691e3365aa1371a1394fe9567a8dcfd5a037e8dcccad8e",
+      "bytes": 3341,
+      "package_path": "evidence/performance/runtime_profile_gpu_new_001/report.json"
+    },
+    "performance/runtime_profile_gpu_new_001/timings.jsonl": {
+      "sha256": "9c370e33bba72569ae6819245d382137f70a8f303e3101b48ba13e3ed63f2557",
+      "bytes": 26868,
+      "package_path": "evidence/performance/runtime_profile_gpu_new_001/timings.jsonl"
+    },
+    "performance/runtime_profile_gpu_frontend_001/report.json": {
+      "sha256": "05086e469b7cf33548a5b81947ab0b2c8dc2dfe3792a72b31fbc178ae5fcf5e0",
+      "bytes": 3123,
+      "package_path": "evidence/performance/runtime_profile_gpu_frontend_001/report.json"
+    },
+    "performance/runtime_profile_gpu_frontend_001/timings.jsonl": {
+      "sha256": "4c8246b4590f8ba802b8428d97de6c011708a2c53c9f6ee44ee563fd76a44880",
+      "bytes": 7527,
+      "package_path": "evidence/performance/runtime_profile_gpu_frontend_001/timings.jsonl"
+    },
+    "performance/runtime_profile_post_GPU_recorded_001/report.json": {
+      "sha256": "cdf4655de59c73b5439b22acb93fef248eda01f82addacbb2e9d81d55ca9d398",
+      "bytes": 3072,
+      "package_path": "evidence/performance/runtime_profile_post_GPU_recorded_001/report.json"
+    }
+  },
+  "output_sha256": {
+    "tables.json": "3b6b6ee7f4af1ceda9e8300ada7ba636fba7e48bdbbfbf064d9fb638741cf216",
+    "sources.json": "e453b222905f4aa803d7894e59435f9dbce93175cefc1c21dfdae60febcac120",
+    "开发实验结果表.xlsx": "75ae4bb3588c97d3ef3bab14006d9eac45fd13da2f6f43d8c6d7ce437c23f450",
+    "开发实验结果表.docx": "666f8a7d0f8758941ad50bce6ce729c88f29189a5cd9ae647aa6a7f5ba59481e",
+    "开发实验结果表.html": "cf8ca5afd54a2c12e1d0249f05672d7faa0af23ce8012e2bbfaa824337663e1e",
+    "browser_layout.json": "9a3469a5924b106315ab6edff1129b75b1aedbd754dbef98df7359c9e021e750",
+    "开发实验结果表.pdf": "dd9a708c2284a4bfcdc05bdc926a33833b9a14ebe9223a04f4d9704e79043036",
+    "README.md": "c8ea1c1b08cf9f786fd332f6d60c8eb41548213202b565b3c916442a15cdc628"
+  },
+  "actual_new_model_calls": 0,
+  "new_arrival_credit": 0,
+  "manuscript_text_written": false,
+  "goal_complete": false
+}

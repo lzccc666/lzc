@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "time_utc": "2026-11-13T08:03:56.330203+00:00",
+  "checks": {
+    "/": {
+      "status": 200,
+      "bytes": 10733
+    },
+    "/api/live/tasks": {
+      "status": 200,
+      "bytes": 6580,
+      "tasks": 50,
+      "seeds": [
+        17,
+        29,
+        43
+      ]
+    },
+    "/api/live/state": {
+      "status": 200,
+      "bytes": 56,
+      "state": {
+        "phase": "IDLE",
+        "worker_alive": false,
+        "run_id": null
+      }
+    }
+  },
+  "only_GET": true,
+  "new_model_calls": 0,
+  "goal_complete": false
+}

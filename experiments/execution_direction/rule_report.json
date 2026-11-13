@@ -1,0 +1,41 @@
+{
+  "cohort": "rule",
+  "cases": 150,
+  "expected_cases": 150,
+  "is_smoke": false,
+  "status_counts": {
+    "certificate_forward": 120,
+    "not_exercised_stationary": 30
+  },
+  "audited_intervals": 30806,
+  "moving_intervals": 26158,
+  "moving_cases": 120,
+  "direction_certified_moving_cases": 120,
+  "direction_certificate_coverage_among_observed_moving_cases": 1.0,
+  "config_cluster_bootstrap_95ci": [
+    1.0,
+    1.0
+  ],
+  "bootstrap_replicates": 4000,
+  "cluster_count": 10,
+  "bootstrap_seed": 5723,
+  "previously_reported_arrivals": 21,
+  "previous_arrivals_with_body_and_direction": 21,
+  "previous_arrivals_without_combined_certificate": [],
+  "maximum_arc_endpoint_residual_m": 3.4436535819088793e-07,
+  "multi_lane_connection_accuracy": null,
+  "connection_status": "not_exercised_single_directed_lane",
+  "parent_body_report_sha256": "d63a4990af77fadbcd0602558afa6fa97180abdd2d24cd9a36627c25f9330eca",
+  "all_original_results_unchanged": true,
+  "CPU_shared_wall_s": 7.1153792925179005,
+  "actual_model_calls": 0,
+  "new_executions": 0,
+  "new_arrivals": 0,
+  "limits": [
+    "固定保存积分模型的连续速度方向；不是另一套动力学积分、车身碰撞或动态交通证明",
+    "方向证书覆盖率只描述已保存且实际行驶的试验，不能外推未知道路安全概率",
+    "十配置共用三种道路生成族；故障仅一个配置/任务/种子，不给配置置信区间",
+    "缺失或未行驶保留，单向单车道不提供路口/多车道连接正确率"
+  ],
+  "goal_complete": false
+}

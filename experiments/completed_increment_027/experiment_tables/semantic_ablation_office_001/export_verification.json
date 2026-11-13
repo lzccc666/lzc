@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "Word_tables": 3,
+  "Excel_tables": 3,
+  "PDF_pages": 3,
+  "table_rows": 21,
+  "source_main_rows": 450,
+  "source_combined_rows": 750,
+  "reuse_main_rows": 300,
+  "all_Word_Excel_values_checked": true,
+  "PDF_text_checked": true,
+  "goal_complete": false
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "title": "T16 语义消融：四类正任务结果（计数）",
+    "horizontal": false,
+    "height_px": 373.375
+  },
+  {
+    "title": "T17 配对消融差异：完整新Adapter减对照（百分点）",
+    "horizontal": false,
+    "height_px": 419.5
+  },
+  {
+    "title": "T18 配对消融差异：完整新Adapter减对照（百分点）",
+    "horizontal": false,
+    "height_px": 419.5
+  }
+]

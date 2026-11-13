@@ -1,0 +1,1170 @@
+[
+  {
+    "scene": "scene-0221",
+    "scene_token": "acc29386502047339e1ec6b9c7e512d2",
+    "log_token": "e60234ec7c324789ac7c8441a5e49731",
+    "historical_distance_m": 0.05867028826993392,
+    "raw_original_commands": 10,
+    "officially_static_commands": 2
+  },
+  {
+    "scene": "scene-0242",
+    "scene_token": "19f47b8941094af29b8db20b255717fc",
+    "log_token": "08ba46dd716d42a69d108638fef5bbb9",
+    "historical_distance_m": 1.2783448166892981,
+    "raw_original_commands": 9,
+    "officially_static_commands": 1
+  },
+  {
+    "scene": "scene-0243",
+    "scene_token": "28e4134bcd664522907277f1ceec2893",
+    "log_token": "08ba46dd716d42a69d108638fef5bbb9",
+    "historical_distance_m": 0.11709789389344955,
+    "raw_original_commands": 20,
+    "officially_static_commands": 13
+  },
+  {
+    "scene": "scene-0244",
+    "scene_token": "c9d654d4279c4efa9745a25ba6b373ee",
+    "log_token": "08ba46dd716d42a69d108638fef5bbb9",
+    "historical_distance_m": 0.19467920649220627,
+    "raw_original_commands": 24,
+    "officially_static_commands": 3
+  },
+  {
+    "scene": "scene-0245",
+    "scene_token": "bcb05cffb5814973a6cff4fbdca2b99b",
+    "log_token": "08ba46dd716d42a69d108638fef5bbb9",
+    "historical_distance_m": 0.35111801315262764,
+    "raw_original_commands": 6,
+    "officially_static_commands": 1
+  },
+  {
+    "scene": "scene-0246",
+    "scene_token": "d1ac8e27ba8944a4a42a488cf2fedd74",
+    "log_token": "08ba46dd716d42a69d108638fef5bbb9",
+    "historical_distance_m": 16.893026960798856,
+    "raw_original_commands": 9,
+    "officially_static_commands": 5
+  },
+  {
+    "scene": "scene-0247",
+    "scene_token": "93bdbe60d6d0495cbb39d6c811554905",
+    "log_token": "08ba46dd716d42a69d108638fef5bbb9",
+    "historical_distance_m": 4.114100966327223,
+    "raw_original_commands": 18,
+    "officially_static_commands": 10
+  },
+  {
+    "scene": "scene-0248",
+    "scene_token": "36b7b02f0f034f0595e3437a85554151",
+    "log_token": "08ba46dd716d42a69d108638fef5bbb9",
+    "historical_distance_m": 94.32942881160783,
+    "raw_original_commands": 17,
+    "officially_static_commands": 6
+  },
+  {
+    "scene": "scene-0249",
+    "scene_token": "35ecd252b8ee4cbc83376148e192a803",
+    "log_token": "08ba46dd716d42a69d108638fef5bbb9",
+    "historical_distance_m": 12.896665770157039,
+    "raw_original_commands": 10,
+    "officially_static_commands": 7
+  },
+  {
+    "scene": "scene-0250",
+    "scene_token": "892ed06c432448fe87ecb5d31756f14a",
+    "log_token": "08ba46dd716d42a69d108638fef5bbb9",
+    "historical_distance_m": 0.050363453438876424,
+    "raw_original_commands": 5,
+    "officially_static_commands": 2
+  },
+  {
+    "scene": "scene-0251",
+    "scene_token": "75ebb308bea04317adbc25554d5cd7f5",
+    "log_token": "08ba46dd716d42a69d108638fef5bbb9",
+    "historical_distance_m": 0.2867506238439333,
+    "raw_original_commands": 79,
+    "officially_static_commands": 45
+  },
+  {
+    "scene": "scene-0252",
+    "scene_token": "7ca5e90766dc4b7bb6a9b3b0d95c99da",
+    "log_token": "08ba46dd716d42a69d108638fef5bbb9",
+    "historical_distance_m": 79.20519199737414,
+    "raw_original_commands": 19,
+    "officially_static_commands": 1
+  },
+  {
+    "scene": "scene-0253",
+    "scene_token": "7d6006ae9d8f406aa99756156ea4f70a",
+    "log_token": "08ba46dd716d42a69d108638fef5bbb9",
+    "historical_distance_m": 91.77087122196014,
+    "raw_original_commands": 9,
+    "officially_static_commands": 5
+  },
+  {
+    "scene": "scene-0254",
+    "scene_token": "55c853d5aab04850a8059dc95e62c2ad",
+    "log_token": "cb3e914a6f0b4deea0efc8521ca1e671",
+    "historical_distance_m": 3.0141515770754634,
+    "raw_original_commands": 10,
+    "officially_static_commands": 9
+  },
+  {
+    "scene": "scene-0255",
+    "scene_token": "6207269cb9474c14b01f9610b2ee30aa",
+    "log_token": "cb3e914a6f0b4deea0efc8521ca1e671",
+    "historical_distance_m": 1.0695750273823603,
+    "raw_original_commands": 10,
+    "officially_static_commands": 0
+  },
+  {
+    "scene": "scene-0256",
+    "scene_token": "4959ccdac5774a088d0c9e10667f09f1",
+    "log_token": "cb3e914a6f0b4deea0efc8521ca1e671",
+    "historical_distance_m": 31.59404151537684,
+    "raw_original_commands": 14,
+    "officially_static_commands": 1
+  },
+  {
+    "scene": "scene-0257",
+    "scene_token": "b0be2e24e2234947867c7f555f6f59d2",
+    "log_token": "cb3e914a6f0b4deea0efc8521ca1e671",
+    "historical_distance_m": 0.9516883482824364,
+    "raw_original_commands": 8,
+    "officially_static_commands": 6
+  },
+  {
+    "scene": "scene-0258",
+    "scene_token": "aa45d94630be481787f20121ce89a605",
+    "log_token": "cb3e914a6f0b4deea0efc8521ca1e671",
+    "historical_distance_m": 0.9830092530784896,
+    "raw_original_commands": 6,
+    "officially_static_commands": 2
+  },
+  {
+    "scene": "scene-0259",
+    "scene_token": "5e270cfc71714e2bb94bad445c6159a4",
+    "log_token": "cb3e914a6f0b4deea0efc8521ca1e671",
+    "historical_distance_m": 41.77757711686764,
+    "raw_original_commands": 14,
+    "officially_static_commands": 5
+  },
+  {
+    "scene": "scene-0260",
+    "scene_token": "3d42cd90a8184d9ebd3bb85b6416314d",
+    "log_token": "cb3e914a6f0b4deea0efc8521ca1e671",
+    "historical_distance_m": 88.64140555495604,
+    "raw_original_commands": 18,
+    "officially_static_commands": 0
+  },
+  {
+    "scene": "scene-0261",
+    "scene_token": "14b96c255dee4a838a8d401302ac2852",
+    "log_token": "cb3e914a6f0b4deea0efc8521ca1e671",
+    "historical_distance_m": 204.4975006316713,
+    "raw_original_commands": 10,
+    "officially_static_commands": 9
+  },
+  {
+    "scene": "scene-0262",
+    "scene_token": "d654cae175de44319ace178994ed0329",
+    "log_token": "cb3e914a6f0b4deea0efc8521ca1e671",
+    "historical_distance_m": 238.1217714091004,
+    "raw_original_commands": 18,
+    "officially_static_commands": 9
+  },
+  {
+    "scene": "scene-0263",
+    "scene_token": "cffc45a1565446fab5014afb3da169e8",
+    "log_token": "cb3e914a6f0b4deea0efc8521ca1e671",
+    "historical_distance_m": 39.33435843205189,
+    "raw_original_commands": 18,
+    "officially_static_commands": 6
+  },
+  {
+    "scene": "scene-0264",
+    "scene_token": "9833ac6de5ae418f9e6d0eeb58e72beb",
+    "log_token": "cb3e914a6f0b4deea0efc8521ca1e671",
+    "historical_distance_m": 0.12027177624743118,
+    "raw_original_commands": 16,
+    "officially_static_commands": 11
+  },
+  {
+    "scene": "scene-0268",
+    "scene_token": "c3ab8ee2c1a54068a72d7eb4cf22e43d",
+    "log_token": "a5bb7f9dd1884f1ea0de299caefe7ef4",
+    "historical_distance_m": 14.551746446469352,
+    "raw_original_commands": 11,
+    "officially_static_commands": 2
+  },
+  {
+    "scene": "scene-0269",
+    "scene_token": "9f1f69646d644e35be4fe0122a8b91ef",
+    "log_token": "a5bb7f9dd1884f1ea0de299caefe7ef4",
+    "historical_distance_m": 39.88725623729416,
+    "raw_original_commands": 15,
+    "officially_static_commands": 7
+  },
+  {
+    "scene": "scene-0270",
+    "scene_token": "2ca15f59d656489a8b1a0be4d9bead4e",
+    "log_token": "a5bb7f9dd1884f1ea0de299caefe7ef4",
+    "historical_distance_m": 0.2663111539861011,
+    "raw_original_commands": 18,
+    "officially_static_commands": 0
+  },
+  {
+    "scene": "scene-0271",
+    "scene_token": "8180a1dbbba3479bb0c7f4ff6e9a3f0e",
+    "log_token": "a5bb7f9dd1884f1ea0de299caefe7ef4",
+    "historical_distance_m": 185.92568506346228,
+    "raw_original_commands": 16,
+    "officially_static_commands": 10
+  },
+  {
+    "scene": "scene-0272",
+    "scene_token": "080a52cb8f59489b9cddc7b721808088",
+    "log_token": "a5bb7f9dd1884f1ea0de299caefe7ef4",
+    "historical_distance_m": 226.95608705797892,
+    "raw_original_commands": 15,
+    "officially_static_commands": 4
+  },
+  {
+    "scene": "scene-0273",
+    "scene_token": "1aa633b683174280b243e0a9a7ad9171",
+    "log_token": "a5bb7f9dd1884f1ea0de299caefe7ef4",
+    "historical_distance_m": 75.3136900586,
+    "raw_original_commands": 18,
+    "officially_static_commands": 6
+  },
+  {
+    "scene": "scene-0274",
+    "scene_token": "9709626638f5406f9f773348150d02fd",
+    "log_token": "a5bb7f9dd1884f1ea0de299caefe7ef4",
+    "historical_distance_m": 7.291623718239961,
+    "raw_original_commands": 14,
+    "officially_static_commands": 4
+  },
+  {
+    "scene": "scene-0275",
+    "scene_token": "8377abf77f464a9cb62eacf63f383422",
+    "log_token": "a5bb7f9dd1884f1ea0de299caefe7ef4",
+    "historical_distance_m": 1.4779933312935076,
+    "raw_original_commands": 6,
+    "officially_static_commands": 3
+  },
+  {
+    "scene": "scene-0276",
+    "scene_token": "201b7c65a61f4bc1a2333ea90ba9a932",
+    "log_token": "a5bb7f9dd1884f1ea0de299caefe7ef4",
+    "historical_distance_m": 0.7608436763261063,
+    "raw_original_commands": 20,
+    "officially_static_commands": 10
+  },
+  {
+    "scene": "scene-0277",
+    "scene_token": "848ac962547c4508b8f3b0fcc8d53270",
+    "log_token": "a5bb7f9dd1884f1ea0de299caefe7ef4",
+    "historical_distance_m": 0.170258192142402,
+    "raw_original_commands": 17,
+    "officially_static_commands": 6
+  },
+  {
+    "scene": "scene-0278",
+    "scene_token": "91f797db8fb34ae5b32ba85eecae47c9",
+    "log_token": "a5bb7f9dd1884f1ea0de299caefe7ef4",
+    "historical_distance_m": 6.02956524973771,
+    "raw_original_commands": 18,
+    "officially_static_commands": 0
+  },
+  {
+    "scene": "scene-0283",
+    "scene_token": "2d8e61ea27fd419ba9b708488e3f2f10",
+    "log_token": "6434493562e64d9aa36774bf8d98870e",
+    "historical_distance_m": 3.425123995941942,
+    "raw_original_commands": 14,
+    "officially_static_commands": 12
+  },
+  {
+    "scene": "scene-0284",
+    "scene_token": "4284a8d9b40d42edb9725543db91381e",
+    "log_token": "6434493562e64d9aa36774bf8d98870e",
+    "historical_distance_m": 0.5523768677151927,
+    "raw_original_commands": 20,
+    "officially_static_commands": 10
+  },
+  {
+    "scene": "scene-0285",
+    "scene_token": "26540bfbab79463cb1ba76b52ec6013b",
+    "log_token": "6434493562e64d9aa36774bf8d98870e",
+    "historical_distance_m": 2.6213764201367007,
+    "raw_original_commands": 20,
+    "officially_static_commands": 7
+  },
+  {
+    "scene": "scene-0286",
+    "scene_token": "363bb6c0fdaf465aa54c39f082bb92c6",
+    "log_token": "6434493562e64d9aa36774bf8d98870e",
+    "historical_distance_m": 0.2750574490302844,
+    "raw_original_commands": 15,
+    "officially_static_commands": 3
+  },
+  {
+    "scene": "scene-0287",
+    "scene_token": "ab8bf18dfce14db4b8213b88f5dc1429",
+    "log_token": "6434493562e64d9aa36774bf8d98870e",
+    "historical_distance_m": 0.16192128564143904,
+    "raw_original_commands": 23,
+    "officially_static_commands": 0
+  },
+  {
+    "scene": "scene-0288",
+    "scene_token": "5ab815cbcfee494499e41151890d6d8f",
+    "log_token": "6434493562e64d9aa36774bf8d98870e",
+    "historical_distance_m": 0.17528923761532578,
+    "raw_original_commands": 7,
+    "officially_static_commands": 3
+  },
+  {
+    "scene": "scene-0289",
+    "scene_token": "9a442b0f6b7a41568b3e4f7b7ba58402",
+    "log_token": "6434493562e64d9aa36774bf8d98870e",
+    "historical_distance_m": 0.2879198980374875,
+    "raw_original_commands": 19,
+    "officially_static_commands": 5
+  },
+  {
+    "scene": "scene-0290",
+    "scene_token": "bd850592cd2541288b177b8e20baa31e",
+    "log_token": "6434493562e64d9aa36774bf8d98870e",
+    "historical_distance_m": 0.30222792547219707,
+    "raw_original_commands": 8,
+    "officially_static_commands": 3
+  },
+  {
+    "scene": "scene-0291",
+    "scene_token": "59ff984c3143486da7d2c4ffec023b36",
+    "log_token": "6434493562e64d9aa36774bf8d98870e",
+    "historical_distance_m": 38.350878033084555,
+    "raw_original_commands": 12,
+    "officially_static_commands": 4
+  },
+  {
+    "scene": "scene-0292",
+    "scene_token": "7ef04cdbd04c4b67a22f59502cb8fac6",
+    "log_token": "6434493562e64d9aa36774bf8d98870e",
+    "historical_distance_m": 0.33280239322644384,
+    "raw_original_commands": 19,
+    "officially_static_commands": 13
+  },
+  {
+    "scene": "scene-0293",
+    "scene_token": "6308d6d934074a028fc3145eedf3e65f",
+    "log_token": "6434493562e64d9aa36774bf8d98870e",
+    "historical_distance_m": 19.108187185388385,
+    "raw_original_commands": 20,
+    "officially_static_commands": 10
+  },
+  {
+    "scene": "scene-0294",
+    "scene_token": "5c2fc0a595c9435cb08e30700c63f9e9",
+    "log_token": "6434493562e64d9aa36774bf8d98870e",
+    "historical_distance_m": 94.04728892376136,
+    "raw_original_commands": 9,
+    "officially_static_commands": 3
+  },
+  {
+    "scene": "scene-0295",
+    "scene_token": "63252988084b4943a50734990c47e039",
+    "log_token": "6434493562e64d9aa36774bf8d98870e",
+    "historical_distance_m": 94.04267946871052,
+    "raw_original_commands": 5,
+    "officially_static_commands": 0
+  },
+  {
+    "scene": "scene-0296",
+    "scene_token": "1a819a84e3494177b47bea8c7f0770ec",
+    "log_token": "6434493562e64d9aa36774bf8d98870e",
+    "historical_distance_m": 88.15238449747304,
+    "raw_original_commands": 26,
+    "officially_static_commands": 4
+  },
+  {
+    "scene": "scene-0297",
+    "scene_token": "3bc4553925494890a21ef7a15c40eaed",
+    "log_token": "6434493562e64d9aa36774bf8d98870e",
+    "historical_distance_m": 54.517348705689884,
+    "raw_original_commands": 17,
+    "officially_static_commands": 4
+  },
+  {
+    "scene": "scene-0298",
+    "scene_token": "84f4c0747550493f959595dae6785cd3",
+    "log_token": "6434493562e64d9aa36774bf8d98870e",
+    "historical_distance_m": 0.2163180656726198,
+    "raw_original_commands": 13,
+    "officially_static_commands": 7
+  },
+  {
+    "scene": "scene-0299",
+    "scene_token": "7f8714d8ca814914bf4ff3ed30123db5",
+    "log_token": "6434493562e64d9aa36774bf8d98870e",
+    "historical_distance_m": 0.2598884748061052,
+    "raw_original_commands": 11,
+    "officially_static_commands": 8
+  },
+  {
+    "scene": "scene-0300",
+    "scene_token": "da783af4b5124333911684dbaf31d969",
+    "log_token": "6434493562e64d9aa36774bf8d98870e",
+    "historical_distance_m": 0.14657166087888085,
+    "raw_original_commands": 20,
+    "officially_static_commands": 18
+  },
+  {
+    "scene": "scene-0301",
+    "scene_token": "85a9c262809d4ac49d2a9b1f8a1487e8",
+    "log_token": "6434493562e64d9aa36774bf8d98870e",
+    "historical_distance_m": 82.76682721194025,
+    "raw_original_commands": 9,
+    "officially_static_commands": 0
+  },
+  {
+    "scene": "scene-0302",
+    "scene_token": "c6da5920d2bc459bb3bc51ee6b9fdd7e",
+    "log_token": "6434493562e64d9aa36774bf8d98870e",
+    "historical_distance_m": 91.59468130930006,
+    "raw_original_commands": 16,
+    "officially_static_commands": 8
+  },
+  {
+    "scene": "scene-0303",
+    "scene_token": "9a0d2af517ff44f587c93254ee657215",
+    "log_token": "6434493562e64d9aa36774bf8d98870e",
+    "historical_distance_m": 122.96729102617604,
+    "raw_original_commands": 10,
+    "officially_static_commands": 1
+  },
+  {
+    "scene": "scene-0304",
+    "scene_token": "f123185f3bb64faebc08d4453aec2659",
+    "log_token": "6434493562e64d9aa36774bf8d98870e",
+    "historical_distance_m": 183.01775534877171,
+    "raw_original_commands": 9,
+    "officially_static_commands": 1
+  },
+  {
+    "scene": "scene-0305",
+    "scene_token": "8c7dfcee70754286959b80c6cfe2d246",
+    "log_token": "6434493562e64d9aa36774bf8d98870e",
+    "historical_distance_m": 212.6253572238288,
+    "raw_original_commands": 14,
+    "officially_static_commands": 5
+  },
+  {
+    "scene": "scene-0306",
+    "scene_token": "7540f31d12f1439db67a50be7726c70d",
+    "log_token": "6434493562e64d9aa36774bf8d98870e",
+    "historical_distance_m": 224.94322288246872,
+    "raw_original_commands": 26,
+    "officially_static_commands": 14
+  },
+  {
+    "scene": "scene-0315",
+    "scene_token": "dbe2eceb3e4649289366f674c2ba4274",
+    "log_token": "0f1b01dd18d8438794fb3445517633df",
+    "historical_distance_m": 127.45864152865697,
+    "raw_original_commands": 12,
+    "officially_static_commands": 4
+  },
+  {
+    "scene": "scene-0316",
+    "scene_token": "c74a3a7265ae45f99f65628fbd7cd2a4",
+    "log_token": "0f1b01dd18d8438794fb3445517633df",
+    "historical_distance_m": 54.35106228770406,
+    "raw_original_commands": 7,
+    "officially_static_commands": 0
+  },
+  {
+    "scene": "scene-0317",
+    "scene_token": "fc9068b303e448a6bbcefd37204386a9",
+    "log_token": "0f1b01dd18d8438794fb3445517633df",
+    "historical_distance_m": 598.8420886572987,
+    "raw_original_commands": 18,
+    "officially_static_commands": 4
+  },
+  {
+    "scene": "scene-0318",
+    "scene_token": "4b48dfc43a3f411b88a71031d77e5696",
+    "log_token": "0f1b01dd18d8438794fb3445517633df",
+    "historical_distance_m": 419.55946170095126,
+    "raw_original_commands": 42,
+    "officially_static_commands": 14
+  },
+  {
+    "scene": "scene-0321",
+    "scene_token": "69ee276c40644ddbb7fe21c613cd7689",
+    "log_token": "169c1773af08486c80ed3e9540528290",
+    "historical_distance_m": 0.08235343927649577,
+    "raw_original_commands": 5,
+    "officially_static_commands": 2
+  },
+  {
+    "scene": "scene-0323",
+    "scene_token": "53484b9d012842bb98719a9d12b038ca",
+    "log_token": "169c1773af08486c80ed3e9540528290",
+    "historical_distance_m": 0.4203321655708884,
+    "raw_original_commands": 34,
+    "officially_static_commands": 8
+  },
+  {
+    "scene": "scene-0324",
+    "scene_token": "13c6a31ab85547b08dab2544024553a8",
+    "log_token": "169c1773af08486c80ed3e9540528290",
+    "historical_distance_m": 91.1113827823509,
+    "raw_original_commands": 17,
+    "officially_static_commands": 14
+  },
+  {
+    "scene": "scene-0329",
+    "scene_token": "5eaff323af5b4df4b864dbd433aeb75c",
+    "log_token": "485a0831e0964529b0b45d476139c68b",
+    "historical_distance_m": 69.09288308143049,
+    "raw_original_commands": 17,
+    "officially_static_commands": 15
+  },
+  {
+    "scene": "scene-0330",
+    "scene_token": "3927699fa562451a98bb13bf8405361d",
+    "log_token": "485a0831e0964529b0b45d476139c68b",
+    "historical_distance_m": 98.52741126640132,
+    "raw_original_commands": 17,
+    "officially_static_commands": 9
+  },
+  {
+    "scene": "scene-0331",
+    "scene_token": "9d1307e95c524ca4a51e03087bd57c29",
+    "log_token": "485a0831e0964529b0b45d476139c68b",
+    "historical_distance_m": 95.81491067932735,
+    "raw_original_commands": 15,
+    "officially_static_commands": 7
+  },
+  {
+    "scene": "scene-0332",
+    "scene_token": "93608f0d57794ba6b014314c488e2b4a",
+    "log_token": "485a0831e0964529b0b45d476139c68b",
+    "historical_distance_m": 0.2093836188703362,
+    "raw_original_commands": 15,
+    "officially_static_commands": 10
+  },
+  {
+    "scene": "scene-0347",
+    "scene_token": "af128e79b77a4a4b8bfcd997c320b2a9",
+    "log_token": "ddc03471df3e4c9bb9663629a4097743",
+    "historical_distance_m": 11.540034896561629,
+    "raw_original_commands": 14,
+    "officially_static_commands": 10
+  },
+  {
+    "scene": "scene-0348",
+    "scene_token": "566311b8201e416f9f99463656dcadce",
+    "log_token": "ddc03471df3e4c9bb9663629a4097743",
+    "historical_distance_m": 108.69874091918867,
+    "raw_original_commands": 9,
+    "officially_static_commands": 8
+  },
+  {
+    "scene": "scene-0349",
+    "scene_token": "c24317a5c0cb4f5c9fd31740eb1152f2",
+    "log_token": "ddc03471df3e4c9bb9663629a4097743",
+    "historical_distance_m": 58.74842683870193,
+    "raw_original_commands": 13,
+    "officially_static_commands": 9
+  },
+  {
+    "scene": "scene-0350",
+    "scene_token": "d825d5544592463e8c138473502dfeea",
+    "log_token": "ddc03471df3e4c9bb9663629a4097743",
+    "historical_distance_m": 128.17632463751352,
+    "raw_original_commands": 30,
+    "officially_static_commands": 14
+  },
+  {
+    "scene": "scene-0351",
+    "scene_token": "a99120daccb24bcd941b33e6e03bf718",
+    "log_token": "ddc03471df3e4c9bb9663629a4097743",
+    "historical_distance_m": 231.49470798759197,
+    "raw_original_commands": 11,
+    "officially_static_commands": 1
+  },
+  {
+    "scene": "scene-0352",
+    "scene_token": "1d914f73a4a243c3acac50d24f083aac",
+    "log_token": "ddc03471df3e4c9bb9663629a4097743",
+    "historical_distance_m": 64.60414104161121,
+    "raw_original_commands": 21,
+    "officially_static_commands": 2
+  },
+  {
+    "scene": "scene-0353",
+    "scene_token": "6746ba640c0e45c7961efbe6af51757e",
+    "log_token": "ddc03471df3e4c9bb9663629a4097743",
+    "historical_distance_m": 0.3157078014589802,
+    "raw_original_commands": 27,
+    "officially_static_commands": 4
+  },
+  {
+    "scene": "scene-0354",
+    "scene_token": "312102fd97de4bd4859374946e24ccdc",
+    "log_token": "ddc03471df3e4c9bb9663629a4097743",
+    "historical_distance_m": 3.2546835036859676,
+    "raw_original_commands": 12,
+    "officially_static_commands": 2
+  },
+  {
+    "scene": "scene-0355",
+    "scene_token": "2f093cad7209436aa06e103bfe062857",
+    "log_token": "ddc03471df3e4c9bb9663629a4097743",
+    "historical_distance_m": 4.923593956158474,
+    "raw_original_commands": 14,
+    "officially_static_commands": 0
+  },
+  {
+    "scene": "scene-0356",
+    "scene_token": "7bcc4753bdb64d2cb407b55cc4e4527f",
+    "log_token": "ddc03471df3e4c9bb9663629a4097743",
+    "historical_distance_m": 4.074107525965944,
+    "raw_original_commands": 16,
+    "officially_static_commands": 6
+  },
+  {
+    "scene": "scene-0357",
+    "scene_token": "f0294478e1994642bac453f1e84610df",
+    "log_token": "ddc03471df3e4c9bb9663629a4097743",
+    "historical_distance_m": 4.188346990799332,
+    "raw_original_commands": 7,
+    "officially_static_commands": 5
+  },
+  {
+    "scene": "scene-0358",
+    "scene_token": "2121cc12888e47ce856dc5391f202594",
+    "log_token": "ddc03471df3e4c9bb9663629a4097743",
+    "historical_distance_m": 4.18826070679186,
+    "raw_original_commands": 7,
+    "officially_static_commands": 3
+  },
+  {
+    "scene": "scene-0359",
+    "scene_token": "2987b4494fcc4639bdd6d714a94b2c72",
+    "log_token": "ddc03471df3e4c9bb9663629a4097743",
+    "historical_distance_m": 0.5312047534291665,
+    "raw_original_commands": 7,
+    "officially_static_commands": 3
+  },
+  {
+    "scene": "scene-0360",
+    "scene_token": "cf10376382b74af1975be86f7190df20",
+    "log_token": "f8699afb7a2247e38549e4d250b4581b",
+    "historical_distance_m": 20.625114957468103,
+    "raw_original_commands": 22,
+    "officially_static_commands": 7
+  },
+  {
+    "scene": "scene-0361",
+    "scene_token": "212b65c558254e2084489bf76e371e1a",
+    "log_token": "f8699afb7a2247e38549e4d250b4581b",
+    "historical_distance_m": 2.825411458899648,
+    "raw_original_commands": 9,
+    "officially_static_commands": 5
+  },
+  {
+    "scene": "scene-0362",
+    "scene_token": "4098aaf3c7074e7d87285e2fc95369e0",
+    "log_token": "f8699afb7a2247e38549e4d250b4581b",
+    "historical_distance_m": 3.3859366915336757,
+    "raw_original_commands": 24,
+    "officially_static_commands": 18
+  },
+  {
+    "scene": "scene-0363",
+    "scene_token": "88084e0150d64dd1949a9cf1493e5188",
+    "log_token": "f8699afb7a2247e38549e4d250b4581b",
+    "historical_distance_m": 1.256502799326694,
+    "raw_original_commands": 29,
+    "officially_static_commands": 13
+  },
+  {
+    "scene": "scene-0364",
+    "scene_token": "f13bd38bf9b64d579a63d4e7d750f592",
+    "log_token": "f8699afb7a2247e38549e4d250b4581b",
+    "historical_distance_m": 13.367080807807111,
+    "raw_original_commands": 15,
+    "officially_static_commands": 4
+  },
+  {
+    "scene": "scene-0365",
+    "scene_token": "8dd4349e80c345afac455cf76074f028",
+    "log_token": "f8699afb7a2247e38549e4d250b4581b",
+    "historical_distance_m": 0.5770984315272224,
+    "raw_original_commands": 17,
+    "officially_static_commands": 6
+  },
+  {
+    "scene": "scene-0366",
+    "scene_token": "792b78f6cbcf413c821cb591630cddfb",
+    "log_token": "f8699afb7a2247e38549e4d250b4581b",
+    "historical_distance_m": 1.9303131237990816,
+    "raw_original_commands": 6,
+    "officially_static_commands": 0
+  },
+  {
+    "scene": "scene-0367",
+    "scene_token": "4ea72ee843914a6cbd755e39f2489156",
+    "log_token": "f8699afb7a2247e38549e4d250b4581b",
+    "historical_distance_m": 3.040652206492339,
+    "raw_original_commands": 6,
+    "officially_static_commands": 6
+  },
+  {
+    "scene": "scene-0368",
+    "scene_token": "54cdaaae372d421fa4734d66f51a8c48",
+    "log_token": "f8699afb7a2247e38549e4d250b4581b",
+    "historical_distance_m": 38.764172361566445,
+    "raw_original_commands": 2,
+    "officially_static_commands": 0
+  },
+  {
+    "scene": "scene-0369",
+    "scene_token": "a1b51c02d8414856a86c0c37e4789c2f",
+    "log_token": "f8699afb7a2247e38549e4d250b4581b",
+    "historical_distance_m": 72.5923394928453,
+    "raw_original_commands": 3,
+    "officially_static_commands": 0
+  },
+  {
+    "scene": "scene-0370",
+    "scene_token": "105c227c304b4cb18e98a5be6b2d8302",
+    "log_token": "f8699afb7a2247e38549e4d250b4581b",
+    "historical_distance_m": 0.9138184233863895,
+    "raw_original_commands": 22,
+    "officially_static_commands": 7
+  },
+  {
+    "scene": "scene-0371",
+    "scene_token": "17302a41218442ffbb0b094adb0669ab",
+    "log_token": "f8699afb7a2247e38549e4d250b4581b",
+    "historical_distance_m": 10.56561860153243,
+    "raw_original_commands": 21,
+    "officially_static_commands": 4
+  },
+  {
+    "scene": "scene-0372",
+    "scene_token": "b68cfa7e0bd64bd395fd922d750cfdd2",
+    "log_token": "f8699afb7a2247e38549e4d250b4581b",
+    "historical_distance_m": 0.157877899656454,
+    "raw_original_commands": 4,
+    "officially_static_commands": 0
+  },
+  {
+    "scene": "scene-0373",
+    "scene_token": "10dfdae842b543938a230f25a1e9f934",
+    "log_token": "f8699afb7a2247e38549e4d250b4581b",
+    "historical_distance_m": 0.259424847146602,
+    "raw_original_commands": 11,
+    "officially_static_commands": 2
+  },
+  {
+    "scene": "scene-0374",
+    "scene_token": "7463b2d752f0464f803b07a945ee7c5a",
+    "log_token": "f8699afb7a2247e38549e4d250b4581b",
+    "historical_distance_m": 0.3580259994524762,
+    "raw_original_commands": 9,
+    "officially_static_commands": 3
+  },
+  {
+    "scene": "scene-0375",
+    "scene_token": "28d385e6db0e495da3a606b58e2432f0",
+    "log_token": "f8699afb7a2247e38549e4d250b4581b",
+    "historical_distance_m": 0.0767454587874043,
+    "raw_original_commands": 14,
+    "officially_static_commands": 11
+  },
+  {
+    "scene": "scene-0376",
+    "scene_token": "f05ec45554f842ccb523caf326750f13",
+    "log_token": "eda311bda86f4e54857b0554639d6426",
+    "historical_distance_m": 0.16724844469952188,
+    "raw_original_commands": 8,
+    "officially_static_commands": 4
+  },
+  {
+    "scene": "scene-0377",
+    "scene_token": "0cc28fe2c1064fb9a51f1647c28ca564",
+    "log_token": "eda311bda86f4e54857b0554639d6426",
+    "historical_distance_m": 0.47465090169491136,
+    "raw_original_commands": 17,
+    "officially_static_commands": 0
+  },
+  {
+    "scene": "scene-0378",
+    "scene_token": "fdf4384c1fce4a16aad939d8417bccd6",
+    "log_token": "eda311bda86f4e54857b0554639d6426",
+    "historical_distance_m": 108.57717128090775,
+    "raw_original_commands": 14,
+    "officially_static_commands": 8
+  },
+  {
+    "scene": "scene-0379",
+    "scene_token": "90d616aaefc4429380388205ebb23398",
+    "log_token": "eda311bda86f4e54857b0554639d6426",
+    "historical_distance_m": 0.14733814969781706,
+    "raw_original_commands": 10,
+    "officially_static_commands": 3
+  },
+  {
+    "scene": "scene-0380",
+    "scene_token": "1c89941a6935484182ca19eddcd3bc77",
+    "log_token": "eda311bda86f4e54857b0554639d6426",
+    "historical_distance_m": 0.6238931658736062,
+    "raw_original_commands": 18,
+    "officially_static_commands": 12
+  },
+  {
+    "scene": "scene-0381",
+    "scene_token": "eba4b7c19b5f48289e105937d03e5222",
+    "log_token": "eda311bda86f4e54857b0554639d6426",
+    "historical_distance_m": 1.338516708836008,
+    "raw_original_commands": 11,
+    "officially_static_commands": 8
+  },
+  {
+    "scene": "scene-0382",
+    "scene_token": "2dc89e0f9c6c4dbab908d341fab020c6",
+    "log_token": "f8699afb7a2247e38549e4d250b4581b",
+    "historical_distance_m": 0.11175632561095082,
+    "raw_original_commands": 19,
+    "officially_static_commands": 8
+  },
+  {
+    "scene": "scene-0383",
+    "scene_token": "e0a22086a94f48e5bbd4c4e7916b2106",
+    "log_token": "1c9b302455ff44a9a290c372b31aa3ce",
+    "historical_distance_m": 0.06093538960069206,
+    "raw_original_commands": 13,
+    "officially_static_commands": 4
+  },
+  {
+    "scene": "scene-0384",
+    "scene_token": "25f40f7316954a3e978e24d691e1a117",
+    "log_token": "1c9b302455ff44a9a290c372b31aa3ce",
+    "historical_distance_m": 90.40712053685189,
+    "raw_original_commands": 7,
+    "officially_static_commands": 0
+  },
+  {
+    "scene": "scene-0385",
+    "scene_token": "d0de3bf834b747179080898725b0f21d",
+    "log_token": "1c9b302455ff44a9a290c372b31aa3ce",
+    "historical_distance_m": 0.06570251443871145,
+    "raw_original_commands": 20,
+    "officially_static_commands": 2
+  },
+  {
+    "scene": "scene-0386",
+    "scene_token": "11058d54abcd4829828523040372ce05",
+    "log_token": "1c9b302455ff44a9a290c372b31aa3ce",
+    "historical_distance_m": 50.66151915787603,
+    "raw_original_commands": 10,
+    "officially_static_commands": 5
+  },
+  {
+    "scene": "scene-0388",
+    "scene_token": "3359935281a34136992997acab7cdddd",
+    "log_token": "efa31cf3cd2f452789ca7f3e7541ea69",
+    "historical_distance_m": 52.25856819885472,
+    "raw_original_commands": 17,
+    "officially_static_commands": 10
+  },
+  {
+    "scene": "scene-0389",
+    "scene_token": "a5887dd5d6d947e4af581b915716d51c",
+    "log_token": "efa31cf3cd2f452789ca7f3e7541ea69",
+    "historical_distance_m": 148.50365891137662,
+    "raw_original_commands": 19,
+    "officially_static_commands": 10
+  },
+  {
+    "scene": "scene-0390",
+    "scene_token": "6295f0119c5c44d8a75e0016517a172d",
+    "log_token": "efa31cf3cd2f452789ca7f3e7541ea69",
+    "historical_distance_m": 351.0592958866723,
+    "raw_original_commands": 11,
+    "officially_static_commands": 10
+  },
+  {
+    "scene": "scene-0391",
+    "scene_token": "ed97ee6a3b444ba7800641baab057556",
+    "log_token": "efa31cf3cd2f452789ca7f3e7541ea69",
+    "historical_distance_m": 505.03441664731383,
+    "raw_original_commands": 13,
+    "officially_static_commands": 7
+  },
+  {
+    "scene": "scene-0392",
+    "scene_token": "d987908d74794138b07d1237887bb441",
+    "log_token": "efa31cf3cd2f452789ca7f3e7541ea69",
+    "historical_distance_m": 193.56486145586814,
+    "raw_original_commands": 48,
+    "officially_static_commands": 14
+  },
+  {
+    "scene": "scene-0393",
+    "scene_token": "62696ecd66a3445da436ce2d87ee3501",
+    "log_token": "efa31cf3cd2f452789ca7f3e7541ea69",
+    "historical_distance_m": 194.27007304357886,
+    "raw_original_commands": 18,
+    "officially_static_commands": 15
+  },
+  {
+    "scene": "scene-0394",
+    "scene_token": "181bf34123514c329e2cef72847607a4",
+    "log_token": "efa31cf3cd2f452789ca7f3e7541ea69",
+    "historical_distance_m": 324.88530016987045,
+    "raw_original_commands": 14,
+    "officially_static_commands": 7
+  },
+  {
+    "scene": "scene-0395",
+    "scene_token": "dbfd4af0e0d744858e796ec69826e673",
+    "log_token": "efa31cf3cd2f452789ca7f3e7541ea69",
+    "historical_distance_m": 274.59606992021116,
+    "raw_original_commands": 6,
+    "officially_static_commands": 3
+  },
+  {
+    "scene": "scene-0396",
+    "scene_token": "fab5dcdfa43b4cce99da3ddf6718cc2a",
+    "log_token": "efa31cf3cd2f452789ca7f3e7541ea69",
+    "historical_distance_m": 133.69591516920968,
+    "raw_original_commands": 23,
+    "officially_static_commands": 14
+  },
+  {
+    "scene": "scene-0397",
+    "scene_token": "fd2d419d4cf84a2d84922b9b7d2cea4d",
+    "log_token": "efa31cf3cd2f452789ca7f3e7541ea69",
+    "historical_distance_m": 71.89000700307786,
+    "raw_original_commands": 20,
+    "officially_static_commands": 9
+  },
+  {
+    "scene": "scene-0398",
+    "scene_token": "b519ec833e23450a8bd3340b67f2516b",
+    "log_token": "efa31cf3cd2f452789ca7f3e7541ea69",
+    "historical_distance_m": 57.615031947292614,
+    "raw_original_commands": 31,
+    "officially_static_commands": 17
+  },
+  {
+    "scene": "scene-0399",
+    "scene_token": "36349e9caeff483e9d8d25e9743b9f5b",
+    "log_token": "89a56a5dc3aa4e56a2e57b52de738da5",
+    "historical_distance_m": 12.290536185026072,
+    "raw_original_commands": 3,
+    "officially_static_commands": 0
+  },
+  {
+    "scene": "scene-0400",
+    "scene_token": "9f5f2211d6f943a89dd87bbe9703539d",
+    "log_token": "89a56a5dc3aa4e56a2e57b52de738da5",
+    "historical_distance_m": 13.315485988648112,
+    "raw_original_commands": 9,
+    "officially_static_commands": 0
+  },
+  {
+    "scene": "scene-0401",
+    "scene_token": "ced236f5da704cbcb41249bb6ecc8b68",
+    "log_token": "89a56a5dc3aa4e56a2e57b52de738da5",
+    "historical_distance_m": 10.616304935990149,
+    "raw_original_commands": 41,
+    "officially_static_commands": 27
+  },
+  {
+    "scene": "scene-0402",
+    "scene_token": "1847e3fc11ab466d95f82e6c7031f33d",
+    "log_token": "89a56a5dc3aa4e56a2e57b52de738da5",
+    "historical_distance_m": 137.6711943322787,
+    "raw_original_commands": 16,
+    "officially_static_commands": 1
+  },
+  {
+    "scene": "scene-0403",
+    "scene_token": "f2e4460c1fd149ec8068626837f20013",
+    "log_token": "89a56a5dc3aa4e56a2e57b52de738da5",
+    "historical_distance_m": 375.55056635202754,
+    "raw_original_commands": 30,
+    "officially_static_commands": 5
+  },
+  {
+    "scene": "scene-0405",
+    "scene_token": "295c6c85275e4376bc8446b4a76504cd",
+    "log_token": "89a56a5dc3aa4e56a2e57b52de738da5",
+    "historical_distance_m": 888.5053469461595,
+    "raw_original_commands": 23,
+    "officially_static_commands": 0
+  },
+  {
+    "scene": "scene-0406",
+    "scene_token": "83ffc453d209404781ea4574d77adb22",
+    "log_token": "89a56a5dc3aa4e56a2e57b52de738da5",
+    "historical_distance_m": 994.0690036276667,
+    "raw_original_commands": 12,
+    "officially_static_commands": 0
+  },
+  {
+    "scene": "scene-0407",
+    "scene_token": "c34206e65a1442828b950b0ca52098b7",
+    "log_token": "89a56a5dc3aa4e56a2e57b52de738da5",
+    "historical_distance_m": 1000.5461769345656,
+    "raw_original_commands": 35,
+    "officially_static_commands": 7
+  },
+  {
+    "scene": "scene-0408",
+    "scene_token": "268099669c954f429087081530094337",
+    "log_token": "89a56a5dc3aa4e56a2e57b52de738da5",
+    "historical_distance_m": 1006.2431208450424,
+    "raw_original_commands": 16,
+    "officially_static_commands": 2
+  },
+  {
+    "scene": "scene-0410",
+    "scene_token": "5c6620829a1f492b8482218670aa0541",
+    "log_token": "89a56a5dc3aa4e56a2e57b52de738da5",
+    "historical_distance_m": 1034.346952195268,
+    "raw_original_commands": 8,
+    "officially_static_commands": 0
+  },
+  {
+    "scene": "scene-0411",
+    "scene_token": "ceca737af78440118b7b394a54723454",
+    "log_token": "89a56a5dc3aa4e56a2e57b52de738da5",
+    "historical_distance_m": 1173.254421630364,
+    "raw_original_commands": 9,
+    "officially_static_commands": 0
+  },
+  {
+    "scene": "scene-0412",
+    "scene_token": "055a607b74e04001adef097225a8661a",
+    "log_token": "89a56a5dc3aa4e56a2e57b52de738da5",
+    "historical_distance_m": 1331.5346159641147,
+    "raw_original_commands": 16,
+    "officially_static_commands": 0
+  },
+  {
+    "scene": "scene-0413",
+    "scene_token": "5035adcd18d34d4783c2ccb41db998c1",
+    "log_token": "89a56a5dc3aa4e56a2e57b52de738da5",
+    "historical_distance_m": 1459.1304319401588,
+    "raw_original_commands": 16,
+    "officially_static_commands": 0
+  },
+  {
+    "scene": "scene-0414",
+    "scene_token": "05d5241d4d5a4c2a9c670dc8c9853c74",
+    "log_token": "89a56a5dc3aa4e56a2e57b52de738da5",
+    "historical_distance_m": 1415.6545900758686,
+    "raw_original_commands": 24,
+    "officially_static_commands": 0
+  },
+  {
+    "scene": "scene-0415",
+    "scene_token": "3be5ff913abf449bac92ce2d2a4cffa0",
+    "log_token": "89a56a5dc3aa4e56a2e57b52de738da5",
+    "historical_distance_m": 1368.4808987796364,
+    "raw_original_commands": 16,
+    "officially_static_commands": 0
+  },
+  {
+    "scene": "scene-0416",
+    "scene_token": "bd916d78cb3149999182fb3ce4eb8a8d",
+    "log_token": "89a56a5dc3aa4e56a2e57b52de738da5",
+    "historical_distance_m": 1382.71270335307,
+    "raw_original_commands": 8,
+    "officially_static_commands": 1
+  },
+  {
+    "scene": "scene-0417",
+    "scene_token": "4b5bf3f4668d44fea9a676e9c4a8a79e",
+    "log_token": "89a56a5dc3aa4e56a2e57b52de738da5",
+    "historical_distance_m": 1413.8907724776714,
+    "raw_original_commands": 13,
+    "officially_static_commands": 5
+  },
+  {
+    "scene": "scene-0418",
+    "scene_token": "b526c20f7eed49f0886cdb4ba6b733e8",
+    "log_token": "89a56a5dc3aa4e56a2e57b52de738da5",
+    "historical_distance_m": 1302.5980732607027,
+    "raw_original_commands": 21,
+    "officially_static_commands": 16
+  },
+  {
+    "scene": "scene-0419",
+    "scene_token": "8c84164e752a4ab69d039a07c898f7af",
+    "log_token": "89a56a5dc3aa4e56a2e57b52de738da5",
+    "historical_distance_m": 1222.973555145345,
+    "raw_original_commands": 18,
+    "officially_static_commands": 0
+  },
+  {
+    "scene": "scene-0420",
+    "scene_token": "c7b8d96173bf41dc8df8c0d16adfc71e",
+    "log_token": "75f5ca2350b346d19a39aa7439f61755",
+    "historical_distance_m": 0.3298361450811552,
+    "raw_original_commands": 21,
+    "officially_static_commands": 14
+  },
+  {
+    "scene": "scene-0421",
+    "scene_token": "fb255bba9b6a4f37a8894e336d2136f1",
+    "log_token": "75f5ca2350b346d19a39aa7439f61755",
+    "historical_distance_m": 2.5371238595827115,
+    "raw_original_commands": 13,
+    "officially_static_commands": 0
+  },
+  {
+    "scene": "scene-0422",
+    "scene_token": "9ac6dff089a84a6d8f066122443a10db",
+    "log_token": "75f5ca2350b346d19a39aa7439f61755",
+    "historical_distance_m": 37.6526502912972,
+    "raw_original_commands": 13,
+    "officially_static_commands": 7
+  },
+  {
+    "scene": "scene-0423",
+    "scene_token": "47cfdbcf14fe47d2a3b9e7e5b46d8a36",
+    "log_token": "75f5ca2350b346d19a39aa7439f61755",
+    "historical_distance_m": 118.89845149752577,
+    "raw_original_commands": 26,
+    "officially_static_commands": 3
+  },
+  {
+    "scene": "scene-0424",
+    "scene_token": "4deb245e67374cd88e64d6557b652841",
+    "log_token": "75f5ca2350b346d19a39aa7439f61755",
+    "historical_distance_m": 136.5958508144792,
+    "raw_original_commands": 17,
+    "officially_static_commands": 2
+  },
+  {
+    "scene": "scene-0425",
+    "scene_token": "48ff8fee13c344ed843af3eec8f9b94b",
+    "log_token": "75f5ca2350b346d19a39aa7439f61755",
+    "historical_distance_m": 206.66318349357672,
+    "raw_original_commands": 9,
+    "officially_static_commands": 2
+  }
+]

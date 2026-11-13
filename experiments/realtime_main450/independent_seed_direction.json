@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "created_utc": "2026-11-12T19:33:56.228266+00:00",
+  "cohorts": [
+    {
+      "run": "execution_direction_main_seed_initial_001",
+      "cases": 450,
+      "intervals": 333929,
+      "moving_intervals": 121585,
+      "global_cone_forward_intervals": 121585,
+      "moving_cases": 359,
+      "stationary_cases": 90,
+      "old_arrivals": 93,
+      "old_arrivals_with_body_direction": 93,
+      "GEOS_progress_checks": 243170,
+      "unknown_cases": 1
+    }
+  ],
+  "totals": {
+    "cases": 450,
+    "intervals": 333929,
+    "moving_intervals": 121585,
+    "global_cone_forward_intervals": 121585,
+    "moving_cases": 359,
+    "stationary_cases": 90,
+    "old_arrivals": 93,
+    "old_arrivals_with_body_direction": 93,
+    "GEOS_progress_checks": 243170,
+    "unknown_cases": 1
+  },
+  "source_sha256": "44579311b3a41b2dac7c5ecac98b4fe20f0966b9db4dfb763fced65f111a1ab7",
+  "source_files": 2304,
+  "files_manifest_sha256": "d0bd7d0bfecd0590b2ca888de5ba02a02ab238f3a2ff442627e107457f07c788",
+  "minimum_global_heading_margin_rad": 1.003604195491762,
+  "independent_direction_bound": "所有中心线切线的全局航向锥，与主审核的局部距离界/递归不同",
+  "independent_progress_backend": "GEOS最近点投影，核对主审核NumPy投影的并列范围",
+  "multi_lane_connection_accuracy": null,
+  "new_model_calls": 0,
+  "new_executions": 0,
+  "new_arrivals": 0,
+  "wall_CPU_shared_s": 18.803730038926005,
+  "limits": [
+    "第二种方向界，不是另一套积分/车身或多车道拓扑证明",
+    "单向单车道没有连接过渡，连接评价未检验",
+    "只核对冻结保存模型与静态地图；不外推真实动态交通或未知道路安全",
+    "54个初态为种子与静止前缀重建，严格旧未知原样保留，不称新增观测"
+  ],
+  "goal_complete": false
+}

@@ -1,0 +1,763 @@
+{
+  "created_utc": "2026-11-12T21:03:47.973455+00:00",
+  "source_report_sha256": "4ab910b50815c0ea35c0162bf1659d341e66a66a0d1a4a3a4274c80686286a13",
+  "source_trials_sha256": "caf8ff5140070656ef023dc17e4009b77331d3eb5dfeb68bc246bf4b990b4b99",
+  "source_responses_sha256": "89496ddd4a4aea9fbaf38c0baaaf7dd86a20f56b280f0a57252170378df6b39a",
+  "source_sha256": "777ac35848706b43a27ff74dd1e4db12634b5d2ae8ad7a92b0411f0fb584e109",
+  "groups": {
+    "rule/reachable_positive": {
+      "trials": 90,
+      "complete_results": 90,
+      "missing_results": 0,
+      "trials_with_complete_semantic_event_log": 90,
+      "trials_without_complete_semantic_event_log": 0,
+      "saved_prefix_is_not_complete_success": true,
+      "tasks": {
+        "query_parse": {
+          "response_counts": {},
+          "trials_with_saved_response": 0,
+          "known_complete_event_applications": 0,
+          "unknown_complete_event_trials": 0,
+          "complete_event_log_counts": {},
+          "response_and_queue_denominators_may_differ": false
+        },
+        "object_attributes": {
+          "response_counts": {},
+          "trials_with_saved_response": 0,
+          "known_complete_event_applications": 0,
+          "unknown_complete_event_trials": 0,
+          "complete_event_log_counts": {},
+          "response_and_queue_denominators_may_differ": false
+        },
+        "candidate_rerank": {
+          "response_counts": {},
+          "trials_with_saved_response": 0,
+          "known_complete_event_applications": 0,
+          "unknown_complete_event_trials": 0,
+          "complete_event_log_counts": {},
+          "response_and_queue_denominators_may_differ": false
+        }
+      }
+    },
+    "rule/no_match": {
+      "trials": 30,
+      "complete_results": 30,
+      "missing_results": 0,
+      "trials_with_complete_semantic_event_log": 30,
+      "trials_without_complete_semantic_event_log": 0,
+      "saved_prefix_is_not_complete_success": true,
+      "tasks": {
+        "query_parse": {
+          "response_counts": {},
+          "trials_with_saved_response": 0,
+          "known_complete_event_applications": 0,
+          "unknown_complete_event_trials": 0,
+          "complete_event_log_counts": {},
+          "response_and_queue_denominators_may_differ": false
+        },
+        "object_attributes": {
+          "response_counts": {},
+          "trials_with_saved_response": 0,
+          "known_complete_event_applications": 0,
+          "unknown_complete_event_trials": 0,
+          "complete_event_log_counts": {},
+          "response_and_queue_denominators_may_differ": false
+        },
+        "candidate_rerank": {
+          "response_counts": {},
+          "trials_with_saved_response": 0,
+          "known_complete_event_applications": 0,
+          "unknown_complete_event_trials": 0,
+          "complete_event_log_counts": {},
+          "response_and_queue_denominators_may_differ": false
+        }
+      }
+    },
+    "rule/inaccessible": {
+      "trials": 30,
+      "complete_results": 30,
+      "missing_results": 0,
+      "trials_with_complete_semantic_event_log": 30,
+      "trials_without_complete_semantic_event_log": 0,
+      "saved_prefix_is_not_complete_success": true,
+      "tasks": {
+        "query_parse": {
+          "response_counts": {},
+          "trials_with_saved_response": 0,
+          "known_complete_event_applications": 0,
+          "unknown_complete_event_trials": 0,
+          "complete_event_log_counts": {},
+          "response_and_queue_denominators_may_differ": false
+        },
+        "object_attributes": {
+          "response_counts": {},
+          "trials_with_saved_response": 0,
+          "known_complete_event_applications": 0,
+          "unknown_complete_event_trials": 0,
+          "complete_event_log_counts": {},
+          "response_and_queue_denominators_may_differ": false
+        },
+        "candidate_rerank": {
+          "response_counts": {},
+          "trials_with_saved_response": 0,
+          "known_complete_event_applications": 0,
+          "unknown_complete_event_trials": 0,
+          "complete_event_log_counts": {},
+          "response_and_queue_denominators_may_differ": false
+        }
+      }
+    },
+    "base_full/reachable_positive": {
+      "trials": 90,
+      "complete_results": 89,
+      "missing_results": 1,
+      "trials_with_complete_semantic_event_log": 89,
+      "trials_without_complete_semantic_event_log": 1,
+      "saved_prefix_is_not_complete_success": true,
+      "tasks": {
+        "query_parse": {
+          "response_counts": {
+            "delivered_saved_responses": 90,
+            "schema_and_confidence_accepted": 90,
+            "cache_hit": 0,
+            "known_noncache": 90,
+            "category_exact": 90,
+            "colors_exact": 90,
+            "no_extra_anchor_relation": 90,
+            "category_color_relation_exact": 90,
+            "self_anchor_near": 0,
+            "expected_color_missing": 0
+          },
+          "trials_with_saved_response": 90,
+          "known_complete_event_applications": 89,
+          "unknown_complete_event_trials": 1,
+          "complete_event_log_counts": {
+            "submitted": 89,
+            "backend_started": 89,
+            "backend_completed": 89,
+            "completed_ready": 89,
+            "delivered": 89
+          },
+          "response_and_queue_denominators_may_differ": true
+        },
+        "object_attributes": {
+          "response_counts": {
+            "delivered_saved_responses": 335,
+            "schema_and_confidence_accepted": 335,
+            "cache_hit": 0,
+            "known_noncache": 335,
+            "all_colors_unknown": 335,
+            "receipt_associated": 331,
+            "receipt_associated_known_color": 0,
+            "receipt_associated_exact_color": 0
+          },
+          "trials_with_saved_response": 88,
+          "known_complete_event_applications": 332,
+          "unknown_complete_event_trials": 1,
+          "complete_event_log_counts": {
+            "submitted": 714,
+            "backend_started": 578,
+            "backend_completed": 578,
+            "completed_ready": 514,
+            "delivered": 332,
+            "queue_full_rejected": 1550,
+            "discarded": 160,
+            "discarded_binding_changed": 79,
+            "cancelled_before_backend": 131,
+            "discarded_expired_before_delivery": 40,
+            "completed_late_expired": 64,
+            "discarded_late_expired": 41,
+            "expired_in_queue": 5
+          },
+          "response_and_queue_denominators_may_differ": true
+        },
+        "candidate_rerank": {
+          "response_counts": {
+            "delivered_saved_responses": 87,
+            "schema_and_confidence_accepted": 87,
+            "cache_hit": 0,
+            "known_noncache": 87
+          },
+          "trials_with_saved_response": 50,
+          "known_complete_event_applications": 0,
+          "unknown_complete_event_trials": 1,
+          "complete_event_log_counts": {
+            "submitted": 185,
+            "backend_started": 126,
+            "queue_full_rejected": 1174,
+            "backend_completed": 126,
+            "completed_ready": 122,
+            "delivered": 84,
+            "cancelled_before_backend": 56,
+            "context_rejected": 84,
+            "discarded": 7,
+            "discarded_expired_before_delivery": 3,
+            "expired_in_queue": 3,
+            "completed_late_expired": 4,
+            "discarded_late_expired": 4
+          },
+          "response_and_queue_denominators_may_differ": true
+        }
+      }
+    },
+    "base_full/no_match": {
+      "trials": 30,
+      "complete_results": 30,
+      "missing_results": 0,
+      "trials_with_complete_semantic_event_log": 30,
+      "trials_without_complete_semantic_event_log": 0,
+      "saved_prefix_is_not_complete_success": true,
+      "tasks": {
+        "query_parse": {
+          "response_counts": {
+            "delivered_saved_responses": 30,
+            "schema_and_confidence_accepted": 30,
+            "cache_hit": 0,
+            "known_noncache": 30,
+            "category_exact": 30,
+            "colors_exact": 30,
+            "no_extra_anchor_relation": 0,
+            "category_color_relation_exact": 0,
+            "self_anchor_near": 0,
+            "expected_color_missing": 0
+          },
+          "trials_with_saved_response": 30,
+          "known_complete_event_applications": 30,
+          "unknown_complete_event_trials": 0,
+          "complete_event_log_counts": {
+            "submitted": 30,
+            "backend_started": 30,
+            "backend_completed": 30,
+            "completed_ready": 30,
+            "delivered": 30
+          },
+          "response_and_queue_denominators_may_differ": false
+        },
+        "object_attributes": {
+          "response_counts": {
+            "delivered_saved_responses": 235,
+            "schema_and_confidence_accepted": 233,
+            "cache_hit": 0,
+            "known_noncache": 235,
+            "all_colors_unknown": 233,
+            "receipt_associated": 228,
+            "receipt_associated_known_color": 2,
+            "receipt_associated_exact_color": 2
+          },
+          "trials_with_saved_response": 30,
+          "known_complete_event_applications": 233,
+          "unknown_complete_event_trials": 0,
+          "complete_event_log_counts": {
+            "submitted": 365,
+            "backend_started": 329,
+            "backend_completed": 329,
+            "completed_ready": 329,
+            "delivered": 235,
+            "queue_full_rejected": 628,
+            "discarded": 63,
+            "discarded_binding_changed": 63,
+            "cancelled_before_backend": 36
+          },
+          "response_and_queue_denominators_may_differ": false
+        },
+        "candidate_rerank": {
+          "response_counts": {},
+          "trials_with_saved_response": 0,
+          "known_complete_event_applications": 0,
+          "unknown_complete_event_trials": 0,
+          "complete_event_log_counts": {},
+          "response_and_queue_denominators_may_differ": false
+        }
+      }
+    },
+    "base_full/inaccessible": {
+      "trials": 30,
+      "complete_results": 30,
+      "missing_results": 0,
+      "trials_with_complete_semantic_event_log": 30,
+      "trials_without_complete_semantic_event_log": 0,
+      "saved_prefix_is_not_complete_success": true,
+      "tasks": {
+        "query_parse": {
+          "response_counts": {
+            "delivered_saved_responses": 30,
+            "schema_and_confidence_accepted": 30,
+            "cache_hit": 0,
+            "known_noncache": 30,
+            "category_exact": 30,
+            "colors_exact": 30,
+            "no_extra_anchor_relation": 30,
+            "category_color_relation_exact": 30,
+            "self_anchor_near": 0,
+            "expected_color_missing": 0
+          },
+          "trials_with_saved_response": 30,
+          "known_complete_event_applications": 30,
+          "unknown_complete_event_trials": 0,
+          "complete_event_log_counts": {
+            "submitted": 30,
+            "backend_started": 30,
+            "backend_completed": 30,
+            "completed_ready": 30,
+            "delivered": 30
+          },
+          "response_and_queue_denominators_may_differ": false
+        },
+        "object_attributes": {
+          "response_counts": {},
+          "trials_with_saved_response": 0,
+          "known_complete_event_applications": 0,
+          "unknown_complete_event_trials": 0,
+          "complete_event_log_counts": {},
+          "response_and_queue_denominators_may_differ": false
+        },
+        "candidate_rerank": {
+          "response_counts": {},
+          "trials_with_saved_response": 0,
+          "known_complete_event_applications": 0,
+          "unknown_complete_event_trials": 0,
+          "complete_event_log_counts": {},
+          "response_and_queue_denominators_may_differ": false
+        }
+      }
+    },
+    "new_full/reachable_positive": {
+      "trials": 90,
+      "complete_results": 90,
+      "missing_results": 0,
+      "trials_with_complete_semantic_event_log": 90,
+      "trials_without_complete_semantic_event_log": 0,
+      "saved_prefix_is_not_complete_success": true,
+      "tasks": {
+        "query_parse": {
+          "response_counts": {
+            "delivered_saved_responses": 74,
+            "schema_and_confidence_accepted": 74,
+            "cache_hit": 0,
+            "known_noncache": 74,
+            "category_exact": 74,
+            "colors_exact": 22,
+            "no_extra_anchor_relation": 0,
+            "category_color_relation_exact": 0,
+            "self_anchor_near": 74,
+            "expected_color_missing": 52
+          },
+          "trials_with_saved_response": 74,
+          "known_complete_event_applications": 74,
+          "unknown_complete_event_trials": 0,
+          "complete_event_log_counts": {
+            "submitted": 90,
+            "backend_started": 90,
+            "backend_completed": 90,
+            "completed_ready": 89,
+            "delivered": 74,
+            "discarded": 16,
+            "discarded_expired_before_delivery": 15,
+            "completed_late_expired": 1,
+            "discarded_late_expired": 1
+          },
+          "response_and_queue_denominators_may_differ": false
+        },
+        "object_attributes": {
+          "response_counts": {
+            "delivered_saved_responses": 233,
+            "schema_and_confidence_accepted": 233,
+            "cache_hit": 0,
+            "known_noncache": 233,
+            "all_colors_unknown": 233,
+            "receipt_associated": 233,
+            "receipt_associated_known_color": 0,
+            "receipt_associated_exact_color": 0
+          },
+          "trials_with_saved_response": 75,
+          "known_complete_event_applications": 233,
+          "unknown_complete_event_trials": 0,
+          "complete_event_log_counts": {
+            "submitted": 801,
+            "backend_started": 614,
+            "queue_full_rejected": 4373,
+            "backend_completed": 614,
+            "completed_ready": 491,
+            "delivered": 233,
+            "completed_late_expired": 123,
+            "discarded": 303,
+            "discarded_late_expired": 105,
+            "discarded_binding_changed": 178,
+            "cancelled_before_backend": 150,
+            "expired_in_queue": 37,
+            "discarded_expired_before_delivery": 20
+          },
+          "response_and_queue_denominators_may_differ": false
+        },
+        "candidate_rerank": {
+          "response_counts": {
+            "delivered_saved_responses": 62,
+            "schema_and_confidence_accepted": 13,
+            "cache_hit": 6,
+            "known_noncache": 56
+          },
+          "trials_with_saved_response": 34,
+          "known_complete_event_applications": 3,
+          "unknown_complete_event_trials": 0,
+          "complete_event_log_counts": {
+            "submitted": 205,
+            "queue_full_rejected": 3466,
+            "backend_started": 145,
+            "backend_completed": 145,
+            "completed_ready": 78,
+            "delivered": 62,
+            "completed_late_expired": 67,
+            "discarded": 56,
+            "discarded_late_expired": 52,
+            "context_rejected": 10,
+            "expired_in_queue": 10,
+            "cancelled_before_backend": 50,
+            "discarded_expired_before_delivery": 4,
+            "context_applied": 3
+          },
+          "response_and_queue_denominators_may_differ": false
+        }
+      }
+    },
+    "new_full/no_match": {
+      "trials": 30,
+      "complete_results": 30,
+      "missing_results": 0,
+      "trials_with_complete_semantic_event_log": 30,
+      "trials_without_complete_semantic_event_log": 0,
+      "saved_prefix_is_not_complete_success": true,
+      "tasks": {
+        "query_parse": {
+          "response_counts": {
+            "delivered_saved_responses": 30,
+            "schema_and_confidence_accepted": 30,
+            "cache_hit": 0,
+            "known_noncache": 30,
+            "category_exact": 30,
+            "colors_exact": 30,
+            "no_extra_anchor_relation": 0,
+            "category_color_relation_exact": 0,
+            "self_anchor_near": 30,
+            "expected_color_missing": 0
+          },
+          "trials_with_saved_response": 30,
+          "known_complete_event_applications": 30,
+          "unknown_complete_event_trials": 0,
+          "complete_event_log_counts": {
+            "submitted": 30,
+            "backend_started": 30,
+            "backend_completed": 30,
+            "completed_ready": 30,
+            "delivered": 30
+          },
+          "response_and_queue_denominators_may_differ": false
+        },
+        "object_attributes": {
+          "response_counts": {
+            "delivered_saved_responses": 81,
+            "schema_and_confidence_accepted": 81,
+            "cache_hit": 0,
+            "known_noncache": 81,
+            "all_colors_unknown": 81,
+            "receipt_associated": 80,
+            "receipt_associated_known_color": 0,
+            "receipt_associated_exact_color": 0
+          },
+          "trials_with_saved_response": 29,
+          "known_complete_event_applications": 81,
+          "unknown_complete_event_trials": 0,
+          "complete_event_log_counts": {
+            "submitted": 315,
+            "backend_started": 276,
+            "backend_completed": 276,
+            "completed_ready": 276,
+            "delivered": 81,
+            "discarded": 161,
+            "discarded_binding_changed": 161,
+            "cancelled_before_backend": 39,
+            "queue_full_rejected": 1007
+          },
+          "response_and_queue_denominators_may_differ": false
+        },
+        "candidate_rerank": {
+          "response_counts": {},
+          "trials_with_saved_response": 0,
+          "known_complete_event_applications": 0,
+          "unknown_complete_event_trials": 0,
+          "complete_event_log_counts": {},
+          "response_and_queue_denominators_may_differ": false
+        }
+      }
+    },
+    "new_full/inaccessible": {
+      "trials": 30,
+      "complete_results": 30,
+      "missing_results": 0,
+      "trials_with_complete_semantic_event_log": 30,
+      "trials_without_complete_semantic_event_log": 0,
+      "saved_prefix_is_not_complete_success": true,
+      "tasks": {
+        "query_parse": {
+          "response_counts": {
+            "delivered_saved_responses": 30,
+            "schema_and_confidence_accepted": 30,
+            "cache_hit": 0,
+            "known_noncache": 30,
+            "category_exact": 30,
+            "colors_exact": 0,
+            "no_extra_anchor_relation": 0,
+            "category_color_relation_exact": 0,
+            "self_anchor_near": 30,
+            "expected_color_missing": 30
+          },
+          "trials_with_saved_response": 30,
+          "known_complete_event_applications": 30,
+          "unknown_complete_event_trials": 0,
+          "complete_event_log_counts": {
+            "submitted": 30,
+            "backend_started": 30,
+            "backend_completed": 30,
+            "completed_ready": 30,
+            "delivered": 30
+          },
+          "response_and_queue_denominators_may_differ": false
+        },
+        "object_attributes": {
+          "response_counts": {},
+          "trials_with_saved_response": 0,
+          "known_complete_event_applications": 0,
+          "unknown_complete_event_trials": 0,
+          "complete_event_log_counts": {},
+          "response_and_queue_denominators_may_differ": false
+        },
+        "candidate_rerank": {
+          "response_counts": {},
+          "trials_with_saved_response": 0,
+          "known_complete_event_applications": 0,
+          "unknown_complete_event_trials": 0,
+          "complete_event_log_counts": {},
+          "response_and_queue_denominators_may_differ": false
+        }
+      }
+    }
+  },
+  "training_homonymous_anchor_examples": {
+    "train": {
+      "samples": 7,
+      "records": [
+        {
+          "sample_id": "train-parse-00155",
+          "query_text": "去摩托车附近那辆摩托车旁边",
+          "response": {
+            "schema_version": "1.0.0",
+            "target_text": "摩托车",
+            "target_categories": [
+              "motorcycle"
+            ],
+            "target_colors": [],
+            "anchor_text": "摩托车",
+            "anchor_categories": [
+              "motorcycle"
+            ],
+            "anchor_colors": [],
+            "relation": "near",
+            "prefer_nearest": false,
+            "prefer_front": false,
+            "excluded_categories": [],
+            "excluded_colors": [],
+            "requires_static": false,
+            "confidence": 1.0
+          }
+        },
+        {
+          "sample_id": "train-parse-00256",
+          "query_text": "去小汽车附近的小汽车附近",
+          "response": {
+            "schema_version": "1.0.0",
+            "target_text": "小汽车",
+            "target_categories": [
+              "car"
+            ],
+            "target_colors": [],
+            "anchor_text": "小汽车",
+            "anchor_categories": [
+              "car"
+            ],
+            "anchor_colors": [],
+            "relation": "near",
+            "prefer_nearest": false,
+            "prefer_front": false,
+            "excluded_categories": [],
+            "excluded_colors": [],
+            "requires_static": false,
+            "confidence": 1.0
+          }
+        },
+        {
+          "sample_id": "train-parse-00291",
+          "query_text": "去自行车附近的自行车附近",
+          "response": {
+            "schema_version": "1.0.0",
+            "target_text": "自行车",
+            "target_categories": [
+              "bicycle"
+            ],
+            "target_colors": [],
+            "anchor_text": "自行车",
+            "anchor_categories": [
+              "bicycle"
+            ],
+            "anchor_colors": [],
+            "relation": "near",
+            "prefer_nearest": false,
+            "prefer_front": false,
+            "excluded_categories": [],
+            "excluded_colors": [],
+            "requires_static": false,
+            "confidence": 1.0
+          }
+        },
+        {
+          "sample_id": "train-parse-00398",
+          "query_text": "去小汽车附近那辆小汽车旁边",
+          "response": {
+            "schema_version": "1.0.0",
+            "target_text": "小汽车",
+            "target_categories": [
+              "car"
+            ],
+            "target_colors": [],
+            "anchor_text": "小汽车",
+            "anchor_categories": [
+              "car"
+            ],
+            "anchor_colors": [],
+            "relation": "near",
+            "prefer_nearest": false,
+            "prefer_front": false,
+            "excluded_categories": [],
+            "excluded_colors": [],
+            "requires_static": false,
+            "confidence": 1.0
+          }
+        },
+        {
+          "sample_id": "train-parse-00414",
+          "query_text": "去公交车附近那辆公交车旁边",
+          "response": {
+            "schema_version": "1.0.0",
+            "target_text": "公交车",
+            "target_categories": [
+              "bus"
+            ],
+            "target_colors": [],
+            "anchor_text": "公交车",
+            "anchor_categories": [
+              "bus"
+            ],
+            "anchor_colors": [],
+            "relation": "near",
+            "prefer_nearest": false,
+            "prefer_front": false,
+            "excluded_categories": [],
+            "excluded_colors": [],
+            "requires_static": false,
+            "confidence": 1.0
+          }
+        },
+        {
+          "sample_id": "train-parse-00960",
+          "query_text": "去行人附近那辆行人旁边",
+          "response": {
+            "schema_version": "1.0.0",
+            "target_text": "行人",
+            "target_categories": [
+              "pedestrian"
+            ],
+            "target_colors": [],
+            "anchor_text": "行人",
+            "anchor_categories": [
+              "pedestrian"
+            ],
+            "anchor_colors": [],
+            "relation": "near",
+            "prefer_nearest": false,
+            "prefer_front": false,
+            "excluded_categories": [],
+            "excluded_colors": [],
+            "requires_static": false,
+            "confidence": 1.0
+          }
+        },
+        {
+          "sample_id": "train-parse-01375",
+          "query_text": "去卡车附近的卡车附近",
+          "response": {
+            "schema_version": "1.0.0",
+            "target_text": "卡车",
+            "target_categories": [
+              "truck"
+            ],
+            "target_colors": [],
+            "anchor_text": "卡车",
+            "anchor_categories": [
+              "truck"
+            ],
+            "anchor_colors": [],
+            "relation": "near",
+            "prefer_nearest": false,
+            "prefer_front": false,
+            "excluded_categories": [],
+            "excluded_colors": [],
+            "requires_static": false,
+            "confidence": 1.0
+          }
+        }
+      ],
+      "interpretation": "文字同名不一定是同一实例，本处不将自然表达同名自动判成错误标签；仅披露语法监督分布。"
+    },
+    "validation": {
+      "samples": 1,
+      "records": [
+        {
+          "sample_id": "validation-parse-00028",
+          "query_text": "以自行车为参照，寻找其附近的自行车",
+          "response": {
+            "schema_version": "1.0.0",
+            "target_text": "自行车",
+            "target_categories": [
+              "bicycle"
+            ],
+            "target_colors": [],
+            "anchor_text": "自行车",
+            "anchor_categories": [
+              "bicycle"
+            ],
+            "anchor_colors": [],
+            "relation": "near",
+            "prefer_nearest": false,
+            "prefer_front": false,
+            "excluded_categories": [],
+            "excluded_colors": [],
+            "requires_static": false,
+            "confidence": 1.0
+          }
+        }
+      ],
+      "interpretation": "文字同名不一定是同一实例，本处不将自然表达同名自动判成错误标签；仅披露语法监督分布。"
+    }
+  },
+  "correction_scope": "002 semantic_tasks.actual_applications只汇总有完整semantic_events.json试验的应用；此补充明确对应覆盖分母和未知项，不更改原文件。",
+  "limits": [
+    "已投递响应是条件分母；未投递原文不可得，不计全体后端语义准确率",
+    "base缺完整结果条件仍有保存响应，但缺完整事件日志，因此响应数可多于完整事件delivered计数",
+    "训练同名锚点不自动证明标签错误；仿真简单靠近任务没有独立锚点才构成明确的额外关系",
+    "后验开发解释，不代替缺一消融；没有新增模型、执行、到达或人工标签"
+  ],
+  "actual_model_calls": 0,
+  "new_executions": 0,
+  "new_arrivals": 0,
+  "manuscript_text_written": false,
+  "new_test_opened": false,
+  "goal_complete": false
+}

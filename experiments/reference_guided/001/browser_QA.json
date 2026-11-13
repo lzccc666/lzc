@@ -1,0 +1,181 @@
+{
+  "passed": true,
+  "cases_total": 228,
+  "scenes_total": 38,
+  "viewports": 2,
+  "condition_checks": 16,
+  "checks": [
+    {
+      "viewport": "desktop",
+      "scene": "scene-0013",
+      "method": "reference_guided",
+      "seed": 17,
+      "status": "NO_ROUTE",
+      "states": 1,
+      "distinct_connections": 0,
+      "candidate_intervals": 0
+    },
+    {
+      "viewport": "desktop",
+      "scene": "scene-0014",
+      "method": "hybrid_astar",
+      "seed": 17,
+      "status": "UNKNOWN_INVALID_DECLARED_CHAIN",
+      "states": 0,
+      "distinct_connections": 0,
+      "candidate_intervals": 0
+    },
+    {
+      "viewport": "desktop",
+      "scene": "scene-0012",
+      "method": "hybrid_astar",
+      "seed": 17,
+      "status": "unknown_artificial_start_exceeds_30m_bound",
+      "states": 0,
+      "distinct_connections": 0,
+      "candidate_intervals": 0
+    },
+    {
+      "viewport": "desktop",
+      "scene": "scene-0038",
+      "method": "hybrid_astar",
+      "seed": 17,
+      "status": "unknown_connector_has_no_declared_exit_lane",
+      "states": 0,
+      "distinct_connections": 0,
+      "candidate_intervals": 0
+    },
+    {
+      "viewport": "desktop",
+      "scene": "scene-0020",
+      "method": "hybrid_astar",
+      "seed": 17,
+      "status": "unknown_entry_or_exit_lane_too_short",
+      "states": 0,
+      "distinct_connections": 0,
+      "candidate_intervals": 0
+    },
+    {
+      "viewport": "desktop",
+      "scene": "scene-0032",
+      "method": "hybrid_astar",
+      "seed": 17,
+      "status": "unknown_no_aligned_nearby_entry_lane",
+      "states": 0,
+      "distinct_connections": 0,
+      "candidate_intervals": 0
+    },
+    {
+      "viewport": "desktop",
+      "scene": "scene-0025",
+      "method": "hybrid_astar",
+      "seed": 17,
+      "status": "unknown_no_declared_outgoing_connector",
+      "states": 0,
+      "distinct_connections": 0,
+      "candidate_intervals": 0
+    },
+    {
+      "viewport": "desktop",
+      "scene": "scene-0019",
+      "method": "reference_guided",
+      "seed": 17,
+      "status": "REFERENCE_POSE_REACHED",
+      "states": 295,
+      "distinct_connections": 2,
+      "candidate_intervals": 41
+    },
+    {
+      "viewport": "mobile",
+      "scene": "scene-0013",
+      "method": "reference_guided",
+      "seed": 17,
+      "status": "NO_ROUTE",
+      "states": 1,
+      "distinct_connections": 0,
+      "candidate_intervals": 0
+    },
+    {
+      "viewport": "mobile",
+      "scene": "scene-0014",
+      "method": "hybrid_astar",
+      "seed": 17,
+      "status": "UNKNOWN_INVALID_DECLARED_CHAIN",
+      "states": 0,
+      "distinct_connections": 0,
+      "candidate_intervals": 0
+    },
+    {
+      "viewport": "mobile",
+      "scene": "scene-0012",
+      "method": "hybrid_astar",
+      "seed": 17,
+      "status": "unknown_artificial_start_exceeds_30m_bound",
+      "states": 0,
+      "distinct_connections": 0,
+      "candidate_intervals": 0
+    },
+    {
+      "viewport": "mobile",
+      "scene": "scene-0038",
+      "method": "hybrid_astar",
+      "seed": 17,
+      "status": "unknown_connector_has_no_declared_exit_lane",
+      "states": 0,
+      "distinct_connections": 0,
+      "candidate_intervals": 0
+    },
+    {
+      "viewport": "mobile",
+      "scene": "scene-0020",
+      "method": "hybrid_astar",
+      "seed": 17,
+      "status": "unknown_entry_or_exit_lane_too_short",
+      "states": 0,
+      "distinct_connections": 0,
+      "candidate_intervals": 0
+    },
+    {
+      "viewport": "mobile",
+      "scene": "scene-0032",
+      "method": "hybrid_astar",
+      "seed": 17,
+      "status": "unknown_no_aligned_nearby_entry_lane",
+      "states": 0,
+      "distinct_connections": 0,
+      "candidate_intervals": 0
+    },
+    {
+      "viewport": "mobile",
+      "scene": "scene-0025",
+      "method": "hybrid_astar",
+      "seed": 17,
+      "status": "unknown_no_declared_outgoing_connector",
+      "states": 0,
+      "distinct_connections": 0,
+      "candidate_intervals": 0
+    },
+    {
+      "viewport": "mobile",
+      "scene": "scene-0019",
+      "method": "reference_guided",
+      "seed": 17,
+      "status": "REFERENCE_POSE_REACHED",
+      "states": 295,
+      "distinct_connections": 2,
+      "candidate_intervals": 41
+    }
+  ],
+  "original_saved_states_compared": true,
+  "candidate_and_transition_counters_match_original": true,
+  "local_and_full_view_checked": true,
+  "playback_checked": true,
+  "missing_execution_disables_playback": true,
+  "browser_errors": 0,
+  "horizontal_overflow": false,
+  "POST_requests": 0,
+  "model_calls": 0,
+  "semantic_arrival_credit": 0,
+  "page_manifest_sha256": "0f66c52d72c5803b5f0aee884550d1418bef10e626b239ace882f9d685b0fcef",
+  "goal_complete": false
+}

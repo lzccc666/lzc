@@ -1,0 +1,44 @@
+{
+  "passed": false,
+  "updated_utc": "2026-11-13T01:12:58.540400+00:00",
+  "condition": "rule_blockage",
+  "exposure_checks": {
+    "physical_motion_before_fault": false,
+    "sensor_gap_braked_to_zero": false,
+    "physical_barrier_created": false,
+    "prior_target_path_blocked": false,
+    "geometry_disconnected": false,
+    "actual_LiDAR_barrier_points": false,
+    "measured_obstacle_published": false
+  },
+  "all_required_fault_exposure": false,
+  "continuous_body_including_barrier": true,
+  "moving_direction": true,
+  "final_speed_zero": true,
+  "all_completed_frames_clear_blocked_route": true,
+  "semantic_rank_schema_valid": null,
+  "semantic_context_rejected": null,
+  "actual_controls_after_rank_return": null,
+  "actual_controls": 2484,
+  "actual_frontend_calls": 18,
+  "actual_CPU_Qwen_calls": 0,
+  "actual_GPU_calls": 0,
+  "original_four_outcomes": {
+    "route_generated": false,
+    "selected_object_evaluated_correct": false,
+    "stable_correct_lock": false,
+    "actual_full_perception_arrival": false
+  },
+  "result_is_development_combined_fault": true,
+  "formal_GPU_fault_gate": false,
+  "new_independent_tasks": 0,
+  "actual_arrival_credit_added": 0,
+  "goal_complete": false,
+  "source_sha256": "d4756190582f43d5e4b36018022b845faeb7302c7d0ff9e0d97131c2a502a666",
+  "limitations": [
+    "一次固定配置/任务/种子的开发组合故障；不宣称运动中突发障碍或全部动态交通安全",
+    "先TTL间断停车再出现屏障；CPU TTL15秒不是正式GPU1.5秒",
+    "屏障按全时段保守检查，独立逐区间整车审核覆盖其出生后的实际轨迹",
+    "真实前端和真实模型分列，无GPU/人工标签/新封存或独占性能信用"
+  ]
+}

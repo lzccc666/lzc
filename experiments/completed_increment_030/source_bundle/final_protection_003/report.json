@@ -1,0 +1,12 @@
+{
+  "checked_utc": "2026-11-13T16:20:58.096476+00:00",
+  "passed": true,
+  "verified_files": 255170,
+  "protected_bytes": 56657631355,
+  "changed_or_missing": [],
+  "original_baseline_verification_untouched": true,
+  "baseline_verification_sha256": "45bdc789b73e0bb0fbd13315d4161d32915924595f9261e9aa5d072666372461",
+  "manifest_sha256": "3dd07163a77a2a9b4721a4ccf0502b2321c6cd52bc12c21c3b91daf213138e16",
+  "source_sha256": "e23947d9d1dd623cfcb2d5f9d56c25ee34c887f510bc446acb15eebca4b90a1b",
+  "goal_complete": false
+}

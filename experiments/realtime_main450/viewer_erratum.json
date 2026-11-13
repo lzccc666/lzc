@@ -1,0 +1,49 @@
+{
+  "updated_utc": "2026-11-12T20:14:07.197860+00:00",
+  "current_viewer": "visualizations/realtime_main450_preview_003/index.html",
+  "superseded_viewers": [
+    "realtime_main450_preview_001",
+    "realtime_main450_preview_002"
+  ],
+  "reason": "001固定画布在手机比例不符；002响应式画布修复后仍有证据链接横向溢出，003已换行修复并通过桌面/手机独立验收。",
+  "original_versions_and_failure_records_preserved": true,
+  "full_input_SHA_verification_parent": "realtime_main450_preview_001",
+  "parent_verified_source_files": 289552,
+  "current_registered_source_files": 289558,
+  "current_source_manifest_reuses_parent_with_SHA_checks": true,
+  "perception_frames": 57460,
+  "saved_control_records_including_failed_prefix": 334607,
+  "HTTP_roster_checked": 450,
+  "HTTP_proof_links_checked": 1350,
+  "browser_unique_cases": 12,
+  "viewport_case_checks": 24,
+  "state_and_prefix_checks": 144,
+  "PNG_filter_types_checked": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "real_depth_frames_checked_per_viewport": 3,
+  "world_points_per_frame": 384,
+  "only_GET": true,
+  "actual_model_calls": 0,
+  "new_executions": 0,
+  "new_arrivals": 0,
+  "source_sha256": "8b56182ebf20d4131f52391557382d96f98d64e8ec305b0c348c4f4d50c72323",
+  "evidence": {
+    "visualizations/realtime_main450_preview_003/manifest.json": "dd27d6f62c83dbbd859d2ea996b2621f0a4a1e8aa8ff328da3b0f2bad2f023be",
+    "visualizations/realtime_main450_preview_003/release.json": "7971648e3a05b957f39c3b8ccb9acc495809056954b2dc355f02b574cf9ed979",
+    "visualizations/realtime_main450_browser_qa_001/report.json": "78ac2f5b182600e5c546bc0081fa242edabffe9af41a97b90c3958c60e0e8b69",
+    "source_bundle/realtime_main450_mobile_preflight_failure_001.json": "4358338409283a187350b083be35e0babd26c5e9c9fd723062a08234aeee6a3d",
+    "source_bundle/realtime_main450_mobile_preflight_pass_003.json": "83e12b065f11b5ad3ee727a3a4dba6be56e918efaa693d91ce930886c1c87a65",
+    "source_bundle/tests_full_044.log": "6715d5b3b846c1652489684505f25e8be1609fd1f690d0cd9bf53187121e5435",
+    "source_bundle/ruff_057.log": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+    "source_bundle/github_sync_001/tests_export_016.log": "02a2fc0b32997aa8373b2d816b664c56193069395fc97b4af7b1bf6a3f9d15ca",
+    "source_bundle/github_sync_001/ruff_export_016.log": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+  },
+  "new_test_opened": false,
+  "manuscript_text_written": false,
+  "goal_complete": false
+}

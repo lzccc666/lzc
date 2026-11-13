@@ -1,0 +1,22 @@
+{
+  "combined_run": "semantic_ablation_combined_004",
+  "new_trials": 450,
+  "combined_trial_records": 750,
+  "reused_main_records": 300,
+  "new_model_calls_by_this_worker": 0,
+  "source_set_equality_passed": false,
+  "common_inference_source_SHA_unchanged": true,
+  "unused_extra_file": "conceptgraph/navigation/reference_guided_vehicle.py",
+  "original_failure_sha256": "e23e7377589e538b3f6165e97f43c33132c663cfb73afcdcfbb09475d445ec8c",
+  "statistics_report_sha256": "f738b31c525fb8238700ab01120b382dccee85655dd472ab45f56e9fe18ff689",
+  "independent_audit_sha256": "3aa08cca0e56df7c46ad84afdaafed2ccb9b89a3a592648cbd71ee8efc89f925",
+  "elapsed_s_including_wait": 191.83475809544325,
+  "original_version_failed_source_set_equality": false,
+  "source_set_inequality_verified": true,
+  "original_parent_interrupted": true,
+  "explicit_compatibility_version": 4,
+  "independent_test": false,
+  "new_test_opened": false,
+  "stage12_complete": false,
+  "goal_complete": false
+}

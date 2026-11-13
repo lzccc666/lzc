@@ -1,0 +1,681 @@
+[
+  {
+    "id": "T19",
+    "title": "完整GPU故障矩阵：四类结果计数",
+    "columns": [
+      {
+        "key": "condition",
+        "label": "条件",
+        "kind": "text"
+      },
+      {
+        "key": "denominator",
+        "label": "全体分母",
+        "kind": "int"
+      },
+      {
+        "key": "route_generated",
+        "label": "生成路线",
+        "kind": "int"
+      },
+      {
+        "key": "selected_object_evaluated_correct",
+        "label": "选对对象",
+        "kind": "int"
+      },
+      {
+        "key": "stable_correct_lock",
+        "label": "正确锁定",
+        "kind": "int"
+      },
+      {
+        "key": "actual_full_perception_arrival",
+        "label": "实际正确到达",
+        "kind": "int"
+      }
+    ],
+    "rows": [
+      {
+        "condition": "无注入基线",
+        "denominator": 30,
+        "route_generated": 30,
+        "selected_object_evaluated_correct": 30,
+        "stable_correct_lock": 30,
+        "actual_full_perception_arrival": 3
+      },
+      {
+        "condition": "断流4秒",
+        "denominator": 30,
+        "route_generated": 30,
+        "selected_object_evaluated_correct": 30,
+        "stable_correct_lock": 28,
+        "actual_full_perception_arrival": 0
+      },
+      {
+        "condition": "LiDAR丢失80%",
+        "denominator": 30,
+        "route_generated": 29,
+        "selected_object_evaluated_correct": 29,
+        "stable_correct_lock": 28,
+        "actual_full_perception_arrival": 1
+      },
+      {
+        "condition": "深度噪声0.2米",
+        "denominator": 30,
+        "route_generated": 30,
+        "selected_object_evaluated_correct": 30,
+        "stable_correct_lock": 30,
+        "actual_full_perception_arrival": 2
+      },
+      {
+        "condition": "位姿噪声0.25米/2度",
+        "denominator": 30,
+        "route_generated": 29,
+        "selected_object_evaluated_correct": 30,
+        "stable_correct_lock": 29,
+        "actual_full_perception_arrival": 2
+      },
+      {
+        "condition": "检测丢失30%",
+        "denominator": 30,
+        "route_generated": 30,
+        "selected_object_evaluated_correct": 30,
+        "stable_correct_lock": 30,
+        "actual_full_perception_arrival": 2
+      }
+    ],
+    "sources": [
+      "statistics/realtime_faults_gpu_full_001/report.json",
+      "vehicle_execution/fault_execution_full_independent_001/report.json"
+    ],
+    "note": "每条件10个冻结正任务×3种子；10配置共享3道路家族。180次均保留，179有完整结果，1次进程超时按未证实成功计入分母；其终态未知。10次到达通过保持区间审计；88例初态显式重建，不是原始观测。此批预算90秒、传感器TTL1.5秒，与主对比不同，不能直接拼接比较。",
+    "role": "开发证据，非新封存测试"
+  },
+  {
+    "id": "T20",
+    "title": "故障实际暴露与断流停车核验",
+    "columns": [
+      {
+        "key": "condition",
+        "label": "条件",
+        "kind": "text"
+      },
+      {
+        "key": "denominator",
+        "label": "分母",
+        "kind": "int"
+      },
+      {
+        "key": "triggered",
+        "label": "实际触发",
+        "kind": "int"
+      },
+      {
+        "key": "unknown",
+        "label": "暴露未知",
+        "kind": "int"
+      },
+      {
+        "key": "blackout_stopped",
+        "label": "断流后停车",
+        "kind": "int"
+      }
+    ],
+    "rows": [
+      {
+        "condition": "无注入基线",
+        "denominator": 30,
+        "triggered": 0,
+        "unknown": 0,
+        "blackout_stopped": null
+      },
+      {
+        "condition": "断流4秒",
+        "denominator": 30,
+        "triggered": 29,
+        "unknown": 0,
+        "blackout_stopped": 29
+      },
+      {
+        "condition": "LiDAR丢失80%",
+        "denominator": 30,
+        "triggered": 29,
+        "unknown": 1,
+        "blackout_stopped": null
+      },
+      {
+        "condition": "深度噪声0.2米",
+        "denominator": 30,
+        "triggered": 30,
+        "unknown": 0,
+        "blackout_stopped": null
+      },
+      {
+        "condition": "位姿噪声0.25米/2度",
+        "denominator": 30,
+        "triggered": 29,
+        "unknown": 0,
+        "blackout_stopped": null
+      },
+      {
+        "condition": "检测丢失30%",
+        "denominator": 30,
+        "triggered": 30,
+        "unknown": 0,
+        "blackout_stopped": null
+      }
+    ],
+    "sources": [
+      "interactive_simulation/realtime_faults_gpu_full_001/exposure_summary.json",
+      "faults/fault_event_full_independent_001/report.json",
+      "faults/fault_sensor_numeric_full_001/report.json"
+    ],
+    "note": "基线不注入故障，0触发不表示缺失数据。断流29次触发、29次停车、29次新鲜观测恢复后运动；未触发的1次不获得断流安全信用。LiDAR超时1次暴露未知。数值审计核验19212对原始/有效帧；不宣称噪声服从已验证正态分布。非断流条件停车栏不适用，以空值保留。",
+    "role": "开发证据，非新封存测试"
+  },
+  {
+    "id": "T21",
+    "title": "实际到达配对差值：无注入基线减故障",
+    "columns": [
+      {
+        "key": "condition",
+        "label": "故障条件",
+        "kind": "text"
+      },
+      {
+        "key": "difference",
+        "label": "差值/百分点",
+        "kind": "float"
+      },
+      {
+        "key": "low",
+        "label": "95%CI下限/百分点",
+        "kind": "float"
+      },
+      {
+        "key": "high",
+        "label": "95%CI上限/百分点",
+        "kind": "float"
+      },
+      {
+        "key": "denominator",
+        "label": "配对数",
+        "kind": "int"
+      }
+    ],
+    "rows": [
+      {
+        "condition": "深度噪声0.2米",
+        "difference": 3.3333333333333335,
+        "low": -6.666666666666667,
+        "high": 13.333333333333334,
+        "denominator": 30
+      },
+      {
+        "condition": "检测丢失30%",
+        "difference": 3.3333333333333335,
+        "low": 0.0,
+        "high": 10.0,
+        "denominator": 30
+      },
+      {
+        "condition": "LiDAR丢失80%",
+        "difference": 6.666666666666667,
+        "low": 0.0,
+        "high": 16.666666666666664,
+        "denominator": 30
+      },
+      {
+        "condition": "位姿噪声0.25米/2度",
+        "difference": 3.3333333333333335,
+        "low": -10.0,
+        "high": 16.666666666666664,
+        "denominator": 30
+      },
+      {
+        "condition": "断流4秒",
+        "difference": 10.0,
+        "low": 0.0,
+        "high": 20.0,
+        "denominator": 30
+      }
+    ],
+    "sources": [
+      "statistics/realtime_faults_gpu_full_001/report.json"
+    ],
+    "note": "按10配置聚类配对bootstrap，4000次、seed17；负差表示故障条件更高。所有区间包括0，不宣称到达差异显著。未作多重比较校正。真实时钟下调度及轨迹差异保留。",
+    "role": "开发证据，非新封存测试"
+  },
+  {
+    "id": "T22",
+    "title": "基础Qwen：固定输入分阶段运行时间",
+    "columns": [
+      {
+        "key": "stage",
+        "label": "阶段/运行方式",
+        "kind": "text"
+      },
+      {
+        "key": "calls",
+        "label": "调用数",
+        "kind": "int"
+      },
+      {
+        "key": "median_ms",
+        "label": "中位数/毫秒",
+        "kind": "float"
+      },
+      {
+        "key": "p95_ms",
+        "label": "P95/毫秒",
+        "kind": "float"
+      },
+      {
+        "key": "throughput",
+        "label": "成功调用/测量秒",
+        "kind": "float"
+      }
+    ],
+    "rows": [
+      {
+        "stage": "Qwen_candidate_rerank/cache_hit",
+        "calls": 24,
+        "median_ms": 0.5948825,
+        "p95_ms": 0.7290635499999998,
+        "throughput": 1636.4663618202578
+      },
+      {
+        "stage": "Qwen_candidate_rerank/cold_first_task",
+        "calls": 1,
+        "median_ms": 1941.6077650000002,
+        "p95_ms": 1941.6077650000002,
+        "throughput": 0.5150370831979032
+      },
+      {
+        "stage": "Qwen_candidate_rerank/warm_uncached",
+        "calls": 23,
+        "median_ms": 1486.780434,
+        "p95_ms": 1574.2564311999997,
+        "throughput": 0.6707661070020485
+      },
+      {
+        "stage": "Qwen_model_load/cold_process",
+        "calls": 1,
+        "median_ms": 2490.09326,
+        "p95_ms": 2490.09326,
+        "throughput": 0.401591384573283
+      },
+      {
+        "stage": "Qwen_object_attributes/cache_hit",
+        "calls": 24,
+        "median_ms": 0.41027749999999996,
+        "p95_ms": 0.6238444499999998,
+        "throughput": 2275.1875347025352
+      },
+      {
+        "stage": "Qwen_object_attributes/cold_first_task",
+        "calls": 1,
+        "median_ms": 1531.577851,
+        "p95_ms": 1531.577851,
+        "throughput": 0.6529214295878454
+      },
+      {
+        "stage": "Qwen_object_attributes/warm_uncached",
+        "calls": 23,
+        "median_ms": 921.662185,
+        "p95_ms": 1382.3518448,
+        "throughput": 0.9836123358576504
+      },
+      {
+        "stage": "Qwen_query_parse/cache_hit",
+        "calls": 24,
+        "median_ms": 0.42196300000000003,
+        "p95_ms": 0.48630299999999993,
+        "throughput": 2198.9989606981167
+      },
+      {
+        "stage": "Qwen_query_parse/cold_first_task",
+        "calls": 1,
+        "median_ms": 1434.802121,
+        "p95_ms": 1434.802121,
+        "throughput": 0.6969602186697632
+      },
+      {
+        "stage": "Qwen_query_parse/warm_uncached",
+        "calls": 23,
+        "median_ms": 1444.4905130000002,
+        "p95_ms": 1667.9575201999996,
+        "throughput": 0.6805231744937995
+      }
+    ],
+    "sources": [
+      "performance/runtime_profile_gpu_base_001/report.json"
+    ],
+    "note": "固定硬件、单CUDA进程抽样核验；峰值分配显存4711.7MiB，保留显存6286.0MiB。冷启动仅1次，不估计重复冷启动分布；warm_uncached为加载后无缓存，cache_hit为同输入复跑。吞吐仅本阶段调用数/测量总时间，不是闭环帧率。嵌套阶段时间不可相加；0.5秒抽样之间的外部GPU活动无法排除。",
+    "role": "开发证据，非新封存测试"
+  },
+  {
+    "id": "T23",
+    "title": "旧Adapter：固定输入分阶段运行时间",
+    "columns": [
+      {
+        "key": "stage",
+        "label": "阶段/运行方式",
+        "kind": "text"
+      },
+      {
+        "key": "calls",
+        "label": "调用数",
+        "kind": "int"
+      },
+      {
+        "key": "median_ms",
+        "label": "中位数/毫秒",
+        "kind": "float"
+      },
+      {
+        "key": "p95_ms",
+        "label": "P95/毫秒",
+        "kind": "float"
+      },
+      {
+        "key": "throughput",
+        "label": "成功调用/测量秒",
+        "kind": "float"
+      }
+    ],
+    "rows": [
+      {
+        "stage": "Qwen_candidate_rerank/cache_hit",
+        "calls": 24,
+        "median_ms": 0.5944725,
+        "p95_ms": 0.6879694499999999,
+        "throughput": 1657.8640990772747
+      },
+      {
+        "stage": "Qwen_candidate_rerank/cold_first_task",
+        "calls": 1,
+        "median_ms": 2963.71923,
+        "p95_ms": 2963.71923,
+        "throughput": 0.33741387843949033
+      },
+      {
+        "stage": "Qwen_candidate_rerank/warm_uncached",
+        "calls": 23,
+        "median_ms": 2527.2429070000003,
+        "p95_ms": 2695.7901706000002,
+        "throughput": 0.39227453984328187
+      },
+      {
+        "stage": "Qwen_model_load/cold_process",
+        "calls": 1,
+        "median_ms": 2789.942958,
+        "p95_ms": 2789.942958,
+        "throughput": 0.35843026723272525
+      },
+      {
+        "stage": "Qwen_object_attributes/cache_hit",
+        "calls": 24,
+        "median_ms": 0.4070575,
+        "p95_ms": 0.5714808499999998,
+        "throughput": 2320.699605838842
+      },
+      {
+        "stage": "Qwen_object_attributes/cold_first_task",
+        "calls": 1,
+        "median_ms": 1705.182063,
+        "p95_ms": 1705.182063,
+        "throughput": 0.5864476419841392
+      },
+      {
+        "stage": "Qwen_object_attributes/warm_uncached",
+        "calls": 23,
+        "median_ms": 1628.5766310000001,
+        "p95_ms": 1839.127498,
+        "throughput": 0.5997984571306574
+      },
+      {
+        "stage": "Qwen_query_parse/cache_hit",
+        "calls": 24,
+        "median_ms": 0.4102705,
+        "p95_ms": 0.47301109999999996,
+        "throughput": 2391.4879768440187
+      },
+      {
+        "stage": "Qwen_query_parse/cold_first_task",
+        "calls": 1,
+        "median_ms": 2786.7725459999997,
+        "p95_ms": 2786.7725459999997,
+        "throughput": 0.3588380405983804
+      },
+      {
+        "stage": "Qwen_query_parse/warm_uncached",
+        "calls": 23,
+        "median_ms": 2775.249832,
+        "p95_ms": 3534.7557026999993,
+        "throughput": 0.3500062579779772
+      }
+    ],
+    "sources": [
+      "performance/runtime_profile_gpu_old_001/report.json"
+    ],
+    "note": "固定硬件、单CUDA进程抽样核验；峰值分配显存4782.2MiB，保留显存6354.0MiB。冷启动仅1次，不估计重复冷启动分布；warm_uncached为加载后无缓存，cache_hit为同输入复跑。吞吐仅本阶段调用数/测量总时间，不是闭环帧率。嵌套阶段时间不可相加；0.5秒抽样之间的外部GPU活动无法排除。",
+    "role": "开发证据，非新封存测试"
+  },
+  {
+    "id": "T24",
+    "title": "新Adapter：固定输入分阶段运行时间",
+    "columns": [
+      {
+        "key": "stage",
+        "label": "阶段/运行方式",
+        "kind": "text"
+      },
+      {
+        "key": "calls",
+        "label": "调用数",
+        "kind": "int"
+      },
+      {
+        "key": "median_ms",
+        "label": "中位数/毫秒",
+        "kind": "float"
+      },
+      {
+        "key": "p95_ms",
+        "label": "P95/毫秒",
+        "kind": "float"
+      },
+      {
+        "key": "throughput",
+        "label": "成功调用/测量秒",
+        "kind": "float"
+      }
+    ],
+    "rows": [
+      {
+        "stage": "Qwen_candidate_rerank/cache_hit",
+        "calls": 24,
+        "median_ms": 0.582107,
+        "p95_ms": 0.6877040499999999,
+        "throughput": 1653.2555494966798
+      },
+      {
+        "stage": "Qwen_candidate_rerank/cold_first_task",
+        "calls": 1,
+        "median_ms": 1907.537161,
+        "p95_ms": 1907.537161,
+        "throughput": 0.5242361828881823
+      },
+      {
+        "stage": "Qwen_candidate_rerank/warm_uncached",
+        "calls": 23,
+        "median_ms": 1456.311915,
+        "p95_ms": 1519.4082982000002,
+        "throughput": 0.6844206382864818
+      },
+      {
+        "stage": "Qwen_model_load/cold_process",
+        "calls": 1,
+        "median_ms": 2528.1536290000004,
+        "p95_ms": 2528.1536290000004,
+        "throughput": 0.3955455825663354
+      },
+      {
+        "stage": "Qwen_object_attributes/cache_hit",
+        "calls": 24,
+        "median_ms": 0.438049,
+        "p95_ms": 0.6733081999999999,
+        "throughput": 2037.1191977009755
+      },
+      {
+        "stage": "Qwen_object_attributes/cold_first_task",
+        "calls": 1,
+        "median_ms": 1321.726242,
+        "p95_ms": 1321.726242,
+        "throughput": 0.7565863249312712
+      },
+      {
+        "stage": "Qwen_object_attributes/warm_uncached",
+        "calls": 23,
+        "median_ms": 1095.1980210000002,
+        "p95_ms": 1246.5488284,
+        "throughput": 0.8883688298449526
+      },
+      {
+        "stage": "Qwen_query_parse/cache_hit",
+        "calls": 24,
+        "median_ms": 0.4283585,
+        "p95_ms": 0.9867589999999992,
+        "throughput": 1893.0902521312255
+      },
+      {
+        "stage": "Qwen_query_parse/cold_first_task",
+        "calls": 1,
+        "median_ms": 1824.764494,
+        "p95_ms": 1824.764494,
+        "throughput": 0.5480159238565281
+      },
+      {
+        "stage": "Qwen_query_parse/warm_uncached",
+        "calls": 23,
+        "median_ms": 1875.012025,
+        "p95_ms": 1988.8831375,
+        "throughput": 0.5328166819080115
+      }
+    ],
+    "sources": [
+      "performance/runtime_profile_gpu_new_001/report.json"
+    ],
+    "note": "固定硬件、单CUDA进程抽样核验；峰值分配显存4715.9MiB，保留显存6306.0MiB。冷启动仅1次，不估计重复冷启动分布；warm_uncached为加载后无缓存，cache_hit为同输入复跑。吞吐仅本阶段调用数/测量总时间，不是闭环帧率。嵌套阶段时间不可相加；0.5秒抽样之间的外部GPU活动无法排除。",
+    "role": "开发证据，非新封存测试"
+  },
+  {
+    "id": "T25",
+    "title": "感知前端：固定输入分阶段运行时间",
+    "columns": [
+      {
+        "key": "stage",
+        "label": "阶段/运行方式",
+        "kind": "text"
+      },
+      {
+        "key": "calls",
+        "label": "调用数",
+        "kind": "int"
+      },
+      {
+        "key": "median_ms",
+        "label": "中位数/毫秒",
+        "kind": "float"
+      },
+      {
+        "key": "p95_ms",
+        "label": "P95/毫秒",
+        "kind": "float"
+      },
+      {
+        "key": "throughput",
+        "label": "成功调用/测量秒",
+        "kind": "float"
+      }
+    ],
+    "rows": [
+      {
+        "stage": "CLIP_preprocess_image_text/cold_first_call",
+        "calls": 1,
+        "median_ms": 79.333375,
+        "p95_ms": 79.333375,
+        "throughput": 12.605035396515023
+      },
+      {
+        "stage": "CLIP_preprocess_image_text/warm",
+        "calls": 11,
+        "median_ms": 81.412262,
+        "p95_ms": 132.977868,
+        "throughput": 11.019240519563361
+      },
+      {
+        "stage": "SAM_segmentation/cold_first_call",
+        "calls": 1,
+        "median_ms": 173.253717,
+        "p95_ms": 173.253717,
+        "throughput": 5.7718819389023555
+      },
+      {
+        "stage": "SAM_segmentation/warm",
+        "calls": 11,
+        "median_ms": 36.021034,
+        "p95_ms": 41.114384,
+        "throughput": 27.685128307394102
+      },
+      {
+        "stage": "YOLO_detection/cold_first_call",
+        "calls": 1,
+        "median_ms": 958.822813,
+        "p95_ms": 958.822813,
+        "throughput": 1.042945564541965
+      },
+      {
+        "stage": "YOLO_detection/warm",
+        "calls": 11,
+        "median_ms": 19.00843,
+        "p95_ms": 21.153941000000003,
+        "throughput": 51.70529248652203
+      },
+      {
+        "stage": "YOLO_vocabulary_setup/cold_setup",
+        "calls": 1,
+        "median_ms": 3319.762521,
+        "p95_ms": 3319.762521,
+        "throughput": 0.301226365944626
+      },
+      {
+        "stage": "frontend_model_load/cold_process",
+        "calls": 1,
+        "median_ms": 9852.066764,
+        "p95_ms": 9852.066764,
+        "throughput": 0.10150154520410434
+      },
+      {
+        "stage": "frontend_total/cold_first_frame",
+        "calls": 1,
+        "median_ms": 4565.375543,
+        "p95_ms": 4565.375543,
+        "throughput": 0.21904003089806712
+      },
+      {
+        "stage": "frontend_total/warm",
+        "calls": 11,
+        "median_ms": 180.652915,
+        "p95_ms": 251.8619445,
+        "throughput": 5.293655714168709
+      }
+    ],
+    "sources": [
+      "performance/runtime_profile_gpu_frontend_001/report.json"
+    ],
+    "note": "固定硬件、单CUDA进程抽样核验；峰值分配显存4988.4MiB，保留显存5256.0MiB。冷启动仅1次，不估计重复冷启动分布；warm_uncached为加载后无缓存，cache_hit为同输入复跑。吞吐仅本阶段调用数/测量总时间，不是闭环帧率。嵌套阶段时间不可相加；0.5秒抽样之间的外部GPU活动无法排除。",
+    "role": "开发证据，非新封存测试"
+  }
+]

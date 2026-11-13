@@ -1,0 +1,51 @@
+{
+  "generator_sha256": "0217db5d2e8ad38032642d69a97d5604a00754c9db8750e5d680197c37dc9e49",
+  "export_helper_sha256": "941c81bbc15ccd12c7b4be6ead7df682d3427e230095cf1e8b105d99d5f69bc2",
+  "tables": 3,
+  "rows": 21,
+  "sources": {
+    "statistics/semantic_ablation_combined_004/report.json": {
+      "sha256": "f738b31c525fb8238700ab01120b382dccee85655dd472ab45f56e9fe18ff689",
+      "bytes": 60768,
+      "package_path": "evidence/statistics/semantic_ablation_combined_004/report.json"
+    },
+    "statistics/semantic_ablation_combined_004/trials.csv": {
+      "sha256": "6c051b90af5839820e2790e4bc9a01223b5c51f655d634b7d432a6beb21f6e7e",
+      "bytes": 125009,
+      "package_path": "evidence/statistics/semantic_ablation_combined_004/trials.csv"
+    },
+    "statistics/realtime_three_model_full_001/trials.csv": {
+      "sha256": "8fc8372c97cf9c375201d6950723516f1d159429136b06de109d88c62d446904",
+      "bytes": 71755,
+      "package_path": "evidence/statistics/realtime_three_model_full_001/trials.csv"
+    },
+    "statistics/semantic_compatibility_evidence_check_004/report.json": {
+      "sha256": "3aa08cca0e56df7c46ad84afdaafed2ccb9b89a3a592648cbd71ee8efc89f925",
+      "bytes": 1811,
+      "package_path": "evidence/statistics/semantic_compatibility_evidence_check_004/report.json"
+    },
+    "ablations/semantic_navigation_chain_004/complete.json": {
+      "sha256": "5bcdf9af2fb78cd8c675e37c4ac6a330eb3b3227ebd6362983a9569bf6ed3e81",
+      "bytes": 975,
+      "package_path": "evidence/ablations/semantic_navigation_chain_004/complete.json"
+    },
+    "vehicle_execution/semantic_minus_execution_full_002/report.json": {
+      "sha256": "3e61c565553fb04e8da73d558b7e1d8a35af17ceb46c0da0fae28b1382af7a86",
+      "bytes": 1787,
+      "package_path": "evidence/vehicle_execution/semantic_minus_execution_full_002/report.json"
+    }
+  },
+  "output_sha256": {
+    "tables.json": "c2a91017902127ad872c005602d534cf5fb8c494bd345e18319ff4bb666dc517",
+    "sources.json": "18cd7125db0ad5a2adf1a42a36af8320278aa9d4b09436a248706fd348cd6ca8",
+    "开发实验结果表.xlsx": "840cf4232205e2e609a6abc90fdc59f78cb850254d8156c89e298c179c5a425e",
+    "开发实验结果表.docx": "0bb41cab4cc88f56d0465321ad3e057562e8065a0c1e11961c033f9ad317daab",
+    "开发实验结果表.html": "b2e626600230c9e41a98b06d2a5ea7e94866f1e6bb2f3fb5a393bd405ca8f889",
+    "browser_layout.json": "f25c4f25aa94c7d017b8deb343ea4a080904c8b97bbcc6b22627aa615dc3370d",
+    "开发实验结果表.pdf": "e98b7290fb88c65c5ef1e485788498460d3ff5844829bc5d5bfd8b47d64e7de3",
+    "README.md": "6c27bdefbdf4291f5194abc2f7c2fc684c53a889914a11606452e08734fd40cd"
+  },
+  "actual_model_calls": 0,
+  "manuscript_text_written": false,
+  "goal_complete": false
+}

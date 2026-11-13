@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "updated_utc": "2026-11-13T01:51:07.952800+00:00",
+  "archive_sha256": "53be986642a2d6e358782038a85eddd25acd1064f01b06621dcac03f62b8e9fd",
+  "files_verified": 704,
+  "evidence_references_verified": 167,
+  "business_files_unchanged": 390,
+  "original_Git_index_unchanged": true,
+  "original_processes_same": 8,
+  "semantic_minus_verified_prefix": 224,
+  "semantic_minus_reported_arrivals": 27,
+  "original_failed_partial_preserved": true,
+  "formal_GPU_faults_not_yet_executed": true,
+  "manuscript_text_written": false,
+  "goal_complete": false
+}

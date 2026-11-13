@@ -1,0 +1,148 @@
+{
+  "passed": true,
+  "source_manifest_sha256": "f96e3f5f0c38024241f310953af8d3afef22cc2a86675c8e057fa4268ec3e221",
+  "source_sha256": "091d6f49bcb66210999b0c586492d083329b318b120e195b600b1893be096051",
+  "cases": 6,
+  "all_frame_lineages_verified": 494,
+  "checks": [
+    {
+      "viewport": "desktop",
+      "run": "realtime_faults_gpu_smoke_001_baseline_config00_positive0_s17",
+      "checked_frame_positions": [
+        0,
+        155
+      ],
+      "four_outcomes_match_raw": true,
+      "GT_hidden": true
+    },
+    {
+      "viewport": "desktop",
+      "run": "realtime_faults_gpu_smoke_001_detection_dropout_30pct_config00_positive0_s17",
+      "checked_frame_positions": [
+        0,
+        7,
+        42
+      ],
+      "four_outcomes_match_raw": true,
+      "GT_hidden": true
+    },
+    {
+      "viewport": "desktop",
+      "run": "realtime_faults_gpu_smoke_001_sensor_blackout_4s_config00_positive0_s17",
+      "checked_frame_positions": [
+        0,
+        7,
+        142
+      ],
+      "four_outcomes_match_raw": true,
+      "GT_hidden": true
+    },
+    {
+      "viewport": "desktop",
+      "run": "realtime_faults_gpu_smoke_001_lidar_dropout_80pct_config00_positive0_s17",
+      "checked_frame_positions": [
+        0,
+        7,
+        77
+      ],
+      "four_outcomes_match_raw": true,
+      "GT_hidden": true
+    },
+    {
+      "viewport": "desktop",
+      "run": "realtime_faults_gpu_smoke_001_depth_noise_02m_config00_positive0_s17",
+      "checked_frame_positions": [
+        0,
+        7,
+        23
+      ],
+      "four_outcomes_match_raw": true,
+      "GT_hidden": true
+    },
+    {
+      "viewport": "desktop",
+      "run": "realtime_faults_gpu_smoke_001_pose_noise_025m_2deg_config00_positive0_s17",
+      "checked_frame_positions": [
+        0,
+        7,
+        49
+      ],
+      "four_outcomes_match_raw": true,
+      "GT_hidden": true
+    },
+    {
+      "viewport": "mobile",
+      "run": "realtime_faults_gpu_smoke_001_baseline_config00_positive0_s17",
+      "checked_frame_positions": [
+        0,
+        155
+      ],
+      "four_outcomes_match_raw": true,
+      "GT_hidden": true
+    },
+    {
+      "viewport": "mobile",
+      "run": "realtime_faults_gpu_smoke_001_detection_dropout_30pct_config00_positive0_s17",
+      "checked_frame_positions": [
+        0,
+        7,
+        42
+      ],
+      "four_outcomes_match_raw": true,
+      "GT_hidden": true
+    },
+    {
+      "viewport": "mobile",
+      "run": "realtime_faults_gpu_smoke_001_sensor_blackout_4s_config00_positive0_s17",
+      "checked_frame_positions": [
+        0,
+        7,
+        142
+      ],
+      "four_outcomes_match_raw": true,
+      "GT_hidden": true
+    },
+    {
+      "viewport": "mobile",
+      "run": "realtime_faults_gpu_smoke_001_lidar_dropout_80pct_config00_positive0_s17",
+      "checked_frame_positions": [
+        0,
+        7,
+        77
+      ],
+      "four_outcomes_match_raw": true,
+      "GT_hidden": true
+    },
+    {
+      "viewport": "mobile",
+      "run": "realtime_faults_gpu_smoke_001_depth_noise_02m_config00_positive0_s17",
+      "checked_frame_positions": [
+        0,
+        7,
+        23
+      ],
+      "four_outcomes_match_raw": true,
+      "GT_hidden": true
+    },
+    {
+      "viewport": "mobile",
+      "run": "realtime_faults_gpu_smoke_001_pose_noise_025m_2deg_config00_positive0_s17",
+      "checked_frame_positions": [
+        0,
+        7,
+        49
+      ],
+      "four_outcomes_match_raw": true,
+      "GT_hidden": true
+    }
+  ],
+  "page_errors": [],
+  "read_only_browser_requests": 127,
+  "request_methods": [
+    "GET"
+  ],
+  "actual_model_calls": 0,
+  "human_records_written": 0,
+  "new_arrivals": 0,
+  "goal_complete": false
+}

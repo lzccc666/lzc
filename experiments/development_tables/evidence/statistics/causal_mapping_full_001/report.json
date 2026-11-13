@@ -1,0 +1,1711 @@
+{
+  "scenes": 38,
+  "logs": 11,
+  "frames": 1508,
+  "real_past_lidar_frames": 1470,
+  "missing_past_lidar_frames": 38,
+  "all_frames_retained": true,
+  "methods": {
+    "one_to_one_depth_quality": {
+      "all": {
+        "true_positive": 1723,
+        "truth": 5723,
+        "predictions": 3945,
+        "duplicate_nodes": 37,
+        "identity_switches": 44,
+        "adjacent_matched_transitions": 1312,
+        "nodes_associated_with_multiple_instances": 56,
+        "matched_center_error_sum_m": 2244.4266986563994,
+        "recall": {
+          "value": 0.3010658745413245,
+          "ci95": [
+            0.2284148622782784,
+            0.35740047265009584
+          ],
+          "valid_resamples": 4000
+        },
+        "matched_prediction_precision": {
+          "value": 0.4367553865652725,
+          "ci95": [
+            0.3819226476595992,
+            0.49162234755840045
+          ],
+          "valid_resamples": 4000
+        },
+        "center_error_m_mean": {
+          "value": 1.302627219185374,
+          "ci95": [
+            1.1781253954214537,
+            1.3946953759631302
+          ],
+          "valid_resamples": 4000
+        },
+        "identity_switch_rate": {
+          "value": 0.03353658536585366,
+          "ci95": [
+            0.018478151737384322,
+            0.05960422955949992
+          ],
+          "valid_resamples": 4000
+        }
+      },
+      "real_past_lidar": {
+        "true_positive": 1723,
+        "truth": 5593,
+        "predictions": 3945,
+        "duplicate_nodes": 37,
+        "identity_switches": null,
+        "adjacent_matched_transitions": null,
+        "nodes_associated_with_multiple_instances": null,
+        "matched_center_error_sum_m": 2244.4266986564,
+        "recall": {
+          "value": 0.3080636509923118,
+          "ci95": [
+            0.23322884637070174,
+            0.3660859351698562
+          ],
+          "valid_resamples": 4000
+        },
+        "matched_prediction_precision": {
+          "value": 0.4367553865652725,
+          "ci95": [
+            0.3819226476595992,
+            0.49162234755840045
+          ],
+          "valid_resamples": 4000
+        },
+        "center_error_m_mean": {
+          "value": 1.3026272191853743,
+          "ci95": [
+            1.178125395421454,
+            1.39469537596313
+          ],
+          "valid_resamples": 4000
+        },
+        "identity_switch_rate": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        }
+      },
+      "missing_past_lidar": {
+        "true_positive": 0,
+        "truth": 130,
+        "predictions": 0,
+        "duplicate_nodes": 0,
+        "identity_switches": null,
+        "adjacent_matched_transitions": null,
+        "nodes_associated_with_multiple_instances": null,
+        "matched_center_error_sum_m": 0.0,
+        "recall": {
+          "value": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_resamples": 4000
+        },
+        "matched_prediction_precision": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "center_error_m_mean": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "identity_switch_rate": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        }
+      }
+    },
+    "one_to_one_depth_robust_motion": {
+      "all": {
+        "true_positive": 1720,
+        "truth": 5723,
+        "predictions": 3905,
+        "duplicate_nodes": 40,
+        "identity_switches": 40,
+        "adjacent_matched_transitions": 1313,
+        "nodes_associated_with_multiple_instances": 53,
+        "matched_center_error_sum_m": 2205.7325710761415,
+        "recall": {
+          "value": 0.30054167394723047,
+          "ci95": [
+            0.22977846781302136,
+            0.3551782704323631
+          ],
+          "valid_resamples": 4000
+        },
+        "matched_prediction_precision": {
+          "value": 0.44046094750320103,
+          "ci95": [
+            0.38506571045415794,
+            0.49976781040785107
+          ],
+          "valid_resamples": 4000
+        },
+        "center_error_m_mean": {
+          "value": 1.282402657602408,
+          "ci95": [
+            1.180288605522706,
+            1.3814937392521782
+          ],
+          "valid_resamples": 4000
+        },
+        "identity_switch_rate": {
+          "value": 0.030464584920030464,
+          "ci95": [
+            0.017581906729634004,
+            0.044343193666575215
+          ],
+          "valid_resamples": 4000
+        }
+      },
+      "real_past_lidar": {
+        "true_positive": 1720,
+        "truth": 5593,
+        "predictions": 3905,
+        "duplicate_nodes": 40,
+        "identity_switches": null,
+        "adjacent_matched_transitions": null,
+        "nodes_associated_with_multiple_instances": null,
+        "matched_center_error_sum_m": 2205.7325710761415,
+        "recall": {
+          "value": 0.3075272662256392,
+          "ci95": [
+            0.2349849029870988,
+            0.3639540555410316
+          ],
+          "valid_resamples": 4000
+        },
+        "matched_prediction_precision": {
+          "value": 0.44046094750320103,
+          "ci95": [
+            0.38506571045415794,
+            0.49976781040785107
+          ],
+          "valid_resamples": 4000
+        },
+        "center_error_m_mean": {
+          "value": 1.282402657602408,
+          "ci95": [
+            1.180288605522706,
+            1.3814937392521782
+          ],
+          "valid_resamples": 4000
+        },
+        "identity_switch_rate": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        }
+      },
+      "missing_past_lidar": {
+        "true_positive": 0,
+        "truth": 130,
+        "predictions": 0,
+        "duplicate_nodes": 0,
+        "identity_switches": null,
+        "adjacent_matched_transitions": null,
+        "nodes_associated_with_multiple_instances": null,
+        "matched_center_error_sum_m": 0.0,
+        "recall": {
+          "value": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_resamples": 4000
+        },
+        "matched_prediction_precision": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "center_error_m_mean": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "identity_switch_rate": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        }
+      }
+    },
+    "one_to_one_no_expiry": {
+      "all": {
+        "true_positive": 1006,
+        "truth": 5723,
+        "predictions": 6247,
+        "duplicate_nodes": 46,
+        "identity_switches": 39,
+        "adjacent_matched_transitions": 627,
+        "nodes_associated_with_multiple_instances": 55,
+        "matched_center_error_sum_m": 1706.177790689,
+        "recall": {
+          "value": 0.1757819325528569,
+          "ci95": [
+            0.12450461301301063,
+            0.21343022092296188
+          ],
+          "valid_resamples": 4000
+        },
+        "matched_prediction_precision": {
+          "value": 0.16103729790299343,
+          "ci95": [
+            0.12066625532270817,
+            0.18416447113757456
+          ],
+          "valid_resamples": 4000
+        },
+        "center_error_m_mean": {
+          "value": 1.6960017800089462,
+          "ci95": [
+            1.6205747182642332,
+            1.7539662800795652
+          ],
+          "valid_resamples": 4000
+        },
+        "identity_switch_rate": {
+          "value": 0.06220095693779904,
+          "ci95": [
+            0.02515644259031004,
+            0.0978539388464149
+          ],
+          "valid_resamples": 4000
+        }
+      },
+      "real_past_lidar": {
+        "true_positive": 1006,
+        "truth": 5593,
+        "predictions": 6247,
+        "duplicate_nodes": 46,
+        "identity_switches": null,
+        "adjacent_matched_transitions": null,
+        "nodes_associated_with_multiple_instances": null,
+        "matched_center_error_sum_m": 1706.1777906890002,
+        "recall": {
+          "value": 0.1798676917575541,
+          "ci95": [
+            0.1270200191901276,
+            0.21811113956818684
+          ],
+          "valid_resamples": 4000
+        },
+        "matched_prediction_precision": {
+          "value": 0.16103729790299343,
+          "ci95": [
+            0.12066625532270817,
+            0.18416447113757456
+          ],
+          "valid_resamples": 4000
+        },
+        "center_error_m_mean": {
+          "value": 1.6960017800089464,
+          "ci95": [
+            1.620574718264233,
+            1.7539662800795643
+          ],
+          "valid_resamples": 4000
+        },
+        "identity_switch_rate": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        }
+      },
+      "missing_past_lidar": {
+        "true_positive": 0,
+        "truth": 130,
+        "predictions": 0,
+        "duplicate_nodes": 0,
+        "identity_switches": null,
+        "adjacent_matched_transitions": null,
+        "nodes_associated_with_multiple_instances": null,
+        "matched_center_error_sum_m": 0.0,
+        "recall": {
+          "value": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_resamples": 4000
+        },
+        "matched_prediction_precision": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "center_error_m_mean": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "identity_switch_rate": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        }
+      }
+    },
+    "one_to_one_timestamp": {
+      "all": {
+        "true_positive": 953,
+        "truth": 5723,
+        "predictions": 5548,
+        "duplicate_nodes": 40,
+        "identity_switches": 31,
+        "adjacent_matched_transitions": 578,
+        "nodes_associated_with_multiple_instances": 47,
+        "matched_center_error_sum_m": 1614.3295999029694,
+        "recall": {
+          "value": 0.16652105539052944,
+          "ci95": [
+            0.12257636786375,
+            0.2013325265181379
+          ],
+          "valid_resamples": 4000
+        },
+        "matched_prediction_precision": {
+          "value": 0.17177361211247297,
+          "ci95": [
+            0.13505133949396944,
+            0.1930947987925299
+          ],
+          "valid_resamples": 4000
+        },
+        "center_error_m_mean": {
+          "value": 1.6939450156379532,
+          "ci95": [
+            1.6204542222918448,
+            1.7677212171916172
+          ],
+          "valid_resamples": 4000
+        },
+        "identity_switch_rate": {
+          "value": 0.05363321799307959,
+          "ci95": [
+            0.018760847720836762,
+            0.10306520496351351
+          ],
+          "valid_resamples": 4000
+        }
+      },
+      "real_past_lidar": {
+        "true_positive": 953,
+        "truth": 5593,
+        "predictions": 5548,
+        "duplicate_nodes": 40,
+        "identity_switches": null,
+        "adjacent_matched_transitions": null,
+        "nodes_associated_with_multiple_instances": null,
+        "matched_center_error_sum_m": 1614.3295999029694,
+        "recall": {
+          "value": 0.17039156087967103,
+          "ci95": [
+            0.12507633811556002,
+            0.20600641382293558
+          ],
+          "valid_resamples": 4000
+        },
+        "matched_prediction_precision": {
+          "value": 0.17177361211247297,
+          "ci95": [
+            0.13505133949396944,
+            0.1930947987925299
+          ],
+          "valid_resamples": 4000
+        },
+        "center_error_m_mean": {
+          "value": 1.6939450156379532,
+          "ci95": [
+            1.6204542222918445,
+            1.767721217191617
+          ],
+          "valid_resamples": 4000
+        },
+        "identity_switch_rate": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        }
+      },
+      "missing_past_lidar": {
+        "true_positive": 0,
+        "truth": 130,
+        "predictions": 0,
+        "duplicate_nodes": 0,
+        "identity_switches": null,
+        "adjacent_matched_transitions": null,
+        "nodes_associated_with_multiple_instances": null,
+        "matched_center_error_sum_m": 0.0,
+        "recall": {
+          "value": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_resamples": 4000
+        },
+        "matched_prediction_precision": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "center_error_m_mean": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "identity_switch_rate": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        }
+      }
+    },
+    "original_fusion": {
+      "all": {
+        "true_positive": 986,
+        "truth": 5723,
+        "predictions": 5980,
+        "duplicate_nodes": 34,
+        "identity_switches": 30,
+        "adjacent_matched_transitions": 615,
+        "nodes_associated_with_multiple_instances": 50,
+        "matched_center_error_sum_m": 1671.910794220709,
+        "recall": {
+          "value": 0.1722872619255635,
+          "ci95": [
+            0.12589716646845764,
+            0.20613642914813451
+          ],
+          "valid_resamples": 4000
+        },
+        "matched_prediction_precision": {
+          "value": 0.16488294314381272,
+          "ci95": [
+            0.12496135000656888,
+            0.18971867751491417
+          ],
+          "valid_resamples": 4000
+        },
+        "center_error_m_mean": {
+          "value": 1.6956498927187718,
+          "ci95": [
+            1.6238550245977466,
+            1.7666077647026033
+          ],
+          "valid_resamples": 4000
+        },
+        "identity_switch_rate": {
+          "value": 0.04878048780487805,
+          "ci95": [
+            0.013982384397609312,
+            0.08112619089113512
+          ],
+          "valid_resamples": 4000
+        }
+      },
+      "real_past_lidar": {
+        "true_positive": 986,
+        "truth": 5593,
+        "predictions": 5980,
+        "duplicate_nodes": 34,
+        "identity_switches": null,
+        "adjacent_matched_transitions": null,
+        "nodes_associated_with_multiple_instances": null,
+        "matched_center_error_sum_m": 1671.9107942207092,
+        "recall": {
+          "value": 0.1762917933130699,
+          "ci95": [
+            0.1283619909707541,
+            0.21116671163772877
+          ],
+          "valid_resamples": 4000
+        },
+        "matched_prediction_precision": {
+          "value": 0.16488294314381272,
+          "ci95": [
+            0.12496135000656888,
+            0.18971867751491417
+          ],
+          "valid_resamples": 4000
+        },
+        "center_error_m_mean": {
+          "value": 1.695649892718772,
+          "ci95": [
+            1.6238550245977466,
+            1.7666077647026028
+          ],
+          "valid_resamples": 4000
+        },
+        "identity_switch_rate": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        }
+      },
+      "missing_past_lidar": {
+        "true_positive": 0,
+        "truth": 130,
+        "predictions": 0,
+        "duplicate_nodes": 0,
+        "identity_switches": null,
+        "adjacent_matched_transitions": null,
+        "nodes_associated_with_multiple_instances": null,
+        "matched_center_error_sum_m": 0.0,
+        "recall": {
+          "value": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_resamples": 4000
+        },
+        "matched_prediction_precision": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "center_error_m_mean": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "identity_switch_rate": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        }
+      }
+    },
+    "single_frame": {
+      "all": {
+        "true_positive": 640,
+        "truth": 5723,
+        "predictions": 2769,
+        "duplicate_nodes": 15,
+        "identity_switches": 281,
+        "adjacent_matched_transitions": 281,
+        "nodes_associated_with_multiple_instances": 0,
+        "matched_center_error_sum_m": 1113.42748810919,
+        "recall": {
+          "value": 0.11182946007338808,
+          "ci95": [
+            0.07954083537417712,
+            0.13695880661690948
+          ],
+          "valid_resamples": 4000
+        },
+        "matched_prediction_precision": {
+          "value": 0.2311303719754424,
+          "ci95": [
+            0.1816922146265275,
+            0.267116930733319
+          ],
+          "valid_resamples": 4000
+        },
+        "center_error_m_mean": {
+          "value": 1.7397304501706095,
+          "ci95": [
+            1.5260641748972636,
+            1.8616261598119273
+          ],
+          "valid_resamples": 4000
+        },
+        "identity_switch_rate": {
+          "value": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "valid_resamples": 4000
+        }
+      },
+      "real_past_lidar": {
+        "true_positive": 640,
+        "truth": 5593,
+        "predictions": 2769,
+        "duplicate_nodes": 15,
+        "identity_switches": null,
+        "adjacent_matched_transitions": null,
+        "nodes_associated_with_multiple_instances": null,
+        "matched_center_error_sum_m": 1113.42748810919,
+        "recall": {
+          "value": 0.11442875022349365,
+          "ci95": [
+            0.08122800529066768,
+            0.14006092589497857
+          ],
+          "valid_resamples": 4000
+        },
+        "matched_prediction_precision": {
+          "value": 0.2311303719754424,
+          "ci95": [
+            0.1816922146265275,
+            0.267116930733319
+          ],
+          "valid_resamples": 4000
+        },
+        "center_error_m_mean": {
+          "value": 1.7397304501706095,
+          "ci95": [
+            1.5260641748972636,
+            1.8616261598119275
+          ],
+          "valid_resamples": 4000
+        },
+        "identity_switch_rate": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        }
+      },
+      "missing_past_lidar": {
+        "true_positive": 0,
+        "truth": 130,
+        "predictions": 0,
+        "duplicate_nodes": 0,
+        "identity_switches": null,
+        "adjacent_matched_transitions": null,
+        "nodes_associated_with_multiple_instances": null,
+        "matched_center_error_sum_m": 0.0,
+        "recall": {
+          "value": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_resamples": 4000
+        },
+        "matched_prediction_precision": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "center_error_m_mean": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "identity_switch_rate": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        }
+      }
+    },
+    "timestamp_only": {
+      "all": {
+        "true_positive": 983,
+        "truth": 5723,
+        "predictions": 5989,
+        "duplicate_nodes": 39,
+        "identity_switches": 32,
+        "adjacent_matched_transitions": 608,
+        "nodes_associated_with_multiple_instances": 50,
+        "matched_center_error_sum_m": 1670.1266492746295,
+        "recall": {
+          "value": 0.1717630613314695,
+          "ci95": [
+            0.12291646067843018,
+            0.20715527563526234
+          ],
+          "valid_resamples": 4000
+        },
+        "matched_prediction_precision": {
+          "value": 0.1641342461178828,
+          "ci95": [
+            0.1244499214276986,
+            0.18818698237083706
+          ],
+          "valid_resamples": 4000
+        },
+        "center_error_m_mean": {
+          "value": 1.6990098161491654,
+          "ci95": [
+            1.6246280342738106,
+            1.7620931402561766
+          ],
+          "valid_resamples": 4000
+        },
+        "identity_switch_rate": {
+          "value": 0.05263157894736842,
+          "ci95": [
+            0.014306406478214228,
+            0.08217220012239902
+          ],
+          "valid_resamples": 4000
+        }
+      },
+      "real_past_lidar": {
+        "true_positive": 983,
+        "truth": 5593,
+        "predictions": 5989,
+        "duplicate_nodes": 39,
+        "identity_switches": null,
+        "adjacent_matched_transitions": null,
+        "nodes_associated_with_multiple_instances": null,
+        "matched_center_error_sum_m": 1670.12664927463,
+        "recall": {
+          "value": 0.1757554085463973,
+          "ci95": [
+            0.12572534982852068,
+            0.21215769035667922
+          ],
+          "valid_resamples": 4000
+        },
+        "matched_prediction_precision": {
+          "value": 0.1641342461178828,
+          "ci95": [
+            0.1244499214276986,
+            0.18818698237083706
+          ],
+          "valid_resamples": 4000
+        },
+        "center_error_m_mean": {
+          "value": 1.6990098161491658,
+          "ci95": [
+            1.624628034273811,
+            1.762093140256177
+          ],
+          "valid_resamples": 4000
+        },
+        "identity_switch_rate": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        }
+      },
+      "missing_past_lidar": {
+        "true_positive": 0,
+        "truth": 130,
+        "predictions": 0,
+        "duplicate_nodes": 0,
+        "identity_switches": null,
+        "adjacent_matched_transitions": null,
+        "nodes_associated_with_multiple_instances": null,
+        "matched_center_error_sum_m": 0.0,
+        "recall": {
+          "value": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_resamples": 4000
+        },
+        "matched_prediction_precision": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "center_error_m_mean": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        },
+        "identity_switch_rate": {
+          "value": null,
+          "ci95": null,
+          "valid_resamples": 0
+        }
+      }
+    }
+  },
+  "paired_differences": [
+    {
+      "method": "one_to_one_depth_quality",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "recall",
+      "difference": 0.12877861261576098,
+      "ci95": [
+        0.08122589569599477,
+        0.18076694664279103
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "one_to_one_depth_quality",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "matched_prediction_precision",
+      "difference": 0.2718724434214598,
+      "ci95": [
+        0.22462802693699147,
+        0.32022823951382207
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "one_to_one_depth_quality",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "center_error_m_mean",
+      "difference": -0.3930226735333977,
+      "ci95": [
+        -0.5431194934061812,
+        -0.27021371370397973
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "one_to_one_depth_quality",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "identity_switch_rate",
+      "difference": -0.01524390243902439,
+      "ci95": [
+        -0.03972335647635597,
+        0.023393267713443158
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "one_to_one_depth_quality",
+      "baseline": "original_fusion",
+      "group": "real_past_lidar",
+      "metric": "recall",
+      "difference": 0.1317718576792419,
+      "ci95": [
+        0.08294981918319692,
+        0.18462136214655078
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "one_to_one_depth_quality",
+      "baseline": "original_fusion",
+      "group": "real_past_lidar",
+      "metric": "matched_prediction_precision",
+      "difference": 0.2718724434214598,
+      "ci95": [
+        0.22462802693699147,
+        0.32022823951382207
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "one_to_one_depth_quality",
+      "baseline": "original_fusion",
+      "group": "real_past_lidar",
+      "metric": "center_error_m_mean",
+      "difference": -0.3930226735333977,
+      "ci95": [
+        -0.5431194934061809,
+        -0.27021371370397973
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "one_to_one_depth_quality",
+      "baseline": "original_fusion",
+      "group": "real_past_lidar",
+      "metric": "identity_switch_rate",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_depth_quality",
+      "baseline": "original_fusion",
+      "group": "missing_past_lidar",
+      "metric": "recall",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "one_to_one_depth_quality",
+      "baseline": "original_fusion",
+      "group": "missing_past_lidar",
+      "metric": "matched_prediction_precision",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_depth_quality",
+      "baseline": "original_fusion",
+      "group": "missing_past_lidar",
+      "metric": "center_error_m_mean",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_depth_quality",
+      "baseline": "original_fusion",
+      "group": "missing_past_lidar",
+      "metric": "identity_switch_rate",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_depth_robust_motion",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "recall",
+      "difference": 0.12825441202166696,
+      "ci95": [
+        0.08187439938497022,
+        0.17851758134330264
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "one_to_one_depth_robust_motion",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "matched_prediction_precision",
+      "difference": 0.2755780043593883,
+      "ci95": [
+        0.22696800035232406,
+        0.3297506306620476
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "one_to_one_depth_robust_motion",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "center_error_m_mean",
+      "difference": -0.41324723511636385,
+      "ci95": [
+        -0.5428086376699861,
+        -0.282930542275201
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "one_to_one_depth_robust_motion",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "identity_switch_rate",
+      "difference": -0.018315902884847586,
+      "ci95": [
+        -0.04178322187480223,
+        0.008910892084479406
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "one_to_one_depth_robust_motion",
+      "baseline": "original_fusion",
+      "group": "real_past_lidar",
+      "metric": "recall",
+      "difference": 0.1312354729125693,
+      "ci95": [
+        0.08367456100029634,
+        0.18283233192233994
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "one_to_one_depth_robust_motion",
+      "baseline": "original_fusion",
+      "group": "real_past_lidar",
+      "metric": "matched_prediction_precision",
+      "difference": 0.2755780043593883,
+      "ci95": [
+        0.22696800035232406,
+        0.3297506306620476
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "one_to_one_depth_robust_motion",
+      "baseline": "original_fusion",
+      "group": "real_past_lidar",
+      "metric": "center_error_m_mean",
+      "difference": -0.4132472351163641,
+      "ci95": [
+        -0.5428086376699857,
+        -0.28293054227520076
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "one_to_one_depth_robust_motion",
+      "baseline": "original_fusion",
+      "group": "real_past_lidar",
+      "metric": "identity_switch_rate",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_depth_robust_motion",
+      "baseline": "original_fusion",
+      "group": "missing_past_lidar",
+      "metric": "recall",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "one_to_one_depth_robust_motion",
+      "baseline": "original_fusion",
+      "group": "missing_past_lidar",
+      "metric": "matched_prediction_precision",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_depth_robust_motion",
+      "baseline": "original_fusion",
+      "group": "missing_past_lidar",
+      "metric": "center_error_m_mean",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_depth_robust_motion",
+      "baseline": "original_fusion",
+      "group": "missing_past_lidar",
+      "metric": "identity_switch_rate",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_no_expiry",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "recall",
+      "difference": 0.003494670627293389,
+      "ci95": [
+        -0.0017863271274478304,
+        0.007922224673769147
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "one_to_one_no_expiry",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "matched_prediction_precision",
+      "difference": -0.00384564524081929,
+      "ci95": [
+        -0.00946067669654872,
+        -0.0007695096457206076
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "one_to_one_no_expiry",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "center_error_m_mean",
+      "difference": 0.0003518872901744352,
+      "ci95": [
+        -0.030545202976374468,
+        0.016688346152803093
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "one_to_one_no_expiry",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "identity_switch_rate",
+      "difference": 0.013420469132920991,
+      "ci95": [
+        0.008631396170131781,
+        0.021157076380956173
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "one_to_one_no_expiry",
+      "baseline": "original_fusion",
+      "group": "real_past_lidar",
+      "metric": "recall",
+      "difference": 0.0035758984444841935,
+      "ci95": [
+        -0.0018273160510502053,
+        0.008125162961817239
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "one_to_one_no_expiry",
+      "baseline": "original_fusion",
+      "group": "real_past_lidar",
+      "metric": "matched_prediction_precision",
+      "difference": -0.00384564524081929,
+      "ci95": [
+        -0.00946067669654872,
+        -0.0007695096457206076
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "one_to_one_no_expiry",
+      "baseline": "original_fusion",
+      "group": "real_past_lidar",
+      "metric": "center_error_m_mean",
+      "difference": 0.0003518872901744352,
+      "ci95": [
+        -0.030545202976374478,
+        0.016688346152802864
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "one_to_one_no_expiry",
+      "baseline": "original_fusion",
+      "group": "real_past_lidar",
+      "metric": "identity_switch_rate",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_no_expiry",
+      "baseline": "original_fusion",
+      "group": "missing_past_lidar",
+      "metric": "recall",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "one_to_one_no_expiry",
+      "baseline": "original_fusion",
+      "group": "missing_past_lidar",
+      "metric": "matched_prediction_precision",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_no_expiry",
+      "baseline": "original_fusion",
+      "group": "missing_past_lidar",
+      "metric": "center_error_m_mean",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_no_expiry",
+      "baseline": "original_fusion",
+      "group": "missing_past_lidar",
+      "metric": "identity_switch_rate",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_timestamp",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "recall",
+      "difference": -0.0057662065350340685,
+      "ci95": [
+        -0.011353894036208198,
+        0.0033772329934440718
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "one_to_one_timestamp",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "matched_prediction_precision",
+      "difference": 0.006890668968660252,
+      "ci95": [
+        0.0009598613434527912,
+        0.012540251814906088
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "one_to_one_timestamp",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "center_error_m_mean",
+      "difference": -0.0017048770808185676,
+      "ci95": [
+        -0.028512048708932813,
+        0.03362439344089476
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "one_to_one_timestamp",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "identity_switch_rate",
+      "difference": 0.004852730188201537,
+      "ci95": [
+        -0.005682119381332009,
+        0.024839389234433316
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "one_to_one_timestamp",
+      "baseline": "original_fusion",
+      "group": "real_past_lidar",
+      "metric": "recall",
+      "difference": -0.005900232433398878,
+      "ci95": [
+        -0.011645060909366423,
+        0.0034443967315815733
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "one_to_one_timestamp",
+      "baseline": "original_fusion",
+      "group": "real_past_lidar",
+      "metric": "matched_prediction_precision",
+      "difference": 0.006890668968660252,
+      "ci95": [
+        0.0009598613434527912,
+        0.012540251814906088
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "one_to_one_timestamp",
+      "baseline": "original_fusion",
+      "group": "real_past_lidar",
+      "metric": "center_error_m_mean",
+      "difference": -0.0017048770808187896,
+      "ci95": [
+        -0.02851204870893325,
+        0.03362439344089476
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "one_to_one_timestamp",
+      "baseline": "original_fusion",
+      "group": "real_past_lidar",
+      "metric": "identity_switch_rate",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_timestamp",
+      "baseline": "original_fusion",
+      "group": "missing_past_lidar",
+      "metric": "recall",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "one_to_one_timestamp",
+      "baseline": "original_fusion",
+      "group": "missing_past_lidar",
+      "metric": "matched_prediction_precision",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_timestamp",
+      "baseline": "original_fusion",
+      "group": "missing_past_lidar",
+      "metric": "center_error_m_mean",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "one_to_one_timestamp",
+      "baseline": "original_fusion",
+      "group": "missing_past_lidar",
+      "metric": "identity_switch_rate",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "single_frame",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "recall",
+      "difference": -0.06045780185217543,
+      "ci95": [
+        -0.0732143954018954,
+        -0.04266710152826531
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "single_frame",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "matched_prediction_precision",
+      "difference": 0.06624742883162968,
+      "ci95": [
+        0.04789263020309103,
+        0.08482636673896068
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "single_frame",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "center_error_m_mean",
+      "difference": 0.0440805574518377,
+      "ci95": [
+        -0.10873289372275653,
+        0.12143663662369156
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "single_frame",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "identity_switch_rate",
+      "difference": 0.9512195121951219,
+      "ci95": [
+        0.9188738091088648,
+        0.9860176156023908
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "single_frame",
+      "baseline": "original_fusion",
+      "group": "real_past_lidar",
+      "metric": "recall",
+      "difference": -0.061863043089576256,
+      "ci95": [
+        -0.07483009556265753,
+        -0.04363947052172871
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "single_frame",
+      "baseline": "original_fusion",
+      "group": "real_past_lidar",
+      "metric": "matched_prediction_precision",
+      "difference": 0.06624742883162968,
+      "ci95": [
+        0.04789263020309103,
+        0.08482636673896068
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "single_frame",
+      "baseline": "original_fusion",
+      "group": "real_past_lidar",
+      "metric": "center_error_m_mean",
+      "difference": 0.04408055745183748,
+      "ci95": [
+        -0.10873289372275653,
+        0.12143663662369177
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "single_frame",
+      "baseline": "original_fusion",
+      "group": "real_past_lidar",
+      "metric": "identity_switch_rate",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "single_frame",
+      "baseline": "original_fusion",
+      "group": "missing_past_lidar",
+      "metric": "recall",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "single_frame",
+      "baseline": "original_fusion",
+      "group": "missing_past_lidar",
+      "metric": "matched_prediction_precision",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "single_frame",
+      "baseline": "original_fusion",
+      "group": "missing_past_lidar",
+      "metric": "center_error_m_mean",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "single_frame",
+      "baseline": "original_fusion",
+      "group": "missing_past_lidar",
+      "metric": "identity_switch_rate",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "timestamp_only",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "recall",
+      "difference": -0.0005242005940939987,
+      "ci95": [
+        -0.0032906748789094864,
+        0.0013577732518669505
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "timestamp_only",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "matched_prediction_precision",
+      "difference": -0.0007486970259299175,
+      "ci95": [
+        -0.004222868044807073,
+        0.0008442720684363325
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "timestamp_only",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "center_error_m_mean",
+      "difference": 0.0033599234303935965,
+      "ci95": [
+        -0.02112062670221786,
+        0.016248881689671122
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "timestamp_only",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "identity_switch_rate",
+      "difference": 0.0038510911424903677,
+      "ci95": [
+        -0.0003819279277915817,
+        0.006624961582611238
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "timestamp_only",
+      "baseline": "original_fusion",
+      "group": "real_past_lidar",
+      "metric": "recall",
+      "difference": -0.0005363847666726151,
+      "ci95": [
+        -0.0033600986817495437,
+        0.0013879310728916155
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "timestamp_only",
+      "baseline": "original_fusion",
+      "group": "real_past_lidar",
+      "metric": "matched_prediction_precision",
+      "difference": -0.0007486970259299175,
+      "ci95": [
+        -0.004222868044807073,
+        0.0008442720684363325
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "timestamp_only",
+      "baseline": "original_fusion",
+      "group": "real_past_lidar",
+      "metric": "center_error_m_mean",
+      "difference": 0.0033599234303938186,
+      "ci95": [
+        -0.02112062670221828,
+        0.016248881689672003
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "timestamp_only",
+      "baseline": "original_fusion",
+      "group": "real_past_lidar",
+      "metric": "identity_switch_rate",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "timestamp_only",
+      "baseline": "original_fusion",
+      "group": "missing_past_lidar",
+      "metric": "recall",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "timestamp_only",
+      "baseline": "original_fusion",
+      "group": "missing_past_lidar",
+      "metric": "matched_prediction_precision",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "timestamp_only",
+      "baseline": "original_fusion",
+      "group": "missing_past_lidar",
+      "metric": "center_error_m_mean",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    },
+    {
+      "method": "timestamp_only",
+      "baseline": "original_fusion",
+      "group": "missing_past_lidar",
+      "metric": "identity_switch_rate",
+      "difference": null,
+      "ci95": null,
+      "valid_resamples": 0
+    }
+  ],
+  "source_report_sha256": {
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0012/report.json": "bcb1b06b874875812bbaed648371d2375115e7d6b8f5667af383b667148c7551",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0013/report.json": "686b224dfae40cc127ae762c59e8de584f7bc1634e8a2ba26a4844303840cd17",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0014/report.json": "73ed6a6c18e1d3a7c5a302431696f841c5768490929d110f8ed7a3943c10b318",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0015/report.json": "42260195fc04b1ccc1808d9c73b4e3e44fd458a182129867ae2008d82bb6f0ae",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0016/report.json": "eabd1796baa84985b0aea83387c15bbb8d347325098ea77063c63ad3aa9d80a9",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0019/report.json": "074650277f787d57bd4548e99c302057da947bce8a00cab39989e5cef59f2a22",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0020/report.json": "2276fb0178e791c16ab05e60f4cf4f85c11a4ecbd61ddce0c48f25909cd7925f",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0021/report.json": "785f5cfcc9a27dbd4476face28b7e5257dbb1512b8cf857d1b470d52f48855b9",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0025/report.json": "93bcd92f2a09c5e314a7fab5758222cd1fb5d319b44892edf56434a7079767fa",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0026/report.json": "5ccef30aac1ebebfc65393c786fa56e45de023689cd7268f9de9b9a354d8ee07",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0027/report.json": "4cc3a2c99a8fe8d2830528f4966c5d86a3c12cee94a84f034395a17a5bc82b4a",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0030/report.json": "0b009bd17daabd9fe4ec7590e92a17e121d7ffbffde5838ce0acfd73d97e7525",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0032/report.json": "57c6134b1bb12769d5ac249321efee2c9dc46c181954b3f022112b316f289ca7",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0035/report.json": "bab57109de5953b9700a2d2baf9c1e95440b9110a7442f4df2ecb9fecab9911d",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0038/report.json": "1985fea88ff26be224a24a85d1558fdb86913440c8f236148bb536e1bded41b7",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0039/report.json": "4150642f55d5c64457857fa19933f3cf263aa951f19f8cb9f27b8717f69cd73c",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0042/report.json": "823152d5c52250d13b01007860a26f50af0a3012372ad6169837b54db88ad403",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0043/report.json": "c14f4782dfcc9e660a8d528d211188eb5eb5e4b17e9851e62ccb795153551548",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0044/report.json": "312ed082aa41d579c0b4678bf4a316db7a0b687c824d44c5c6785593c6ffe357",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0047/report.json": "30d60591690e1c374d8e74fbf72c162475e1ec26fef9e23acbec9abf01743426",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0048/report.json": "3989f8a27177877988fd5801996518b4984e30aab099bd792725d2fb7fc8dc1c",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0049/report.json": "4b83fe63c6962d725b672bfe904ce652631d14cd1d8897d5bd136f5a3ae7641b",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0053/report.json": "7ee43730fb33d24e1bf008dfd20987b489a532897795e076110359e1f2b49fdc",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0054/report.json": "b522b7f5480f1b1a039b3775358b3d1e6cd73765ea631007b8aca03502d1d618",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0059/report.json": "377009819e0605583a414e9c031979b7ac33dac3986925d248ca4a02552b87e3",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0060/report.json": "6a783517cf48610c1e926d4c234e74a971eee1735f33ee33cf98684e87c057ac",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0075/report.json": "633684c069e25563dc97ab01ea4fec00ddd412bc7842d381d3db2c87397c6a74",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0092/report.json": "e7b619b2d3e4ea12661e2e023d1344c1e12c2c4ee5b8b41cd5a07370d1ba6c69",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0093/report.json": "28ca287ea21b82e3821d5202fbd862c544d70ac2341adb72873f4ae46fab285d",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0095/report.json": "5afda728bafd74755c909ec8c1c06e00b7fae1a81604f3770b34661995783930",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0096/report.json": "644e382e53e2659147e38acb08573993b9d4001033c56d6dc7e83af32f72a31c",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0097/report.json": "ee690c0d2ad38752ef91835e29b016342aa69d5ba00d778b3bd7a2f820b60d10",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0098/report.json": "6ebf6bf7f26983764929341cf2ec01a3f4261d1dbbdbc85baf062d1957dc1d4a",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0099/report.json": "4cd2f1d7623e5c932ca0da3893ee86e9278dd161a5b3e595cf19e3f219ad7e3d",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0102/report.json": "2cff4b716fd6207b5be93ba0449e5de36f41923fc4fd745c4f275af7caa66380",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0129/report.json": "92479b4259a1a298efaf4296306675fec8536f01d0630a1f3d1bd5a91bd0dbc3",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0135/report.json": "f7e40525e63444c9b2a9b5a005575597d0a7d40013af2680f9d7d3cd13f9c780",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0174/report.json": "6c297ea518ac3370758c2a95de98df58b00b7bc36d98ef7b6216e4100d31ea24"
+  },
+  "source_frames_sha256": {
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0012/frames.jsonl": "b1fdc42f8d0c03f08770ee359025c720d34324f4af1d6fee2dc5402ac6e224fd",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0013/frames.jsonl": "18e8912374da5dd90eca58739462df327936362fe05f197422edf996de9f66a1",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0014/frames.jsonl": "bf247aafda4eaaaba5fcd4cda92b6c73be1f4d84c5b14873c3bf9679fac3c1ad",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0015/frames.jsonl": "fef3c4c214c93b8cbb6c95a3e359592e25b6e3818edde52ed7c04054e1a06e6b",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0016/frames.jsonl": "b31f03e7e27d6eaba8e98be14b481046a45f203dc25226a8928599c46c031519",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0019/frames.jsonl": "14dbae585142256eeb601988fbcc8353670e50418ac7d88f451a5cc6e3fa7d54",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0020/frames.jsonl": "cbd4c75bf02670517381899ee6fe00654e48c7d67d3ebaaf6ae2c31d520d3b6a",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0021/frames.jsonl": "d1904b9be22b3560c318d838b984fb375f1e733910d1a771ab6b21bbe96886d9",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0025/frames.jsonl": "904806c76b1b2c094e01f79794dacf5b2facc788e6e212665273b528044d5d63",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0026/frames.jsonl": "5029459bb4550c87a66ad0dba5c757b09acc7cd4a092766f128da2a3b92898a2",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0027/frames.jsonl": "6364bd0bc4b59694f768a6b0837dd6c72d2d0991b68091a42a1b287655c7da99",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0030/frames.jsonl": "80f669cf846575b31e45549071332be09ca44ab03d8fffa1ab66c4d0505d08b8",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0032/frames.jsonl": "e58d917463f12728808c079d6810b6f7b4358cccc5cffebf2ad0175958f65ec4",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0035/frames.jsonl": "baedef906e65b183ee0d366e2ae6470e32eea3cbdef8d524e1ac641e0058b5cf",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0038/frames.jsonl": "ec3ccc301b06c7cfac5efa6e7688a0fc8007761ab0f98e8ae83882d8d6166e2b",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0039/frames.jsonl": "d05f116b7c8de8736aae0512d6c50eef63b2b48cf6cc1e619c0ca27eb01da6de",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0042/frames.jsonl": "89c98c92dace43a66d06147a81a89643c2e8d0e46441f02143ebbb7f881e0e45",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0043/frames.jsonl": "4e59b4faebfc5ac5693df64caacc78a9145dfb4d20f25d615da07aa07abb8008",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0044/frames.jsonl": "7d99271519b46334ba25296ea01137ae135739d865a24cedb6bc0f1542c25d91",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0047/frames.jsonl": "2388853c7bace00f460a0462c66a4b62631cc826580a1ca380a7f8ae58c7b3e8",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0048/frames.jsonl": "93f82423c35bc48802e7b9cd3a2d6bad875a54c468f1d355f918d80212b3cdf0",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0049/frames.jsonl": "8b324dd602f04b0f1fe3f072786273dcaa00e65ea8edf1406ad34d80497c450f",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0053/frames.jsonl": "fbd1f08d30a64b54be8ba14dd89b5935edf0d0f54a0c7a92ae43c10639ff54dd",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0054/frames.jsonl": "e3486e4c1e407c18d2f41310663146d6a56d6efa6ee6736ea1d05302c384e2a2",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0059/frames.jsonl": "beffd925290d1a2ca4e0d2b1eabaee7f0f46d02d017e3d8f36f607437bd4e608",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0060/frames.jsonl": "031063c8c920822081a39f21e61138695d674b38d51d1799630136c1f791d1ea",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0075/frames.jsonl": "60d3efc8dbafbef2b4f2e4cfe2763cca41a0a5025dac5d498f0326de7420bbcf",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0092/frames.jsonl": "13be06ed58c3119baa04235eadcb81566778a384b8cb99ef4d6b466de5a49bb6",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0093/frames.jsonl": "6e11b781012f575d89e1b2b183ed2ab85a76b17d342d60c6416fb458d8652dbf",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0095/frames.jsonl": "7d950002d1493838392510068c7d5fb25681b4c1cf36369da17e82b3aec8aa0b",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0096/frames.jsonl": "743bb98526ec0374f42b4944b8201e11a43bee3cc09c92196874c826e992fbb8",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0097/frames.jsonl": "4e5b25b326cc247d7dcfb8c6533a7e3b4bfbc023bc60161176f5ee217372df50",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0098/frames.jsonl": "b2f37a3123b8211330f2e14cc69e20c926904a3e718bffbf15be7547162f1ba9",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0099/frames.jsonl": "cd7efea14540a652e93d71c2efc35012b14e046297359683ad6392b0e8cadbb5",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0102/frames.jsonl": "4c9a1414c9987461342975777ef0d085749fe29c9afd977c63fe50197a433898",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0129/frames.jsonl": "a78b84b971771d9f68b4b7cdc5fe8ce3b50b7f967a7b2832016b626e3c3a5afb",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0135/frames.jsonl": "cee03cd03b4bd01b54cbb5c23ce556320ae56fe8032db9e4f46d70fe531545be",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0174/frames.jsonl": "5169c8c994a6a27a41179c5dfbb9328914431789edcbbc93ad70232ca94009dd"
+  },
+  "source_input_release_sha256": "f6552a7ca3f2e18dcf2867fac9b936e91980c8502fb86622202e7461c98f194f",
+  "bootstrap": {
+    "unit": "采集log",
+    "paired": true,
+    "repetitions": 4000,
+    "seed": 17
+  },
+  "actual_new_frontend_calls": 0,
+  "evaluation_limit": "官方GT沿用原sample时刻，较相机晚约33–42ms；动态误差作为时间近似单列，不称完整严格同步GT",
+  "group_identity_limit": "身份指标仅全连续序列定义，不为按深度可用性筛选后的不连续帧重算身份信用",
+  "unmatched_prediction_limit": "范围内未匹配预测含评测关联不足，不全部等同真实误检",
+  "actual_arrivals": 0,
+  "navigation_evaluated": false,
+  "independent_test": false,
+  "goal_complete": false
+}

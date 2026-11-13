@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "original_command_metadata_checked": 2308,
+  "thresholds_recomputed": 4,
+  "actual_original_RGB_checked": 1196,
+  "static_attributes_not_human_truth": true,
+  "source_file_checks": 1243,
+  "files_sha256": "c0efb613089129dff80e81518da2d566e12176c2e5b346372523cc7f41a36680",
+  "frozen_sources_unchanged": {
+    "interactive_simulation/realtime_three_model_full_001": 66,
+    "source_bundle/causal_ablations_full_001": 31,
+    "source_bundle/causal_sensitivity_full_001": 29,
+    "faults/realtime_fault_after_semantics_001": 73,
+    "performance/runtime_profile_after_faults_001": 69,
+    "vehicle_execution/independent_body_after_main_001": 4
+  },
+  "root_git_index_sha256": "bd7eef11d88c9d208692b152369d1dfbde6ba583193fd666c44e577968cc1338",
+  "actual_new_human_submissions": 0,
+  "new_qualified_labels": 0,
+  "new_model_calls": 0,
+  "method_inference_executed": false,
+  "new_test_opened": false,
+  "goal_complete": false,
+  "wall_s": 8.449234500527382,
+  "created_utc": "2026-11-12T17:01:12.966435+00:00"
+}

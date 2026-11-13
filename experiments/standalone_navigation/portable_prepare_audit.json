@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "updated_utc": "2026-11-12T22:46:33.719602+00:00",
+  "source_files_checked": 390,
+  "source_input_has_no_historical_outputs": true,
+  "source_input_has_no_git": true,
+  "original_project_outputs_required": false,
+  "source_bytes_and_modes_match": true,
+  "task_and_runner_match": true,
+  "actual_model_calls": 0,
+  "actual_navigation_execution": false,
+  "clean_OS_or_new_environment": false,
+  "prepared_manifest_sha256": "898b88c7ae692702c143775a44dac7466b5dcb6e29de81a8551e65c0cc687dcd",
+  "portable_release_sha256": "eedccf68bde715ea4ff5f5dac96c861ee921cf2b24350284562b240b5dcf1a32",
+  "goal_complete": false
+}

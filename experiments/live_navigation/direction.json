@@ -1,0 +1,1843 @@
+{
+  "status": "certificate_forward",
+  "passed": true,
+  "counts": {
+    "not_exercised_stationary": 15,
+    "certificate_forward": 52
+  },
+  "audited_intervals": 67,
+  "moving_intervals": 52,
+  "intervals": [
+    {
+      "index": 0,
+      "travel_m": 0.0,
+      "heading_change_rad": 1.942890293094024e-16,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 0.0,
+      "status": "not_exercised_stationary",
+      "moving": false,
+      "deepest_subdivision": 0,
+      "terminal_spans": 0,
+      "minimum_cosine_lower_bound": null,
+      "progress_before_min_m": 6.030205002231655,
+      "progress_before_max_m": 6.030205002231655,
+      "progress_after_min_m": 6.030205002231655,
+      "progress_after_max_m": 6.030205002231655,
+      "endpoint_progress_delta_lower_m": 0.0
+    },
+    {
+      "index": 1,
+      "travel_m": 0.0,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 0.0,
+      "status": "not_exercised_stationary",
+      "moving": false,
+      "deepest_subdivision": 0,
+      "terminal_spans": 0,
+      "minimum_cosine_lower_bound": null,
+      "progress_before_min_m": 6.030205002231655,
+      "progress_before_max_m": 6.030205002231655,
+      "progress_after_min_m": 6.030205002231655,
+      "progress_after_max_m": 6.030205002231655,
+      "endpoint_progress_delta_lower_m": 0.0
+    },
+    {
+      "index": 2,
+      "travel_m": 0.0,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 2.7755575615628914e-17,
+      "status": "not_exercised_stationary",
+      "moving": false,
+      "deepest_subdivision": 0,
+      "terminal_spans": 0,
+      "minimum_cosine_lower_bound": null,
+      "progress_before_min_m": 6.030205002231655,
+      "progress_before_max_m": 6.030205002231655,
+      "progress_after_min_m": 6.030205002231655,
+      "progress_after_max_m": 6.030205002231655,
+      "endpoint_progress_delta_lower_m": 0.0
+    },
+    {
+      "index": 3,
+      "travel_m": 0.0,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 2.7755575615628914e-17,
+      "status": "not_exercised_stationary",
+      "moving": false,
+      "deepest_subdivision": 0,
+      "terminal_spans": 0,
+      "minimum_cosine_lower_bound": null,
+      "progress_before_min_m": 6.030205002231655,
+      "progress_before_max_m": 6.030205002231655,
+      "progress_after_min_m": 6.030205002231655,
+      "progress_after_max_m": 6.030205002231655,
+      "endpoint_progress_delta_lower_m": 0.0
+    },
+    {
+      "index": 4,
+      "travel_m": 0.0,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 2.7755575615628914e-17,
+      "status": "not_exercised_stationary",
+      "moving": false,
+      "deepest_subdivision": 0,
+      "terminal_spans": 0,
+      "minimum_cosine_lower_bound": null,
+      "progress_before_min_m": 6.030205002231655,
+      "progress_before_max_m": 6.030205002231655,
+      "progress_after_min_m": 6.030205002231655,
+      "progress_after_max_m": 6.030205002231655,
+      "endpoint_progress_delta_lower_m": 0.0
+    },
+    {
+      "index": 5,
+      "travel_m": 0.0,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 2.7755575615628914e-17,
+      "status": "not_exercised_stationary",
+      "moving": false,
+      "deepest_subdivision": 0,
+      "terminal_spans": 0,
+      "minimum_cosine_lower_bound": null,
+      "progress_before_min_m": 6.030205002231655,
+      "progress_before_max_m": 6.030205002231655,
+      "progress_after_min_m": 6.030205002231655,
+      "progress_after_max_m": 6.030205002231655,
+      "endpoint_progress_delta_lower_m": 0.0
+    },
+    {
+      "index": 6,
+      "travel_m": 0.0,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 2.7755575615628914e-17,
+      "status": "not_exercised_stationary",
+      "moving": false,
+      "deepest_subdivision": 0,
+      "terminal_spans": 0,
+      "minimum_cosine_lower_bound": null,
+      "progress_before_min_m": 6.030205002231655,
+      "progress_before_max_m": 6.030205002231655,
+      "progress_after_min_m": 6.030205002231655,
+      "progress_after_max_m": 6.030205002231655,
+      "endpoint_progress_delta_lower_m": 0.0
+    },
+    {
+      "index": 7,
+      "travel_m": 0.0,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 2.7755575615628914e-17,
+      "status": "not_exercised_stationary",
+      "moving": false,
+      "deepest_subdivision": 0,
+      "terminal_spans": 0,
+      "minimum_cosine_lower_bound": null,
+      "progress_before_min_m": 6.030205002231655,
+      "progress_before_max_m": 6.030205002231655,
+      "progress_after_min_m": 6.030205002231655,
+      "progress_after_max_m": 6.030205002231655,
+      "endpoint_progress_delta_lower_m": 0.0
+    },
+    {
+      "index": 8,
+      "travel_m": 0.0,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 2.7755575615628914e-17,
+      "status": "not_exercised_stationary",
+      "moving": false,
+      "deepest_subdivision": 0,
+      "terminal_spans": 0,
+      "minimum_cosine_lower_bound": null,
+      "progress_before_min_m": 6.030205002231655,
+      "progress_before_max_m": 6.030205002231655,
+      "progress_after_min_m": 6.030205002231655,
+      "progress_after_max_m": 6.030205002231655,
+      "endpoint_progress_delta_lower_m": 0.0
+    },
+    {
+      "index": 9,
+      "travel_m": 0.0,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 2.7755575615628914e-17,
+      "status": "not_exercised_stationary",
+      "moving": false,
+      "deepest_subdivision": 0,
+      "terminal_spans": 0,
+      "minimum_cosine_lower_bound": null,
+      "progress_before_min_m": 6.030205002231655,
+      "progress_before_max_m": 6.030205002231655,
+      "progress_after_min_m": 6.030205002231655,
+      "progress_after_max_m": 6.030205002231655,
+      "endpoint_progress_delta_lower_m": 0.0
+    },
+    {
+      "index": 10,
+      "travel_m": 0.0,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 2.7755575615628914e-17,
+      "status": "not_exercised_stationary",
+      "moving": false,
+      "deepest_subdivision": 0,
+      "terminal_spans": 0,
+      "minimum_cosine_lower_bound": null,
+      "progress_before_min_m": 6.030205002231655,
+      "progress_before_max_m": 6.030205002231655,
+      "progress_after_min_m": 6.030205002231655,
+      "progress_after_max_m": 6.030205002231655,
+      "endpoint_progress_delta_lower_m": 0.0
+    },
+    {
+      "index": 11,
+      "travel_m": 0.0,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 8.326672684688674e-17,
+      "status": "not_exercised_stationary",
+      "moving": false,
+      "deepest_subdivision": 0,
+      "terminal_spans": 0,
+      "minimum_cosine_lower_bound": null,
+      "progress_before_min_m": 6.030205002231655,
+      "progress_before_max_m": 6.030205002231655,
+      "progress_after_min_m": 6.030205002231655,
+      "progress_after_max_m": 6.030205002231655,
+      "endpoint_progress_delta_lower_m": 0.0
+    },
+    {
+      "index": 12,
+      "travel_m": 0.0,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 8.326672684688674e-17,
+      "status": "not_exercised_stationary",
+      "moving": false,
+      "deepest_subdivision": 0,
+      "terminal_spans": 0,
+      "minimum_cosine_lower_bound": null,
+      "progress_before_min_m": 6.030205002231655,
+      "progress_before_max_m": 6.030205002231655,
+      "progress_after_min_m": 6.030205002231655,
+      "progress_after_max_m": 6.030205002231655,
+      "endpoint_progress_delta_lower_m": 0.0
+    },
+    {
+      "index": 13,
+      "travel_m": 0.0,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 8.326672684688674e-17,
+      "status": "not_exercised_stationary",
+      "moving": false,
+      "deepest_subdivision": 0,
+      "terminal_spans": 0,
+      "minimum_cosine_lower_bound": null,
+      "progress_before_min_m": 6.030205002231655,
+      "progress_before_max_m": 6.030205002231655,
+      "progress_after_min_m": 6.030205002231655,
+      "progress_after_max_m": 6.030205002231655,
+      "endpoint_progress_delta_lower_m": 0.0
+    },
+    {
+      "index": 14,
+      "travel_m": 0.0,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 8.326672684688674e-17,
+      "status": "not_exercised_stationary",
+      "moving": false,
+      "deepest_subdivision": 0,
+      "terminal_spans": 0,
+      "minimum_cosine_lower_bound": null,
+      "progress_before_min_m": 6.030205002231655,
+      "progress_before_max_m": 6.030205002231655,
+      "progress_after_min_m": 6.030205002231655,
+      "progress_after_max_m": 6.030205002231655,
+      "endpoint_progress_delta_lower_m": 0.0
+    },
+    {
+      "index": 15,
+      "travel_m": 0.005000000000000001,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 8.326672684688674e-17,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            30
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 6.030205002231655,
+      "progress_before_max_m": 6.030205002231655,
+      "progress_after_min_m": 6.03520494672109,
+      "progress_after_max_m": 6.03520494672109,
+      "endpoint_progress_delta_lower_m": 0.00499994448943486
+    },
+    {
+      "index": 16,
+      "travel_m": 0.015000000000000003,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 8.326672684688674e-17,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            30
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 6.03520494672109,
+      "progress_before_max_m": 6.03520494672109,
+      "progress_after_min_m": 6.050204780189395,
+      "progress_after_max_m": 6.050204780189395,
+      "endpoint_progress_delta_lower_m": 0.01499983346830458
+    },
+    {
+      "index": 17,
+      "travel_m": 0.025,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 8.326672684688674e-17,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            30
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 6.050204780189395,
+      "progress_before_max_m": 6.050204780189395,
+      "progress_after_min_m": 6.075204502636568,
+      "progress_after_max_m": 6.075204502636568,
+      "endpoint_progress_delta_lower_m": 0.02499972244717341
+    },
+    {
+      "index": 18,
+      "travel_m": 0.035,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 8.326672684688674e-17,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            30
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 6.075204502636568,
+      "progress_before_max_m": 6.075204502636568,
+      "progress_after_min_m": 6.110204114062611,
+      "progress_after_max_m": 6.110204114062611,
+      "endpoint_progress_delta_lower_m": 0.03499961142604313
+    },
+    {
+      "index": 19,
+      "travel_m": 0.045000000000000005,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 1.3877787807814457e-16,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            30
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 6.110204114062611,
+      "progress_before_max_m": 6.110204114062611,
+      "progress_after_min_m": 6.155203614467524,
+      "progress_after_max_m": 6.155203614467524,
+      "endpoint_progress_delta_lower_m": 0.04499950040491285
+    },
+    {
+      "index": 20,
+      "travel_m": 0.05500000000000001,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 8.326672684688674e-17,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            30,
+            31
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 6.155203614467524,
+      "progress_before_max_m": 6.155203614467524,
+      "progress_after_min_m": 6.210203003851306,
+      "progress_after_max_m": 6.210203003851306,
+      "endpoint_progress_delta_lower_m": 0.05499938938378168
+    },
+    {
+      "index": 21,
+      "travel_m": 0.06499999999999999,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 8.326672684688674e-17,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            30,
+            31
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 6.210203003851306,
+      "progress_before_max_m": 6.210203003851306,
+      "progress_after_min_m": 6.275202282213958,
+      "progress_after_max_m": 6.275202282213958,
+      "endpoint_progress_delta_lower_m": 0.06499927836265229
+    },
+    {
+      "index": 22,
+      "travel_m": 0.0745,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 8.326672684688674e-17,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            31,
+            32
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 6.275202282213958,
+      "progress_before_max_m": 6.275202282213958,
+      "progress_after_min_m": 6.349701455106536,
+      "progress_after_max_m": 6.349701455106536,
+      "endpoint_progress_delta_lower_m": 0.0744991728925779
+    },
+    {
+      "index": 23,
+      "travel_m": 0.08282500000000001,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 8.326672684688674e-17,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            31,
+            32
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 6.349701455106536,
+      "progress_before_max_m": 6.349701455106536,
+      "progress_after_min_m": 6.4325255355740225,
+      "progress_after_max_m": 6.4325255355740225,
+      "endpoint_progress_delta_lower_m": 0.08282408046748646
+    },
+    {
+      "index": 24,
+      "travel_m": 0.08990125,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 8.326672684688674e-17,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            31,
+            32
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 6.4325255355740225,
+      "progress_before_max_m": 6.4325255355740225,
+      "progress_after_min_m": 6.522425787480182,
+      "progress_after_max_m": 6.522425787480182,
+      "endpoint_progress_delta_lower_m": 0.08990025190615913
+    },
+    {
+      "index": 25,
+      "travel_m": 0.09591606250000001,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 8.326672684688674e-17,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            32,
+            33
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 6.522425787480182,
+      "progress_before_max_m": 6.522425787480182,
+      "progress_after_min_m": 6.618340785109212,
+      "progress_after_max_m": 6.618340785109212,
+      "endpoint_progress_delta_lower_m": 0.09591499762903055
+    },
+    {
+      "index": 26,
+      "travel_m": 0.101028653125,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 8.326672684688674e-17,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            32,
+            33
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 6.618340785109212,
+      "progress_before_max_m": 6.618340785109212,
+      "progress_after_min_m": 6.719368316602684,
+      "progress_after_max_m": 6.719368316602684,
+      "endpoint_progress_delta_lower_m": 0.10102753149347166
+    },
+    {
+      "index": 27,
+      "travel_m": 0.10537435515625,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 8.326672684688674e-17,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            33,
+            34
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 6.719368316602684,
+      "progress_before_max_m": 6.719368316602684,
+      "progress_after_min_m": 6.82474150188093,
+      "progress_after_max_m": 6.82474150188093,
+      "endpoint_progress_delta_lower_m": 0.10537318527824624
+    },
+    {
+      "index": 28,
+      "travel_m": 0.10906820188281251,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 8.326672684688674e-17,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            33,
+            34,
+            35
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 6.82474150188093,
+      "progress_before_max_m": 6.82474150188093,
+      "progress_after_min_m": 6.933808492876235,
+      "progress_after_max_m": 6.933808492876235,
+      "endpoint_progress_delta_lower_m": 0.10906699099530481
+    },
+    {
+      "index": 29,
+      "travel_m": 0.11220797160039063,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 8.326672684688674e-17,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            34,
+            35
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 6.933808492876235,
+      "progress_before_max_m": 6.933808492876235,
+      "progress_after_min_m": 7.04601521873104,
+      "progress_after_max_m": 7.04601521873104,
+      "endpoint_progress_delta_lower_m": 0.11220672585480518
+    },
+    {
+      "index": 30,
+      "travel_m": 0.11487677586033203,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 8.326672684688674e-17,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            34,
+            35,
+            36
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 7.04601521873104,
+      "progress_before_max_m": 7.04601521873104,
+      "progress_after_min_m": 7.160890719216419,
+      "progress_after_max_m": 7.160890719216419,
+      "endpoint_progress_delta_lower_m": 0.11487550048537898
+    },
+    {
+      "index": 31,
+      "travel_m": 0.11714525948128221,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 8.326672684688674e-17,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            35,
+            36
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 7.160890719216419,
+      "progress_before_max_m": 7.160890719216419,
+      "progress_after_min_m": 7.278034678137788,
+      "progress_after_max_m": 7.278034678137788,
+      "endpoint_progress_delta_lower_m": 0.11714395892136853
+    },
+    {
+      "index": 32,
+      "travel_m": 0.11907347055908989,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 8.326672684688674e-17,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            36,
+            37
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 7.278034678137788,
+      "progress_before_max_m": 7.278034678137788,
+      "progress_after_min_m": 7.397106826729745,
+      "progress_after_max_m": 7.397106826729745,
+      "endpoint_progress_delta_lower_m": 0.11907214859195747
+    },
+    {
+      "index": 33,
+      "travel_m": 0.1207124499752264,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 8.326672684688674e-17,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            36,
+            37
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 7.397106826729745,
+      "progress_before_max_m": 7.397106826729745,
+      "progress_after_min_m": 7.5178179365417055,
+      "progress_after_max_m": 7.5178179365417055,
+      "endpoint_progress_delta_lower_m": 0.12071110981196043
+    },
+    {
+      "index": 34,
+      "travel_m": 0.12210558247894246,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 8.326672684688674e-17,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            37,
+            38
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 7.5178179365417055,
+      "progress_before_max_m": 7.5178179365417055,
+      "progress_after_min_m": 7.639922163390667,
+      "progress_after_max_m": 7.639922163390667,
+      "endpoint_progress_delta_lower_m": 0.12210422684896116
+    },
+    {
+      "index": 35,
+      "travel_m": 0.12328974510710107,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 8.326672684688674e-17,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            37,
+            38,
+            39
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 7.639922163390667,
+      "progress_before_max_m": 7.639922163390667,
+      "progress_after_min_m": 7.763210539721079,
+      "progress_after_max_m": 7.763210539721079,
+      "endpoint_progress_delta_lower_m": 0.12328837633041267
+    },
+    {
+      "index": 36,
+      "travel_m": 0.12429628334103593,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 8.326672684688674e-17,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            38,
+            39
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 7.763210539721079,
+      "progress_before_max_m": 7.763210539721079,
+      "progress_after_min_m": 7.887505443110726,
+      "progress_after_max_m": 7.887505443110726,
+      "endpoint_progress_delta_lower_m": 0.12429490338964655
+    },
+    {
+      "index": 37,
+      "travel_m": 0.12515184083988054,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 8.326672684688674e-17,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            39,
+            40
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 7.887505443110726,
+      "progress_before_max_m": 7.887505443110726,
+      "progress_after_min_m": 8.012655894500721,
+      "progress_after_max_m": 8.012655894500721,
+      "endpoint_progress_delta_lower_m": 0.12515045138999525
+    },
+    {
+      "index": 38,
+      "travel_m": 0.12587906471389845,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 8.326672684688674e-17,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            39,
+            40,
+            41
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 8.012655894500721,
+      "progress_before_max_m": 8.012655894500721,
+      "progress_after_min_m": 8.138533561691013,
+      "progress_after_max_m": 8.138533561691013,
+      "endpoint_progress_delta_lower_m": 0.12587766719029148
+    },
+    {
+      "index": 39,
+      "travel_m": 0.12649720500681366,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 3.608224830031759e-16,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            40,
+            41
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 8.138533561691013,
+      "progress_before_max_m": 8.138533561691013,
+      "progress_after_min_m": 8.265029362311555,
+      "progress_after_max_m": 8.265029362311555,
+      "endpoint_progress_delta_lower_m": 0.12649580062054255
+    },
+    {
+      "index": 40,
+      "travel_m": 0.1270226242557916,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 3.608224830031759e-16,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            40,
+            41,
+            42
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 8.265029362311555,
+      "progress_before_max_m": 8.265029362311555,
+      "progress_after_min_m": 8.392050576347811,
+      "progress_after_max_m": 8.392050576347811,
+      "endpoint_progress_delta_lower_m": 0.12702121403625632
+    },
+    {
+      "index": 41,
+      "travel_m": 0.12746923061742285,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 3.608224830031759e-16,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            41,
+            42
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 8.392050576347811,
+      "progress_before_max_m": 8.392050576347811,
+      "progress_after_min_m": 8.519518391787427,
+      "progress_after_max_m": 8.519518391787427,
+      "endpoint_progress_delta_lower_m": 0.1274678154396156
+    },
+    {
+      "index": 42,
+      "travel_m": 0.12784884602480942,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 3.608224830031759e-16,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            42,
+            43
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 8.519518391787427,
+      "progress_before_max_m": 8.519518391787427,
+      "progress_after_min_m": 8.647365818419894,
+      "progress_after_max_m": 8.647365818419894,
+      "endpoint_progress_delta_lower_m": 0.12784742663246718
+    },
+    {
+      "index": 43,
+      "travel_m": 0.128171519121088,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 3.608224830031759e-16,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            42,
+            43,
+            44
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 8.647365818419894,
+      "progress_before_max_m": 8.647365818419894,
+      "progress_after_min_m": 8.775535914566287,
+      "progress_after_max_m": 8.775535914566287,
+      "endpoint_progress_delta_lower_m": 0.12817009614639296
+    },
+    {
+      "index": 44,
+      "travel_m": 0.12844579125292485,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 3.608224830031759e-16,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            43,
+            44
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 8.775535914566287,
+      "progress_before_max_m": 8.775535914566287,
+      "progress_after_min_m": 8.903980279799516,
+      "progress_after_max_m": 8.903980279799516,
+      "endpoint_progress_delta_lower_m": 0.12844436523322855
+    },
+    {
+      "index": 45,
+      "travel_m": 0.12867892256498611,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 3.608224830031759e-16,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            44,
+            45
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 8.903980279799516,
+      "progress_before_max_m": 8.903980279799516,
+      "progress_after_min_m": 9.032657773756558,
+      "progress_after_max_m": 9.032657773756558,
+      "endpoint_progress_delta_lower_m": 0.1286774939570421
+    },
+    {
+      "index": 46,
+      "travel_m": 0.12887708418023822,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 3.608224830031759e-16,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            44,
+            45,
+            46
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 9.032657773756558,
+      "progress_before_max_m": 9.032657773756558,
+      "progress_after_min_m": 9.161533427128838,
+      "progress_after_max_m": 9.161533427128838,
+      "endpoint_progress_delta_lower_m": 0.12887565337227969
+    },
+    {
+      "index": 47,
+      "travel_m": 0.12904552155320248,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 3.608224830031759e-16,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            45,
+            46
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 9.161533427128838,
+      "progress_before_max_m": 9.161533427128838,
+      "progress_after_min_m": 9.29057751600407,
+      "progress_after_max_m": 9.29057751600407,
+      "endpoint_progress_delta_lower_m": 0.1290440888752329
+    },
+    {
+      "index": 48,
+      "travel_m": 0.1291886933202221,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 3.608224830031759e-16,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            46,
+            47
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 9.29057751600407,
+      "progress_before_max_m": 9.29057751600407,
+      "progress_after_min_m": 9.419764775056814,
+      "progress_after_max_m": 9.419764775056814,
+      "endpoint_progress_delta_lower_m": 0.12918725905274364
+    },
+    {
+      "index": 49,
+      "travel_m": 0.1293103893221888,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 3.608224830031759e-16,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            46,
+            47,
+            48
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 9.419764775056814,
+      "progress_before_max_m": 9.419764775056814,
+      "progress_after_min_m": 9.549073728760442,
+      "progress_after_max_m": 9.549073728760442,
+      "endpoint_progress_delta_lower_m": 0.12930895370362805
+    },
+    {
+      "index": 50,
+      "travel_m": 0.12941383092386047,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 3.608224830031759e-16,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            47,
+            48
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 9.549073728760442,
+      "progress_before_max_m": 9.549073728760442,
+      "progress_after_min_m": 9.678486122917322,
+      "progress_after_max_m": 9.678486122917322,
+      "endpoint_progress_delta_lower_m": 0.12941239415687988
+    },
+    {
+      "index": 51,
+      "travel_m": 0.12950175628528138,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 3.608224830031759e-16,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            48,
+            49
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 9.678486122917322,
+      "progress_before_max_m": 9.678486122917322,
+      "progress_after_min_m": 9.807986441459464,
+      "progress_after_max_m": 9.807986441459464,
+      "endpoint_progress_delta_lower_m": 0.12950031854214217
+    },
+    {
+      "index": 52,
+      "travel_m": 0.12957649284248918,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 3.608224830031759e-16,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            48,
+            49,
+            50
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 9.807986441459464,
+      "progress_before_max_m": 9.807986441459464,
+      "progress_after_min_m": 9.937561495729081,
+      "progress_after_max_m": 9.937561495729081,
+      "endpoint_progress_delta_lower_m": 0.12957505426961724
+    },
+    {
+      "index": 53,
+      "travel_m": 0.12964001891611582,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 3.608224830031759e-16,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            49,
+            50
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 9.937561495729081,
+      "progress_before_max_m": 9.937561495729081,
+      "progress_after_min_m": 10.067200075367051,
+      "progress_after_max_m": 10.067200075367051,
+      "endpoint_progress_delta_lower_m": 0.12963857963796954
+    },
+    {
+      "index": 54,
+      "travel_m": 0.12969401607869843,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 3.608224830031759e-16,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            49,
+            50,
+            51
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 10.067200075367051,
+      "progress_before_max_m": 10.067200075367051,
+      "progress_after_min_m": 10.19689265156812,
+      "progress_after_max_m": 10.19689265156812,
+      "endpoint_progress_delta_lower_m": 0.12969257620106944
+    },
+    {
+      "index": 55,
+      "travel_m": 0.12973991366689366,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 3.608224830031759e-16,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            50,
+            51
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 10.19689265156812,
+      "progress_before_max_m": 10.19689265156812,
+      "progress_after_min_m": 10.326631124847825,
+      "progress_after_max_m": 10.326631124847825,
+      "endpoint_progress_delta_lower_m": 0.1297384732797049
+    },
+    {
+      "index": 56,
+      "travel_m": 0.12977892661685964,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 3.608224830031759e-16,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            51,
+            52
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 10.326631124847825,
+      "progress_before_max_m": 10.326631124847825,
+      "progress_after_min_m": 10.45640861064437,
+      "progress_after_max_m": 10.45640861064437,
+      "endpoint_progress_delta_lower_m": 0.12977748579654502
+    },
+    {
+      "index": 57,
+      "travel_m": 0.1298120876243307,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 3.608224830031759e-16,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            51,
+            52,
+            53
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 10.45640861064437,
+      "progress_before_max_m": 10.45640861064437,
+      "progress_after_min_m": 10.586219257080229,
+      "progress_after_max_m": 10.586219257080229,
+      "endpoint_progress_delta_lower_m": 0.1298106464358586
+    },
+    {
+      "index": 58,
+      "travel_m": 0.12984027448068108,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 3.608224830031759e-16,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            52,
+            53
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 10.586219257080229,
+      "progress_before_max_m": 10.586219257080229,
+      "progress_after_min_m": 10.716058090059505,
+      "progress_after_max_m": 10.716058090059505,
+      "endpoint_progress_delta_lower_m": 0.12983883297927612
+    },
+    {
+      "index": 59,
+      "travel_m": 0.12986423330857894,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 3.608224830031759e-16,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            53,
+            54
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 10.716058090059505,
+      "progress_before_max_m": 10.716058090059505,
+      "progress_after_min_m": 10.845920881600685,
+      "progress_after_max_m": 10.845920881600685,
+      "endpoint_progress_delta_lower_m": 0.1298627915411803
+    },
+    {
+      "index": 60,
+      "travel_m": 0.11987524141869416,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 3.608224830031759e-16,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            53,
+            54,
+            55
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 10.845920881600685,
+      "progress_before_max_m": 10.845920881600685,
+      "progress_after_min_m": 10.965794792150897,
+      "progress_after_max_m": 10.965794792150897,
+      "endpoint_progress_delta_lower_m": 0.11987391055021135
+    },
+    {
+      "index": 61,
+      "travel_m": 0.09987524141869414,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 3.608224830031759e-16,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            54,
+            55
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 10.965794792150897,
+      "progress_before_max_m": 10.965794792150897,
+      "progress_after_min_m": 11.06566892474337,
+      "progress_after_max_m": 11.06566892474337,
+      "endpoint_progress_delta_lower_m": 0.09987413259247369
+    },
+    {
+      "index": 62,
+      "travel_m": 0.07987524141869415,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 3.608224830031759e-16,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            55
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 11.06566892474337,
+      "progress_before_max_m": 11.06566892474337,
+      "progress_after_min_m": 11.145543279378103,
+      "progress_after_max_m": 11.145543279378103,
+      "endpoint_progress_delta_lower_m": 0.07987435463473247
+    },
+    {
+      "index": 63,
+      "travel_m": 0.05987524141869415,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 3.608224830031759e-16,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            55,
+            56
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 11.145543279378103,
+      "progress_before_max_m": 11.145543279378103,
+      "progress_after_min_m": 11.205417856055098,
+      "progress_after_max_m": 11.205417856055098,
+      "endpoint_progress_delta_lower_m": 0.059874576676994806
+    },
+    {
+      "index": 64,
+      "travel_m": 0.03987524141869414,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 3.608224830031759e-16,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            55,
+            56
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 11.205417856055098,
+      "progress_before_max_m": 11.205417856055098,
+      "progress_after_min_m": 11.245292654774355,
+      "progress_after_max_m": 11.245292654774355,
+      "endpoint_progress_delta_lower_m": 0.03987479871925714
+    },
+    {
+      "index": 65,
+      "travel_m": 0.019875241418694144,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 3.608224830031759e-16,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            56
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 11.245292654774355,
+      "progress_before_max_m": 11.245292654774355,
+      "progress_after_min_m": 11.26516767553587,
+      "progress_after_max_m": 11.26516767553587,
+      "endpoint_progress_delta_lower_m": 0.019875020761515927
+    },
+    {
+      "index": 66,
+      "travel_m": 0.004937620709347071,
+      "heading_change_rad": 0.0,
+      "endpoint_arc_residual_m": 0.0,
+      "dt_residual_s": 3.608224830031759e-16,
+      "status": "certificate_forward",
+      "moving": true,
+      "spans": [
+        {
+          "fraction_start": 0.0,
+          "fraction_end": 1.0,
+          "depth": 0,
+          "possible_nearest_segments": [
+            56
+          ],
+          "cosine_lower_bound": 0.999988897886949,
+          "status": "certificate_forward"
+        }
+      ],
+      "terminal_spans": 1,
+      "deepest_subdivision": 0,
+      "minimum_cosine_lower_bound": 0.999988897886949,
+      "progress_before_min_m": 11.26516767553587,
+      "progress_before_max_m": 11.26516767553587,
+      "progress_after_min_m": 11.270105241427196,
+      "progress_after_max_m": 11.270105241427196,
+      "endpoint_progress_delta_lower_m": 0.00493756589132488
+    }
+  ],
+  "max_endpoint_arc_residual_m": 0.0,
+  "geometry": "piecewise_constant_average_speed_and_steering_saved_model_arc",
+  "position_tolerance_m": 1e-06,
+  "distance_padding_m": 1e-08,
+  "cosine_margin": 1e-10,
+  "maximum_subdivision_depth": 12,
+  "lane_containment_checked_here": false,
+  "dynamic_safety_claim": false,
+  "multi_lane_connection_accuracy": null,
+  "connection_status": "not_exercised_single_directed_lane",
+  "new_arrivals": 0,
+  "goal_complete": false
+}

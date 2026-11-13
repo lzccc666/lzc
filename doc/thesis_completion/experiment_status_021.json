@@ -1,0 +1,121 @@
+{
+  "updated_utc": "2026-11-13T04:34:30.707682+00:00",
+  "goal_complete": false,
+  "goal_status": "active",
+  "manuscript_text_deferred": true,
+  "semantic_minus_completed": 320,
+  "semantic_minus_expected": 450,
+  "semantic_minus_audited": 320,
+  "semantic_minus_remaining": 130,
+  "semantic_minus_recent_50_mean_s": 104.83191724985838,
+  "semantic_minus_estimated_remaining_hours": 3.7855970118004416,
+  "semantic_minus_arrivals": 43,
+  "semantic_minus_hold_certificates": 43,
+  "unresolved_arrivals": [],
+  "main_positive_denominator_per_method": 90,
+  "main_positive_outcomes": {
+    "base_full": {
+      "route_generated": 66,
+      "selected_object_evaluated_correct": 72,
+      "stable_correct_lock": 66,
+      "actual_full_perception_arrival": 39
+    },
+    "new_full": {
+      "route_generated": 59,
+      "selected_object_evaluated_correct": 33,
+      "stable_correct_lock": 32,
+      "actual_full_perception_arrival": 4
+    },
+    "rule": {
+      "route_generated": 83,
+      "selected_object_evaluated_correct": 84,
+      "stable_correct_lock": 82,
+      "actual_full_perception_arrival": 50
+    }
+  },
+  "original_processes_same": {
+    "268029": true,
+    "38569": true,
+    "288085": true,
+    "199838": true,
+    "211077": true,
+    "327549": true,
+    "230882": true,
+    "301702": true
+  },
+  "free_GiB": 28.15135955810547,
+  "human": {
+    "review_status": {
+      "human_submissions": 0,
+      "development_submissions": 0,
+      "natural_submissions": 0,
+      "storage": "annotation/human_submissions",
+      "natural_storage": "annotation/human_natural_submissions"
+    },
+    "natural_collection_status": {
+      "campaign": "human_natural_collection_001",
+      "human_authored_submissions": 0,
+      "qualified_test_queries": 0,
+      "qualified_count_status": "当前采集流程未完成独立标签审核，原始提交不计入有效测试",
+      "by_scene": {
+        "scene-0248": 0,
+        "scene-0324": 0,
+        "scene-0330": 0,
+        "scene-0302": 0,
+        "scene-0261": 0,
+        "scene-0394": 0,
+        "scene-0411": 0,
+        "scene-0384": 0,
+        "scene-0271": 0,
+        "scene-0351": 0,
+        "scene-0378": 0,
+        "scene-0369": 0,
+        "scene-0317": 0,
+        "scene-0424": 0,
+        "scene-0252": 0,
+        "scene-0329": 0,
+        "scene-0294": 0,
+        "scene-0260": 0,
+        "scene-0391": 0,
+        "scene-0418": 0,
+        "scene-0386": 0,
+        "scene-0273": 0,
+        "scene-0352": 0,
+        "scene-0315": 0,
+        "scene-0423": 0,
+        "scene-0253": 0,
+        "scene-0331": 0,
+        "scene-0301": 0,
+        "scene-0262": 0,
+        "scene-0393": 0
+      },
+      "scenes": 30,
+      "minimum_per_scene": 20,
+      "full_campaign_minimum": 600,
+      "original_Talk2Car_reviews_included": false,
+      "duplicate_rule": "同场景NFKC、大小写与空白归一后字面相同拒绝；未证明表达家族独立",
+      "goal_complete": false
+    }
+  },
+  "formal_GPU_fault_trials_completed": 0,
+  "formal_GPU_fault_trials_planned": 180,
+  "formal_GPU_smoke_planned": 6,
+  "independent_new_python_environment_executed": false,
+  "new_sealed_test_opened": false,
+  "current_code_pushed": false,
+  "original_Git_index_sha256": "bd7eef11d88c9d208692b152369d1dfbde6ba583193fd666c44e577968cc1338",
+  "estimated_machine_queue_remaining_hours": [
+    10,
+    14
+  ],
+  "estimate_conditions": "按当前吞吐粗估，后续故障预检通过、资源稳定；不含人工采集审核和新封存测试，不是完整Goal完成承诺",
+  "critical_next_steps": [
+    "完成原450语义缺一矩阵与750合并记录独立统计审核",
+    "6例GPU故障预检通过后执行180例正式故障；失败保留并处理实际缺项",
+    "原GPU队列终止后完成独占性能测量",
+    "释放主消融剩余存储预算后，准备新的Python环境并实际复演小任务",
+    "最终保护、回归、证据和发布检查；按已授权范围同步Git并交接",
+    "收到真实人工审核及合格查询后，冻结全部方法和标签再运行新封存测试"
+  ],
+  "optional_experiments_added": false
+}

@@ -1,0 +1,85 @@
+{
+  "machine_engineering_checks_passed": false,
+  "jobs": [
+    {
+      "label": "00_pytest",
+      "command": [
+        "/root/miniconda3/envs/conceptgraph/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests",
+        "--basetemp",
+        "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/final_engineering_checks_002/pytest_tmp",
+        "-o",
+        "cache_dir=/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/final_engineering_checks_002/pytest_cache"
+      ],
+      "returncode": 1
+    },
+    {
+      "label": "01_ruff_business",
+      "command": [
+        "/root/miniconda3/envs/conceptgraph/bin/python",
+        "-m",
+        "ruff",
+        "check",
+        "conceptgraph/completion",
+        "conceptgraph/navigation",
+        "tests"
+      ],
+      "returncode": 0
+    },
+    {
+      "label": "02_ruff_new_helpers",
+      "command": [
+        "/root/miniconda3/envs/conceptgraph/bin/python",
+        "-m",
+        "ruff",
+        "check",
+        "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/final_engineering_after_experiments_002.py",
+        "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/gpu_fault_evidence_viewer_004.py",
+        "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/gpu_fault_viewer_browser_001.py",
+        "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/gpu_fault_viewer_after_audits_002.py",
+        "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/update_verified_completion_status_023.py",
+        "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/semantic_ablation_delivery_001.py",
+        "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/semantic_ablation_office_001.py",
+        "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/fault_event_independent_audit_001.py",
+        "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/fault_sensor_numeric_audit_001.py",
+        "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/fault_execution_independent_audit_001.py",
+        "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/isolated_cpu_environment_pack_002.py",
+        "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/standalone_cpu_runner_003.py",
+        "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/prepare_isolated_environment_navigation_001.py",
+        "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/isolated_environment_navigation_audit_001.py",
+        "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/gpu_fault_unknown_browser_001.py",
+        "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/structured_artifact_validation_002.py",
+        "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/structured_validation_after_engineering_002.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "label": "03_git_diff_check",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "returncode": 0
+    }
+  ],
+  "original_source_files_verified": 390,
+  "original_source_files_unchanged": true,
+  "original_index_unchanged": true,
+  "protected_files_verified": 255170,
+  "protection_passed": true,
+  "actual_model_calls": 0,
+  "standard_test_scope": "pytest tests；不扫描第三方和输出目录以凑测试数量",
+  "ruff_scope": "completion/navigation/tests及明确列出的维护辅助代码；历史冻结脚本和未改动上游不获全库Ruff信用",
+  "structured_artifact_validation_completed": false,
+  "final_delivery_completed": false,
+  "experiment_success_not_implied": true,
+  "human_labels_not_created": true,
+  "new_test_opened": false,
+  "manuscript_text_written": false,
+  "goal_complete": false,
+  "execution_wall_s": 88.20123361237347
+}

@@ -1,0 +1,1065 @@
+{
+  "checked_utc": "2026-11-13T16:37:52.754020+00:00",
+  "passed": true,
+  "full_project_output_scope": true,
+  "input_roots": [
+    "."
+  ],
+  "files_checked": 243094,
+  "JSONL_records_checked": 2813655,
+  "errors": [],
+  "unstable_during_read": [],
+  "added_during_scan": [],
+  "removed_during_scan": [],
+  "archived_failed_payloads": [
+    {
+      "path": "faults/perceived_blockage_cpu_002/rule_blockage/independent_audit_001/barrier_sensor_and_path_details.json",
+      "sha256": "e3b95bb77d79befd71b9cd54d0494397f02c333098bd3e054434f26eb9817501",
+      "kind": "registered_failed_partial_JSON",
+      "original_path": "faults/perceived_blockage_cpu_002/rule_blockage/independent_audit_001/barrier_sensor_and_path_details.json",
+      "registry": "source_bundle/failed_json_payload_audit_002/report.json"
+    },
+    {
+      "path": "interactive_simulation/carla_range_download_001.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "interactive_simulation/realtime_fault_cpu_smoke_001_baseline/config00-positive0/seed17/perception.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "mapping_evaluation/corrected_mapping_smoke_001/scene-0038/frames.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "reproduction/isolated_cpu_executed_001/checkout/outputs/project_v2/thesis_completion_v1/interactive_simulation/live_navigation_sessions_001/standalone_config00_positive0_s17_portable_001/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "reproduction/isolated_cpu_executed_001/checkout/outputs/project_v2/thesis_completion_v1/interactive_simulation/live_navigation_sessions_001/standalone_config00_positive0_s17_portable_001/perception.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "reproduction/isolated_cpu_executed_001/checkout/outputs/project_v2/thesis_completion_v1/interactive_simulation/live_navigation_sessions_001/standalone_config00_positive0_s17_portable_001/processed_commands.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "statistics/causal_retrieval_smoke_001/report.json",
+      "sha256": "5be2124bf95e4e78e93cec08db7afcbdb9067cc52114ab7e6c423c7cf529fdf5",
+      "kind": "registered_failed_partial_JSON",
+      "original_path": "statistics/causal_retrieval_smoke_001/report.json",
+      "registry": "source_bundle/failed_json_payload_audit_002/report.json"
+    },
+    {
+      "path": "thesis/citation_primary_fetch_009/ref_038.json",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "thesis/citation_primary_fetch_009/ref_059.json",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_connection_full_001/006_scene-0013_seed17_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_connection_full_001/007_scene-0013_seed17_point_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_connection_full_001/008_scene-0013_seed29_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_connection_full_001/009_scene-0013_seed29_point_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_connection_full_001/010_scene-0013_seed43_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_connection_full_001/011_scene-0013_seed43_point_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_connection_full_001/030_scene-0019_seed17_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_connection_full_001/032_scene-0019_seed29_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_connection_full_001/034_scene-0019_seed43_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_connection_full_001/090_scene-0039_seed17_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_connection_full_001/092_scene-0039_seed29_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_connection_full_001/094_scene-0039_seed43_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_connection_full_001/102_scene-0043_seed17_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_connection_full_001/104_scene-0043_seed29_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_connection_full_001/106_scene-0043_seed43_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_connection_full_001/108_scene-0044_seed17_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_connection_full_001/110_scene-0044_seed29_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_connection_full_001/112_scene-0044_seed43_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_connection_full_001/156_scene-0075_seed17_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_connection_full_001/158_scene-0075_seed29_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_connection_full_001/160_scene-0075_seed43_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_connection_full_001/192_scene-0098_seed17_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_connection_full_001/194_scene-0098_seed29_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_connection_full_001/196_scene-0098_seed43_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_connection_smoke_001/001_scene-0013_seed17_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_001/006_scene-0013_seed17_reference_guided/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_001/007_scene-0013_seed17_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_001/008_scene-0013_seed29_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_001/009_scene-0013_seed29_reference_guided/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_001/010_scene-0013_seed43_reference_guided/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_001/011_scene-0013_seed43_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_001/031_scene-0019_seed17_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_001/032_scene-0019_seed29_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_001/035_scene-0019_seed43_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_001/091_scene-0039_seed17_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_001/092_scene-0039_seed29_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_001/095_scene-0039_seed43_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_001/103_scene-0043_seed17_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_001/104_scene-0043_seed29_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_001/107_scene-0043_seed43_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_001/108_scene-0044_seed17_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_001/111_scene-0044_seed29_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_001/112_scene-0044_seed43_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_001/156_scene-0075_seed17_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_001/159_scene-0075_seed29_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_001/160_scene-0075_seed43_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_001/192_scene-0098_seed17_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_001/195_scene-0098_seed29_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_001/196_scene-0098_seed43_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/006_scene-0013_seed17_reference_guided/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/007_scene-0013_seed17_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/008_scene-0013_seed29_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/009_scene-0013_seed29_reference_guided/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/010_scene-0013_seed43_reference_guided/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/011_scene-0013_seed43_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/012_scene-0014_seed17_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/013_scene-0014_seed17_reference_guided/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/014_scene-0014_seed29_reference_guided/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/015_scene-0014_seed29_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/016_scene-0014_seed43_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/017_scene-0014_seed43_reference_guided/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/019_scene-0015_seed17_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/020_scene-0015_seed29_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/023_scene-0015_seed43_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/024_scene-0016_seed17_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/025_scene-0016_seed17_reference_guided/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/026_scene-0016_seed29_reference_guided/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/027_scene-0016_seed29_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/028_scene-0016_seed43_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/029_scene-0016_seed43_reference_guided/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/031_scene-0019_seed17_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/032_scene-0019_seed29_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/035_scene-0019_seed43_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/043_scene-0021_seed17_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/044_scene-0021_seed29_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/047_scene-0021_seed43_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/079_scene-0035_seed17_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/080_scene-0035_seed29_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/083_scene-0035_seed43_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/091_scene-0039_seed17_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/092_scene-0039_seed29_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/095_scene-0039_seed43_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/103_scene-0043_seed17_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/104_scene-0043_seed29_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/107_scene-0043_seed43_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/108_scene-0044_seed17_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/111_scene-0044_seed29_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/112_scene-0044_seed43_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/138_scene-0054_seed17_reference_guided/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/139_scene-0054_seed17_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/140_scene-0054_seed29_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/141_scene-0054_seed29_reference_guided/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/142_scene-0054_seed43_reference_guided/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/143_scene-0054_seed43_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/156_scene-0075_seed17_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/159_scene-0075_seed29_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/160_scene-0075_seed43_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/168_scene-0093_seed17_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/171_scene-0093_seed29_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/172_scene-0093_seed43_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/175_scene-0095_seed17_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/176_scene-0095_seed29_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/179_scene-0095_seed43_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/180_scene-0096_seed17_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/183_scene-0096_seed29_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/184_scene-0096_seed43_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/187_scene-0097_seed17_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/188_scene-0097_seed29_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/191_scene-0097_seed43_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/192_scene-0098_seed17_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/195_scene-0098_seed29_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_full_002/196_scene-0098_seed43_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_smoke_001/002_scene-0013_seed17_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_smoke_001/003_scene-0013_seed17_reference_guided/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_smoke_002/002_scene-0013_seed17_hybrid_astar/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    },
+    {
+      "path": "vehicle_execution/HDmap_reference_guided_smoke_002/003_scene-0013_seed17_reference_guided/execution.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "registered_unsuccessful_HTTP_payload",
+      "original_path": "thesis/citation_primary_fetch_009/ref_065.json",
+      "registry": "thesis/citation_http_payload_type_audit_002/report.json"
+    }
+  ],
+  "failure_payloads_not_counted_as_valid_results": true,
+  "archived_copy_policy": "仅原始登记SHA和尺寸完全一致的载荷及其逐字节副本可单列；未登记错误必须失败",
+  "excluded_subtrees": [
+    "source_bundle/structured_artifact_validation_final_005",
+    "reproduction/isolated_cpu_environment_002/environment",
+    "reproduction/isolated_cpu_environment_003/environment",
+    "reproduction/isolated_cpu_environment_004/environment",
+    "source_bundle/final_tests_003/pytest_tmp",
+    "source_bundle/final_tests_003/pytest_cache",
+    "source_bundle/final_tests_003/export_tmp",
+    "source_bundle/final_tests_003/export_cache",
+    "source_bundle/final_engineering_checks_001/pytest_tmp",
+    "source_bundle/final_engineering_checks_001/pytest_cache",
+    "source_bundle/final_engineering_checks_002/pytest_tmp",
+    "source_bundle/final_engineering_checks_002/pytest_cache"
+  ],
+  "exclusion_reasons": [
+    "本检查器自身输出",
+    "隔离第三方Python依赖及其测试夹具不是项目实验结果",
+    "普通测试故意构造的临时输入与pytest缓存",
+    "Git内部元数据"
+  ],
+  "yaml_configs": [
+    {
+      "path": "conceptgraph/configs/slam_pipeline/base.yaml",
+      "sha256": "304aab5011cb40b0ade7733eb68f717321eee0fb0d5bacca36546b82018076ad",
+      "parsed": true
+    },
+    {
+      "path": "conceptgraph/dataset/dataconfigs/ai2thor/ai2thor.yaml",
+      "sha256": "c6e85b2fe73b243e07d9e7fb2eda4fbb9b5c73fb65bf479093ac92ae1204858c",
+      "parsed": true
+    },
+    {
+      "path": "conceptgraph/dataset/dataconfigs/azure/ali_kinect.yaml",
+      "sha256": "2cb80af0908564da7ac541b4c75e5daea09880774545631d494f57cd61bf3cba",
+      "parsed": true
+    },
+    {
+      "path": "conceptgraph/dataset/dataconfigs/azure/smoketest.yaml",
+      "sha256": "1518e1b1837023cb2afd7394d59d054095f1c125d733b44f12387c025c9bc1d4",
+      "parsed": true
+    },
+    {
+      "path": "conceptgraph/dataset/dataconfigs/hm3d-openeqa.yaml",
+      "sha256": "2240c03fd986e2660f019551132d934028f220ed761715d940055403a9034358",
+      "parsed": true
+    },
+    {
+      "path": "conceptgraph/dataset/dataconfigs/hm3d.yaml",
+      "sha256": "d52a1305a0a92d2861773bc6cec9340998f0fff22739d134fbaf70044d77aaf2",
+      "parsed": true
+    },
+    {
+      "path": "conceptgraph/dataset/dataconfigs/icl.yaml",
+      "sha256": "fc8d4c6ac7f0fbcc7eea06e85bcb219ae610ba28db5b7d39a9e30516dfea0519",
+      "parsed": true
+    },
+    {
+      "path": "conceptgraph/dataset/dataconfigs/multiscan.yaml",
+      "sha256": "9b4fff97676ab3dbe00a94735ca4101f2dcee3bf87bb229de32ddcb147da565e",
+      "parsed": true
+    },
+    {
+      "path": "conceptgraph/dataset/dataconfigs/realsense/manipulator_config.yaml",
+      "sha256": "41dd91e057c65a5259e12cfece78fa26e3ea56d5664fadd708f87de3ce7b0d36",
+      "parsed": true
+    },
+    {
+      "path": "conceptgraph/dataset/dataconfigs/replica/replica.yaml",
+      "sha256": "cbe326b08ef36cfc133f3b262fc00d17ba3702677dfd4e1e2ff9d3bbe94bb8f0",
+      "parsed": true
+    },
+    {
+      "path": "conceptgraph/dataset/dataconfigs/scannet/base.yaml",
+      "sha256": "f35afc60de273ca7b90e983e9210b26c0b0f6820d832b45577e7b379aec3626b",
+      "parsed": true
+    },
+    {
+      "path": "conceptgraph/hydra_configs/base_detections.yaml",
+      "sha256": "0872105ee4e6152fcec55188f5665845d5d31463ee9970771276cf69f7ce5476",
+      "parsed": true
+    },
+    {
+      "path": "conceptgraph/hydra_configs/base_mapping.yaml",
+      "sha256": "12e4216ad29eee0677f172d9a279de7bfaaa946ebc959ab1d3204031fb5621c0",
+      "parsed": true
+    },
+    {
+      "path": "conceptgraph/hydra_configs/incremental_navigation.yaml",
+      "sha256": "14551182f5f2a6efe7e3912ee33568d3650045a0feaa3337b7da5a45b155c643",
+      "parsed": true
+    },
+    {
+      "path": "conceptgraph/hydra_configs/nuscenes.yaml",
+      "sha256": "50e234ff2c3c7682a78a5dfa7a11282d268ea15fc14490485d490a57d0debc3d",
+      "parsed": true
+    },
+    {
+      "path": "conceptgraph/hydra_configs/project_v2_integration_regression.yaml",
+      "sha256": "2e9c2a8621b46a6fb849f3ba8998a28a5a7216f6561fc167c7eaca74d8ded5e6",
+      "parsed": true
+    },
+    {
+      "path": "conceptgraph/hydra_configs/qwen_semantic.yaml",
+      "sha256": "afcb6abb4f06664cae7e1144b29562c41fd79279e46024bc6efc5d769504fb22",
+      "parsed": true
+    },
+    {
+      "path": "conceptgraph/hydra_configs/replica.yaml",
+      "sha256": "9ce285f6565e549fe1213778ce4ca7bc2639d856ca902d94b6b972668f4ab313",
+      "parsed": true
+    },
+    {
+      "path": "conceptgraph/hydra_configs/sam.yaml",
+      "sha256": "9381072f341d9921169b2df08c3901a028adea7a4cced3790d6b78cdc42f754f",
+      "parsed": true
+    },
+    {
+      "path": "conceptgraph/hydra_configs/scenegraph_relations.yaml",
+      "sha256": "6174777eedc4436daac4bf7ebdbba89983752e77f619bc0d121100b7e11ed119",
+      "parsed": true
+    },
+    {
+      "path": "conceptgraph/hydra_configs/semantic_navigation.yaml",
+      "sha256": "e8ca45cdbb10507e9391c3331b6a2bd377b19a501a6e489293c842e3ad6231f1",
+      "parsed": true
+    },
+    {
+      "path": "conceptgraph/hydra_configs/streamlined_detections.yaml",
+      "sha256": "90ac2ccd86505cd81a66071fba00717e6c904acfafba9b07d0ede3836ea0671f",
+      "parsed": true
+    },
+    {
+      "path": "conceptgraph/hydra_configs/streamlined_mapping.yaml",
+      "sha256": "76237fb25765dfb257b9f4b05b278cb8d197649c936f2bb2a4265ed695146b60",
+      "parsed": true
+    },
+    {
+      "path": "conceptgraph/nuscenes/nuscenes.yaml",
+      "sha256": "3f2f5ee339ef9141d97c6b69327e8ad5ca608c5ebfcb3cef6ef0039ef77b9d28",
+      "parsed": true
+    },
+    {
+      "path": "environment.yml",
+      "sha256": "ade6ea2f1299b2299c2d1a4d63590f238b313a94e1a2bc1abcc03d772537e23b",
+      "parsed": true
+    }
+  ],
+  "yaml_scope": "checkpoint037中全部YAML配置，safe_load仅验证语法，不宣称所有运行参数有效",
+  "source_sha256": "1b95b8c87a520b2263eacc94daf4384f400cfdad386f0f08057fb1956ce1d1ea",
+  "registry_sha256": {
+    "thesis/citation_http_payload_type_audit_002/report.json": "6bcd58fb91f36e184c2011c565478df11d05dc6c95781d98e02295ce22a5c201",
+    "source_bundle/failed_json_payload_audit_002/report.json": "7a71e2e9121be2eadd01e1627f2adf393966121a810b5d3969c42cb42429628c"
+  },
+  "file_ledger_sha256": "0acb7aff6dd5125ed79c7c3a16fc658fa861e75c885df0349f6c1afc13c9875c",
+  "actual_model_calls": 0,
+  "final_delivery_completed": false,
+  "goal_complete": false,
+  "elapsed_s": 465.64426165632904
+}

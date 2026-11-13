@@ -1,0 +1,238 @@
+{
+  "updated_utc": "2026-11-12T16:16:11.040958+00:00",
+  "goal_complete": false,
+  "stage9_complete": false,
+  "stage10_complete": false,
+  "stage11_complete": false,
+  "stage12_complete": false,
+  "manuscript_work_deferred_by_user": true,
+  "new_test_opened": false,
+  "main_recorded": 340,
+  "main_expected": 450,
+  "human_records": 0,
+  "available_disk_bytes": 40880844800,
+  "items": [
+    {
+      "stage": 9,
+      "name": "任务与独立终点评价",
+      "status": "部分完成",
+      "implemented": "已实现对象身份、安全区域、航向/速度/保持时间与碰撞/车道联合判定；路线、对象、锁定、到达分开。",
+      "remaining": "新封存合法目标/可达性与关键标签仍需完整验收。",
+      "evidence": [
+        "task_protocol/protocol_v1.json",
+        "statistics/interactive_rule_full_002/report.json"
+      ]
+    },
+    {
+      "stage": 9,
+      "name": "因果建图与关系",
+      "status": "开发实验完成，封存未完成",
+      "implemented": "38场景11log1508帧、1470过去LiDAR/38缺测；七方法5723GT观测全保留；关系、动静态、门限、动态/TTL、录制故障及地图消融已完成。",
+      "remaining": "官方GT晚33–42ms的近似仍须保留；可靠人工错合并/歧义审核和新封存比较待完成。",
+      "evidence": [
+        "statistics/causal_mapping_full_001/report.json",
+        "mapping_evaluation/causal_relations_full_001/summary.json",
+        "statistics/causal_modules_full_001/report.json"
+      ]
+    },
+    {
+      "stage": 9,
+      "name": "全序列身份与返回",
+      "status": "新增开发诊断已独立核验",
+      "implemented": "532身份条件、2028返回事件、1628尾段、154逐log行、208区间均核对；深度IDF1改善，但返回保持与相邻变化差区间跨零。",
+      "remaining": "自动中心关联不是人工实例/遮挡真值；IDF1受检测覆盖影响，不宣称全部身份能力提高。",
+      "evidence": [
+        "statistics/temporal_identity_full_001/report.md",
+        "statistics/temporal_identity_full_001/audit_002/report.json"
+      ]
+    },
+    {
+      "stage": 10,
+      "name": "独立监督与三种子Adapter",
+      "status": "训练完成，下游验收未完成",
+      "implemented": "v2 2398训练/603验证；三种子各240步；base/old/new三种子共五模型各603相同输入真实CUDA公平验证；三任务冻结请求0新增调用缓存复跑。",
+      "remaining": "可靠颜色/细属性依赖真实人工；真实验证仅2log、排序含6符号bank；不能把训练/结构化得分直接当道路检索或到达收益。",
+      "evidence": [
+        "semantic_dataset/structured_supervision_002/manifest.json",
+        "statistics/fair_three_task_full_validation_001/report.json"
+      ]
+    },
+    {
+      "stage": 10,
+      "name": "语义消融",
+      "status": "排队待实际执行",
+      "implemented": "完整/关闭Qwen与缺解析/缺属性/缺重排协议已冻结；450新试验加300共享主条件，预期750条件。",
+      "remaining": "主矩阵完整结束后才执行450新试验并完整统计；共享300不增加独立试验。",
+      "evidence": [
+        "source_bundle/semantic_ablation_after_main_001.py"
+      ]
+    },
+    {
+      "stage": 11,
+      "name": "车辆规划与实际控制",
+      "status": "最低到达功能通过，整体验收未完成",
+      "implemented": "50任务×3种子×2规划器300上限执行已完成；规则全感知150次：90可达正试验68路线/90选对/79正确锁定/21到达，覆盖13正任务8配置。",
+      "remaining": "完整异步三模型对比、全部失败/拒绝统计、不可接近独立参考和新封存连续回放仍需验收；给定正确对象上限不计实际语义成绩。",
+      "evidence": [
+        "statistics/kinematic_oracle_002/report.json",
+        "statistics/interactive_rule_full_002/report.json"
+      ]
+    },
+    {
+      "stage": 11,
+      "name": "真实时钟主矩阵",
+      "status": "运行中",
+      "implemented": "冻结450次，目前保存340条；源码与任务不改。",
+      "remaining": "完整结束后统计对象/锁定/路线/到达、配置聚类区间、排队迟到过期及三模型公平性；进行中数字不作最终优劣结论。",
+      "evidence": [
+        "interactive_simulation/realtime_three_model_full_001/release.json",
+        "interactive_simulation/realtime_three_model_full_001/trial_records.jsonl"
+      ]
+    },
+    {
+      "stage": 12,
+      "name": "KITTI真实车载实验",
+      "status": "对象定位开发诊断完成",
+      "implemented": "固定64帧/33drive真实CPU前端；319GT下247→262匹配，召回77.43%→82.13%，drive配对区间支持提升；卡车误差退化保留。",
+      "remaining": "不称官方AP、完整跨帧图、KITTI导航到达或独占GPU性能；预训练重叠未知。",
+      "evidence": [
+        "statistics/kitti_object_cpu_full_001/report.json"
+      ]
+    },
+    {
+      "stage": 12,
+      "name": "感知故障",
+      "status": "CPU试跑完成，GPU正式待执行",
+      "implemented": "六CPU条件63次真实前端/2270状态，单任务单配置；4秒断流但15秒TTL未过期停车的负结果保留。另有已知路径0.3秒TTL控制功能63状态。",
+      "remaining": "等待主450和语义450结束后六GPU试跑再180正式；CPU重复不增加独立覆盖，不能替代GPU1.5秒TTL验收。",
+      "evidence": [
+        "faults/realtime_fault_cpu_smoke_002/audit_001/report.json",
+        "faults/realtime_fault_after_semantics_001/release.json"
+      ]
+    },
+    {
+      "stage": 12,
+      "name": "分阶段性能",
+      "status": "CPU试跑完成，GPU正式待执行",
+      "implemented": "12实际CPU前端，10录制观测/391状态重算；独立统计通过。三模型各72不同实际cache键截获预检，无模型/响应。",
+      "remaining": "全部前置实际进程退出且GPU空闲后才测12GPU前端、216无缓存语义+216缓存；当前预检不计推理/准确率。",
+      "evidence": [
+        "performance/runtime_profile_cpu_smoke_001/audit_001/report.json",
+        "performance/runtime_profile_after_faults_001/release.json"
+      ]
+    },
+    {
+      "stage": 12,
+      "name": "新封存测试",
+      "status": "尚未开启",
+      "implemented": "30新场景14新log1196帧已分离；1166过去扫描/30缺测已审计；600构造主查询+278挑战及203预选回放准备。",
+      "remaining": "每场景至少20有效自然分布指令/总至少400仍未满足。Talk2Car439原文只有176官方静态候选且待审核，只有3场景≥20；可靠标注、表达隔离、可达性与最终方法冻结后才开测。",
+      "evidence": [
+        "splits/split_audit_002/report.json",
+        "data_manifest/reserved_causal_inputs_full_001/audit_001/report.json"
+      ]
+    },
+    {
+      "stage": 12,
+      "name": "人工审核",
+      "status": "待真实提交验收",
+      "implemented": "版本化核验页面和入库服务就绪；当前真实记录0。",
+      "remaining": "用户已同意通过页面提交；不伪造记录，不用自动标签/浏览器测试冒充人工。现有检测表单还不覆盖无检测官方对象及完整跨帧长链。",
+      "evidence": [
+        "visualizations/causal_development_review_002/review_manifest.json"
+      ]
+    },
+    {
+      "stage": 12,
+      "name": "工程与复现",
+      "status": "阶段性通过，最终验收未完成",
+      "implemented": "全量362测试、范围Ruff和diff通过；历史255170文件最近保护核验零改动；已有GitHub匿名拉取和源码字节/权限核验。",
+      "remaining": "运行中统计不能代替最终JSON/配置/历史保护/浏览器/完整复现实验验收；所有后续结果并入最终源码和交付包。",
+      "evidence": [
+        "source_bundle/tests_full_034.log",
+        "source_bundle/ruff_completion_048.log",
+        "source_bundle/git_diff_check_034.log",
+        "baseline_verification.json"
+      ]
+    },
+    {
+      "stage": 12,
+      "name": "论文正文",
+      "status": "按用户最新要求暂缓",
+      "implemented": "本阶段只整理实验状态、证据、复现命令和交付材料；旧阶段稿保留。",
+      "remaining": "用户后续通过GPT Work拟定整体框架并正式撰写；当前不新增论文文字章节，不标记论文或Goal完成。",
+      "evidence": [
+        "GPT_Work_写作交接.md"
+      ]
+    }
+  ],
+  "process_snapshot": [
+    {
+      "pid": 26469,
+      "cmdline": "/root/miniconda3/envs/conceptgraph/bin/python -m conceptgraph.completion.realtime_matrix --run-id realtime_three_model_full_001 --preset main --wall-budget-s 86400 --storage-budget-gb 20 --minimum-free-gb 6 ",
+      "observed_alive": true
+    },
+    {
+      "pid": 38153,
+      "cmdline": "/root/miniconda3/envs/conceptgraph/bin/python -m conceptgraph.completion.realtime_matrix_statistics --input-run realtime_three_model_full_001 --run-id realtime_three_model_full_001 --wait-budget-s 87000 ",
+      "observed_alive": true
+    },
+    {
+      "pid": 38569,
+      "cmdline": "/root/miniconda3/envs/conceptgraph/bin/python outputs/project_v2/thesis_completion_v1/source_bundle/semantic_ablation_after_main_001.py ",
+      "observed_alive": true
+    },
+    {
+      "pid": 199838,
+      "cmdline": "/root/miniconda3/envs/conceptgraph/bin/python outputs/project_v2/thesis_completion_v1/source_bundle/realtime_fault_after_semantics_001.py ",
+      "observed_alive": true
+    },
+    {
+      "pid": 211077,
+      "cmdline": "/root/miniconda3/envs/conceptgraph/bin/python outputs/project_v2/thesis_completion_v1/source_bundle/runtime_profile_after_faults_001.py ",
+      "observed_alive": true
+    },
+    {
+      "pid": 169940,
+      "cmdline": "/root/miniconda3/envs/conceptgraph/bin/python -m conceptgraph.completion.review_server --port 8768 ",
+      "observed_alive": true
+    }
+  ],
+  "next_execution_order": [
+    "当前450主矩阵完整及独立统计",
+    "缺一语义450新试验/750条件及统计",
+    "GPU故障6试跑通过后180全量",
+    "全部前置进程实际退出后GPU分阶段性能",
+    "人工/有效指令/独立参考齐备后冻结并开启新封存",
+    "完整统计、可视化、工程验收与最终Git/复现交付"
+  ],
+  "live_process_limit": "PID是本次快照，续跑须核对真实cmdline/starttime，不据旧PID重复启动",
+  "evidence_sha256": {
+    "task_protocol/protocol_v1.json": "f1c555b4756cf11d6a04797f035669995af142715ca820bcd594a4b46810ecc9",
+    "statistics/interactive_rule_full_002/report.json": "28d741058651c384be1db02be1dd55240abf5fd1c7068a510dcf5186aca2fa44",
+    "statistics/causal_mapping_full_001/report.json": "577e0cdc3ab6ea293a6d232c6304312151229165c7d83b70c9d82ec08ec3dac9",
+    "mapping_evaluation/causal_relations_full_001/summary.json": "c555c9d4e43f5a8b75dccf3697a2bcf9878c5ba7d3696e1d183de9806ceef1f1",
+    "statistics/causal_modules_full_001/report.json": "3d3b8b53a181f0d909010c3150247ef8897500bc8d5b571ba62b194c16cccd0f",
+    "statistics/temporal_identity_full_001/report.md": "9acb17516bf8de8d6f7416a24f04368f2190ae9040f2ab51dcc3984c730f52de",
+    "statistics/temporal_identity_full_001/audit_002/report.json": "7fa8b7be1b076bab0c3e217021034e38e704807db4145542bc45578f6d8467c1",
+    "semantic_dataset/structured_supervision_002/manifest.json": "5ce7c27827b8387f4c83ceebfce857bd4acade228a7200f730f0256e6d5d4f7e",
+    "statistics/fair_three_task_full_validation_001/report.json": "edeae971bf93f20e9306a6fb12d1566f2b778fa83c1f8ac2bf3041fbeab4552c",
+    "source_bundle/semantic_ablation_after_main_001.py": "ebb63003fd9520ce41edb22b0741e1ecf1ce98ef53d08cdd3506ee505b2ab69c",
+    "statistics/kinematic_oracle_002/report.json": "8e2b6d6f0916eee40248fde82e487afa7a0b09117694c59598f6d27a519e4fe5",
+    "interactive_simulation/realtime_three_model_full_001/release.json": "a62fe8271ca7a8f81c8b20955c57f907cc3ff585bb7e3a35734d73fa8b70d163",
+    "interactive_simulation/realtime_three_model_full_001/trial_records.jsonl": "1fe7ab21c1ff4447f395ed04c86edaca2a1be0792690b755c46798693662bd32",
+    "statistics/kitti_object_cpu_full_001/report.json": "f9d721a62720bdf668133c29d9c4e09e1834056346c81ad6df616d272deb8d24",
+    "faults/realtime_fault_cpu_smoke_002/audit_001/report.json": "f756cf1530bcc9ee51b12d6aef8643738137164e83628b815385a724c52a1ea5",
+    "faults/realtime_fault_after_semantics_001/release.json": "dddee661fca4d05dc61809bc0f34bf06d93eaead88325816d4719fd3d3376454",
+    "performance/runtime_profile_cpu_smoke_001/audit_001/report.json": "ec15d15d6d0415e1f4fc5c9d1828060701c555792e0e2ff28c62f220b6cb41a1",
+    "performance/runtime_profile_after_faults_001/release.json": "eb99a7f59f6694a8f553d4a658df43396bd3c2fda86b515909541e3eefdfb5f4",
+    "splits/split_audit_002/report.json": "4f9bd1cec7d5276c5d8e4d02e2cd0a7d63368d83ef74212885af2bdfff642aed",
+    "data_manifest/reserved_causal_inputs_full_001/audit_001/report.json": "04b47d8c3f248ca05d48314fc19d81b4da0f5839afcd400566f9ee60fbccf817",
+    "visualizations/causal_development_review_002/review_manifest.json": "570023eb0bbb93a191f1f7e255cf610968b82d3e8cb2c8f976f926343b44e21f",
+    "source_bundle/tests_full_034.log": "778b4580a74c0bfd35628628f8926181df41d2e14f8c836ec83290ba7439fadc",
+    "source_bundle/ruff_completion_048.log": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+    "source_bundle/git_diff_check_034.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "baseline_verification.json": "45bdc789b73e0bb0fbd13315d4161d32915924595f9261e9aa5d072666372461",
+    "GPT_Work_写作交接.md": "fa876a4081d6b959120fa1274773d8f923910d7800e8e5d9081db57841d2c9c3"
+  }
+}

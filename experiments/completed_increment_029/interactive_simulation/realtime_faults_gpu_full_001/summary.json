@@ -1,0 +1,16 @@
+{
+  "attempted": 180,
+  "expected": 180,
+  "trial_records_sha256": "0a9913e10df2da0dfeb1fb067fe79959634cfaddd2143ecd53adf5ea64c2f528",
+  "all_frozen_trials_attempted": true,
+  "processes_with_result": 179,
+  "condition_counts": {
+    "pose_noise_025m_2deg": 30,
+    "baseline": 30,
+    "depth_noise_02m": 30,
+    "lidar_dropout_80pct": 30,
+    "sensor_blackout_4s": 30,
+    "detection_dropout_30pct": 30
+  },
+  "goal_complete": false
+}

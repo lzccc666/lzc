@@ -553,12 +553,16 @@ def test_explicit_model_no_match_invalidates_existing_lock_and_path():
         objects = {1: node(1, center=(12., 12.)), 2: node(2, center=(24., 20.))}
         first = navigator.update(0, [2., 2., 0.], objects, [1, 2])
         assert first.selected_node_id == 1 and len(first.path_world)
-        time.sleep(.03)
+        # 明确等真实future完成，不用固定30ms假定后台已调度。
+        # 首帧末尾可能已经接收结果；接收事件属于实际接收帧。
+        for pending in list(navigator._pending_qwen.values()):
+            pending.future.result(timeout=2.)
         refused = navigator.update(1, [2., 2., 0.], objects, [])
         assert refused.selected_node_id is None
         assert refused.candidate_ids == [] and len(refused.path_world) == 0
         assert refused.qwen_audit['active_rerank']['no_match'] is True
-        assert any(e.get('diagnostic') == 'verified_no_match_activated' for e in refused.qwen_audit['events'])
+        received_events = first.qwen_audit['events'] + refused.qwen_audit['events']
+        assert any(e.get('diagnostic') == 'verified_no_match_activated' for e in received_events)
         # 相同候选的下一帧不能靠旧路径或迟滞再次锁定。
         later = navigator.update(2, [2., 2., 0.], objects, [])
         assert later.selected_node_id is None and len(later.path_world) == 0

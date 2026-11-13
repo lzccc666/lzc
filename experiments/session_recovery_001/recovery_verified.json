@@ -1,0 +1,13 @@
+{
+  "verified_at": "2026-11-13T15:59:31.077391+08:00",
+  "resumed_records": 400,
+  "original_verified_records": 396,
+  "interrupted_trial_preserved": true,
+  "resumed_producer_live": true,
+  "recovery_supervisor_live": true,
+  "goal_complete": false,
+  "client_error_root_cause_confirmed": false,
+  "base_instructions_current_turn_present": true,
+  "project_AGENTS_found": false,
+  "global_AGENTS_empty": true
+}

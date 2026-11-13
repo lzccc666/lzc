@@ -1,0 +1,14 @@
+{
+  "source_files": 7,
+  "archive_sha256": "6c108dbef03039e8a43ffc52b96ff3d7a97049429ed21c09bac8989789e8e623",
+  "source_sha256": {
+    "outputs/project_v2/thesis_completion_v1/source_bundle/HDmap_vehicle_connection_run_002.py": "0cc117518a1f393b635db9dcdad1c4ee72155dba8d4b2333b900d3be0a90f492",
+    "conceptgraph/completion/topology_vehicle.py": "b7930d8e138d65549000d18a1d3c75bd20b2e38bbb7d5598ac8313300de77bfd",
+    "conceptgraph/completion/execution_direction_audit.py": "52ececb3797c2ba7f44544fb7e6f23fe743c1c7818fdb46542052c4ce2b02503",
+    "conceptgraph/completion/independent_continuous_body.py": "6225ef52af83bb2f2cfb45bc4a204977f9cc5f7d3170aadd35af58715b419fbf",
+    "conceptgraph/completion/kinematic_benchmark.py": "3f5805c14288992719aa0a4bb967e6211c195cbea8da0e7cbbccf60c4a031045",
+    "conceptgraph/navigation/vehicle_geometry.py": "ae93a8ae8e9af6d874eafad1d57e5b2e65f54f45b0c90ccbdcc32d79743a9378",
+    "conceptgraph/navigation/vehicle_planner.py": "1f17b4c03b9989b3ffd0133469619fb66eb522d9b89ff8071ebb547f49f29b95"
+  },
+  "captured_before_any_source_changes": true
+}

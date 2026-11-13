@@ -1,0 +1,10 @@
+{
+  "new_GPU_trials": 186,
+  "full_trials": 180,
+  "smoke_trials": 6,
+  "elapsed_s_including_wait": 21290.420847909525,
+  "source_sha_unchanged": true,
+  "independent_test": false,
+  "stage12_complete": false,
+  "goal_complete": false
+}

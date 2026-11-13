@@ -1,0 +1,17 @@
+{
+  "updated_utc": "2026-11-13T01:50:13.028697+00:00",
+  "business_files_checked": 390,
+  "auxiliary_checkpoint_files_checked": 158,
+  "Git_export_files_checked": 390,
+  "original_index_unchanged": true,
+  "original_documents_sha256": {
+    "MEMORY.md": "f1db9a84f9b586fff70f61d09cd3bdda78d4b2cac953fbde8af45533ed034fd6",
+    "PAPER_MEMORY.md": "2a978751be1efd888a130444bc31f146666c7f4fcb62e37c2f92aa2fe196f2b2",
+    "初稿.docx": "3301e4fa163a7c0b5ddea37848b21f6e4c770a24e6b1ec54130b02549949095f",
+    "论文1-3章初稿.md": "87b47a096a524e8e08b37d727285840e47e768da095ff123283b0fbc9a9a1ee7"
+  },
+  "fault_release_source_references_checked": 791,
+  "full_255170_entry_historical_audit_pending_final": true,
+  "manuscript_text_written": false,
+  "goal_complete": false
+}

@@ -1,0 +1,31 @@
+{
+  "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "original_parent_exit_code_observed": null,
+  "original_parent_and_child_no_longer_live": true,
+  "original_source_set_equality_passed": false,
+  "expected_extra_file": "conceptgraph/navigation/reference_guided_vehicle.py",
+  "original_failure_preserved": true,
+  "original_interruption_before_assertion": true,
+  "assertion_failure_observed": false,
+  "compatibility_evidence": {
+    "passed": true,
+    "exact_source_set_equality": false,
+    "common_source_files": 66,
+    "extra_source_files": [
+      "conceptgraph/navigation/reference_guided_vehicle.py"
+    ],
+    "common_source_SHA_unchanged": true,
+    "explicit_extra_module_references": [],
+    "dynamic_loading_calls": [
+      {
+        "source": "conceptgraph/completion/kinematic_benchmark.py",
+        "line": 115,
+        "function": "__import__",
+        "module": "hashlib"
+      }
+    ],
+    "same_task_weights_selection_protocol": true,
+    "limit": "静态调用检查和入口导入探针不等于完整运行时模块跟踪；源集合不等仍明确保留。"
+  },
+  "goal_complete": false
+}

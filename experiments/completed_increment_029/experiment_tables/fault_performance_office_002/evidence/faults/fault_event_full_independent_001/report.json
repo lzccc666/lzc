@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "created_utc": "2026-11-13T15:34:28.228626+00:00",
+  "source_run": "realtime_faults_gpu_full_001",
+  "audited_cases": 180,
+  "expected": 180,
+  "complete_cohort": true,
+  "conditions": {
+    "pose_noise_025m_2deg": 30,
+    "baseline": 30,
+    "depth_noise_02m": 30,
+    "lidar_dropout_80pct": 30,
+    "sensor_blackout_4s": 30,
+    "detection_dropout_30pct": 30
+  },
+  "missing_results": 1,
+  "blackouts_observed": 29,
+  "blackouts_stopped": 29,
+  "blackouts_fresh_motion_after": 29,
+  "depth_noise_numeric_amplitude_verified": false,
+  "protocol_trigger_is_not_effect": true,
+  "continuous_body_geometry_not_recomputed": true,
+  "actual_model_calls": 0,
+  "new_arrival_credit": false,
+  "input_prefix_sha256": "0a9913e10df2da0dfeb1fb067fe79959634cfaddd2143ecd53adf5ea64c2f528",
+  "release_sha256": "8f19f317f6bd4c7ef91011043df3c44bab4309c9bda5f4125ceb27a80d9acd7c",
+  "cases_sha256": "0d3d353ef1ca95324230498e7467c4ae886700e584baa88b922699ec0fa93c81",
+  "source_sha256": "c5dc9cea853bba7df069b6ad82fb1b42a621a8325961d7970c4fa6785babb5b7",
+  "goal_complete": false
+}

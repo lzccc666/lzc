@@ -1,0 +1,103 @@
+{
+  "mode": "frontend",
+  "device": "cuda:0",
+  "variant": "new",
+  "stages": {
+    "CLIP_preprocess_image_text/cold_first_call": {
+      "calls": 1,
+      "failures": 0,
+      "median_s": 0.079333375,
+      "p95_s": 0.079333375,
+      "summed_s": 0.079333375,
+      "successful_calls_per_measured_s": 12.605035396515023
+    },
+    "CLIP_preprocess_image_text/warm": {
+      "calls": 11,
+      "failures": 0,
+      "median_s": 0.081412262,
+      "p95_s": 0.132977868,
+      "summed_s": 0.998253916,
+      "successful_calls_per_measured_s": 11.019240519563361
+    },
+    "SAM_segmentation/cold_first_call": {
+      "calls": 1,
+      "failures": 0,
+      "median_s": 0.173253717,
+      "p95_s": 0.173253717,
+      "summed_s": 0.173253717,
+      "successful_calls_per_measured_s": 5.7718819389023555
+    },
+    "SAM_segmentation/warm": {
+      "calls": 11,
+      "failures": 0,
+      "median_s": 0.036021034,
+      "p95_s": 0.041114384000000004,
+      "summed_s": 0.397325231,
+      "successful_calls_per_measured_s": 27.685128307394102
+    },
+    "YOLO_detection/cold_first_call": {
+      "calls": 1,
+      "failures": 0,
+      "median_s": 0.958822813,
+      "p95_s": 0.958822813,
+      "summed_s": 0.958822813,
+      "successful_calls_per_measured_s": 1.042945564541965
+    },
+    "YOLO_detection/warm": {
+      "calls": 11,
+      "failures": 0,
+      "median_s": 0.01900843,
+      "p95_s": 0.021153941000000002,
+      "summed_s": 0.21274417900000003,
+      "successful_calls_per_measured_s": 51.70529248652203
+    },
+    "YOLO_vocabulary_setup/cold_setup": {
+      "calls": 1,
+      "failures": 0,
+      "median_s": 3.319762521,
+      "p95_s": 3.319762521,
+      "summed_s": 3.319762521,
+      "successful_calls_per_measured_s": 0.301226365944626
+    },
+    "frontend_model_load/cold_process": {
+      "calls": 1,
+      "failures": 0,
+      "median_s": 9.852066764,
+      "p95_s": 9.852066764,
+      "summed_s": 9.852066764,
+      "successful_calls_per_measured_s": 0.10150154520410434
+    },
+    "frontend_total/cold_first_frame": {
+      "calls": 1,
+      "failures": 0,
+      "median_s": 4.565375543,
+      "p95_s": 4.565375543,
+      "summed_s": 4.565375543,
+      "successful_calls_per_measured_s": 0.21904003089806712
+    },
+    "frontend_total/warm": {
+      "calls": 11,
+      "failures": 0,
+      "median_s": 0.180652915,
+      "p95_s": 0.2518619445,
+      "summed_s": 2.077959088,
+      "successful_calls_per_measured_s": 5.293655714168709
+    }
+  },
+  "actual": {
+    "actual_frontend_calls": 12,
+    "model_calls_reused": false
+  },
+  "peak_torch_GPU_allocated_MiB": 4988.41943359375,
+  "peak_torch_GPU_reserved_MiB": 5256.0,
+  "unique_CUDA_process_verified": true,
+  "samples_are_stage_invocations_not_independent_scenes": true,
+  "nested_stage_times_not_additive": true,
+  "GPU_sync_added_at_frontend_and_semantic_boundaries": true,
+  "CPU_shared_host_no_exclusive_performance_credit": false,
+  "external_GPU_activity_between_half_second_samples_not_excluded": true,
+  "cold_OS_page_cache_not_guaranteed": true,
+  "end_to_end_throughput_credit": false,
+  "independent_test": false,
+  "goal_complete": false
+}

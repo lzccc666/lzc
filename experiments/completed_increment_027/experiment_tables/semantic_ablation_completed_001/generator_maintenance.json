@@ -1,0 +1,6 @@
+{
+  "original_generator_sha256": "aa675c8b59976df1cba77753b912a6e0b77c85232819a5c2e0cf94bfa7161794",
+  "maintained_generator_sha256": "d5b36fdb0e0edb1e2bca646566e98e698ee0bb1fbdcd11ecc6aac04763642b7e",
+  "change": "只将O变量改名OUTPUT_ROOT，原生成器字节保留",
+  "results_regenerated": false
+}

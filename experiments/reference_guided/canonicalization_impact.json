@@ -1,0 +1,68 @@
+{
+  "passed": true,
+  "trials_compared": 228,
+  "original_tasks": 38,
+  "ready_tasks": 17,
+  "ready_unique_lane_chains": 15,
+  "ready_unique_lane_tokens": 45,
+  "duplicate_affected_tasks": 10,
+  "duplicate_affected_conditions": 60,
+  "exact_zero_segments_in_51_task_lane_references": 22,
+  "positive_but_at_most_1nm_segments": 0,
+  "unaffected_conditions_business_identical": 168,
+  "unaffected_saved_states_identical": 42,
+  "unaffected_plan_paths_identical": 42,
+  "affected_status_changes": [
+    {
+      "method": "hybrid_astar",
+      "before": "UNKNOWN_INVALID_DECLARED_CHAIN",
+      "after": "NO_ROUTE",
+      "count": 30
+    },
+    {
+      "method": "reference_guided",
+      "before": "UNKNOWN_INVALID_DECLARED_CHAIN",
+      "after": "NO_ROUTE",
+      "count": 9
+    },
+    {
+      "method": "reference_guided",
+      "before": "UNKNOWN_INVALID_DECLARED_CHAIN",
+      "after": "REFERENCE_POSE_REACHED",
+      "count": 21
+    }
+  ],
+  "v2_reference_pose_reached": 39,
+  "v2_successful_scene_ids": [
+    "scene-0015",
+    "scene-0019",
+    "scene-0021",
+    "scene-0035",
+    "scene-0039",
+    "scene-0043",
+    "scene-0044",
+    "scene-0075",
+    "scene-0093",
+    "scene-0095",
+    "scene-0096",
+    "scene-0097",
+    "scene-0098"
+  ],
+  "v2_successful_scenes": 13,
+  "v2_successful_logs": 6,
+  "v2_successful_unique_lane_chains": 12,
+  "original_context_bytes_unchanged": true,
+  "controls_or_routes_for_unaffected_cases_unchanged": true,
+  "same_map_routes_may_recur_across_scenes": true,
+  "new_test_opened": false,
+  "new_model_calls": 0,
+  "new_executions": 0,
+  "semantic_arrival_credit": 0,
+  "tasks_sha256": "fab2f114e9cdff7df3f9bdc0b3ae926795eb15172e3dd4700182d62e530ab591",
+  "input_trial_sha256": [
+    "86c8e7a692c0405d9c77b92727fdcd868a1b9eb1b9b1db609bad141e30aa0b61",
+    "fb1c1d90636fe655ecaad3a1b8cff0c6d71f36ddc2a340224373c4f344d20739"
+  ],
+  "cases_sha256": "ce2256556d64c95e2a370e68ef50dfce8f3641f97d89669ac52a56ed00c12f4e",
+  "goal_complete": false
+}

@@ -1,0 +1,3 @@
+﻿method,truth,predictions,matched,recall,pairs,conditional_error
+mask点均值,319,365,247,0.774294670846395,251,1.757596527083328
+mask点稳健均值,319,365,262,0.8213166144200627,251,1.539655934237799

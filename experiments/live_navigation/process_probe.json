@@ -1,0 +1,22 @@
+{
+  "created_utc": "2026-11-12T21:26:41.852744+00:00",
+  "session": "live_cpu_1794518748728770037_3042f6a3",
+  "worker": {
+    "pid": 302252,
+    "start_ticks": "1380509977"
+  },
+  "worker_confirmed_live": true,
+  "selected_process_environment": {
+    "CUDA_VISIBLE_DEVICES": "",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "LP_NUM_THREADS": "1",
+    "PYOPENGL_PLATFORM": "osmesa"
+  },
+  "compute_GPU_process_pids": [
+    302581
+  ],
+  "live_worker_absent_from_GPU_compute_processes": true,
+  "actual_renderer": "llvmpipe (LLVM 15.0.7, 256 bits)",
+  "goal_complete": false
+}

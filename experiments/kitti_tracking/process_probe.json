@@ -1,0 +1,12 @@
+{
+  "updated_utc": "2026-11-12T22:08:56.446190+00:00",
+  "pid": 312546,
+  "start_ticks": "1380733353",
+  "environment": {
+    "CUDA_VISIBLE_DEVICES": "",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "CPU_only": true,
+  "goal_complete": false
+}

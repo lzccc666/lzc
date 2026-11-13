@@ -1,0 +1,168 @@
+{
+  "passed": true,
+  "created_utc": "2026-11-12T21:27:05.733608+00:00",
+  "source_sha256": "cd1935078bbd315b3c00aaf84ea436c92bfa6b77018aa5bdd2790cd9978e0d92",
+  "session": "live_cpu_1794518748728770037_3042f6a3",
+  "checkpoints": [
+    {
+      "action": "initial_observation",
+      "state": {
+        "x": 0.03303787360517715,
+        "y": 0.010152938299384963,
+        "yaw_rad": -0.21415165064339778,
+        "speed_mps": 0,
+        "steering_rad": 0,
+        "time_s": 0
+      }
+    },
+    {
+      "action": "step",
+      "state": {
+        "x": 0.03303787360517715,
+        "y": 0.010152938299384963,
+        "yaw_rad": -0.21415165064339758,
+        "speed_mps": 0,
+        "steering_rad": 0,
+        "time_s": 0.5
+      }
+    },
+    {
+      "action": "step",
+      "state": {
+        "x": 0.03303787360517715,
+        "y": 0.010152938299384963,
+        "yaw_rad": -0.21415165064339758,
+        "speed_mps": 0,
+        "steering_rad": 0,
+        "time_s": 0.9999999999999999
+      }
+    },
+    {
+      "action": "step",
+      "state": {
+        "x": 0.03303787360517715,
+        "y": 0.010152938299384963,
+        "yaw_rad": -0.21415165064339758,
+        "speed_mps": 0,
+        "steering_rad": 0,
+        "time_s": 1.5000000000000002
+      }
+    },
+    {
+      "action": "step",
+      "state": {
+        "x": 0.1551825030771016,
+        "y": -0.016411878492121192,
+        "yaw_rad": -0.21415165064339758,
+        "speed_mps": 0.5,
+        "steering_rad": 0,
+        "time_s": 2.0000000000000004
+      }
+    },
+    {
+      "action": "step",
+      "state": {
+        "x": 0.514020216986016,
+        "y": -0.09445426291037588,
+        "yaw_rad": -0.21415165064339758,
+        "speed_mps": 0.931525,
+        "steering_rad": 0,
+        "time_s": 2.500000000000001
+      }
+    },
+    {
+      "action": "step",
+      "state": {
+        "x": 1.0256549938175632,
+        "y": -0.20572795680468878,
+        "yaw_rad": -0.21415165064339758,
+        "speed_mps": 1.1365056849765625,
+        "steering_rad": 0,
+        "time_s": 3.0000000000000013
+      }
+    },
+    {
+      "action": "continuous_then_pause",
+      "state": {
+        "x": 4.104591228878392,
+        "y": -0.8753552449690104,
+        "yaw_rad": -0.21415165064339758,
+        "speed_mps": 1.2971882558583099,
+        "steering_rad": -1.1558650838329565e-15,
+        "time_s": 5.4999999999999964
+      }
+    },
+    {
+      "action": "mobile_step",
+      "state": {
+        "x": 4.738800771337602,
+        "y": -1.0132873044929729,
+        "yaw_rad": -0.21415165064339758,
+        "speed_mps": 1.2987524141869413,
+        "steering_rad": -1.1542270751868024e-15,
+        "time_s": 5.999999999999995
+      }
+    }
+  ],
+  "actual_frontend_calls": 14,
+  "commands_applied": 10,
+  "RGB_and_LiDAR_changed_after_actual_controls": true,
+  "pause_freezes_state": true,
+  "user_stop_integrated_to_zero_speed": true,
+  "desktop_mobile_actual_operation": true,
+  "actual_renderer": "llvmpipe (LLVM 15.0.7, 256 bits)",
+  "checked_HTTP_links": 6,
+  "final_result": {
+    "task_id": "config00-positive0",
+    "config_id": "config00",
+    "kind": "reachable_positive",
+    "seed": 17,
+    "status": "USER_STOPPED",
+    "route_generated": true,
+    "selected_object_evaluated_correct": true,
+    "stable_correct_lock": true,
+    "max_consecutive_independently_correct_locked_observations": 10,
+    "actual_full_perception_arrival": false,
+    "initial_state_observed": true,
+    "final_state": {
+      "x": 5.153300104826419,
+      "y": -1.1034353437636046,
+      "yaw_rad": -0.21415165064339758,
+      "speed_mps": 0,
+      "steering_rad": -1.1542270751868024e-15,
+      "time_s": 6.699999999999992
+    },
+    "terminal_zero_speed": true,
+    "saved_control_intervals": 67,
+    "saved_perception_frames": 14,
+    "distinct_RGB": 11,
+    "distinct_depth": 11,
+    "independent_execution_audit": {
+      "passed": true,
+      "violations": [],
+      "audited_states": 68,
+      "audited_intervals": 67,
+      "geometry": "rear_axle_rectangular_body_and_conservative_continuous_sweep",
+      "dynamic_safety_claim": false
+    },
+    "independent_disconnection_proof": null,
+    "wall_duration_s": 64.68136531114578,
+    "actual_frontend_calls": 14,
+    "gt_in_agent": false,
+    "model_device": "cpu",
+    "Qwen_calls": 0,
+    "new_independent_scenes": 0,
+    "performance_credit": false,
+    "frozen_main_table_credit": false,
+    "actual_renderer": "llvmpipe (LLVM 15.0.7, 256 bits)",
+    "goal_complete": false
+  },
+  "files_manifest_sha256": "d9c6f120ee19661b686fcffceb604d1a8228e9412dcc73c7038fedb42faa77c1",
+  "original_frozen_table_credit": false,
+  "automated_browser_operations_are_not_human_labels": true,
+  "actual_Qwen_calls": 0,
+  "performance_credit": false,
+  "manuscript_text_written": false,
+  "shared_CPU_wall_s": 78.08243239670992,
+  "goal_complete": false
+}

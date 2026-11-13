@@ -1,0 +1,861 @@
+{
+  "created_utc": "2026-11-12T21:00:58.607882+00:00",
+  "trials": 450,
+  "is_smoke": false,
+  "methods": {
+    "base_full": {
+      "by_kind": {
+        "inaccessible": {
+          "trials": 30,
+          "missing_complete_results": 0,
+          "saved_prefix_stage_events": {
+            "mapped_accepted": 0,
+            "pre_safety_accepted": 0,
+            "safety_accepted": 0,
+            "final_top_accepted": 0,
+            "selected_accepted": 0,
+            "three_selected_accepted": 0,
+            "correct_selected_target_route": 0
+          },
+          "complete_only_four_outcomes": {
+            "route_generated": 0,
+            "selected_object_evaluated_correct": 0,
+            "stable_correct_lock": 0,
+            "actual_full_perception_arrival": 0
+          },
+          "ordered_stage_gaps": {
+            "mapped_accepted": 30
+          },
+          "parse_color_removed_trials": 0,
+          "parse_self_anchor_after_application_trials": 0,
+          "semantic_changed_first_trials": 0
+        },
+        "no_match": {
+          "trials": 30,
+          "missing_complete_results": 0,
+          "saved_prefix_stage_events": {
+            "mapped_accepted": 0,
+            "pre_safety_accepted": 0,
+            "safety_accepted": 0,
+            "final_top_accepted": 0,
+            "selected_accepted": 0,
+            "three_selected_accepted": 0,
+            "correct_selected_target_route": 0
+          },
+          "complete_only_four_outcomes": {
+            "route_generated": 0,
+            "selected_object_evaluated_correct": 0,
+            "stable_correct_lock": 0,
+            "actual_full_perception_arrival": 0
+          },
+          "ordered_stage_gaps": {
+            "mapped_accepted": 30
+          },
+          "parse_color_removed_trials": 0,
+          "parse_self_anchor_after_application_trials": 0,
+          "semantic_changed_first_trials": 0
+        },
+        "reachable_positive": {
+          "trials": 90,
+          "missing_complete_results": 1,
+          "saved_prefix_stage_events": {
+            "mapped_accepted": 90,
+            "pre_safety_accepted": 90,
+            "safety_accepted": 73,
+            "final_top_accepted": 73,
+            "selected_accepted": 67,
+            "three_selected_accepted": 67,
+            "correct_selected_target_route": 67
+          },
+          "complete_only_four_outcomes": {
+            "route_generated": 66,
+            "selected_object_evaluated_correct": 72,
+            "stable_correct_lock": 66,
+            "actual_full_perception_arrival": 39
+          },
+          "ordered_stage_gaps": {
+            "arrived": 39,
+            "all_saved_stage_events_but_no_arrival": 27,
+            "safety_accepted": 17,
+            "selected_accepted": 6,
+            "unknown_missing_complete_result": 1
+          },
+          "parse_color_removed_trials": 0,
+          "parse_self_anchor_after_application_trials": 0,
+          "semantic_changed_first_trials": 0
+        }
+      },
+      "semantic_tasks": {
+        "query_parse": {
+          "queue_events": {
+            "submitted": 149,
+            "backend_started": 149,
+            "backend_completed": 149,
+            "completed_ready": 149,
+            "delivered": 149
+          },
+          "delivered_response_metrics": {
+            "saved_delivered_response": 150,
+            "output_schema_valid": 150,
+            "used_qwen": 150,
+            "fallback_used": 0,
+            "known_cache_hit": 0,
+            "known_noncache_response": 150,
+            "schema_and_confidence_accepted": 150,
+            "parse_category_exact": 150,
+            "parse_colors_exact": 150,
+            "parse_no_extra_anchor_relation": 120,
+            "parse_category_color_relation_exact": 120,
+            "parse_self_anchor_near": 0,
+            "parse_expected_color_missing": 0
+          },
+          "actual_applications": 149
+        },
+        "object_attributes": {
+          "queue_events": {
+            "submitted": 1079,
+            "backend_started": 907,
+            "backend_completed": 907,
+            "completed_ready": 843,
+            "delivered": 567,
+            "queue_full_rejected": 2178,
+            "discarded": 223,
+            "discarded_binding_changed": 142,
+            "cancelled_before_backend": 167,
+            "discarded_expired_before_delivery": 40,
+            "completed_late_expired": 64,
+            "discarded_late_expired": 41,
+            "expired_in_queue": 5
+          },
+          "delivered_response_metrics": {
+            "saved_delivered_response": 570,
+            "output_schema_valid": 568,
+            "used_qwen": 568,
+            "fallback_used": 2,
+            "known_cache_hit": 0,
+            "known_noncache_response": 570,
+            "schema_and_confidence_accepted": 568,
+            "attribute_all_colors_unknown": 568,
+            "attribute_known_color_and_receipt_associated": 2,
+            "attribute_exact_color_at_receipt": 2
+          },
+          "actual_applications": 565
+        },
+        "candidate_rerank": {
+          "queue_events": {
+            "submitted": 185,
+            "backend_started": 126,
+            "queue_full_rejected": 1174,
+            "backend_completed": 126,
+            "completed_ready": 122,
+            "delivered": 84,
+            "cancelled_before_backend": 56,
+            "context_rejected": 84,
+            "discarded": 7,
+            "discarded_expired_before_delivery": 3,
+            "expired_in_queue": 3,
+            "completed_late_expired": 4,
+            "discarded_late_expired": 4
+          },
+          "delivered_response_metrics": {
+            "saved_delivered_response": 87,
+            "output_schema_valid": 87,
+            "used_qwen": 87,
+            "fallback_used": 0,
+            "known_cache_hit": 0,
+            "known_noncache_response": 87,
+            "schema_and_confidence_accepted": 87
+          },
+          "actual_applications": 0
+        }
+      }
+    },
+    "new_full": {
+      "by_kind": {
+        "inaccessible": {
+          "trials": 30,
+          "missing_complete_results": 0,
+          "saved_prefix_stage_events": {
+            "mapped_accepted": 0,
+            "pre_safety_accepted": 0,
+            "safety_accepted": 0,
+            "final_top_accepted": 0,
+            "selected_accepted": 0,
+            "three_selected_accepted": 0,
+            "correct_selected_target_route": 0
+          },
+          "complete_only_four_outcomes": {
+            "route_generated": 0,
+            "selected_object_evaluated_correct": 0,
+            "stable_correct_lock": 0,
+            "actual_full_perception_arrival": 0
+          },
+          "ordered_stage_gaps": {
+            "mapped_accepted": 30
+          },
+          "parse_color_removed_trials": 30,
+          "parse_self_anchor_after_application_trials": 30,
+          "semantic_changed_first_trials": 0
+        },
+        "no_match": {
+          "trials": 30,
+          "missing_complete_results": 0,
+          "saved_prefix_stage_events": {
+            "mapped_accepted": 0,
+            "pre_safety_accepted": 0,
+            "safety_accepted": 0,
+            "final_top_accepted": 0,
+            "selected_accepted": 0,
+            "three_selected_accepted": 0,
+            "correct_selected_target_route": 0
+          },
+          "complete_only_four_outcomes": {
+            "route_generated": 0,
+            "selected_object_evaluated_correct": 0,
+            "stable_correct_lock": 0,
+            "actual_full_perception_arrival": 0
+          },
+          "ordered_stage_gaps": {
+            "mapped_accepted": 30
+          },
+          "parse_color_removed_trials": 0,
+          "parse_self_anchor_after_application_trials": 30,
+          "semantic_changed_first_trials": 0
+        },
+        "reachable_positive": {
+          "trials": 90,
+          "missing_complete_results": 0,
+          "saved_prefix_stage_events": {
+            "mapped_accepted": 90,
+            "pre_safety_accepted": 54,
+            "safety_accepted": 33,
+            "final_top_accepted": 33,
+            "selected_accepted": 32,
+            "three_selected_accepted": 32,
+            "correct_selected_target_route": 32
+          },
+          "complete_only_four_outcomes": {
+            "route_generated": 59,
+            "selected_object_evaluated_correct": 33,
+            "stable_correct_lock": 32,
+            "actual_full_perception_arrival": 4
+          },
+          "ordered_stage_gaps": {
+            "all_saved_stage_events_but_no_arrival": 28,
+            "pre_safety_accepted": 36,
+            "safety_accepted": 21,
+            "arrived": 4,
+            "selected_accepted": 1
+          },
+          "parse_color_removed_trials": 52,
+          "parse_self_anchor_after_application_trials": 74,
+          "semantic_changed_first_trials": 0
+        }
+      },
+      "semantic_tasks": {
+        "query_parse": {
+          "queue_events": {
+            "submitted": 150,
+            "backend_started": 150,
+            "backend_completed": 150,
+            "completed_ready": 149,
+            "delivered": 134,
+            "discarded": 16,
+            "discarded_expired_before_delivery": 15,
+            "completed_late_expired": 1,
+            "discarded_late_expired": 1
+          },
+          "delivered_response_metrics": {
+            "saved_delivered_response": 134,
+            "output_schema_valid": 134,
+            "used_qwen": 134,
+            "fallback_used": 0,
+            "known_cache_hit": 0,
+            "known_noncache_response": 134,
+            "schema_and_confidence_accepted": 134,
+            "parse_category_exact": 134,
+            "parse_colors_exact": 52,
+            "parse_no_extra_anchor_relation": 0,
+            "parse_category_color_relation_exact": 0,
+            "parse_self_anchor_near": 134,
+            "parse_expected_color_missing": 82
+          },
+          "actual_applications": 134
+        },
+        "object_attributes": {
+          "queue_events": {
+            "submitted": 1116,
+            "backend_started": 890,
+            "queue_full_rejected": 5380,
+            "backend_completed": 890,
+            "completed_ready": 767,
+            "delivered": 314,
+            "completed_late_expired": 123,
+            "discarded": 464,
+            "discarded_late_expired": 105,
+            "discarded_binding_changed": 339,
+            "cancelled_before_backend": 189,
+            "expired_in_queue": 37,
+            "discarded_expired_before_delivery": 20
+          },
+          "delivered_response_metrics": {
+            "saved_delivered_response": 314,
+            "output_schema_valid": 314,
+            "used_qwen": 314,
+            "fallback_used": 0,
+            "known_cache_hit": 0,
+            "known_noncache_response": 314,
+            "schema_and_confidence_accepted": 314,
+            "attribute_all_colors_unknown": 314,
+            "attribute_known_color_and_receipt_associated": 0,
+            "attribute_exact_color_at_receipt": 0
+          },
+          "actual_applications": 314
+        },
+        "candidate_rerank": {
+          "queue_events": {
+            "submitted": 205,
+            "queue_full_rejected": 3466,
+            "backend_started": 145,
+            "backend_completed": 145,
+            "completed_ready": 78,
+            "delivered": 62,
+            "completed_late_expired": 67,
+            "discarded": 56,
+            "discarded_late_expired": 52,
+            "context_rejected": 10,
+            "expired_in_queue": 10,
+            "cancelled_before_backend": 50,
+            "discarded_expired_before_delivery": 4,
+            "context_applied": 3
+          },
+          "delivered_response_metrics": {
+            "saved_delivered_response": 62,
+            "output_schema_valid": 13,
+            "used_qwen": 13,
+            "fallback_used": 49,
+            "known_cache_hit": 6,
+            "known_noncache_response": 56,
+            "schema_and_confidence_accepted": 13
+          },
+          "actual_applications": 3
+        }
+      }
+    },
+    "rule": {
+      "by_kind": {
+        "inaccessible": {
+          "trials": 30,
+          "missing_complete_results": 0,
+          "saved_prefix_stage_events": {
+            "mapped_accepted": 0,
+            "pre_safety_accepted": 0,
+            "safety_accepted": 0,
+            "final_top_accepted": 0,
+            "selected_accepted": 0,
+            "three_selected_accepted": 0,
+            "correct_selected_target_route": 0
+          },
+          "complete_only_four_outcomes": {
+            "route_generated": 0,
+            "selected_object_evaluated_correct": 0,
+            "stable_correct_lock": 0,
+            "actual_full_perception_arrival": 0
+          },
+          "ordered_stage_gaps": {
+            "mapped_accepted": 30
+          },
+          "parse_color_removed_trials": 0,
+          "parse_self_anchor_after_application_trials": 0,
+          "semantic_changed_first_trials": 0
+        },
+        "no_match": {
+          "trials": 30,
+          "missing_complete_results": 0,
+          "saved_prefix_stage_events": {
+            "mapped_accepted": 0,
+            "pre_safety_accepted": 0,
+            "safety_accepted": 0,
+            "final_top_accepted": 0,
+            "selected_accepted": 0,
+            "three_selected_accepted": 0,
+            "correct_selected_target_route": 0
+          },
+          "complete_only_four_outcomes": {
+            "route_generated": 0,
+            "selected_object_evaluated_correct": 0,
+            "stable_correct_lock": 0,
+            "actual_full_perception_arrival": 0
+          },
+          "ordered_stage_gaps": {
+            "mapped_accepted": 30
+          },
+          "parse_color_removed_trials": 0,
+          "parse_self_anchor_after_application_trials": 0,
+          "semantic_changed_first_trials": 0
+        },
+        "reachable_positive": {
+          "trials": 90,
+          "missing_complete_results": 0,
+          "saved_prefix_stage_events": {
+            "mapped_accepted": 90,
+            "pre_safety_accepted": 90,
+            "safety_accepted": 84,
+            "final_top_accepted": 84,
+            "selected_accepted": 83,
+            "three_selected_accepted": 82,
+            "correct_selected_target_route": 83
+          },
+          "complete_only_four_outcomes": {
+            "route_generated": 83,
+            "selected_object_evaluated_correct": 84,
+            "stable_correct_lock": 82,
+            "actual_full_perception_arrival": 50
+          },
+          "ordered_stage_gaps": {
+            "arrived": 50,
+            "all_saved_stage_events_but_no_arrival": 32,
+            "safety_accepted": 6,
+            "three_selected_accepted": 1,
+            "selected_accepted": 1
+          },
+          "parse_color_removed_trials": 0,
+          "parse_self_anchor_after_application_trials": 0,
+          "semantic_changed_first_trials": 0
+        }
+      },
+      "semantic_tasks": {
+        "query_parse": {
+          "queue_events": {},
+          "delivered_response_metrics": {},
+          "actual_applications": 0
+        },
+        "object_attributes": {
+          "queue_events": {},
+          "delivered_response_metrics": {},
+          "actual_applications": 0
+        },
+        "candidate_rerank": {
+          "queue_events": {},
+          "delivered_response_metrics": {},
+          "actual_applications": 0
+        }
+      }
+    }
+  },
+  "paired_config_differences": [
+    {
+      "a": "base_full",
+      "b": "new_full",
+      "metric": "ever_mapped_accepted",
+      "value": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "denominator": 90,
+      "configs": 10
+    },
+    {
+      "a": "base_full",
+      "b": "new_full",
+      "metric": "ever_pre_safety_accepted",
+      "value": 0.4,
+      "ci95": [
+        0.23333333333333334,
+        0.5555555555555556
+      ],
+      "denominator": 90,
+      "configs": 10
+    },
+    {
+      "a": "base_full",
+      "b": "new_full",
+      "metric": "ever_safety_accepted",
+      "value": 0.4444444444444444,
+      "ci95": [
+        0.28888888888888886,
+        0.5888888888888889
+      ],
+      "denominator": 90,
+      "configs": 10
+    },
+    {
+      "a": "base_full",
+      "b": "new_full",
+      "metric": "ever_final_top_accepted",
+      "value": 0.4444444444444444,
+      "ci95": [
+        0.28888888888888886,
+        0.5888888888888889
+      ],
+      "denominator": 90,
+      "configs": 10
+    },
+    {
+      "a": "base_full",
+      "b": "new_full",
+      "metric": "ever_selected_accepted",
+      "value": 0.3888888888888889,
+      "ci95": [
+        0.2,
+        0.5555555555555556
+      ],
+      "denominator": 90,
+      "configs": 10
+    },
+    {
+      "a": "base_full",
+      "b": "new_full",
+      "metric": "ever_three_selected_accepted",
+      "value": 0.3888888888888889,
+      "ci95": [
+        0.2,
+        0.5555555555555556
+      ],
+      "denominator": 90,
+      "configs": 10
+    },
+    {
+      "a": "base_full",
+      "b": "new_full",
+      "metric": "ever_correct_selected_target_route",
+      "value": 0.3888888888888889,
+      "ci95": [
+        0.2,
+        0.5555555555555556
+      ],
+      "denominator": 90,
+      "configs": 10
+    },
+    {
+      "a": "base_full",
+      "b": "new_full",
+      "metric": "ever_color_removed_transitions",
+      "value": -0.5777777777777777,
+      "ci95": [
+        -0.6222222222222222,
+        -0.5333333333333333
+      ],
+      "denominator": 90,
+      "configs": 10
+    },
+    {
+      "a": "base_full",
+      "b": "new_full",
+      "metric": "ever_after_parse_self_anchor_frames",
+      "value": -0.8222222222222222,
+      "ci95": [
+        -0.9222222222222223,
+        -0.7
+      ],
+      "denominator": 90,
+      "configs": 10
+    },
+    {
+      "a": "base_full",
+      "b": "rule",
+      "metric": "ever_mapped_accepted",
+      "value": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "denominator": 90,
+      "configs": 10
+    },
+    {
+      "a": "base_full",
+      "b": "rule",
+      "metric": "ever_pre_safety_accepted",
+      "value": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "denominator": 90,
+      "configs": 10
+    },
+    {
+      "a": "base_full",
+      "b": "rule",
+      "metric": "ever_safety_accepted",
+      "value": -0.12222222222222222,
+      "ci95": [
+        -0.2111111111111111,
+        -0.044444444444444446
+      ],
+      "denominator": 90,
+      "configs": 10
+    },
+    {
+      "a": "base_full",
+      "b": "rule",
+      "metric": "ever_final_top_accepted",
+      "value": -0.12222222222222222,
+      "ci95": [
+        -0.2111111111111111,
+        -0.044444444444444446
+      ],
+      "denominator": 90,
+      "configs": 10
+    },
+    {
+      "a": "base_full",
+      "b": "rule",
+      "metric": "ever_selected_accepted",
+      "value": -0.17777777777777778,
+      "ci95": [
+        -0.28888888888888886,
+        -0.07777777777777778
+      ],
+      "denominator": 90,
+      "configs": 10
+    },
+    {
+      "a": "base_full",
+      "b": "rule",
+      "metric": "ever_three_selected_accepted",
+      "value": -0.16666666666666666,
+      "ci95": [
+        -0.26666666666666666,
+        -0.06666666666666667
+      ],
+      "denominator": 90,
+      "configs": 10
+    },
+    {
+      "a": "base_full",
+      "b": "rule",
+      "metric": "ever_correct_selected_target_route",
+      "value": -0.17777777777777778,
+      "ci95": [
+        -0.28888888888888886,
+        -0.07777777777777778
+      ],
+      "denominator": 90,
+      "configs": 10
+    },
+    {
+      "a": "base_full",
+      "b": "rule",
+      "metric": "ever_color_removed_transitions",
+      "value": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "denominator": 90,
+      "configs": 10
+    },
+    {
+      "a": "base_full",
+      "b": "rule",
+      "metric": "ever_after_parse_self_anchor_frames",
+      "value": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "denominator": 90,
+      "configs": 10
+    },
+    {
+      "a": "new_full",
+      "b": "rule",
+      "metric": "ever_mapped_accepted",
+      "value": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "denominator": 90,
+      "configs": 10
+    },
+    {
+      "a": "new_full",
+      "b": "rule",
+      "metric": "ever_pre_safety_accepted",
+      "value": -0.4,
+      "ci95": [
+        -0.5555555555555556,
+        -0.23333333333333334
+      ],
+      "denominator": 90,
+      "configs": 10
+    },
+    {
+      "a": "new_full",
+      "b": "rule",
+      "metric": "ever_safety_accepted",
+      "value": -0.5666666666666667,
+      "ci95": [
+        -0.6333333333333333,
+        -0.4888888888888889
+      ],
+      "denominator": 90,
+      "configs": 10
+    },
+    {
+      "a": "new_full",
+      "b": "rule",
+      "metric": "ever_final_top_accepted",
+      "value": -0.5666666666666667,
+      "ci95": [
+        -0.6333333333333333,
+        -0.4888888888888889
+      ],
+      "denominator": 90,
+      "configs": 10
+    },
+    {
+      "a": "new_full",
+      "b": "rule",
+      "metric": "ever_selected_accepted",
+      "value": -0.5666666666666667,
+      "ci95": [
+        -0.6444444444444445,
+        -0.4777777777777778
+      ],
+      "denominator": 90,
+      "configs": 10
+    },
+    {
+      "a": "new_full",
+      "b": "rule",
+      "metric": "ever_three_selected_accepted",
+      "value": -0.5555555555555556,
+      "ci95": [
+        -0.6333333333333333,
+        -0.4666666666666667
+      ],
+      "denominator": 90,
+      "configs": 10
+    },
+    {
+      "a": "new_full",
+      "b": "rule",
+      "metric": "ever_correct_selected_target_route",
+      "value": -0.5666666666666667,
+      "ci95": [
+        -0.6444444444444445,
+        -0.4777777777777778
+      ],
+      "denominator": 90,
+      "configs": 10
+    },
+    {
+      "a": "new_full",
+      "b": "rule",
+      "metric": "ever_color_removed_transitions",
+      "value": 0.5777777777777777,
+      "ci95": [
+        0.5333333333333333,
+        0.6222222222222222
+      ],
+      "denominator": 90,
+      "configs": 10
+    },
+    {
+      "a": "new_full",
+      "b": "rule",
+      "metric": "ever_after_parse_self_anchor_frames",
+      "value": 0.8222222222222222,
+      "ci95": [
+        0.7,
+        0.9222222222222223
+      ],
+      "denominator": 90,
+      "configs": 10
+    }
+  ],
+  "training_parse_coverage": {
+    "train": {
+      "total_rows": 2398,
+      "parse_rows": 1400,
+      "relations": {
+        "behind": 234,
+        "near": 261,
+        "right_of": 246,
+        "None": 162,
+        "in_front_of": 261,
+        "left_of": 236
+      },
+      "expression_families": {
+        "train-1": 600,
+        "train-5": 638,
+        "train-3": 99,
+        "train-0": 19,
+        "train-4": 23,
+        "train-2": 21
+      },
+      "supervision_sources": {
+        "声明语法生成的结构化文本监督，非人工自然指令": 1400
+      },
+      "no_anchor_no_relation": 162,
+      "no_anchor_no_relation_with_colors": 145,
+      "self_anchor_near": 7,
+      "exact_query_text_overlap": 0,
+      "excluded_categories_or_colors": 99
+    },
+    "validation": {
+      "total_rows": 603,
+      "parse_rows": 180,
+      "relations": {
+        "left_of": 26,
+        "near": 26,
+        "None": 30,
+        "in_front_of": 39,
+        "behind": 32,
+        "right_of": 27
+      },
+      "expression_families": {
+        "validation-1": 150,
+        "validation-3": 22,
+        "validation-4": 3,
+        "validation-0": 3,
+        "validation-2": 2
+      },
+      "supervision_sources": {
+        "声明语法生成的结构化文本监督，非人工自然指令": 180
+      },
+      "no_anchor_no_relation": 30,
+      "no_anchor_no_relation_with_colors": 24,
+      "self_anchor_near": 1,
+      "exact_query_text_overlap": 0,
+      "excluded_categories_or_colors": 22
+    }
+  },
+  "frames": 57460,
+  "saved_mapping_omitted_without_selected_frames": 30538,
+  "all_node_mapping_recomputed": true,
+  "reconstructed_mapping_is_not_new_saved_observation": true,
+  "all_complete_four_outcomes_match_original": true,
+  "source_files": 2672,
+  "files_manifest_sha256": "7742cb54260cac4328be46d38c76bdb9e5acf8df060046c6655e7a882ee520d2",
+  "trials_sha256": "caf8ff5140070656ef023dc17e4009b77331d3eb5dfeb68bc246bf4b990b4b99",
+  "frames_sha256": "01099a2e2a6e463720f7ed31b59ea5e0c18d09bed3ec2e50eebd807bbcdadad4",
+  "responses_sha256": "89496ddd4a4aea9fbaf38c0baaaf7dd86a20f56b280f0a57252170378df6b39a",
+  "bootstrap": {
+    "configs": 10,
+    "repetitions": 4000,
+    "seed": 17
+  },
+  "actual_model_calls": 0,
+  "new_executions": 0,
+  "new_arrivals": 0,
+  "wall_CPU_shared_s": 50.9389159437269,
+  "limits": [
+    "后验合成开发诊断，阶段缺口是描述性顺序分类，不证明因果；不同时间的存在事件不是严格单调漏斗",
+    "安全前候选已经受到解析和属性影响，不能称纯规则候选；全部节点关联由保存节点重建，沿用类别/2.5m和原Hungarian后端，不称新增人工真值",
+    "旧无selected时保存的空mapping保留；重建不是新增观测，只用于本版本诊断",
+    "缺完整结果前缀不计完整业务成功，仍留在冻结分母",
+    "语义准确性只针对已投递保存响应；后端入口可能缓存，未投递原文未知",
+    "颜色/锚点诊断只针对冻结合成模板，非自然语言审核；待完整缺一消融解释模块贡献",
+    "训练/验证表达分布只是相关证据，不据此断言单一失败根因；共享时钟非独占GPU性能"
+  ],
+  "manuscript_text_written": false,
+  "independent_test": false,
+  "new_test_opened": false,
+  "goal_complete": false
+}

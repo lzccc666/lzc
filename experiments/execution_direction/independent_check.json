@@ -1,0 +1,58 @@
+{
+  "passed": true,
+  "created_utc": "2026-11-12T17:27:36.319731+00:00",
+  "cohorts": [
+    {
+      "run": "execution_direction_rule_full_001",
+      "GEOS_progress_checks": 52316,
+      "cases": 150,
+      "intervals": 30806,
+      "moving_intervals": 26158,
+      "global_cone_forward_intervals": 26158,
+      "moving_cases": 120,
+      "stationary_cases": 30,
+      "old_arrivals": 21,
+      "old_arrivals_with_body_direction": 21
+    },
+    {
+      "run": "execution_direction_fault_cpu_full_001",
+      "GEOS_progress_checks": 2312,
+      "cases": 6,
+      "intervals": 2270,
+      "moving_intervals": 1156,
+      "global_cone_forward_intervals": 1156,
+      "moving_cases": 6,
+      "stationary_cases": 0,
+      "old_arrivals": 6,
+      "old_arrivals_with_body_direction": 6
+    }
+  ],
+  "totals": {
+    "GEOS_progress_checks": 54628,
+    "cases": 156,
+    "intervals": 33076,
+    "moving_intervals": 27314,
+    "global_cone_forward_intervals": 27314,
+    "moving_cases": 126,
+    "stationary_cases": 30,
+    "old_arrivals": 27,
+    "old_arrivals_with_body_direction": 27
+  },
+  "source_sha256": "2372fdfd2929ef22fa08602b7a030212eef76620e0687de82d85555ce06b8d79",
+  "source_files": 788,
+  "files_manifest_sha256": "c6ccd08867b77957e1205aaa8089f89079f627c2e6b1c196a1feb6dfa94d68d9",
+  "minimum_global_heading_margin_rad": 1.0901623412244814,
+  "independent_direction_bound": "所有中心线切线的全局航向锥，与主审核的局部距离界/递归不同",
+  "independent_progress_backend": "GEOS最近点投影，核对主审核NumPy投影的并列范围",
+  "multi_lane_connection_accuracy": null,
+  "new_model_calls": 0,
+  "new_executions": 0,
+  "new_arrivals": 0,
+  "wall_CPU_shared_s": 3.6139190830290318,
+  "limits": [
+    "第二种方向界，不是另一套积分/车身或多车道拓扑证明",
+    "单向单车道没有连接过渡，连接评价未检验",
+    "只核对冻结保存模型与静态地图；不外推真实动态交通或未知道路安全"
+  ],
+  "goal_complete": false
+}

@@ -1,0 +1,7 @@
+{
+  "path": "tests/navigation/test_online_state_machine.py",
+  "sha256": "c64705b025d93fea755f9d4a8d854d3703e93a859e6fd81ac047b0a38b4dd70b",
+  "production_source_changed": false,
+  "reason": "拒绝事件可于首帧末尾到达，旧断言只查第二帧；30ms sleep也不是后端完成屏障",
+  "goal_complete": false
+}

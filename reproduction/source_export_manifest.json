@@ -107,6 +107,12 @@
       "executable": false
     },
     {
+      "path": "conceptgraph/completion/canonical_vehicle_corridor.py",
+      "sha256": "1a3f9112ef8c89b7b20c7305fd571ef9afcb5d6d0ce6c166056fb8e6c692e2fd",
+      "bytes": 2342,
+      "executable": false
+    },
+    {
       "path": "conceptgraph/completion/causal_input_audit.py",
       "sha256": "1d832d6ecb9a80b8921f3193caa828a419fadf27ae7e62ec52cf85659b72ec48",
       "bytes": 7789,
@@ -203,6 +209,12 @@
       "executable": false
     },
     {
+      "path": "conceptgraph/completion/execution_direction_audit.py",
+      "sha256": "52ececb3797c2ba7f44544fb7e6f23fe743c1c7818fdb46542052c4ce2b02503",
+      "bytes": 9851,
+      "executable": false
+    },
+    {
       "path": "conceptgraph/completion/fault_robustness.py",
       "sha256": "c4cd34b4a8c94be0f01ca9145eaf0b0be11a88b4b6d52de985442fba0bb2a50e",
       "bytes": 10114,
@@ -230,6 +242,12 @@
       "path": "conceptgraph/completion/goal_selection_ablation.py",
       "sha256": "7c78c920f0db40580fc514e6abfd26ab63fa33931ddf7401cc91b6c796084bd1",
       "bytes": 17748,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/completion/independent_continuous_body.py",
+      "sha256": "6225ef52af83bb2f2cfb45bc4a204977f9cc5f7d3170aadd35af58715b419fbf",
+      "bytes": 10105,
       "executable": false
     },
     {
@@ -281,9 +299,45 @@
       "executable": false
     },
     {
+      "path": "conceptgraph/completion/kitti_tracking_experiment.py",
+      "sha256": "d0ee0ff6cb1917116c09cf877a0523a43c6a7096827a019d7c9fc66bb5d883d4",
+      "bytes": 23853,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/completion/kitti_tracking_geometry.py",
+      "sha256": "1a8955fdb52ae22e05b03562af657087e80dfad28f0384395d88ce683ef31e42",
+      "bytes": 5169,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/completion/kitti_tracking_preview.py",
+      "sha256": "992458a9414fffe084c55f9981f8ddde22fe12fcdff90084f5fd549786a24b3b",
+      "bytes": 13108,
+      "executable": false
+    },
+    {
       "path": "conceptgraph/completion/kitti_transfer.py",
       "sha256": "3d8e69d646b85f884b187f19d483e51cdd7bc7f316570680b645321f3bc9d49a",
       "bytes": 14558,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/completion/live_navigation_page.py",
+      "sha256": "8dd15b2a2c930bce82581b16054a44e7926cc675e5c53baf824acafb7ec570a0",
+      "bytes": 10827,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/completion/live_navigation_server.py",
+      "sha256": "61faaf7a8fe864f393ba7ec43284ec0497504ecc7798d13d639c4c148a12ea9a",
+      "bytes": 11660,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/completion/live_navigation_worker.py",
+      "sha256": "77332ef980f041ec3324a51dc9b1e98dace9c5cb21d2ccbccb668619377da7ef",
+      "bytes": 14577,
       "executable": false
     },
     {
@@ -356,6 +410,18 @@
       "path": "conceptgraph/completion/motion_audit.py",
       "sha256": "6802e9f644098d834eb460598f9d5c9d183c67b335ee4a2977a17fb009d3645f",
       "bytes": 3650,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/completion/natural_collection.py",
+      "sha256": "19868d1f7057f385b21798454af9ebedcfeb1be4415d1a14c919365f96e13ba1",
+      "bytes": 18631,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/completion/natural_collection_server.py",
+      "sha256": "620dfab65219e56b8ca8adc83d3818d0ff2d1171be267e1fb320a80a78f87640",
+      "bytes": 1634,
       "executable": false
     },
     {
@@ -434,6 +500,12 @@
       "path": "conceptgraph/completion/realtime_matrix.py",
       "sha256": "b8c912537704f852bda26fe5f99bc471b7610b7841143d7a625dc62dc2ad21d4",
       "bytes": 11692,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/completion/realtime_matrix_demo.py",
+      "sha256": "8b56182ebf20d4131f52391557382d96f98d64e8ec305b0c348c4f4d50c72323",
+      "bytes": 37675,
       "executable": false
     },
     {
@@ -635,9 +707,21 @@
       "executable": false
     },
     {
+      "path": "conceptgraph/completion/temporal_identity_evaluation.py",
+      "sha256": "c5a57b4edc7ee979888b139988f99a8df62031985fec9b3b73b5b49581f59b15",
+      "bytes": 19709,
+      "executable": false
+    },
+    {
       "path": "conceptgraph/completion/thesis_portal.py",
-      "sha256": "b74d18ff695dd23d592a51af77f471eae4695616b96d20bd2ef0cc8a377f43ac",
-      "bytes": 29450,
+      "sha256": "e82f80b0cba3aa4594a71fec83c929d09ef88d9596bd21840825e4e5f04e01d0",
+      "bytes": 46657,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/completion/topology_vehicle.py",
+      "sha256": "f0200cebffa5ed8aa4f02686a4e9f89f3494ff5bed99dc414db9c2e7475e0299",
+      "bytes": 10860,
       "executable": false
     },
     {
@@ -884,6 +968,12 @@
       "path": "conceptgraph/navigation/planner.py",
       "sha256": "585ddc41d7ca1bfc8508dce8cdae1cde81ed5b4982ab3b6dbaa478a4f393bb54",
       "bytes": 30851,
+      "executable": false
+    },
+    {
+      "path": "conceptgraph/navigation/reference_guided_vehicle.py",
+      "sha256": "fe65de18c10b7dd4ea2d07df0f3edcfc65772b6fbd4cca10b0f91139276cd9f3",
+      "bytes": 8189,
       "executable": false
     },
     {
@@ -1902,8 +1992,8 @@
     },
     {
       "path": "tests/navigation/test_online_state_machine.py",
-      "sha256": "c64705b025d93fea755f9d4a8d854d3703e93a859e6fd81ac047b0a38b4dd70b",
-      "bytes": 22734,
+      "sha256": "2c91f6676744410d4fec17a034e61da4e383c6d16739e61dc2c5b41fc3c3b585",
+      "bytes": 23057,
       "executable": false
     },
     {
@@ -1974,8 +2064,8 @@
     },
     {
       "path": "tests/nuscenes/test_scene_selector.py",
-      "sha256": "8e9921d976751fda96d465c8b23b9fc5cafc48bd051e3552609e2eea1b3bcc8d",
-      "bytes": 12727,
+      "sha256": "da3f627d18098ece512540ad71003cd808a58ce9e04d7163f9111f38eb1fb245",
+      "bytes": 13019,
       "executable": false
     },
     {
@@ -2003,6 +2093,12 @@
       "executable": false
     },
     {
+      "path": "tests/test_canonical_vehicle_corridor.py",
+      "sha256": "92d6314db4d90e6a0d97f6592e114f5ded17487db18f2b027c93fda296b4ff64",
+      "bytes": 2978,
+      "executable": false
+    },
+    {
       "path": "tests/test_completion_camera_time_evaluation.py",
       "sha256": "3de1a8f21c07ae1921356e2db7eca3f94116f21862d971681ad06ae26c131d75",
       "bytes": 4148,
@@ -2021,6 +2117,12 @@
       "executable": false
     },
     {
+      "path": "tests/test_completion_execution_direction_audit.py",
+      "sha256": "d41259a32dcdd77e87bd6b73c584aa91f794506e03cd715c348a70fd5420c502",
+      "bytes": 4188,
+      "executable": false
+    },
+    {
       "path": "tests/test_completion_fault_robustness.py",
       "sha256": "f71c21d119266bddbe9ab8ed8ff392d5d9a93a646615b51793ae6f8159e6d571",
       "bytes": 1163,
@@ -2033,15 +2135,45 @@
       "executable": false
     },
     {
+      "path": "tests/test_completion_independent_continuous_body.py",
+      "sha256": "777b0f08664db087bce7a77db9250c061dd143f05e66a6da3f264334ef7a8472",
+      "bytes": 5045,
+      "executable": false
+    },
+    {
       "path": "tests/test_completion_kitti.py",
       "sha256": "3f187428cd0c8043d34a1cdb9d2331993408c63edb8a94e15ad13098a59f4a8a",
       "bytes": 3256,
       "executable": false
     },
     {
+      "path": "tests/test_completion_kitti_tracking_experiment.py",
+      "sha256": "276c49a4ba18fdab813814439630bdb3b1d6797168cfb8d49998bb9047d9688b",
+      "bytes": 2523,
+      "executable": false
+    },
+    {
+      "path": "tests/test_completion_kitti_tracking_geometry.py",
+      "sha256": "6a79c1ec062aaef44f6cd29f2f68bf52f7c6b53caa68e2ebd7f082f7e981b88f",
+      "bytes": 3130,
+      "executable": false
+    },
+    {
+      "path": "tests/test_completion_live_navigation.py",
+      "sha256": "ab98b6a13d2516dd7750950eb13976da5ad28ae683cb2d5e2f7c3f00c7ebc3b8",
+      "bytes": 4311,
+      "executable": false
+    },
+    {
       "path": "tests/test_completion_map_constraint_ablation.py",
       "sha256": "8e742acaa6bad109b5583140eb6acdefc86cdc8524e456e869e726e83d6c312c",
       "bytes": 3670,
+      "executable": false
+    },
+    {
+      "path": "tests/test_completion_natural_collection.py",
+      "sha256": "ad00f356842198ef50ff3de8e4b3dd2dc0df44358dc4ee41f929857a51770192",
+      "bytes": 6112,
       "executable": false
     },
     {
@@ -2153,6 +2285,24 @@
       "executable": false
     },
     {
+      "path": "tests/test_completion_temporal_identity.py",
+      "sha256": "10b84a7e00b21843a8d28a5ed0f5f9c71bc3cd497ef4b7b7bd5edffaf25d2dbb",
+      "bytes": 6398,
+      "executable": false
+    },
+    {
+      "path": "tests/test_completion_topology_vehicle.py",
+      "sha256": "b8142b48e9c8c3647550bcb14541e3a300b08ef672b64fd3f88beb8aebfb5916",
+      "bytes": 3513,
+      "executable": false
+    },
+    {
+      "path": "tests/test_reference_guided_vehicle.py",
+      "sha256": "a6e76710b96b78988c710bed1d4898c65a1e7ee4711439170991f60ca7aaf3e5",
+      "bytes": 4592,
+      "executable": false
+    },
+    {
       "path": "tests/vlm/__init__.py",
       "sha256": "02876c406c407ae7b9580b330d5a4733bb15d9d861b5d886c0504bff4009859f",
       "bytes": 40,
@@ -2242,5 +2392,7 @@
   "original_manuscript_published": false,
   "credentials_published": false,
   "goal_complete": false,
-  "updated_utc": "2026-11-12T15:51:18.844907+00:00"
+  "updated_utc": "2026-11-13T16:28:40.747794+00:00",
+  "source_checkpoint_sha256": "310b0b77b1d93230daa527d7c23d8cbbde362c9bb820873496dfad78ddde1fc7",
+  "root_index_unchanged": true
 }

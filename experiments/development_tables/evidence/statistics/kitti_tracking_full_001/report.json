@@ -1,0 +1,1040 @@
+{
+  "dataset": "KITTI Tracking training",
+  "role": "external_development_diagnostic",
+  "frame_count": 90,
+  "sequence_count": 3,
+  "primary_categories": [
+    "car",
+    "truck",
+    "pedestrian"
+  ],
+  "object": {
+    "methods": {
+      "single_frame": {
+        "counts": {
+          "predictions": 158,
+          "truth": 74,
+          "true_positive": 4,
+          "unmatched_predictions": 154,
+          "false_negative": 70,
+          "duplicate_nodes": 0,
+          "center_error_sum_m": 7.630608306371801
+        },
+        "metrics": {
+          "recall": 0.05405405405405406,
+          "matched_prediction_fraction": 0.02531645569620253,
+          "center_error_m": 1.9076520765929503,
+          "duplicate_fraction": 0.0
+        }
+      },
+      "original_fusion": {
+        "counts": {
+          "predictions": 319,
+          "truth": 74,
+          "true_positive": 5,
+          "unmatched_predictions": 314,
+          "false_negative": 69,
+          "duplicate_nodes": 0,
+          "center_error_sum_m": 8.919516865351643
+        },
+        "metrics": {
+          "recall": 0.06756756756756757,
+          "matched_prediction_fraction": 0.01567398119122257,
+          "center_error_m": 1.7839033730703284,
+          "duplicate_fraction": 0.0
+        }
+      },
+      "one_to_one_depth_robust_motion": {
+        "counts": {
+          "predictions": 279,
+          "truth": 74,
+          "true_positive": 63,
+          "unmatched_predictions": 216,
+          "false_negative": 11,
+          "duplicate_nodes": 0,
+          "center_error_sum_m": 83.23796475655438
+        },
+        "metrics": {
+          "recall": 0.8513513513513513,
+          "matched_prediction_fraction": 0.22580645161290322,
+          "center_error_m": 1.3212375358183235,
+          "duplicate_fraction": 0.0
+        }
+      }
+    },
+    "paired_differences": [
+      {
+        "method": "single_frame",
+        "baseline": "original_fusion",
+        "metric": "recall",
+        "difference": -0.013513513513513514,
+        "ci95": [
+          -0.013513513513513514,
+          -0.013513513513513514
+        ],
+        "valid_resamples": 2845
+      },
+      {
+        "method": "single_frame",
+        "baseline": "original_fusion",
+        "metric": "matched_prediction_fraction",
+        "difference": 0.009642474504979962,
+        "ci95": [
+          0.0,
+          0.02638352638352638
+        ],
+        "valid_resamples": 4000
+      },
+      {
+        "method": "single_frame",
+        "baseline": "original_fusion",
+        "metric": "center_error_m",
+        "difference": 0.1237487035226219,
+        "ci95": [
+          0.1237487035226219,
+          0.1237487035226219
+        ],
+        "valid_resamples": 2845
+      },
+      {
+        "method": "single_frame",
+        "baseline": "original_fusion",
+        "metric": "duplicate_fraction",
+        "difference": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "valid_resamples": 4000
+      },
+      {
+        "method": "one_to_one_depth_robust_motion",
+        "baseline": "original_fusion",
+        "metric": "recall",
+        "difference": 0.7837837837837838,
+        "ci95": [
+          0.7837837837837838,
+          0.7837837837837838
+        ],
+        "valid_resamples": 2845
+      },
+      {
+        "method": "one_to_one_depth_robust_motion",
+        "baseline": "original_fusion",
+        "metric": "matched_prediction_fraction",
+        "difference": 0.21013247042168065,
+        "ci95": [
+          0.0,
+          0.618112849691797
+        ],
+        "valid_resamples": 4000
+      },
+      {
+        "method": "one_to_one_depth_robust_motion",
+        "baseline": "original_fusion",
+        "metric": "center_error_m",
+        "difference": -0.46266583725200494,
+        "ci95": [
+          -0.46266583725200516,
+          -0.46266583725200494
+        ],
+        "valid_resamples": 2845
+      },
+      {
+        "method": "one_to_one_depth_robust_motion",
+        "baseline": "original_fusion",
+        "metric": "duplicate_fraction",
+        "difference": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "valid_resamples": 4000
+      }
+    ],
+    "bootstrap": {
+      "unit": "sequence",
+      "repetitions": 4000,
+      "seed": 17,
+      "paired": true,
+      "limit": "仅三个序列，区间不证明广泛泛化"
+    }
+  },
+  "identity": {
+    "logs": 3,
+    "methods": {
+      "one_to_one_depth_robust_motion": {
+        "all_gated": {
+          "counts": {
+            "IDTP": 63,
+            "IDFN": 11,
+            "IDFP": 216,
+            "GT_observations": 74,
+            "prediction_observations": 279,
+            "ambiguous_GT_observations": 0,
+            "ambiguous_prediction_observations": 0,
+            "gated_edges": 63,
+            "supported_edges": 63,
+            "official_return_opportunities": 0,
+            "official_return_both_matched": 0,
+            "official_return_same_id": 0,
+            "official_return_changed_id": 0,
+            "official_return_unknown_id": 0,
+            "adjacent_matched_transitions": 59,
+            "adjacent_identity_changes": 0,
+            "method_gap_returns": 0,
+            "method_gap_same_id": 0,
+            "method_gap_changed_id": 0,
+            "GT_instances": 4,
+            "never_matched_instances": 0,
+            "never_matched_GT_observations": 0,
+            "unreturned_visible_tail_observations": 2,
+            "censored_tails": 1,
+            "tails_GT_absent_at_scene_end": 1
+          },
+          "metrics": {
+            "IDR": {
+              "value": 0.8513513513513513,
+              "ci95": [
+                0.8513513513513513,
+                0.8513513513513513
+              ],
+              "valid_resamples": 2845
+            },
+            "IDP": {
+              "value": 0.22580645161290322,
+              "ci95": [
+                0.0,
+                0.6631578947368421
+              ],
+              "valid_resamples": 4000
+            },
+            "IDF1": {
+              "value": 0.35694050991501414,
+              "ci95": [
+                0.0,
+                0.7455621301775148
+              ],
+              "valid_resamples": 4000
+            },
+            "adjacent_identity_change_rate": {
+              "value": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_resamples": 2845
+            },
+            "official_return_both_matched_rate": {
+              "value": null,
+              "ci95": null,
+              "valid_resamples": 0
+            },
+            "official_return_same_id_rate": {
+              "value": null,
+              "ci95": null,
+              "valid_resamples": 0
+            },
+            "official_return_changed_id_rate": {
+              "value": null,
+              "ci95": null,
+              "valid_resamples": 0
+            },
+            "official_return_unknown_id_rate": {
+              "value": null,
+              "ci95": null,
+              "valid_resamples": 0
+            }
+          }
+        },
+        "mutually_unique_gated": {
+          "counts": {
+            "IDTP": 63,
+            "IDFN": 11,
+            "IDFP": 216,
+            "GT_observations": 74,
+            "prediction_observations": 279,
+            "ambiguous_GT_observations": 0,
+            "ambiguous_prediction_observations": 0,
+            "gated_edges": 63,
+            "supported_edges": 63,
+            "official_return_opportunities": 0,
+            "official_return_both_matched": 0,
+            "official_return_same_id": 0,
+            "official_return_changed_id": 0,
+            "official_return_unknown_id": 0,
+            "adjacent_matched_transitions": 59,
+            "adjacent_identity_changes": 0,
+            "method_gap_returns": 0,
+            "method_gap_same_id": 0,
+            "method_gap_changed_id": 0,
+            "GT_instances": 4,
+            "never_matched_instances": 0,
+            "never_matched_GT_observations": 0,
+            "unreturned_visible_tail_observations": 2,
+            "censored_tails": 1,
+            "tails_GT_absent_at_scene_end": 1
+          },
+          "metrics": {
+            "IDR": {
+              "value": 0.8513513513513513,
+              "ci95": [
+                0.8513513513513513,
+                0.8513513513513513
+              ],
+              "valid_resamples": 2845
+            },
+            "IDP": {
+              "value": 0.22580645161290322,
+              "ci95": [
+                0.0,
+                0.6631578947368421
+              ],
+              "valid_resamples": 4000
+            },
+            "IDF1": {
+              "value": 0.35694050991501414,
+              "ci95": [
+                0.0,
+                0.7455621301775148
+              ],
+              "valid_resamples": 4000
+            },
+            "adjacent_identity_change_rate": {
+              "value": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_resamples": 2845
+            },
+            "official_return_both_matched_rate": {
+              "value": null,
+              "ci95": null,
+              "valid_resamples": 0
+            },
+            "official_return_same_id_rate": {
+              "value": null,
+              "ci95": null,
+              "valid_resamples": 0
+            },
+            "official_return_changed_id_rate": {
+              "value": null,
+              "ci95": null,
+              "valid_resamples": 0
+            },
+            "official_return_unknown_id_rate": {
+              "value": null,
+              "ci95": null,
+              "valid_resamples": 0
+            }
+          }
+        }
+      },
+      "original_fusion": {
+        "all_gated": {
+          "counts": {
+            "IDTP": 5,
+            "IDFN": 69,
+            "IDFP": 314,
+            "GT_observations": 74,
+            "prediction_observations": 319,
+            "ambiguous_GT_observations": 0,
+            "ambiguous_prediction_observations": 0,
+            "gated_edges": 5,
+            "supported_edges": 5,
+            "official_return_opportunities": 0,
+            "official_return_both_matched": 0,
+            "official_return_same_id": 0,
+            "official_return_changed_id": 0,
+            "official_return_unknown_id": 0,
+            "adjacent_matched_transitions": 2,
+            "adjacent_identity_changes": 0,
+            "method_gap_returns": 1,
+            "method_gap_same_id": 1,
+            "method_gap_changed_id": 0,
+            "GT_instances": 4,
+            "never_matched_instances": 2,
+            "never_matched_GT_observations": 52,
+            "unreturned_visible_tail_observations": 2,
+            "censored_tails": 1,
+            "tails_GT_absent_at_scene_end": 1
+          },
+          "metrics": {
+            "IDR": {
+              "value": 0.06756756756756757,
+              "ci95": [
+                0.06756756756756757,
+                0.06756756756756757
+              ],
+              "valid_resamples": 2845
+            },
+            "IDP": {
+              "value": 0.01567398119122257,
+              "ci95": [
+                0.0,
+                0.04504504504504504
+              ],
+              "valid_resamples": 4000
+            },
+            "IDF1": {
+              "value": 0.02544529262086514,
+              "ci95": [
+                0.0,
+                0.05405405405405406
+              ],
+              "valid_resamples": 4000
+            },
+            "adjacent_identity_change_rate": {
+              "value": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_resamples": 2845
+            },
+            "official_return_both_matched_rate": {
+              "value": null,
+              "ci95": null,
+              "valid_resamples": 0
+            },
+            "official_return_same_id_rate": {
+              "value": null,
+              "ci95": null,
+              "valid_resamples": 0
+            },
+            "official_return_changed_id_rate": {
+              "value": null,
+              "ci95": null,
+              "valid_resamples": 0
+            },
+            "official_return_unknown_id_rate": {
+              "value": null,
+              "ci95": null,
+              "valid_resamples": 0
+            }
+          }
+        },
+        "mutually_unique_gated": {
+          "counts": {
+            "IDTP": 5,
+            "IDFN": 69,
+            "IDFP": 314,
+            "GT_observations": 74,
+            "prediction_observations": 319,
+            "ambiguous_GT_observations": 0,
+            "ambiguous_prediction_observations": 0,
+            "gated_edges": 5,
+            "supported_edges": 5,
+            "official_return_opportunities": 0,
+            "official_return_both_matched": 0,
+            "official_return_same_id": 0,
+            "official_return_changed_id": 0,
+            "official_return_unknown_id": 0,
+            "adjacent_matched_transitions": 2,
+            "adjacent_identity_changes": 0,
+            "method_gap_returns": 1,
+            "method_gap_same_id": 1,
+            "method_gap_changed_id": 0,
+            "GT_instances": 4,
+            "never_matched_instances": 2,
+            "never_matched_GT_observations": 52,
+            "unreturned_visible_tail_observations": 2,
+            "censored_tails": 1,
+            "tails_GT_absent_at_scene_end": 1
+          },
+          "metrics": {
+            "IDR": {
+              "value": 0.06756756756756757,
+              "ci95": [
+                0.06756756756756757,
+                0.06756756756756757
+              ],
+              "valid_resamples": 2845
+            },
+            "IDP": {
+              "value": 0.01567398119122257,
+              "ci95": [
+                0.0,
+                0.04504504504504504
+              ],
+              "valid_resamples": 4000
+            },
+            "IDF1": {
+              "value": 0.02544529262086514,
+              "ci95": [
+                0.0,
+                0.05405405405405406
+              ],
+              "valid_resamples": 4000
+            },
+            "adjacent_identity_change_rate": {
+              "value": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_resamples": 2845
+            },
+            "official_return_both_matched_rate": {
+              "value": null,
+              "ci95": null,
+              "valid_resamples": 0
+            },
+            "official_return_same_id_rate": {
+              "value": null,
+              "ci95": null,
+              "valid_resamples": 0
+            },
+            "official_return_changed_id_rate": {
+              "value": null,
+              "ci95": null,
+              "valid_resamples": 0
+            },
+            "official_return_unknown_id_rate": {
+              "value": null,
+              "ci95": null,
+              "valid_resamples": 0
+            }
+          }
+        }
+      },
+      "single_frame": {
+        "all_gated": {
+          "counts": {
+            "IDTP": 2,
+            "IDFN": 72,
+            "IDFP": 156,
+            "GT_observations": 74,
+            "prediction_observations": 158,
+            "ambiguous_GT_observations": 0,
+            "ambiguous_prediction_observations": 0,
+            "gated_edges": 4,
+            "supported_edges": 4,
+            "official_return_opportunities": 0,
+            "official_return_both_matched": 0,
+            "official_return_same_id": 0,
+            "official_return_changed_id": 0,
+            "official_return_unknown_id": 0,
+            "adjacent_matched_transitions": 1,
+            "adjacent_identity_changes": 1,
+            "method_gap_returns": 1,
+            "method_gap_same_id": 0,
+            "method_gap_changed_id": 1,
+            "GT_instances": 4,
+            "never_matched_instances": 2,
+            "never_matched_GT_observations": 52,
+            "unreturned_visible_tail_observations": 2,
+            "censored_tails": 1,
+            "tails_GT_absent_at_scene_end": 1
+          },
+          "metrics": {
+            "IDR": {
+              "value": 0.02702702702702703,
+              "ci95": [
+                0.02702702702702703,
+                0.02702702702702703
+              ],
+              "valid_resamples": 2845
+            },
+            "IDP": {
+              "value": 0.012658227848101266,
+              "ci95": [
+                0.0,
+                0.03571428571428571
+              ],
+              "valid_resamples": 4000
+            },
+            "IDF1": {
+              "value": 0.017241379310344827,
+              "ci95": [
+                0.0,
+                0.03076923076923077
+              ],
+              "valid_resamples": 4000
+            },
+            "adjacent_identity_change_rate": {
+              "value": 1.0,
+              "ci95": [
+                1.0,
+                1.0
+              ],
+              "valid_resamples": 2845
+            },
+            "official_return_both_matched_rate": {
+              "value": null,
+              "ci95": null,
+              "valid_resamples": 0
+            },
+            "official_return_same_id_rate": {
+              "value": null,
+              "ci95": null,
+              "valid_resamples": 0
+            },
+            "official_return_changed_id_rate": {
+              "value": null,
+              "ci95": null,
+              "valid_resamples": 0
+            },
+            "official_return_unknown_id_rate": {
+              "value": null,
+              "ci95": null,
+              "valid_resamples": 0
+            }
+          }
+        },
+        "mutually_unique_gated": {
+          "counts": {
+            "IDTP": 2,
+            "IDFN": 72,
+            "IDFP": 156,
+            "GT_observations": 74,
+            "prediction_observations": 158,
+            "ambiguous_GT_observations": 0,
+            "ambiguous_prediction_observations": 0,
+            "gated_edges": 4,
+            "supported_edges": 4,
+            "official_return_opportunities": 0,
+            "official_return_both_matched": 0,
+            "official_return_same_id": 0,
+            "official_return_changed_id": 0,
+            "official_return_unknown_id": 0,
+            "adjacent_matched_transitions": 1,
+            "adjacent_identity_changes": 1,
+            "method_gap_returns": 1,
+            "method_gap_same_id": 0,
+            "method_gap_changed_id": 1,
+            "GT_instances": 4,
+            "never_matched_instances": 2,
+            "never_matched_GT_observations": 52,
+            "unreturned_visible_tail_observations": 2,
+            "censored_tails": 1,
+            "tails_GT_absent_at_scene_end": 1
+          },
+          "metrics": {
+            "IDR": {
+              "value": 0.02702702702702703,
+              "ci95": [
+                0.02702702702702703,
+                0.02702702702702703
+              ],
+              "valid_resamples": 2845
+            },
+            "IDP": {
+              "value": 0.012658227848101266,
+              "ci95": [
+                0.0,
+                0.03571428571428571
+              ],
+              "valid_resamples": 4000
+            },
+            "IDF1": {
+              "value": 0.017241379310344827,
+              "ci95": [
+                0.0,
+                0.03076923076923077
+              ],
+              "valid_resamples": 4000
+            },
+            "adjacent_identity_change_rate": {
+              "value": 1.0,
+              "ci95": [
+                1.0,
+                1.0
+              ],
+              "valid_resamples": 2845
+            },
+            "official_return_both_matched_rate": {
+              "value": null,
+              "ci95": null,
+              "valid_resamples": 0
+            },
+            "official_return_same_id_rate": {
+              "value": null,
+              "ci95": null,
+              "valid_resamples": 0
+            },
+            "official_return_changed_id_rate": {
+              "value": null,
+              "ci95": null,
+              "valid_resamples": 0
+            },
+            "official_return_unknown_id_rate": {
+              "value": null,
+              "ci95": null,
+              "valid_resamples": 0
+            }
+          }
+        }
+      }
+    },
+    "paired_differences": [
+      {
+        "method": "one_to_one_depth_robust_motion",
+        "baseline": "original_fusion",
+        "support": "all_gated",
+        "metric": "IDR",
+        "difference": 0.7837837837837838,
+        "ci95": [
+          0.7837837837837838,
+          0.7837837837837838
+        ],
+        "valid_resamples": 2845
+      },
+      {
+        "method": "one_to_one_depth_robust_motion",
+        "baseline": "original_fusion",
+        "support": "all_gated",
+        "metric": "IDP",
+        "difference": 0.21013247042168065,
+        "ci95": [
+          0.0,
+          0.618112849691797
+        ],
+        "valid_resamples": 4000
+      },
+      {
+        "method": "one_to_one_depth_robust_motion",
+        "baseline": "original_fusion",
+        "support": "all_gated",
+        "metric": "IDF1",
+        "difference": 0.331495217294149,
+        "ci95": [
+          0.0,
+          0.6915080761234608
+        ],
+        "valid_resamples": 4000
+      },
+      {
+        "method": "one_to_one_depth_robust_motion",
+        "baseline": "original_fusion",
+        "support": "all_gated",
+        "metric": "adjacent_identity_change_rate",
+        "difference": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "valid_resamples": 2845
+      },
+      {
+        "method": "one_to_one_depth_robust_motion",
+        "baseline": "original_fusion",
+        "support": "all_gated",
+        "metric": "official_return_both_matched_rate",
+        "difference": null,
+        "ci95": null,
+        "valid_resamples": 0
+      },
+      {
+        "method": "one_to_one_depth_robust_motion",
+        "baseline": "original_fusion",
+        "support": "all_gated",
+        "metric": "official_return_same_id_rate",
+        "difference": null,
+        "ci95": null,
+        "valid_resamples": 0
+      },
+      {
+        "method": "one_to_one_depth_robust_motion",
+        "baseline": "original_fusion",
+        "support": "all_gated",
+        "metric": "official_return_changed_id_rate",
+        "difference": null,
+        "ci95": null,
+        "valid_resamples": 0
+      },
+      {
+        "method": "one_to_one_depth_robust_motion",
+        "baseline": "original_fusion",
+        "support": "all_gated",
+        "metric": "official_return_unknown_id_rate",
+        "difference": null,
+        "ci95": null,
+        "valid_resamples": 0
+      },
+      {
+        "method": "one_to_one_depth_robust_motion",
+        "baseline": "original_fusion",
+        "support": "mutually_unique_gated",
+        "metric": "IDR",
+        "difference": 0.7837837837837838,
+        "ci95": [
+          0.7837837837837838,
+          0.7837837837837838
+        ],
+        "valid_resamples": 2845
+      },
+      {
+        "method": "one_to_one_depth_robust_motion",
+        "baseline": "original_fusion",
+        "support": "mutually_unique_gated",
+        "metric": "IDP",
+        "difference": 0.21013247042168065,
+        "ci95": [
+          0.0,
+          0.618112849691797
+        ],
+        "valid_resamples": 4000
+      },
+      {
+        "method": "one_to_one_depth_robust_motion",
+        "baseline": "original_fusion",
+        "support": "mutually_unique_gated",
+        "metric": "IDF1",
+        "difference": 0.331495217294149,
+        "ci95": [
+          0.0,
+          0.6915080761234608
+        ],
+        "valid_resamples": 4000
+      },
+      {
+        "method": "one_to_one_depth_robust_motion",
+        "baseline": "original_fusion",
+        "support": "mutually_unique_gated",
+        "metric": "adjacent_identity_change_rate",
+        "difference": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "valid_resamples": 2845
+      },
+      {
+        "method": "one_to_one_depth_robust_motion",
+        "baseline": "original_fusion",
+        "support": "mutually_unique_gated",
+        "metric": "official_return_both_matched_rate",
+        "difference": null,
+        "ci95": null,
+        "valid_resamples": 0
+      },
+      {
+        "method": "one_to_one_depth_robust_motion",
+        "baseline": "original_fusion",
+        "support": "mutually_unique_gated",
+        "metric": "official_return_same_id_rate",
+        "difference": null,
+        "ci95": null,
+        "valid_resamples": 0
+      },
+      {
+        "method": "one_to_one_depth_robust_motion",
+        "baseline": "original_fusion",
+        "support": "mutually_unique_gated",
+        "metric": "official_return_changed_id_rate",
+        "difference": null,
+        "ci95": null,
+        "valid_resamples": 0
+      },
+      {
+        "method": "one_to_one_depth_robust_motion",
+        "baseline": "original_fusion",
+        "support": "mutually_unique_gated",
+        "metric": "official_return_unknown_id_rate",
+        "difference": null,
+        "ci95": null,
+        "valid_resamples": 0
+      },
+      {
+        "method": "single_frame",
+        "baseline": "original_fusion",
+        "support": "all_gated",
+        "metric": "IDR",
+        "difference": -0.04054054054054054,
+        "ci95": [
+          -0.04054054054054054,
+          -0.04054054054054054
+        ],
+        "valid_resamples": 2845
+      },
+      {
+        "method": "single_frame",
+        "baseline": "original_fusion",
+        "support": "all_gated",
+        "metric": "IDP",
+        "difference": -0.0030157533431213034,
+        "ci95": [
+          -0.00933075933075933,
+          0.0
+        ],
+        "valid_resamples": 4000
+      },
+      {
+        "method": "single_frame",
+        "baseline": "original_fusion",
+        "support": "all_gated",
+        "metric": "IDF1",
+        "difference": -0.008203913310520311,
+        "ci95": [
+          -0.023284823284823286,
+          0.0
+        ],
+        "valid_resamples": 4000
+      },
+      {
+        "method": "single_frame",
+        "baseline": "original_fusion",
+        "support": "all_gated",
+        "metric": "adjacent_identity_change_rate",
+        "difference": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "valid_resamples": 2845
+      },
+      {
+        "method": "single_frame",
+        "baseline": "original_fusion",
+        "support": "all_gated",
+        "metric": "official_return_both_matched_rate",
+        "difference": null,
+        "ci95": null,
+        "valid_resamples": 0
+      },
+      {
+        "method": "single_frame",
+        "baseline": "original_fusion",
+        "support": "all_gated",
+        "metric": "official_return_same_id_rate",
+        "difference": null,
+        "ci95": null,
+        "valid_resamples": 0
+      },
+      {
+        "method": "single_frame",
+        "baseline": "original_fusion",
+        "support": "all_gated",
+        "metric": "official_return_changed_id_rate",
+        "difference": null,
+        "ci95": null,
+        "valid_resamples": 0
+      },
+      {
+        "method": "single_frame",
+        "baseline": "original_fusion",
+        "support": "all_gated",
+        "metric": "official_return_unknown_id_rate",
+        "difference": null,
+        "ci95": null,
+        "valid_resamples": 0
+      },
+      {
+        "method": "single_frame",
+        "baseline": "original_fusion",
+        "support": "mutually_unique_gated",
+        "metric": "IDR",
+        "difference": -0.04054054054054054,
+        "ci95": [
+          -0.04054054054054054,
+          -0.04054054054054054
+        ],
+        "valid_resamples": 2845
+      },
+      {
+        "method": "single_frame",
+        "baseline": "original_fusion",
+        "support": "mutually_unique_gated",
+        "metric": "IDP",
+        "difference": -0.0030157533431213034,
+        "ci95": [
+          -0.00933075933075933,
+          0.0
+        ],
+        "valid_resamples": 4000
+      },
+      {
+        "method": "single_frame",
+        "baseline": "original_fusion",
+        "support": "mutually_unique_gated",
+        "metric": "IDF1",
+        "difference": -0.008203913310520311,
+        "ci95": [
+          -0.023284823284823286,
+          0.0
+        ],
+        "valid_resamples": 4000
+      },
+      {
+        "method": "single_frame",
+        "baseline": "original_fusion",
+        "support": "mutually_unique_gated",
+        "metric": "adjacent_identity_change_rate",
+        "difference": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "valid_resamples": 2845
+      },
+      {
+        "method": "single_frame",
+        "baseline": "original_fusion",
+        "support": "mutually_unique_gated",
+        "metric": "official_return_both_matched_rate",
+        "difference": null,
+        "ci95": null,
+        "valid_resamples": 0
+      },
+      {
+        "method": "single_frame",
+        "baseline": "original_fusion",
+        "support": "mutually_unique_gated",
+        "metric": "official_return_same_id_rate",
+        "difference": null,
+        "ci95": null,
+        "valid_resamples": 0
+      },
+      {
+        "method": "single_frame",
+        "baseline": "original_fusion",
+        "support": "mutually_unique_gated",
+        "metric": "official_return_changed_id_rate",
+        "difference": null,
+        "ci95": null,
+        "valid_resamples": 0
+      },
+      {
+        "method": "single_frame",
+        "baseline": "original_fusion",
+        "support": "mutually_unique_gated",
+        "metric": "official_return_unknown_id_rate",
+        "difference": null,
+        "ci95": null,
+        "valid_resamples": 0
+      }
+    ],
+    "bootstrap": {
+      "unit": "采集log",
+      "repetitions": 4000,
+      "seed": 17,
+      "paired": true
+    }
+  },
+  "excluded_label_reasons": {
+    "unsupported_category_or_DontCare": 465
+  },
+  "source_evaluation_frames_sha256": {
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/statistics/kitti_tracking_full_001/0000_frames.jsonl": "25f8ec65ada18433593c7af041e4f2078edbc822ccf38074454db2a7d5a0026d",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/statistics/kitti_tracking_full_001/0005_frames.jsonl": "175c45520370448a8758a4f06a4c92581eb166e13589e8b3396e3c1cae40d2e3",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/statistics/kitti_tracking_full_001/0013_frames.jsonl": "4ba8c4be175371d0c46368dbdc186691b38a58c85cb27f2c445dd318a6306bee"
+  },
+  "nominal_dt_s": 0.1,
+  "measured_sensor_timestamps": false,
+  "official_KITTI_HOTA_AP": false,
+  "navigation_arrivals": 0,
+  "human_annotation_credit": false,
+  "GPU_performance_credit": false,
+  "limitations": [
+    "三个3秒中心窗口，非完整序列；三个序列不等于三个独立采集log",
+    "预训练数据与KITTI重合未知；开发诊断不能替代新的封存自然语言测试",
+    "GT框中心与可见表面点云中心存在定义差异；XY中心门限关联不等于逐点人工身份真值",
+    "未匹配预测包含DontCare/未支持类别混淆，matched_prediction_fraction不是完整误检率",
+    "original_fusion已统一正确名义0.1秒；改进条件是组合改动",
+    "无原始传感器采集时间戳，不声明实测同步或真实时钟速度真值"
+  ],
+  "shared_CPU_wall_s": 0.38220765069127083,
+  "goal_complete": false
+}

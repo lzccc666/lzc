@@ -1,0 +1,44 @@
+{
+  "mode": "full",
+  "attempted": 228,
+  "expected": 228,
+  "status_counts": {
+    "unknown_artificial_start_exceeds_30m_bound": 24,
+    "NO_ROUTE": 24,
+    "UNKNOWN_INVALID_DECLARED_CHAIN": 60,
+    "REFERENCE_POSE_REACHED": 9,
+    "unknown_entry_or_exit_lane_too_short": 24,
+    "unknown_no_declared_outgoing_connector": 30,
+    "unknown_no_aligned_nearby_entry_lane": 24,
+    "unknown_connector_has_no_declared_exit_lane": 24,
+    "SAFETY_GUARD_STOPPED": 9
+  },
+  "planned_routes": 18,
+  "executed_trials": 18,
+  "reference_pose_reached": 9,
+  "actual_semantic_arrival_credit": 0,
+  "actual_model_calls": 0,
+  "actual_perception_run": false,
+  "by_method": {
+    "hybrid_astar": {
+      "trials": 114,
+      "routes": 0,
+      "actual_motion": 0,
+      "reference_pose_reached": 0
+    },
+    "point_astar": {
+      "trials": 114,
+      "routes": 18,
+      "actual_motion": 18,
+      "reference_pose_reached": 9
+    }
+  },
+  "trial_records_sha256": "f452d31aabfe37e673c5405aa47fde01427eaa26fb8e3dd07605d74c655229b9",
+  "wall_CPU_shared_s": 116.62256453372538,
+  "limitations": [
+    "给定地图路线的人为后轴起始条件，不是录制车辆后轴重建或真实感知闭环",
+    "当前预测障碍冻结为静态；不评价动态交通安全",
+    "参考位姿到达不是正确对象选择、锁定或语义到达"
+  ],
+  "goal_complete": false
+}

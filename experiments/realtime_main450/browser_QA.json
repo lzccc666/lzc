@@ -1,0 +1,598 @@
+{
+  "passed": true,
+  "created_utc": "2026-11-12T20:04:58.984729+00:00",
+  "viewer": "realtime_main450_preview_003",
+  "viewer_manifest_sha256": "dd27d6f62c83dbbd859d2ea996b2621f0a4a1e8aa8ff328da3b0f2bad2f023be",
+  "QA_source_sha256": "b2fe90b62a69260ded6021e0bdd820d28d998ca8eb91f11e207f2493abca8b29",
+  "roster_HTTP_cases": 450,
+  "proof_HTTP_links": 1350,
+  "unique_browser_cases": 12,
+  "viewport_case_checks": 24,
+  "checks": [
+    {
+      "viewport": "desktop",
+      "run": "realtime_three_model_full_001_base_full_config00_positive1_s29",
+      "method": "base_full",
+      "kind": "reachable_positive",
+      "status": "ARRIVED",
+      "actual_state_and_prefix_checks": 6,
+      "GT_hidden": true,
+      "reconstructed_initial": false,
+      "canvas": {
+        "w": 1362,
+        "h": 430,
+        "cw": 1362,
+        "ch": 430
+      },
+      "causal_completed_frame_alignment": true,
+      "page_errors": []
+    },
+    {
+      "viewport": "desktop",
+      "run": "realtime_three_model_full_001_base_full_config09_no_match_s29",
+      "method": "base_full",
+      "kind": "no_match",
+      "status": "SEARCH_EXHAUSTED_WITHOUT_VERIFIED_MATCH",
+      "actual_state_and_prefix_checks": 6,
+      "GT_hidden": true,
+      "reconstructed_initial": false,
+      "canvas": {
+        "w": 1362,
+        "h": 430,
+        "cw": 1362,
+        "ch": 430
+      },
+      "causal_completed_frame_alignment": true,
+      "page_errors": []
+    },
+    {
+      "viewport": "desktop",
+      "run": "realtime_three_model_full_001_base_full_config06_inaccessible_s17",
+      "method": "base_full",
+      "kind": "inaccessible",
+      "status": "WALL_CLOCK_TIMEOUT",
+      "actual_state_and_prefix_checks": 6,
+      "GT_hidden": true,
+      "reconstructed_initial": false,
+      "canvas": {
+        "w": 1362,
+        "h": 430,
+        "cw": 1362,
+        "ch": 430
+      },
+      "causal_completed_frame_alignment": true,
+      "page_errors": []
+    },
+    {
+      "viewport": "desktop",
+      "run": "realtime_three_model_full_001_new_full_config07_positive0_s43",
+      "method": "new_full",
+      "kind": "reachable_positive",
+      "status": "SEARCH_EXHAUSTED_WITHOUT_VERIFIED_MATCH",
+      "actual_state_and_prefix_checks": 6,
+      "GT_hidden": true,
+      "reconstructed_initial": false,
+      "canvas": {
+        "w": 1362,
+        "h": 430,
+        "cw": 1362,
+        "ch": 430
+      },
+      "causal_completed_frame_alignment": true,
+      "page_errors": []
+    },
+    {
+      "viewport": "desktop",
+      "run": "realtime_three_model_full_001_new_full_config01_no_match_s43",
+      "method": "new_full",
+      "kind": "no_match",
+      "status": "SEARCH_EXHAUSTED_WITHOUT_VERIFIED_MATCH",
+      "actual_state_and_prefix_checks": 6,
+      "GT_hidden": true,
+      "reconstructed_initial": false,
+      "canvas": {
+        "w": 1362,
+        "h": 430,
+        "cw": 1362,
+        "ch": 430
+      },
+      "causal_completed_frame_alignment": true,
+      "page_errors": []
+    },
+    {
+      "viewport": "desktop",
+      "run": "realtime_three_model_full_001_new_full_config08_inaccessible_s29",
+      "method": "new_full",
+      "kind": "inaccessible",
+      "status": "WALL_CLOCK_TIMEOUT",
+      "actual_state_and_prefix_checks": 6,
+      "GT_hidden": true,
+      "reconstructed_initial": false,
+      "canvas": {
+        "w": 1362,
+        "h": 430,
+        "cw": 1362,
+        "ch": 430
+      },
+      "causal_completed_frame_alignment": true,
+      "page_errors": []
+    },
+    {
+      "viewport": "desktop",
+      "run": "realtime_three_model_full_001_new_full_config06_positive0_s29",
+      "method": "new_full",
+      "kind": "reachable_positive",
+      "status": "ARRIVED",
+      "actual_state_and_prefix_checks": 6,
+      "GT_hidden": true,
+      "reconstructed_initial": true,
+      "canvas": {
+        "w": 1362,
+        "h": 430,
+        "cw": 1362,
+        "ch": 430
+      },
+      "causal_completed_frame_alignment": true,
+      "page_errors": []
+    },
+    {
+      "viewport": "desktop",
+      "run": "realtime_three_model_full_001_rule_config05_positive0_s29",
+      "method": "rule",
+      "kind": "reachable_positive",
+      "status": "ARRIVED",
+      "actual_state_and_prefix_checks": 6,
+      "GT_hidden": true,
+      "reconstructed_initial": false,
+      "canvas": {
+        "w": 1362,
+        "h": 430,
+        "cw": 1362,
+        "ch": 430
+      },
+      "causal_completed_frame_alignment": true,
+      "page_errors": []
+    },
+    {
+      "viewport": "desktop",
+      "run": "realtime_three_model_full_001_rule_config09_no_match_s17",
+      "method": "rule",
+      "kind": "no_match",
+      "status": "SEARCH_EXHAUSTED_WITHOUT_VERIFIED_MATCH",
+      "actual_state_and_prefix_checks": 6,
+      "GT_hidden": true,
+      "reconstructed_initial": false,
+      "canvas": {
+        "w": 1362,
+        "h": 430,
+        "cw": 1362,
+        "ch": 430
+      },
+      "causal_completed_frame_alignment": true,
+      "page_errors": []
+    },
+    {
+      "viewport": "desktop",
+      "run": "realtime_three_model_full_001_rule_config03_inaccessible_s29",
+      "method": "rule",
+      "kind": "inaccessible",
+      "status": "WALL_CLOCK_TIMEOUT",
+      "actual_state_and_prefix_checks": 6,
+      "GT_hidden": true,
+      "reconstructed_initial": false,
+      "canvas": {
+        "w": 1362,
+        "h": 430,
+        "cw": 1362,
+        "ch": 430
+      },
+      "causal_completed_frame_alignment": true,
+      "page_errors": []
+    },
+    {
+      "viewport": "desktop",
+      "run": "realtime_three_model_full_001_base_full_config05_positive0_s17",
+      "method": "base_full",
+      "kind": "reachable_positive",
+      "status": "PROCESS_FAILED_NO_RESULT",
+      "actual_state_and_prefix_checks": 6,
+      "GT_hidden": true,
+      "reconstructed_initial": false,
+      "canvas": {
+        "w": 1362,
+        "h": 430,
+        "cw": 1362,
+        "ch": 430
+      },
+      "causal_completed_frame_alignment": true,
+      "page_errors": []
+    },
+    {
+      "viewport": "desktop",
+      "run": "realtime_three_model_full_001_new_full_config07_positive1_s29",
+      "method": "new_full",
+      "kind": "reachable_positive",
+      "status": "SAFETY_STOP",
+      "actual_state_and_prefix_checks": 6,
+      "GT_hidden": true,
+      "reconstructed_initial": true,
+      "canvas": {
+        "w": 1362,
+        "h": 430,
+        "cw": 1362,
+        "ch": 430
+      },
+      "causal_completed_frame_alignment": true,
+      "page_errors": []
+    },
+    {
+      "viewport": "mobile",
+      "run": "realtime_three_model_full_001_base_full_config00_positive1_s29",
+      "method": "base_full",
+      "kind": "reachable_positive",
+      "status": "ARRIVED",
+      "actual_state_and_prefix_checks": 6,
+      "GT_hidden": true,
+      "reconstructed_initial": false,
+      "canvas": {
+        "w": 664,
+        "h": 660,
+        "cw": 332,
+        "ch": 330
+      },
+      "causal_completed_frame_alignment": true,
+      "page_errors": []
+    },
+    {
+      "viewport": "mobile",
+      "run": "realtime_three_model_full_001_base_full_config09_no_match_s29",
+      "method": "base_full",
+      "kind": "no_match",
+      "status": "SEARCH_EXHAUSTED_WITHOUT_VERIFIED_MATCH",
+      "actual_state_and_prefix_checks": 6,
+      "GT_hidden": true,
+      "reconstructed_initial": false,
+      "canvas": {
+        "w": 664,
+        "h": 660,
+        "cw": 332,
+        "ch": 330
+      },
+      "causal_completed_frame_alignment": true,
+      "page_errors": []
+    },
+    {
+      "viewport": "mobile",
+      "run": "realtime_three_model_full_001_base_full_config06_inaccessible_s17",
+      "method": "base_full",
+      "kind": "inaccessible",
+      "status": "WALL_CLOCK_TIMEOUT",
+      "actual_state_and_prefix_checks": 6,
+      "GT_hidden": true,
+      "reconstructed_initial": false,
+      "canvas": {
+        "w": 664,
+        "h": 660,
+        "cw": 332,
+        "ch": 330
+      },
+      "causal_completed_frame_alignment": true,
+      "page_errors": []
+    },
+    {
+      "viewport": "mobile",
+      "run": "realtime_three_model_full_001_new_full_config07_positive0_s43",
+      "method": "new_full",
+      "kind": "reachable_positive",
+      "status": "SEARCH_EXHAUSTED_WITHOUT_VERIFIED_MATCH",
+      "actual_state_and_prefix_checks": 6,
+      "GT_hidden": true,
+      "reconstructed_initial": false,
+      "canvas": {
+        "w": 664,
+        "h": 660,
+        "cw": 332,
+        "ch": 330
+      },
+      "causal_completed_frame_alignment": true,
+      "page_errors": []
+    },
+    {
+      "viewport": "mobile",
+      "run": "realtime_three_model_full_001_new_full_config01_no_match_s43",
+      "method": "new_full",
+      "kind": "no_match",
+      "status": "SEARCH_EXHAUSTED_WITHOUT_VERIFIED_MATCH",
+      "actual_state_and_prefix_checks": 6,
+      "GT_hidden": true,
+      "reconstructed_initial": false,
+      "canvas": {
+        "w": 664,
+        "h": 660,
+        "cw": 332,
+        "ch": 330
+      },
+      "causal_completed_frame_alignment": true,
+      "page_errors": []
+    },
+    {
+      "viewport": "mobile",
+      "run": "realtime_three_model_full_001_new_full_config08_inaccessible_s29",
+      "method": "new_full",
+      "kind": "inaccessible",
+      "status": "WALL_CLOCK_TIMEOUT",
+      "actual_state_and_prefix_checks": 6,
+      "GT_hidden": true,
+      "reconstructed_initial": false,
+      "canvas": {
+        "w": 664,
+        "h": 660,
+        "cw": 332,
+        "ch": 330
+      },
+      "causal_completed_frame_alignment": true,
+      "page_errors": []
+    },
+    {
+      "viewport": "mobile",
+      "run": "realtime_three_model_full_001_new_full_config06_positive0_s29",
+      "method": "new_full",
+      "kind": "reachable_positive",
+      "status": "ARRIVED",
+      "actual_state_and_prefix_checks": 6,
+      "GT_hidden": true,
+      "reconstructed_initial": true,
+      "canvas": {
+        "w": 664,
+        "h": 660,
+        "cw": 332,
+        "ch": 330
+      },
+      "causal_completed_frame_alignment": true,
+      "page_errors": []
+    },
+    {
+      "viewport": "mobile",
+      "run": "realtime_three_model_full_001_rule_config05_positive0_s29",
+      "method": "rule",
+      "kind": "reachable_positive",
+      "status": "ARRIVED",
+      "actual_state_and_prefix_checks": 6,
+      "GT_hidden": true,
+      "reconstructed_initial": false,
+      "canvas": {
+        "w": 664,
+        "h": 660,
+        "cw": 332,
+        "ch": 330
+      },
+      "causal_completed_frame_alignment": true,
+      "page_errors": []
+    },
+    {
+      "viewport": "mobile",
+      "run": "realtime_three_model_full_001_rule_config09_no_match_s17",
+      "method": "rule",
+      "kind": "no_match",
+      "status": "SEARCH_EXHAUSTED_WITHOUT_VERIFIED_MATCH",
+      "actual_state_and_prefix_checks": 6,
+      "GT_hidden": true,
+      "reconstructed_initial": false,
+      "canvas": {
+        "w": 664,
+        "h": 660,
+        "cw": 332,
+        "ch": 330
+      },
+      "causal_completed_frame_alignment": true,
+      "page_errors": []
+    },
+    {
+      "viewport": "mobile",
+      "run": "realtime_three_model_full_001_rule_config03_inaccessible_s29",
+      "method": "rule",
+      "kind": "inaccessible",
+      "status": "WALL_CLOCK_TIMEOUT",
+      "actual_state_and_prefix_checks": 6,
+      "GT_hidden": true,
+      "reconstructed_initial": false,
+      "canvas": {
+        "w": 664,
+        "h": 660,
+        "cw": 332,
+        "ch": 330
+      },
+      "causal_completed_frame_alignment": true,
+      "page_errors": []
+    },
+    {
+      "viewport": "mobile",
+      "run": "realtime_three_model_full_001_base_full_config05_positive0_s17",
+      "method": "base_full",
+      "kind": "reachable_positive",
+      "status": "PROCESS_FAILED_NO_RESULT",
+      "actual_state_and_prefix_checks": 6,
+      "GT_hidden": true,
+      "reconstructed_initial": false,
+      "canvas": {
+        "w": 664,
+        "h": 660,
+        "cw": 332,
+        "ch": 330
+      },
+      "causal_completed_frame_alignment": true,
+      "page_errors": []
+    },
+    {
+      "viewport": "mobile",
+      "run": "realtime_three_model_full_001_new_full_config07_positive1_s29",
+      "method": "new_full",
+      "kind": "reachable_positive",
+      "status": "SAFETY_STOP",
+      "actual_state_and_prefix_checks": 6,
+      "GT_hidden": true,
+      "reconstructed_initial": true,
+      "canvas": {
+        "w": 664,
+        "h": 660,
+        "cw": 332,
+        "ch": 330
+      },
+      "causal_completed_frame_alignment": true,
+      "page_errors": []
+    }
+  ],
+  "PNG_checks": [
+    {
+      "viewport": "desktop",
+      "filter": "filter_0",
+      "width": 9,
+      "height": 7,
+      "nonzero": 56,
+      "sha": "a01bbcf61d2953be787942fb326cb38a6b258c5dff15d9fe98d5d258a7e109d8"
+    },
+    {
+      "viewport": "desktop",
+      "filter": "filter_1",
+      "width": 9,
+      "height": 7,
+      "nonzero": 56,
+      "sha": "a01bbcf61d2953be787942fb326cb38a6b258c5dff15d9fe98d5d258a7e109d8"
+    },
+    {
+      "viewport": "desktop",
+      "filter": "filter_2",
+      "width": 9,
+      "height": 7,
+      "nonzero": 56,
+      "sha": "a01bbcf61d2953be787942fb326cb38a6b258c5dff15d9fe98d5d258a7e109d8"
+    },
+    {
+      "viewport": "desktop",
+      "filter": "filter_3",
+      "width": 9,
+      "height": 7,
+      "nonzero": 56,
+      "sha": "a01bbcf61d2953be787942fb326cb38a6b258c5dff15d9fe98d5d258a7e109d8"
+    },
+    {
+      "viewport": "desktop",
+      "filter": "filter_4",
+      "width": 9,
+      "height": 7,
+      "nonzero": 56,
+      "sha": "a01bbcf61d2953be787942fb326cb38a6b258c5dff15d9fe98d5d258a7e109d8"
+    },
+    {
+      "viewport": "desktop",
+      "real_frame": 32,
+      "run": "realtime_three_model_full_001_base_full_config00_positive1_s29",
+      "pixels_sha": "e55738e72939550d5a19828e5a0268e389bc4915e0a18cf921cb6868f4c8b6f1",
+      "world_points_checked": 384
+    },
+    {
+      "viewport": "desktop",
+      "real_frame": 105,
+      "run": "realtime_three_model_full_001_base_full_config09_no_match_s29",
+      "pixels_sha": "ada38ae09b3950c16708801eb2faaa2cb62dacb169d437a643fce33de9405956",
+      "world_points_checked": 384
+    },
+    {
+      "viewport": "desktop",
+      "real_frame": 39,
+      "run": "realtime_three_model_full_001_base_full_config06_inaccessible_s17",
+      "pixels_sha": "0d8fac59357b081660cc0f1cf2a4488a9da88b9af08f25ebfb126c85aebe1f84",
+      "world_points_checked": 384
+    },
+    {
+      "viewport": "mobile",
+      "filter": "filter_0",
+      "width": 9,
+      "height": 7,
+      "nonzero": 56,
+      "sha": "a01bbcf61d2953be787942fb326cb38a6b258c5dff15d9fe98d5d258a7e109d8"
+    },
+    {
+      "viewport": "mobile",
+      "filter": "filter_1",
+      "width": 9,
+      "height": 7,
+      "nonzero": 56,
+      "sha": "a01bbcf61d2953be787942fb326cb38a6b258c5dff15d9fe98d5d258a7e109d8"
+    },
+    {
+      "viewport": "mobile",
+      "filter": "filter_2",
+      "width": 9,
+      "height": 7,
+      "nonzero": 56,
+      "sha": "a01bbcf61d2953be787942fb326cb38a6b258c5dff15d9fe98d5d258a7e109d8"
+    },
+    {
+      "viewport": "mobile",
+      "filter": "filter_3",
+      "width": 9,
+      "height": 7,
+      "nonzero": 56,
+      "sha": "a01bbcf61d2953be787942fb326cb38a6b258c5dff15d9fe98d5d258a7e109d8"
+    },
+    {
+      "viewport": "mobile",
+      "filter": "filter_4",
+      "width": 9,
+      "height": 7,
+      "nonzero": 56,
+      "sha": "a01bbcf61d2953be787942fb326cb38a6b258c5dff15d9fe98d5d258a7e109d8"
+    },
+    {
+      "viewport": "mobile",
+      "real_frame": 32,
+      "run": "realtime_three_model_full_001_base_full_config00_positive1_s29",
+      "pixels_sha": "e55738e72939550d5a19828e5a0268e389bc4915e0a18cf921cb6868f4c8b6f1",
+      "world_points_checked": 384
+    },
+    {
+      "viewport": "mobile",
+      "real_frame": 105,
+      "run": "realtime_three_model_full_001_base_full_config09_no_match_s29",
+      "pixels_sha": "ada38ae09b3950c16708801eb2faaa2cb62dacb169d437a643fce33de9405956",
+      "world_points_checked": 384
+    },
+    {
+      "viewport": "mobile",
+      "real_frame": 39,
+      "run": "realtime_three_model_full_001_base_full_config06_inaccessible_s17",
+      "pixels_sha": "0d8fac59357b081660cc0f1cf2a4488a9da88b9af08f25ebfb126c85aebe1f84",
+      "world_points_checked": 384
+    }
+  ],
+  "state_and_prefix_checks": 144,
+  "only_GET": true,
+  "browser_requests": 666,
+  "failed_business_responses": [],
+  "human_status_before": {
+    "human_submissions": 0,
+    "development_submissions": 0,
+    "natural_submissions": 0,
+    "storage": "annotation/human_submissions",
+    "natural_storage": "annotation/human_natural_submissions"
+  },
+  "human_status_after": {
+    "human_submissions": 0,
+    "development_submissions": 0,
+    "natural_submissions": 0,
+    "storage": "annotation/human_submissions",
+    "natural_storage": "annotation/human_natural_submissions"
+  },
+  "actual_model_calls": 0,
+  "new_executions": 0,
+  "new_arrivals": 0,
+  "human_records_written": 0,
+  "CPU_shared_wall_s": 23.944151094183326,
+  "limits": [
+    "浏览器代表条件检查不等于450次逐帧人工审核；全部450清单与源键/证据链接单独全查",
+    "PNG/空间点核对限检查帧；原始57,460组输入另有生成器全量SHA核验",
+    "按已完成感知时间保守对齐，不还原未记录的中间发布；查看不是新执行"
+  ],
+  "goal_complete": false
+}

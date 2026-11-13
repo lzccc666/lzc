@@ -1,0 +1,32 @@
+{
+  "cohort": "fault_cpu",
+  "cases": 6,
+  "expected_cases": 6,
+  "is_smoke": false,
+  "status_counts": {
+    "certificate_safe": 6
+  },
+  "certificate_safe_cases": 6,
+  "audited_intervals": 2270,
+  "moving_cases": 6,
+  "moving_control_records": 1150,
+  "previously_reported_arrivals": 6,
+  "previous_arrivals_with_continuous_body_certificate": 6,
+  "unresolved_or_invalid_previous_arrivals": [],
+  "all_original_results_unchanged": true,
+  "source_summary_sha256": "8f195588a4ab1417c4f07dc8a180297c77418a0112f4adc186957027d3e99633",
+  "wall_duration_CPU_shared_s": 0.479284992441535,
+  "source_sha256": {
+    "outputs/project_v2/thesis_completion_v1/source_bundle/independent_body_audit_001.py": "168b12a3b5712b9942d7c97f5451f38819860172f774c659cb29fd15c27d1b03",
+    "conceptgraph/completion/independent_continuous_body.py": "6225ef52af83bb2f2cfb45bc4a204977f9cc5f7d3170aadd35af58715b419fbf"
+  },
+  "actual_model_calls": 0,
+  "new_executions": 0,
+  "new_arrivals": 0,
+  "limitations": [
+    "静态矩形/固定几何与分段恒定平均运动，双精度保守数值证书，不是形式化算术或真实动态交通证明",
+    "复用GEOS但不复用原积分/车身/扫掠实现；不独立重评语言身份/到达保持或拓扑方向",
+    "后验开发审核，不是新封存方法；未决/缺证据保留，原结果不覆盖"
+  ],
+  "goal_complete": false
+}

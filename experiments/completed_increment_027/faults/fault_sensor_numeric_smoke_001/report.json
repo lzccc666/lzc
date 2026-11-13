@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "source_run": "realtime_faults_gpu_smoke_001",
+  "cases": 6,
+  "complete_cohort": true,
+  "frame_pairs": 494,
+  "missing_results": 0,
+  "actual_model_calls": 0,
+  "new_arrival_credit": false,
+  "distribution_normality_not_claimed": true,
+  "empirical_RMS_not_configured_standard_deviation": true,
+  "source_sha256": "2612cd7a3f3a3af865b57e006d6567ee17b0b8306fe1496c8032ae9a914f3474",
+  "input_records_sha256": "adc660c6eb7d596dd1f1d8f5a32797d4dd05e547703f630a70b883e08da2b90a",
+  "frame_ledger_sha256": "296374585adda8886bf003019c3515a2b6e4c75cc96f916147071f74189b5c94",
+  "cases_sha256": "743cb4779b8367f25831877d0797ca28a22d5981112b1fbd89aa9392766ed533",
+  "goal_complete": false
+}

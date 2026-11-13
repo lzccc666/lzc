@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "updated_utc": "2026-11-13T01:46:31.812913+00:00",
+  "request_id": 0,
+  "immutable_payload_sha256": "a7296f90ac6f0e70119e56f07f5003b83c1463e6a361fb21ee4ea5c5a96bee55",
+  "current_observation_frame": 5,
+  "current_safety_verified_candidates": [
+    0
+  ],
+  "request_precedes_physical_barrier": true,
+  "exact_completion_v3_prompt_verified": true,
+  "no_GT_fields_in_payload": true,
+  "actual_raw_model_output_verified": true,
+  "actual_CPU_model_calls": 1,
+  "cache_enabled": false,
+  "model_source_devices": [
+    "cpu"
+  ],
+  "actual_new_model_calls_added_by_audit": 0,
+  "request_sha256": "c9c4328ffc85c0e89e5c1569172081bc8c086a34975f97dd28d5276b04077e7e",
+  "model_text_sha256": "b3e614b38127bd3622c14c7b9d06754f04706dccfdabf4a5a53331c78bf6e517",
+  "source_sha256": "47ff98c72e1133efa89bf7675969ee668a2b381cd38d0ca8ecbf9d6a38a676ff",
+  "goal_complete": false
+}

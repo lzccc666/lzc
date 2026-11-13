@@ -1,0 +1,26 @@
+{
+  "byte_identical": true,
+  "files": {
+    "report.json": {
+      "original_sha256": "84343e10311932d4f5efac759ebfbdd0b9cfd57ea01a196ebc75192f8c6ac32a",
+      "reproduced_sha256": "84343e10311932d4f5efac759ebfbdd0b9cfd57ea01a196ebc75192f8c6ac32a"
+    },
+    "audited_trials.jsonl": {
+      "original_sha256": "9ece1f0d21d5d168ff439f28c51d026caaae32882c4ad8497b214cc065a8951b",
+      "reproduced_sha256": "9ece1f0d21d5d168ff439f28c51d026caaae32882c4ad8497b214cc065a8951b"
+    },
+    "trials.csv": {
+      "original_sha256": "8fc8372c97cf9c375201d6950723516f1d159429136b06de109d88c62d446904",
+      "reproduced_sha256": "8fc8372c97cf9c375201d6950723516f1d159429136b06de109d88c62d446904"
+    },
+    "generator_source.py": {
+      "original_sha256": "49e94d16ccb9843520bd8595e882fda0e167e8f3160001123cd0211ad7787b59",
+      "reproduced_sha256": "49e94d16ccb9843520bd8595e882fda0e167e8f3160001123cd0211ad7787b59"
+    }
+  },
+  "input_trials": 450,
+  "original_environment_not_used_for_recompute": true,
+  "recompute_python": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/reproduction/isolated_cpu_environment_004/environment/bin/python",
+  "new_model_calls": 0,
+  "goal_complete": false
+}

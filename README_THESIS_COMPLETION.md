@@ -1,22 +1,18 @@
-# 三维语义场景图与车辆导航：代码及实验交接
+# 三维语义场景图与车辆导航：代码和实验交付
 
-当前 `goal_complete=false`，阶段9—12仍有必需条件未满足。论文框架和正式写作由用户后续GPT Work开展；本仓库提供当前项目代码与小型证据，不包含原始数据、权重、历史论文原稿或凭据。
+本仓库同步当前项目代码及小型实验依据。整个课题仍为 **goal_complete=false**：真实人工审核和至少20新场景/400条有效指令的新封存测试尚未完成。论文正文、章节及框架由用户后续开展，本轮仅交付实验事实和结果表。
 
-- [工作交接](doc/thesis_completion/工作交接_代码与实验.md)、[写作证据边界](doc/thesis_completion/GPT_Work_写作交接.md)、[复现命令](doc/thesis_completion/reproducible_commands.md)、[验收快照](doc/thesis_completion/validation_snapshot.json)。
-- 当前365份项目源码逐项字节及执行权限核对；原机 `pytest -q tests` 345项通过。纯代码环境有2项依赖未公开真实crop的测试明确skip；不能用假crop补齐。业务范围Ruff通过，2个未改动上游脚本的17条广域Ruff历史问题保持记录。
-- 过去LiDAR开发主表为38场景11log1508帧，1470实测/38缺测、未来0，独立重投影0像素差。原融合召回17.23%、匹配精确率16.49%、误差1.696m；深度质量30.11%、43.68%、1.303m。5723是跨帧GT观测，身份变化率差区间跨0，官方GT晚约33–42ms的近似继续披露。
-- [四方法检索](experiments/development_causal/retrieval_full_report.json)：1115查询、733正/382负，类别最近/CLIP/简化VLMaps式网格/联合选对176/124/103/43，负误选131/275/298/8。结构化关系F1低于直接几何，去结构化边仍保留几何回退；不声称完整VLMaps复现或所有模块有收益。
-- [684次录制扰动](experiments/development_causal/faults_readable_report.md)及27144帧记录独立重算结束。LiDAR丢失80%召回差−15.84pp，位姿扰动中心误差+0.1887m；只是离线合成抗扰动，不是闭环安全或车辆到达。
-- [动态/TTL](experiments/development_causal/dynamic_modules_full_report.json)和[关联门限](experiments/development_causal/mapping_parameters_full_report.json)各114条件，分别76新CPU重建+38同版seed17复用，共享基线不增加独立样本。减动态维护召回−5.21pp，减TTL精确率−3.89pp。门限0.25精确率收益区间跨0，未重现旧未来输入下的明确收益；0.45精确率与身份变化明显退化。两批全部关联/身份/区间[独立重算](experiments/development_causal/modules_parameters_independent_audit.json)通过。
-- [相机时间中心敏感性](experiments/development_causal/camera_time_readable_report.md)：5723固定分母，5311中心插值/412回退，七方法原预测不变。深度质量对原融合召回差+12.98pp、11log CI[8.20,18.20]pp，定位优势仍在；深度质量自身因时间参考改变的召回/误差差区间跨0。插值是中心线性模型，尺寸/朝向/可见性仍有近似，不是精确相机时间GT，不替代原主表或冻结标签。
-- [六地图完整结果](experiments/development_causal/maps_readable_report.md)：212查询1272条件，完整约束94路线、49同时车道与道路合法、2/94静态矩形通过，未执行车辆。三处逐姿态浮点边界差异和首次严格比较失败保留，完整路线车身通过/失败一致，没有改判原违规。
-- KITTI实际64帧33原始drive真实CPU前端，3m中心召回247/319→262/319；卡车误差2.768→2.888m的负结果保留。这不是官方AP、跨帧图或KITTI导航到达，详见 `experiments/kitti_object_uniform64/` 及交接文档中的实际路径。
-- [版本化人工核验](doc/thesis_completion/development_human_review_versioning_001.md)绑定过去LiDAR证据/源预测/crop、所选方法和节点。服务器8768正式入口 `/visualizations/causal_development_review_002/index.html`，门户008分开当前past与历史future。真实人工仍0，浏览器只核对读取及4个必定拒绝的错误SHA请求；没有伪造有效人工记录。
+- [当前交接](doc/thesis_completion/工作交接_代码与实验.md)、[实验报告](doc/thesis_completion/experiment_report.md)、[未完成条件](doc/thesis_completion/remaining_issues.md)、[复现命令](doc/thesis_completion/reproducible_commands.md)、[写作证据边界](doc/thesis_completion/GPT_Work_写作交接.md)。
+- 390项目源码；主450与新增缺一450真实执行已完整记账，各449完整/1失败。组合750复用300条主记录，不能按1200次独立执行计数。
+- 每模型90正任务实际到达：规则50、基础Qwen39、新Adapter4。新Adapter下游无提升，负结果和全部失败保留；四类结果必须区分。
+- GPU故障180次完成（179完整、1超时未知），三类独立审计结束；29次实际断流停车及恢复，10次报告到达获保持证书。范围限于冻结仿真工况。
+- 固定输入正式性能：12次GPU前端、216次真实Qwen推理、216缓存请求且新增调用0；分阶段统计不代表闭环实时吞吐。
+- 新Python环境实际CPU复现：38感知调用、187控制记录、正确到达保持2秒；主450四份输出逐字节一致。依赖复制隔离、CPU执行、CUDA未初始化；共享基础标准库与原生库，不是全新操作系统。
+- KITTI静态64帧/33 drive与连续3固定序列/90帧已实际实验；不是官方AP或KITTI导航到达，覆盖限制与负结果见报告。
+- 原机452测试通过；交付副本450通过、2项缺未公开真实crop数据明确跳过。业务范围Ruff及diff检查通过；255170受保护历史文件最终SHA核验通过。完整原始数据、模型、原论文稿、失败现场和运行环境保留在指定服务器目录，不上传凭据或大模型。
 
-[分阶段性能CPU试跑](experiments/runtime_profile_cpu/readable_report.md)实际12次前端、10帧录制链/391控制状态重算；暖态前端中位4.155s、P95 7.191s，独立统计和输入/输出复核通过。共享CPU不代表GPU独占/实时，规划仅2次、跟踪10次不泛化P95。原计划有一组重复语义输入且未执行，002去重后三模型各72个实际缓存键截获核验，0模型/0响应；正式GPU前端12及216新Qwen+216缓存只排队，等待三个既有作业真实退出后逐子进程测量。详见[性能协议](doc/thesis_completion/runtime_performance_001.md)，队列存在不是完成证据。
+本次新增证据在 `experiments/completed_increment_029/`（故障、性能、表格）与 `completed_increment_030/`（隔离复现、工程检查、门户）。Word/Excel/PDF结果表在029下的`experiment_tables/fault_performance_office_002/`，更早表格和各阶段证据仍保留。源码辅助程序在`reproduction/`。
 
-[真实时钟传感器故障](experiments/realtime_fault_cpu/readable_report.md)六条件CPU试跑：真实前端63调用、2270控制状态，单任务/单种子均到达，不增加独立覆盖。4秒断流实际发生，但CPU15秒TTL下未触发过期停车，负结果保留；正式GPU1.5秒TTL的6试跑和180全量仅排队。[已知路径控制功能](experiments/realtime_fault_cpu/control_functional.json)另用0.3秒TTL、63状态、0模型调用验证停车/恢复与阻塞锁存，不代替完整感知故障验收。首次gobs元数据不兼容失败保留，修复后独立重跑，未覆盖原run。
+网页的完整RGB/深度/日志浏览需要原始数据服务；服务器最新入口为8768端口`/visualizations/thesis_portal_017/index.html`，实时交互8769，独立人工审核8770。Git内不包含完整传感器记录。
 
-450次真实时钟三模型主矩阵仍运行，随后450次语义缺一按冻结队列执行；六地图1272条件已结束，目标接近点3345条件也已完整结束，联合与首达1115组完整推理完全相同，未观察联合收益。真实人工、自然指令有效覆盖、新封存、独占性能和完整最终验收均仍缺。分别报告生成路线、选对对象、正确锁定、实际到达，不能混用。
-
-公开CSV仅CRLF转LF且逐字段一致，原机实验文件不动。复现脚本是本机有界队列或完整结果审核器，须另备许可数据、模型与同版协议；已存在的run-id拒绝覆盖。Git快照与统计快照不自动随服务器更新，后续以新发布回执和完整结果为准。
+本仓库内验收快照冻结于推送之前，发布事实以Git提交记录及服务器同步回执为准。原先的分批进度README归档在`doc/thesis_completion/history_before_030/`，不能把历史“等待中”当成当前状态。

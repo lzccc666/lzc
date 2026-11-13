@@ -1,0 +1,58 @@
+{
+  "passed": true,
+  "created_utc": "2026-11-12T18:40:55.331199+00:00",
+  "trials": 228,
+  "scenes": 38,
+  "logs": 11,
+  "source_sha256": "0dfe8bb3d8069de65645ac053ca507406c33b82be3fa5107460df06dcdd484f2",
+  "totals": {
+    "canonical_lane_references_checked": 306,
+    "exact_zero_segments_removed_from_references": 132,
+    "control_intervals": 18743,
+    "rear_arc_independent_certified_intervals": 18743,
+    "rear_arc_independent_unknown_intervals": 0,
+    "rear_arc_independent_violation_intervals": 0,
+    "distinct_assigned_connections": 78
+  },
+  "unique_canonical_lane_tokens": 45,
+  "source_files": 797,
+  "files_manifest_sha256": "afaa2eacc517b994694f1cac03ec1a31c8afbfce29540749e892a609d786520e",
+  "methods": {
+    "hybrid_astar": {
+      "trials": 114,
+      "planned_routes": 0,
+      "actual_motion": 0,
+      "reference_pose_reached": 0,
+      "independently_confirmed_reference_pose": 0
+    },
+    "reference_guided": {
+      "trials": 114,
+      "planned_routes": 39,
+      "actual_motion": 39,
+      "reference_pose_reached": 39,
+      "independently_confirmed_reference_pose": 39
+    }
+  },
+  "guided_minus_original_reference_reached_rate": 0.34210526315789475,
+  "paired_log_cluster_95ci": [
+    0.15789473684210525,
+    0.5217391304347826
+  ],
+  "bootstrap_replicates": 4000,
+  "bootstrap_seed": 5723,
+  "raw_counter_interpretation": "connection_candidate_intervals是候选控制区间，accepted_distinct_connections是完整见证的实际过渡，不混用",
+  "reference_pose_is_not_semantic_arrival": true,
+  "new_executions": 0,
+  "new_model_calls": 0,
+  "actual_semantic_arrival_credit": 0,
+  "wall_CPU_shared_s": 7.863594572991133,
+  "limits": [
+    "原始失败已查看后的开发改进；两者3秒/2000扩展，但扩展工作单位不同，共享CPU不能作为独占性能",
+    "两方法共同显式移除相邻完全相等XY采样，几何/有向非零边/长度等价独立核验；没有放宽边界",
+    "引导版本同时引入中心线连续建议和逐步有向拓扑搜索，增益不单独归因于转角建议",
+    "独立连续车身证书由不同于执行器的积分/几何实现产生，本检查只复核其账目和输入，非第三种车身算法",
+    "后轴轨迹用不同的圆弧中点方框界复核，未决保留；方向全线段锥过宽时仅给unknown",
+    "人工参考起始与地图路线，静态预测障碍，非录制实车后轴、感知闭环或语义正确到达"
+  ],
+  "goal_complete": false
+}

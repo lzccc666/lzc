@@ -1,0 +1,39 @@
+{
+  "updated_utc": "2026-11-12T23:24:09.501429+00:00",
+  "phase": "cold",
+  "worker": {
+    "pid": 343737,
+    "start_ticks": "1381173077",
+    "CUDA_VISIBLE_DEVICES": "",
+    "cwd": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/reproduction/three_task_fixedlogical_001/checkout",
+    "source_root": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/reproduction/three_task_fixedlogical_001/checkout",
+    "phase": "cold"
+  },
+  "actual_PID_start_ticks_verified": true,
+  "CUDA_VISIBLE_DEVICES": "",
+  "declared_threads": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "LP_NUM_THREADS": "1"
+  },
+  "actual_GPU_processes": [
+    "345118"
+  ],
+  "CPU_worker_not_in_GPU_compute_processes": true,
+  "model_parameters": {
+    "actual_parameter_devices": [
+      "cpu"
+    ],
+    "parameter_dtypes": [
+      "torch.bfloat16"
+    ],
+    "parameter_count": 2208985600,
+    "CUDA_initialized": false,
+    "actual_backend_class": "QwenVLChat",
+    "model_revision": "00c4c498fd9baf60333c337fb949283389be98d581c659aeb5f76fe689e043c0",
+    "model_source": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/reproduction/three_task_fixedlogical_001/checkout/checkpoint/Qwen2-VL-2B-Instruct"
+  },
+  "execution_still_live": true,
+  "source_release_sha256": "6e02cb99c43cec0cc0cf97bdc4bb99049ffa6287894439b635dba1614a322976",
+  "goal_complete": false
+}

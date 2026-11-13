@@ -1,0 +1,86 @@
+{
+  "reason": "真实新环境运行发现YOLO的惰性CLIP依赖不在元数据闭包；仅添加原先不存在的文件，原环境与失败记录不覆盖。",
+  "files": [
+    {
+      "source": "/root/miniconda3/envs/conceptgraph/lib/python3.10/site-packages/clip/__init__.py",
+      "destination": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/reproduction/isolated_cpu_environment_004/environment/lib/python3.10/site-packages/clip/__init__.py",
+      "sha256": "d7930eb290ebed432116795c91473200d098451a94c0aedd4ae0f934f97955e8",
+      "bytes": 20
+    },
+    {
+      "source": "/root/miniconda3/envs/conceptgraph/lib/python3.10/site-packages/clip/bpe_simple_vocab_16e6.txt.gz",
+      "destination": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/reproduction/isolated_cpu_environment_004/environment/lib/python3.10/site-packages/clip/bpe_simple_vocab_16e6.txt.gz",
+      "sha256": "924691ac288e54409236115652ad4aa250f48203de50a9e4722a6ecd48d6804a",
+      "bytes": 1356917
+    },
+    {
+      "source": "/root/miniconda3/envs/conceptgraph/lib/python3.10/site-packages/clip/clip.py",
+      "destination": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/reproduction/isolated_cpu_environment_004/environment/lib/python3.10/site-packages/clip/clip.py",
+      "sha256": "9540f200fbf8145479fa655382a56dab048d238cc698b9cbd8df3b6d86d3f1b6",
+      "bytes": 9644
+    },
+    {
+      "source": "/root/miniconda3/envs/conceptgraph/lib/python3.10/site-packages/clip/model.py",
+      "destination": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/reproduction/isolated_cpu_environment_004/environment/lib/python3.10/site-packages/clip/model.py",
+      "sha256": "9902cbe5ee90a1da2aa3e6f043e8a23dc1f8831193b963785c9af03d5c7bef2c",
+      "bytes": 17374
+    },
+    {
+      "source": "/root/miniconda3/envs/conceptgraph/lib/python3.10/site-packages/clip/simple_tokenizer.py",
+      "destination": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/reproduction/isolated_cpu_environment_004/environment/lib/python3.10/site-packages/clip/simple_tokenizer.py",
+      "sha256": "d1b09f10ed3d1e2c343619cb98cbfacb92363dd8607526a43aa7fe2d60d15bad",
+      "bytes": 4632
+    },
+    {
+      "source": "/root/miniconda3/envs/conceptgraph/lib/python3.10/site-packages/clip-1.0.dist-info/INSTALLER",
+      "destination": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/reproduction/isolated_cpu_environment_004/environment/lib/python3.10/site-packages/clip-1.0.dist-info/INSTALLER",
+      "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508",
+      "bytes": 4
+    },
+    {
+      "source": "/root/miniconda3/envs/conceptgraph/lib/python3.10/site-packages/clip-1.0.dist-info/METADATA",
+      "destination": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/reproduction/isolated_cpu_environment_004/environment/lib/python3.10/site-packages/clip-1.0.dist-info/METADATA",
+      "sha256": "5ee37e6b476d5e670cc6d441ea77bfa7158d3ccd386736022dd37752cd07c574",
+      "bytes": 360
+    },
+    {
+      "source": "/root/miniconda3/envs/conceptgraph/lib/python3.10/site-packages/clip-1.0.dist-info/RECORD",
+      "destination": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/reproduction/isolated_cpu_environment_004/environment/lib/python3.10/site-packages/clip-1.0.dist-info/RECORD",
+      "sha256": "659733eb883f283e6ea56d8c4c26f9b4174b7c4f55fa22f5bc8d314ab7c6568d",
+      "bytes": 1201
+    },
+    {
+      "source": "/root/miniconda3/envs/conceptgraph/lib/python3.10/site-packages/clip-1.0.dist-info/REQUESTED",
+      "destination": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/reproduction/isolated_cpu_environment_004/environment/lib/python3.10/site-packages/clip-1.0.dist-info/REQUESTED",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "source": "/root/miniconda3/envs/conceptgraph/lib/python3.10/site-packages/clip-1.0.dist-info/WHEEL",
+      "destination": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/reproduction/isolated_cpu_environment_004/environment/lib/python3.10/site-packages/clip-1.0.dist-info/WHEEL",
+      "sha256": "69e6228a0d35958183cc1812f07c565ce837b95eb51bd8a33acba9fa4f68d6c9",
+      "bytes": 91
+    },
+    {
+      "source": "/root/miniconda3/envs/conceptgraph/lib/python3.10/site-packages/clip-1.0.dist-info/direct_url.json",
+      "destination": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/reproduction/isolated_cpu_environment_004/environment/lib/python3.10/site-packages/clip-1.0.dist-info/direct_url.json",
+      "sha256": "9366c084505666d14d9347f9eb6d88d6503b1f035ae45eae68f694a6b8067964",
+      "bytes": 130
+    },
+    {
+      "source": "/root/miniconda3/envs/conceptgraph/lib/python3.10/site-packages/clip-1.0.dist-info/licenses/LICENSE",
+      "destination": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/reproduction/isolated_cpu_environment_004/environment/lib/python3.10/site-packages/clip-1.0.dist-info/licenses/LICENSE",
+      "sha256": "987e63b32f6c89ff5160e429458a872ff048e6860b590a3912e938f9da8f14db",
+      "bytes": 1064
+    },
+    {
+      "source": "/root/miniconda3/envs/conceptgraph/lib/python3.10/site-packages/clip-1.0.dist-info/top_level.txt",
+      "destination": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/reproduction/isolated_cpu_environment_004/environment/lib/python3.10/site-packages/clip-1.0.dist-info/top_level.txt",
+      "sha256": "aabd20ae0ed292fed27bd7f6e5e572d530b88c96f194855b9e8806e976eb2e36",
+      "bytes": 5
+    }
+  ],
+  "original_environment_modified": false,
+  "base_installed_manifest_sha256": "65a222870495919137618b0a8c1dcf93533b804ff89594eb59b137efa0f9d4fd",
+  "goal_complete": false
+}
