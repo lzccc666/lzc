@@ -1,0 +1,192 @@
+{
+  "generated_at_utc": "2026-11-16T15:09:45.333512+00:00",
+  "goal_complete": false,
+  "audit_only": true,
+  "model_inference_received_gt": false,
+  "scene": "scene-0248",
+  "frame_idx": 0,
+  "camera_token": "1a66cf113a3043c8b8b01e5e5604fd60",
+  "rgb_sha256": "2a967226700bfac0a9972cc9f4c20fc0219c6b7982e3ca88ea341bb2c2f70062",
+  "official_dataset_root": "/root/autodl-tmp/lizichong/dataset/nuscenes_trainval_raw/v1.0-trainval",
+  "official_source_sha256": {
+    "sample_data.json": "sha256_unavailable_large_json",
+    "calibrated_sensor.json": "sha256_unavailable_large_json",
+    "ego_pose.json": "sha256_unavailable_large_json",
+    "sample_annotation.json": "sha256_unavailable_large_json",
+    "instance.json": "sha256_unavailable_large_json",
+    "category.json": "sha256_unavailable_large_json"
+  },
+  "click_px": [
+    897.4318923653332,
+    462.2957340938108
+  ],
+  "image_size": [
+    1600,
+    900
+  ],
+  "official_vehicle_annotations_in_exact_sample": 9,
+  "projected_candidates": [
+    {
+      "annotation_token": "4ff2a28a3763484c9182d2a8f157ddfb",
+      "category": "vehicle.truck",
+      "visibility_token": "4",
+      "num_lidar_pts": 259,
+      "bbox_2d_xyxy": [
+        244.1286487240982,
+        310.97147274276756,
+        725.8508489692307,
+        606.6952949393861
+      ],
+      "center_uv": [
+        460.6511968348125,
+        460.5364962260975
+      ],
+      "center_distance_px": 436.78423839007814,
+      "click_inside_projected_box": false
+    },
+    {
+      "annotation_token": "87143655123e48e6a232c466a9a4fce3",
+      "category": "vehicle.truck",
+      "visibility_token": "1",
+      "num_lidar_pts": 96,
+      "bbox_2d_xyxy": [
+        1226.4315192269296,
+        330.0493528180186,
+        1716.8059844578368,
+        567.1788650716121
+      ],
+      "center_uv": [
+        1421.646385418285,
+        449.36271384357514
+      ],
+      "center_distance_px": 524.3740055910059,
+      "click_inside_projected_box": false
+    },
+    {
+      "annotation_token": "c8097279e93147d7bb0036ef4025714b",
+      "category": "vehicle.car",
+      "visibility_token": "3",
+      "num_lidar_pts": 33,
+      "bbox_2d_xyxy": [
+        75.93649408594464,
+        474.0491482518777,
+        228.6016754851166,
+        589.5385439557923
+      ],
+      "center_uv": [
+        147.88083052014366,
+        525.6997086703409
+      ],
+      "center_distance_px": 752.2279297562357,
+      "click_inside_projected_box": false
+    },
+    {
+      "annotation_token": "74c383de801f4f399bf6a405c79b3723",
+      "category": "vehicle.car",
+      "visibility_token": "4",
+      "num_lidar_pts": 4,
+      "bbox_2d_xyxy": [
+        1994.9974853945341,
+        434.6218487027495,
+        2389.6956330863395,
+        552.9187620854611
+      ],
+      "center_uv": [
+        2173.4514333472825,
+        489.63142311804904
+      ],
+      "center_distance_px": 1276.312308513169,
+      "click_inside_projected_box": false
+    },
+    {
+      "annotation_token": "48a8fb87fd8d49a09fe64f9b63cc4925",
+      "category": "vehicle.car",
+      "visibility_token": "2",
+      "num_lidar_pts": 8,
+      "bbox_2d_xyxy": [
+        2062.534523095857,
+        408.3144958376321,
+        2464.936791098093,
+        538.4401293451065
+      ],
+      "center_uv": [
+        2244.7325036576285,
+        471.32205108588727
+      ],
+      "center_distance_px": 1347.3308471147814,
+      "click_inside_projected_box": false
+    },
+    {
+      "annotation_token": "79c61e99052d45b4860437f2c216fe73",
+      "category": "vehicle.car",
+      "visibility_token": "1",
+      "num_lidar_pts": 1,
+      "bbox_2d_xyxy": [
+        3709.0534825935188,
+        443.2909933218337,
+        4412.783408286543,
+        529.0852705522278
+      ],
+      "center_uv": [
+        4028.7618961405115,
+        483.0791580056624
+      ],
+      "center_distance_px": 3131.39897541852,
+      "click_inside_projected_box": false
+    },
+    {
+      "annotation_token": "7f8d4df3c666432ca9d0644550de192f",
+      "category": "vehicle.truck",
+      "visibility_token": "1",
+      "num_lidar_pts": 3,
+      "bbox_2d_xyxy": [
+        3883.600862268282,
+        363.5045333424829,
+        4909.733665456981,
+        500.18674812769086
+      ],
+      "center_uv": [
+        4333.413125556493,
+        434.44596787391754
+      ],
+      "center_distance_px": 3436.094097128358,
+      "click_inside_projected_box": false
+    },
+    {
+      "annotation_token": "231ddaf7e283449e8b5a82177b523cd5",
+      "category": "vehicle.truck",
+      "visibility_token": "3",
+      "num_lidar_pts": 12,
+      "bbox_2d_xyxy": [
+        -14035.922164466387,
+        302.33797335565396,
+        -3346.9693445491894,
+        1364.2844184752666
+      ],
+      "center_uv": [
+        -5764.614546410518,
+        626.3100996281183
+      ],
+      "center_distance_px": 6664.065085554584,
+      "click_inside_projected_box": false
+    },
+    {
+      "annotation_token": "e53c6728178641d48a2201973cda063f",
+      "category": "vehicle.car",
+      "visibility_token": "3",
+      "num_lidar_pts": 1268,
+      "bbox_2d_xyxy": [
+        -8362.574591624532,
+        123.06367972160072,
+        -1443.8529435375522,
+        3009.790772063265
+      ],
+      "center_uv": null,
+      "center_distance_px": null,
+      "click_inside_projected_box": false
+    }
+  ],
+  "independent_label_status": "unresolved_no_conservative_car_match",
+  "reason": "点击位置未落入官方vehicle.car的保守三维投影框；图像中远处目标过小且作者在提交前查看过后续帧，因此不自动赋予实例/颜色/运动/可达性标签。",
+  "future_observations_excluded_from_inference": true
+}
