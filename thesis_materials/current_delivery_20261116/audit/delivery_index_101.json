@@ -1,0 +1,56 @@
+{
+  "generated_at_utc": "2026-11-16T14:34:10.686370+00:00",
+  "goal_complete": false,
+  "source": "build_delivery_index_101.py",
+  "protected_history": {
+    "files_checked": 255170,
+    "mismatches": 0,
+    "evidence": "json/protected_history_audit_101/report.json"
+  },
+  "latest_tests": {
+    "pytest": {
+      "passed": 452,
+      "failed": 0,
+      "warnings": 5,
+      "command": "PYTHONPATH=/root/autodl-tmp/lizichong:/autodl-fs/data/third_party/carla_0.9.16/python_site /root/miniconda3/envs/conceptgraph/bin/python -m pytest tests -q"
+    },
+    "ruff": {
+      "status": "known_preexisting_optional_branch_errors",
+      "count": 6,
+      "evidence": "json/software_validation_092/static_checks.json"
+    }
+  },
+  "sealed_public": {
+    "scenes": 30,
+    "logs": 14,
+    "frames_per_mapping": 1196,
+    "models": 5,
+    "actual_gpu_calls": 4390,
+    "evidence": "json/sealed_delivery_verification_099/report.json"
+  },
+  "human_natural": {
+    "raw_records_imported": 1,
+    "qualifying_labels": 0,
+    "evidence": "annotation/offline_imports/human_natural_lzc_20261116_001/source_binding_report.json"
+  },
+  "carla": {
+    "episodes": 10,
+    "positive_tasks": 6,
+    "strict_safe_arrival": 1,
+    "status": "按用户上限停止",
+    "evidence": "carla_official/carla_ten_041/report.json"
+  },
+  "git_sync": {
+    "local_repo": "/root/autodl-tmp/lzc_sync_101/repo",
+    "commit": "9bfbddcb81430c0bd7f75303035cd3a0c2456212",
+    "branch": "codex/thesis-completion-20261116",
+    "remote_push": "blocked_authentication",
+    "evidence": "source_bundle/github_sync_101/report.json"
+  },
+  "remaining": [
+    "自然导航独立合格标签仍不足",
+    "CARLA严格闭环规模和正确到达证据有限",
+    "部分主对比与参数分组尚未达到原始Goal的全部门槛",
+    "GitHub远程写入凭据待配置"
+  ]
+}
