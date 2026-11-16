@@ -1,0 +1,468 @@
+{
+  "UTC": "2026-11-16T14:45:09.305418+00:00",
+  "goal_complete": false,
+  "artifact_role": "阶段9—12当前增量验收快照101；不替代原始Goal，不降低验收门槛",
+  "previous_goal_turn_classification": "progress：GitHub main和交付分支已成功推送并远程SHA核对",
+  "source_sha256": "318e13c82d7cc0a7a0896ad656c4ef61d4638e24095d4754c9720fdec8efa1e6",
+  "verification": {
+    "kitti_sequences": {
+      "0000": 100,
+      "0002": 100,
+      "0003": 100,
+      "0004": 100,
+      "0005": 100,
+      "0006": 100,
+      "0007": 100,
+      "0008": 100,
+      "0009": 100,
+      "0010": 100
+    },
+    "kitti_frame_evidence_path_checks": {
+      "rgb": 1000,
+      "depth": 1000,
+      "detection_pickle": 1000,
+      "detection_visualization": 1000,
+      "mapping_record": 1000,
+      "graph_query_record": 1000
+    },
+    "kitti_index_sha256": "4c7c842feac01826d545bc8d185e13a50e95f7456d5c8ee928fc0c317c2dd01f",
+    "new_training": [
+      {
+        "seed": 17,
+        "steps": 240,
+        "checkpoint": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/public_experiment_completion_20261115/qwen_adapter_fair_comparison/training/real_graph_seed17_001/checkpoints/step_0160/adapter_model.safetensors",
+        "checkpoint_sha256": "b09fea427c8a44db1c131bdd14ba42cec2489c243adff419063f187310138c21",
+        "independent_test_used": false
+      },
+      {
+        "seed": 29,
+        "steps": 240,
+        "checkpoint": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/public_experiment_completion_20261115/qwen_adapter_fair_comparison/training/real_graph_seed29_001/checkpoints/step_0080/adapter_model.safetensors",
+        "checkpoint_sha256": "ac61e5526856178d3ce8705da4d940e493b9831125a9e510724f15ee47a2be5a",
+        "independent_test_used": false
+      },
+      {
+        "seed": 43,
+        "steps": 240,
+        "checkpoint": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/public_experiment_completion_20261115/qwen_adapter_fair_comparison/training/real_graph_seed43_001/checkpoints/step_0160/adapter_model.safetensors",
+        "checkpoint_sha256": "7f07308d5737ce744b0500eb403d57eaa3cc91dd2f8b12fa6f885f74d8b3ed14",
+        "independent_test_used": false
+      }
+    ],
+    "same_request_models_closed": [
+      {
+        "variant": "base",
+        "rows": 878,
+        "actual_GPU_calls": 878,
+        "same_request_ids_and_prompt_hashes": true,
+        "gt_received": false,
+        "output_sha256": "3a6c8ad535c26c9f39b216dd16ca4f7c07be92c14ae431e8f32394b678e517a1"
+      },
+      {
+        "variant": "old_adapter",
+        "rows": 878,
+        "actual_GPU_calls": 878,
+        "same_request_ids_and_prompt_hashes": true,
+        "gt_received": false,
+        "output_sha256": "2cb0860b24a59594924c6ab17f3597387f046c94dad56a6565cd8a34f13e96d3"
+      },
+      {
+        "variant": "real_graph_seed17",
+        "rows": 878,
+        "actual_GPU_calls": 878,
+        "same_request_ids_and_prompt_hashes": true,
+        "gt_received": false,
+        "output_sha256": "599fcf00072f74b729b1f9e06727c70f4d5166c10341f66fffd99b685d7ec322"
+      }
+    ],
+    "new_sealed_actual_GPU_calls_verified": 4390,
+    "natural_original_records": 1,
+    "natural_qualifying_labels": 0,
+    "old_human_review_report_fields": [
+      "created_at_utc",
+      "raw_records",
+      "unique_reviewed_images",
+      "campaign_images",
+      "missing_images",
+      "revisions_retained",
+      "human_confirmed_chat_corrections",
+      "unresolved_category_note_conflict_count",
+      "known_color_images",
+      "unknown_color_images",
+      "effective_categories",
+      "unknown_category_images",
+      "source_binding_checked",
+      "label_correctness_independently_verified",
+      "human_3d_identity_records",
+      "human_natural_instruction_records",
+      "raw_export_unchanged",
+      "effective_records_sha256",
+      "user_chat_correction_sha256",
+      "scope_note",
+      "taxonomy_note",
+      "official_nuscenes_annotation_reference",
+      "goal_complete"
+    ],
+    "seven_model_development_calls": 756,
+    "figure_previews_visually_inspected": 3,
+    "Word_PDF_pages_visually_inspected": 6,
+    "latest_tests": {
+      "pytest_passed": 452,
+      "pytest_failed": 0,
+      "pytest_warnings": 5,
+      "ruff_known_errors": 6
+    },
+    "protected_history_latest": {
+      "files_checked": 255170,
+      "mismatches": 0
+    },
+    "git_local_commit": "9bfbddcb81430c0bd7f75303035cd3a0c2456212",
+    "delivery_indexes": 8,
+    "git_remote_main": "a96955a3a07baf189b6c65fe6a17eda33ec115ed",
+    "git_remote_branch": "a96955a3a07baf189b6c65fe6a17ec115ed",
+    "git_push_status": "success"
+  },
+  "groups": [
+    {
+      "name": "任务定义与对象身份",
+      "original_requirement_refs": [
+        "阶段9.1—9.3",
+        "阶段9.6—9.7"
+      ],
+      "status": "partial",
+      "supported_by_evidence": "版本化协议、独立身份与几何区域判定已用于真实CARLA；明确提议/锁定/路线/到达。",
+      "remaining_or_not_proven": "全部自然指令的可接受对象集合、独立可达性及歧义尚未完成；不能以无路径自证不可达。",
+      "evidence_paths": [
+        "carla_official/identity_geometry_audit_046/report.json",
+        "carla_official/carla_ten_041/report.json"
+      ]
+    },
+    {
+      "name": "数据独立性与新封存测试",
+      "original_requirement_refs": [
+        "数据.1—数据.4",
+        "数据.7—数据.8"
+      ],
+      "status": "partial",
+      "supported_by_evidence": "30新场景14日志1196帧；历史69场景26日志无log重合；精确/近似crop审计已做；878模板查询已冻结。",
+      "remaining_or_not_proven": "模板主集不是人工自然分布；语言家族及地理近路段独立性证据仍不足。203条预选回放尚不能计为完成连续锁定评测。",
+      "evidence_paths": [
+        "main_experiments/sealed_public_058/release.json",
+        "annotation/historical_log_readback_056/report.json",
+        "annotation/actual_sealed_crop_audit_062/report.json"
+      ]
+    },
+    {
+      "name": "标签覆盖与人工核验",
+      "original_requirement_refs": [
+        "数据.5—数据.6",
+        "补充四"
+      ],
+      "status": "partial",
+      "supported_by_evidence": "旧20张属性审核保留；本次真实上传1条自然指令已逐图哈希核对、导入，作者原文/点击/观看历史均保留。",
+      "remaining_or_not_proven": "这1条只是作者原始表达，目标三维身份、运动、歧义、可达性及任务范围未独立核验，有效自然测试标签仍0。",
+      "evidence_paths": [
+        "annotation/offline_imports/user_lzc_20261116_001/review_summary_001.json",
+        "annotation/natural_offline_087/browser_qa_088/report.json",
+        "annotation/offline_imports/human_natural_lzc_20261116_001/source_binding_report.json"
+      ]
+    },
+    {
+      "name": "KITTI连续序列",
+      "original_requirement_refs": [
+        "补充三.1",
+        "补充验收.KITTI"
+      ],
+      "status": "completed_with_limits",
+      "supported_by_evidence": "本次逐项复查10序列各100连续原始帧，1000帧的RGB/深度/检测/图像/建图/图查询路径均存在。三组建图有真实评价。",
+      "remaining_or_not_proven": "这是10个100帧片段，使用声明的0.1s名义步长；非完整序列、非真实时钟导航、非实际到达；Van未入三类主表。",
+      "evidence_paths": [
+        "kitti_tracking_expanded/graph_query_001/frame_index.csv",
+        "statistics/kitti_expanded_full_001/report.json"
+      ]
+    },
+    {
+      "name": "对象图与关系质量",
+      "original_requirement_refs": [
+        "阶段9.4—9.5",
+        "阶段9.8",
+        "阶段12.1—12.2",
+        "补充三.2"
+      ],
+      "status": "partial",
+      "supported_by_evidence": "38场景11日志六单因素配置各1508帧，9048次更新；召回/中心/IDF1/身份切换/关系/耗时已统计。新30场景10组图已保存。 新30场景14日志10条件各1196帧全部完成评价并校验，共11960帧更新；原6单因素和4架构诊断分列。",
+      "remaining_or_not_proven": "总体/身份/关系主统计已完成，静动态/遮挡细分、错合并定义及全部坐标时效组仍需终审。",
+      "evidence_paths": [
+        "nuscenes_ablation/statistics_001/report.json",
+        "main_experiments/sealed_public_058/mapping/",
+        "json/sealed_delivery_verification_099/report.json"
+      ]
+    },
+    {
+      "name": "真值辅助诊断",
+      "original_requirement_refs": [
+        "阶段9.9"
+      ],
+      "status": "partial",
+      "supported_by_evidence": "官方几何图诊断、真实感知候选覆盖上限及身份关联不足已单列，不计实际到达。",
+      "remaining_or_not_proven": "全部正确对象/正确解析/候选上限条件与最终主表的对应覆盖需进一步核对，不能混入普通方法成绩。",
+      "evidence_paths": [
+        "qwen_adapter_fair_comparison/real_graph_decisions_001/report.json",
+        "qwen_adapter_fair_comparison/real_graph_authorization_audit_002/report.json"
+      ]
+    },
+    {
+      "name": "新训练与选模",
+      "original_requirement_refs": [
+        "阶段10.2",
+        "阶段10.4—10.5",
+        "补充三.4.训练"
+      ],
+      "status": "completed_with_limits",
+      "supported_by_evidence": "真实感知图459训练/171验证/108开发留出；日志互斥；seed17/29/43各240步，本次复核三份Adapter哈希。仅验证选checkpoint。",
+      "remaining_or_not_proven": "新Adapter主要训练结构化候选排序，不是通用颜色/解析训练；未达到建议1000—3000样本，但建议预算不能伪称已达到。开发留出非新封存集。",
+      "evidence_paths": [
+        "qwen_adapter_fair_comparison/real_graph_dataset_003/manifest.json",
+        "qwen_adapter_fair_comparison/training/real_graph_seed17_001/training_report.json",
+        "qwen_adapter_fair_comparison/training/real_graph_seed29_001/training_report.json",
+        "qwen_adapter_fair_comparison/training/real_graph_seed43_001/training_report.json"
+      ]
+    },
+    {
+      "name": "公平模型对照与真实GPU",
+      "original_requirement_refs": [
+        "阶段10.1",
+        "阶段10.3",
+        "阶段10.6",
+        "阶段10.8—10.9",
+        "阶段12.3",
+        "补充三.4"
+      ],
+      "status": "completed_with_limits",
+      "supported_by_evidence": "五个模型全部完成878条同请求真实GPU推理，共4390次；请求ID、提示哈希、GT隔离和原始输出已核验。",
+      "remaining_or_not_proven": "新Adapter没有取得正目标选对收益；自然指令仍缺独立标签，通用属性/解析不能由候选排序实验推断。",
+      "evidence_paths": [
+        "main_experiments/sealed_execution_075/evaluation/report.json",
+        "json/sealed_delivery_verification_099/report.json",
+        "figures/sealed_public_078/retrieval_all_metrics.csv"
+      ]
+    },
+    {
+      "name": "独立模块消融",
+      "original_requirement_refs": [
+        "阶段10.7",
+        "阶段12.5—12.7",
+        "补充三.2",
+        "补充三.4.消融"
+      ],
+      "status": "partial",
+      "supported_by_evidence": "新封存图建图条件、语义开关和候选方法均已生成统一CSV/XLSX结果；正负结果和分母保留。",
+      "remaining_or_not_proven": "新封存语义消融统一计分仍待运行；地图方向/连接、首个可达/联合选择、安全接近点的最新最终覆盖尚未全量核验；不能把诊断或历史自建仿真算官方闭环消融。",
+      "evidence_paths": [
+        "figures/sealed_public_078/mapping_metrics.csv",
+        "figures/sealed_public_078/retrieval_all_metrics.csv",
+        "figures/sealed_public_078/封存公开数据结果表.xlsx"
+      ]
+    },
+    {
+      "name": "方法比较与来源",
+      "original_requirement_refs": [
+        "阶段12.4",
+        "补充三.3"
+      ],
+      "status": "partial",
+      "supported_by_evidence": "新封存结果表已统一包含14种候选/模型方法，并明确CLIP、稀疏网格和内部规划适配边界。",
+      "remaining_or_not_proven": "14方法新主表尚待统一计分；网格不是完整VLMaps复现，内部规划不是外部方法排行榜，全部方法覆盖/耗时说明需终稿核对。",
+      "evidence_paths": [
+        "figures/sealed_public_078/retrieval_all_metrics.csv",
+        "tables/sealed_office_097/封存公开数据实验表.pdf",
+        "method_comparison/ab3dmot_statistics_002/report.json"
+      ]
+    },
+    {
+      "name": "车辆约束与执行",
+      "original_requirement_refs": [
+        "阶段11.1—11.4",
+        "阶段12.8"
+      ],
+      "status": "partial",
+      "supported_by_evidence": "整车与扫掠检查、带航向规划、实际控制及独立终点评价已用于官方CARLA，能正确到达；规划与执行分开计。",
+      "remaining_or_not_proven": "多任务仍选对后无法到达；当前道路边界与停车问题尚未通过修复后的新闭环验证；13份合法规划不能算13次到达。",
+      "evidence_paths": [
+        "method_comparison/planning_official_snapshots_001/report.json",
+        "carla_official/current_body_causes_066/report.json"
+      ]
+    },
+    {
+      "name": "官方CARLA交互闭环",
+      "original_requirement_refs": [
+        "阶段11.5",
+        "阶段11.8",
+        "补充三.5",
+        "阶段12.9"
+      ],
+      "status": "partial",
+      "supported_by_evidence": "官方0.9.16实际RGB/深度/LiDAR→感知建图→语义→规划→控制→新传感器闭环；本轮前10回合已完整独立审计，现已停跑。",
+      "remaining_or_not_proven": "基础Qwen/新Adapter同清单配对及五条件完整闭环尚未完成；旧五条件只有14/15完整，且无历史项实际为TTL诊断。未证明实时性。",
+      "evidence_paths": [
+        "carla_official/carla_ten_041/report.json",
+        "carla_official/ablation_statistics_004/report.json"
+      ]
+    },
+    {
+      "name": "正确到达与任务规模",
+      "original_requirement_refs": [
+        "阶段11.6—11.7",
+        "原最终完成条件",
+        "补充验收.CARLA"
+      ],
+      "status": "partial_user_cap",
+      "supported_by_evidence": "前10回合含6有目标/2无匹配/2阻挡；5个曾选对、曾锁定并有路线，严格安全到达1/6；清洁CPU链路同任务复现一次，不增加独立任务数。",
+      "remaining_or_not_proven": "用户要求CARLA先只做10回合，保持停止；原50任务×3种子及5配置10不同正任务到达未满足，不能把1/6当原范围完成。",
+      "evidence_paths": [
+        "carla_official/carla_ten_041/report.json",
+        "reproduction/clean_cpu_navigation_readback_003/report.json"
+      ]
+    },
+    {
+      "name": "故障安全、确定性与缓存",
+      "original_requirement_refs": [
+        "阶段12.10",
+        "工程验收.缓存/确定性/安全"
+      ],
+      "status": "partial",
+      "supported_by_evidence": "既有603请求五模型真实三任务推理及相同请求零新增调用缓存复跑；证据过期/冲突压力层与异步队列记录保留，独立整车检查已做。",
+      "remaining_or_not_proven": "最终新请求三任务缓存、感知缺失/深度位姿噪声、真实时钟故障矩阵和轨迹差异仍需逐项确认；不以单元测试代替全部真实故障实验。",
+      "evidence_paths": [
+        "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/main_experiments/fair_three_task_full_validation_001/report.json",
+        "qwen_adapter_fair_comparison/real_graph_dataset_003/manifest.json",
+        "carla_official/ten_bottlenecks_043/report.json"
+      ]
+    },
+    {
+      "name": "参数、分组与泛化",
+      "original_requirement_refs": [
+        "阶段12.11"
+      ],
+      "status": "not_fully_verified",
+      "supported_by_evidence": "历史和开发参数/阈值保持原结果，新封存已冻结，不根据测试改阈值。",
+      "remaining_or_not_proven": "Top-K、关联、深度、确认帧数、拒绝阈值全项及稀有类别/道路分组最终覆盖尚未逐项证明，不能因总指标已出就计为完成。",
+      "evidence_paths": [
+        "main_experiments/sealed_public_058/release.json"
+      ]
+    },
+    {
+      "name": "聚类统计与性能",
+      "original_requirement_refs": [
+        "阶段12.统计/性能段",
+        "补充二"
+      ],
+      "status": "partial",
+      "supported_by_evidence": "新封存五模型逐调用耗时/显存统计、配对差异CSV、三种子汇总和Word/PDF表格已生成并完成视觉核验。",
+      "remaining_or_not_proven": "封存全部模型统计尚待执行；部分CPU并行/I-O共享，不能标为独占整机或端到端实时。没有独立参考不制造SPL。",
+      "evidence_paths": [
+        "figures/sealed_public_078/model_execution_statistics.csv",
+        "figures/sealed_public_078/adapter_three_seed_summary.csv",
+        "tables/sealed_office_097/visual_QA_100.json"
+      ]
+    },
+    {
+      "name": "浏览、图表与可编辑表",
+      "original_requirement_refs": [
+        "交付.1—交付.2",
+        "补充六.7"
+      ],
+      "status": "completed_with_limits",
+      "supported_by_evidence": "三张图的PNG、SVG、PDF、600dpi TIFF均已实际查看；六页Word/PDF三线表已逐页视觉核验；CSV/XLSX数据源保留。",
+      "remaining_or_not_proven": "统一浏览器尚未覆盖所有官方实例、排序和车辆轨迹字段；图表仍不能替代实际到达证据。",
+      "evidence_paths": [
+        "figures/sealed_public_078/automated_qa.json",
+        "tables/sealed_office_097/visual_QA_100.json",
+        "tables/sealed_office_097/封存公开数据实验表.pdf"
+      ]
+    },
+    {
+      "name": "论文正文与引用",
+      "original_requirement_refs": [
+        "交付.3—交付.4"
+      ],
+      "status": "deferred_by_user",
+      "supported_by_evidence": "遵守当前用户要求：仅实验与交付准备，不撰写论文正文，旧稿保护。",
+      "remaining_or_not_proven": "原整论文Markdown/Word/PDF及最终引用核对未完成；不把代码索引当论文正文。",
+      "evidence_paths": []
+    },
+    {
+      "name": "测试与格式验收",
+      "original_requirement_refs": [
+        "工程验收.测试"
+      ],
+      "status": "completed_with_limits",
+      "supported_by_evidence": "当前环境pytest 452项通过、0失败、5警告；Ruff只报告6个历史可选分支静态错误，完整记录已保存。",
+      "remaining_or_not_proven": "6个历史可选分支静态错误未改动；尚未宣称所有可选依赖分支均无错误。",
+      "evidence_paths": [
+        "json/software_validation_092/report.json",
+        "json/software_validation_092/static_checks.json"
+      ]
+    },
+    {
+      "name": "历史保护与存储",
+      "original_requirement_refs": [
+        "边界.历史保护/存储",
+        "补充五"
+      ],
+      "status": "completed_with_limits",
+      "supported_by_evidence": "最新只读核验复查255170个受保护文件，0个哈希或大小变化；项目新增交付索引和共享卷入口均有记录。",
+      "remaining_or_not_proven": "历史保护已通过；未来新增传感器仍只保留共享卷索引和哈希，未复制进Git交付。",
+      "evidence_paths": [
+        "json/protected_history_audit_101/report.json",
+        "source_bundle/github_sync_101/report.json"
+      ]
+    },
+    {
+      "name": "复现与代码同步",
+      "original_requirement_refs": [
+        "交付.5",
+        "补充六.9",
+        "用户后续Git同步要求"
+      ],
+      "status": "completed_with_limits",
+      "supported_by_evidence": "当前代码和交付材料已提交并推送到GitHub main及codex/thesis-completion-20261116；远程两个引用均核对为a96955a3。",
+      "remaining_or_not_proven": "独立复现仍复用现有依赖和输入，不代表全新环境安装；大体积数据和模型未上传仓库。",
+      "evidence_paths": [
+        "source_bundle/github_sync_103.json",
+        "source_bundle/github_sync_101/report.json",
+        "source_bundle/reproduction_094/receipt.json"
+      ]
+    }
+  ],
+  "source_reports_sha256": {
+    "statistics/kitti_expanded_full_001/report.json": "c69991906a83bd5520cebfa7cd3d741b070708617b6e2545dfc22861b4454d35",
+    "nuscenes_ablation/statistics_001/report.json": "09e83cb81255be9bf18d2e7d51ef112f3b04d542199bb005b2c39cdb16fbbc52",
+    "qwen_adapter_fair_comparison/training/real_graph_seed17_001/training_report.json": "41ee83915eafda9519aa3dfd43e6f49f6f1e69cf9350862d22dec0eec5623f95",
+    "qwen_adapter_fair_comparison/training/real_graph_seed29_001/training_report.json": "0b4270b2daaccbafac9d1d6894079dcfcf8abbd3abe1a26632d68397454daa03",
+    "qwen_adapter_fair_comparison/training/real_graph_seed43_001/training_report.json": "b115d82e703397f0f42a16e8003eb73ce26bba257be9dc10b385eca25be7ba00",
+    "qwen_adapter_fair_comparison/real_graph_dataset_003/manifest.json": "adce6ac24d5b8b91640e2c066835d40d077be38e7e38d06ba08f951d82131ee2",
+    "main_experiments/sealed_execution_075/models/base/report.json": "c8d4b52f96719c1d05810b73710e17ca49169fd38a61a3c937a232829ba53776",
+    "main_experiments/sealed_execution_075/models/old_adapter/report.json": "36a9809480aae3c9df7fb8b5e63bdb24b96c0bb648d132a5aa856b25eb9facf2",
+    "main_experiments/sealed_execution_075/models/real_graph_seed17/report.json": "8500d0540eb7847eaa387eb5d68b44d10358bc8fd5e28dd7d51bac506c326ad5",
+    "carla_official/carla_ten_041/report.json": "fbf7a4bd9a920f934cd834172dc7fa6e2a2fb01d274df602a259fa24f24b71f1",
+    "carla_official/identity_geometry_audit_046/report.json": "06e031d79c5ec0259d9836dd9ac9b1d8f1be29e5bbd7f4b452565a195233212a",
+    "reproduction/clean_cpu_navigation_readback_003/report.json": "4bb0ab001e90382af65fc47fb327f7001758593774ffbef015d0683172747d0f",
+    "annotation/offline_imports/user_lzc_20261116_001/review_summary_001.json": "6098798f1f8cafc716154d7591b7ff3e1c7230695020229a0ee81fd7c1facc57",
+    "qwen_adapter_fair_comparison/real_graph_completion_audit_001/report.json": "62b2e782c2bb17b041fc0f85acc8e00e1383056db645854926748c5fca758165",
+    "json/software_validation_070/report.json": "a7e0cda4bddd4bf63a1b3bd1350c1782a45d0903f4511daa35b0345e7f0fa44b",
+    "json/protected_history_audit_001/report.json": "792118d66bb5dd174c4e63d65769a5b0dc43f12cf219f612bc1db376c0eca095"
+  },
+  "current_user_overrides": [
+    "论文正文暂缓",
+    "CARLA先10回合并保持停止",
+    "项目产物预算25GiB，未来传感器大文件允许共享卷",
+    "GitHub凭据不写入仓库或远程URL"
+  ],
+  "unproven_items_are_not_complete": true,
+  "new_accuracy_scores_computed": false,
+  "actual_new_GPU_calls": 4390,
+  "actual_new_CARLA_calls": 0,
+  "human_records_created": 1,
+  "supersedes_snapshot": "validation_report.json (090)"
+}
