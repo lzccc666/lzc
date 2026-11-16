@@ -1,0 +1,84 @@
+{
+  "generated_at_utc": "2026-11-16T14:48:00.610739+00:00",
+  "goal_complete": false,
+  "retrieval_rows": 84,
+  "retrieval_methods": [
+    "base",
+    "category_nearest",
+    "clip_current_crop",
+    "complete_geometry_rule",
+    "controlled_sparse_clip_grid",
+    "cooperation_seed17",
+    "old_adapter",
+    "real_graph_seed17",
+    "real_graph_seed29",
+    "real_graph_seed43",
+    "without_attribute_check",
+    "without_candidate_reranking",
+    "without_evidence_check",
+    "without_rule_query_resolution"
+  ],
+  "retrieval_cohorts": [
+    "challenge",
+    "distribution_preserving"
+  ],
+  "retrieval_metrics": [
+    "no_match_false_selection",
+    "positive_target_correct",
+    "task_correct"
+  ],
+  "mapping_rows": 60,
+  "mapping_conditions": [
+    "full",
+    "one_to_one_depth_quality",
+    "one_to_one_only",
+    "original_fusion",
+    "single_frame",
+    "without_depth_quality",
+    "without_dynamic_maintenance",
+    "without_one_to_one",
+    "without_relations",
+    "without_short_term_expiry"
+  ],
+  "mapping_metrics": [
+    "IDF1",
+    "center_error_m",
+    "duplicate_fraction",
+    "object_precision",
+    "object_recall",
+    "relation_f1"
+  ],
+  "retrieval_denominators": {
+    "distribution_preserving": {
+      "task_correct": 600,
+      "positive_target_correct": 264,
+      "no_match_false_selection": 336
+    },
+    "challenge": {
+      "task_correct": 278,
+      "positive_target_correct": 158,
+      "no_match_false_selection": 120
+    }
+  },
+  "mapping_shape": {
+    "frames_per_condition": 1196,
+    "scenes": 30,
+    "logs": 14
+  },
+  "paired_rows": {
+    "retrieval": 78,
+    "mapping": 54
+  },
+  "source_sha256": {
+    "retrieval_all_metrics.csv": "de7b66ea9d8346dd21499c6a6ef40f378cca27dc91fae946f65c6b2e1f1a8c92",
+    "retrieval_paired_differences.csv": "07fb2d6445485627a063e275bf8e9e084a471504e222f18e1c38cc5911a8975e",
+    "mapping_metrics.csv": "c3ab9b46f1557c451d72b377eecef7c80b3a6e1ea7c4f07edaf1aea30e05c4ec",
+    "mapping_paired_differences.csv": "f1740a4c59925ef7599587705101061735586d264dac791a451bf69e4df31203"
+  },
+  "interpretation_limits": [
+    "模板主集和挑战集不是人工自然指令",
+    "表中没有实际锁定或到达信用",
+    "14方法中的受控稀疏网格和内部规则/规划是适配基线，不是完整外部方法复现"
+  ],
+  "checks_passed": true
+}
