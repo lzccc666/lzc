@@ -1,0 +1,13 @@
+{
+  "repository": "https://github.com/lzccc666/lzc.git",
+  "verified_remote_main_before_audit": "81e01876bf83951747f5b8ae97496b3d14ca5268",
+  "verified_remote_branch_before_audit": "81e01876bf83951747f5b8ae97496b3d14ca5268",
+  "push_status": "success",
+  "pushed_refs": [
+    "refs/heads/codex/thesis-completion-20261116",
+    "refs/heads/main"
+  ],
+  "contents": "代码主体、当前实验交付材料、验证快照、图表、Word/PDF、复现命令和模块入口",
+  "credential_handling": "PAT仅通过临时GIT_ASKPASS进程使用，未写入远程URL、文件或仓库；临时脚本已清理。",
+  "post_audit_commit_note": "本审计文件随下一次提交加入；上面两个SHA是写入本文件前已核实的远程提交。"
+}
