@@ -1,0 +1,151 @@
+{
+  "UTC": "2026-11-16T13:59:05.513935+00:00",
+  "five_models": [
+    {
+      "variant": "base",
+      "verified_requests": 878,
+      "verified_actual_GPU_calls": 878,
+      "outputs_sha256": "3a6c8ad535c26c9f39b216dd16ca4f7c07be92c14ae431e8f32394b678e517a1",
+      "same_ids_and_prompts": true,
+      "gt_received": false
+    },
+    {
+      "variant": "old_adapter",
+      "verified_requests": 878,
+      "verified_actual_GPU_calls": 878,
+      "outputs_sha256": "2cb0860b24a59594924c6ab17f3597387f046c94dad56a6565cd8a34f13e96d3",
+      "same_ids_and_prompts": true,
+      "gt_received": false
+    },
+    {
+      "variant": "real_graph_seed17",
+      "verified_requests": 878,
+      "verified_actual_GPU_calls": 878,
+      "outputs_sha256": "599fcf00072f74b729b1f9e06727c70f4d5166c10341f66fffd99b685d7ec322",
+      "same_ids_and_prompts": true,
+      "gt_received": false
+    },
+    {
+      "variant": "real_graph_seed29",
+      "verified_requests": 878,
+      "verified_actual_GPU_calls": 878,
+      "outputs_sha256": "aae9a0e8f446bfc773775bd3c0ef3aef213f14b200da893327659ca8ef5d13da",
+      "same_ids_and_prompts": true,
+      "gt_received": false
+    },
+    {
+      "variant": "real_graph_seed43",
+      "verified_requests": 878,
+      "verified_actual_GPU_calls": 878,
+      "outputs_sha256": "c746a21bb3881aabc034308e74d075789404a4141f60f7a835e10ce147661585",
+      "same_ids_and_prompts": true,
+      "gt_received": false
+    }
+  ],
+  "total_verified_GPU_calls": 4390,
+  "per_method_records": {
+    "category_nearest": 878,
+    "complete_geometry_rule": 878,
+    "clip_current_crop": 878,
+    "controlled_sparse_clip_grid": 878,
+    "base": 878,
+    "old_adapter": 878,
+    "real_graph_seed17": 878,
+    "real_graph_seed29": 878,
+    "real_graph_seed43": 878,
+    "cooperation_seed17": 878,
+    "without_rule_query_resolution": 878,
+    "without_attribute_check": 878,
+    "without_candidate_reranking": 878,
+    "without_evidence_check": 878
+  },
+  "per_mapping_configuration_frames": {
+    "full": 1196,
+    "without_depth_quality": 1196,
+    "without_one_to_one": 1196,
+    "without_dynamic_maintenance": 1196,
+    "without_short_term_expiry": 1196,
+    "without_relations": 1196,
+    "original_fusion": 1196,
+    "single_frame": 1196,
+    "one_to_one_only": 1196,
+    "one_to_one_depth_quality": 1196
+  },
+  "actual_query_results": 12292,
+  "actual_mapping_frame_updates": 11960,
+  "source_evaluation_files_match": true,
+  "images": [
+    {
+      "figure": "mapping_sealed",
+      "editable_SVG_text_elements": 109,
+      "TIFF_dpi": [
+        600.0,
+        600.0
+      ],
+      "PNG_visual_review_completed": true,
+      "visual_review": "已实际查看，中文和标注清晰，全部方法/三种子及失败均保留，未见文字交叠、裁切或误导截轴"
+    },
+    {
+      "figure": "retrieval_distribution_preserving",
+      "editable_SVG_text_elements": 73,
+      "TIFF_dpi": [
+        600.0,
+        600.0
+      ],
+      "PNG_visual_review_completed": true,
+      "visual_review": "已实际查看，中文和标注清晰，全部方法/三种子及失败均保留，未见文字交叠、裁切或误导截轴"
+    },
+    {
+      "figure": "retrieval_challenge",
+      "editable_SVG_text_elements": 73,
+      "TIFF_dpi": [
+        600.0,
+        600.0
+      ],
+      "PNG_visual_review_completed": true,
+      "visual_review": "已实际查看，中文和标注清晰，全部方法/三种子及失败均保留，未见文字交叠、裁切或误导截轴"
+    }
+  ],
+  "CSV_rows": {
+    "mapping_metrics.csv": 60,
+    "mapping_paired_differences.csv": 54,
+    "retrieval_all_metrics.csv": 84,
+    "retrieval_paired_differences.csv": 78,
+    "adapter_three_seed_summary.csv": 6,
+    "model_execution_statistics.csv": 5
+  },
+  "Excel_sheets": {
+    "建图指标": {
+      "rows": 61,
+      "cells": 610
+    },
+    "建图配对差值": {
+      "rows": 55,
+      "cells": 440
+    },
+    "全部目标选择指标": {
+      "rows": 85,
+      "cells": 680
+    },
+    "目标选择配对差值": {
+      "rows": 79,
+      "cells": 869
+    },
+    "新Adapter三种子": {
+      "rows": 7,
+      "cells": 63
+    },
+    "模型推理统计": {
+      "rows": 6,
+      "cells": 66
+    }
+  },
+  "no_new_model_inference": true,
+  "no_new_CARLA_episodes": true,
+  "new_natural_source_records": 1,
+  "new_natural_qualifying_labels": 0,
+  "whole_goal_complete": false,
+  "previous_failed_prefix_retained": "json/sealed_delivery_verification_098/report.json",
+  "previous_failure": "结果检查通过后，写核验报告时TIFF IFDRational不能直接JSON序列化；099显式转float，先序列化再打开目标。没有修改或重跑模型/实验。",
+  "goal_complete": false
+}

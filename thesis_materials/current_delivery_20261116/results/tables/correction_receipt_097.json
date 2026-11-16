@@ -1,0 +1,12 @@
+{
+  "source_sha256": "99486699b35fd9ec23383847d83f1b733711917bcd290bc0bc54c5e6021e9ead",
+  "predecessor_sha256": "35f8b320be07bf8486bbb2085c4c6fe1dfa2b71b4d21526bc8ec9f427671528a",
+  "predecessor_unchanged": true,
+  "corrected_method_input_note_occurrences": 2,
+  "document_XML_identical_except_two_method_input_notes": true,
+  "all_metric_values_unchanged": true,
+  "new_GPU_calls": 0,
+  "new_CARLA_calls": 0,
+  "PDF_visual_QA_pending": true,
+  "goal_complete": false
+}

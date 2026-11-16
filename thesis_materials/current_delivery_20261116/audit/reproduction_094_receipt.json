@@ -1,0 +1,22 @@
+{
+  "UTC": "2026-11-16T13:35:43.272911+00:00",
+  "returncode": 0,
+  "counts": {
+    "tests": 622,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0
+  },
+  "source_count": 757,
+  "source_files_unchanged": true,
+  "all_imported_project_modules_from_snapshot": true,
+  "imported_project_module_count": 122,
+  "archive_sha256": "74d42cd0fdd3a0d67ff3b3f7bdb29e3d686dd79bfed3752c6680e4498133d17a",
+  "elapsed_s": 24.197377402335405,
+  "external_inputs_are_existing_server_data": true,
+  "clean_environment_install_passed": false,
+  "data_or_sensor_bytes_copied": 0,
+  "actual_GPU_calls": 0,
+  "new_CARLA_episodes": 0,
+  "goal_complete": false
+}

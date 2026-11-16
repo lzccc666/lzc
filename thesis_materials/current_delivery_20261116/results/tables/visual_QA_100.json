@@ -1,0 +1,17 @@
+{
+  "UTC": "2026-11-16T14:05:26.213287+00:00",
+  "PDF_pages": 6,
+  "actual_all_six_PDF_previews_visually_inspected": true,
+  "visual_findings": "六页均实际查看，中文、分母、完整区间与表下注清晰，未见裁切或行跨页；三线表无竖线。",
+  "Word_tables": 6,
+  "three_line_table_borders_checked": true,
+  "metric_values_unchanged_from_081": true,
+  "corrected_fairness_note_verified": true,
+  "generated_sha256": {
+    "封存公开数据实验表.docx": "e0b7246177c157c1a12a02e94b168d85608633242792011df67936dae422983c",
+    "封存公开数据实验表.pdf": "5d742e2221634dc2ac7b12e8b874c996815ba6fc19e778e822d60546af73fc42"
+  },
+  "new_GPU_calls": 0,
+  "new_CARLA_episodes": 0,
+  "goal_complete": false
+}

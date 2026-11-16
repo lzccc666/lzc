@@ -1,0 +1,32 @@
+{
+  "backend": "Python, matplotlib only",
+  "status": "registered_before_all_sealed_model_outputs_complete",
+  "core_conclusion": "如实展示独立封存公开数据上建图模块、基线及五模型的收益与代价，不预设完整方案或微调一定更好。",
+  "archetype": "quantitative grid",
+  "panels": [
+    "十组建图：对象召回、跨帧IDF1、中心误差、关系F1；主消融与四组架构诊断分明",
+    "模板主集：全部十四方法的正目标选对率与无匹配误选率",
+    "模板挑战集：同上，单独呈现，不与主集混合"
+  ],
+  "dimensions_mm": [183, 155],
+  "font_pt": 6.5,
+  "exports": ["SVG editable text", "PDF TrueType text", "TIFF 600dpi LZW", "PNG preview", "CSV source", "XLSX tables"],
+  "statistics": {
+    "independent_unit": "14个采集日志，30场景；同帧多指令不作为独立场景",
+    "interval": "按日志聚类4000次bootstrap，seed17；比率用计数相加后相除",
+    "paired_differences": "与full建图及base模型比较，用同一日志重采样索引；仅辅助描述，不修改主指标",
+    "p_values": "不报告显著性检验或选择性p值",
+    "seeds": "新Adapter三种子全部分别呈现，不按封存结果挑选"
+  },
+  "integrity": [
+    "等待所有模型与冻结评价完成才读取评价输出",
+    "所有方法固定顺序显示，保留负结果，统一0至1比例轴",
+    "主集是600条模板查询，挑战集278条，均不是人工自然指令",
+    "1196帧每配置，30个深度缺失首帧仍计入",
+    "没有实际锁定或到达信用，不声称完整实时导航",
+    "关系F1把无法关联身份的预测关系计入预测分母",
+    "不把共享CPU建图时间宣称为独占性能",
+    "最终须检查实际PNG预览、文字越界、SVG文字、TIFF分辨率和来源哈希"
+  ],
+  "goal_complete": false
+}

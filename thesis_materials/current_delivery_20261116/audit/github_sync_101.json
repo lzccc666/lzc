@@ -1,0 +1,13 @@
+{
+  "generated_at_utc": "2026-11-16T00:00:00Z",
+  "repository": "https://github.com/lzccc666/lzc.git",
+  "source_branch": "main",
+  "base_remote_main": "d78f1f5cefd60b6fb2a2954733ca8faa1537000b",
+  "local_commit_before_push": "f8ab71a3a682a39aef980ed292152a41187d64ff",
+  "target_branch": "codex/thesis-completion-20261116",
+  "push_status": "blocked_authentication",
+  "push_error": "fatal: could not read Username for https://github.com: No such device or address",
+  "credential_policy": "未将聊天中的PAT写入命令、文件、远程URL或仓库。配置本机GitHub凭据后可直接推送该本地分支。",
+  "included_scope": "代码主体沿用远程仓库已有内容；本次提交新增当前实验交付材料、图表、Word/PDF、审计清单和代码阅读交接。",
+  "protected_scope": "未加入原始传感器、模型权重、人工原始记录和大体积数据。"
+}
