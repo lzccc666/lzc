@@ -1,0 +1,487 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          18
+        ]
+      ],
+      "date-time": "2026-11-18T18:59:19Z",
+      "timestamp": 1795028359573,
+      "version": "4.10.2"
+    },
+    "reference-count": 54,
+    "publisher": "IEEE",
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2018,
+          10
+        ]
+      ]
+    },
+    "DOI": "10.1109/ismar.2018.00024",
+    "type": "proceedings-article",
+    "created": {
+      "date-parts": [
+        [
+          2019,
+          1,
+          18
+        ]
+      ],
+      "date-time": "2019-01-18T01:15:37Z",
+      "timestamp": 1547774137000
+    },
+    "page": "10-20",
+    "source": "Crossref",
+    "is-referenced-by-count": 382,
+    "title": [
+      "MaskFusion: Real-Time Recognition, Tracking and Reconstruction of Multiple Moving Objects"
+    ],
+    "prefix": "10.1109",
+    "author": [
+      {
+        "given": "Martin",
+        "family": "Runz",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Maud",
+        "family": "Buffier",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Lourdes",
+        "family": "Agapito",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref39",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICRA.2017.7989518"
+      },
+      {
+        "key": "ref38",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5244/C.26.112"
+      },
+      {
+        "key": "ref33",
+        "article-title": "Kinect-fusion: Real-time dense surface mapping and tracking",
+        "author": "newcombe",
+        "year": "2011",
+        "journal-title": "ISMAR'02 International Symposium on Mixed and Augmented Reality IEEE"
+      },
+      {
+        "key": "ref32",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2015.7298631"
+      },
+      {
+        "key": "ref31",
+        "article-title": "Indoor segmentation and support inference from rgbd images",
+        "author": "kohli",
+        "year": "2012",
+        "journal-title": "ECCV"
+      },
+      {
+        "key": "ref30",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TRO.2015.2463671"
+      },
+      {
+        "key": "ref37",
+        "first-page": "91",
+        "article-title": "Faster r-cnn: Towards real-time object detection with region proposal networks",
+        "volume": "28",
+        "author": "ren",
+        "year": "2015",
+        "journal-title": "Advances in neural information processing systems"
+      },
+      {
+        "key": "ref36",
+        "article-title": "Learning to refine object segments",
+        "author": "pinheiro",
+        "year": "2016",
+        "journal-title": "ECCV"
+      },
+      {
+        "key": "ref35",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/344779.344936"
+      },
+      {
+        "key": "ref34",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV.2011.6126513"
+      },
+      {
+        "key": "ref28",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICRA.2017.7989538"
+      },
+      {
+        "key": "ref27",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2017.472"
+      },
+      {
+        "key": "ref29",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IVS.2009.5164280"
+      },
+      {
+        "key": "ref2",
+        "first-page": "169",
+        "article-title": "Discriminative learning of markov random fields for segmentation of 3d scan data",
+        "volume": "2",
+        "author": "anguelov",
+        "year": "2005",
+        "journal-title": "Computer Vision and Pattern Recognition 2005 CVPR 2005 IEEE Computer Society Conference on"
+      },
+      {
+        "key": "ref1",
+        "year": "0",
+        "journal-title": "Matterport implementation of mask-rcnn"
+      },
+      {
+        "key": "ref20",
+        "first-page": "362",
+        "article-title": "Volumedeform: Real-time volumetric non-rigid reconstruction",
+        "author": "innmann",
+        "year": "2016",
+        "journal-title": "European Conference on Computer Vision"
+      },
+      {
+        "key": "ref22",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICRA.2013.6630857"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICRA.2017.7989459"
+      },
+      {
+        "key": "ref24",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IROS.2013.6696650"
+      },
+      {
+        "key": "ref23",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/3DV.2013.9"
+      },
+      {
+        "key": "ref26",
+        "first-page": "244",
+        "article-title": "Semantic labeling of 3d point clouds for indoor scenes",
+        "volume": "24",
+        "author": "koppula",
+        "year": "2011",
+        "journal-title": "Advances in neural information processing systems"
+      },
+      {
+        "key": "ref25",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ISMAR.2007.4538852"
+      },
+      {
+        "key": "ref50",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.15607/RSS.2015.XI.001"
+      },
+      {
+        "key": "ref51",
+        "article-title": "Kintinuous: Spatially extended kinectfusion",
+        "author": "whelan",
+        "year": "2012",
+        "journal-title": "Workshop on RGB-D Advanced Reasoning with Depth Cameras in Conjunction with Robotics Science and Systems"
+      },
+      {
+        "key": "ref54",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPAMI.2012.104"
+      },
+      {
+        "key": "ref53",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1145/2601097.2601165",
+        "article-title": "Real-time non-rigid reconstruction using an rgb-d camera",
+        "volume": "33",
+        "author": "zollhöfer",
+        "year": "2014",
+        "journal-title": "ACM Trans Graph"
+      },
+      {
+        "key": "ref52",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5244/C.24.45"
+      },
+      {
+        "key": "ref10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2017.261"
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV.2003.1238654"
+      },
+      {
+        "key": "ref40",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2013.178"
+      },
+      {
+        "key": "ref12",
+        "article-title": "Fusion4d: Real-time performance capture of challenging scenes",
+        "author": "dou",
+        "year": "2016",
+        "journal-title": "ACM SIGGRAPH Conference on Computer Graphics and Interactive Techniques"
+      },
+      {
+        "key": "ref13",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICRA.2014.6907666"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s10462-012-9365-8"
+      },
+      {
+        "key": "ref15",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV.2017.322"
+      },
+      {
+        "key": "ref16",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2016.90"
+      },
+      {
+        "key": "ref17",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/3DV.2013.59"
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/0278364911434148"
+      },
+      {
+        "key": "ref19",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICRA.2014.6907236"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/0278364917700714"
+      },
+      {
+        "key": "ref3",
+        "author": "andrei barsan",
+        "year": "2017",
+        "journal-title": "Simultaneous localization and mapping in dynamic scenes"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "crossref",
+        "first-page": "4102",
+        "DOI": "10.1109/ROBOT.2007.364109",
+        "article-title": "Towards simultaneous recognition, localization and mapping for hand-held and wearable cameras",
+        "author": "oliver castle",
+        "year": "2007",
+        "journal-title": "Robotics and Automation 2007 IEEE International Conference on"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1023/A:1020145606604"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IROS.2011.6094648"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1576246.1531379"
+      },
+      {
+        "key": "ref49",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCVW.2009.5457479"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICRA.2011.5980475"
+      },
+      {
+        "key": "ref46",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICRA.2016.7487378"
+      },
+      {
+        "key": "ref45",
+        "article-title": "Rear-time and scalable Incremental segmentation on dense slam",
+        "author": "tateno",
+        "year": "2015",
+        "journal-title": "IEEE/RSJ International Conference on Intelligent Robots and Systems"
+      },
+      {
+        "key": "ref48",
+        "doi-asserted-by": "crossref",
+        "first-page": "889",
+        "DOI": "10.1177/0278364907081229",
+        "article-title": "Simultaneous localization, mapping and moving object tracking",
+        "volume": "26",
+        "author": "chieh-chih",
+        "year": "2007",
+        "journal-title": "The International Journal of Robotics Research"
+      },
+      {
+        "key": "ref47",
+        "doi-asserted-by": "crossref",
+        "first-page": "1734",
+        "DOI": "10.1109/IROS.2012.6385692",
+        "article-title": "3d scene segmentation for autonomous robot grasping",
+        "author": "ückerrnann",
+        "year": "2012",
+        "journal-title": "Intelligent Robots and Systems (IROS) 2012 IEEE/RSJ International Conference on"
+      },
+      {
+        "key": "ref42",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2014.46"
+      },
+      {
+        "key": "ref41",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICRA.2018.8460681"
+      },
+      {
+        "key": "ref44",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2017.695"
+      },
+      {
+        "key": "ref43",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IROS.2012.6385773"
+      }
+    ],
+    "event": {
+      "name": "2018 IEEE International Symposium on Mixed and Augmented Reality (ISMAR)",
+      "location": "Munich, Germany",
+      "start": {
+        "date-parts": [
+          [
+            2018,
+            10,
+            16
+          ]
+        ]
+      },
+      "end": {
+        "date-parts": [
+          [
+            2018,
+            10,
+            20
+          ]
+        ]
+      }
+    },
+    "container-title": [
+      "2018 IEEE International Symposium on Mixed and Augmented Reality (ISMAR)"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx7/8613686/8613728/08613746.pdf?arnumber=8613746",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2022,
+          1,
+          26
+        ]
+      ],
+      "date-time": "2022-01-26T23:55:11Z",
+      "timestamp": 1643241311000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/8613746/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2018,
+          10
+        ]
+      ]
+    },
+    "references-count": 54,
+    "URL": "https://doi.org/10.1109/ismar.2018.00024",
+    "relation": {},
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2018,
+          10
+        ]
+      ]
+    }
+  }
+}

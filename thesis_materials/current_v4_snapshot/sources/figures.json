@@ -1,0 +1,66 @@
+{
+  "mapping": {
+    "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/figures/Figure6-1_nuScenes对象建图比较.png",
+    "source": "statistics/causal_mapping_full_001/report.json",
+    "export": "350 dpi PNG + vector PDF",
+    "filename": "Figure6-1_nuScenes对象建图比较",
+    "generator": "scripts/build_evidence_figures.py",
+    "backend": "Python matplotlib"
+  },
+  "retrieval": {
+    "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/figures/Figure6-2_目标检索选对与误选权衡.png",
+    "source": "statistics/causal_retrieval_full_001/report.json",
+    "export": "350 dpi PNG + vector PDF",
+    "filename": "Figure6-2_目标检索选对与误选权衡",
+    "generator": "scripts/build_evidence_figures.py",
+    "backend": "Python matplotlib"
+  },
+  "qwen": {
+    "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/figures/Figure6-3_Qwen专项五模型比较.png",
+    "source": "statistics/fair_three_task_full_validation_001/report.json",
+    "export": "350 dpi PNG + vector PDF",
+    "filename": "Figure6-3_Qwen专项五模型比较",
+    "generator": "scripts/build_evidence_figures.py",
+    "backend": "Python matplotlib"
+  },
+  "maps": {
+    "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/figures/Figure6-4_地图约束离线诊断.png",
+    "source": "statistics/causal_maps_full_001/report.json",
+    "export": "350 dpi PNG + vector PDF",
+    "filename": "Figure6-4_地图约束离线诊断",
+    "generator": "scripts/build_evidence_figures.py",
+    "backend": "Python matplotlib"
+  },
+  "case": {
+    "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/figures/Figure4-1_nuScenes_scene-0039第2帧检测分割对象定位案例.png",
+    "source": [
+      "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0039/frames.jsonl",
+      "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_frontend_reuse_full_001/inputs/scene-0039/color/000002.jpg",
+      "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_frontend_reuse_full_001/inputs/scene-0039/depth/000002.png",
+      "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_frontend_reuse_full_001/inputs/scene-0039/exp_streamlined_yolo_outdoor_objects_v1/detections/000002.pkl.gz"
+    ],
+    "export": "350 dpi PNG + vector PDF",
+    "filename": "Figure4-1_nuScenes_scene-0039第2帧检测分割对象定位案例",
+    "generator": "scripts/build_evidence_figures.py",
+    "backend": "Python matplotlib"
+  },
+  "relations_case": {
+    "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/figures/Figure4-2_nuScenes_scene-0039第2帧关系几何案例.png",
+    "source": [
+      "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0039/frames.jsonl",
+      "mapping_evaluation/causal_relations_full_001/release.json"
+    ],
+    "export": "350 dpi PNG + vector PDF",
+    "filename": "Figure4-2_nuScenes_scene-0039第2帧关系几何案例",
+    "generator": "scripts/build_evidence_figures.py",
+    "backend": "Python matplotlib"
+  },
+  "pipeline": {
+    "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/figures/Figure3-1_公开录制数据研究流程.png",
+    "source": "本论文第3章方法定义",
+    "export": "350 dpi PNG + vector PDF",
+    "filename": "Figure3-1_公开录制数据研究流程",
+    "generator": "scripts/build_evidence_figures.py",
+    "backend": "Python matplotlib"
+  }
+}

@@ -1,0 +1,581 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          19
+        ]
+      ],
+      "date-time": "2026-11-19T14:36:22Z",
+      "timestamp": 1795098982861,
+      "version": "4.10.3"
+    },
+    "reference-count": 35,
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "issue": "5",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2025,
+              5,
+              1
+            ]
+          ],
+          "date-time": "2025-05-01T00:00:00Z",
+          "timestamp": 1746057600000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2025,
+              5,
+              1
+            ]
+          ],
+          "date-time": "2025-05-01T00:00:00Z",
+          "timestamp": 1746057600000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2025,
+              5,
+              1
+            ]
+          ],
+          "date-time": "2025-05-01T00:00:00Z",
+          "timestamp": 1746057600000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/501100001809",
+        "name": "National Natural Science Foundation of China",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "52205244"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "52205244"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100001809",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/501100006579",
+        "name": "Ministry of Industry and Information Technology of the People's Republic of China",
+        "doi-asserted-by": "publisher",
+        "id": [
+          {
+            "id": "10.13039/501100006579",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "name": "Key Laboratory of Intelligent Manufacturing for High-end Aerospace Products"
+      },
+      {
+        "name": "Beijing Key Laboratory of Digital Design and Manufacturing"
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "IEEE Robot. Autom. Lett."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2025,
+          5
+        ]
+      ]
+    },
+    "DOI": "10.1109/lra.2025.3547643",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2025,
+          3,
+          3
+        ]
+      ],
+      "date-time": "2025-03-03T13:39:09Z",
+      "timestamp": 1741009149000
+    },
+    "page": "4252-4259",
+    "source": "Crossref",
+    "is-referenced-by-count": 30,
+    "title": [
+      "Dynamic Open-Vocabulary 3D Scene Graphs for Long-Term Language-Guided Mobile Manipulation"
+    ],
+    "prefix": "10.1109",
+    "volume": "10",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0009-0001-6737-7537",
+        "authenticated-orcid": false,
+        "given": "Zhijie",
+        "family": "Yan",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "School of Mechanical Engineering and Automation, Beihang University, Beijing, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-5684-6756",
+        "authenticated-orcid": false,
+        "given": "Shufei",
+        "family": "Li",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Systems Engineering, City University of Hong Kong, Hong Kong, SAR, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-2524-1217",
+        "authenticated-orcid": false,
+        "given": "Zuoxu",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Mechanical Engineering and Automation, Beihang University, Beijing, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0009-0004-6239-2377",
+        "authenticated-orcid": false,
+        "given": "Lixiu",
+        "family": "Wu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Information Engineering, Minzu University of China, Beijing, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0009-0007-6819-6352",
+        "authenticated-orcid": false,
+        "given": "Han",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Afanti Tech LLC, Beijing, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0009-0006-5304-6872",
+        "authenticated-orcid": false,
+        "given": "Jun",
+        "family": "Zhu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Afanti Tech LLC, Beijing, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0009-0002-8610-2923",
+        "authenticated-orcid": false,
+        "given": "Lijiang",
+        "family": "Chen",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Afanti Tech LLC, Beijing, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-2983-8766",
+        "authenticated-orcid": false,
+        "given": "Jihong",
+        "family": "Liu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Mechanical Engineering and Automation, Beihang University, Beijing, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref1",
+        "article-title": "RT-2: Vision-language-action models transfer web knowledge to robotic control",
+        "author": "Brohan",
+        "year": "2023"
+      },
+      {
+        "key": "ref2",
+        "article-title": "PALM-E: An embodied multimodal language model",
+        "author": "Driess",
+        "year": "2023"
+      },
+      {
+        "key": "ref3",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.15607/RSS.2024.XX.091"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICRA46639.2022.9812253"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.jii.2024.100759"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/cvprw63382.2024.00179"
+      },
+      {
+        "key": "ref7",
+        "article-title": "Grounding DINO: Marrying DINO with grounded pre-training for open-set object detection",
+        "author": "Liu",
+        "year": "2024"
+      },
+      {
+        "key": "ref8",
+        "article-title": "SAM 2: Segment anything in images and videos",
+        "author": "Ravi",
+        "year": "2024"
+      },
+      {
+        "key": "ref9",
+        "article-title": "Learning transferable visual models from natural language supervision",
+        "author": "Radford",
+        "year": "2021"
+      },
+      {
+        "key": "ref10",
+        "article-title": "Distilled feature fields enable few-shot language-guided manipulation",
+        "author": "Shen",
+        "year": "2023"
+      },
+      {
+        "key": "ref11",
+        "first-page": "19729",
+        "article-title": "LERF: Language embedded radiance fields",
+        "volume-title": "Proc. IEEE/CVF Int. Conf. Comput. Vis.",
+        "author": "Kerr",
+        "year": "2023"
+      },
+      {
+        "key": "ref12",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/LRA.2024.3432348"
+      },
+      {
+        "key": "ref13",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CASE59546.2024.10711649"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICRA57147.2024.10610243"
+      },
+      {
+        "key": "ref15",
+        "article-title": "RoboEXP: Action-conditioned scene graph via interactive exploration for robotic manipulation",
+        "author": "Jiang",
+        "year": "2024"
+      },
+      {
+        "key": "ref16",
+        "article-title": "DynaMem: Online dynamic spatio-semantic memory for open world mobile manipulation",
+        "author": "Liu",
+        "year": "2024"
+      },
+      {
+        "key": "ref17",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR52729.2023.00085"
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TIE.2021.3105977"
+      },
+      {
+        "key": "ref19",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.rcim.2022.102510",
+        "article-title": "Proactive humanrobot collaboration: Mutual-cognitive, predictable, and self-organising perspectives",
+        "volume": "81",
+        "author": "Li",
+        "year": "2023",
+        "journal-title": "Robot. Comput.- Integr. Manuf."
+      },
+      {
+        "key": "ref20",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1609/aaai.v34i07.6913"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.15607/rss.2024.xx.077"
+      },
+      {
+        "key": "ref22",
+        "article-title": "GPT-4 technical report",
+        "year": "2024"
+      },
+      {
+        "key": "ref23",
+        "article-title": "Gemini: A family of highly capable multimodal models",
+        "year": "2024"
+      },
+      {
+        "key": "ref24",
+        "first-page": "8536",
+        "article-title": "INT2: Interactive trajectory prediction at intersections",
+        "volume-title": "Proc. Int. Conf. Comput. Vis.",
+        "author": "Yan",
+        "year": "2023"
+      },
+      {
+        "key": "ref25",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1109/IROS58592.2024.10802397",
+        "article-title": "Large language models powered context-aware motion prediction in autonomous driving",
+        "author": "Zheng",
+        "year": "2024"
+      },
+      {
+        "key": "ref26",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV51070.2023.01616"
+      },
+      {
+        "key": "ref27",
+        "first-page": "2746",
+        "article-title": "Matchformer: Interleaving attention in transformers for feature matching",
+        "volume-title": "Proc. Asian Conf. Comput. Vis.",
+        "author": "Wang",
+        "year": "2022"
+      },
+      {
+        "key": "ref28",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR52729.2023.00488"
+      },
+      {
+        "key": "ref29",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPAMI.2021.3070754"
+      },
+      {
+        "key": "ref30",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/34.121791"
+      },
+      {
+        "key": "ref31",
+        "first-page": "16558",
+        "article-title": "DROID-SLAM: Deep visual SLAM for monocular, stereo, and RGB-D cameras",
+        "author": "Teed",
+        "year": "2021",
+        "journal-title": "NeurIPS"
+      },
+      {
+        "key": "ref32",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TRO.2017.2705103"
+      },
+      {
+        "key": "ref33",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR52688.2022.01245"
+      },
+      {
+        "key": "ref34",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSSC.1968.300136"
+      },
+      {
+        "key": "ref35",
+        "first-page": "24824",
+        "article-title": "Chain-of-thought prompting elicits reasoning in large language models",
+        "volume-title": "Proc. 36th Int. Conf. Neural Inf. Process. Syst.",
+        "author": "Wei",
+        "year": "2023"
+      }
+    ],
+    "container-title": [
+      "IEEE Robotics and Automation Letters"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx8/7083369/10935293/10909193.pdf?arnumber=10909193",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2025,
+          3,
+          26
+        ]
+      ],
+      "date-time": "2025-03-26T22:53:53Z",
+      "timestamp": 1743029633000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/10909193/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          5
+        ]
+      ]
+    },
+    "references-count": 35,
+    "journal-issue": {
+      "issue": "5"
+    },
+    "URL": "https://doi.org/10.1109/lra.2025.3547643",
+    "relation": {
+      "has-part": [
+        {
+          "id-type": "doi",
+          "id": "https://doi.org/10.1109/lra.2025.3547643/mm1",
+          "asserted-by": "subject"
+        }
+      ]
+    },
+    "ISSN": [
+      "2377-3766",
+      "2377-3774"
+    ],
+    "issn-type": [
+      {
+        "value": "2377-3766",
+        "type": "electronic"
+      },
+      {
+        "value": "2377-3774",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2025,
+          5
+        ]
+      ]
+    }
+  }
+}

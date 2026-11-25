@@ -1,0 +1,792 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          20
+        ]
+      ],
+      "date-time": "2026-11-20T03:26:44Z",
+      "timestamp": 1795145204301,
+      "version": "4.10.3"
+    },
+    "reference-count": 107,
+    "publisher": "SAGE Publications",
+    "issue": "7",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2011,
+              6,
+              1
+            ]
+          ],
+          "date-time": "2011-06-01T00:00:00Z",
+          "timestamp": 1306886400000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://journals.sagepub.com/page/policies/text-and-data-mining-license"
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "journals.sagepub.com"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "The International Journal of Robotics Research"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2011,
+          6
+        ]
+      ]
+    },
+    "abstract": "<jats:p>During the last decade, sampling-based path planning algorithms, such as probabilistic roadmaps (PRM) and rapidly exploring random trees (RRT), have been shown to work well in practice and possess theoretical guarantees such as probabilistic completeness. However, little effort has been devoted to the formal analysis of the quality of the solution returned by such algorithms, e.g. as a function of the number of samples. The purpose of this paper is to fill this gap, by rigorously analyzing the asymptotic behavior of the cost of the solution returned by stochastic sampling-based algorithms as the number of samples increases. A number of negative results are provided, characterizing existing algorithms, e.g. showing that, under mild technical conditions, the cost of the solution returned by broadly used sampling-based algorithms converges almost surely to a non-optimal value. The main contribution of the paper is the introduction of new algorithms, namely, PRM* and RRT* , which are provably asymptotically optimal, i.e. such that the cost of the returned solution converges almost surely to the optimum. Moreover, it is shown that the computational complexity of the new algorithms is within a constant factor of that of their probabilistically complete (but not asymptotically optimal) counterparts. The analysis in this paper hinges on novel connections between stochastic sampling-based path planning algorithms and the theory of random geometric graphs.</jats:p>",
+    "DOI": "10.1177/0278364911406761",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2011,
+          6,
+          22
+        ]
+      ],
+      "date-time": "2011-06-22T13:59:55Z",
+      "timestamp": 1308751195000
+    },
+    "page": "846-894",
+    "update-policy": "https://doi.org/10.1177/sage-journals-update-policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 4895,
+    "title": [
+      "Sampling-based algorithms for optimal motion planning"
+    ],
+    "prefix": "10.1177",
+    "volume": "30",
+    "author": [
+      {
+        "given": "Sertac",
+        "family": "Karaman",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Laboratory for Information and Decision Systems, Massachusetts Institute of Technology, Cambridge, MA, USA,"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Emilio",
+        "family": "Frazzoli",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Laboratory for Information and Decision Systems, Massachusetts Institute of Technology, Cambridge, MA, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "179",
+    "published-online": {
+      "date-parts": [
+        [
+          2011,
+          6,
+          22
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "atypb1",
+        "volume-title": "Handbook of Mathematical Functions",
+        "author": "Abramowitz M",
+        "year": "1964"
+      },
+      {
+        "key": "atypb2",
+        "volume-title": "IEEE Conference on Robotics and Automation (ICRA)",
+        "author": "Alterovitz R."
+      },
+      {
+        "key": "atypb3",
+        "volume-title": "Space-time trade-offs for approximate spherical range counting",
+        "author": "Arya S.",
+        "year": "2005"
+      },
+      {
+        "key": "atypb4",
+        "doi-asserted-by": "crossref",
+        "first-page": "135",
+        "DOI": "10.1016/S0925-7721(00)00022-5",
+        "volume": "17",
+        "author": "Arya S.",
+        "year": "2000",
+        "journal-title": "Computational Geometry: Theory and Applications"
+      },
+      {
+        "key": "atypb5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/293347.293348"
+      },
+      {
+        "key": "atypb6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-540-69395-6_2"
+      },
+      {
+        "key": "atypb7",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1017/S000186780000001X"
+      },
+      {
+        "key": "atypb8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1017/S0001867800003116"
+      },
+      {
+        "key": "atypb9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/027836499701600604"
+      },
+      {
+        "key": "atypb10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/027836499101000604"
+      },
+      {
+        "key": "atypb11",
+        "volume-title": "IEEE International Conference on Robotics and Automation",
+        "author": "Berenson D."
+      },
+      {
+        "key": "atypb12",
+        "volume-title": "IEEE Conference on Robotics and Automation (ICRA)",
+        "author": "Berenson D."
+      },
+      {
+        "key": "atypb13",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-540-24743-2_10"
+      },
+      {
+        "key": "atypb14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1017/CBO9780511814068"
+      },
+      {
+        "key": "atypb15",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1017/CBO9781139167383"
+      },
+      {
+        "key": "atypb16",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1049/ip-cta:20050152"
+      },
+      {
+        "key": "atypb17",
+        "volume-title": "IEEE Conference on Decision and Control",
+        "author": "Branicky MS"
+      },
+      {
+        "key": "atypb18",
+        "volume-title": "IEEE Conference on Robotics and Automation",
+        "author": "Branicky MS"
+      },
+      {
+        "key": "atypb19",
+        "volume-title": "International Joint Conference on Artificial Intelligence",
+        "author": "Brooks R."
+      },
+      {
+        "key": "atypb20",
+        "doi-asserted-by": "crossref",
+        "first-page": "288",
+        "DOI": "10.1007/978-3-540-45135-8_23",
+        "volume": "2752",
+        "author": "Bruce J.",
+        "year": "2003",
+        "journal-title": "Lecture Notes in Computer Science"
+      },
+      {
+        "key": "atypb21",
+        "volume-title": "IEEE Conference on Robotics and Automation (ICRA)",
+        "author": "Bry A."
+      },
+      {
+        "key": "atypb22",
+        "volume-title": "The Complexity of Robot Motion Planning",
+        "author": "Canny J.",
+        "year": "1988"
+      },
+      {
+        "key": "atypb23",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/SFCS.1987.42"
+      },
+      {
+        "key": "atypb24",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s002360000044"
+      },
+      {
+        "key": "atypb25",
+        "volume-title": "Principles of Robot Motion: Theory, Algorithms, and Implementations",
+        "author": "Choset H.",
+        "year": "2005"
+      },
+      {
+        "key": "atypb26",
+        "volume-title": "IEEE International Conference on Robotics and Automation (ICRA)",
+        "author": "Cortes J."
+      },
+      {
+        "key": "atypb27",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Dolgov D., Thrun S., Montemerlo M. and Diebel J. ( 2009) Path planning for autonomous driving in unknown environments. Experimental Robotics. Berlin: Springer, pp. 55-64.",
+        "DOI": "10.1007/978-3-642-00196-3_8"
+      },
+      {
+        "key": "atypb28",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1017/CBO9780511581274"
+      },
+      {
+        "key": "atypb29",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/0020-0190(81)90053-3"
+      },
+      {
+        "key": "atypb30",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/PL00009293"
+      },
+      {
+        "key": "atypb31",
+        "volume-title": "Proceedings of the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)",
+        "author": "Ferguson D."
+      },
+      {
+        "key": "atypb32",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/PL00008282"
+      },
+      {
+        "key": "atypb33",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.2514/2.4856"
+      },
+      {
+        "key": "atypb34",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1023/A:1020564024509"
+      },
+      {
+        "key": "atypb35",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1137/0109045"
+      },
+      {
+        "key": "atypb36",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1093/oso/9780198572237.001.0001",
+        "volume-title": "Probability and Random Processes",
+        "author": "Grimmett G.",
+        "year": "2001",
+        "edition": "3"
+      },
+      {
+        "key": "atypb37",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Gupta P. and Kumar PR ( 1998) Critical power for asymptotic connectivity in wireless networks. In McEneany WM, Yin G and Zhang Q (eds), Stochastic Analysis, Control, Optimization and Applications: A Volume in Honor of W.H. Fleming. Boston, MA: Birkhäuser, pp. 547-566.",
+        "DOI": "10.1007/978-1-4612-1784-8_33"
+      },
+      {
+        "key": "atypb38",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/18.825799"
+      },
+      {
+        "key": "atypb39",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.2307/1427106"
+      },
+      {
+        "key": "atypb40",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/027836498300200405"
+      },
+      {
+        "key": "atypb41",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/027836402320556421"
+      },
+      {
+        "key": "atypb42",
+        "doi-asserted-by": "crossref",
+        "first-page": "7",
+        "DOI": "10.1177/0278364906061157",
+        "volume": "25",
+        "author": "Hsu D.",
+        "year": "2006",
+        "journal-title": "The International Journal of Robotics Research"
+      },
+      {
+        "key": "atypb43",
+        "volume-title": "IEEE Conference on Robotics and Automation",
+        "author": "Hsu D."
+      },
+      {
+        "key": "atypb44",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1142/S0218195999000285"
+      },
+      {
+        "key": "atypb45",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TRO.2010.2049527"
+      },
+      {
+        "key": "atypb46",
+        "volume-title": "Workshop on Algorithmic Foundations of Robotics (WAFR)",
+        "author": "Karaman S."
+      },
+      {
+        "key": "atypb47",
+        "author": "Karaman S.",
+        "year": "2010",
+        "journal-title": "Robotics: Science and Systems (RSS)"
+      },
+      {
+        "key": "atypb48",
+        "volume-title": "IEEE Conference on Decision and Control",
+        "author": "Karaman S."
+      },
+      {
+        "key": "atypb49",
+        "volume-title": "IEEE Conference on Robotics and Automation (ICRA)",
+        "author": "Karaman S."
+      },
+      {
+        "key": "atypb50",
+        "volume-title": "IEEE International Conference on Robotics and Automation",
+        "author": "Kavraki L."
+      },
+      {
+        "key": "atypb51",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/70.660866"
+      },
+      {
+        "key": "atypb52",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/70.508439"
+      },
+      {
+        "key": "atypb53",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/027836498600500106"
+      },
+      {
+        "key": "atypb54",
+        "volume-title": "IEEE Conference on Robotics and Automation",
+        "author": "Koren Y."
+      },
+      {
+        "key": "atypb55",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s10846-009-9367-1"
+      },
+      {
+        "key": "atypb56",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1023/A:1013219111657"
+      },
+      {
+        "key": "atypb57",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ROBOT.2000.844730"
+      },
+      {
+        "key": "atypb58",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TCST.2008.2012116"
+      },
+      {
+        "key": "atypb59",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TRA.2004.824649"
+      },
+      {
+        "key": "atypb60",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-1-4615-4022-9"
+      },
+      {
+        "key": "atypb61",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/02783649922067753"
+      },
+      {
+        "key": "atypb62",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1017/CBO9780511546877"
+      },
+      {
+        "key": "atypb63",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/0278364904045481"
+      },
+      {
+        "key": "atypb64",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/02783640122067453"
+      },
+      {
+        "key": "atypb65",
+        "volume": "09",
+        "author": "LaValle SM",
+        "year": "2009",
+        "journal-title": "Technical Report"
+      },
+      {
+        "key": "atypb66",
+        "first-page": "23",
+        "volume": "9",
+        "author": "Lee DT",
+        "year": "1977",
+        "journal-title": "Acta Informatica"
+      },
+      {
+        "key": "atypb67",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/0278364909340445"
+      },
+      {
+        "key": "atypb68",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.artint.2007.11.009"
+      },
+      {
+        "key": "atypb69",
+        "volume-title": "Anytime A* with provable bounds on sub-optimality",
+        "author": "Likhachev M.",
+        "year": "2004"
+      },
+      {
+        "key": "atypb70",
+        "volume-title": "Collision and proximity queries",
+        "author": "Lin MC",
+        "year": "2004",
+        "edition": "2"
+      },
+      {
+        "key": "atypb71",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/11008941_5"
+      },
+      {
+        "key": "atypb72",
+        "volume-title": "IEEE International Conference on Computer Animation and Social Characters",
+        "author": "Liu Y."
+      },
+      {
+        "key": "atypb73",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/359156.359164"
+      },
+      {
+        "key": "atypb74",
+        "volume-title": "American Control Conference",
+        "author": "Luders B."
+      },
+      {
+        "key": "atypb75",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1017/CBO9780511895357"
+      },
+      {
+        "key": "atypb76",
+        "volume-title": "Topology",
+        "author": "Munkres JR",
+        "year": "2000",
+        "edition": "2"
+      },
+      {
+        "key": "atypb77",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Nechushtan O., Raveh B. and Halperin D. ( 2010) Sampling-diagram automata: a tool for analyzing path quality in tree planners. In Hsu D, Isler V, Latombe JC and Lin M (eds), Algorithmic Foundations of Robotics IX (Springer Tracts in Advanced Robotics, Vol. 68). Berlin: Springer, pp. 285-301.",
+        "DOI": "10.1007/978-3-642-17452-0_17"
+      },
+      {
+        "key": "atypb78",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1137/1.9781611970081"
+      },
+      {
+        "key": "atypb79",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1093/acprof:oso/9780198506263.001.0001"
+      },
+      {
+        "key": "atypb80",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TRO.2005.847599"
+      },
+      {
+        "key": "atypb81",
+        "volume-title": "Workshop on Algorithmic Foundations of Robotics (WAFR)",
+        "author": "Plaku E."
+      },
+      {
+        "key": "atypb82",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/0278364909341659"
+      },
+      {
+        "key": "atypb83",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1088/0305-4470/33/42/104"
+      },
+      {
+        "key": "atypb84",
+        "author": "Reif JH",
+        "year": "1979",
+        "journal-title": "Proceedings of the IEEE Symposium on Foundations of Computer Science"
+      },
+      {
+        "key": "atypb85",
+        "volume-title": "A Probability Path",
+        "author": "Resnick SI",
+        "year": "1999"
+      },
+      {
+        "key": "atypb86",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/70.163777"
+      },
+      {
+        "key": "atypb87",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/02783640022066761"
+      },
+      {
+        "key": "atypb88",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1201/9781482272444"
+      },
+      {
+        "key": "atypb89",
+        "volume-title": "Applications of Spatial Data Structures: Computer Graphics, Image Processesing and Gis",
+        "author": "Samet H.",
+        "year": "1989"
+      },
+      {
+        "key": "atypb90",
+        "volume-title": "Design and Analysis of Spatial Data Structures",
+        "author": "Samet H.",
+        "year": "1989"
+      },
+      {
+        "key": "atypb91",
+        "volume-title": "Combinatorial Optimization, volume A",
+        "author": "Schrijver A.",
+        "year": "2003"
+      },
+      {
+        "key": "atypb92",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/0196-8858(83)90014-3"
+      },
+      {
+        "key": "atypb93",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/0278364910388315"
+      },
+      {
+        "key": "atypb94",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TC.1982.1675973"
+      },
+      {
+        "key": "atypb95",
+        "volume-title": "International Joint Conference on Artificial Intelligence",
+        "author": "Stentz D."
+      },
+      {
+        "key": "atypb96",
+        "volume-title": "IEEE International Conference on Robotics and Automation",
+        "author": "Stilman M."
+      },
+      {
+        "key": "atypb97",
+        "volume-title": "Stochastic Geometry and Its Applications",
+        "author": "Stoyan D.",
+        "year": "1995"
+      },
+      {
+        "key": "atypb98",
+        "author": "Tedrake R.",
+        "year": "2011",
+        "journal-title": "The International Journal of Robotics Research (to appear)"
+      },
+      {
+        "key": "atypb99",
+        "volume-title": "IEEE International Conference on Robotics and Automation",
+        "author": "Teller S."
+      },
+      {
+        "key": "atypb100",
+        "volume-title": "Proceedings of the IEEE/RSJ International Conference on Robotics and Systems (IROS)",
+        "author": "Urmson C."
+      },
+      {
+        "key": "atypb101",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1017/S0001867800001786"
+      },
+      {
+        "key": "atypb102",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.spa.2008.09.006"
+      },
+      {
+        "key": "atypb103",
+        "volume-title": "Twenty-third AAAI Conference on Artificial Intelligence",
+        "author": "Wedge NA"
+      },
+      {
+        "key": "atypb104",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1023/B:WINE.0000013081.09837.c0"
+      },
+      {
+        "key": "atypb105",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TRO.2006.886840"
+      },
+      {
+        "key": "atypb106",
+        "volume-title": "Motion Planning in Highly Constrained Spaces. Technical report",
+        "author": "Yershova A.",
+        "year": "2008"
+      },
+      {
+        "key": "atypb107",
+        "volume-title": "IEEE Conference on Robotics and Automation",
+        "author": "Zucker M."
+      }
+    ],
+    "container-title": [
+      "The International Journal of Robotics Research"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://journals.sagepub.com/doi/pdf/10.1177/0278364911406761",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://journals.sagepub.com/doi/pdf/10.1177/0278364911406761",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          29
+        ]
+      ],
+      "date-time": "2026-04-29T10:17:25Z",
+      "timestamp": 1777457845000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://journals.sagepub.com/doi/10.1177/0278364911406761"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2011,
+          6
+        ]
+      ]
+    },
+    "references-count": 107,
+    "journal-issue": {
+      "issue": "7",
+      "published-print": {
+        "date-parts": [
+          [
+            2011,
+            6
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "10.1177/0278364911406761"
+    ],
+    "URL": "https://doi.org/10.1177/0278364911406761",
+    "relation": {},
+    "ISSN": [
+      "0278-3649",
+      "1741-3176"
+    ],
+    "issn-type": [
+      {
+        "value": "0278-3649",
+        "type": "print"
+      },
+      {
+        "value": "1741-3176",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2011,
+          6
+        ]
+      ]
+    }
+  }
+}

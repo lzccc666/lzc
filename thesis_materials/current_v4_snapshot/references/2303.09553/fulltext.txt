@@ -1,0 +1,1145 @@
+LERF: Language Embedded Radiance Fields
+Justin Kerr*, Chung Min Kim*, Ken Goldberg, Angjoo Kanazawa, and Matthew Tancik
+UC Berkeley
+Figure 1: Language Embedded Radiance Fields (LERF). LERF grounds CLIP representations in a dense, multi-scale 3D ﬁeld. A
+LERF can be reconstructed from a hand-held phone capture within 45 minutes, then can render dense relevancy maps given textual
+queries interactively in real-time. LERF enables a broad range of concepts to be queried via natural language, from abstract queries like
+“Electricity”, visual properties like “Yellow”, long-tail objects such as “Waldo”, and even reading text like “Boops” on the mug. For each
+prompt, an RGB image and relevancy map are rendered focusing on the location with maximum relevancy activation.
+Abstract
+Humans describe the physical world using natural lan-
+guage to refer to speciﬁc 3D locations based on a vast range
+of properties: visual appearance, semantics, abstract asso-
+ciations, or actionable affordances. In this work we propose
+Language Embedded Radiance Fields (LERFs), a method
+for grounding language embeddings from off-the-shelf mod-
+els like CLIP into NeRF, which enable these types of open-
+*Equal contribution, corresponding authors.
+ended language queries in 3D. LERF learns a dense, multi-
+scale language ﬁeld inside NeRF by volume rendering CLIP
+embeddings along training rays, supervising these embed-
+dings across training views to provide multi-view consis-
+tency and smooth the underlying language ﬁeld. After opti-
+mization, LERF can extract 3D relevancy maps for a broad
+range of language prompts interactively in real-time, which
+has potential use cases in robotics, understanding vision-
+language models, and interacting with 3D scenes. LERF
+enables pixel-aligned, zero-shot queries on the distilled 3D
+1
+arXiv:2303.09553v1  [cs.CV]  16 Mar 2023
+
+CLIP embeddings without relying on region proposals or
+masks, supporting long-tail open-vocabulary queries hier-
+archically across the volume. See the project website at:
+https://lerf.io.
+1. Introduction
+Neural Radiance Fields (NeRFs) [24] have emerged as a
+powerful technique for capturing photorealistic digital rep-
+resentations of intricate real-world 3D scenes. However, the
+immediate output of NeRFs is nothing but a colorful density
+ﬁeld, devoid of meaning or context, which inhibits building
+interfaces for interacting with the resulting 3D scenes.
+Natural language is an intuitive interface for interacting
+with a 3D scene. Consider the capture of a kitchen in Fig-
+ure 1. Imagine being able to navigate this kitchen by asking
+where the “utensils” are, or more speciﬁcally for a tool that
+you could use for “stirring”, and even for your favorite mug
+with a speciﬁc logo on it — all through the comfort and fa-
+miliarity of everyday conversation. This requires not only
+the capacity to handle natural language input queries but
+also the ability to incorporate semantics at multiple scales
+and relate to long-tail and abstract concepts.
+In this work, we propose Language Embedded Radi-
+ance Fields (LERF), a novel approach that grounds lan-
+guage within NeRF by optimizing embeddings from an off-
+the-shelf vision-language model like CLIP into 3D scenes.
+Notably, LERF utilizes CLIP directly without the need for
+ﬁnetuning through datasets like COCO or reliance on mask
+region proposals, which limits the ability to capture a wide
+range of semantics. Because LERF preserves the integrity
+of CLIP embeddings at multiple scales, it is able to handle
+a broad range of language queries, including visual prop-
+erties (“yellow”), abstract concepts (“electricity”), text
+(“boops”), and long-tail objects (“waldo”) as illustrated in
+Figure 1.
+We construct a LERF by optimizing a language ﬁeld
+jointly with NeRF, which takes both position and physical
+scale as input and outputs a single CLIP vector. During
+training, the ﬁeld is supervised using a multi-scale feature
+pyramid that contains CLIP embeddings generated from im-
+age crops of training views. This allows the CLIP encoder
+to capture different scales of image context, thus associating
+the same 3D location with distinct language embeddings at
+different scales (e.g. “utensils” vs. “wooden spoon”). The
+language ﬁeld can be queried at arbitrary scales during test
+time to obtain 3D relevancy maps. To regularize the opti-
+mized language ﬁeld, self-supervised DINO [5] features are
+also incorporated through a shared bottleneck.
+LERF offers an added beneﬁt: since we extract CLIP
+embeddings from multiple views over multiple scales, the
+relevancy maps of text queries obtained through our 3D
+CLIP embedding are more localized compared to those ob-
+tained via 2D CLIP embeddings. By deﬁnition, they are
+also 3D consistent, enabling queries directly in the 3D ﬁelds
+without having to render to multiple views.
+LERF can be trained without signiﬁcantly slowing down
+the base NeRF implementation. Upon completion of the
+training process, LERF allows for the generation of 3D rel-
+evancy maps for a wide range of language prompts in real-
+time.
+We evaluate the capabilities of LERF on a set of
+hand-held captured in-the-wild scenes and ﬁnd it can local-
+ize both ﬁne-grained queries relating to highly speciﬁc parts
+of geometry (“ﬁngers”), or abstract queries relating to mul-
+tiple objects (“cartoon”). LERF produces view-consistent
+relevancy maps in 3D across a wide range of queries and
+scenes, which are best viewed in videos on our website. We
+also provide quantitative evaluations against popular open-
+vocab detectors LSeg [21] and OWL-ViT [25], by distilling
+LSeg features into 3D [20] and querying OWL-ViT from
+rendered novel views. Our results suggest that features in
+3D from LERF can localize a wide variety of queries across
+in-the-wild scenes.
+The zero-shot capabilities of LERF
+leads to potential use cases in robotics, analyzing vision-
+language models, and interacting with 3D scenes. Code and
+data will be made available at https://lerf.io.
+2. Related Work
+Open-Vocabulary Object Detection
+A number of ap-
+proaches study detecting objects in 2D images given nat-
+ural language prompts.
+These lie on a spectrum from
+purely zero-shot to fully trained on segmentation datasets.
+LSeg [21] trains a 2D image encoder on labeled segmen-
+tation datasets, which outputs pixel-wise embeddings that
+best match the CLIP text embedding of the segmentation
+label at that given pixel. CRIS [38] and CLIPSeg [23] train
+a 2D image decoder to output a relevancy map based on the
+query CLIP embedding and the intermediate outputs of the
+pretrained CLIP image encoder. However, such ﬁne-tuning
+approaches tend to lose signiﬁcant language capabilities by
+training on a smaller dataset.
+Another common approach for 2D images is a two-stage
+framework wherein class-agnostic region or mask proposals
+direct where to query open-vocabulary classiﬁcation mod-
+els. OpenSeg [14] simultaneously learns a mask predic-
+tion model while predicting the text embeddings for each
+mask, while ViLD [16] directly uses CLIP [28] to classify
+2D regions from class-agnostic mask proposal networks.
+Detic [40] builds on existing two-stage object detector ap-
+proaches, but demonstrates a greater generalization ability
+by allowing detector classiﬁers to train with image classiﬁ-
+cation data. OWL-ViT [25] attaches lightweight object clas-
+siﬁcation and localization heads after a pre-trained 2D im-
+age encoder. Although region proposal-based approaches
+can leverage more detection data, these proposal generators
+still tend to output within the training set distribution. Con-
+
+Volume Render
+x,y,z,θ,φ
+scale
+R,G,B
+Density
+DINO Features
+CLIP Features
+Network
+Language
+ Loss
+LERF Rendering
+Multiscale CLIP Preprocessing
+CLIP
+Multiscale CLIP Features
+Training Image
+Image Patches
+s(t)
+simg
+Figure 2: LERF Optimization: Left: LERF represents a ﬁeld of 3D volumes, parameterized by position x, y, z and scale s (orange cube).
+To render a CLIP embedding along a ray, the ﬁeld is sampled and averaged according to NeRF’s volume rendering weights. Physical scale
+corresponds to an image scale simg via projective geometry. Right: We pre-compute a multi-scale feature pyramid of CLIP embeddings
+over training views, and during training interpolate this pyramid with simg and the ray’s pixel location to obtain CLIP supervision. The
+CLIP loss maximizes cosine similarity, and other outputs are supervised with mean squared-error using standard per-pixel rendering.
+sequently, as noted by the authors of OV-Seg [22], such net-
+works often face difﬁculties in accurately segmenting unla-
+beled hierarchical components of the original masks, such
+as object parts. LERF strives to avoid region proposals by
+incorporating language embeddings in a dense, 3D, multi-
+scale ﬁeld which allows hierarchical text queries.
+Grad-CAM [31] and attention-based methods [7] pro-
+vide a relevancy mapping between 2D images and text in
+vision-language models (e.g., CLIP). Works such as Seman-
+tic Abstraction [17] have shown that these frameworks can
+be used to detect long-tail objects for scene understanding.
+Outputs from LERF are most similar in spirit to these meth-
+ods, outputting a 3D relevancy score given a query. How-
+ever, LERF builds a 3D representation that can be queried
+with different text prompts without reconstructing the un-
+derlying representation each time, and in addition fuses
+multiple viewpoints into a single shared scene representa-
+tion, rather than operating per-image.
+Distilling 2D Features into NeRF
+NeRF has an attractive
+property of averaging information across multiple views.
+Several prior works leverage this to improve the quality of
+2D semantics, segmentations, or feature vectors by distill-
+ing them into 3D. Semantic NeRF [39] and Panoptic Lift-
+ing [33] embed semantic information from semantic seg-
+mentation networks into 3D, showing that combining noisy
+or sparse labels in 3D can result in crisp 3D segmenta-
+tions. This concept has been applied to segmenting objects
+with extremely sparse user input scribbles of foreground-
+background masks [30]. Our approach draws inspiration
+from these works by averaging multiple potentially noisy
+language embeddings over input views.
+Distilled Feature Fields [20] and Neural Feature Fusion
+Fields [37] explore embedding pixel-aligned feature vectors
+from LSeg or DINO [5] into a NeRF, and show they can
+be used for 3D manipulations of the underlying geometry.
+LERF similarly embeds feature vectors into NeRF, but also
+demonstrates a method to distill non pixel-aligned embed-
+dings (e.g., from CLIP) into 3D without ﬁne-tuning.
+3D Language Grounding
+Incorporating language into
+3D has been explored in a wide range of contexts: 3D vi-
+sual question answering [15, 2, 6] leverage 3D information
+to extract answers to queries about the environment. In ad-
+dition, incorporating language with shape information can
+improve object recognition via text [11, 36].
+LERF is more similar to 3D scene representations in
+robotics which fuse vision-language embeddings to sup-
+port natural language interaction. VL-Maps [18] and Open-
+Scene [27] build a 3D volume of language features which
+can be queried for navigation tasks, by using pre-trained
+pixel-aligned language encoders [14, 21].
+In LERF, we
+compare against one such encoder, LSeg, in 3D and ﬁnd
+it loses signiﬁcant expressive capability compared to CLIP.
+CLIP-Fields [32] and NLMaps-SayCan [8] fuse CLIP
+embeddings of crops into pointclouds, using a contrastively
+supervised ﬁeld and classical pointcloud fusion respec-
+tively. In CLIP-Fields, the crop locations are guided by De-
+tic [40]. On the other hand, NLMaps-SayCan relies on re-
+gion proposal networks. These maps are sparser than LERF
+as they primarily query CLIP on detected objects rather than
+densely throughout views of the scene. Concurrent work
+ConceptFusion [19] fuses CLIP features more densely in
+RGBD pointclouds, using Mask2Former [9] to predict re-
+gions of interest, meaning it can lose objects which are out
+of distribution to Mask2Former’s training set. In contrast,
+LERF does not use region or mask proposals.
+LERF contributes a new dense, volumetric interface for
+3D text queries which can integrate with a broad range of
+downstream applications of 3D language, improving the
+resolution and ﬁdelity at which these methods can query
+the environment when multi-view inputs are available. This
+is enabled by the smoothing behavior of embedding po-
+tentially noisy feature vectors from multiple views into the
+
+Figure 3: Results with LERF for 5 in-the-wild scenes. Each image shows a visual rendering of the LERF (Sec. 3), along with relevancy
+renderings (Sec. 3.5) for each text query and a cropped view of the activated region. For the bookstore scene, the original book cover
+images are shown in blue with a globe icon. See Sec. 4.1 for discussion and details on relevancy visualization.
+
+dense LERF structure.
+3. Language Embedded Radiance Fields
+Given a set of calibrated input images, we ground CLIP
+embeddings into a 3D ﬁeld within NeRF. However, query-
+ing a CLIP embedding for a single 3D point is ambigu-
+ous, as CLIP is inherently a global image embedding and
+not conducive to pixel-aligned feature extraction. To ac-
+count for this property, we propose a novel approach that
+involves learning a ﬁeld of language embeddings over vol-
+umes centered at the sample point. Speciﬁcally, the output
+of this ﬁeld is the average CLIP embedding across all train-
+ing views of image crops containing the speciﬁed volume.
+By reframing the query from points to volumes, we can ef-
+fectively supervise a dense ﬁeld from coarse crops of input
+images, which can be rendered in a pixel-aligned manner
+by conditioning on a given volume scale.
+3.1. LERF Volumetric Rendering
+NeRF takes in a position⃗x and view direction⃗d and out-
+puts color⃗c and density σ. Samples of these values can be
+composited along a ray to produce a pixel’s color. To create
+LERF, we augment NeRF’s outputs with a language em-
+bedding Flang(⃗x, s) ∈Rd, which takes an input position⃗x
+and physical scale s, and outputs a d-dimensional language
+embedding. We choose this output to be view-independent,
+since the semantic meaning of a location should be invari-
+ant to viewing angle. This allows multiple views to con-
+tribute to the same ﬁeld input, averaging their embeddings
+together. The scale s represents the side length in world co-
+ordinates of a cube centered at⃗x, and is analogous to how
+Mip-NeRF[3, 4] incorporates different scales via integrated
+positional encodings.
+Rendering color and density from LERF remains exactly
+the same as NeRF. To render language embeddings into an
+image, we adopt a similar technique as prior work[20, 39]
+to render language embeddings along a ray⃗r(t) =⃗ot + t⃗d.
+However, since LERF is a ﬁeld over volumes, not points, we
+must also deﬁne a scale parameter for each position along
+the ray. We achieve this by ﬁxing an initial scale in the
+image plane simg and deﬁne s(t) to increase proportionally
+with focal length and sample distance from the ray origin:
+s(t) = simg ∗fxy/t (Fig. 2, left). Geometrically, this rep-
+resents a frustrum along the ray. We calculate rendering
+weights as in NeRF: T(t) =
+R
+t exp (−σ(s)ds) , w(t) =
+R
+t T(t)σ(t)dt, then integrate the LERF to obtain raw lan-
+guage outputs: ˆφlang =
+R
+t w(t)Flang (r(t), s(t)) dt, and ﬁ-
+nally normalize each embedding to the unit sphere as in
+CLIP: φlang = ˆφlang/||ˆφlang||. We ﬁnd that spherical inter-
+polation between samples on a ray is unnecessary because
+non-zero weight samples along a ray tend to be spatially
+close, and instead opt for a weighted euclidean average fol-
+Figure 4: 2D CLIP vs LERF: The left visualizes similarity inter-
+polated over patchwise CLIP embeddings, and the right rendered
+from LERF. Because volumetric language rendering incorporates
+information from multiple views, 3D relevancy activation maps
+have better alignment with the underlying scene geometry.
+lowed by normalization for implementation simplicity.
+3.2. Multi-Scale Supervision
+To supervise language ﬁeld outputs Flang, recall that we
+can only query language embeddings over image patches,
+not pixels. Therefore, to supervise the multi-scale LERF,
+we supervise each rendered frustrum with an image crop
+of size simg centered at the image pixel where the ray orig-
+inated. In practice, re-computing a CLIP embedding for
+each ray during LERF optimization would be prohibitively
+expensive, so instead we pre-compute an image pyramid
+over multiple image crop scales and store the CLIP embed-
+dings of each crop (Fig 2, right). This pyramid has n layers
+sampled between smin and smax, with each crop arranged in
+a grid with 50% overlap between crops.
+During training, we randomly sample ray origins uni-
+formly throughout input views, and uniformly randomly se-
+lect simg ∈(smin, smax) for each. Since these samples don’t
+necessarily fall in the center of a crop in this image pyramid,
+we perform trilinear interpolation between the embeddings
+from the 4 nearest crops for the scale above and below to
+produce the ﬁnal ground truth embedding φgt
+lang. We mini-
+mize a loss between rendered and ground truth embeddings
+which maximizes cosine similarity between the two, scaling
+
+Figure 5: Ablations: We ablate DINO regularization and multi-
+scale training (Sec. 4.4), and highlight qualitative degradation in
+relevancy maps here.
+by a constant λlang (Sec. 3.3): Llang = −λlangφlang · φgt
+lang.
+3.3. DINO Regularization
+Na¨ıvely implementing LERF as described produces co-
+hesive results, but the resulting relevancy maps can some-
+times be patchy and contain outliers in regions with few
+views or little foreground-background separation (Fig. 5).
+To mitigate this, we additionally train a ﬁeld Fdino(⃗x)
+which outputs a DINO[5] feature at each point. DINO has
+been shown to exhibit emergent object decomposition prop-
+erties despite training on no labels[1], and additionally dis-
+tills well into 3D ﬁelds[20], making it a good candidate for
+grouping language in 3D without relying on labeled data or
+imparting too strict a prior. Because DINO outputs pixel-
+aligned features, Fdino does not take in scale as an input,
+and is directly supervised for each ray with the DINO fea-
+ture it corresponds to. We render φdino identically to φlang
+except without normalizing to a unit sphere, and supervise
+it with MSE loss on ground-truth DINO features. DINO is
+used explicitly during inference, and only serves as an ex-
+tra regularizer during training since CLIP and DINO output
+heads share an architectural backbone.
+3.4. Field Architecture
+Intuitively, optimizing a language embedding in 3D
+should not inﬂuence the distribution of density in the under-
+lying scene representation. We capture this inductive bias
+in LERF by training two separate networks: one for feature
+vectors (DINO, CLIP), and the other for standard NeRF out-
+puts (color, density). Gradients from Llang and Ldino do not
+affect the NeRF outputs, and can be viewed as jointly opti-
+mizing a language ﬁeld in conjunction with a radiance ﬁeld.
+We represent both ﬁelds with a multi-resolution hashgrid
+[26]. The language hashgrid has two output MLPs for CLIP
+and DINO respectively. Scale s is passed into the CLIP
+MLP as an extra input in addition to the concatenated hash-
+grid features. We adopt the Nerfacto method from Nerfstu-
+dio [35] as the backbone for our approach, leveraging the
+same proposal sampling, scene contraction, and appearance
+embeddings
+3.5. Querying LERF
+Often, language models like CLIP are evaluated on zero-
+shot classiﬁcation, where a category is selected from a list
+guaranteed to include the correct category [28]. However, in
+practical usage of LERF on in-the-wild scenes, an exhaus-
+tive list of categories is not available. We view the open-
+endedness and ambiguity of natural language as a beneﬁt,
+and propose a method to query 3D relevancy maps from the
+LERF given an arbitrary text query. Querying LERF has
+two parts: 1) obtaining a relevancy score for a rendered em-
+bedding and 2) automatically selecting a scale s given the
+prompt.
+Relevancy Score: To assign each rendered language
+embedding φlang a score, we compute the CLIP embed-
+ding of the text query φquer, along with a set of canon-
+ical phrases φi
+canon.
+We compute cosine similarity be-
+tween the rendered embedding and canonical phrase em-
+beddings, then compute the pairwise softmax between the
+rendered embedding text prompts. The relevancy score is
+then mini
+exp(φlang·φquer)
+exp(φlang·φicanon)+exp(φlang·φquer)). Intuitively, this score
+represents how much closer the rendered embedding is to-
+wards the query embedding compared to the canonical em-
+beddings. All renderings use the same canonical phrases:
+“object”, “things”, “stuff”, and “texture”. We chose these
+as qualitatively “average” words for queries users might
+make, and found them to be surprisingly robust to queries
+ranging from incredibly speciﬁc to visual or abstract. We
+acknowledge that choosing these phrases is susceptible to
+prompt-engineering, and think ﬁne-tuning them could be
+an interesting future work, perhaps incorporating feedback
+from user interaction about negative prompts they do not
+consider relevant.
+Scale Selection: For each query, we compute a scale s
+to evaluate Flang. To accomplish this, we generate relevancy
+maps across a range of scales 0 to 2 meters with 30 incre-
+ments, and select the scale that yields the highest relevancy
+score. This scale is used for all pixels in the output rele-
+vancy map. We found this heuristic to be robust across a
+broad range of queries and is used for all the images and
+videos rendered in this paper. This assumes relevant parts
+of a scene are the same scale, see Limitations Sec. 5.
+Visibility Filtering: Regions of the scene that lack sufﬁ-
+
+Figure 6: Localization comparison Qualitative comparison on lo-
+calizing long-tail objects from novel views with LSeg in 3D (DFF)
+and OWL-ViT (Tab. 1)
+cient views, such as those in the background or near ﬂoaters,
+may generate noisy embeddings. To address this issue, dur-
+ing querying we discard samples that were observed by
+fewer than ﬁve training views (approximately 5% of the
+views in our datasets).
+3.6. Implementation Details
+We implement LERF in Nerfstudio [35], on top of the
+Nerfacto method. Proposal sampling is the same except
+we reduce the number of LERF samples from 48 to 24 to
+increase training speed. We use the OpenClip [10] ViT-
+B/16 model trained on the LAION-2B dataset, with an im-
+age pyramid varying from smin = .05 to smin = .5 in 7
+steps. The hashgrid used for representing language features
+is much larger than a typical RGB hashgrid: it has 32 lay-
+ers from a resolution of 16 to 512, with a hash table size
+of 221 and feature dimension of 8. The CLIP MLP used for
+Flang has 3 hidden layers with width 256 before the ﬁnal 512
+dimension CLIP output. The DINO MLP for FDINO has 1
+hidden layer of dimension 256.
+We use the Adam optimizer for proposal networks and
+ﬁelds with weight decay 10−9, with an exponential learn-
+ing rate scheduler from 10−2 to 10−3 over the ﬁrst 5000
+training steps. All models are trained to 30,000 steps (45
+minutes), although good results can be obtained in as few as
+6,000(8 minutes) as presented in the Appendix. We train on
+an NVIDIA A100, which takes roughly 20GB of memory
+total. One can interactively query in real-time within the
+Nerfstudio viewer. The λ used in weighting CLIP loss is
+0.01, chosen empirically and ablated in Sec 4.4.
+When
+computing relevancy score, we multiply similarity by 10 as
+a temperature parameter within the softmax.
+4. Experiments
+We examine the capabilities of LERF and ﬁnd that it
+can effectively process a wide variety of input text queries,
+encompassing various aspects of natural language speciﬁ-
+cations that current open-vocab detection frameworks en-
+counter difﬁculty with. Though existing 3D scan datasets
+exist, they tend to be either of singulated objects [29, 13],
+or are RGB-D scans without enough views to optimize high
+Figure 7: Comparison to LSeg in 3D: LSeg performs well on
+“glass of water” since cups are in the COCO dataset, but cannot
+locate an out-of-distribution query like an egg.
+Test Scene
+LSeg (3D)
+OWL-ViT
+LERF
+waldo kitchen
+13.0%
+42.6%
+81.5%
+bouquet
+50.0%
+66.7%
+91.7%
+ramen
+15.0%
+92.5%
+62.5%
+teatime
+28.1%
+75.0%
+93.8%
+ﬁgurines
+8.9%
+38.5%
+79.5%
+Overall
+18.0%
+54.8%
+80.3%
+Table 1: Localization accuracy comparison between Distilled
+Feature Fields using LSeg, OWL-ViT, and LERF. Overall perfor-
+mance is calculated by aggregating scene results. Refer to supple-
+ments for more details on scenes and text queries.
+quality NeRFs [12], and such simulated or scanned scenes
+contain few long-tail objects [34]. Emphasizing the capa-
+bility of LERF to handle real-world data, we collect 13
+scenes containing a mixture of in-the-wild (grocery store,
+kitchen, bookstore) and posed long-tail (teatime, ﬁgurines,
+hand) scenes. We capture scenes using the iPhone app Poly-
+cam, which runs on-board SLAM to ﬁnd camera poses, and
+use images of resolution 994×738.
+4.1. Qualitative Results
+We visualize relevancy score by normalizing the col-
+ormap for each query from 50% (less relevant than canon-
+ical phrases) to the maximum relevancy. Extensive visual-
+izations of all scenes can be found in the Appendix, and in
+Fig. 3 we select 5 representative scenes which demonstrate
+LERF’s ability to handle natural language. Visual compari-
+son with LSeg in 3D are presented in Fig 7.
+LERF captures language features of a scene at different
+levels of detail, supporting queries of properties like “yel-
+low”, as well as highly speciﬁc queries like names of books
+and speciﬁc characters from TV shows (“jake from adven-
+ture time”). Because of the lack of discrete categories, ob-
+jects can be relevant to multiple queries: in the ﬁgurine
+scene, abstract text queries can create semantically mean-
+ingful groupings. “Cartoon” selects the cat, Jake, rubber
+duck, miffy, waldo, toy elephant. “Bath toy” selects rubber-
+like objects, such as rubber duck, Jake, and toy elephant
+(made of rubber). Toy elephant is strongly highlighted for
+
+0
+1
+0
+1
+0
+1
+LERF
+LSeg 3D(DFF)
+Recall
+Recall
+Precision
+COCO
+Long-Tail Labels
+Figure 8: Precision recall curves for 3D existence experiments,
+Sec 4.2. LSeg performs similarly to LERF on in-distribution la-
+bels, but signiﬁcantly suffers on long-tail labels of wild scenes.
+three different queries, demonstrating the ability of LERF
+to support different semantic tags for the same object.
+4.2. Existence Determination
+We evaluate if LERF can detect whether an object ex-
+ists within a scene. We label ground truth existence for 5
+scenes, collecting two sets of labels: 1) labels from COCO
+to represent in-distribution objects to LSeg and 2) our own
+long-tail labels, which consist of queries of 15-20 objects in
+each scene concatenated together, for 81 total queries. See
+the Appendix for all queries. LERF determines whether an
+object exists in the scene by rendering a dense pointcloud
+over visible geometry, and returns “True” if any point has a
+relevancy score over a threshold.
+We compare against distilling LSeg features into 3D as
+in DFF [20], but implemented in our own codebase for
+an apples-to-apples comparison.
+We remove scale as a
+parameter to Flang for LSeg since it outputs pixel-aligned
+features. We report precision-recall curves over relevancy
+score thresholds in Fig. 8.
+This experiment reveals that
+LSeg, trained on limited segmentation datasets, lacks the
+ability to represent natural language effectively. Instead, it
+only performs well on common objects that are within the
+distribution of its training set, as demonstrated in Fig. 7.
+4.3. Localization
+To evaluate how well LERF can localize text prompts in
+a scene we render novel views and label bounding boxes for
+72 objects across 5 scenes. For 3D methods we consider a
+label a success if the highest relevancy pixel lands inside the
+box, or for OwL-ViT if the center of the predicted box does.
+Results are presented in Table 1 and Fig. 6, and suggest that
+language embeddings embedded in LERF strongly outper-
+form LSeg in 3D for localizing relevant parts of a scene. We
+also compare against the 2D open-vocab detector OWL-ViT
+by rendering full-HD NeRF views and selecting the bound-
+ing box with the highest conﬁdence score for the text query.
+OwL-ViT outperforms LSeg in 3D, but suffers compared to
+LERF on long-tail queries.
+Figure 9: Failure cases: LERF struggles with identifying objects
+that appear visually similar to the query: “Zucchini” also acti-
+vates on other long, green-ish vegetables, and “leaf” activates on
+the green plastic chair. LERF also struggles with global/spatial
+reasoning, where “table” only activate on the edges of the table.
+4.4. Ablations
+No DINO: Removing DINO results in a qualitative de-
+terioration in the smoothness and boundaries of relevancy
+maps, especially in regions with few surrounding views or
+little geometric separation between foreground and back-
+ground. We show two illustrative examples where DINO
+improves the quality of relevancy maps in Fig. 5.
+Single-Scale Training: We ablate multi-scale CLIP su-
+pervision from the pipeline by only training on a ﬁxed s0 =
+15% image scale. Doing so signiﬁcantly impairs LERF’s
+ability to handle queries of all scales, failing on both large
+(“espresso machine”) queries it doesn’t have enough con-
+text for, as well as queries for which it does (“creamer
+pods”). These results imply that multi-scale training reg-
+ularizes the language ﬁeld at all scales, not just ones with
+relevant context for a given query.
+5. Limitations
+LERF has limitations associated with both CLIP and
+NeRF; some are visualized in Fig. 9. Like CLIP, language
+queries from LERF often exhibit “bag-of-words” behavior
+(i.e., “not red” is similar to “red”) and struggles to capture
+spatial relationships between objects. LERF can be prone
+to false positives with queries that appear visually or se-
+mantically similar: “zucchinis” activate on other similarly-
+shaped vegetables, though zucchinis are more relevant than
+the distractors (Fig. 9).
+LERF requires known calibrated camera matrices and
+NeRF-quality multi-view captures, which aren’t always
+available or easy to capture. The quality of language ﬁelds
+is bottlenecked by the quality of the NeRF recontsruction.
+In addition, because of the volumetric input to Flang, ob-
+jects which are near other surfaces without side views can
+result in their embeddings being blurred to their surround-
+ings since no views see the background without the object.
+This results in similar blurry relevancy maps to single-view
+CLIP (Fig. 4). In addition, we only render language embed-
+
+dings from a single scale for a given query. Some queries
+could beneﬁt from or even require incorporating context
+from multiple scales (eg “table”).
+6. Conclusions
+We present LERF, a novel method of fusing raw CLIP
+embeddings into a NeRF in a dense, multi-scale fashion
+without requiring region proposals or ﬁne-tuning. We ﬁnd
+that it can support a broad range of natural language queries
+across diverse real-world scenes, strongly outperforming
+pixel-aligned LSeg in supporting natural language queries.
+LERF is a general framework that supports any aligned
+multi-modal encoders, meaning it can naturally support im-
+provements to vision-language models. Code and datasets
+will be released after the submission process.
+7. Acknowledgements
+This material is based upon work supported by the Na-
+tional Science Foundation Graduate Research Fellowship
+Program under Grant No. DGE 2146752. Any opinions,
+ﬁndings, and conclusions or recommendations expressed
+in this material are those of the author(s) and do not nec-
+essarily reﬂect the views of the National Science Founda-
+tion.
+The authors were supported in part by equipment
+grants from NVIDIA. We thank our colleagues who pro-
+vided helpful feedback and suggestions, in particular Jessy
+Lin, Simeon Adebola, Satvik Sharma, Abhik Ahuja, Rohan
+Mathur, and Alexander Kristoffersen for their helpful feed-
+back on paper drafts, and Boyi Li, Eric Wallace, and mem-
+bers of the Nerfstudio team for their generous conversations
+about the project.
+References
+[1] Shir Amir, Yossi Gandelsman, Shai Bagon, and Tali Dekel.
+Deep vit features as dense visual descriptors. arXiv preprint
+arXiv:2112.05814, 2(3):4, 2021.
+[2] Daichi Azuma, Taiki Miyanishi, Shuhei Kurita, and Motoaki
+Kawanabe. Scanqa: 3d question answering for spatial scene
+understanding. In Proceedings of the IEEE/CVF Conference
+on Computer Vision and Pattern Recognition, pages 19129–
+19139, 2022.
+[3] Jonathan T Barron, Ben Mildenhall, Matthew Tancik, Peter
+Hedman, Ricardo Martin-Brualla, and Pratul P Srinivasan.
+Mip-nerf: A multiscale representation for anti-aliasing neu-
+ral radiance ﬁelds. In Proceedings of the IEEE/CVF Inter-
+national Conference on Computer Vision, pages 5855–5864,
+2021.
+[4] Jonathan T Barron, Ben Mildenhall, Dor Verbin, Pratul P
+Srinivasan, and Peter Hedman. Mip-nerf 360: Unbounded
+anti-aliased neural radiance ﬁelds.
+In Proceedings of the
+IEEE/CVF Conference on Computer Vision and Pattern
+Recognition, pages 5470–5479, 2022.
+[5] Mathilde Caron, Hugo Touvron, Ishan Misra, Herv´e J´egou,
+Julien Mairal, Piotr Bojanowski, and Armand Joulin. Emerg-
+ing properties in self-supervised vision transformers. In Pro-
+ceedings of the IEEE/CVF international conference on com-
+puter vision, pages 9650–9660, 2021.
+[6] Paola Cascante-Bonilla, Hui Wu, Letao Wang, Rogerio S
+Feris, and Vicente Ordonez. Simvqa: Exploring simulated
+environments for visual question answering. In Proceedings
+of the IEEE/CVF Conference on Computer Vision and Pat-
+tern Recognition, pages 5056–5066, 2022.
+[7] Hila Chefer, Shir Gur, and Lior Wolf.
+Generic attention-
+model explainability for interpreting bi-modal and encoder-
+decoder transformers. In ICCV, pages 397–406, 2021.
+[8] Boyuan Chen,
+Fei Xia,
+Brian Ichter,
+Kanishka Rao,
+Keerthana Gopalakrishnan, Michael S Ryoo, Austin Stone,
+and Daniel Kappler.
+Open-vocabulary queryable scene
+representations for real world planning.
+arXiv preprint
+arXiv:2209.09874, 2022.
+[9] Bowen Cheng, Ishan Misra, Alexander G Schwing, Alexan-
+der Kirillov, and Rohit Girdhar.
+Masked-attention mask
+transformer for universal image segmentation. In Proceed-
+ings of the IEEE/CVF Conference on Computer Vision and
+Pattern Recognition, pages 1290–1299, 2022.
+[10] Mehdi Cherti, Romain Beaumont, Ross Wightman, Mitchell
+Wortsman, Gabriel Ilharco, Cade Gordon, Christoph Schuh-
+mann, Ludwig Schmidt, and Jenia Jitsev. Reproducible scal-
+ing laws for contrastive language-image learning.
+arXiv
+preprint arXiv:2212.07143, 2022.
+[11] Rodolfo Corona, Shizhan Zhu, Dan Klein, and Trevor Dar-
+rell.
+Voxel-informed language grounding.
+arXiv preprint
+arXiv:2205.09710, 2022.
+[12] Angela Dai, Angel X Chang, Manolis Savva, Maciej Hal-
+ber, Thomas Funkhouser, and Matthias Nießner. Scannet:
+Richly-annotated 3d reconstructions of indoor scenes.
+In
+Proceedings of the IEEE conference on computer vision and
+pattern recognition, pages 5828–5839, 2017.
+[13] Matt Deitke, Dustin Schwenk, Jordi Salvador, Luca Weihs,
+Oscar Michel, Eli VanderBilt, Ludwig Schmidt, Kiana
+Ehsani, Aniruddha Kembhavi, and Ali Farhadi.
+Obja-
+verse: A universe of annotated 3d objects. arXiv preprint
+arXiv:2212.08051, 2022.
+[14] Golnaz Ghiasi, Xiuye Gu, Yin Cui, and Tsung-Yi Lin.
+Open-vocabulary image segmentation.
+arXiv preprint
+arXiv:2112.12143, 2021.
+[15] Daniel Gordon, Aniruddha Kembhavi, Mohammad Raste-
+gari, Joseph Redmon, Dieter Fox, and Ali Farhadi.
+Iqa:
+Visual question answering in interactive environments. In
+Proceedings of the IEEE conference on computer vision and
+pattern recognition, pages 4089–4098, 2018.
+[16] Xiuye Gu, Tsung-Yi Lin, Weicheng Kuo, and Yin Cui.
+Open-vocabulary object detection via vision and language
+knowledge distillation.
+arXiv preprint arXiv:2104.13921,
+2021.
+[17] Huy Ha and Shuran Song.
+Semantic abstraction: Open-
+world 3d scene understanding from 2d vision-language mod-
+els. In Conference on Robot Learning, 2022.
+
+[18] Chenguang Huang, Oier Mees, Andy Zeng, and Wolfram
+Burgard. Visual language maps for robot navigation. arXiv
+preprint arXiv:2210.05714, 2022.
+[19] Krishna Murthy Jatavallabhula, Alihusein Kuwajerwala,
+Qiao Gu, Mohd Omama, Tao Chen, Shuang Li, Ganesh Iyer,
+Soroush Saryazdi, Nikhil Keetha, Ayush Tewari, Joshua B.
+Tenenbaum, Celso Miguel de Melo, Madhava Krishna, Liam
+Paull, Florian Shkurti, and Antonio Torralba. Conceptfusion:
+Open-set multimodal 3d mapping, 2023.
+[20] Sosuke Kobayashi, Eiichi Matsumoto, and Vincent Sitz-
+mann. Decomposing nerf for editing via feature ﬁeld dis-
+tillation. In NeurIPS, volume 35, 2022.
+[21] Boyi Li, Kilian Q Weinberger, Serge Belongie, Vladlen
+Koltun, and Ren´e Ranftl.
+Language-driven semantic seg-
+mentation. arXiv preprint arXiv:2201.03546, 2022.
+[22] Feng Liang, Bichen Wu, Xiaoliang Dai, Kunpeng Li, Yinan
+Zhao, Hang Zhang, Peizhao Zhang, Peter Vajda, and Diana
+Marculescu. Open-vocabulary semantic segmentation with
+mask-adapted clip. arXiv preprint arXiv:2210.04150, 2022.
+[23] Timo L¨uddecke and Alexander Ecker. Image segmentation
+using text and image prompts. In CVPR, pages 7086–7096,
+2022.
+[24] Ben Mildenhall, Pratul P. Srinivasan, Matthew Tancik,
+Jonathan T. Barron, Ravi Ramamoorthi, and Ren Ng. Nerf:
+Representing scenes as neural radiance ﬁelds for view syn-
+thesis. In ECCV, 2020.
+[25] Matthias Minderer, Alexey Gritsenko, Austin Stone, Maxim
+Neumann, Dirk Weissenborn, Alexey Dosovitskiy, Aravindh
+Mahendran, Anurag Arnab, Mostafa Dehghani, Zhuoran
+Shen, et al. Simple open-vocabulary object detection with
+vision transformers. arXiv preprint arXiv:2205.06230, 2022.
+[26] Thomas M¨uller, Alex Evans, Christoph Schied, and Alexan-
+der Keller. Instant neural graphics primitives with a mul-
+tiresolution hash encoding. ACM Transactions on Graphics
+(ToG), 41(4):1–15, 2022.
+[27] Songyou
+Peng,
+Kyle
+Genova,
+Chiyu
+Jiang,
+Andrea
+Tagliasacchi, Marc Pollefeys, Thomas Funkhouser, et al.
+Openscene: 3d scene understanding with open vocabularies.
+arXiv preprint arXiv:2211.15654, 2022.
+[28] Alec Radford, Jong Wook Kim, Chris Hallacy, Aditya
+Ramesh, Gabriel Goh, Sandhini Agarwal, Girish Sastry,
+Amanda Askell, Pamela Mishkin, Jack Clark, et al. Learning
+transferable visual models from natural language supervi-
+sion. In International conference on machine learning, pages
+8748–8763. PMLR, 2021.
+[29] Jeremy Reizenstein, Roman Shapovalov, Philipp Henzler,
+Luca Sbordone, Patrick Labatut, and David Novotny. Com-
+mon objects in 3d: Large-scale learning and evaluation of
+real-life 3d category reconstruction. In Proceedings of the
+IEEE/CVF International Conference on Computer Vision,
+pages 10901–10911, 2021.
+[30] Zhongzheng Ren,
+Aseem Agarwala†,
+Bryan Russell†,
+Alexander G. Schwing†, and Oliver Wang†. Neural volumet-
+ric object selection. In CVPR, 2022. († alphabetic ordering).
+[31] Ramprasaath R Selvaraju, Michael Cogswell, Abhishek Das,
+Ramakrishna Vedantam, Devi Parikh, and Dhruv Batra.
+Grad-cam:
+Visual explanations from deep networks via
+gradient-based localization. In ICCV, pages 618–626, 2017.
+[32] Nur Muhammad Mahi Shaﬁullah, Chris Paxton, Lerrel
+Pinto, Soumith Chintala, and Arthur Szlam.
+Clip-ﬁelds:
+Weakly supervised semantic ﬁelds for robotic memory.
+arXiv preprint arXiv:2210.05663, 2022.
+[33] Yawar Siddiqui, Lorenzo Porzi, Samuel Rota Bul´o, Nor-
+man M¨uller, Matthias Nießner, Angela Dai, and Peter
+Kontschieder. Panoptic lifting for 3d scene understanding
+with neural ﬁelds. arXiv preprint arXiv:2212.09802, 2022.
+[34] Julian Straub, Thomas Whelan, Lingni Ma, Yufan Chen, Erik
+Wijmans, Simon Green, Jakob J Engel, Raul Mur-Artal, Carl
+Ren, Shobhit Verma, et al. The replica dataset: A digital
+replica of indoor spaces. arXiv preprint arXiv:1906.05797,
+2019.
+[35] Matthew Tancik, Ethan Weber, Evonne Ng, Ruilong Li,
+Brent Yi, Justin Kerr, Terrance Wang, Alexander Kristof-
+fersen, Jake Austin, Kamyar Salahi, et al. Nerfstudio: A
+modular framework for neural radiance ﬁeld development.
+arXiv preprint arXiv:2302.04264, 2023.
+[36] Jesse Thomason, Mohit Shridhar, Yonatan Bisk, Chris Pax-
+ton, and Luke Zettlemoyer. Language grounding with 3d ob-
+jects. In Conference on Robot Learning, pages 1691–1701.
+PMLR, 2022.
+[37] Vadim Tschernezki, Iro Laina, Diane Larlus, and Andrea
+Vedaldi.
+Neural Feature Fusion Fields: 3D distillation of
+self-supervised 2D image representations. In 3DV, 2022.
+[38] Zhaoqing Wang, Yu Lu, Qiang Li, Xunqiang Tao, Yandong
+Guo, Mingming Gong, and Tongliang Liu. Cris: Clip-driven
+referring image segmentation.
+In CVPR, pages 11686–
+11695, 2022.
+[39] Shuaifeng Zhi, Tristan Laidlow, Stefan Leutenegger, and An-
+drew Davison. In-place scene labelling and understanding
+with implicit scene representation. In ICCV, 2021.
+[40] Xingyi Zhou,
+Rohit Girdhar,
+Armand Joulin,
+Philipp
+Kr¨ahenb¨uhl, and Ishan Misra.
+Detecting twenty-thousand
+classes using image-level supervision. In ECCV, pages 350–
+368. Springer, 2022.
+
+A. Videos
+We provide videos illustrating queries in 9 scenes on our
+project website. In all videos, the relevancy map images
+are post-processed such that all pixel values with relevancy
+score less than 0.5 are fully transparent. We choose this
+threshold because relevancy values under 0.5 means the ren-
+dered language embedding is more similar to the canoni-
+cal negative phrases used (“object”, “things”, “stuff”, “tex-
+ture”) than to the positive query prompt, so we consider
+them irrelevant to the query. This relevancy map is over-
+laid on the RGB renders. Relevancy map scale selection
+and normalization factor is constant across the entire video
+sequence to show scene-wide 3D consistency. During post-
+process editing we select queries which are visible during
+the speciﬁc segment of video; but we also provide full raw,
+uncut videos of outputs for the queries in the kitchen scene
+to give readers an idea of the scene-wide activations. Many
+other scenes contain wide-angle shots to observe relevancy
+maps scene-wide.
+One notable property of relevancy maps across the scene
+that is more apparent in videos is that regions similar to, but
+not matching the query are also assigned a non-zero rele-
+vancy score, though not as high. For example, the query
+for “utensils” highlights most on the utensils in the dish
+drainer, but also on the knives hanging on the wall and uten-
+sils in the sink. The query for “wooden spoon” is most
+activated on the spoon, but also activates on other wooden
+components of the scene. This could be viewed as either
+a positive aspect of the language ﬁeld in that it naturally
+groups similar regions to a query together, or a downside in
+that it can provide too many relevant regions in addition to
+the highest activation. For example, for the “refrigerator”
+query, the highest activation is assigned to the refrigerator,
+but much of the remaining kitchen space is also labeled as
+relevant. We hypothesize that this is related to the lack of
+grounding with visual-language models like CLIP. We ﬁnd
+that the longer-tail and more speciﬁc the query, the more
+separation it tends to have with canonical phrases and hence
+the result more obviously pops out from other objects. An-
+other effect visible in videos is the presence of “ﬂoaters”
+in the scene which can produce spurious activations, as dis-
+cussed at length in Fig.14 and Sec.F.
+B. Additional qualitative results
+We present a more complete list of results from scenes
+not pictured in the main text or videos in Fig. 16.
+C. Numerical relevancy scores
+We explore the reliability of using relevancy as a thresh-
+old for existence determination in and report precision-
+recall curves. Here, we provide raw relevancy scores for
+the queries in Fig. 1 of the main text to illustrate the be-
+Figure 10: Language and visual ambiguities from CLIP: Cases
+with incorrect relevancy renders. Some failures can be attributed to
+visual similarity to the query (eg “bell peppers” gets distracted on
+jalepenos, “portaﬁlter” activates on the grinder spout which has
+a similar metal cylindrical appearance, and “refrigerator” slightly
+activates on the white rectangular cabinets). Others are more ﬂat-
+out failures, with “sugar packets” seemingly a confusing case to
+detect, and “kiwis” activating strongly on plums rather than cor-
+rectly predicting nothing.
+havior across different types of queries. Scores are shown
+in Table 2. One can observe that highly descriptive queries
+including visual and semantic properties produce higher rel-
+evancy scores (eg “blue dish soap”), and the lowest are ab-
+stract queries like “electricity” or small objects in clutter
+with not many close-up views (“wooden spoon”).
+D. Convergence speed
+Videos and images for LERF were rendered after 30k
+optimization steps. However, usable relevancy maps can be
+obtained much sooner, as this section explores. We visual-
+ize relevancy maps and RGB renders of the kitchen scene
+and ﬁgurines scene after 1k, 2k, 6k, and 30k steps in Fig.
+11. Because density converges signiﬁcantly in NeRF within
+the ﬁrst thousand steps, language embeddings in 3D are
+already usable at this stage. However, some ﬁne-grained
+queries or small objects suffer in performance until later in
+optimization. In the “Pikachu” query, early training steps
+confuse the yellow ﬁgurine (Jake from Adventure Time)
+which is visually similar. As LERF converges, the actual
+Pikachu in the scene has higher relevancy than Jake. For
+ﬁne-grained properties like “bath toys”, the relevancy starts
+out more blurry and becomes sharper and more isolated to
+the correct objects over time. Objects without much ge-
+ometric separation like “pepper mill” also take longer to
+converge, since the surrounding geometry can be less pre-
+cise.
+
+Figure 11: LERF Convergence. We visualize rendered relevancy maps at 1k, 2k, 6k, and 30k optimization steps. Relatively speaking,
+regions with more common semantics (like “blue dish soap”) and more expansive multi-view converge faster, while more ﬁne-grained
+properties (like “bath toys”) take more steps. Notably, the optimization is quite stable: all queries produce reasonable activations within
+the ﬁrst few thousand steps, and relevancy continues to reﬁne over time.
+Text query
+Maximum relevancy score
+utensils
+0.77
+wooden spoon
+0.60
+blue dish soap
+0.83
+waldo
+0.76
+paper towel roll
+0.75
+electricity
+0.63
+yellow
+0.73
+boops
+0.77
+Table 2: Maximum relevancy scores for each text query in Fig.
+1 of main text, calculated from the displayed viewpoint. Highly
+speciﬁc queries have a higher relevancy value (“blue dish soap”,
+0.83), while abstract queries can have lower ones (“electricity”,
+0.63).
+E. Experiment details
+We provide a list of the labels used for the localization
+experiment in Tab. 3. Each label was labeled in 3-4 different
+Figure 12: Prompt tuning case study: Some objects are sensi-
+tive to the prompt, with more speciﬁc wordings producing better
+results.
+views. We provide an exhaustive list of our custom long-tail
+labels for the existence experiment in Tab. 4.
+
+Figure 13: CLIP bag-of-words behavior: CLIP sometimes be-
+haves as a bag-of-words, resulting in some adjectives not properly
+incorporating into queries.
+Figure 14: Degradation with poor NeRF geometry: Floaters and
+incomplete geometry can produce unreliable rendered CLIP em-
+beddings.
+Figure 15:
+Geometric separation impacts quality:
+Queries
+without much geometric separation can blur between objects and
+foreground-background. In the toaster case, very few viewing an-
+gles were taken because of its position, which results in a fuzzier
+boundary.
+F. Detailed Illustrations of Limitations
+LERF inherits limitations from CLIP relating to lan-
+guage ambiguity and prompt sensitivity, as well as from
+NeRF’s geometry representation capabilities. We present
+additional ﬁgures on failure cases to complement the ones
+provided in the main text.
+Fig.10 showcases visual and language ambiguity from
+our usage of CLIP. Some queries get confused by unrelated
+regions of the scene because they appear very similar, such
+as the portaﬁlter and the coffee grinder. In the refrigerator
+query, unrelated parts of the kitchen also activate in rele-
+vancy maps, though less strongly than refrigerator, because
+the CLIP embeddings of square white cabinets are more
+similar to a refrigerator than the canonical phrases. Sugar
+packets appear to be a confusing case for LERF, getting dis-
+tracted in two separate scenes (teatime, espresso machine)
+with a tea packet and creamer pods respectively.
+Fig.13 highlights another well-known undesirable prop-
+erty inherited from CLIP: text embeddings often behave as a
+bag-of-words rather than a grammatically parsed sentence.
+As a result, sometimes adding additional adjectives cause
+the output to latch onto incorrect regions (“mug handle” vs
+“handle” or “coffee spill” vs “spill”.)
+Fig.14 shows performance degradation when geometry
+is unreliable in the underlying NeRF: reﬂective objects like
+the table in the ramen scene can produce holes, which re-
+sult in CLIP embeddings from multiple views incorrectly
+averaging. Highly transparent objects like the glass cup in
+the espresso scene also suffer from lack of density, since the
+rendering weights mostly focus on the opaque background
+rather than the transparent foreground.
+Fig.12 illustrates examples of relevancy maps improv-
+ing in quality with subtly changed queries to become more
+and more speciﬁc. Usually this has a subtle effect on rele-
+vancy maps by reﬁning the activation to a more localized re-
+gion, for example providing progressively more descriptive
+queries improves the relevancy activation on the tea cup.
+This effect can also be drastic, for example “Dish soap”
+primarily activates on a pump soap bottle, but describing
+“blue dish soap” shifts focus to the correct object.
+Finally, Fig.15 shows cases where lack of geometric sep-
+aration (a cable close to a table, or a toaster ﬂush in the cor-
+ner) causes the relevancy maps to blur into other surround-
+ing objects because most views of the background contain
+the foreground object in front.
+
+Figure 16: Additional results of scenes not reported fully in the main text or rendered in videos.
+
+Scene
+Text queries
+blue hydroﬂask
+coffee grinder
+cookbooks
+cooking tongs
+copper-bottom pot
+dish soap
+faucet
+knives
+Kitchen
+olive oil
+paper towel roll
+pepper mill
+pour-over vessel
+power outlet
+red mug
+scrub brush
+sink
+spice rack
+utensils
+vegetable oil
+waldo
+big white crinkly ﬂower
+bouquet
+carnation
+daisy
+Bouquet
+eucalyptus
+lily
+rosemary
+small white ﬂowers
+vase
+green apple
+ice cream cone
+jake
+miffy
+old camera
+pikachu
+pink ice cream
+porcelain hand
+Figurines
+quilted pumpkin
+rabbit
+red apple
+rubber duck
+rubics cube
+spatula
+tesla door handle
+toy cat statue
+toy chair
+toy elephant
+twizzlers
+waldo
+bowl
+broth
+chopsticks
+egg
+Ramen
+glass of water
+green onion
+napkin
+nori
+pork belly
+ramen
+sake cup
+wavy noodles
+bag of cookies
+bear nose
+coffee
+coffee mug
+Teatime
+cookies on a plate
+dall-e
+hooves
+paper napkin
+plate
+sheep
+spill
+spoon handle
+stuffed bear
+tea in a glass
+yellow pouf
+Table 3: Labels used during detection experiments (75 total).
+Scene
+Positive Labels
+Figurines
+jake, miffy, rabbit, bunny, old camera, toy elephant, twizzlers, quilted pumpkin, tesla door handle,
+porcelain hand, rubics cube, rubber duck, apple, ice cream cone,
+pink ice cream, toy cat statue, toy chair, waldo, spatula, pikachu,table,
+Kitchen
+red mug, pour-over vessel, olive oil, vegetable oil, cookbooks, waldo,
+dish soap, plates, sink, faucet, copper-bottom pot, utensils, knives, spice rack,
+coffee grinder,ﬂour, blue hydroﬂask, pepper mill, paper towel roll, scrub brush,
+power outlet, cooking tongs, transparent tupperware, coffee mug, coffee, spoon handle,
+Teatime
+stuffed bear, sheep, bear nose, coffee mug, spill, tea in a glass, cookies on a plate, bag of cookies, dall-e,
+hooves,coffee, yellow pouf, spoon handle, paper napkin, plate, wood, bag of food, hand sanitizer, mug,
+Table
+wood texture, red bag of food, hand sanitizer bottle, airpods case,
+usb cable, brown paper napkins, transparent tupperware, colorful coaster,
+packing tape roll, hardware clamps,
+iphone, laptop, metal cooking tongs, mug, drinking straw, table, tea in a glass,
+Bouquet
+big white crinkly ﬂower, bouquet, carnation, daisy, eucalyptus, lily, rosemary
+small white ﬂowers, table, ﬂowers, pink ﬂowers, wood, sink
+Table 4: Long-tail labels used for existence experiment. Each row shows the positive labels for a given scene. Negative labels consist of
+the positives for other scenes, re-labeled to match the ground truth.

@@ -1,0 +1,630 @@
+{
+  "checks": [
+    {
+      "name": "对象帧数",
+      "actual": 1508,
+      "expected": 1508,
+      "passed": true
+    },
+    {
+      "name": "对象/original_fusion/predictions",
+      "actual": 5980,
+      "expected": 5980,
+      "passed": true
+    },
+    {
+      "name": "对象/original_fusion/truth",
+      "actual": 5723,
+      "expected": 5723,
+      "passed": true
+    },
+    {
+      "name": "对象/original_fusion/true_positive",
+      "actual": 986,
+      "expected": 986,
+      "passed": true
+    },
+    {
+      "name": "对象/timestamp_only/predictions",
+      "actual": 5989,
+      "expected": 5989,
+      "passed": true
+    },
+    {
+      "name": "对象/timestamp_only/truth",
+      "actual": 5723,
+      "expected": 5723,
+      "passed": true
+    },
+    {
+      "name": "对象/timestamp_only/true_positive",
+      "actual": 983,
+      "expected": 983,
+      "passed": true
+    },
+    {
+      "name": "对象/one_to_one_no_expiry/predictions",
+      "actual": 6247,
+      "expected": 6247,
+      "passed": true
+    },
+    {
+      "name": "对象/one_to_one_no_expiry/truth",
+      "actual": 5723,
+      "expected": 5723,
+      "passed": true
+    },
+    {
+      "name": "对象/one_to_one_no_expiry/true_positive",
+      "actual": 1006,
+      "expected": 1006,
+      "passed": true
+    },
+    {
+      "name": "对象/one_to_one_timestamp/predictions",
+      "actual": 5548,
+      "expected": 5548,
+      "passed": true
+    },
+    {
+      "name": "对象/one_to_one_timestamp/truth",
+      "actual": 5723,
+      "expected": 5723,
+      "passed": true
+    },
+    {
+      "name": "对象/one_to_one_timestamp/true_positive",
+      "actual": 953,
+      "expected": 953,
+      "passed": true
+    },
+    {
+      "name": "对象/one_to_one_depth_quality/predictions",
+      "actual": 3945,
+      "expected": 3945,
+      "passed": true
+    },
+    {
+      "name": "对象/one_to_one_depth_quality/truth",
+      "actual": 5723,
+      "expected": 5723,
+      "passed": true
+    },
+    {
+      "name": "对象/one_to_one_depth_quality/true_positive",
+      "actual": 1723,
+      "expected": 1723,
+      "passed": true
+    },
+    {
+      "name": "对象/one_to_one_depth_robust_motion/predictions",
+      "actual": 3905,
+      "expected": 3905,
+      "passed": true
+    },
+    {
+      "name": "对象/one_to_one_depth_robust_motion/truth",
+      "actual": 5723,
+      "expected": 5723,
+      "passed": true
+    },
+    {
+      "name": "对象/one_to_one_depth_robust_motion/true_positive",
+      "actual": 1720,
+      "expected": 1720,
+      "passed": true
+    },
+    {
+      "name": "对象/single_frame/predictions",
+      "actual": 2769,
+      "expected": 2769,
+      "passed": true
+    },
+    {
+      "name": "对象/single_frame/truth",
+      "actual": 5723,
+      "expected": 5723,
+      "passed": true
+    },
+    {
+      "name": "对象/single_frame/true_positive",
+      "actual": 640,
+      "expected": 640,
+      "passed": true
+    },
+    {
+      "name": "关系帧数",
+      "actual": 1508,
+      "expected": 1508,
+      "passed": true
+    },
+    {
+      "name": "关系一致帧",
+      "actual": 1396,
+      "expected": 1396,
+      "passed": true
+    },
+    {
+      "name": "关系/direct_geometry/true_positive",
+      "actual": 1950,
+      "expected": 1950,
+      "passed": true
+    },
+    {
+      "name": "关系/direct_geometry/predicted",
+      "actual": 2172,
+      "expected": 2172,
+      "passed": true
+    },
+    {
+      "name": "关系/direct_geometry/truth",
+      "actual": 18322,
+      "expected": 18322,
+      "passed": true
+    },
+    {
+      "name": "关系/direct_geometry/unresolved_edges",
+      "actual": 8886,
+      "expected": 8886,
+      "passed": true
+    },
+    {
+      "name": "关系/structured/true_positive",
+      "actual": 1942,
+      "expected": 1942,
+      "passed": true
+    },
+    {
+      "name": "关系/structured/predicted",
+      "actual": 2360,
+      "expected": 2360,
+      "passed": true
+    },
+    {
+      "name": "关系/structured/truth",
+      "actual": 18322,
+      "expected": 18322,
+      "passed": true
+    },
+    {
+      "name": "关系/structured/unresolved_edges",
+      "actual": 9418,
+      "expected": 9418,
+      "passed": true
+    },
+    {
+      "name": "关系/incremental/true_positive",
+      "actual": 1942,
+      "expected": 1942,
+      "passed": true
+    },
+    {
+      "name": "关系/incremental/predicted",
+      "actual": 2428,
+      "expected": 2428,
+      "passed": true
+    },
+    {
+      "name": "关系/incremental/truth",
+      "actual": 18322,
+      "expected": 18322,
+      "passed": true
+    },
+    {
+      "name": "关系/incremental/unresolved_edges",
+      "actual": 9660,
+      "expected": 9660,
+      "passed": true
+    },
+    {
+      "name": "检索/category_nearest_current_detection/rows",
+      "actual": 1115,
+      "expected": 1115,
+      "passed": true
+    },
+    {
+      "name": "检索/category_nearest_current_detection/positive",
+      "actual": 733,
+      "expected": 733,
+      "passed": true
+    },
+    {
+      "name": "检索/category_nearest_current_detection/correct",
+      "actual": 176,
+      "expected": 176,
+      "passed": true
+    },
+    {
+      "name": "检索/category_nearest_current_detection/false",
+      "actual": 131,
+      "expected": 131,
+      "passed": true
+    },
+    {
+      "name": "检索/clip_current_crop/rows",
+      "actual": 1115,
+      "expected": 1115,
+      "passed": true
+    },
+    {
+      "name": "检索/clip_current_crop/positive",
+      "actual": 733,
+      "expected": 733,
+      "passed": true
+    },
+    {
+      "name": "检索/clip_current_crop/correct",
+      "actual": 124,
+      "expected": 124,
+      "passed": true
+    },
+    {
+      "name": "检索/clip_current_crop/false",
+      "actual": 275,
+      "expected": 275,
+      "passed": true
+    },
+    {
+      "name": "检索/vlmaps_style_sparse_clip_grid/rows",
+      "actual": 1115,
+      "expected": 1115,
+      "passed": true
+    },
+    {
+      "name": "检索/vlmaps_style_sparse_clip_grid/positive",
+      "actual": 733,
+      "expected": 733,
+      "passed": true
+    },
+    {
+      "name": "检索/vlmaps_style_sparse_clip_grid/correct",
+      "actual": 103,
+      "expected": 103,
+      "passed": true
+    },
+    {
+      "name": "检索/vlmaps_style_sparse_clip_grid/false",
+      "actual": 298,
+      "expected": 298,
+      "passed": true
+    },
+    {
+      "name": "检索/existing_object_joint_rule/rows",
+      "actual": 1115,
+      "expected": 1115,
+      "passed": true
+    },
+    {
+      "name": "检索/existing_object_joint_rule/positive",
+      "actual": 733,
+      "expected": 733,
+      "passed": true
+    },
+    {
+      "name": "检索/existing_object_joint_rule/correct",
+      "actual": 43,
+      "expected": 43,
+      "passed": true
+    },
+    {
+      "name": "检索/existing_object_joint_rule/false",
+      "actual": 8,
+      "expected": 8,
+      "passed": true
+    },
+    {
+      "name": "ablations/causal_selection_ablation_full_001/queries.jsonl/rows",
+      "actual": 3345,
+      "expected": 3345,
+      "passed": true
+    },
+    {
+      "name": "ablations/causal_goals_full_001/queries.jsonl/rows",
+      "actual": 3345,
+      "expected": 3345,
+      "passed": true
+    },
+    {
+      "name": "performance/causal_selection_parameters_full_001/queries.jsonl/rows",
+      "actual": 10035,
+      "expected": 10035,
+      "passed": true
+    },
+    {
+      "name": "ablations/causal_maps_full_001/cases.jsonl/rows",
+      "actual": 1272,
+      "expected": 1272,
+      "passed": true
+    },
+    {
+      "name": "完整地图查询",
+      "actual": 212,
+      "expected": 212,
+      "passed": true
+    },
+    {
+      "name": "完整地图路线",
+      "actual": 94,
+      "expected": 94,
+      "passed": true
+    },
+    {
+      "name": "完整地图静态车身",
+      "actual": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "五模型逐请求数",
+      "actual": 3015,
+      "expected": 3015,
+      "passed": true
+    },
+    {
+      "name": "base_fullschema/candidate_rerank/correct",
+      "actual": 38,
+      "expected": 38,
+      "passed": true
+    },
+    {
+      "name": "base_fullschema/candidate_rerank/requests",
+      "actual": 180,
+      "expected": 180,
+      "passed": true
+    },
+    {
+      "name": "base_fullschema/object_attributes/correct",
+      "actual": 214,
+      "expected": 214,
+      "passed": true
+    },
+    {
+      "name": "base_fullschema/object_attributes/requests",
+      "actual": 243,
+      "expected": 243,
+      "passed": true
+    },
+    {
+      "name": "base_fullschema/query_parse/correct",
+      "actual": 8,
+      "expected": 8,
+      "passed": true
+    },
+    {
+      "name": "base_fullschema/query_parse/requests",
+      "actual": 180,
+      "expected": 180,
+      "passed": true
+    },
+    {
+      "name": "old_adapter_fullschema/candidate_rerank/correct",
+      "actual": 39,
+      "expected": 39,
+      "passed": true
+    },
+    {
+      "name": "old_adapter_fullschema/candidate_rerank/requests",
+      "actual": 180,
+      "expected": 180,
+      "passed": true
+    },
+    {
+      "name": "old_adapter_fullschema/object_attributes/correct",
+      "actual": 213,
+      "expected": 213,
+      "passed": true
+    },
+    {
+      "name": "old_adapter_fullschema/object_attributes/requests",
+      "actual": 243,
+      "expected": 243,
+      "passed": true
+    },
+    {
+      "name": "old_adapter_fullschema/query_parse/correct",
+      "actual": 74,
+      "expected": 74,
+      "passed": true
+    },
+    {
+      "name": "old_adapter_fullschema/query_parse/requests",
+      "actual": 180,
+      "expected": 180,
+      "passed": true
+    },
+    {
+      "name": "new_adapter_seed17/candidate_rerank/correct",
+      "actual": 57,
+      "expected": 57,
+      "passed": true
+    },
+    {
+      "name": "new_adapter_seed17/candidate_rerank/requests",
+      "actual": 180,
+      "expected": 180,
+      "passed": true
+    },
+    {
+      "name": "new_adapter_seed17/object_attributes/correct",
+      "actual": 227,
+      "expected": 227,
+      "passed": true
+    },
+    {
+      "name": "new_adapter_seed17/object_attributes/requests",
+      "actual": 243,
+      "expected": 243,
+      "passed": true
+    },
+    {
+      "name": "new_adapter_seed17/query_parse/correct",
+      "actual": 150,
+      "expected": 150,
+      "passed": true
+    },
+    {
+      "name": "new_adapter_seed17/query_parse/requests",
+      "actual": 180,
+      "expected": 180,
+      "passed": true
+    },
+    {
+      "name": "new_adapter_seed29/candidate_rerank/correct",
+      "actual": 51,
+      "expected": 51,
+      "passed": true
+    },
+    {
+      "name": "new_adapter_seed29/candidate_rerank/requests",
+      "actual": 180,
+      "expected": 180,
+      "passed": true
+    },
+    {
+      "name": "new_adapter_seed29/object_attributes/correct",
+      "actual": 226,
+      "expected": 226,
+      "passed": true
+    },
+    {
+      "name": "new_adapter_seed29/object_attributes/requests",
+      "actual": 243,
+      "expected": 243,
+      "passed": true
+    },
+    {
+      "name": "new_adapter_seed29/query_parse/correct",
+      "actual": 150,
+      "expected": 150,
+      "passed": true
+    },
+    {
+      "name": "new_adapter_seed29/query_parse/requests",
+      "actual": 180,
+      "expected": 180,
+      "passed": true
+    },
+    {
+      "name": "new_adapter_seed43/candidate_rerank/correct",
+      "actual": 51,
+      "expected": 51,
+      "passed": true
+    },
+    {
+      "name": "new_adapter_seed43/candidate_rerank/requests",
+      "actual": 180,
+      "expected": 180,
+      "passed": true
+    },
+    {
+      "name": "new_adapter_seed43/object_attributes/correct",
+      "actual": 231,
+      "expected": 231,
+      "passed": true
+    },
+    {
+      "name": "new_adapter_seed43/object_attributes/requests",
+      "actual": 243,
+      "expected": 243,
+      "passed": true
+    },
+    {
+      "name": "new_adapter_seed43/query_parse/correct",
+      "actual": 150,
+      "expected": 150,
+      "passed": true
+    },
+    {
+      "name": "new_adapter_seed43/query_parse/requests",
+      "actual": 180,
+      "expected": 180,
+      "passed": true
+    },
+    {
+      "name": "base_fullschema/raw rows",
+      "actual": 603,
+      "expected": 603,
+      "passed": true
+    },
+    {
+      "name": "old_adapter_fullschema/raw rows",
+      "actual": 603,
+      "expected": 603,
+      "passed": true
+    },
+    {
+      "name": "new_adapter_seed17/raw rows",
+      "actual": 603,
+      "expected": 603,
+      "passed": true
+    },
+    {
+      "name": "new_adapter_seed29/raw rows",
+      "actual": 603,
+      "expected": 603,
+      "passed": true
+    },
+    {
+      "name": "new_adapter_seed43/raw rows",
+      "actual": 603,
+      "expected": 603,
+      "passed": true
+    },
+    {
+      "name": "受保护文件保持",
+      "actual": [
+        {
+          "path": "/root/autodl-tmp/lizichong/初稿.docx",
+          "sha256": "3301e4fa163a7c0b5ddea37848b21f6e4c770a24e6b1ec54130b02549949095f"
+        },
+        {
+          "path": "/root/autodl-tmp/lizichong/论文1-3章初稿.md",
+          "sha256": "87b47a096a524e8e08b37d727285840e47e768da095ff123283b0fbc9a9a1ee7"
+        },
+        {
+          "path": "/root/autodl-tmp/lizichong/.git/index",
+          "sha256": "bd7eef11d88c9d208692b152369d1dfbde6ba583193fd666c44e577968cc1338"
+        },
+        {
+          "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/validation_report.json",
+          "sha256": "3cd181b5ab3ea65933331fbd9058ac4af1680dfcb2bad174a682f07a850af8f2"
+        }
+      ],
+      "expected": [
+        {
+          "path": "/root/autodl-tmp/lizichong/初稿.docx",
+          "sha256": "3301e4fa163a7c0b5ddea37848b21f6e4c770a24e6b1ec54130b02549949095f"
+        },
+        {
+          "path": "/root/autodl-tmp/lizichong/论文1-3章初稿.md",
+          "sha256": "87b47a096a524e8e08b37d727285840e47e768da095ff123283b0fbc9a9a1ee7"
+        },
+        {
+          "path": "/root/autodl-tmp/lizichong/.git/index",
+          "sha256": "bd7eef11d88c9d208692b152369d1dfbde6ba583193fd666c44e577968cc1338"
+        },
+        {
+          "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/validation_report.json",
+          "sha256": "3cd181b5ab3ea65933331fbd9058ac4af1680dfcb2bad174a682f07a850af8f2"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "逐帧位置索引行数",
+      "actual": 1662,
+      "expected": 1662,
+      "passed": true
+    },
+    {
+      "name": "逐帧引用缺失",
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "raw_maps": "已逐条核对",
+  "indexed_sources": 130,
+  "no_models_executed": true
+}

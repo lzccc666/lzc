@@ -1,0 +1,1143 @@
+1
+Vision meets Robotics: The KITTI Dataset
+Andreas Geiger, Philip Lenz, Christoph Stiller and Raquel Urtasun
+Abstract—We present a novel dataset captured from a VW
+station wagon for use in mobile robotics and autonomous driving
+research. In total, we recorded 6 hours of trafﬁc scenarios at
+10-100 Hz using a variety of sensor modalities such as high-
+resolution color and grayscale stereo cameras, a Velodyne 3D
+laser scanner and a high-precision GPS/IMU inertial navigation
+system. The scenarios are diverse, capturing real-world trafﬁc
+situations and range from freeways over rural areas to inner-
+city scenes with many static and dynamic objects. Our data is
+calibrated, synchronized and timestamped, and we provide the
+rectiﬁed and raw image sequences. Our dataset also contains
+object labels in the form of 3D tracklets and we provide online
+benchmarks for stereo, optical ﬂow, object detection and other
+tasks. This paper describes our recording platform, the data
+format and the utilities that we provide.
+Index Terms—dataset, autonomous driving, mobile robotics,
+ﬁeld robotics, computer vision, cameras, laser, GPS, benchmarks,
+stereo, optical ﬂow, SLAM, object detection, tracking, KITTI
+I. INTRODUCTION
+The KITTI dataset has been recorded from a moving plat-
+form (Fig. 1) while driving in and around Karlsruhe, Germany
+(Fig. 2). It includes camera images, laser scans, high-precision
+GPS measurements and IMU accelerations from a combined
+GPS/IMU system. The main purpose of this dataset is to
+push forward the development of computer vision and robotic
+algorithms targeted to autonomous driving [1]–[7]. While our
+introductory paper [8] mainly focuses on the benchmarks,
+their creation and use for evaluating state-of-the-art computer
+vision methods, here we complement this information by
+providing technical details on the raw data itself. We give
+precise instructions on how to access the data and comment
+on sensor limitations and common pitfalls. The dataset can
+be downloaded from http://www.cvlibs.net/datasets/kitti. For
+a review on related work, we refer the reader to [8].
+II. SENSOR SETUP
+Our sensor setup is illustrated in Fig. 3:
+• 2 × PointGray Flea2 grayscale cameras (FL2-14S3M-C),
+1.4 Megapixels, 1/2” Sony ICX267 CCD, global shutter
+• 2 × PointGray Flea2 color cameras (FL2-14S3C-C), 1.4
+Megapixels, 1/2” Sony ICX267 CCD, global shutter
+• 4 × Edmund Optics lenses, 4mm, opening angle ∼90◦,
+vertical opening angle of region of interest (ROI) ∼35◦
+• 1 × Velodyne HDL-64E rotating 3D laser scanner, 10 Hz,
+64 beams, 0.09 degree angular resolution, 2 cm distance
+accuracy, collecting ∼1.3 million points/second, ﬁeld of
+view: 360◦horizontal, 26.8◦vertical, range: 120 m
+A. Geiger, P. Lenz and C. Stiller are with the Department of Measurement
+and Control Systems, Karlsruhe Institute of Technology, Germany. Email:
+{geiger,lenz,stiller}@kit.edu
+R. Urtasun is with the Toyota Technological Institute at Chicago, USA.
+Email: rurtasun@ttic.edu
+x
+z y
+y
+z
+x
+Velodyne HDL-64E Laserscanner
+Point Gray Flea 2
+Video Cameras
+x
+y
+z
+OXTS
+RT 3003
+GPS / IMU
+x
+y
+z
+OXTS
+RT 3003
+GPS / IMU
+Fig. 1.
+Recording Platform. Our VW Passat station wagon is equipped
+with four video cameras (two color and two grayscale cameras), a rotating
+3D laser scanner and a combined GPS/IMU inertial navigation system.
+• 1 × OXTS RT3003 inertial and GPS navigation system,
+6 axis, 100 Hz, L1/L2 RTK, resolution: 0.02m / 0.1◦
+Note that the color cameras lack in terms of resolution due
+to the Bayer pattern interpolation process and are less sensitive
+to light. This is the reason why we use two stereo camera
+rigs, one for grayscale and one for color. The baseline of
+both stereo camera rigs is approximately 54 cm. The trunk
+of our vehicle houses a PC with two six-core Intel XEON
+X5650 processors and a shock-absorbed RAID 5 hard disk
+storage with a capacity of 4 Terabytes. Our computer runs
+Ubuntu Linux (64 bit) and a real-time database [9] to store
+the incoming data streams.
+III. DATASET
+The raw data described in this paper can be accessed from
+http://www.cvlibs.net/datasets/kitti and contains ∼25% of our
+overall recordings. The reason for this is that primarily data
+with 3D tracklet annotations has been put online, though we
+will make more data available upon request. Furthermore, we
+have removed all sequences which are part of our benchmark
+test sets. The raw data set is divided into the categories ’Road’,
+’City’, ’Residential’, ’Campus’ and ’Person’. Example frames
+are illustrated in Fig. 5. For each sequence, we provide the raw
+data, object annotations in form of 3D bounding box tracklets
+and a calibration ﬁle, as illustrated in Fig. 4. Our recordings
+have taken place on the 26th, 28th, 29th, 30th of September
+and on the 3rd of October 2011 during daytime. The total size
+of the provided data is 180 GB.
+
+2
+Fig. 2.
+Recording Zone. This ﬁgure shows the GPS traces of our recordings
+in the metropolitan area of Karlsruhe, Germany. Colors encode the GPS signal
+quality: Red tracks have been recorded with highest precision using RTK
+corrections, blue denotes the absence of correction signals. The black runs
+have been excluded from our data set as no GPS signal has been available.
+A. Data Description
+All sensor readings of a sequence are zipped into a single
+ﬁle named date_drive.zip, where date and drive are
+placeholders for the recording date and the sequence number.
+The directory structure is shown in Fig. 4. Besides the raw
+recordings (’raw data’), we also provide post-processed data
+(’synced data’), i.e., rectiﬁed and synchronized video streams,
+on the dataset website.
+Timestamps are stored in timestamps.txt and per-
+frame sensor readings are provided in the corresponding data
+sub-folders. Each line in timestamps.txt is composed
+of the date and time in hours, minutes and seconds. As the
+Velodyne laser scanner has a ’rolling shutter’, three timestamp
+ﬁles are provided for this sensor, one for the start position
+(timestamps_start.txt) of a spin, one for the end
+position (timestamps_end.txt) of a spin, and one for the
+time, where the laser scanner is facing forward and triggering
+the cameras (timestamps.txt). The data format in which
+each sensor stream is stored is as follows:
+a) Images: Both, color and grayscale images are stored
+with loss-less compression using 8-bit PNG ﬁles. The engine
+hood and the sky region have been cropped. To simplify
+working with the data, we also provide rectiﬁed images. The
+size of the images after rectiﬁcation depends on the calibration
+parameters and is ∼0.5 Mpx on average. The original images
+before rectiﬁcation are available as well.
+b) OXTS (GPS/IMU): For each frame, we store 30 differ-
+ent GPS/IMU values in a text ﬁle: The geographic coordinates
+including altitude, global orientation, velocities, accelerations,
+angular rates, accuracies and satellite information. Accelera-
+x
+y
+z
+x
+y
+z
+x
+z
+y
+GPS/IMU
+(height: 0.93 m)
+Velodyne laserscanner
+(height: 1.73 m)
+Cam 0 (gray)
+Cam 2 (color)
+Cam 1 (gray)
+Cam 3 (color)
+2.71 m
+0.81 m
+0.32 m
+0.27 m
+0.54 m
+0.06 m
+All camera heights: 1.65 m
+0.05 m
+0.48 m
+IMU-to-Velo
+Velo-to-Cam
+All heights wrt. road surface
+Wheel   axis
+(height: 0.30m)
+1.68 m
+0.80 m
+1.60 m
+Cam-to-CamRect
+& CamRect
+-to-Image
+0.06 m
+Fig. 3.
+Sensor Setup. This ﬁgure illustrates the dimensions and mounting
+positions of the sensors (red) with respect to the vehicle body. Heights above
+ground are marked in green and measured with respect to the road surface.
+Transformations between sensors are shown in blue.
+date/
+date_drive/
+date_drive.zip
+image_0x/
+x={0,..,3}
+data/
+frame_number.png
+timestamps.txt
+oxts/
+data/
+frame_number.txt
+dataformat.txt
+timestamps.txt
+velodyne_points/
+data/
+frame_number.bin
+timestamps.txt
+timestamps_start.txt
+timestamps_end.txt
+date_drive_tracklets.zip
+tracklet_labels.xml
+date_calib.zip
+calib_cam_to_cam.txt
+calib_imu_to_velo.txt
+calib_velo_to_cam.txt
+Fig. 4.
+Structure of the provided Zip-Files and their location within a
+global ﬁle structure that stores all KITTI sequences. Here, ’date’ and ’drive’
+are placeholders, and ’image 0x’ refers to the 4 video camera streams.
+tions and angular rates are both speciﬁed using two coordinate
+systems, one which is attached to the vehicle body (x, y, z) and
+one that is mapped to the tangent plane of the earth surface
+at that location (f, l, u). From time to time we encountered
+short (∼1 second) communication outages with the OXTS
+device for which we interpolated all values linearly and set
+the last 3 entries to ’-1’ to indicate the missing information.
+More details are provided in dataformat.txt. Conversion
+utilities are provided in the development kit.
+c) Velodyne:
+For efﬁciency, the Velodyne scans are
+stored as ﬂoating point binaries that are easy to parse using
+the C++ or MATLAB code provided. Each point is stored with
+its (x, y, z) coordinate and an additional reﬂectance value (r).
+While the number of points per scan is not constant, on average
+each ﬁle/frame has a size of ∼1.9 MB which corresponds
+to ∼120, 000 3D points and reﬂectance values. Note that the
+Velodyne laser scanner rotates continuously around its vertical
+axis (counter-clockwise), which can be taken into account
+using the timestamp ﬁles.
+B. Annotations
+For each dynamic object within the reference camera’s ﬁeld
+of view, we provide annotations in the form of 3D bounding
+box tracklets, represented in Velodyne coordinates. We deﬁne
+the classes ’Car’, ’Van’, ’Truck’, ’Pedestrian’, ’Person (sit-
+ting)’, ’Cyclist’, ’Tram’ and ’Misc’ (e.g., Trailers, Segways).
+The tracklets are stored in date_drive_tracklets.xml.
+
+3
+Fig. 6. Development kit. Working with tracklets (top), Velodyne point clouds
+(bottom) and their projections onto the image plane is demonstrated in the
+MATLAB development kit which is available from the KITTI website.
+Each object is assigned a class and its 3D size (height, width,
+length). For each frame, we provide the object’s translation
+and rotation in 3D, as illustrated in Fig. 7. Note that we
+only provide the yaw angle, while the other two angles
+are assumed to be close to zero. Furthermore, the level of
+occlusion and truncation is speciﬁed. The development kit
+contains C++/MATLAB code for reading and writing tracklets
+using the boost::serialization1 library.
+To give further insights into the properties of our dataset,
+we provide statistics for all sequences that contain annotated
+objects. The total number of objects and the object orientations
+for the two predominant classes ’Car’ and ’Pedestrian’ are
+shown in Fig. 8. For each object class, the number of object
+labels per image and the length of the captured sequences is
+shown in Fig. 9. The egomotion of our platform recorded by
+the GPS/IMU system as well as statistics about the sequence
+length and the number of objects are shown in Fig. 10 for the
+whole dataset and in Fig. 11 per street category.
+C. Development Kit
+The raw data development kit provided on the KITTI
+website2 contains MATLAB demonstration code with C++
+wrappers and a readme.txt ﬁle which gives further
+details. Here, we will brieﬂy discuss the most impor-
+tant features. Before running the scripts, the mex wrapper
+readTrackletsMex.cpp for reading tracklets into MAT-
+LAB structures and cell arrays needs to be built using the
+script make.m. It wraps the ﬁle tracklets.h from the
+1http://www.boost.org
+2http://www.cvlibs.net/datasets/kitti/raw data.php
+x
+y
+z
+Velodyne
+Coordinates
+z
+y
+x
+Object
+Coordinates
+rz
+length (l)
+width (w)
+Fig. 7.
+Object Coordinates. This ﬁgure illustrates the coordinate system
+of the annotated 3D bounding boxes with respect to the coordinate system of
+the 3D Velodyne laser scanner. In z-direction, the object coordinate system is
+located at the bottom of the object (contact point with the supporting surface).
+cpp folder which holds the tracklet object for serialization.
+This ﬁle can also be directly interfaced with when working in
+a C++ environment.
+The script run_demoTracklets.m demonstrates how
+3D bounding box tracklets can be read from the XML ﬁles
+and projected onto the image plane of the cameras. The
+projection of 3D Velodyne point clouds into the image plane
+is demonstrated in run_demoVelodyne.m. See Fig. 6 for
+an illustration.
+The script run_demoVehiclePath.m shows how to
+read and display the 3D vehicle trajectory using the GPS/IMU
+data. It makes use of convertOxtsToPose(), which takes
+as input GPS/IMU measurements and outputs the 6D pose of
+the vehicle in Euclidean space. For this conversion we make
+use of the Mercator projection [10]
+x
+=
+s × r × π lon
+180
+(1)
+y
+=
+s × r × log
+
+tan
+π(90 + lat)
+360
+
+(2)
+with earth radius r ≈6378137 meters, scale s = cos
+  lat0×π
+180
+
+,
+and (lat, lon) the geographic coordinates. lat0 denotes the lat-
+itude of the ﬁrst frame’s coordinates and uniquely determines
+the Mercator scale.
+The function loadCalibrationCamToCam() can be
+used to read the intrinsic and extrinsic calibration parameters
+of the four video sensors. The other 3D rigid body transfor-
+mations can be parsed with loadCalibrationRigid().
+D. Benchmarks
+In addition to the raw data, our KITTI website hosts
+evaluation benchmarks for several computer vision and robotic
+tasks such as stereo, optical ﬂow, visual odometry, SLAM, 3D
+object detection and 3D object tracking. For details about the
+benchmarks and evaluation metrics we refer the reader to [8].
+IV. SENSOR CALIBRATION
+We took care that all sensors are carefully synchronized
+and calibrated. To avoid drift over time, we calibrated the
+sensors every day after our recordings. Note that even though
+the sensor setup hasn’t been altered in between, numerical
+differences are possible. The coordinate systems are deﬁned
+as illustrated in Fig. 1 and Fig. 3, i.e.:
+• Camera: x = right, y = down, z = forward
+• Velodyne: x = forward, y = left, z = up
+
+4
+City
+Residential
+Road
+Campus
+Person
+Fig. 5.
+Examples from the KITTI dataset. This ﬁgure demonstrates the diversity in our dataset. The left color camera image is shown.
+• GPS/IMU: x = forward, y = left, z = up
+Notation: In the following, we write scalars in lower-case
+letters (a), vectors in bold lower-case (a) and matrices using
+bold-face capitals (A). 3D rigid-body transformations which
+take points from coordinate system a to coordinate system b
+will be denoted by Tb
+a, with T for ’transformation’.
+A. Synchronization
+In order to synchronize the sensors, we use the timestamps
+of the Velodyne 3D laser scanner as a reference and consider
+each spin as a frame. We mounted a reed contact at the bottom
+of the continuously rotating scanner, triggering the cameras
+when facing forward. This minimizes the differences in the
+range and image observations caused by dynamic objects.
+Unfortunately, the GPS/IMU system cannot be synchronized
+that way. Instead, as it provides updates at 100 Hz, we
+collect the information with the closest timestamp to the laser
+scanner timestamp for a particular frame, resulting in a worst-
+case time difference of 5 ms between a GPS/IMU and a
+camera/Velodyne data package. Note that all timestamps are
+provided such that positioning information at any time can be
+easily obtained via interpolation. All timestamps have been
+recorded on our host computer using the system clock.
+B. Camera Calibration
+For calibrating the cameras intrinsically and extrinsically,
+we use the approach proposed in [11]. Note that all camera
+centers are aligned, i.e., they lie on the same x/y-plane. This
+is important as it allows us to rectify all images jointly.
+The calibration parameters for each day are stored in
+row-major order in calib_cam_to_cam.txt using the
+following notation:
+• s(i) ∈N2 . . . . . . . . . . . . original image size (1392 × 512)
+• K(i) ∈R3×3 . . . . . . . . . calibration matrices (unrectiﬁed)
+• d(i) ∈R5 . . . . . . . . . . distortion coefﬁcients (unrectiﬁed)
+• R(i) ∈R3×3 . . . . . . rotation from camera 0 to camera i
+• t(i) ∈R1×3 . . . . . translation from camera 0 to camera i
+• s(i)
+rect ∈N2 . . . . . . . . . . . . . . . image size after rectiﬁcation
+• R(i)
+rect ∈R3×3 . . . . . . . . . . . . . . . rectifying rotation matrix
+• P(i)
+rect ∈R3×4 . . . . . . projection matrix after rectiﬁcation
+Here, i ∈{0, 1, 2, 3} is the camera index, where 0 represents
+the left grayscale, 1 the right grayscale, 2 the left color and
+3 the right color camera. Note that the variable deﬁnitions
+are compliant with the OpenCV library, which we used for
+warping the images. When working with the synchronized
+and rectiﬁed datasets only the variables with rect-subscript are
+relevant. Note that due to the pincushion distortion effect the
+images have been cropped such that the size of the rectiﬁed
+images is smaller than the original size of 1392 × 512 pixels.
+The projection of a 3D point x = (x, y, z, 1)T in rectiﬁed
+(rotated) camera coordinates to a point y = (u, v, 1)T in the
+i’th camera image is given as
+y = P(i)
+rect x
+(3)
+
+5
+with
+P(i)
+rect =
+
+
+
+f (i)
+u
+0
+c(i)
+u
+−f (i)
+u b(i)
+x
+0
+f (i)
+v
+c(i)
+v
+0
+0
+0
+1
+0
+
+
+
+(4)
+the i’th projection matrix. Here, b(i)
+x
+denotes the baseline (in
+meters) with respect to reference camera 0. Note that in order
+to project a 3D point x in reference camera coordinates to a
+point y on the i’th image plane, the rectifying rotation matrix
+of the reference camera R(0)
+rect must be considered as well:
+y = P(i)
+rect R(0)
+rect x
+(5)
+Here, R(0)
+rect has been expanded into a 4×4 matrix by append-
+ing a fourth zero-row and column, and setting R(0)
+rect(4, 4) = 1.
+C. Velodyne and IMU Calibration
+We have registered the Velodyne laser scanner with respect
+to the reference camera coordinate system (camera 0) by
+initializing the rigid body transformation using [11]. Next, we
+optimized an error criterion based on the Euclidean distance of
+50 manually selected correspondences and a robust measure on
+the disparity error with respect to the 3 top performing stereo
+methods in the KITTI stereo benchmark [8]. The optimization
+was carried out using Metropolis-Hastings sampling.
+The rigid body transformation from Velodyne coordinates to
+camera coordinates is given in calib_velo_to_cam.txt:
+• Rcam
+velo ∈R3×3 . . . . rotation matrix: velodyne →camera
+• tcam
+velo ∈R1×3 . . . translation vector: velodyne →camera
+Using
+Tcam
+velo =
+Rcam
+velo
+tcam
+velo
+0
+1
+
+(6)
+a 3D point x in Velodyne coordinates gets projected to a point
+y in the i’th camera image as
+y = P(i)
+rect R(0)
+rect Tcam
+velo x
+(7)
+For registering the IMU/GPS with respect to the Velodyne
+laser scanner, we ﬁrst recorded a sequence with an ’∞’-loop
+and registered the (untwisted) point clouds using the Point-
+to-Plane ICP algorithm. Given two trajectories this problem
+corresponds to the well-known hand-eye calibration problem
+which can be solved using standard tools [12]. The rotation
+matrix Rvelo
+imu and the translation vector tvelo
+imu are stored in
+calib_imu_to_velo.txt. A 3D point x in IMU/GPS
+coordinates gets projected to a point y in the i’th image as
+y = P(i)
+rect R(0)
+rect Tcam
+velo Tvelo
+imu x
+(8)
+V. SUMMARY AND FUTURE WORK
+In this paper, we have presented a calibrated, synchronized
+and rectiﬁed autonomous driving dataset capturing a wide
+range of interesting scenarios. We believe that this dataset
+will be highly useful in many areas of robotics and com-
+puter vision. In the future we plan on expanding the set of
+available sequences by adding additional 3D object labels for
+currently unlabeled sequences and recording new sequences,
+Number of Labels
+Object Class
+200000
+150000
+100000
+50000
+0
+Misc
+Tram
+Cyclist
+Person (sitting)
+Pedestrian
+Truck
+Van
+Car
+% of Object Class Members
+Occlusion/Truncation Status by Class
+100
+50
+0
+Pedestrian
+Truncated
+Pedestrian
+Occluded
+Car
+Truncated
+Car
+Occluded
+Number of Cars
+Orientation [deg]
+20000
+15000
+10000
+5000
+0
+157.50
+112.50
+67.50
+22.50
+-22.50
+-67.50
+-112.50
+-157.50
+Number of Pedestrians
+Orientation [deg]
+6000
+5000
+4000
+3000
+2000
+1000
+0
+157.50
+112.50
+67.50
+22.50
+-22.50
+-67.50
+-112.50
+-157.50
+Fig. 8.
+Object Occurrence and Orientation Statistics of our Dataset.
+This ﬁgure shows the different types of objects occurring in our sequences
+(top) and the orientation histograms (bottom) for the two most predominant
+categories ’Car’ and ’Pedestrian’.
+for example in difﬁcult lighting situations such as at night, in
+tunnels, or in the presence of fog or rain. Furthermore, we
+plan on extending our benchmark suite by novel challenges.
+In particular, we will provide pixel-accurate semantic labels
+for many of the sequences.
+REFERENCES
+[1] G. Singh and J. Kosecka, “Acquiring semantics induced topology in
+urban environments,” in ICRA, 2012.
+[2] R. Paul and P. Newman, “FAB-MAP 3D: Topological mapping with
+spatial and visual appearance,” in ICRA, 2010.
+[3] C. Wojek, S. Walk, S. Roth, K. Schindler, and B. Schiele, “Monocular
+visual scene understanding: Understanding multi-object trafﬁc scenes,”
+PAMI, 2012.
+[4] D. Pfeiffer and U. Franke, “Efﬁcient representation of trafﬁc scenes by
+means of dynamic stixels,” in IV, 2010.
+[5] A. Geiger, M. Lauer, and R. Urtasun, “A generative model for 3d urban
+scene understanding from movable platforms,” in CVPR, 2011.
+[6] A. Geiger, C. Wojek, and R. Urtasun, “Joint 3d estimation of objects
+and scene layout,” in NIPS, 2011.
+[7] M. A. Brubaker, A. Geiger, and R. Urtasun, “Lost! leveraging the crowd
+for probabilistic visual self-localization.” in CVPR, 2013.
+[8] A. Geiger, P. Lenz, and R. Urtasun, “Are we ready for autonomous
+driving? The KITTI vision benchmark suite,” in CVPR, 2012.
+[9] M. Goebl and G. Faerber, “A real-time-capable hard- and software
+architecture for joint image and knowledge processing in cognitive
+automobiles,” in IV, 2007.
+[10] P. Osborne, “The mercator projections,” 2008. [Online]. Available:
+http://mercator.myzen.co.uk/mercator.pdf
+[11] A. Geiger, F. Moosmann, O. Car, and B. Schuster, “A toolbox for
+automatic calibration of range and camera sensors using a single shot,”
+in ICRA, 2012.
+[12] R. Horaud and F. Dornaika, “Hand-eye calibration,” IJRR, vol. 14, no. 3,
+pp. 195–210, 1995.
+
+6
+Number of Images
+Car per Image
+0
+5
+10
+15
+20
+0
+1000
+2000
+3000
+4000
+5000
+6000
+7000
+8000
+9000
+Number of Images
+Van per Image
+0
+5
+10
+15
+20
+0
+1000
+2000
+3000
+4000
+5000
+6000
+Number of Images
+Truck per Image
+0
+5
+10
+15
+20
+0
+200
+400
+600
+800
+1000
+1200
+1400
+1600
+1800
+Number of Images
+Pedestrian per Image
+0
+5
+10
+15
+20
+0
+2000
+4000
+6000
+8000
+10000
+12000
+Number of Images
+Person (sitting) per Image
+0
+5
+10
+15
+20
+0
+50
+100
+150
+200
+250
+300
+350
+400
+450
+500
+Number of Images
+Cyclist per Image
+0
+5
+10
+15
+20
+0
+500
+1000
+1500
+2000
+2500
+3000
+3500
+Number of Images
+Tram per Image
+0
+5
+10
+15
+20
+0
+100
+200
+300
+400
+500
+600
+700
+Number of Images
+Misc per Image
+0
+5
+10
+15
+20
+0
+50
+100
+150
+200
+250
+300
+350
+400
+450
+500
+Fig. 9.
+Number of Object Labels per Class and Image. This ﬁgure shows how often an object occurs in an image. Since our labeling efforts focused on
+cars and pedestrians, these are the most predominant classes here.
+Number of Images
+velocity [m/s]
+0
+5
+10
+15
+20
+25
+0
+1000
+2000
+3000
+4000
+5000
+6000
+7000
+Number of Images
+acceleration [m/s2]
+−4
+−2
+0
+2
+4
+0
+2000
+4000
+6000
+8000
+10000
+12000
+14000
+Number of Sequences
+Frames per Sequences
+0
+400
+800
+1200
+1600
+0
+20
+40
+60
+80
+100
+120
+Number of Images
+Street Category
+road
+residential
+person
+city
+campus
+×104
+0
+0.5
+1
+1.5
+2
+2.5
+3
+Fig. 10.
+Egomotion, Sequence Count and Length. This ﬁgure show (from-left-to-right) the egomotion (velocity and acceleration) of our recording platform
+for the whole dataset. Note that we excluded sequences with a purely static observer from these statistics. The length of the available sequences is shown as
+a histogram counting the number of frames per sequence. The rightmost ﬁgure shows the number of frames/images per scene category.
+Number of Images
+velocity [m/s]
+0
+4
+8
+12
+16
+0
+200
+400
+600
+800
+1000
+1200
+1400
+1600
+Number of Images
+velocity [m/s]
+0
+4
+8
+12
+16
+0
+500
+1000
+1500
+2000
+2500
+Number of Images
+velocity [m/s]
+0
+5
+10
+15
+20
+25
+30
+0
+100
+200
+300
+400
+500
+600
+Number of Images
+velocity [m/s]
+0
+1
+2
+3
+4
+5
+0
+50
+100
+150
+200
+250
+300
+350
+static observer
+Number of Images
+acceleration [m/s2]
+−3
+−2
+−1
+0
+1
+2
+3
+0
+200
+400
+600
+800
+1000
+1200
+1400
+1600
+1800
+Number of Images
+acceleration [m/s2]
+−4
+−2
+0
+2
+4
+0
+500
+1000
+1500
+2000
+2500
+3000
+3500
+4000
+4500
+5000
+Number of Images
+acceleration [m/s2]
+−4
+−2
+0
+2
+0
+100
+200
+300
+400
+500
+600
+700
+800
+900
+1000
+Number of Images
+acceleration [m/s2]
+−2 −1.5 −1 −0.5
+0
+0.5
+1
+0
+50
+100
+150
+200
+250
+300
+350
+400
+static observer
+Misc
+Tram
+Cyclist
+Person (sitting)
+Pedestrian
+Truck
+Van
+Car
+Number of Labels
+Object Class
+×104
+0
+0.5
+1
+1.5
+2
+2.5
+3
+3.5
+Misc
+Tram
+Cyclist
+Person (sitting)
+Pedestrian
+Truck
+Van
+Car
+Number of Labels
+Object Class
+0
+2000
+4000
+6000
+8000
+10000
+12000
+14000
+16000
+18000
+Misc
+Tram
+Cyclist
+Person (sitting)
+Pedestrian
+Truck
+Van
+Car
+Number of Labels
+Object Class
+0
+2000
+4000
+6000
+8000
+10000
+12000
+Misc
+Tram
+Cyclist
+Person (sitting)
+Pedestrian
+Truck
+Van
+Car
+Number of Labels
+Object Class
+0
+2000
+4000
+6000
+8000
+10000
+12000
+Misc
+Tram
+Cyclist
+Person (sitting)
+Pedestrian
+Truck
+Van
+Car
+Number of Labels
+Object Class
+0
+500
+1000
+1500
+2000
+2500
+3000
+3500
+4000
+4500
+5000
+Misc
+Tram
+Cyclist
+Person (sitting)
+Pedestrian
+Truck
+Van
+Car
+Number of Objects
+Object Class
+0
+100
+200
+300
+400
+500
+600
+700
+Misc
+Tram
+Cyclist
+Person (sitting)
+Pedestrian
+Truck
+Van
+Car
+Number of Objects
+Object Class
+0
+50
+100
+150
+200
+250
+300
+350
+400
+450
+500
+Misc
+Tram
+Cyclist
+Person (sitting)
+Pedestrian
+Truck
+Van
+Car
+Number of Objects
+Object Class
+0
+50
+100
+150
+200
+250
+300
+Misc
+Tram
+Cyclist
+Person (sitting)
+Pedestrian
+Truck
+Van
+Car
+Number of Objects
+Object Class
+0
+20
+40
+60
+80
+100
+120
+Misc
+Tram
+Cyclist
+Person (sitting)
+Pedestrian
+Truck
+Van
+Car
+Number of Objects
+Object Class
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+City
+Residential
+Road
+Campus
+Person
+Fig. 11.
+Velocities, Accelerations and Number of Objects per Object Class. For each scene category we show the acceleration and velocity of the mobile
+platform as well as the number of labels and objects per class. Note that sequences with a purely static observer have been excluded from the velocity and
+acceleration histograms as they don’t represent natural driving behavior. The category ’Person’ has been recorded from a static observer.

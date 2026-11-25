@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "existing_sparse_state": false,
+      "passed": true,
+      "events": [
+        {
+          "kind": "state_created",
+          "state_uid": 1,
+          "node_id": "sparse-00000000",
+          "observation_key": "s1",
+          "assignment": {
+            "stage": "new_sparse",
+            "row_feasible": 0,
+            "unambiguous": false,
+            "prior_dense_row_feasible": 1,
+            "prior_dense_assigned": false,
+            "unresolved_prior_dense_competition": true
+          }
+        }
+      ]
+    },
+    {
+      "existing_sparse_state": true,
+      "passed": true,
+      "events": [
+        {
+          "kind": "state_updated",
+          "state_uid": 0,
+          "node_id": "sparse-prior",
+          "observation_key": "s1",
+          "assignment": {
+            "stage": "sparse_to_sparse",
+            "row_feasible": 1,
+            "column_feasible": 1,
+            "unambiguous": false,
+            "prior_dense_row_feasible": 1,
+            "prior_dense_assigned": false,
+            "unresolved_prior_dense_competition": true
+          }
+        }
+      ]
+    }
+  ],
+  "GPU_calls": 0,
+  "synthetic_contract_only": true
+}

@@ -1,0 +1,56 @@
+{
+  "naming_policy": "训练=更新参数；验证调试=分析与选方法；测试=固定后评价；不改历史split字段",
+  "qwen_real_graph_v003": {
+    "train": {
+      "role": "训练集",
+      "path": "dataset/qwen/real_graph_v003/train.jsonl",
+      "samples": 459,
+      "unique_frames": 51,
+      "scenes": 20,
+      "logs": 7,
+      "null_selection_labels": 348,
+      "manually_reviewed": 0
+    },
+    "validation": {
+      "role": "训练验证集",
+      "path": "dataset/qwen/real_graph_v003/validation.jsonl",
+      "samples": 171,
+      "unique_frames": 19,
+      "scenes": 11,
+      "logs": 2,
+      "null_selection_labels": 135,
+      "manually_reviewed": 0
+    },
+    "development_holdout": {
+      "role": "验证／调试子集（已查看）",
+      "path": "dataset/qwen/real_graph_v003/development_holdout.jsonl",
+      "samples": 108,
+      "unique_frames": 12,
+      "scenes": 2,
+      "logs": 2,
+      "null_selection_labels": 80,
+      "manually_reviewed": 0
+    }
+  },
+  "mapping_scene_groups": {
+    "validation": {
+      "role": "验证／调试场景组，不代表全部用于Qwen训练",
+      "scenes": 38,
+      "logs": 11,
+      "frames": 1508,
+      "inputs": "dataset/processed/nuscenes/validation/converted",
+      "evidence": "outputs/results/nuscenes/validation/statistics/report.json"
+    },
+    "test": {
+      "role": "冻结后开启的测试场景组，当前已使用",
+      "scenes": 30,
+      "logs": 14,
+      "frames": 1196,
+      "inputs": "dataset/processed/nuscenes/test/converted",
+      "evidence": "outputs/results/nuscenes/test/evaluation/report.json"
+    }
+  },
+  "label_changes": false,
+  "experiment_rerun": false,
+  "note": "指令模板改写不增加独立画面；official_graph数据是辅助诊断；不把看过的数据重新宣称未见"
+}

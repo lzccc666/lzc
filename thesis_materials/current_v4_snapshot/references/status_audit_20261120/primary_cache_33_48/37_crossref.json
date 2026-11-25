@@ -1,0 +1,876 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          19
+        ]
+      ],
+      "date-time": "2026-11-19T14:08:46Z",
+      "timestamp": 1795097326076,
+      "version": "4.10.3"
+    },
+    "publisher-location": "Cham",
+    "reference-count": 62,
+    "publisher": "Springer International Publishing",
+    "isbn-type": [
+      {
+        "value": "9783319488806",
+        "type": "print"
+      },
+      {
+        "value": "9783319488813",
+        "type": "electronic"
+      }
+    ],
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2016,
+              1,
+              1
+            ]
+          ],
+          "date-time": "2016-01-01T00:00:00Z",
+          "timestamp": 1451606400000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "http://www.springer.com/tdm"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2016,
+              1,
+              1
+            ]
+          ],
+          "date-time": "2016-01-01T00:00:00Z",
+          "timestamp": 1451606400000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "http://www.springer.com/tdm"
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "link.springer.com"
+      ],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2016
+        ]
+      ]
+    },
+    "DOI": "10.1007/978-3-319-48881-3_2",
+    "type": "book-chapter",
+    "created": {
+      "date-parts": [
+        [
+          2016,
+          11,
+          2
+        ]
+      ],
+      "date-time": "2016-11-02T13:19:08Z",
+      "timestamp": 1478092748000
+    },
+    "page": "17-35",
+    "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 2074,
+    "title": [
+      "Performance Measures and a Data Set for Multi-target, Multi-camera Tracking"
+    ],
+    "prefix": "10.1007",
+    "author": [
+      {
+        "given": "Ergys",
+        "family": "Ristani",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Francesco",
+        "family": "Solera",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Roger",
+        "family": "Zou",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Rita",
+        "family": "Cucchiara",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Carlo",
+        "family": "Tomasi",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "297",
+    "published-online": {
+      "date-parts": [
+        [
+          2016,
+          11,
+          3
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "2_CR1",
+        "series-title": "Lecture Notes in Computer Science",
+        "doi-asserted-by": "crossref",
+        "first-page": "444",
+        "DOI": "10.1007/978-3-319-16814-2_29",
+        "volume-title": "Computer Vision – ACCV 2014",
+        "author": "E Ristani",
+        "year": "2015",
+        "unstructured": "Ristani, E., Tomasi, C.: Tracking multiple people online and in real time. In: Cremers, D., Reid, I., Saito, H., Yang, M.-H. (eds.) ACCV 2014. LNCS, vol. 9007, pp. 444–459. Springer, Heidelberg (2015)"
+      },
+      {
+        "key": "2_CR2",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Cao, L., Chen, W., Chen, X., Zheng, S., Huang, K.: An equalised global graphical model-based approach for multi-camera object tracking [cs]. arXiv:11502.03532 , February 2015",
+        "DOI": "10.1109/ICIP.2014.7025472"
+      },
+      {
+        "key": "2_CR3",
+        "doi-asserted-by": "publisher",
+        "first-page": "1",
+        "DOI": "10.1155/2008/246309",
+        "volume": "246309",
+        "author": "K Bernardin",
+        "year": "2008",
+        "unstructured": "Bernardin, K., Stiefelhagen, R.: Evaluating multiple object tracking performance: the CLEAR MOT metrics. EURASIP J. Image Video Process. 246309, 1–10 (2008)",
+        "journal-title": "EURASIP J. Image Video Process."
+      },
+      {
+        "key": "2_CR4",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Wu, B., Nevatia, R.: Tracking of multiple, partially occluded humans based on static body part detection. In: 2006 IEEE Computer Society Conference on Computer Vision and Pattern Recognition, vol. 1, pp. 951–958. IEEE (2006)",
+        "DOI": "10.1109/CVPR.2006.312"
+      },
+      {
+        "key": "2_CR5",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Milan, A., Schindler, K., Roth, S.: Challenges of ground truth evaluation of multi-target tracking. In: 2013 IEEE Conference on Computer Vision and Pattern Recognition Workshops (CVPRW), pp. 735–742. IEEE (2013)",
+        "DOI": "10.1109/CVPRW.2013.111"
+      },
+      {
+        "key": "2_CR6",
+        "series-title": "Lecture Notes in Computer Science",
+        "doi-asserted-by": "publisher",
+        "first-page": "383",
+        "DOI": "10.1007/978-3-642-15549-9_28",
+        "volume-title": "Computer Vision – ECCV 2010",
+        "author": "C-H Kuo",
+        "year": "2010",
+        "unstructured": "Kuo, C.-H., Huang, C., Nevatia, R.: Inter-camera association of multi-target tracks by on-line learned appearance affinity models. In: Daniilidis, K., Maragos, P., Paragios, N. (eds.) ECCV 2010, Part I. LNCS, vol. 6311, pp. 383–396. Springer, Heidelberg (2010)"
+      },
+      {
+        "key": "2_CR7",
+        "unstructured": "Multi-camera Object Tracking Challenge: ECCV Workshop on Visual Surveillance and Re-Identification (2014). http://mct.idealtest.org"
+      },
+      {
+        "issue": "2",
+        "key": "2_CR8",
+        "doi-asserted-by": "publisher",
+        "first-page": "267",
+        "DOI": "10.1109/TPAMI.2007.1174",
+        "volume": "30",
+        "author": "F Fleuret",
+        "year": "2008",
+        "unstructured": "Fleuret, F., Berclaz, J., Lengagne, R., Fua, P.: Multi-camera people tracking with a probabilistic occupancy map. IEEE Trans. Pattern Anal. Mach. Intell. 30(2), 267–282 (2008)",
+        "journal-title": "IEEE Trans. Pattern Anal. Mach. Intell."
+      },
+      {
+        "issue": "9",
+        "key": "2_CR9",
+        "doi-asserted-by": "publisher",
+        "first-page": "1806",
+        "DOI": "10.1109/TPAMI.2011.21",
+        "volume": "33",
+        "author": "J Berclaz",
+        "year": "2011",
+        "unstructured": "Berclaz, J., Fleuret, F., Türetken, E., Fua, P.: Multiple object tracking using k-shortest paths optimization. IEEE Trans. Pattern Anal. Mach. Intell. 33(9), 1806–1819 (2011)",
+        "journal-title": "IEEE Trans. Pattern Anal. Mach. Intell."
+      },
+      {
+        "key": "2_CR10",
+        "unstructured": "Ferryman, J., Shahrokni, A.: An overview of the PETS 2009 challenge (2009)"
+      },
+      {
+        "key": "2_CR11",
+        "doi-asserted-by": "crossref",
+        "unstructured": "D’Orazio, T., Leo, M., Mosca, N., Spagnolo, P., Mazzeo, P.L.: A semi-automatic system for ground truth generation of soccer video sequences. In: Sixth IEEE International Conference on Advanced Video and Signal Based Surveillance, AVSS 2009, pp. 559–564. IEEE (2009)",
+        "DOI": "10.1109/AVSS.2009.69"
+      },
+      {
+        "key": "2_CR12",
+        "unstructured": "De Vleeschouwer, C., Chen, F., Delannay, D., Parisot, C., Chaudy, C., Martrou, E., Cavallaro, A., et al.: Distributed video acquisition and annotation for sport-event summarization. In: NEM summit 2008: Towards Future Media Internet (2008)"
+      },
+      {
+        "key": "2_CR13",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Zhang, S., Staudt, E., Faltemier, T., Roy-Chowdhury, A.: A camera network tracking (CamNeT) dataset and performance baseline. In: 2015 IEEE Winter Conference on Applications of Computer Vision (WACV), pp. 365–372, January 2015",
+        "DOI": "10.1109/WACV.2015.55"
+      },
+      {
+        "key": "2_CR14",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Per, J., Kenk, V.S., Mandeljc, R., Kristan, M., Kovačič, S.: Dana36: a multi-camera image dataset for object identification in surveillance scenarios. In: 2012 IEEE Ninth International Conference on Advanced Video and Signal-Based Surveillance (AVSS), pp. 64–69. IEEE (2012)",
+        "DOI": "10.1109/AVSS.2012.33"
+      },
+      {
+        "key": "2_CR15",
+        "series-title": "Lecture Notes in Computer Science",
+        "doi-asserted-by": "crossref",
+        "first-page": "613",
+        "DOI": "10.1007/978-3-319-16181-5_47",
+        "volume-title": "Computer Vision - ECCV 2014 Workshops",
+        "author": "R Benenson",
+        "year": "2015",
+        "unstructured": "Benenson, R., Omran, M., Hosang, J., Schiele, B.: Ten years of pedestrian detection, what have we learned? In: Agapito, L., Bronstein, M.M., Rother, C. (eds.) ECCV 2014 Workshops. LNCS, vol. 8926, pp. 613–627. Springer, Heidelberg (2015)"
+      },
+      {
+        "key": "2_CR16",
+        "unstructured": "Leal-Taixé, L., Milan, A., Reid, I., Roth, S., Schindler, K.: Motchallenge 2015: towards a benchmark for multi-target tracking. arXiv: 1504.01942 , April 2015"
+      },
+      {
+        "key": "2_CR17",
+        "unstructured": "Bredereck, M., Jiang, X., Korner, M., Denzler, J.: Data association for multi-object Tracking-by-Detection in multi-camera networks. In: 2012 Sixth International Conference on Distributed Smart Cameras (ICDSC), pp. 1–6, October 2012"
+      },
+      {
+        "key": "2_CR18",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Cai, Y., Medioni, G.: Exploring context information for inter-camera multiple target tracking. In: 2014 IEEE Winter Conference on Applications of Computer Vision (WACV), pp. 761–768, March 2014",
+        "DOI": "10.1109/WACV.2014.6836026"
+      },
+      {
+        "issue": "4",
+        "key": "2_CR19",
+        "doi-asserted-by": "publisher",
+        "first-page": "625",
+        "DOI": "10.1109/TMM.2011.2131639",
+        "volume": "13",
+        "author": "KW Chen",
+        "year": "2011",
+        "unstructured": "Chen, K.W., Lai, C.C., Lee, P.J., Chen, C.S., Hung, Y.P.: Adaptive learning for target tracking and true linking discovering across multiple non-overlapping cameras. IEEE Trans. Multimedia 13(4), 625–638 (2011)",
+        "journal-title": "IEEE Trans. Multimedia"
+      },
+      {
+        "issue": "5",
+        "key": "2_CR20",
+        "doi-asserted-by": "publisher",
+        "first-page": "2692",
+        "DOI": "10.1109/JSEN.2015.2392781",
+        "volume": "15",
+        "author": "X Chen",
+        "year": "2015",
+        "unstructured": "Chen, X., An, L., Bhanu, B.: Multitarget tracking in nonoverlapping cameras using a reference set. IEEE Sens. J. 15(5), 2692–2704 (2015)",
+        "journal-title": "IEEE Sens. J."
+      },
+      {
+        "key": "2_CR21",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Chen, X., Huang, K., Tan, T.: Direction-based stochastic matching for pedestrian recognition in non-overlapping cameras. In: 2011 18th IEEE International Conference on Image Processing (ICIP), pp. 2065–2068, September 2011",
+        "DOI": "10.1109/ICIP.2011.6115887"
+      },
+      {
+        "key": "2_CR22",
+        "series-title": "Lecture Notes in Computer Science",
+        "doi-asserted-by": "publisher",
+        "first-page": "372",
+        "DOI": "10.1007/978-3-642-37484-5_31",
+        "volume-title": "Computer Vision - ACCV 2012 Workshops",
+        "author": "S Daliyot",
+        "year": "2013",
+        "unstructured": "Daliyot, S., Netanyahu, N.S.: A framework for inter-camera association of multi-target trajectories by invariant target models. In: Park, J.-I., Kim, J. (eds.) ACCV Workshops 2012, Part II. LNCS, vol. 7729, pp. 372–386. Springer, Heidelberg (2013)"
+      },
+      {
+        "key": "2_CR23",
+        "series-title": "Lecture Notes in Computer Science",
+        "doi-asserted-by": "crossref",
+        "first-page": "330",
+        "DOI": "10.1007/978-3-319-10605-2_22",
+        "volume-title": "Computer Vision – ECCV 2014",
+        "author": "A Das",
+        "year": "2014",
+        "unstructured": "Das, A., Chakraborty, A., Roy-Chowdhury, A.K.: Consistent re-identification in a camera network. In: Fleet, D., Pajdla, T., Schiele, B., Tuytelaars, T. (eds.) ECCV 2014, Part II. LNCS, vol. 8690, pp. 330–345. Springer, Heidelberg (2014)"
+      },
+      {
+        "key": "2_CR24",
+        "series-title": "Lecture Notes in Computer Science",
+        "doi-asserted-by": "publisher",
+        "first-page": "125",
+        "DOI": "10.1007/11744047_10",
+        "volume-title": "Computer Vision – ECCV 2006",
+        "author": "A Gilbert",
+        "year": "2006",
+        "unstructured": "Gilbert, A., Bowden, R.: Tracking objects across cameras by incrementally learning inter-camera colour calibration and patterns of activity. In: Leonardis, A., Bischof, H., Pinz, A. (eds.) ECCV 2006. LNCS, vol. 3952, pp. 125–136. Springer, Heidelberg (2006)"
+      },
+      {
+        "issue": "2",
+        "key": "2_CR25",
+        "doi-asserted-by": "publisher",
+        "first-page": "146",
+        "DOI": "10.1016/j.cviu.2007.01.003",
+        "volume": "109",
+        "author": "O Javed",
+        "year": "2008",
+        "unstructured": "Javed, O., Shafique, K., Rasheed, Z., Shah, M.: Modeling inter-camera space time and appearance relationships for tracking across non-overlapping views. Comput. Vis. Image Underst. 109(2), 146–162 (2008)",
+        "journal-title": "Comput. Vis. Image Underst."
+      },
+      {
+        "key": "2_CR26",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Makris, D., Ellis, T., Black, J.: Bridging the gaps between cameras. In: Proceedings of the 2004 IEEE Computer Society Conference on Computer Vision and Pattern Recognition, CVPR 2004, vol. 2, June 2004",
+        "DOI": "10.1109/CVPR.2004.1315165"
+      },
+      {
+        "key": "2_CR27",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Jiuqing, W., Li, L.: Distributed optimization for global data association in non-overlapping camera networks. In: 2013 Seventh International Conference on Distributed Smart Cameras (ICDSC), pp. 1–7, October 2013",
+        "DOI": "10.1109/ICDSC.2013.6778229"
+      },
+      {
+        "issue": "2",
+        "key": "2_CR28",
+        "doi-asserted-by": "publisher",
+        "first-page": "354",
+        "DOI": "10.1109/TPAMI.2007.70814",
+        "volume": "30",
+        "author": "S Calderara",
+        "year": "2008",
+        "unstructured": "Calderara, S., Cucchiara, R., Prati, A.: Bayesian-competitive consistent labeling for people surveillance. IEEE Trans. Pattern Anal. Mach. Intell. 30(2), 354–360 (2008)",
+        "journal-title": "IEEE Trans. Pattern Anal. Mach. Intell."
+      },
+      {
+        "key": "2_CR29",
+        "doi-asserted-by": "publisher",
+        "first-page": "64",
+        "DOI": "10.1016/j.cviu.2015.01.002",
+        "volume": "134",
+        "author": "S Zhang",
+        "year": "2015",
+        "unstructured": "Zhang, S., Zhu, Y., Roy-Chowdhury, A.: Tracking multiple interacting targets in a camera network. Comput. Vis. Image Underst. 134, 64–73 (2015)",
+        "journal-title": "Comput. Vis. Image Underst."
+      },
+      {
+        "key": "2_CR30",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Ayazoglu, M., Li, B., Dicle, C., Sznaier, M., Camps, O.: Dynamic subspace-based coordinated multicamera tracking. In: 2011 IEEE International Conference on Computer Vision (ICCV), pp. 2462–2469, November 2011",
+        "DOI": "10.1109/ICCV.2011.6126531"
+      },
+      {
+        "key": "2_CR31",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Kamal, A., Farrell, J., Roy-Chowdhury, A.: Information consensus for distributed multi-target tracking. In: 2013 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), pp. 2403–2410, June 2013",
+        "DOI": "10.1109/CVPR.2013.311"
+      },
+      {
+        "key": "2_CR32",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Hamid, R., Kumar, R., Grundmann, M., Kim, K., Essa, I., Hodgins, J.: Player localization using multiple static cameras for sports visualization. In: 2010 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), pp. 731–738, June 2010",
+        "DOI": "10.1109/CVPR.2010.5540142"
+      },
+      {
+        "key": "2_CR33",
+        "series-title": "Lecture Notes in Computer Science",
+        "doi-asserted-by": "publisher",
+        "first-page": "191",
+        "DOI": "10.1007/978-3-319-16199-0_14",
+        "volume-title": "Computer Vision - ECCV 2014 Workshops",
+        "author": "N Martinel",
+        "year": "2015",
+        "unstructured": "Martinel, N., Micheloni, C., Foresti, G.L.: Saliency weighted features for person re-identification. In: Agapito, L., Bronstein, M.M., Rother, C. (eds.) ECCV 2014. LNCS, vol. 8927, pp. 191–208. Springer, Heidelberg (2015). doi: 10.1007/978-3-319-16199-0_14"
+      },
+      {
+        "key": "2_CR34",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Zhao, R., Ouyang, W., Wang, X.: Unsupervised salience learning for person re-identification. In: IEEE Conference on Computer Vision and Pattern Recognition (CVPR) (2013)",
+        "DOI": "10.1109/CVPR.2013.460"
+      },
+      {
+        "key": "2_CR35",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Bedagkar-Gala, A., Shah, S.: Multiple person re-identification using part based spatio-temporal color appearance model. In: 2011 IEEE International Conference on Computer Vision Workshops (ICCV Workshops), pp. 1721–1728, November 2011",
+        "DOI": "10.1109/ICCVW.2011.6130457"
+      },
+      {
+        "issue": "14",
+        "key": "2_CR36",
+        "doi-asserted-by": "publisher",
+        "first-page": "1908",
+        "DOI": "10.1016/j.patrec.2011.09.005",
+        "volume": "33",
+        "author": "A Bedagkar-Gala",
+        "year": "2012",
+        "unstructured": "Bedagkar-Gala, A., Shah, S.K.: Part-based spatio-temporal model for multi-person re-identification. Pattern Recogn. Lett. 33(14), 1908–1915 (2012). Novel Pattern Recognition-based Methods for Re-identification in Biometric Context",
+        "journal-title": "Pattern Recogn. Lett."
+      },
+      {
+        "key": "2_CR37",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Cheng, D., Cristani, M., Stoppa, M., Bazzani, L., Murino, V.: Custom pictorial structures for re-identification. In: Proceedings of the British Machine Vision Conference, pp. 68.1–68.11. BMVA Press (2011). doi: 10.5244/C.25.68",
+        "DOI": "10.5244/C.25.68"
+      },
+      {
+        "key": "2_CR38",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Baltieri, D., Vezzani, R., Cucchiara, R.: Learning articulated body models for people re-identification. In: Proceedings of the 21st ACM International Conference on Multimedia, MM 2013, pp. 557–560. ACM, New York (2013)",
+        "DOI": "10.1145/2502081.2502147"
+      },
+      {
+        "key": "2_CR39",
+        "series-title": "Advances in Computer Vision and Pattern Recognition",
+        "doi-asserted-by": "publisher",
+        "first-page": "139",
+        "DOI": "10.1007/978-1-4471-6296-4_7",
+        "volume-title": "Person Re-Identification",
+        "author": "D Cheng",
+        "year": "2014",
+        "unstructured": "Cheng, D., Cristani, M.: Person re-identification by articulated appearance matching. In: Gong, S., Cristani, M., Yan, S., Loy, C.C. (eds.) Person Re-Identification. Advances in Computer Vision and Pattern Recognition, pp. 139–160. Springer, London (2014)"
+      },
+      {
+        "issue": "3",
+        "key": "2_CR40",
+        "doi-asserted-by": "publisher",
+        "first-page": "345",
+        "DOI": "10.1007/s11263-014-0747-z",
+        "volume": "111",
+        "author": "D Baltieri",
+        "year": "2015",
+        "unstructured": "Baltieri, D., Vezzani, R., Cucchiara, R.: Mapping appearance descriptors on 3d body models for people re-identification. Int. J. Comput. Vis. 111(3), 345–364 (2015)",
+        "journal-title": "Int. J. Comput. Vis."
+      },
+      {
+        "key": "2_CR41",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Brendel, W., Amer, M., Todorovic, S.: Multiobject tracking as maximum weight independent set. In: 2011 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), pp. 1273–1280. IEEE (2011)",
+        "DOI": "10.1109/CVPR.2011.5995395"
+      },
+      {
+        "key": "2_CR42",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Shu, G., Dehghan, A., Oreifej, O., Hand, E., Shah, M.: Part-based multiple-person tracking with partial occlusion handling. In: 2012 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), pp. 1815–1821. IEEE (2012)",
+        "DOI": "10.1109/CVPR.2012.6247879"
+      },
+      {
+        "issue": "2",
+        "key": "2_CR43",
+        "doi-asserted-by": "publisher",
+        "first-page": "247",
+        "DOI": "10.1007/s11263-006-0027-7",
+        "volume": "75",
+        "author": "B Wu",
+        "year": "2007",
+        "unstructured": "Wu, B., Nevatia, R.: Detection and tracking of multiple, partially occluded humans by bayesian combination of edgelet based part detectors. Int. J. Comput. Vis. 75(2), 247–266 (2007)",
+        "journal-title": "Int. J. Comput. Vis."
+      },
+      {
+        "key": "2_CR44",
+        "series-title": "Lecture Notes in Computer Science",
+        "doi-asserted-by": "publisher",
+        "first-page": "100",
+        "DOI": "10.1007/978-3-642-33783-3_8",
+        "volume-title": "Computer Vision – ECCV 2012",
+        "author": "H Izadinia",
+        "year": "2012",
+        "unstructured": "Izadinia, H., Saleemi, I., Li, W., Shah, M.: (MP)$$^{2}$$T: multiple people multiple parts tracker. In: Fitzgibbon, A., Lazebnik, S., Perona, P., Sato, Y., Schmid, C. (eds.) ECCV 2012, Part VI. LNCS, vol. 7577, pp. 100–114. Springer, Heidelberg (2012)"
+      },
+      {
+        "key": "2_CR45",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Pirsiavash, H., Ramanan, D., Fowlkes, C.C.: Globally-optimal greedy algorithms for tracking a variable number of objects. In: 2011 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), pp. 1201–1208. IEEE (2011)",
+        "DOI": "10.1109/CVPR.2011.5995604"
+      },
+      {
+        "key": "2_CR46",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Zhang, L., Li, Y., Nevatia, R.: Global data association for multi-object tracking using network flows. In: IEEE Conference on Computer Vision and Pattern Recognition, CVPR 2008, pp. 1–8. IEEE (2008)",
+        "DOI": "10.1109/CVPR.2008.4587584"
+      },
+      {
+        "key": "2_CR47",
+        "series-title": "Lecture Notes in Computer Science",
+        "doi-asserted-by": "publisher",
+        "first-page": "163",
+        "DOI": "10.1007/978-3-642-37431-9_13",
+        "volume-title": "Computer Vision – ACCV 2012",
+        "author": "AA Butt",
+        "year": "2013",
+        "unstructured": "Butt, A.A., Collins, R.T.: Multiple target tracking using frame triplets. In: Lee, K.M., Matsushita, Y., Rehg, J.M., Hu, Z. (eds.) ACCV 2012, Part III. LNCS, vol. 7726, pp. 163–176. Springer, Heidelberg (2013)"
+      },
+      {
+        "key": "2_CR48",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Chari, V., Lacoste-Julien, S., Laptev, I., Sivic, J.: On pairwise costs for network flow multi-object tracking. In: Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, pp. 5537–5545 (2015)",
+        "DOI": "10.1109/CVPR.2015.7299193"
+      },
+      {
+        "key": "2_CR49",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Collins, R.T.: Multitarget data association with higher-order motion models. In: 2012 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), pp. 1744–1751. IEEE (2012)",
+        "DOI": "10.1109/CVPR.2012.6247870"
+      },
+      {
+        "key": "2_CR50",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Dehghan, A., Assari, S.M., Shah, M.: Gmmcp tracker: globally optimal generalized maximum multi clique problem for multiple object tracking. In: CVPR, vol. 1, p. 2 (2015)",
+        "DOI": "10.1109/CVPR.2015.7299036"
+      },
+      {
+        "key": "2_CR51",
+        "series-title": "Lecture Notes in Computer Science",
+        "doi-asserted-by": "crossref",
+        "first-page": "445",
+        "DOI": "10.1007/978-3-319-16817-3_29",
+        "volume-title": "Computer Vision – ACCV 2014",
+        "author": "R Kumar",
+        "year": "2015",
+        "unstructured": "Kumar, R., Charpiat, G., Thonnat, M.: Multiple object tracking by efficient graph partitioning. In: Cremers, D., Reid, I., Saito, H., Yang, M.-H. (eds.) ACCV 2014. LNCS, vol. 9006, pp. 445–460. Springer, Heidelberg (2015)"
+      },
+      {
+        "issue": "1",
+        "key": "2_CR52",
+        "doi-asserted-by": "publisher",
+        "first-page": "51",
+        "DOI": "10.1109/TPAMI.2005.1",
+        "volume": "27",
+        "author": "K Shafique",
+        "year": "2005",
+        "unstructured": "Shafique, K., Shah, M.: A noniterative greedy algorithm for multiframe point correspondence. IEEE Trans. Pattern Anal. Mach. Intell. 27(1), 51–65 (2005)",
+        "journal-title": "IEEE Trans. Pattern Anal. Mach. Intell."
+      },
+      {
+        "key": "2_CR53",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Tang, S., Andres, B., Andriluka, M., Schiele, B.: Subgraph decomposition for multi-target tracking. In: Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, pp. 5033–5041 (2015)",
+        "DOI": "10.1109/CVPR.2015.7299138"
+      },
+      {
+        "key": "2_CR54",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Wen, L., Li, W., Yan, J., Lei, Z., Yi, D., Li, S.Z.: Multiple target tracking based on undirected hierarchical relation hypergraph. In: 2014 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), pp. 1282–1289. IEEE (2014)",
+        "DOI": "10.1109/CVPR.2014.167"
+      },
+      {
+        "key": "2_CR55",
+        "series-title": "Lecture Notes in Computer Science",
+        "doi-asserted-by": "publisher",
+        "first-page": "343",
+        "DOI": "10.1007/978-3-642-33709-3_25",
+        "volume-title": "Computer Vision – ECCV 2012",
+        "author": "A Roshan Zamir",
+        "year": "2012",
+        "unstructured": "Roshan Zamir, A., Dehghan, A., Shah, M.: GMCP-tracker: global multi-object tracking using generalized minimum clique graphs. In: Fitzgibbon, A., Lazebnik, S., Perona, P., Sato, Y., Schmid, C. (eds.) ECCV 2012, Part II. LNCS, vol. 7573, pp. 343–356. Springer, Heidelberg (2012)"
+      },
+      {
+        "key": "2_CR56",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Yu, S.I., Meng, D., Zuo, W., Hauptmann, A.: The solution path algorithm for identity-aware multi-object tracking. In: Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, pp. 3871–3879 (2016)",
+        "DOI": "10.1109/CVPR.2016.420"
+      },
+      {
+        "key": "2_CR57",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Yao, J., Odobez, J.M.: Multi-layer background subtraction based on color and texture. In: IEEE Conference on Computer Vision and Pattern Recognition, CVPR 2007, pp. 1–8. IEEE (2007)",
+        "DOI": "10.1109/CVPR.2007.383497"
+      },
+      {
+        "issue": "9",
+        "key": "2_CR58",
+        "doi-asserted-by": "publisher",
+        "first-page": "1627",
+        "DOI": "10.1109/TPAMI.2009.167",
+        "volume": "32",
+        "author": "P Felzenszwalb",
+        "year": "2010",
+        "unstructured": "Felzenszwalb, P., Girshick, R., McAllester, D., Ramanan, D.: Object detection with discriminatively trained part-based models. IEEE Trans. Pattern Anal. Mach. Intell. 32(9), 1627–1645 (2010)",
+        "journal-title": "IEEE Trans. Pattern Anal. Mach. Intell."
+      },
+      {
+        "key": "2_CR59",
+        "unstructured": "Bansal, N., Blum, A., Chawla, S.: Correlation clustering. In: Foundations of Computer Science (2002)"
+      },
+      {
+        "issue": "5",
+        "key": "2_CR60",
+        "doi-asserted-by": "crossref",
+        "first-page": "331",
+        "DOI": "10.1016/j.ipl.2008.06.004",
+        "volume": "108",
+        "author": "Jinsong Tan",
+        "year": "2008",
+        "unstructured": "Tan, J.: A note on the inapproximability of correlation clustering (2008)",
+        "journal-title": "Information Processing Letters"
+      },
+      {
+        "key": "2_CR61",
+        "series-title": "Lecture Notes in Computer Science",
+        "doi-asserted-by": "publisher",
+        "first-page": "391",
+        "DOI": "10.1007/978-3-642-33863-2_39",
+        "volume-title": "Computer Vision – ECCV 2012. Workshops and Demonstrations",
+        "author": "C Liu",
+        "year": "2012",
+        "unstructured": "Liu, C., Gong, S., Loy, C.C., Lin, X.: Person re-identification: what features are important? In: Fusiello, A., Murino, V., Cucchiara, R. (eds.) ECCV 2012. LNCS, vol. 7583, pp. 391–401. Springer, Heidelberg (2012). doi: 10.1007/978-3-642-33863-2_39"
+      },
+      {
+        "key": "2_CR62",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Chen, W., Cao, L., Chen, X., Huang, K.: A novel solution for multi-camera object tracking. In: 2014 IEEE International Conference on Image Processing (ICIP), pp. 2329–2333. IEEE (2014)",
+        "DOI": "10.1109/ICIP.2014.7025472"
+      }
+    ],
+    "container-title": [
+      "Lecture Notes in Computer Science",
+      "Computer Vision – ECCV 2016 Workshops"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "http://link.springer.com/content/pdf/10.1007/978-3-319-48881-3_2",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2025,
+          6,
+          11
+        ]
+      ],
+      "date-time": "2025-06-11T23:23:34Z",
+      "timestamp": 1749684214000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "http://link.springer.com/10.1007/978-3-319-48881-3_2"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2016
+        ]
+      ]
+    },
+    "ISBN": [
+      "9783319488806",
+      "9783319488813"
+    ],
+    "references-count": 62,
+    "URL": "https://doi.org/10.1007/978-3-319-48881-3_2",
+    "relation": {
+      "is-part-of": [
+        {
+          "id-type": "doi",
+          "id": "https://doi.org/10.1007/978-3-319-48881-3",
+          "asserted-by": "object"
+        }
+      ]
+    },
+    "ISSN": [
+      "0302-9743",
+      "1611-3349"
+    ],
+    "issn-type": [
+      {
+        "value": "0302-9743",
+        "type": "print"
+      },
+      {
+        "value": "1611-3349",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2016
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "3 November 2016",
+        "order": 1,
+        "name": "first_online",
+        "label": "First Online",
+        "group": {
+          "name": "ChapterHistory",
+          "label": "Chapter History"
+        }
+      },
+      {
+        "value": "ECCV",
+        "order": 1,
+        "name": "conference_acronym",
+        "label": "Conference Acronym",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "European Conference on Computer Vision",
+        "order": 2,
+        "name": "conference_name",
+        "label": "Conference Name",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "Amsterdam",
+        "order": 3,
+        "name": "conference_city",
+        "label": "Conference City",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "The Netherlands",
+        "order": 4,
+        "name": "conference_country",
+        "label": "Conference Country",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "2016",
+        "order": 5,
+        "name": "conference_year",
+        "label": "Conference Year",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "8 October 2016",
+        "order": 7,
+        "name": "conference_start_date",
+        "label": "Conference Start Date",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "16 October 2016",
+        "order": 8,
+        "name": "conference_end_date",
+        "label": "Conference End Date",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "14",
+        "order": 9,
+        "name": "conference_number",
+        "label": "Conference Number",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "eccv2016",
+        "order": 10,
+        "name": "conference_id",
+        "label": "Conference ID",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "http://www.eccv2016.org/",
+        "order": 11,
+        "name": "conference_url",
+        "label": "Conference URL",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "This content has been made available to all.",
+        "name": "free",
+        "label": "Free to read"
+      }
+    ]
+  }
+}

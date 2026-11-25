@@ -1,0 +1,8 @@
+﻿项目,记录
+历史GPU,NVIDIA GeForce RTX 4090，24564 MiB（环境快照）
+Python/系统,3.10.20  / Linux 5.15
+PyTorch / Transformers,2.0.1+cu118 / 4.49.0
+PEFT / CUDA构建,0.19.1 / PyTorch构建依历史环境
+视觉前端,既有YOLO/SAM/CLIP，固定RGB结果复用
+专项模型,Qwen2-VL-2B-Instruct；bf16 LoRA；3种子×240步
+处理范围,CPU对象重建/离线诊断，CUDA专项验证；共享主机

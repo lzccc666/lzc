@@ -1,0 +1,1592 @@
+[
+  {
+    "number": 17,
+    "id": "2205.13542",
+    "title": "BEVFusion: Multi-Task Multi-Sensor Fusion with Unified Bird's-Eye View Representation",
+    "exists": true,
+    "arxiv_year": 2022,
+    "published_year": 2023,
+    "venue": "2023 IEEE International Conference on Robotics and Automation (ICRA)",
+    "doi": "10.1109/ICRA48891.2023.10160968",
+    "status": "published",
+    "evidence_urls": [
+      "https://arxiv.org/abs/2205.13542",
+      "https://par.nsf.gov/servlets/purl/10467175",
+      "https://api.crossref.org/works/10.1109%2FICRA48891.2023.10160968"
+    ],
+    "notes": "已核对arXiv首发记录及正式论文记录；预印本与正式版为同一工作，不重复计数。",
+    "preprint_first_date": "2022/05/26",
+    "checked_date": "2026-11-20",
+    "recent_2022_2026_by_preprint": true,
+    "recent_2022_2026_by_publication": true,
+    "published_metadata_cache": "group_17_32_cache/17_crossref.json",
+    "published_authors": [
+      {
+        "given": "Zhijian",
+        "family": "Liu",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Massachusetts Institute of Technology,Cambridge,MA,USA,02139"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Haotian",
+        "family": "Tang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Massachusetts Institute of Technology,Cambridge,MA,USA,02139"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Alexander",
+        "family": "Amini",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Massachusetts Institute of Technology,Cambridge,MA,USA,02139"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Xinyu",
+        "family": "Yang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Massachusetts Institute of Technology,Cambridge,MA,USA,02139"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Huizi",
+        "family": "Mao",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "OmniML,San Jose,CA,USA,95131"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Daniela L.",
+        "family": "Rus",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Massachusetts Institute of Technology,Cambridge,MA,USA,02139"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Song",
+        "family": "Han",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Massachusetts Institute of Technology,Cambridge,MA,USA,02139"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "published_title": "BEVFusion: Multi-Task Multi-Sensor Fusion with Unified Bird's-Eye View Representation",
+    "published_pages": "2774-2781",
+    "published_date_parts": [
+      [
+        2023,
+        5,
+        29
+      ]
+    ]
+  },
+  {
+    "number": 18,
+    "id": "2203.17270",
+    "title": "BEVFormer: Learning Bird's-Eye-View Representation from Multi-Camera Images via Spatiotemporal Transformers",
+    "exists": true,
+    "arxiv_year": 2022,
+    "published_year": 2022,
+    "venue": "Computer Vision – ECCV 2022",
+    "doi": "10.1007/978-3-031-20077-9_1",
+    "status": "published",
+    "evidence_urls": [
+      "https://arxiv.org/abs/2203.17270",
+      "https://www.ecva.net/papers/eccv_2022/papers_ECCV/html/694_ECCV_2022_paper.php",
+      "https://api.crossref.org/works/10.1007%2F978-3-031-20077-9_1"
+    ],
+    "notes": "已核对arXiv首发记录及正式论文记录；预印本与正式版为同一工作，不重复计数。",
+    "preprint_first_date": "2022/03/31",
+    "checked_date": "2026-11-20",
+    "recent_2022_2026_by_preprint": true,
+    "recent_2022_2026_by_publication": true,
+    "published_metadata_cache": "group_17_32_cache/18_crossref.json",
+    "published_authors": [
+      {
+        "given": "Zhiqi",
+        "family": "Li",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Wenhai",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Hongyang",
+        "family": "Li",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Enze",
+        "family": "Xie",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Chonghao",
+        "family": "Sima",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Tong",
+        "family": "Lu",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Yu",
+        "family": "Qiao",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Jifeng",
+        "family": "Dai",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "published_title": "BEVFormer: Learning Bird’s-Eye-View Representation from Multi-camera Images via Spatiotemporal Transformers",
+    "published_pages": "1-18",
+    "published_date_parts": [
+      [
+        2022
+      ]
+    ]
+  },
+  {
+    "number": 19,
+    "id": "2103.00020",
+    "title": "Learning Transferable Visual Models From Natural Language Supervision",
+    "exists": true,
+    "arxiv_year": 2021,
+    "published_year": 2021,
+    "venue": "Proceedings of the 38th International Conference on Machine Learning, PMLR 139",
+    "doi": null,
+    "status": "published",
+    "evidence_urls": [
+      "https://arxiv.org/abs/2103.00020",
+      "https://proceedings.mlr.press/v139/radford21a.html"
+    ],
+    "notes": "CLIP为ICML 2021正式论文，2022—2026口径不计入近五年；PMLR正式记录可核验。",
+    "preprint_first_date": "2021/02/26",
+    "checked_date": "2026-11-20",
+    "recent_2022_2026_by_preprint": false,
+    "recent_2022_2026_by_publication": false
+  },
+  {
+    "number": 20,
+    "id": "2201.03546",
+    "title": "Language-driven Semantic Segmentation",
+    "exists": true,
+    "arxiv_year": 2022,
+    "published_year": 2022,
+    "venue": "International Conference on Learning Representations (ICLR 2022)",
+    "doi": null,
+    "status": "published",
+    "evidence_urls": [
+      "https://arxiv.org/abs/2201.03546",
+      "https://openreview.net/pdf/9214428c3de4dee047f2ade9ea22c54498592843.pdf"
+    ],
+    "notes": "OpenReview论坛页有浏览器验证；OpenReview论文PDF及作者机构托管PDF明确标注ICLR 2022，arXiv注释亦为ICLR 2022。",
+    "preprint_first_date": "2022/01/10",
+    "checked_date": "2026-11-20",
+    "recent_2022_2026_by_preprint": true,
+    "recent_2022_2026_by_publication": true
+  },
+  {
+    "number": 21,
+    "id": "2304.07193",
+    "title": "DINOv2: Learning Robust Visual Features without Supervision",
+    "exists": true,
+    "arxiv_year": 2023,
+    "published_year": 2024,
+    "venue": "Transactions on Machine Learning Research (TMLR)",
+    "doi": null,
+    "status": "published",
+    "evidence_urls": [
+      "https://arxiv.org/abs/2304.07193",
+      "https://openreview.net/pdf?id=a68SUt6zFt"
+    ],
+    "notes": "arXiv首发2023，正式TMLR论文PDF页眉为01/2024；OpenReview论坛页有浏览器验证，PDF可核验。",
+    "preprint_first_date": "2023/04/14",
+    "checked_date": "2026-11-20",
+    "recent_2022_2026_by_preprint": true,
+    "recent_2022_2026_by_publication": true
+  },
+  {
+    "number": 22,
+    "id": "2112.03857",
+    "title": "Grounded Language-Image Pre-training",
+    "exists": true,
+    "arxiv_year": 2021,
+    "published_year": 2022,
+    "venue": "2022 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+    "doi": "10.1109/CVPR52688.2022.01069",
+    "status": "published",
+    "evidence_urls": [
+      "https://arxiv.org/abs/2112.03857",
+      "https://openaccess.thecvf.com/content/CVPR2022/html/Li_Grounded_Language-Image_Pre-Training_CVPR_2022_paper.html",
+      "https://api.crossref.org/works/10.1109%2FCVPR52688.2022.01069"
+    ],
+    "notes": "预印本首发2021，正式CVPR 2022。CVF页面页码10965—10975，Crossref登记10955—10965；如采用正式版须以出版社登记核对整条元数据，勿与预印本信息混搭。本轮不修改主书目。",
+    "preprint_first_date": "2021/12/07",
+    "checked_date": "2026-11-20",
+    "recent_2022_2026_by_preprint": false,
+    "recent_2022_2026_by_publication": true,
+    "published_metadata_cache": "group_17_32_cache/22_crossref.json",
+    "published_authors": [
+      {
+        "given": "Liunian Harold",
+        "family": "Li",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "UCLA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Pengchuan",
+        "family": "Zhang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Microsoft Research"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Haotian",
+        "family": "Zhang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Washington"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Jianwei",
+        "family": "Yang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Microsoft Research"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Chunyuan",
+        "family": "Li",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Microsoft Research"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Yiwu",
+        "family": "Zhong",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Wisconsin-Madison"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Lijuan",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Microsoft Cloud and AI"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Lu",
+        "family": "Yuan",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Microsoft Cloud and AI"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Lei",
+        "family": "Zhang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Intemational Digital Economy Academy"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Jenq-Neng",
+        "family": "Hwang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Washington"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Kai-Wei",
+        "family": "Chang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "UCLA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Jianfeng",
+        "family": "Gao",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Microsoft Research"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "published_title": "Grounded Language-Image Pre-training",
+    "published_pages": "10955-10965",
+    "published_date_parts": [
+      [
+        2022,
+        6
+      ]
+    ]
+  },
+  {
+    "number": 23,
+    "id": "2201.02605",
+    "title": "Detecting Twenty-thousand Classes using Image-level Supervision",
+    "exists": true,
+    "arxiv_year": 2022,
+    "published_year": 2022,
+    "venue": "Computer Vision – ECCV 2022",
+    "doi": "10.1007/978-3-031-20077-9_21",
+    "status": "published",
+    "evidence_urls": [
+      "https://arxiv.org/abs/2201.02605",
+      "https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136690344.pdf",
+      "https://api.crossref.org/works/10.1007%2F978-3-031-20077-9_21"
+    ],
+    "notes": "已核对arXiv首发记录及正式论文记录；预印本与正式版为同一工作，不重复计数。",
+    "preprint_first_date": "2022/01/07",
+    "checked_date": "2026-11-20",
+    "recent_2022_2026_by_preprint": true,
+    "recent_2022_2026_by_publication": true,
+    "published_metadata_cache": "group_17_32_cache/23_crossref.json",
+    "published_authors": [
+      {
+        "given": "Xingyi",
+        "family": "Zhou",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Rohit",
+        "family": "Girdhar",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Armand",
+        "family": "Joulin",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Philipp",
+        "family": "Krähenbühl",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Ishan",
+        "family": "Misra",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "published_title": "Detecting Twenty-Thousand Classes Using Image-Level Supervision",
+    "published_pages": "350-368",
+    "published_date_parts": [
+      [
+        2022
+      ]
+    ]
+  },
+  {
+    "number": 24,
+    "id": "2303.05499",
+    "title": "Grounding DINO: Marrying DINO with Grounded Pre-Training for Open-Set Object Detection",
+    "exists": true,
+    "arxiv_year": 2023,
+    "published_year": 2024,
+    "venue": "Computer Vision – ECCV 2024",
+    "doi": "10.1007/978-3-031-72970-6_3",
+    "status": "published",
+    "evidence_urls": [
+      "https://arxiv.org/abs/2303.05499",
+      "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/06319.pdf",
+      "https://api.crossref.org/works/10.1007%2F978-3-031-72970-6_3"
+    ],
+    "notes": "预印本首发2023，正式ECCV 2024。正式版作者表含Qing Jiang；引用正式版时须按正式版作者顺序整条核验。",
+    "preprint_first_date": "2023/03/09",
+    "checked_date": "2026-11-20",
+    "recent_2022_2026_by_preprint": true,
+    "recent_2022_2026_by_publication": true,
+    "published_metadata_cache": "group_17_32_cache/24_crossref.json",
+    "published_authors": [
+      {
+        "given": "Shilong",
+        "family": "Liu",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Zhaoyang",
+        "family": "Zeng",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Tianhe",
+        "family": "Ren",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Feng",
+        "family": "Li",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Hao",
+        "family": "Zhang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Jie",
+        "family": "Yang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Qing",
+        "family": "Jiang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Chunyuan",
+        "family": "Li",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Jianwei",
+        "family": "Yang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Hang",
+        "family": "Su",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Jun",
+        "family": "Zhu",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Lei",
+        "family": "Zhang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "published_title": "Grounding DINO: Marrying DINO with Grounded Pre-training for Open-Set Object Detection",
+    "published_pages": "38-55",
+    "published_date_parts": [
+      [
+        2024,
+        11,
+        23
+      ]
+    ]
+  },
+  {
+    "number": 25,
+    "id": "2401.17270",
+    "title": "YOLO-World: Real-Time Open-Vocabulary Object Detection",
+    "exists": true,
+    "arxiv_year": 2024,
+    "published_year": 2024,
+    "venue": "2024 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+    "doi": "10.1109/CVPR52733.2024.01599",
+    "status": "published",
+    "evidence_urls": [
+      "https://arxiv.org/abs/2401.17270",
+      "https://openaccess.thecvf.com/content/CVPR2024/html/Cheng_YOLO-World_Real-Time_Open-Vocabulary_Object_Detection_CVPR_2024_paper.html",
+      "https://api.crossref.org/works/10.1109%2FCVPR52733.2024.01599"
+    ],
+    "notes": "已核对arXiv首发记录及正式论文记录；预印本与正式版为同一工作，不重复计数。",
+    "preprint_first_date": "2024/01/30",
+    "checked_date": "2026-11-20",
+    "recent_2022_2026_by_preprint": true,
+    "recent_2022_2026_by_publication": true,
+    "published_metadata_cache": "group_17_32_cache/25_crossref.json",
+    "published_authors": [
+      {
+        "given": "Tianheng",
+        "family": "Cheng",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "School of EIC, Huazhong University of Science &#x0026; Technology"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Lin",
+        "family": "Song",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Tencent AI Lab"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Yixiao",
+        "family": "Ge",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Tencent AI Lab"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Wenyu",
+        "family": "Liu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of EIC, Huazhong University of Science &#x0026; Technology"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Xinggang",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of EIC, Huazhong University of Science &#x0026; Technology"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Ying",
+        "family": "Shan",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Tencent AI Lab"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "published_title": "YOLO-World: Real-Time Open-Vocabulary Object Detection",
+    "published_pages": "16901-16911",
+    "published_date_parts": [
+      [
+        2024,
+        6,
+        16
+      ]
+    ]
+  },
+  {
+    "number": 26,
+    "id": "2304.02643",
+    "title": "Segment Anything",
+    "exists": true,
+    "arxiv_year": 2023,
+    "published_year": 2023,
+    "venue": "2023 IEEE/CVF International Conference on Computer Vision (ICCV)",
+    "doi": "10.1109/ICCV51070.2023.00371",
+    "status": "published",
+    "evidence_urls": [
+      "https://arxiv.org/abs/2304.02643",
+      "https://openaccess.thecvf.com/content/ICCV2023/html/Kirillov_Segment_Anything_ICCV_2023_paper.html",
+      "https://api.crossref.org/works/10.1109%2FICCV51070.2023.00371"
+    ],
+    "notes": "已核对arXiv首发记录及正式论文记录；预印本与正式版为同一工作，不重复计数。",
+    "preprint_first_date": "2023/04/05",
+    "checked_date": "2026-11-20",
+    "recent_2022_2026_by_preprint": true,
+    "recent_2022_2026_by_publication": true,
+    "crossref_search_match": {
+      "doi": "10.1109/iccv51070.2023.00371",
+      "title": [
+        "Segment Anything"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2023,
+            10,
+            1
+          ]
+        ]
+      },
+      "container-title": [
+        "2023 IEEE/CVF International Conference on Computer Vision (ICCV)"
+      ]
+    }
+  },
+  {
+    "number": 27,
+    "id": "2408.00714",
+    "title": "SAM 2: Segment Anything in Images and Videos",
+    "exists": true,
+    "arxiv_year": 2024,
+    "published_year": 2025,
+    "venue": "International Conference on Learning Representations (ICLR 2025)",
+    "doi": null,
+    "status": "published",
+    "evidence_urls": [
+      "https://arxiv.org/abs/2408.00714",
+      "https://openreview.net/pdf/7c41968163abe4e3700e3e3a15174a9d679fcd52.pdf"
+    ],
+    "notes": "预印本首发2024，OpenReview正式论文PDF明确标注ICLR 2025，非仅投稿记录。",
+    "preprint_first_date": "2024/08/01",
+    "checked_date": "2026-11-20",
+    "recent_2022_2026_by_preprint": true,
+    "recent_2022_2026_by_publication": true
+  },
+  {
+    "number": 28,
+    "id": "2211.15654",
+    "title": "OpenScene: 3D Scene Understanding with Open Vocabularies",
+    "exists": true,
+    "arxiv_year": 2022,
+    "published_year": 2023,
+    "venue": "2023 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+    "doi": "10.1109/CVPR52729.2023.00085",
+    "status": "published",
+    "evidence_urls": [
+      "https://arxiv.org/abs/2211.15654",
+      "https://openaccess.thecvf.com/content/CVPR2023/html/Peng_OpenScene_3D_Scene_Understanding_With_Open_Vocabularies_CVPR_2023_paper.html",
+      "https://api.crossref.org/works/10.1109%2FCVPR52729.2023.00085"
+    ],
+    "notes": "已核对arXiv首发记录及正式论文记录；预印本与正式版为同一工作，不重复计数。",
+    "preprint_first_date": "2022/11/28",
+    "checked_date": "2026-11-20",
+    "recent_2022_2026_by_preprint": true,
+    "recent_2022_2026_by_publication": true,
+    "crossref_search_match": {
+      "doi": "10.1109/cvpr52729.2023.00085",
+      "title": [
+        "OpenScene: 3D Scene Understanding with Open Vocabularies"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2023,
+            6
+          ]
+        ]
+      },
+      "container-title": [
+        "2023 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)"
+      ]
+    }
+  },
+  {
+    "number": 29,
+    "id": "2302.07241",
+    "title": "ConceptFusion: Open-set Multimodal 3D Mapping",
+    "exists": true,
+    "arxiv_year": 2023,
+    "published_year": 2023,
+    "venue": "Robotics: Science and Systems XIX",
+    "doi": "10.15607/RSS.2023.XIX.066",
+    "status": "published",
+    "evidence_urls": [
+      "https://arxiv.org/abs/2302.07241",
+      "https://www.roboticsproceedings.org/rss19/p066.html",
+      "https://api.crossref.org/works/10.15607%2FRSS.2023.XIX.066"
+    ],
+    "notes": "ConceptFusion为RSS 2023独立论文，并非用户排除的ConceptGraphs。RSS正式作者顺序将Ganesh Iyer、Soroush Saryazdi列在Tao Chen之前，与当前arXiv顺序不同；应按所引版本保留整套元数据。",
+    "preprint_first_date": "2023/02/14",
+    "checked_date": "2026-11-20",
+    "recent_2022_2026_by_preprint": true,
+    "recent_2022_2026_by_publication": true,
+    "published_metadata_cache": "group_17_32_cache/29_crossref.json",
+    "published_authors": [
+      {
+        "given": "Krishna",
+        "family": "Jatavallabhula",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Alihusein",
+        "family": "Kuwajerwala",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Qiao",
+        "family": "Gu",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Mohd",
+        "family": "Omama",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Ganesh",
+        "family": "Iyer",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Soroush",
+        "family": "Saryazdi",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Tao",
+        "family": "Chen",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Alaa",
+        "family": "Maalouf",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Shuang",
+        "family": "Li",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Nikhil",
+        "family": "Keetha",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Ayush",
+        "family": "Tewari",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Joshua",
+        "family": "Tenenbaum",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Celso",
+        "family": "Melo",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Madhava",
+        "family": "Krishna",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Liam",
+        "family": "Paull",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Florian",
+        "family": "Shkurti",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Antonio",
+        "family": "Torralba",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "published_title": "ConceptFusion: Open-set multimodal 3D mapping",
+    "published_pages": null,
+    "published_date_parts": [
+      [
+        2023,
+        7,
+        10
+      ]
+    ]
+  },
+  {
+    "number": 30,
+    "id": "2303.09553",
+    "title": "LERF: Language Embedded Radiance Fields",
+    "exists": true,
+    "arxiv_year": 2023,
+    "published_year": 2023,
+    "venue": "2023 IEEE/CVF International Conference on Computer Vision (ICCV)",
+    "doi": "10.1109/ICCV51070.2023.01807",
+    "status": "published",
+    "evidence_urls": [
+      "https://arxiv.org/abs/2303.09553",
+      "https://openaccess.thecvf.com/content/ICCV2023/html/Kerr_LERF_Language_Embedded_Radiance_Fields_ICCV_2023_paper.html",
+      "https://api.crossref.org/works/10.1109%2FICCV51070.2023.01807"
+    ],
+    "notes": "已核对arXiv首发记录及正式论文记录；预印本与正式版为同一工作，不重复计数。",
+    "preprint_first_date": "2023/03/16",
+    "checked_date": "2026-11-20",
+    "recent_2022_2026_by_preprint": true,
+    "recent_2022_2026_by_publication": true,
+    "crossref_search_match": {
+      "doi": "10.1109/iccv51070.2023.01807",
+      "title": [
+        "LERF: Language Embedded Radiance Fields"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2023,
+            10,
+            1
+          ]
+        ]
+      },
+      "container-title": [
+        "2023 IEEE/CVF International Conference on Computer Vision (ICCV)"
+      ]
+    }
+  },
+  {
+    "number": 31,
+    "id": "2306.13631",
+    "title": "OpenMask3D: Open-Vocabulary 3D Instance Segmentation",
+    "exists": true,
+    "arxiv_year": 2023,
+    "published_year": 2023,
+    "venue": "Advances in Neural Information Processing Systems 36 (NeurIPS 2023)",
+    "doi": "10.52202/075280-2989",
+    "status": "published",
+    "evidence_urls": [
+      "https://arxiv.org/abs/2306.13631",
+      "https://proceedings.neurips.cc/paper_files/paper/2023/hash/d77b5482e38339a8068791d939126be2-Abstract-Conference.html",
+      "https://api.crossref.org/works/10.52202%2F075280-2989"
+    ],
+    "notes": "已核对arXiv首发记录及正式论文记录；预印本与正式版为同一工作，不重复计数。",
+    "preprint_first_date": "2023/06/23",
+    "checked_date": "2026-11-20",
+    "recent_2022_2026_by_preprint": true,
+    "recent_2022_2026_by_publication": true,
+    "published_metadata_cache": "group_17_32_cache/31_crossref.json",
+    "published_authors": [
+      {
+        "given": "Ayca",
+        "family": "Takmaz",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Elisabetta",
+        "family": "Fedele",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Robert",
+        "family": "Sumner",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Marc",
+        "family": "Pollefeys",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Federico",
+        "family": "Tombari",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Francis",
+        "family": "Engelmann",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "published_title": "OpenMask3D: Open-Vocabulary 3D Instance Segmentation",
+    "published_pages": "68367-68390",
+    "published_date_parts": [
+      [
+        2023
+      ]
+    ]
+  },
+  {
+    "number": 32,
+    "id": "2310.03923",
+    "title": "Open-Fusion: Real-time Open-Vocabulary 3D Mapping and Queryable Scene Representation",
+    "exists": true,
+    "arxiv_year": 2023,
+    "published_year": 2024,
+    "venue": "2024 IEEE International Conference on Robotics and Automation (ICRA)",
+    "doi": "10.1109/ICRA57147.2024.10610193",
+    "status": "published",
+    "evidence_urls": [
+      "https://arxiv.org/abs/2310.03923",
+      "https://ieeexplore.ieee.org/abstract/document/10610193/figures",
+      "https://api.crossref.org/works/10.1109%2FICRA57147.2024.10610193"
+    ],
+    "notes": "已核对arXiv首发记录及正式论文记录；预印本与正式版为同一工作，不重复计数。",
+    "preprint_first_date": "2023/10/05",
+    "checked_date": "2026-11-20",
+    "recent_2022_2026_by_preprint": true,
+    "recent_2022_2026_by_publication": true,
+    "published_metadata_cache": "group_17_32_cache/32_crossref.json",
+    "published_authors": [
+      {
+        "given": "Kashu",
+        "family": "Yamazaki",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "University of Arkansas,AICV Lab,Department of EECS,USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Taisei",
+        "family": "Hanyu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Arkansas,AICV Lab,Department of EECS,USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Khoa",
+        "family": "Vo",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Arkansas,AICV Lab,Department of EECS,USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Thang",
+        "family": "Pham",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Arkansas,AICV Lab,Department of EECS,USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Minh",
+        "family": "Tran",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Arkansas,AICV Lab,Department of EECS,USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Gianfranco",
+        "family": "Doretto",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "West Virginia University,Department of CSCE,USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Anh",
+        "family": "Nguyen",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Liverpool,Department of CS,UK"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Ngan",
+        "family": "Le",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Arkansas,AICV Lab,Department of EECS,USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "published_title": "Open-Fusion: Real-time Open-Vocabulary 3D Mapping and Queryable Scene Representation",
+    "published_pages": "9411-9417",
+    "published_date_parts": [
+      [
+        2024,
+        5,
+        13
+      ]
+    ]
+  }
+]

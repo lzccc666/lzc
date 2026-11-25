@@ -1,0 +1,181 @@
+{
+  "source_run": "causal_retrieval_full_001",
+  "source_sha256": "694d3008b45e75fde9be23efcce24bea0768886c283e0884ed4f0b6fb626f68f",
+  "release_sha256": "ab895fd3282e5af07ba7601e309ae7de45ba0fe099c94cc2cf2e112e711bd8c7",
+  "completed_report_sha256": "685c4cfa1cab9bc8fd85468520f284785a7dbee71c1e2b0119e207b3f668bc1c",
+  "statistics_source_sha256": "dd5ea18b586a9a7f7f40bed98ba48f55398af19385d4eb2f0f31dfdb8f0c5689",
+  "scenes": 38,
+  "logs": 11,
+  "paired_queries": 1115,
+  "methods": {
+    "category_nearest_current_detection": {
+      "positive_selection": {
+        "estimate": 0.24010914051841747,
+        "numerator": 176,
+        "denominator": 733,
+        "ci95": [
+          0.17402024446142095,
+          0.3159889960351088
+        ],
+        "valid_resamples": 4000
+      },
+      "no_match_false_selection": {
+        "estimate": 0.34293193717277487,
+        "numerator": 131,
+        "denominator": 382,
+        "ci95": [
+          0.22900763358778625,
+          0.45625151699029126
+        ],
+        "valid_resamples": 4000
+      }
+    },
+    "clip_current_crop": {
+      "positive_selection": {
+        "estimate": 0.16916780354706684,
+        "numerator": 124,
+        "denominator": 733,
+        "ci95": [
+          0.13190844139493893,
+          0.21937133270066786
+        ],
+        "valid_resamples": 4000
+      },
+      "no_match_false_selection": {
+        "estimate": 0.7198952879581152,
+        "numerator": 275,
+        "denominator": 382,
+        "ci95": [
+          0.6188868677696672,
+          0.8138929063360881
+        ],
+        "valid_resamples": 4000
+      }
+    },
+    "existing_object_joint_rule": {
+      "positive_selection": {
+        "estimate": 0.058663028649386086,
+        "numerator": 43,
+        "denominator": 733,
+        "ci95": [
+          0.014651211361737677,
+          0.12088074167720186
+        ],
+        "valid_resamples": 4000
+      },
+      "no_match_false_selection": {
+        "estimate": 0.020942408376963352,
+        "numerator": 8,
+        "denominator": 382,
+        "ci95": [
+          0.0039678618482966305,
+          0.04289566356099417
+        ],
+        "valid_resamples": 4000
+      }
+    },
+    "vlmaps_style_sparse_clip_grid": {
+      "positive_selection": {
+        "estimate": 0.14051841746248295,
+        "numerator": 103,
+        "denominator": 733,
+        "ci95": [
+          0.10916002126528442,
+          0.1819892335952648
+        ],
+        "valid_resamples": 4000
+      },
+      "no_match_false_selection": {
+        "estimate": 0.7801047120418848,
+        "numerator": 298,
+        "denominator": 382,
+        "ci95": [
+          0.7161858868813711,
+          0.8409144010195413
+        ],
+        "valid_resamples": 4000
+      }
+    }
+  },
+  "paired_differences": [
+    {
+      "method": "category_nearest_current_detection",
+      "baseline": "existing_object_joint_rule",
+      "metric": "positive_selection",
+      "difference": 0.1814461118690314,
+      "ci95": [
+        0.1351808047215326,
+        0.22877092300334775
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "category_nearest_current_detection",
+      "baseline": "existing_object_joint_rule",
+      "metric": "no_match_false_selection",
+      "difference": 0.3219895287958115,
+      "ci95": [
+        0.2162140366172624,
+        0.4268047925071462
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "clip_current_crop",
+      "baseline": "existing_object_joint_rule",
+      "metric": "positive_selection",
+      "difference": 0.11050477489768076,
+      "ci95": [
+        0.07242098947110248,
+        0.15497102997345766
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "clip_current_crop",
+      "baseline": "existing_object_joint_rule",
+      "metric": "no_match_false_selection",
+      "difference": 0.6989528795811518,
+      "ci95": [
+        0.6035918424952368,
+        0.7938987427031882
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "vlmaps_style_sparse_clip_grid",
+      "baseline": "existing_object_joint_rule",
+      "metric": "positive_selection",
+      "difference": 0.08185538881309687,
+      "ci95": [
+        0.015567463368789771,
+        0.14439669138824887
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "vlmaps_style_sparse_clip_grid",
+      "baseline": "existing_object_joint_rule",
+      "metric": "no_match_false_selection",
+      "difference": 0.7591623036649214,
+      "ci95": [
+        0.6992014625480761,
+        0.822983239804839
+      ],
+      "valid_resamples": 4000
+    }
+  ],
+  "bootstrap": {
+    "unit": "采集log",
+    "repetitions": 4000,
+    "seed": 17,
+    "paired": true
+  },
+  "denominators": "正查询733及无匹配382；未知关联/目标未入候选保留为正任务失败；不以帧或调用数为独立样本",
+  "association_limits": "当前检测/网格为类别及3m中心关联(次近差<0.5m为unknown)，对象图为原独立一对一关联；口径不同，不将点估计差全归因于检索模块",
+  "adaptation": "VLMaps式稀疏crop CLIP二维网格；不等同完整VLMaps复现",
+  "independent_test": false,
+  "arrival_evaluated": false,
+  "stage12_complete": false,
+  "goal_complete": false
+}

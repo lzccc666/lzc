@@ -1,0 +1,115 @@
+{
+  "created_utc": "2026-11-25T07:02:55.710687+00:00",
+  "passed": true,
+  "v1_v2_revision": {
+    "policies_identical": true,
+    "method_inputs_identical": {
+      "method_frames.jsonl": true,
+      "method_queries.jsonl": true
+    },
+    "v1_sources_unchanged": true,
+    "v1_all1508_predictions_exact": true,
+    "v1_GT_evaluation_not_run": true,
+    "reason": "Only the ledger interpretation of unresolved earlier sparse-to-dense competition was corrected before any v1 GT evaluation. All competing lineage remains unknown; source/prediction/threshold semantics unchanged."
+  },
+  "paired_changes": {
+    "changed_tasks": 14,
+    "previously_rejected": 14,
+    "positive_gained_correct": 12,
+    "positive_lost_correct": 0,
+    "new_positive_wrong": 2,
+    "negative_changed": 0
+  },
+  "gain_scene_count": 7,
+  "gain_log_count": 5,
+  "gain_scenes": [
+    "scene-0013",
+    "scene-0016",
+    "scene-0019",
+    "scene-0030",
+    "scene-0039",
+    "scene-0042",
+    "scene-0097"
+  ],
+  "gain_logs": [
+    "53cf9c55dd8644bea67b9f009fc1ee38",
+    "783683d957054175bda1b326453a13f4",
+    "bc41a49366734ebf978d6a71981537dc",
+    "d31dc715d1c34b99bd5afb0e3aea26ed",
+    "d7fd2bb9696d43af901326664e42340b"
+  ],
+  "methods": {
+    "R1_original_rule": {
+      "tasks": 1115,
+      "positive": 733,
+      "negative": 382,
+      "positive_selected_correct": 81,
+      "positive_raw_covered": 370,
+      "positive_candidate_covered": 91,
+      "negative_false_selection": 19,
+      "rejected": 959,
+      "position_only_selected": 0,
+      "vehicle_safety_authorized": 0
+    },
+    "R1_multiframe_position_rule": {
+      "tasks": 1115,
+      "positive": 733,
+      "negative": 382,
+      "positive_selected_correct": 93,
+      "positive_raw_covered": 370,
+      "positive_candidate_covered": 104,
+      "negative_false_selection": 19,
+      "rejected": 945,
+      "position_only_selected": 14,
+      "vehicle_safety_authorized": 0
+    }
+  },
+  "raw_pixel_audit": {
+    "passed": true,
+    "confirmed_state_frames": 178,
+    "unique_real_measurements": 340,
+    "frames": 284,
+    "current_point_histogram": {
+      "1": 113,
+      "2": 132,
+      "3": 65,
+      "4": 30
+    }
+  },
+  "protection": {
+    "checked": 153,
+    "unchanged": true,
+    "changed": []
+  },
+  "storage": {
+    "measured_before_this_final_report": true,
+    "audit_bytes": 1318503,
+    "shared_new_bytes": 37356193,
+    "disk_free_bytes": 30946492416
+  },
+  "audit_source_sha256": {
+    "/root/autodl-tmp/lizichong/conceptgraph/completion/navcandidate_independent_20261125.py": "bb4939271173fa7daa8f19b8825b8e85c7e8072c3b0b08732c1627ea00abd303",
+    "/root/autodl-tmp/lizichong/conceptgraph/completion/navcandidate_results_audit_20261125.py": "b6ac64c3ff46ec44687816882c4408ff77fa2de1bf07ee259011ed7905b611d6",
+    "/root/autodl-tmp/lizichong/conceptgraph/completion/navcandidate_pixels_audit_20261125.py": "4a80b06b80cd73fb3594818b884b735e40dac62ef61103e19f72e02ee1921f4d",
+    "/root/autodl-tmp/lizichong/scripts/navcandidate_independent_20261125.py": "3d968593d713f5850163c4b7eff2b2ddff44e3bc523084e2e48d34814767dbce",
+    "/root/autodl-tmp/lizichong/scripts/navcandidate_results_audit_20261125.py": "3ae43341132725a3b2dfb206dc3886c9d275e0794b83ae1fb021633f5b14e73a",
+    "/root/autodl-tmp/lizichong/scripts/navcandidate_pixels_audit_20261125.py": "05a9c709bfab314e39710d9bcd967ed49ef0d89af1d454a74a76a30cbd01b93f"
+  },
+  "report_sha256": {
+    "/root/autodl-tmp/lizichong/outputs/reports/navcandidate_20261125/independent/baseline_and_git_sync_v1.json": "a8bb47d3023dd9313db1cb7ce0cca4ca0b5885dd0f6d2559017989831069e908",
+    "/root/autodl-tmp/lizichong/outputs/reports/navcandidate_20261125/independent/independent_results_v2.json": "ef1192b78665ea776a93074d9b641acd5cfe420e21c4365e635c647bee4d7b69",
+    "/root/autodl-tmp/lizichong/outputs/reports/navcandidate_20261125/independent/qualified_pixels_v2.json": "64a10ec29f7a097e0905ede137ce62c250d45cc88a8d6078d1824a3b7f94d7b7"
+  },
+  "limits": [
+    "All38 scenes are previously used validation/debug scenes; improvements across scenes/logs are descriptive, not unseen-test evidence.",
+    "Map geometry/identity predictions were exactly unchanged. This is a semantic position-candidate policy improvement, not mapping recall or navigation/arrival success.",
+    "All340 confirmed-history real observations contain only1-4 current depth pixels; no cumulative point count is passed off as current five-point support.",
+    "Covariance remains heuristic; shape is not inferred and no vehicle-safety authorization is granted. Negative false selections19/382 and2 added wrong positive-task choices are retained.",
+    "No default, original model weight, protected source, paper or old failure result was modified. No GPU/model/training/planner call was made by this audit."
+  ],
+  "deadline_utc": "2026-11-25T07:23:55Z",
+  "GPU_calls": 0,
+  "model_calls": 0,
+  "training_calls": 0,
+  "planner_calls": 0
+}

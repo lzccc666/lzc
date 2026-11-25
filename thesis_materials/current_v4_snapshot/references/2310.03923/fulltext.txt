@@ -1,0 +1,752 @@
+Open-Fusion: Real-time Open-Vocabulary 3D Mapping and Queryable
+Scene Representation
+Kashu Yamazaki1, Taisei Hanyu 1, Khoa V o1, Thang Pham 1, Minh Tran 1,
+Gianfranco Doretto 2, Anh Nguyen 3, Ngan Le 1
+Abstract— Precise 3D environmental mapping is pivotal in
+robotics. Existing methods often rely on predefined concepts
+during training or are time-intensive when generating semantic
+maps. This paper presents Open-Fusion, a groundbreaking
+approach for real-time open-vocabulary 3D mapping and
+queryable scene representation using RGB-D data. Open-
+Fusion harnesses the power of a pre-trained vision-language
+foundation model (VLFM) for open-set semantic comprehen-
+sion and employs the Truncated Signed Distance Function
+(TSDF) for swift 3D scene reconstruction. By leveraging the
+VLFM, we extract region-based embeddings and their associ-
+ated confidence maps. These are then integrated with 3D knowl-
+edge from TSDF using an enhanced Hungarian-based feature-
+matching mechanism. Notably, Open-Fusion delivers outstand-
+ing annotation-free 3D segmentation for open-vocabulary with-
+out necessitating additional 3D training. Benchmark tests on
+the ScanNet dataset against leading zero-shot methods highlight
+Open-Fusion’s superiority. Furthermore, it seamlessly combines
+the strengths of region-based VLFM and TSDF, facilitating real-
+time 3D scene comprehension that includes object concepts and
+open-world semantics. We encourage the readers to view the
+demos on our project page: https://uark-aicv.github.
+io/OpenFusion
+I. INTRODUCTION
+Real-time 3D scene understanding, crucial in computer
+vision, involves discerning object semantics, locations, and
+geometric attributes from RGB-D data in unstructured en-
+vironments [1]. Despite its diverse applications in virtual
+reality, robotics, and augmented reality, traditional training
+methods face significant challenges [2]. These include the
+need for extensive human annotations, limited closed-set
+semantic information, and the demand for real-time perfor-
+mance in applications like robotics and augmented reality.
+In recent years, the convergence of language and robotics
+has garnered significant attention, driven by the promise it
+holds in enabling robots to interpret and act upon straight-
+forward natural language commands. This benefit from the
+emergence of large-scale vision-language foundation models
+(VLFMs) such as CLIP [3], ALIGN [4], BLIP [5], GLIP
+[6], RegionCLIP [7], etc. Those models are learned in
+unsupervised manner using massive image-text pairs from
+the internet and have showcased remarkable capabilities in
+zero-shot learning and open-vocab reasoning. However, inte-
+grating VLFMs into robotics requires addressing scalability
+and real-time processing concerns. Scalability is essential to
+avoid exponential data growth in large environments, while
+1AICV Lab, Department of EECS, University of Arkansas, USA.
+kyamazak@uark.edu
+2 Department of CSCE, West Virginia University, USA.
+3 Department of CS, University of Liverpool, UK.
+real-time capability is vital for instant decision-making.
+Achieving these goals necessitates efficient data extraction
+and integration without undue delays.
+Despite the impressive qualities exhibited by these
+VLFMs, there remains a significant untapped potential for
+their integration into robotic applications, particularly in the
+context of 3D mapping and understanding. The primary
+bottleneck in leveraging VLFMs for robotics stems from
+the fact that most foundation models consume images and
+produce only a single vector encoding of the entire image
+within an embedding space. This approach falls short of
+meeting the stringent demands of robotic perception systems,
+which require precise reasoning at point-level or object-level
+granularity across a diverse spectrum of concepts. This is
+crucial for tasks involving interaction with the external 3D
+environment, such as navigation and manipulation. More-
+over, it is essential to acknowledge that applying VLFMs at
+the point-level can be computationally intensive and time-
+consuming, rendering it unsuitable for meeting the real-time
+demands of real-world applications. Therefore, to fully har-
+ness the potential of VLFMs in robotics, there is a pressing
+need to develop more efficient and effective techniques that
+enable these models to operate in real-time while delivering
+the required level of precision for tasks in complex 3D
+environments.
+In response to the aforementioned challenges, we present
+Open-Fusion, a queryable semantic representation rooted
+in VLFMs. Open-Fusion facilitates real-time 3D scene re-
+construction, incorporating semantics, through the use of
+the Truncated Signed Distance Function (TSDF). Our work
+demonstrates that Open-Fusion excels in the efficient zero-
+shot reconstruction and understanding of 3D scenes, offering
+queryable scene representations for enhanced understanding
+and interaction. To summarize, we make the following contri-
+butions: 1) Real-time 3D Scene Reconstruction : We extend
+TSDF to achieve effective real-time 3D scene reconstruction.
+2) Semantic-aware Region-based Feature Matching : We
+extend Hungarian matching to seamlessly match features
+from the VLFM into the 3D scene representation, enabling
+incremental semantic reconstruction. 3) Embedding Dictio-
+nary for Efficiency: To reduce memory consumption during
+scene reconstruction and facilitate open-vocab scene queries,
+we implement an embedding dictionary. 4) Open-Fusion :
+As a result, we propose Open-Fusion, a real-time 3D map
+reconstruction and scene representation with open-vocab
+query capabilities. This framework promises to advance the
+field of real-time 3D scene understanding for robotics.
+arXiv:2310.03923v1  [cs.CV]  5 Oct 2023
+TABLE I
+HIGH -LEVEL COMPARISON BETWEEN OUR OPEN -F USION AND EXISTING SOTA QUERYABLE SCENE REPRESENTATIONS . P DENOTES THE NUMBER OF
+POINTS IN A MAP , M IS THE NUMBER OF OBJECTS IN THE SCENE .
+Map Method Representation Foundation Model Feature Level Real-time 1 Scene-specific Sem-Query 2
+2D
+CoW [8] point CLIP [3] + GradCAM [9] point - ✗ O(P )
+NLMap [10] point ViLD [11] + CLIP [3] bbox - ✗ O(P )
+VLMap [12] point LSeg [13] point ✗ ✗ O(P )
+3D
+CLIP-Fields [14] NeRF Detic [15] + CLIP [3] bbox ✗ ✓ -
+LERF [16] NeRF CLIP [3] image patch ✗ ✓ -
+SemAbs[17] occupancy CLIP [3] + GradCAM [9] point ✗ ✗ O(P )
+ConceptFusion [18] point SAM [19] + CLIP [3] bbox ✗ ✗ O(P )
+Open-Fusion TSDF SEEM [20] region ✓ ✗ O(M )
+II. RELATED WORKS
+Vision-Language Foundation Models (VLFMs).
+VLFMs have brought about a revolution in the field
+of perception by enabling open-set inference using
+natural language. These models, renowned for their robust
+generalization capabilities, owe their success to the extensive
+datasets and model parameters that drive them. VLFMs
+can be broadly categorized into three groups based on the
+level of resolution in vision-language alignment as follows:
+(i) Image-Level Aligned Models (ILAMs) (e.g. UniCL
+[21], CLIP [3], ALIGN [4], BLIP [5], and BLIPv2 [22].);
+(ii) Pixel-Level Aligned Models (PLAMs) (e.g. LSeg[13]
+or MaskCLIP [23]); (iii) Region-Level Aligned Models
+(RLAMs) (e.g. GLIP [6], GLIPv2 [24], RegionCLIP [7],
+ODISE [25], SEEM [20], HIPIE [26], Semantic SAM
+[27], etc). More specifically, ILAMs generate a single
+vector representation for the entire image by establishing
+connections between images and language descriptions.
+PLAMs and RLAMs, on the other hand, produce vector
+representations for pixels and regions within an image
+incorporation with language descriptions, respectively.
+While pixel-level representations offer fine semantics, they
+come at the cost of significant time consumption, rendering
+them unsuitable for real-world robotics applications where
+real-time processing is a necessity. Conversely, image-level
+representations, while efficient in terms of processing speed,
+provide coarser semantics, falling short in scenarios requir-
+ing fine-grained semantic comprehension, such as object-
+level robotics tasks like scene understanding, navigation,
+etc. Given this trade-off between semantic richness and
+computational efficiency, we have opted to leverage SEEM,
+a region-level VLFM with masks. SEEM strikes a balance
+between the demand for nuanced semantic understanding
+and the imperative of time-efficient processing, all while
+maintaining scalability.
+Queryable scene representation. To provide a compre-
+hensive overview of the existing scene representation, we
+classify prior works into three distinct categories as follows:
+2D Mapping : CoW [8] and NLMap [10] are notable exam-
+ples, harnessing the open-set features derived from CLIP to
+construct 2D map for exploration. CoW employs Grad-CAM
+[9] to extract spatial knowledge from CLIP whereas NLMap
+1Real-time denotes the real-time requirement for 3D scene reconstruc-
+tion.
+2Query denotes the time for open-vocab semantic query.
+integrates ViLD [11] to crop objects before applying CLIP.
+VLMaps [12] stands out by utilizing pixel-aligned features
+from LSeg [13] to enable the creation of bird’s-eye view 2D
+maps, specifically designed for efficient landmark querying.
+NeRF-based 3D Scene Reconstruction : CLIP-Fields [14]
+trains a NeRF-inspired implicit representation network that
+maps spatial coordinates (x, y, z) to vectors enriched with
+semantic information through MLPs. Remarkably, this ap-
+proach is scene-specific, with direct supervision from seman-
+tic vectors obtained from CLIP or other models like Sentence
+BERT [28]. LERF [16], while also drawing inspiration from
+CLIP, focuses primarily on object localization. It trains a
+neural field through knowledge distillation from multi-scale
+CLIP features and DINO. However, it is worth noting that
+LERF may struggle with capturing precise object boundaries
+due to its primary emphasis on object localization.
+Non-NeRF-based 3D Scene Reconstruction : SemAbs [17]
+proposed a method to incorporate semantics from CLIP
+with GradCAM and the 3D completion module to produce
+semantic-aware occupancy. While it showcases promising
+results in 3D scene understanding, it cannot run in real-
+time. ConceptFusion [18] introduces a unique paradigm by
+employing off-the-shelf foundation models to construct 3D
+maps with open-set features. This approach exhibits great
+potential for open-vocab 3D scene understanding, although
+it remains a point-based approach and may not meet the
+requirement of real-time applications.
+While NeRF-based methods excel in achieving photo-
+realistic scene reconstruction, they are not without their
+limitations. Notably, they require retraining for each new
+scene and are constrained in the volume they can ren-
+der. As a result, they tend to be customized for specific
+scenes, which limits their applicability to real-world scenar-
+ios. Conversely, non-NeRF-based 3D scene reconstruction
+methods have the potential to capture more generalizable
+representations as they might not require retraining for each
+new scene. However, previous works focus on the offline
+generation of the queryable map mainly due to the time-
+consuming computational requirements posed by their point-
+based approach. This drawback makes them less suitable for
+real-time robotics applications. To address this challenge , we
+introduce Open-Fusion, which optimizes non-NeRF-based
+methods for real-time processing, resulting in a real-time
+open-vocab 3D scene representation.
+Feature Matching
+Feature Update
+Feature Extraction
+Feature Rendering
+Open-vocab Scene Query
+RGB
+Depth
+"Red Pillow"
+Pose
+Semantic TSDF V olume  
+Rendered Confidence Map
+Fature 
+Extraction 
+ 
+Temporal Feature Matching
+Feature Rendering
+Region Confidence Map
+Semantic Embedding Vectors
+Embedding Dict   
+Real-time Semantic TSDF 3D Scene Reconstruction Open-Vocabulary Query
+and Scene Understanding
+current
+view
+frustum 
+Feature Update
+Inverse Rendering
+TSDF Integration
+Open-V ocab query 
+& surface extraction
+semantic
+switch
+Fig. 1. The overall pipeline of Open-Fusion, which contains two modules. Real-time Semantic TSDF 3D Scene Reconstruction Module : This module
+takes in a stream of RGB-D images ( It, Dt) and the corresponding camera pose ( At). It incrementally reconstructs the 3D scene, representing it as a
+semantic TSDF volume Vt at time t. Open-V ocabulary Query and Scene Understanding Module : In the second module, Open-Fusion accepts open-vocab
+queries as inputs and provides corresponding scene segmentations in response, which can serve as an eye for language base robot commanding.
+III. METHODOLOGY
+Problem Setup
+Consider a sequence of T RGB-D observations ob-
+tained from an environment, which can be represented as
+{(It, Dt, At)}Tt=0. Here, It ∈ RH×W ×3 represents an RGB
+frame, Dt ∈ RH×W indicates a depth frame, and At =
+[Rt|tt] ∈ R3×4 denotes the associated camera pose with
+rotation R ∈ R3×3 and translation t ∈ R3×1. Additionally,
+we have the camera’s intrinsic parameters represented as
+K ∈ R3×3. Our primary objective is to construct a language-
+queryable 3D map denoted as M in real-time. In this context,
+we define a queryable map as a 2D/3D representation of
+the environment that incorporates both physical and semantic
+features. These features can be extracted using a query vector
+q ∈ Rd. Notably, various entities such as images, text,
+coordinates, etc., can be transformed into the query vector
+by encoding them into a shared embedding space using an
+encoding function.
+Our proposed Open-Fusion, as depicted in Fig. 1, com-
+prises two main modules: 1) Real-time Semantic TSDF 3D
+Scene Reconstruction: this module consists of two sub mod-
+ules i) Feature Extraction: this module aims to extract region-
+based feature including confidence map and embedding map
+ii) Real-time Semantic 3D Scene Reconstruction: this module
+facilitates the integration of an incoming frame at time t
+into the current semantic STDF volume Vt−1 while updating
+the embedding dictionary ( Dt). Consequently, it generates
+a 3D scene representation VT and an updated embedding
+dictionary (DT ) after the integration of T frames. The second
+module consists of three components of Feature Rendering
+by TSDF, Region-based Semantic Feature Matching, and
+Feature Update. 2) Open-V ocab Query and Scene Under-
+standing: this module is designed to localize and segment
+objects in the scene based on user queries and open-vocab
+semantics.
+A. Region-based Feature Extractor
+Given the RGB frame of the current view It at time t,
+employ the SEEM model [20], denoted as θ, for encoding.
+Unlike the widely adopted CLIP model, SEEM produces
+region-level aligned feature. This aims to eliminate the need
+for the class agnostic mask proposal generator in two-stage
+setup [18] or attention-explainability model to localize the
+relevant regions like [8], [17]. Considering the real-time
+constraints, avoiding the inclusion of such expensive models
+in a sequence of function calls is of utmost importance.
+For each It, the model θ generates region confidence maps
+Ct ∈ R|Q|×H/4×W/4 at a quarter of the input resolution.
+Additionally, it produces corresponding semantic embedding
+vectors, denoted as Et ∈ R|Q|×d, tailored for the predefined
+number of object queries |Q|, where d is feature dimen-
+sion. The feature extraction at time t can be formulated
+as Ct, Et = θ(It). In practice, the region-based feature
+extraction process is specifically for semantic-related tasks
+and may pose a bottleneck due to SEEM’s time consumption
+at 4.5 FPS. If a task doesn’t require semantics, this process
+can be skipped. Additionally, given the substantial overlap
+between two consecutive frames, it’s possible to skip some
+frames. To enhance the flexibility and efficiency of our
+OpenFusion, we have implemented a semantic switch, as
+depicted in Fig. 1.
+B. Real-time 3D Scene Reconstruction with Semantics
+Every time-frame, we incorporate the incoming observa-
+tion (It, Dt, At) into an implicit surface using the Truncated
+Signed Distance Function (TSDF). Specifically, we integrate
+(It, Dt, At) into the TSDF volume Vt−1 to create the TSDF
+volume at time t, denoted as Vt. It is important to emphasize
+that the TSDF volume Vt comprises a set of M volumetric
+blocks, represented as Vt = {Gi}Mi=1. The TSDF is an
+extension of the Signed Distance Function (SDF) ϕ, which is
+a function that provides the shortest distance to any surface
+for every 3D point. The sign indicates whether the point is
+located in front of or behind the surface. In the context of
+scene reconstruction, the points of interest typically reside
+on the boundary δΩ. For a distance function d and a point
+p ∈ R3, the SDF ϕ : R3 → R defines the signed distance to
+the surface as follows:
+ϕ(p) =
+−d(p, δΩ) if p ∈ Ω
+d(p, δΩ) if p ∈ Ωc (1)
+This means that points located inside the surface have
+negative values, while the surface itself lies precisely at the
+zero crossing point between positive and negative values. The
+TSDF truncates all values above with a specified threshold
+τ, with τ chosen as four times the voxel size.
+As the reconstruction of the 3D scene essentially repre-
+sents a local 2D surface—a 2D manifold embedded in 3D
+space—we can efficiently embed the 3D scene using globally
+sparse but locally dense voxel blocks. These voxel blocks
+exhibit a distinctive characteristic where they are globally
+present only near the surface of interest (while other parts
+remain void). Within each block, we maintain a dense voxel
+grid typically sized at r × r × r. Following the approach in
+[29], we construct semantic TSDF volume as a set of globally
+sparse volumetric blocks Vt = {Gi}Mi=1, each containing a
+locally dense voxel grid Gi = {pj}r3j=1 and the information
+in pj include pj = {(RGBj, wj, ϕj, kj, cj)}. These grids
+store various attributes of a voxel pj, including color RGB,
+weight w for TSDF updates, TSDF values ϕ, embedding
+keys k, and confidence scores c.
+Notably, unlike previous approaches like [18] that store
+the semantic embedding for each point, we opt to store
+only the keys for embedding and the associated confidence
+scores for each pixel. The actual embedding information is
+maintained separately within the dedicated embedding dic-
+tionary D. Given our utilization of region-based embedding
+for the scene, it’s important to highlight that the number
+of embeddings required for the entire scene is significantly
+smaller compared to point-based counterparts. In addition to
+the surface and color data, we also incorporate semantics into
+the TSDF volume. However, to optimize computation and
+memory usage in subsequent modules, we limit the storage
+of semantics to points near the surface. These points are
+strategically sampled based on the TSDF values, resulting in
+a more efficient representation.
+As a result, to integrate (It, Dt, At) at time t into semantic
+TSDF volume Vt−1 at time t−1, consisting of M volumetric
+blocks {Gi}Mi=1, we perform the following steps. Step (i) -
+Feature Rendering : This initial step involves generating a
+rendered confidence map ˜Ct and a rendered embedding ˜Et
+from the existing TSDF volume Vt−1. Step (ii) - Region-
+based Temporal Feature Matching : In this phase, the goal is
+to establish correspondences between the semantic embed-
+ding vector Et from frame t and the rendered embedding ˜Et.
+Step (iii) - Feature Update: This step focuses on updating the
+TSDF volume Vt−1 at time t to create Vt and concurrently
+updating the embedding dictionary ( Dt).
+1) Feature Rendering by TSDF: We render confidence
+map ˜Ct with its corresponding embeding map ˜Et from the
+TSDF volume with the current camera pose Rt|tt and depth
+image Dt at time t. Given the semantic TSDF volume Vt−1
+accumulated from time 0 to t−1 and the current observation
+(It, Dt, At), our integration process involves several key
+steps: i) Conversion of depth image Dt: Initially, we convert
+the 2D depth image Dt into a 3D representation using Eq.2.
+
+
+x
+y
+z
+
+ = R−1t
+
+Di,jt K−1
+
+
+i
+j
+1
+
+
+
+ − tt , (2)
+where Rt and tt are the rotation and translation component
+of camera pose At, and K represents intrinsic parameters.
+ii) Identifying relevant blocks: Next, we identify the set of
+volumetric blocks Gactive that contain points unprojected
+from the current depth image. We determine these active
+blocks within the current viewing frustum by examining
+whether the 3D coordinates (x, y, z), obtained by casting a
+ray from the camera’s origin through the pixel (i, j) of the
+depth image Dt, fall within the boundaries of these blocks
+or not. iii) Projection of semantic information: Subsequently,
+we project the voxels within the active blocksGj that possess
+semantic keys and confidence scores onto the image plane,
+as defined by Eq.3.
+
+
+u
+v
+ˆd
+
+ = ˆK
+
+Rt
+
+
+x
+y
+z
+
+ + tt
+
+ , (3)
+where ˆK represents the intrinsic parameters with the model
+θ’s output reslution and the coordinate of the valid voxel
+(x, y, z) are mapped to the pixel location (u/ ˆd, v/ˆd) sub-
+jected to
+
+ˆd >0
+
+∧
+
+0 ≤ u/ ˆd < W/4
+
+∧(0 ≤ v/d′ < H/4).
+This projection is a crucial step in incorporating semantic
+information into the current frame’s representation. Building
+upon the rendering operation described above, we generate
+confidence maps ˜Ct ∈ Rm×H/4×W/4 within the current field
+of view (FoV).
+2) Region-based Temporal Feature Matching: This step
+aims to find fusion candidates by matching pairs between
+the confidence map Ct and the rendered confidence map˜Ct, which casts the knowledge of objects accumulated until
+t−1 in the semantic TSDF volume from the current FoV . We
+formulate this feature matching as a 2D rectangular assign-
+ment problem, with the goal of identifying the assignment
+S ∗ that maximizes the soft-IoU [30] between Ct and ˜Ct.
+S ∗ = arg max
+S
+nX
+i=1
+mX
+j=1
+Lmatch⟨Ct, ˜Ct⟩i,jσi,j , (4)
+Here, n represents the number of semantic regions in the cur-
+rent frame, and m is the number of rendered regions within
+the current FoV . Lmatch calculates the soft-IoU of Ct and˜Ct. The matrix S represents a set of all σi,j values, subject
+to the constraints Pmj=1 σi,j = 1; ∀i, Pni=1 σi,j ≤ 1; ∀j, and
+σi,j ∈ {0, 1}. If σi,j = 1, it signifies that the prediction in
+row i is assigned to the rendered embedding in column j. To
+solve this problem, we employ a modified Jonker-V olgenant
+algorithm [31] (extension version of Hungarian). We discard
+the match if the soft-IoU score is below 0.10. This operation
+helps us to avoid fusing poor quality masks of the same
+object due to occlusion or blur.
+3) Inverse Rendering and Feature Update: In this step,
+information, i.e., (It, Dt, Ct, Et), we obtain from the current
+time frame is integrated into the semantic TSDF volumeVt−1
+to create Vt. First, each voxel pj within the active volumetric
+blocks Gactive undergoes the standard TSDF integration
+process [29], where the stored color RGBj and TSDF values
+ϕj are updated using weighted average. Using Eq. 3 with the
+actual camera intrinsic K, we can obtain (u, v, d) and the
+update is summarized as:
+RGBj ← wj · RGBj + Iu/d,v/dtwj + 1 (5)
+ϕj ← wj · ϕj + Ψ(Du/d,v/dt − d, τ)wj + 1 (6)
+wj ← wj + 1 (7)
+where Ψ(·) is the truncation operation that is applied to SDF
+to obtain TSDF (Section III-B).
+The dictionary D and the confidence score cj and the
+associated key kj will be updated according to the matching
+S ∗. If the new region is matched to the existing one, only
+the confidence map is updated with weighted average while
+unmatched candidates also update the dictionary as a new
+region. The confidence maps Ct are inversely rendered by
+applying Eq.3.
+C. Querying Semantics from the 3D Map
+At any time t, we can extract the corresponding point
+cloud or mesh from the semantic TSDF volume Vt by
+querying it with a vector q. Our querying method involves
+a similarity calculation between the query and the semantic
+embeddings stored in the dictionary Dt. This approach is
+significantly faster and more memory-efficient than previous
+methods that store embeddings for individual points. Specif-
+ically, we calculate the cosine similarity cos⟨E, q⟩ between
+the semantic embeddings E ∈ RR×d in the dictionary Dt and
+the query vector q ∈ Rd, which is obtained using a modality-
+specific encoder trained in a shared embedding space with
+the semantic vectors E, and select the most relevant region
+as the object proposal. After the query, Marching Cubes is
+applied to extract surfaces or point clouds from the semantic
+TSDF volumes to indicate the queried region. For a resource
+constraint environment, one can simply use the semantic
+TSDF voxel coordinates as the approximation of the region.
+TABLE II
+QUANTITATIVE COMPARISON OF OPEN -SET SEMANTIC SEGMENTATION
+AND 3D SCENE REPRESENTATION TIME BETWEEN OPEN -FUSION AND
+EXISTING METHODS ON THE SCAN NET DATASET .
+Method Time (FPS) ↑ Accuracy↑3D-Rec.1 Sem-3D-Rec2 mAcc f-mIoU
+Priv.3
+LSeg - - 0.70 0.63
+OpenSeg - - 0.63 0.62
+CLIPSeg (rd64-uni) - - 0.41 0.34
+CLIPSeg (rd16-uni) - - 0.41 0.36
+ZS.4
+MaskCLIP - - 0.24 0.28
+ConceptFusion 1.5 0.15 0.63 0.58
+Open-Fusion 50 4.5 0.62 0.59
+IV. EXPERIMENTS
+In this section, we conduct a comprehensive evaluation
+of Open-Fusion’s performance through both quantitative and
+qualitative assessments on the ScanNet [32] and Replica
+[33] datasets, specifically focusing on open-set semantic seg-
+mentation tasks. Following the previous work [18], we will
+focus our quantitative results and comparisons exclusively
+on the ScanNet dataset. We will provide qualitative results
+and comparisons for the Replica dataset. Furthermore, we
+showcase the real-world applicability of Open-Fusion by
+seamlessly integrating it into the Kobuki platform, enabling
+real-time 3D scene representation.
+A. Quantitative Benchmarks
+Our quantitative experimental benchmarks are conducted
+on the ScanNet dataset, a comprehensive RGB-D video
+dataset comprising more than 2.5 million views across over
+1,500 scans. This dataset includes annotations for 3D camera
+poses, surface reconstructions, and instance-level semantic
+segmentations. Following the methodology of ConceptFusion
+[18], we select 20 indoor (room-scale) scenes for rigorous
+evaluation and testing of our research. For each selected
+scene, we utilize the semantic categories provided in the
+scene annotations as text-prompted queries for performing
+open-set segmentation tasks.
+Consistent with the evaluation methodology introduced in
+ConceptFusion [18], we assess both performance and time
+efficiency of Open-Fusion in the context of open-set semantic
+3D scene understanding. Our evaluation encompasses a dual
+focus: performance and time efficiency. To assess accuracy,
+we employ the mean accuracy (mAcc) and frequency mean
+Intersection over Union (f-mIoU) metrics. In addition, we
+measure time consumption for 3D scene representation in
+frames per second (FPS). Table II offers a comprehensive
+comparative analysis between Open-Fusion against exist-
+ing SOTA methods in terms of mAcc, f-mIoU, and FPS.
+Thanks to the utilization of region-based embedding and
+TSDF, Open-Fusion achieves nearly real-time performance
+13D-Rec.: 3D scene reconstruction only.
+2Sem-3D-Rec: 3D scene reconstruction with semantics
+3Priv.: off-the-shelf VLFMs are finetuned specifically for semantic
+segmentation.
+4ZS: zero-shot approaches.
+"TV monitor""Sofa"
+Ours (4.5 FPS)ConceptFusion (0.15 FPS)Query & Input Scene
+"Lamp"
+"Cabinet"
+"Vase"
+Fig. 2. Qualitative comparison of 3D object query results on Replica
+dataset. While ConceptFusion failed to pinpoint the object location, Open-
+Fusion can estimate more precise location from language queries.
+at 4.5 FPS, which is 30 times faster than the runner-up
+ConceptFusion. While excelling in time efficiency, Open-
+Fusion maintains competitive performance levels with the
+existing SOTA ConceptFusion in terms of both mAcc and
+f-mIoU metrics. This experiment underscores the efficiency
+and effectiveness of Open-Fusion in the realm of open-set
+semantic 3D scene understanding. Open-Fusion represents a
+significant advancement, establishing itself as the new SOTA
+in terms of both performance and efficiency.
+B. Qualitative Results
+We conducted a qualitative evaluation of Open-Fusion on
+the Replica dataset [33], as illustrated in Fig. 2. In this exper-
+iment, we demonstrated the semantic segmentation perfor-
+mance with queries involving various object sizes, from small
+objects like vases and lamps to larger ones like sofas and
+cabinets. Our Open-Fusion not only achieves significantly
+faster processing times (30x faster) but also delivers more
+accurate queryable semantic segmentation results.
+C. Real-World Experiment
+In this section, we present a real-world demonstration
+of real-time queryable scene reconstruction. Our experiment
+was conducted using the Kobuki platform, equipped with
+an RGB-D camera setup. Specifically, we utilized the Azure
+Kinect Camera to capture RGB-D images at a downsampled
+resolution of 360×630, along with the Intel T265 Camera for
+capturing corresponding camera poses. To ensure accurate
+alignment between camera poses and image streams, we
+synchronized them based on timestamps and filtered out any
+Kobuki Platform with Azure
+Kinect and T265 Camera
+RTX3060M 
+Laptop
+Azure
+Kinect
+T265
+Kobuki
+Platform
+Reconstructed Scene Over Time
+Fig. 3. The Kobuki platform is equipped with an Azure Kinect Camera
+and an Intel T265 Camera to demonstrate real-time mapping in a real-world
+environment. This system enables interaction with the world through natural
+language queries. The system is able to highlight the novel objects like the
+”quadruped robot” or ”chicken taxidermy”.
+images without a matching pose recorded within a 10 ms
+timeframe. Fig. 3 provides a visual representation of our real-
+world experimental setup using the Kobuki platform.
+As it is difficult to obtain the ground truth semantic mask
+for real environment, we visually compare the suggested
+region by the model with the known environment setup. Fig.
+3 displays the 3D map reconstruction generated at 50 FPS
+and semantics updated at 4.5 FPS running on two threads by
+the Kobuki platform. In this demonstration, we emphasize
+specific objects within the scene and their corresponding 3D
+representations.
+V. CONCLUSION & DISCUSSION
+In this paper, we have introduced Open-Fusion, an efficient
+approach for real-time open-vocabulary 3D mapping and
+queryable scene representation from RGB-D data. Open-
+Fusion leverages the VLFM, SEEM, to extract region-based
+embeddings and employs TSDF, along with an extended
+version of Hungarian matching, for 3D semantic representa-
+tion. We conducted both qualitative and quantitative bench-
+marks to assess our performance. In a qualitative evaluation,
+we compared Open-Fusion with ConceptFusion using the
+Replica dataset, demonstrating superior object segmentation
+results and real-time efficiency. In a quantitative assessment,
+we compared Open-Fusion with SOTA methods using the
+ScanNet dataset, achieving competitive results in terms of
+mean accuracy (mAcc) and surface mean Intersection over
+Union (f-mIoU) while Open-Fusion is 30x faster than Con-
+ceptFusion. Additionally, we conducted a real-world experi-
+ment with the Kobuki platform, highlighting Open-Fusion’s
+capability in practical applications.
+It is worth noting that while Open-Fusion excels in geo-
+metric precision, it may not capture the full range of photo-
+metric nuances due to the constraints of TSDF representa-
+tions. This limitation will be potential future improvement.
+REFERENCES
+[1] S. Song, S. P. Lichtenberg, and J. Xiao, “Sun rgb-d: A rgb-d scene un-
+derstanding benchmark suite,” in Proceedings of the IEEE conference
+on computer vision and pattern recognition , pp. 567–576, 2015.
+[2] M. Naseer, S. Khan, and F. Porikli, “Indoor scene understanding
+in 2.5/3d for autonomous agents: A survey,” IEEE access , vol. 7,
+pp. 1859–1887, 2018.
+[3] A. Radford, J. W. Kim, C. Hallacy, A. Ramesh, G. Goh, S. Agarwal,
+G. Sastry, A. Askell, P. Mishkin, J. Clark,et al., “Learning transferable
+visual models from natural language supervision,” in International
+conference on machine learning , pp. 8748–8763, PMLR, 2021.
+[4] C. Jia, Y . Yang, Y . Xia, et al. , “Scaling up visual and vision-
+language representation learning with noisy text supervision,” in ICLR,
+pp. 4904–4916, PMLR, 2021.
+[5] J. Li, D. Li, C. Xiong, and S. Hoi, “Blip: Bootstrapping language-
+image pre-training for unified vision-language understanding and
+generation,” in International Conference on Machine Learning ,
+pp. 12888–12900, PMLR, 2022.
+[6] L. H. Li, P. Zhang, H. Zhang, J. Yang, C. Li, Y . Zhong, L. Wang,
+L. Yuan, L. Zhang, J.-N. Hwang, et al. , “Grounded language-image
+pre-training,” in Proceedings of the IEEE/CVF Conference on Com-
+puter Vision and Pattern Recognition , pp. 10965–10975, 2022.
+[7] Y . Zhong, J. Yang, et al. , “Regionclip: Region-based language-image
+pretraining,” in CVPR, pp. 16793–16803, 2022.
+[8] S. Y . Gadre, M. Wortsman, G. Ilharco, L. Schmidt, and S. Song, “Cows
+on pasture: Baselines and benchmarks for language-driven zero-shot
+object navigation,” in Proceedings of the IEEE/CVF Conference on
+Computer Vision and Pattern Recognition , pp. 23171–23181, 2023.
+[9] R. Selvaraju, M. Cogswell, A. Das, R. Vedantam, D. Parikh,
+and D. Batra, “Grad-cam: Visual explanations from deep net-
+works via gradient-based localization. arxiv 2016,” arXiv preprint
+arXiv:1610.02391, 2022.
+[10] B. Chen, F. Xia, B. Ichter, K. Rao, K. Gopalakrishnan, M. S.
+Ryoo, A. Stone, and D. Kappler, “Open-vocabulary queryable scene
+representations for real world planning,” in 2023 IEEE International
+Conference on Robotics and Automation (ICRA) , pp. 11509–11522,
+IEEE, 2023.
+[11] X. Gu, T.-Y . Lin, W. Kuo, and Y . Cui, “Open-vocabulary object de-
+tection via vision and language knowledge distillation,” arXiv preprint
+arXiv:2104.13921, 2021.
+[12] C. Huang, O. Mees, A. Zeng, and W. Burgard, “Visual language
+maps for robot navigation,” in 2023 IEEE International Conference
+on Robotics and Automation (ICRA) , pp. 10608–10615, IEEE, 2023.
+[13] B. Li, K. Q. Weinberger, S. Belongie, V . Koltun, and R. Ran-
+ftl, “Language-driven Semantic Segmentation,” arXiv e-prints ,
+p. arXiv:2201.03546, Jan. 2022.
+[14] N. M. M. Shafiullah, C. Paxton, L. Pinto, S. Chintala, and A. Szlam,
+“Clip-fields: Weakly supervised semantic fields for robotic memory,”
+arXiv preprint arXiv:2210.05663 , 2022.
+[15] X. Zhou, R. Girdhar, A. Joulin, P. Kr ¨ahenb¨uhl, and I. Misra, “Detecting
+twenty-thousand classes using image-level supervision,” in European
+Conference on Computer Vision , pp. 350–368, Springer, 2022.
+[16] J. Kerr, C. M. Kim, K. Goldberg, A. Kanazawa, and M. Tan-
+cik, “Lerf: Language embedded radiance fields,” arXiv preprint
+arXiv:2303.09553, 2023.
+[17] H. Ha and S. Song, “Semantic abstraction: Open-world 3d scene
+understanding from 2d vision-language models,” in 6th Annual Con-
+ference on Robot Learning , 2022.
+[18] K. M. Jatavallabhula, A. Kuwajerwala, Q. Gu, M. Omama, T. Chen,
+S. Li, G. Iyer, S. Saryazdi, N. Keetha, A. Tewari, et al. ,
+“Conceptfusion: Open-set multimodal 3d mapping,” arXiv preprint
+arXiv:2302.07241, 2023.
+[19] A. Kirillov, E. Mintun, N. Ravi, H. Mao, C. Rolland, L. Gustafson,
+T. Xiao, S. Whitehead, A. C. Berg, W.-Y . Lo, et al. , “Segment
+anything,” arXiv preprint arXiv:2304.02643 , 2023.
+[20] X. Zou, J. Yang, H. Zhang, F. Li, L. Li, J. Gao, and Y . J. Lee, “Segment
+everything everywhere all at once,” arXiv preprint arXiv:2304.06718 ,
+2023.
+[21] J. Yang, C. Li, et al., “Unified contrastive learning in image-text-label
+space,” in CVPR, pp. 19163–19173, 2022.
+[22] J. Li, D. Li, S. Savarese, and S. Hoi, “Blip-2: Bootstrapping language-
+image pre-training with frozen image encoders and large language
+models,” arXiv preprint arXiv:2301.12597 , 2023.
+[23] C. Zhou, C. C. Loy, and B. Dai, “Extract free dense labels from clip,”
+in European Conference on Computer Vision , pp. 696–712, Springer,
+2022.
+[24] H. Zhang, P. Zhang, et al., “Glipv2: Unifying localization and vision-
+language understanding,” NIPS, 2022.
+[25] J. Xu, S. Liu, A. Vahdat, W. Byeon, X. Wang, and S. De Mello,
+“Open-vocabulary panoptic segmentation with text-to-image diffusion
+models,” in Proceedings of the IEEE/CVF Conference on Computer
+Vision and Pattern Recognition , pp. 2955–2966, 2023.
+[26] X. Wang, S. Li, K. Kallidromitis, Y . Kato, K. Kozuka, and T. Darrell,
+“Hierarchical open-vocabulary universal image segmentation,” arXiv
+preprint arXiv:2307.00764, 2023.
+[27] F. Li, H. Zhang, P. Sun, X. Zou, S. Liu, J. Yang, C. Li, L. Zhang,
+and J. Gao, “Semantic-sam: Segment and recognize anything at any
+granularity,” arXiv preprint arXiv:2307.04767 , 2023.
+[28] N. Reimers and I. Gurevych, “Sentence-bert: Sentence embeddings
+using siamese bert-networks,” arXiv preprint arXiv:1908.10084, 2019.
+[29] W. Dong, J. Park, Y . Yang, and M. Kaess, “Gpu accelerated robust
+scene reconstruction,” in 2019 IEEE/RSJ International Conference on
+Intelligent Robots and Systems (IROS) , pp. 7863–7870, IEEE, 2019.
+[30] Y . Huang, Z. Tang, D. Chen, K. Su, and C. Chen, “Batching soft iou
+for training semantic segmentation networks,” IEEE Signal Processing
+Letters, vol. 27, pp. 66–70, 2019.
+[31] D. F. Crouse, “On implementing 2d rectangular assignment algo-
+rithms,” IEEE Transactions on Aerospace and Electronic Systems ,
+vol. 52, no. 4, pp. 1679–1696, 2016.
+[32] A. Dai, A. X. Chang, M. Savva, M. Halber, T. Funkhouser, and
+M. Nießner, “Scannet: Richly-annotated 3d reconstructions of indoor
+scenes,” in Proceedings of the IEEE conference on computer vision
+and pattern recognition , pp. 5828–5839, 2017.
+[33] J. Straub, T. Whelan, L. Ma, Y . Chen, E. Wijmans, S. Green, J. J.
+Engel, R. Mur-Artal, C. Ren, S. Verma, et al. , “The replica dataset:
+A digital replica of indoor spaces,” arXiv preprint arXiv:1906.05797 ,
+2019.

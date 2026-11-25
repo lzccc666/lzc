@@ -1,0 +1,67 @@
+"""等待已有GPU及其汇总结束，再启动本任务自己的官方服务器执行冻结小容量标定。"""
+import argparse,datetime,hashlib,json,os,resource,shutil,signal,socket,subprocess,sys,time,traceback
+from pathlib import Path
+R=Path(__file__).resolve().parents[1];O=R/'json/official_actuation_pilot_execution_001';SHARED=Path('/autodl-fs/data/thesis_completion_v1_bulk/carla_runtime_001');INSTALL=Path('/autodl-fs/data/third_party/carla_0.9.16/install');API=INSTALL.parent/'python_site';PILOT=R/'source/carla_acceleration_feedback_pilot_003.py';DONE=R/'json/full_semantics_followup_001/report.json'
+
+def digest(path):
+ h=hashlib.sha256()
+ with Path(path).open('rb') as f:
+  while data:=f.read(1024*1024):h.update(data)
+ return h.hexdigest()
+
+def save(path,value):
+ with path.open('x') as f:json.dump(value,f,ensure_ascii=False,indent=2);f.write('\n')
+
+def start_tick(pid):
+ try:
+  fields=Path(f'/proc/{pid}/stat').read_text().rsplit(')',1)[1].split();return None if fields[0]=='Z' else fields[19]
+ except FileNotFoundError:return None
+
+def main():
+ ap=argparse.ArgumentParser();ap.add_argument('--wait-pid',required=True,type=int);args=ap.parse_args();O.mkdir(exist_ok=False);watched=start_tick(args.wait_pid);begun=time.monotonic();server=None;logfile=None;stops=[]
+ registration=R/'carla_official/acceleration_feedback_pilot_003/registration.json';frozen={str(PILOT):digest(PILOT),str(Path(__file__)):digest(__file__),str(registration):digest(registration)}
+ save(O/'registration.json',dict(UTC=datetime.datetime.now(datetime.timezone.utc).isoformat(),wait_PID=args.wait_pid,wait_start_tick=watched,source_sha256=frozen,required_project_reserve_bytes=320*1024,no_other_GPU_job_parallel=True,only_own_server_terminated=True,scope='官方执行器标定，不是全传感器导航',goal_complete=False))
+ try:
+  while watched is not None and start_tick(args.wait_pid)==watched:
+   if time.monotonic()-begun>10800:raise TimeoutError('等待原作业超过3h；没有结束该作业')
+   time.sleep(20)
+  completed=json.loads(DONE.read_text());assert completed['actual_CPU_cooperation']==9048
+  assert all(digest(p)==h for p,h in frozen.items());size=sum(p.stat().st_size for p in R.rglob('*') if p.is_file() and not p.is_symlink());free=shutil.disk_usage(R).free
+  if size+320*1024>=10*2**30 or free<20*2**30:
+   save(O/'blocked_storage.json',dict(project_bytes=size,physical_free_bytes=free,required_reserve=320*1024,actual_new_physical_calibrations=0,goal_complete=False));print('storage guard blocked pilot; no server started',flush=True);return
+  gpu=subprocess.run(['nvidia-smi','--query-compute-apps=pid,process_name','--format=csv,noheader'],capture_output=True,text=True,check=True)
+  if gpu.stdout.strip():raise RuntimeError('另有GPU计算进程，未启动CARLA：'+gpu.stdout.strip())
+  with socket.socket() as probe:
+   probe.settimeout(2)
+   if probe.connect_ex(('127.0.0.1',2010))==0:raise RuntimeError('2010已有服务，未重载未知服务器')
+  stdout=SHARED/'stdout_graphics_actuation_003.log';graphic=SHARED/'carla_graphics_actuation_003.log';assert not graphic.exists();logfile=stdout.open('x');env=os.environ.copy();env['XDG_RUNTIME_DIR']=str(SHARED/'xdg');env['LD_LIBRARY_PATH']=str(SHARED/'deps/usr/lib/x86_64-linux-gnu')+':/usr/lib/x86_64-linux-gnu';resource.setrlimit(resource.RLIMIT_CORE,(0,0))
+  command=['runuser','-u','nobody','--','env',f"XDG_RUNTIME_DIR={env['XDG_RUNTIME_DIR']}",f"LD_LIBRARY_PATH={env['LD_LIBRARY_PATH']}",str(INSTALL/'CarlaUE4/Binaries/Linux/CarlaUE4-Linux-Shipping'),'CarlaUE4','-RenderOffScreen','-quality-level=Low','-carla-rpc-port=2010','-nosound','-stdout','-FullStdOutLogOutput',f'-abslog={graphic}']
+  server=subprocess.Popen(command,cwd=INSTALL,env=env,stdout=logfile,stderr=subprocess.STDOUT,start_new_session=True);save(O/'server_started.json',dict(PID=server.pid,command=command,stdout=str(stdout),graphics_log=str(graphic),started_UTC=datetime.datetime.now(datetime.timezone.utc).isoformat(),project_bytes_before=size,goal_complete=False));sys.path.insert(0,str(API));import carla
+  client=carla.Client('127.0.0.1',2010);client.set_timeout(2);ready=False;tick=time.monotonic()
+  while time.monotonic()-tick<120:
+   if server.poll() is not None:raise RuntimeError(f'官方服务器启动退出{server.returncode}')
+   try:
+    version=client.get_server_version();town=client.get_world().get_map().name
+    if version!='0.9.16' or 'Town10HD_Opt' not in town:raise ValueError(f'官方版本/地图不符{version}/{town}')
+    ready=True;break
+   except RuntimeError:time.sleep(2)
+  if not ready:raise TimeoutError('官方服务器120s未就绪')
+  runenv=os.environ.copy();runenv['PYTHONPATH']=str(API)+os.pathsep+runenv.get('PYTHONPATH','');runenv['CUDA_VISIBLE_DEVICES']='0';log=O/'pilot.log'
+  with log.open('x') as f:result=subprocess.run([sys.executable,str(PILOT),'run'],stdout=f,stderr=subprocess.STDOUT,env=runenv,timeout=1800,check=False)
+  if result.returncode:raise RuntimeError(f'真实标定退出{result.returncode}；已保存前缀')
+  report=R/'carla_official/acceleration_feedback_pilot_003/report.json';actual=json.loads(report.read_text());assert actual['actual_new_physical_calibrations']==4
+  save(O/'report.json',dict(UTC=datetime.datetime.now(datetime.timezone.utc).isoformat(),exit_code=result.returncode,server_version=version,client_version=client.get_client_version(),town=town,actual_new_physical_calibrations=4,source_report_sha256=digest(report),log_sha256=digest(log),actual_new_navigation_episodes=0,actual_arrival_credit=False,goal_complete=False));print('four actual official physical calibrations complete',flush=True)
+ except BaseException as exc:
+  save(O/'failure.json',dict(error=repr(exc),traceback=traceback.format_exc(),goal_complete=False));raise
+ finally:
+  if server is not None:
+   for sig,timeout in [(signal.SIGINT,8),(signal.SIGTERM,5),(signal.SIGKILL,5)]:
+    if server.poll() is not None:break
+    os.killpg(server.pid,sig);stops.append(sig.name)
+    try:server.wait(timeout=timeout)
+    except subprocess.TimeoutExpired:pass
+   if logfile is not None:logfile.close()
+   external={str(p):dict(bytes=p.stat().st_size,sha256=digest(p)) for p in [SHARED/'stdout_graphics_actuation_003.log',SHARED/'carla_graphics_actuation_003.log'] if p.exists()}
+   save(O/'server_shutdown.json',dict(PID=server.pid,exit_code=server.poll(),own_process_group_signals=stops,shared_official_runtime_logs=external,goal_complete=False))
+
+if __name__=='__main__':main()

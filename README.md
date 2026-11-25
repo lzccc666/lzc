@@ -1,3 +1,15 @@
+# 面向智能车辆的三维语义场景图构建与导航方法研究
+
+本项目在 `lzc/main` 的既有交付基础上整合当前验证代码与进度，保留原有复现实验材料和 `work` 的开发历史。整合分支为 `codex/integration-20261125`；主线推送状态以提交记录与[整合说明](doc/交接/20261125/主线整合与来源.md)为准。
+
+- 当前代码、结果与待完成项：[项目导航](项目导航.md)、[最新进度交接](doc/交接/20261125/当前进度与代码同步.md)。
+- 原有实验交付和复现：[交付说明](README_THESIS_COMPLETION.md)、[旧交付文档](doc/thesis_completion/)、[复现入口](reproduction/)、[历史结果摘要](experiments/)。
+- 仓库迁移来源、冲突处理和双方文件保留核验：[主线整合与来源](doc/交接/20261125/主线整合与来源.md)。
+
+大型传感器数据、模型和完整运行结果保留本机，路径与恢复边界见交接。下方保留上游 ConceptGraphs 说明与归属。
+
+---
+
 # ConceptGraphs: Open-Vocabulary 3D Scene Graphs for Perception and Planning
 
 [**Project Page**](https://concept-graphs.github.io/) |

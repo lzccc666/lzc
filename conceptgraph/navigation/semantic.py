@@ -598,12 +598,38 @@ def score_relation_constraint(
     fallback_ego_heading: np.ndarray | None = None,
     fallback_trajectory: np.ndarray | None = None,
     fallback_ego_position: np.ndarray | None = None,
+    relation_support_policy: dict | None = None,
 ) -> tuple[float, dict]:
     if parsed_query.relation is None or parsed_query.anchor_text is None:
         return 1.0, {"reason": "no_relation_constraint"}
 
     anchor_scores = []
     debug_matches = []
+    support_checks = {}
+    if relation_support_policy and relation_support_policy.get("enabled", False):
+        for anchor_id, anchor_node in all_nodes.items():
+            score, geometry = _geometric_relation_score_with_debug(
+                parsed_query.relation, candidate_node.bbox_center, anchor_node.bbox_center,
+                parsed_query.near_distance, coordinate_frame=fallback_coordinate_frame,
+                coordinate_frame_fallback=fallback_coordinate_frame_fallback,
+                ego_heading=fallback_ego_heading, trajectory=fallback_trajectory,
+                ego_position=fallback_ego_position,
+            )
+            supported = bool(anchor_id != candidate_node.node_id and score > 0.0)
+            reason = "supported_current_geometry" if supported else "relation_not_supported"
+            if parsed_query.relation in {"left_of", "right_of", "in_front_of", "behind"}:
+                maximum = float(relation_support_policy["maximum_directional_distance_m"])
+                minimum = float(relation_support_policy["minimum_directional_component_m"])
+                if not np.isfinite(maximum) or maximum <= 0 or not np.isfinite(minimum) or minimum < 0:
+                    raise ValueError("invalid directional relation support bounds")
+                component = geometry.get("left_component_m" if parsed_query.relation in
+                    {"left_of", "right_of"} else "forward_component_m")
+                distance = geometry.get("planar_distance_m")
+                if distance is None or not np.isfinite(distance) or distance > maximum:
+                    supported, reason = False, "outside_directional_support_distance"
+                elif component is None or not np.isfinite(component) or abs(component) <= minimum:
+                    supported, reason = False, "inside_directional_support_dead_zone"
+            support_checks[anchor_id] = dict(supported=supported, reason=reason, geometry=geometry)
     candidate_has_structured_evidence = False
     for anchor_id, anchor_node in all_nodes.items():
         anchor_text_score = (
@@ -614,6 +640,8 @@ def score_relation_constraint(
         if anchor_text_score <= 0.0:
             continue
         if parsed_query.anchor_colors and not node_has_color(anchor_node, parsed_query.anchor_colors):
+            continue
+        if anchor_id in support_checks and not support_checks[anchor_id]["supported"]:
             continue
         for entry in relation_index.get(candidate_node.node_id, []):
             if int(entry["neighbor_id"]) != anchor_id:
@@ -639,6 +667,15 @@ def score_relation_constraint(
         if anchor_text_score <= 0.0:
             continue
         if parsed_query.anchor_colors and not node_has_color(anchor_node, parsed_query.anchor_colors):
+            continue
+        if anchor_id in support_checks and not support_checks[anchor_id]["supported"]:
+            debug_matches.append(dict(anchor_id=anchor_id, anchor_tag=anchor_node.object_tag,
+                anchor_text_score=anchor_text_score, graph_relation_score=0.0,
+                geometry_relation_score=0.0, combined=0.0, relation_chain=[],
+                edge_source="unsupported_current_geometry",
+                fallback_reason=[support_checks[anchor_id]["reason"]],
+                geometry_debug=support_checks[anchor_id]["geometry"]))
+            anchor_scores.append(0.0)
             continue
 
         graph_relation_score = 0.0
@@ -843,6 +880,7 @@ def rank_candidate_targets(
     relation_coordinate_frame_fallback: str | None = "world",
     relation_trajectory: np.ndarray | None = None,
     evidence_policy=None,
+    relation_support_policy: dict | None = None,
 ) -> list[CandidateTarget]:
     from conceptgraph.completion.evidence import target_evidence_decision
     relation_index = build_relation_index(edges)
@@ -899,6 +937,7 @@ def rank_candidate_targets(
             fallback_ego_heading=heading,
             fallback_trajectory=relation_trajectory,
             fallback_ego_position=vehicle_xy,
+            relation_support_policy=relation_support_policy,
         )
         if parsed_query.relation is not None and relation_score <= 0.05:
             continue

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>三任务指令候选审核</title>
+<style>
+body{font:16px/1.55 system-ui,sans-serif;margin:0;color:#1f2933;background:#f6f7f8}header,main{max-width:1120px;margin:auto;padding:20px}header{background:#fff;border-bottom:1px solid #dce0e4}h1{font-size:24px;margin:0 0 10px}h2{font-size:19px;margin:0 0 12px}p{margin:8px 0}button,input,select,textarea{font:inherit}button{padding:8px 13px;border:1px solid #aeb7c0;border-radius:5px;background:white;cursor:pointer}button.primary{background:#155e75;color:white;border-color:#155e75}button:hover{filter:brightness(.96)}input,select,textarea{box-sizing:border-box;padding:7px;border:1px solid #aeb7c0;border-radius:4px}textarea{width:100%;min-height:80px;resize:vertical}.muted{color:#586674;font-size:14px}.notice{border-left:4px solid #c88920;padding:10px 14px;background:#fff7e8}.controls{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin:15px 0}.layout{display:grid;grid-template-columns:250px 1fr;gap:20px}.card{background:white;padding:18px;border:1px solid #dce0e4;border-radius:7px}#list{max-height:640px;overflow:auto;display:grid;gap:6px}#list button{text-align:left;font-size:14px}#list button.active{border:2px solid #155e75;background:#eff8fb}label.field{display:block;margin:13px 0 6px;font-weight:600}#summary{white-space:pre-line;background:#f0f5f7;padding:12px;border-radius:4px}#message{min-height:25px;color:#155e75;font-weight:600}.error{color:#a51c30!important}details{margin-top:15px}#intent{font:13px/1.5 monospace;min-height:200px}footer{padding:20px;font-size:13px;color:#586674} @media(max-width:720px){.layout{grid-template-columns:1fr}#list{max-height:180px}}
+</style>
+<header>
+<h1>靠边、找车位、跟车：指令候选审核</h1>
+<p>这些是程序模板候选和待确认意图草案。当前人工审核 <strong>0</strong> 条，训练可用 <strong>0</strong> 条；本页不标具体车辆、车位、停车许可或任务成功。</p>
+<p class="notice">最省力：先看每家族一条，共24条。只核对说法和含义，有问题写一句备注即可。每条需单独保存；审核一条不会批准其余改写。保存只在当前浏览器，最后请导出JSON发回军师聊天。</p>
+</header>
+<main>
+<div class="controls">
+<label>审核人代号 <input id="reviewer" placeholder="你的姓名或代号" maxlength="80"></label>
+<label><input id="familyOnly" type="checkbox" checked>每家族只看首条</label>
+<label>任务 <select id="taskFilter"><option value="">全部</option><option value="pull_over">靠边停车</option><option value="park_nearest">最近空闲车位</option><option value="follow_vehicle">跟车</option></select></label>
+<button id="export">导出审核JSON</button>
+<button id="import">恢复审核JSON</button><input id="importFile" type="file" accept=".json,application/json" hidden>
+</div>
+<p id="counts" class="muted"></p><p id="message" role="status" aria-live="polite"></p>
+<div class="layout">
+<nav id="list" class="card" aria-label="候选清单"></nav>
+<section class="card">
+<h2 id="sampleHeading"></h2>
+<p id="sourceLine" class="muted"></p>
+<label class="field" for="instruction">指令说法（可以直接改成你会说的话）</label>
+<textarea id="instruction"></textarea>
+<label class="field">需要确认的含义</label><div id="summary"></div>
+<p class="muted">“空闲、允许停车、颜色”在这里只表示文字要求，是否真实满足需要另看图和独立证据。“无需澄清”只表示文字自身明确，尚未判断画面里有没有多个候选。</p>
+<label class="field" for="decision">这条怎么处理</label>
+<select id="decision"><option value="pending">暂不判断</option><option value="approve">说法与含义都通过</option><option value="needs_revision">需要修改或说明</option><option value="reject">不采用</option></select>
+<label class="field" for="notes">备注（例如“应该向右”“跟20秒”“先问是哪辆车”）</label>
+<textarea id="notes" placeholder="不用写JSON；说明哪处不对即可。"></textarea>
+<label><input id="meaningConfirmed" type="checkbox">我已核对动作、条件、结束含义和是否需要澄清</label>
+<details><summary>高级：查看/修改意图字段（通常无需操作）</summary><textarea id="intent" spellcheck="false"></textarea></details>
+<div class="controls"><button id="save" class="primary">保存这一条并继续</button><button id="previous">上一条</button><button id="next">下一条</button></div>
+<p class="muted">切换前请先保存。导出的审核意见仍需绑定提交者并做字段检查，不会自动进入训练。</p>
+</section>
+</div>
+</main>
+<footer>独立离线新入口。72条候选未分配scene/log/episode或训练/验证集合，6个导航协议episode不在此自动绑定。所有原包候选保持pending。</footer>
+<script id="bundle" type="application/json">__BUNDLE_JSON__</script>
+<script>
+(()=>{
+'use strict';
+const bundle=JSON.parse(document.getElementById('bundle').textContent), byId=new Map(bundle.rows.map(r=>[r.sample_id,r]));
+const $=id=>document.getElementById(id), storageKey='intentReview:'+bundle.manifest_sha256;
+let events={}, current=bundle.rows[0].sample_id;
+const actionNames={pull_over:'靠边停车',park_nearest:'最近空闲车位',follow_vehicle:'跟车',unsupported:'暂不支持/需要重新确认'};
+const attrNames={category:'对象类别',color:'颜色要求',lane_relation:'车道关系',region_type:'区域类型',free_occupancy_requirement:'空闲要求',parking_permission_requirement:'停车许可要求'};
+const values={vehicle:'车辆',white:'白色',black:'黑色',same_lane_ahead:'本车道前方',stopping_region:'路边停靠区域',individual_parking_space:'单个车位',free:'要求空闲（未核验）',allowed:'要求允许停车（未核验）'};
+const modes={stopped_in_allowed_region:'在允许区域停稳后完成（草案，需确认）',safe_follow_duration:'持续安全跟随至指定时长；不是到时停车',user_end:'等用户说结束',unknown:'尚需澄清'};
+function message(text,error=false){$('message').textContent=text;$('message').className=error?'error':'';}
+function exactKeys(obj,allowed,required=allowed){if(!obj||typeof obj!=='object'||Array.isArray(obj)||Object.keys(obj).some(k=>!allowed.includes(k))||required.some(k=>!Object.hasOwn(obj,k)))throw Error('意图字段缺失或含未知字段');}
+function validateIntent(x){
+ exactKeys(x,['action','target_description','target_conditions','requested_constraints','termination_request','needs_clarification']);
+ if(!Object.hasOwn(actionNames,x.action)||typeof x.target_description!=='string'||typeof x.needs_clarification!=='boolean'||!Array.isArray(x.target_conditions))throw Error('动作/描述/条件/澄清字段类型错误');
+ for(const c of x.target_conditions){exactKeys(c,['attribute','requested_value','grounding_required']);if(!Object.hasOwn(attrNames,c.attribute)||c.grounding_required!==true||!['string','number','boolean'].includes(typeof c.requested_value)&&c.requested_value!==null)throw Error('目标条件字段不合法');}
+ exactKeys(x.requested_constraints,['side','maximum_speed_mps','minimum_headway_s'],[]);
+ for(const [k,v]of Object.entries(x.requested_constraints)){if(k==='side'){if(!['left','right',null].includes(v))throw Error('停靠侧不合法');}else if(v!==null&&(typeof v!=='number'||!Number.isFinite(v)||v<=0))throw Error('请求约束必须为正数或null');}
+ exactKeys(x.termination_request,['mode','duration_s']);if(!Object.hasOwn(modes,x.termination_request.mode))throw Error('终止模式不合法');
+ const d=x.termination_request.duration_s;if(d!==null&&(typeof d!=='number'||!Number.isFinite(d)||d<=0||d>600))throw Error('持续时长必须在0至600秒之间');return x;
+}
+function summary(x){
+ const c=x.requested_constraints, lines=['动作：'+actionNames[x.action],'目标描述：'+x.target_description];
+ lines.push(...x.target_conditions.map(t=>(attrNames[t.attribute]||t.attribute)+'：'+(values[t.requested_value]||String(t.requested_value))));
+ if(c.side)lines.push('指定侧向：'+(c.side==='left'?'左侧':'右侧'));
+ if(c.maximum_speed_mps!==undefined)lines.push('请求最高速度：'+c.maximum_speed_mps+' 米/秒');
+ if(c.minimum_headway_s!==undefined)lines.push('请求最小时距：'+c.minimum_headway_s+' 秒（不替代硬策略）');
+ lines.push('结束：'+modes[x.termination_request.mode]+(x.termination_request.duration_s===null?'':'，'+x.termination_request.duration_s+'秒'));
+ lines.push('文字自身是否需先澄清：'+(x.needs_clarification?'是':'否；画面歧义尚未审核'));
+ return lines.join('\n');
+}
+function visibleRows(){return bundle.rows.filter(r=>(!$('familyOnly').checked||r.sample_id.endsWith('__p1'))&&(!$('taskFilter').value||r.intent_draft.action===$('taskFilter').value));}
+function renderList(){
+ $('list').replaceChildren();for(const r of visibleRows()){const b=document.createElement('button');b.textContent=r.sample_id+' · '+actionNames[r.intent_draft.action]+' · '+(events[r.sample_id]?.decision||'pending');b.className=current===r.sample_id?'active':'';b.onclick=()=>load(r.sample_id);$('list').append(b);}
+ const saved=Object.values(events),approved=saved.filter(e=>e.decision==='approve').length;
+ $('counts').textContent=`候选72条 / 家族24个；本机已保存意见${saved.length}条，其中自报通过${approved}条。其余保持待审；训练启用0条。当前显示${visibleRows().length}条。`;
+}
+function load(id){
+ current=id;const row=byId.get(id),saved=events[id];$('sampleHeading').textContent=id+' · '+actionNames[row.intent_draft.action];
+ $('sourceLine').textContent='程序模板候选；家族 '+row.paraphrase_family_id+'；scene/log/episode未分配。';
+ $('instruction').value=saved?.reviewed_instruction??row.instruction;$('intent').value=JSON.stringify(saved?.reviewed_intent??row.intent_draft,null,2);
+ $('summary').textContent=summary(saved?.reviewed_intent??row.intent_draft);$('decision').value=saved?.decision??'pending';$('notes').value=saved?.notes??'';$('meaningConfirmed').checked=false;renderList();
+}
+function validateEvent(e){
+ exactKeys(e,['sample_id','source_instruction_sha256','reviewed_instruction','reviewed_intent','decision','reviewer','reviewed_at','notes','meaning_confirmed','origin']);
+ const original=byId.get(e.sample_id);if(!original||e.source_instruction_sha256!==original.instruction_sha256)throw Error('样本不存在或原句指纹不符，拒绝串批次');
+ if(typeof e.reviewed_instruction!=='string'||!e.reviewed_instruction.trim()||!['pending','approve','needs_revision','reject'].includes(e.decision)||typeof e.reviewer!=='string'||!e.reviewer.trim()||typeof e.notes!=='string'||typeof e.meaning_confirmed!=='boolean'||e.origin!=='browser_explicit_save')throw Error('审核记录字段不合法');
+ if(!Number.isFinite(Date.parse(e.reviewed_at)))throw Error('审核时间无效');validateIntent(e.reviewed_intent);
+ if(e.decision==='approve'&&!e.meaning_confirmed)throw Error('通过前请确认已核对意图含义');return e;
+}
+function payload(){return{package_id:bundle.manifest.package_id,manifest_sha256:bundle.manifest_sha256,intent_schema_sha256:bundle.manifest.intent_schema_sha256,exported_at:new Date().toISOString(),identity_verified:false,training_export_enabled:false,review_events:Object.values(events)};}
+function importPayload(p){
+ exactKeys(p,['package_id','manifest_sha256','intent_schema_sha256','exported_at','identity_verified','training_export_enabled','review_events']);
+ if(p.package_id!==bundle.manifest.package_id||p.manifest_sha256!==bundle.manifest_sha256||p.intent_schema_sha256!==bundle.manifest.intent_schema_sha256)throw Error('审核包/manifest/schema不匹配，拒绝串批次导入');
+ if(p.identity_verified!==false||p.training_export_enabled!==false||!Array.isArray(p.review_events))throw Error('审核导入不得授予身份验证或训练权限');
+ const next={};for(const e of p.review_events){validateEvent(e);if(next[e.sample_id])throw Error('审核样本重复');next[e.sample_id]=e;}events=next;localStorage.setItem(storageKey,JSON.stringify(payload()));load(current);return Object.keys(events).length;
+}
+function move(delta){const rows=visibleRows(),i=rows.findIndex(r=>r.sample_id===current);if(rows.length)load(rows[Math.max(0,Math.min(rows.length-1,i+delta))].sample_id);}
+function save(){try{const e={sample_id:current,source_instruction_sha256:byId.get(current).instruction_sha256,reviewed_instruction:$('instruction').value.trim(),reviewed_intent:validateIntent(JSON.parse($('intent').value)),decision:$('decision').value,reviewer:$('reviewer').value.trim(),reviewed_at:new Date().toISOString(),notes:$('notes').value.trim(),meaning_confirmed:$('meaningConfirmed').checked,origin:'browser_explicit_save'};validateEvent(e);events[current]=e;localStorage.setItem(storageKey,JSON.stringify(payload()));message('已保存这一条。完成后请导出JSON发回聊天。');move(1);}catch(e){message(e.message,true);}}
+function download(){try{const p=payload();for(const e of p.review_events)validateEvent(e);const b=new Blob([JSON.stringify(p,null,2)],{type:'application/json'}),url=URL.createObjectURL(b),a=document.createElement('a');a.href=url;a.download='Qwen任务意图_审核意见_'+new Date().toISOString().slice(0,10)+'.json';a.click();URL.revokeObjectURL(url);message('已导出。请把JSON发回军师聊天，浏览器保存不会自动上传。');}catch(e){message(e.message,true);}}
+ $('save').onclick=save;$('next').onclick=()=>move(1);$('previous').onclick=()=>move(-1);$('export').onclick=download;
+ for(const id of ['familyOnly','taskFilter'])$(id).onchange=()=>{const rows=visibleRows();if(rows.length)load(rows[0].sample_id);else renderList();};
+ $('intent').oninput=()=>{try{$('summary').textContent=summary(validateIntent(JSON.parse($('intent').value)));}catch(e){$('summary').textContent='字段仍在编辑，请修正后再保存：'+e.message;}};
+ $('import').onclick=()=>$('importFile').click();$('importFile').onchange=async()=>{try{const f=$('importFile').files[0];if(f){const n=importPayload(JSON.parse(await f.text()));message('已恢复'+n+'条审核意见。');}}catch(e){message(e.message,true);}};
+ window.IntentReview={exportPayload:payload,importPayload,validateIntent};
+ load(current);try{const saved=localStorage.getItem(storageKey);if(saved){importPayload(JSON.parse(saved));message('已恢复本浏览器保存的审核意见。');}}catch(e){message('本地恢复失败，原数据未修改：'+e.message,true);}
+})();
+</script>
+</html>

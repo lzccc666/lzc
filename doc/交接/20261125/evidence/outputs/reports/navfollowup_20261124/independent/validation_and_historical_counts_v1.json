@@ -1,0 +1,2562 @@
+{
+  "created_utc": "2026-11-24T13:42:16.827460+00:00",
+  "passed": true,
+  "failures": [],
+  "frozen_checks": [
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/navstage2_repair_diagnosis_20261124.py",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/scripts/navstage2_repair_20261124_diagnose.py",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/completion/selection_map_transfer.py",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/completion/evidence.py",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/semantic.py",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/types.py",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/scenegraph/relations.py",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/project_paths.py",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navstage2_repair_20261124_v1/validation_queries.jsonl",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/main_experiments/causal_retrieval_full_001/release.json",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/qwen/validation/iterations/selection_r1_map_transfer_20261123_v1/queries.jsonl",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/qwen/validation/iterations/selection_r1_map_transfer_20261123_v1/release.json",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0012/frames.jsonl",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0013/frames.jsonl",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0014/frames.jsonl",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0015/frames.jsonl",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0016/frames.jsonl",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0019/frames.jsonl",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0020/frames.jsonl",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0021/frames.jsonl",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0025/frames.jsonl",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0026/frames.jsonl",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0027/frames.jsonl",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0030/frames.jsonl",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0032/frames.jsonl",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0035/frames.jsonl",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0038/frames.jsonl",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0039/frames.jsonl",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0042/frames.jsonl",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0043/frames.jsonl",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0044/frames.jsonl",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0047/frames.jsonl",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0048/frames.jsonl",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0049/frames.jsonl",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0053/frames.jsonl",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0054/frames.jsonl",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0059/frames.jsonl",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0060/frames.jsonl",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0075/frames.jsonl",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0092/frames.jsonl",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0093/frames.jsonl",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0095/frames.jsonl",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0096/frames.jsonl",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0097/frames.jsonl",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0098/frames.jsonl",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0099/frames.jsonl",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0102/frames.jsonl",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0129/frames.jsonl",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0135/frames.jsonl",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0174/frames.jsonl",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0012/frames.jsonl.gz",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0013/frames.jsonl.gz",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0014/frames.jsonl.gz",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0015/frames.jsonl.gz",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0016/frames.jsonl.gz",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0019/frames.jsonl.gz",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0020/frames.jsonl.gz",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0021/frames.jsonl.gz",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0025/frames.jsonl.gz",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0026/frames.jsonl.gz",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0027/frames.jsonl.gz",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0030/frames.jsonl.gz",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0032/frames.jsonl.gz",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0035/frames.jsonl.gz",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0038/frames.jsonl.gz",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0039/frames.jsonl.gz",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0042/frames.jsonl.gz",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0043/frames.jsonl.gz",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0044/frames.jsonl.gz",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0047/frames.jsonl.gz",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0048/frames.jsonl.gz",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0049/frames.jsonl.gz",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0053/frames.jsonl.gz",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0054/frames.jsonl.gz",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0059/frames.jsonl.gz",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0060/frames.jsonl.gz",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0075/frames.jsonl.gz",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0092/frames.jsonl.gz",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0093/frames.jsonl.gz",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0095/frames.jsonl.gz",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0096/frames.jsonl.gz",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0097/frames.jsonl.gz",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0098/frames.jsonl.gz",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0099/frames.jsonl.gz",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0102/frames.jsonl.gz",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0129/frames.jsonl.gz",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0135/frames.jsonl.gz",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0174/frames.jsonl.gz",
+      "passed": true
+    }
+  ],
+  "snapshot_checks": [
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/navstage2_repair_20261124_diagnosis_v1/source_snapshot/conceptgraph/navigation/navstage2_repair_diagnosis_20261124.py",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/navstage2_repair_20261124_diagnosis_v1/source_snapshot/scripts/navstage2_repair_20261124_diagnose.py",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/navstage2_repair_20261124_diagnosis_v1/source_snapshot/conceptgraph/completion/selection_map_transfer.py",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/navstage2_repair_20261124_diagnosis_v1/source_snapshot/conceptgraph/completion/evidence.py",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/navstage2_repair_20261124_diagnosis_v1/source_snapshot/conceptgraph/navigation/semantic.py",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/navstage2_repair_20261124_diagnosis_v1/source_snapshot/conceptgraph/navigation/types.py",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/navstage2_repair_20261124_diagnosis_v1/source_snapshot/conceptgraph/scenegraph/relations.py",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/navstage2_repair_20261124_diagnosis_v1/source_snapshot/conceptgraph/project_paths.py",
+      "passed": true
+    }
+  ],
+  "split": {
+    "validation_scenes": 38,
+    "validation_logs": 11,
+    "scene_overlap": [],
+    "log_overlap": []
+  },
+  "validation": {
+    "task_counts": {
+      "old_map_original_rule": {
+        "negative_correct_rejection": 374,
+        "tasks": 1115,
+        "no_accepted_object_in_graph": 474,
+        "accepted_object_in_graph_but_no_candidate": 212,
+        "selected_correct": 43,
+        "negative_false_selection": 8,
+        "accepted_candidate_but_not_selected_correct": 4
+      },
+      "R1_map_original_rule": {
+        "negative_correct_rejection": 363,
+        "tasks": 1115,
+        "no_accepted_object_in_graph": 363,
+        "accepted_object_in_graph_but_no_candidate": 279,
+        "selected_correct": 81,
+        "negative_false_selection": 19,
+        "accepted_candidate_but_not_selected_correct": 10
+      }
+    },
+    "blocked_task_subgroups": {
+      "old_map_original_rule": {
+        "query_requires_confirmed_static": 191,
+        "relation_constraint": 13,
+        "maximum_target_distance": 3,
+        "query_requires_confirmed_static | relation_constraint": 5
+      },
+      "R1_map_original_rule": {
+        "query_requires_confirmed_static": 227,
+        "relation_constraint": 33,
+        "maximum_target_distance": 18,
+        "query_requires_confirmed_static | relation_constraint": 1
+      }
+    },
+    "all_node_records": {
+      "old_map_original_rule": {
+        "nodes": 3490,
+        "first:query_requires_confirmed_static": 3076,
+        "all:query_requires_confirmed_static": 3076,
+        "all:evidence:motion_not_verified_static": 3076,
+        "all:maximum_target_distance": 848,
+        "all:compatibility:category_mismatch": 2071,
+        "all:relation_constraint": 850,
+        "first:compatibility:category_mismatch": 226,
+        "first:maximum_target_distance": 13,
+        "first:relation_constraint": 60,
+        "first:passed": 115
+      },
+      "R1_map_original_rule": {
+        "nodes": 5030,
+        "first:query_requires_confirmed_static": 4000,
+        "all:query_requires_confirmed_static": 4000,
+        "all:evidence:motion_not_verified_static": 4000,
+        "all:maximum_target_distance": 1261,
+        "all:compatibility:category_mismatch": 3055,
+        "all:relation_constraint": 1314,
+        "first:compatibility:category_mismatch": 595,
+        "first:maximum_target_distance": 60,
+        "first:passed": 227,
+        "first:relation_constraint": 143,
+        "first:evidence:ambiguous_depth_clusters": 5,
+        "all:evidence:ambiguous_depth_clusters": 5
+      }
+    },
+    "accepted_node_records": {
+      "old_map_original_rule": {
+        "nodes": 299,
+        "first:query_requires_confirmed_static": 218,
+        "motion:dynamic": 153,
+        "all:query_requires_confirmed_static": 218,
+        "all:evidence:motion_not_verified_static": 218,
+        "all:relation_constraint": 125,
+        "all:maximum_target_distance": 40,
+        "motion:unknown": 65,
+        "first:relation_constraint": 30,
+        "motion:static": 81,
+        "first:passed": 48,
+        "first:maximum_target_distance": 3
+      },
+      "R1_map_original_rule": {
+        "nodes": 420,
+        "first:query_requires_confirmed_static": 246,
+        "motion:unknown": 158,
+        "all:query_requires_confirmed_static": 246,
+        "all:evidence:motion_not_verified_static": 246,
+        "all:relation_constraint": 170,
+        "motion:dynamic": 88,
+        "all:maximum_target_distance": 58,
+        "first:passed": 97,
+        "motion:static": 174,
+        "first:relation_constraint": 59,
+        "first:maximum_target_distance": 18
+      }
+    },
+    "original_candidate_sets_and_final_choices_match": true
+  },
+  "historical_28_explanation_only": {
+    "tasks": 28,
+    "task_first_gate_partition": {
+      "query_requires_confirmed_static": 27,
+      "minimum_target_distance": 1
+    },
+    "task_node_record_first_gates": {
+      "query_requires_confirmed_static": 46,
+      "minimum_target_distance": 1
+    },
+    "records": [
+      {
+        "task_id": "reference:scene-0324-main-02",
+        "query": "本次接近观察范围内静止小汽车，而不是卡车",
+        "parsed": {
+          "raw_text": "本次接近观察范围内静止小汽车，而不是卡车",
+          "target_text": "本次接近观察范围内静止小汽车",
+          "anchor_text": null,
+          "relation": null,
+          "prefer_nearest": false,
+          "prefer_front": false,
+          "target_categories": [
+            "car"
+          ],
+          "target_colors": [],
+          "anchor_colors": [],
+          "display_text": "本次接近观察范围内静止小汽车",
+          "query_mode": "class",
+          "near_distance": null,
+          "min_target_distance_m": 6.0,
+          "max_target_distance_m": null,
+          "excluded_categories": [
+            "truck"
+          ],
+          "excluded_colors": [],
+          "requires_static": true
+        },
+        "correct_task_node_records": [
+          {
+            "node_id": "track-00000005",
+            "motion_state": "unknown",
+            "num_detections": 1,
+            "distance_m": 35.67503498032098,
+            "first_failed_gate": "query_requires_confirmed_static",
+            "depth_evidence": [
+              {
+                "mask_pixels": 9172,
+                "valid_pixels": 8,
+                "retained_pixels": 7,
+                "units": "m",
+                "source": "current_projected_lidar",
+                "robust_filter": true,
+                "depth_quantiles_m": [
+                  29.722,
+                  29.7801,
+                  30.145000000000003,
+                  32.1201,
+                  33.994
+                ],
+                "cluster_count": 2,
+                "support_fraction": 0.875,
+                "sufficient_support": true
+              }
+            ]
+          },
+          {
+            "node_id": "track-00000006",
+            "motion_state": "unknown",
+            "num_detections": 1,
+            "distance_m": 16.467333863495295,
+            "first_failed_gate": "query_requires_confirmed_static",
+            "depth_evidence": [
+              {
+                "mask_pixels": 19014,
+                "valid_pixels": 42,
+                "retained_pixels": 33,
+                "units": "m",
+                "source": "current_projected_lidar",
+                "robust_filter": true,
+                "depth_quantiles_m": [
+                  15.383,
+                  15.4018,
+                  15.5615,
+                  28.974300000000003,
+                  47.297
+                ],
+                "cluster_count": 4,
+                "support_fraction": 0.7857142857142857,
+                "sufficient_support": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "task_id": "reference:scene-0324-main-04",
+        "query": "观察范围内若有静止小汽车，请安全接近",
+        "parsed": {
+          "raw_text": "观察范围内若有静止小汽车，请安全接近",
+          "target_text": "观察范围内若有静止小汽车，请安全接近",
+          "anchor_text": null,
+          "relation": null,
+          "prefer_nearest": false,
+          "prefer_front": false,
+          "target_categories": [
+            "car"
+          ],
+          "target_colors": [],
+          "anchor_colors": [],
+          "display_text": "观察范围内若有静止小汽车，请安全接近",
+          "query_mode": "class",
+          "near_distance": null,
+          "min_target_distance_m": 6.0,
+          "max_target_distance_m": null,
+          "excluded_categories": [],
+          "excluded_colors": [],
+          "requires_static": true
+        },
+        "correct_task_node_records": [
+          {
+            "node_id": "track-00000001",
+            "motion_state": "dynamic",
+            "num_detections": 4,
+            "distance_m": 9.227544427707038,
+            "first_failed_gate": "query_requires_confirmed_static",
+            "depth_evidence": [
+              {
+                "mask_pixels": 73582,
+                "valid_pixels": 136,
+                "retained_pixels": 128,
+                "units": "m",
+                "source": "current_projected_lidar",
+                "robust_filter": true,
+                "depth_quantiles_m": [
+                  5.662,
+                  5.824,
+                  6.71,
+                  9.192499999999999,
+                  23.506
+                ],
+                "cluster_count": 4,
+                "support_fraction": 0.9411764705882353,
+                "sufficient_support": true
+              }
+            ]
+          },
+          {
+            "node_id": "track-00000006",
+            "motion_state": "dynamic",
+            "num_detections": 3,
+            "distance_m": 15.693423895270675,
+            "first_failed_gate": "query_requires_confirmed_static",
+            "depth_evidence": [
+              {
+                "mask_pixels": 11648,
+                "valid_pixels": 24,
+                "retained_pixels": 15,
+                "units": "m",
+                "source": "current_projected_lidar",
+                "robust_filter": true,
+                "depth_quantiles_m": [
+                  13.8,
+                  13.8613,
+                  14.566500000000001,
+                  31.456499999999988,
+                  36.879
+                ],
+                "cluster_count": 4,
+                "support_fraction": 0.625,
+                "sufficient_support": true
+              }
+            ]
+          },
+          {
+            "node_id": "track-00000013",
+            "motion_state": "unknown",
+            "num_detections": 1,
+            "distance_m": 20.671389359377226,
+            "first_failed_gate": "query_requires_confirmed_static",
+            "depth_evidence": [
+              {
+                "mask_pixels": 11924,
+                "valid_pixels": 16,
+                "retained_pixels": 14,
+                "units": "m",
+                "source": "current_projected_lidar",
+                "robust_filter": true,
+                "depth_quantiles_m": [
+                  18.857,
+                  18.937,
+                  19.2155,
+                  21.588,
+                  36.818
+                ],
+                "cluster_count": 3,
+                "support_fraction": 0.875,
+                "sufficient_support": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "task_id": "reference:scene-0324-main-12",
+        "query": "将车辆驶向观察范围内静止小汽车旁的合法区域",
+        "parsed": {
+          "raw_text": "将车辆驶向观察范围内静止小汽车旁的合法区域",
+          "target_text": "将车辆驶向观察范围内静止小汽车旁的合法区域",
+          "anchor_text": null,
+          "relation": null,
+          "prefer_nearest": false,
+          "prefer_front": false,
+          "target_categories": [
+            "car"
+          ],
+          "target_colors": [],
+          "anchor_colors": [],
+          "display_text": "将车辆驶向观察范围内静止小汽车旁的合法区域",
+          "query_mode": "class",
+          "near_distance": null,
+          "min_target_distance_m": 6.0,
+          "max_target_distance_m": null,
+          "excluded_categories": [],
+          "excluded_colors": [],
+          "requires_static": true
+        },
+        "correct_task_node_records": [
+          {
+            "node_id": "track-00000036",
+            "motion_state": "dynamic",
+            "num_detections": 2,
+            "distance_m": 16.472302530321166,
+            "first_failed_gate": "query_requires_confirmed_static",
+            "depth_evidence": [
+              {
+                "mask_pixels": 17583,
+                "valid_pixels": 44,
+                "retained_pixels": 28,
+                "units": "m",
+                "source": "current_projected_lidar",
+                "robust_filter": true,
+                "depth_quantiles_m": [
+                  14.11,
+                  14.2753,
+                  15.7995,
+                  50.928000000000054,
+                  56.967
+                ],
+                "cluster_count": 6,
+                "support_fraction": 0.6363636363636364,
+                "sufficient_support": true
+              }
+            ]
+          },
+          {
+            "node_id": "track-00000037",
+            "motion_state": "dynamic",
+            "num_detections": 2,
+            "distance_m": 11.776483057216296,
+            "first_failed_gate": "query_requires_confirmed_static",
+            "depth_evidence": [
+              {
+                "mask_pixels": 39185,
+                "valid_pixels": 83,
+                "retained_pixels": 78,
+                "units": "m",
+                "source": "current_projected_lidar",
+                "robust_filter": true,
+                "depth_quantiles_m": [
+                  8.796,
+                  9.048399999999999,
+                  10.07,
+                  12.0816,
+                  40.995
+                ],
+                "cluster_count": 4,
+                "support_fraction": 0.9397590361445783,
+                "sufficient_support": true
+              }
+            ]
+          },
+          {
+            "node_id": "track-00000040",
+            "motion_state": "unknown",
+            "num_detections": 1,
+            "distance_m": 27.375304916854727,
+            "first_failed_gate": "query_requires_confirmed_static",
+            "depth_evidence": [
+              {
+                "mask_pixels": 3817,
+                "valid_pixels": 9,
+                "retained_pixels": 7,
+                "units": "m",
+                "source": "current_projected_lidar",
+                "robust_filter": true,
+                "depth_quantiles_m": [
+                  25.721,
+                  25.941,
+                  27.031,
+                  31.6564,
+                  31.69
+                ],
+                "cluster_count": 2,
+                "support_fraction": 0.7777777777777778,
+                "sufficient_support": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "task_id": "reference:scene-0261-main-02",
+        "query": "本次接近观察范围内静止公交车，而不是摩托车",
+        "parsed": {
+          "raw_text": "本次接近观察范围内静止公交车，而不是摩托车",
+          "target_text": "本次接近观察范围内静止公交车",
+          "anchor_text": null,
+          "relation": null,
+          "prefer_nearest": false,
+          "prefer_front": false,
+          "target_categories": [
+            "bus"
+          ],
+          "target_colors": [],
+          "anchor_colors": [],
+          "display_text": "本次接近观察范围内静止公交车",
+          "query_mode": "class",
+          "near_distance": null,
+          "min_target_distance_m": 6.0,
+          "max_target_distance_m": null,
+          "excluded_categories": [
+            "motorcycle"
+          ],
+          "excluded_colors": [],
+          "requires_static": true
+        },
+        "correct_task_node_records": [
+          {
+            "node_id": "track-00000000",
+            "motion_state": "dynamic",
+            "num_detections": 2,
+            "distance_m": 16.740127857807675,
+            "first_failed_gate": "query_requires_confirmed_static",
+            "depth_evidence": [
+              {
+                "mask_pixels": 79689,
+                "valid_pixels": 201,
+                "retained_pixels": 156,
+                "units": "m",
+                "source": "current_projected_lidar",
+                "robust_filter": true,
+                "depth_quantiles_m": [
+                  14.009,
+                  14.275,
+                  14.454,
+                  44.47,
+                  58.874
+                ],
+                "cluster_count": 9,
+                "support_fraction": 0.7761194029850746,
+                "sufficient_support": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "task_id": "reference:scene-0261-main-04",
+        "query": "观察范围内若有静止公交车，请安全接近",
+        "parsed": {
+          "raw_text": "观察范围内若有静止公交车，请安全接近",
+          "target_text": "观察范围内若有静止公交车，请安全接近",
+          "anchor_text": null,
+          "relation": null,
+          "prefer_nearest": false,
+          "prefer_front": false,
+          "target_categories": [
+            "bus"
+          ],
+          "target_colors": [],
+          "anchor_colors": [],
+          "display_text": "观察范围内若有静止公交车，请安全接近",
+          "query_mode": "class",
+          "near_distance": null,
+          "min_target_distance_m": 6.0,
+          "max_target_distance_m": null,
+          "excluded_categories": [],
+          "excluded_colors": [],
+          "requires_static": true
+        },
+        "correct_task_node_records": [
+          {
+            "node_id": "track-00000000",
+            "motion_state": "dynamic",
+            "num_detections": 4,
+            "distance_m": 16.698061081786513,
+            "first_failed_gate": "query_requires_confirmed_static",
+            "depth_evidence": [
+              {
+                "mask_pixels": 132630,
+                "valid_pixels": 289,
+                "retained_pixels": 260,
+                "units": "m",
+                "source": "current_projected_lidar",
+                "robust_filter": true,
+                "depth_quantiles_m": [
+                  8.064,
+                  8.9246,
+                  12.78,
+                  24.097399999999872,
+                  50.553
+                ],
+                "cluster_count": 3,
+                "support_fraction": 0.8996539792387543,
+                "sufficient_support": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "task_id": "reference:scene-0261-main-05",
+        "query": "本次接近观察范围内最近的静止公交车，而不是摩托车",
+        "parsed": {
+          "raw_text": "本次接近观察范围内最近的静止公交车，而不是摩托车",
+          "target_text": "本次接近观察范围内最近的静止公交车",
+          "anchor_text": null,
+          "relation": null,
+          "prefer_nearest": true,
+          "prefer_front": false,
+          "target_categories": [
+            "bus"
+          ],
+          "target_colors": [],
+          "anchor_colors": [],
+          "display_text": "本次接近观察范围内最近的静止公交车",
+          "query_mode": "nearest",
+          "near_distance": null,
+          "min_target_distance_m": 0.0,
+          "max_target_distance_m": 35.0,
+          "excluded_categories": [
+            "motorcycle"
+          ],
+          "excluded_colors": [],
+          "requires_static": true
+        },
+        "correct_task_node_records": [
+          {
+            "node_id": "track-00000000",
+            "motion_state": "dynamic",
+            "num_detections": 4,
+            "distance_m": 16.698061081786513,
+            "first_failed_gate": "query_requires_confirmed_static",
+            "depth_evidence": [
+              {
+                "mask_pixels": 132630,
+                "valid_pixels": 289,
+                "retained_pixels": 260,
+                "units": "m",
+                "source": "current_projected_lidar",
+                "robust_filter": true,
+                "depth_quantiles_m": [
+                  8.064,
+                  8.9246,
+                  12.78,
+                  24.097399999999872,
+                  50.553
+                ],
+                "cluster_count": 3,
+                "support_fraction": 0.8996539792387543,
+                "sufficient_support": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "task_id": "reference:scene-0394-main-02",
+        "query": "本次接近观察范围内静止小汽车，而不是卡车",
+        "parsed": {
+          "raw_text": "本次接近观察范围内静止小汽车，而不是卡车",
+          "target_text": "本次接近观察范围内静止小汽车",
+          "anchor_text": null,
+          "relation": null,
+          "prefer_nearest": false,
+          "prefer_front": false,
+          "target_categories": [
+            "car"
+          ],
+          "target_colors": [],
+          "anchor_colors": [],
+          "display_text": "本次接近观察范围内静止小汽车",
+          "query_mode": "class",
+          "near_distance": null,
+          "min_target_distance_m": 6.0,
+          "max_target_distance_m": null,
+          "excluded_categories": [
+            "truck"
+          ],
+          "excluded_colors": [],
+          "requires_static": true
+        },
+        "correct_task_node_records": [
+          {
+            "node_id": "track-00000006",
+            "motion_state": "unknown",
+            "num_detections": 2,
+            "distance_m": 10.738545179120297,
+            "first_failed_gate": "query_requires_confirmed_static",
+            "depth_evidence": [
+              {
+                "mask_pixels": 56599,
+                "valid_pixels": 177,
+                "retained_pixels": 148,
+                "units": "m",
+                "source": "current_projected_lidar",
+                "robust_filter": true,
+                "depth_quantiles_m": [
+                  8.565,
+                  8.624600000000001,
+                  8.961,
+                  23.116400000000002,
+                  34.463
+                ],
+                "cluster_count": 7,
+                "support_fraction": 0.8361581920903954,
+                "sufficient_support": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "task_id": "reference:scene-0394-main-06",
+        "query": "将车辆驶向观察范围内静止小汽车旁的合法区域",
+        "parsed": {
+          "raw_text": "将车辆驶向观察范围内静止小汽车旁的合法区域",
+          "target_text": "将车辆驶向观察范围内静止小汽车旁的合法区域",
+          "anchor_text": null,
+          "relation": null,
+          "prefer_nearest": false,
+          "prefer_front": false,
+          "target_categories": [
+            "car"
+          ],
+          "target_colors": [],
+          "anchor_colors": [],
+          "display_text": "将车辆驶向观察范围内静止小汽车旁的合法区域",
+          "query_mode": "class",
+          "near_distance": null,
+          "min_target_distance_m": 6.0,
+          "max_target_distance_m": null,
+          "excluded_categories": [],
+          "excluded_colors": [],
+          "requires_static": true
+        },
+        "correct_task_node_records": [
+          {
+            "node_id": "track-00000003",
+            "motion_state": "dynamic",
+            "num_detections": 4,
+            "distance_m": 13.664527852669325,
+            "first_failed_gate": "query_requires_confirmed_static",
+            "depth_evidence": [
+              {
+                "mask_pixels": 29118,
+                "valid_pixels": 61,
+                "retained_pixels": 55,
+                "units": "m",
+                "source": "current_projected_lidar",
+                "robust_filter": true,
+                "depth_quantiles_m": [
+                  10.349,
+                  10.416,
+                  11.656,
+                  14.489,
+                  20.276
+                ],
+                "cluster_count": 2,
+                "support_fraction": 0.9016393442622951,
+                "sufficient_support": true
+              }
+            ]
+          },
+          {
+            "node_id": "track-00000013",
+            "motion_state": "dynamic",
+            "num_detections": 4,
+            "distance_m": 18.039859130063043,
+            "first_failed_gate": "query_requires_confirmed_static",
+            "depth_evidence": [
+              {
+                "mask_pixels": 15139,
+                "valid_pixels": 20,
+                "retained_pixels": 11,
+                "units": "m",
+                "source": "current_projected_lidar",
+                "robust_filter": true,
+                "depth_quantiles_m": [
+                  16.169,
+                  16.2412,
+                  17.6725,
+                  27.2686,
+                  28.847
+                ],
+                "cluster_count": 5,
+                "support_fraction": 0.55,
+                "sufficient_support": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "task_id": "reference:scene-0394-main-08",
+        "query": "本次接近观察范围内静止小汽车，而不是卡车",
+        "parsed": {
+          "raw_text": "本次接近观察范围内静止小汽车，而不是卡车",
+          "target_text": "本次接近观察范围内静止小汽车",
+          "anchor_text": null,
+          "relation": null,
+          "prefer_nearest": false,
+          "prefer_front": false,
+          "target_categories": [
+            "car"
+          ],
+          "target_colors": [],
+          "anchor_colors": [],
+          "display_text": "本次接近观察范围内静止小汽车",
+          "query_mode": "class",
+          "near_distance": null,
+          "min_target_distance_m": 6.0,
+          "max_target_distance_m": null,
+          "excluded_categories": [
+            "truck"
+          ],
+          "excluded_colors": [],
+          "requires_static": true
+        },
+        "correct_task_node_records": [
+          {
+            "node_id": "track-00000033",
+            "motion_state": "unknown",
+            "num_detections": 2,
+            "distance_m": 26.551436040046855,
+            "first_failed_gate": "query_requires_confirmed_static",
+            "depth_evidence": [
+              {
+                "mask_pixels": 6357,
+                "valid_pixels": 13,
+                "retained_pixels": 6,
+                "units": "m",
+                "source": "current_projected_lidar",
+                "robust_filter": true,
+                "depth_quantiles_m": [
+                  20.276,
+                  20.840999999999998,
+                  25.629,
+                  29.9408,
+                  32.279
+                ],
+                "cluster_count": 4,
+                "support_fraction": 0.46153846153846156,
+                "sufficient_support": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "task_id": "reference:scene-0394-main-10",
+        "query": "观察范围内若有静止小汽车，请安全接近",
+        "parsed": {
+          "raw_text": "观察范围内若有静止小汽车，请安全接近",
+          "target_text": "观察范围内若有静止小汽车，请安全接近",
+          "anchor_text": null,
+          "relation": null,
+          "prefer_nearest": false,
+          "prefer_front": false,
+          "target_categories": [
+            "car"
+          ],
+          "target_colors": [],
+          "anchor_colors": [],
+          "display_text": "观察范围内若有静止小汽车，请安全接近",
+          "query_mode": "class",
+          "near_distance": null,
+          "min_target_distance_m": 6.0,
+          "max_target_distance_m": null,
+          "excluded_categories": [],
+          "excluded_colors": [],
+          "requires_static": true
+        },
+        "correct_task_node_records": [
+          {
+            "node_id": "track-00000028",
+            "motion_state": "dynamic",
+            "num_detections": 4,
+            "distance_m": 19.938226112619578,
+            "first_failed_gate": "query_requires_confirmed_static",
+            "depth_evidence": [
+              {
+                "mask_pixels": 20308,
+                "valid_pixels": 54,
+                "retained_pixels": 52,
+                "units": "m",
+                "source": "current_projected_lidar",
+                "robust_filter": true,
+                "depth_quantiles_m": [
+                  15.0,
+                  15.1639,
+                  16.441499999999998,
+                  18.2368,
+                  31.177
+                ],
+                "cluster_count": 3,
+                "support_fraction": 0.9629629629629629,
+                "sufficient_support": true
+              }
+            ]
+          },
+          {
+            "node_id": "track-00000033",
+            "motion_state": "dynamic",
+            "num_detections": 4,
+            "distance_m": 14.054869161167472,
+            "first_failed_gate": "query_requires_confirmed_static",
+            "depth_evidence": [
+              {
+                "mask_pixels": 32886,
+                "valid_pixels": 47,
+                "retained_pixels": 28,
+                "units": "m",
+                "source": "current_projected_lidar",
+                "robust_filter": true,
+                "depth_quantiles_m": [
+                  11.711,
+                  11.7418,
+                  12.474,
+                  19.647199999999998,
+                  21.422
+                ],
+                "cluster_count": 3,
+                "support_fraction": 0.5957446808510638,
+                "sufficient_support": true
+              }
+            ]
+          },
+          {
+            "node_id": "track-00000040",
+            "motion_state": "dynamic",
+            "num_detections": 2,
+            "distance_m": 24.553874844275615,
+            "first_failed_gate": "query_requires_confirmed_static",
+            "depth_evidence": [
+              {
+                "mask_pixels": 11092,
+                "valid_pixels": 21,
+                "retained_pixels": 18,
+                "units": "m",
+                "source": "current_projected_lidar",
+                "robust_filter": true,
+                "depth_quantiles_m": [
+                  19.138,
+                  20.332,
+                  21.583,
+                  24.224,
+                  35.624
+                ],
+                "cluster_count": 3,
+                "support_fraction": 0.8571428571428571,
+                "sufficient_support": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "task_id": "reference:scene-0394-main-12",
+        "query": "将车辆驶向观察范围内静止小汽车旁的合法区域",
+        "parsed": {
+          "raw_text": "将车辆驶向观察范围内静止小汽车旁的合法区域",
+          "target_text": "将车辆驶向观察范围内静止小汽车旁的合法区域",
+          "anchor_text": null,
+          "relation": null,
+          "prefer_nearest": false,
+          "prefer_front": false,
+          "target_categories": [
+            "car"
+          ],
+          "target_colors": [],
+          "anchor_colors": [],
+          "display_text": "将车辆驶向观察范围内静止小汽车旁的合法区域",
+          "query_mode": "class",
+          "near_distance": null,
+          "min_target_distance_m": 6.0,
+          "max_target_distance_m": null,
+          "excluded_categories": [],
+          "excluded_colors": [],
+          "requires_static": true
+        },
+        "correct_task_node_records": [
+          {
+            "node_id": "track-00000056",
+            "motion_state": "unknown",
+            "num_detections": 1,
+            "distance_m": 16.972318959087918,
+            "first_failed_gate": "query_requires_confirmed_static",
+            "depth_evidence": [
+              {
+                "mask_pixels": 10481,
+                "valid_pixels": 11,
+                "retained_pixels": 5,
+                "units": "m",
+                "source": "current_projected_lidar",
+                "robust_filter": true,
+                "depth_quantiles_m": [
+                  15.07,
+                  15.126,
+                  18.718,
+                  27.203,
+                  27.785
+                ],
+                "cluster_count": 3,
+                "support_fraction": 0.45454545454545453,
+                "sufficient_support": true
+              }
+            ]
+          },
+          {
+            "node_id": "track-00000057",
+            "motion_state": "unknown",
+            "num_detections": 1,
+            "distance_m": 29.45903597780559,
+            "first_failed_gate": "query_requires_confirmed_static",
+            "depth_evidence": [
+              {
+                "mask_pixels": 7030,
+                "valid_pixels": 8,
+                "retained_pixels": 7,
+                "units": "m",
+                "source": "current_projected_lidar",
+                "robust_filter": true,
+                "depth_quantiles_m": [
+                  27.91,
+                  27.9317,
+                  28.0765,
+                  30.4745,
+                  35.973
+                ],
+                "cluster_count": 2,
+                "support_fraction": 0.875,
+                "sufficient_support": true
+              }
+            ]
+          },
+          {
+            "node_id": "track-00000059",
+            "motion_state": "unknown",
+            "num_detections": 1,
+            "distance_m": 36.600200600867545,
+            "first_failed_gate": "query_requires_confirmed_static",
+            "depth_evidence": [
+              {
+                "mask_pixels": 2812,
+                "valid_pixels": 10,
+                "retained_pixels": 5,
+                "units": "m",
+                "source": "current_projected_lidar",
+                "robust_filter": true,
+                "depth_quantiles_m": [
+                  31.531,
+                  33.2797,
+                  34.897,
+                  35.5213,
+                  35.542
+                ],
+                "cluster_count": 3,
+                "support_fraction": 0.5,
+                "sufficient_support": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "task_id": "reference:scene-0394-main-16",
+        "query": "观察范围内若有静止小汽车，请安全接近",
+        "parsed": {
+          "raw_text": "观察范围内若有静止小汽车，请安全接近",
+          "target_text": "观察范围内若有静止小汽车，请安全接近",
+          "anchor_text": null,
+          "relation": null,
+          "prefer_nearest": false,
+          "prefer_front": false,
+          "target_categories": [
+            "car"
+          ],
+          "target_colors": [],
+          "anchor_colors": [],
+          "display_text": "观察范围内若有静止小汽车，请安全接近",
+          "query_mode": "class",
+          "near_distance": null,
+          "min_target_distance_m": 6.0,
+          "max_target_distance_m": null,
+          "excluded_categories": [],
+          "excluded_colors": [],
+          "requires_static": true
+        },
+        "correct_task_node_records": [
+          {
+            "node_id": "track-00000056",
+            "motion_state": "dynamic",
+            "num_detections": 5,
+            "distance_m": 12.596071356102662,
+            "first_failed_gate": "query_requires_confirmed_static",
+            "depth_evidence": [
+              {
+                "mask_pixels": 39191,
+                "valid_pixels": 93,
+                "retained_pixels": 80,
+                "units": "m",
+                "source": "current_projected_lidar",
+                "robust_filter": true,
+                "depth_quantiles_m": [
+                  9.547,
+                  9.6466,
+                  10.829,
+                  15.796199999999997,
+                  19.882
+                ],
+                "cluster_count": 3,
+                "support_fraction": 0.8602150537634409,
+                "sufficient_support": true
+              }
+            ]
+          },
+          {
+            "node_id": "track-00000064",
+            "motion_state": "dynamic",
+            "num_detections": 4,
+            "distance_m": 19.60252451653908,
+            "first_failed_gate": "query_requires_confirmed_static",
+            "depth_evidence": [
+              {
+                "mask_pixels": 11848,
+                "valid_pixels": 30,
+                "retained_pixels": 17,
+                "units": "m",
+                "source": "current_projected_lidar",
+                "robust_filter": true,
+                "depth_quantiles_m": [
+                  15.964,
+                  16.3427,
+                  19.279,
+                  27.3303,
+                  29.29
+                ],
+                "cluster_count": 3,
+                "support_fraction": 0.5666666666666667,
+                "sufficient_support": true
+              }
+            ]
+          },
+          {
+            "node_id": "track-00000065",
+            "motion_state": "dynamic",
+            "num_detections": 4,
+            "distance_m": 23.252564617429403,
+            "first_failed_gate": "query_requires_confirmed_static",
+            "depth_evidence": [
+              {
+                "mask_pixels": 7021,
+                "valid_pixels": 12,
+                "retained_pixels": 10,
+                "units": "m",
+                "source": "current_projected_lidar",
+                "robust_filter": true,
+                "depth_quantiles_m": [
+                  21.79,
+                  22.0594,
+                  23.048000000000002,
+                  30.919200000000004,
+                  32.941
+                ],
+                "cluster_count": 3,
+                "support_fraction": 0.8333333333333334,
+                "sufficient_support": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "task_id": "reference:scene-0394-main-18",
+        "query": "将车辆驶向观察范围内静止小汽车旁的合法区域",
+        "parsed": {
+          "raw_text": "将车辆驶向观察范围内静止小汽车旁的合法区域",
+          "target_text": "将车辆驶向观察范围内静止小汽车旁的合法区域",
+          "anchor_text": null,
+          "relation": null,
+          "prefer_nearest": false,
+          "prefer_front": false,
+          "target_categories": [
+            "car"
+          ],
+          "target_colors": [],
+          "anchor_colors": [],
+          "display_text": "将车辆驶向观察范围内静止小汽车旁的合法区域",
+          "query_mode": "class",
+          "near_distance": null,
+          "min_target_distance_m": 6.0,
+          "max_target_distance_m": null,
+          "excluded_categories": [],
+          "excluded_colors": [],
+          "requires_static": true
+        },
+        "correct_task_node_records": [
+          {
+            "node_id": "track-00000056",
+            "motion_state": "dynamic",
+            "num_detections": 8,
+            "distance_m": 12.326475142114013,
+            "first_failed_gate": "query_requires_confirmed_static",
+            "depth_evidence": [
+              {
+                "mask_pixels": 41637,
+                "valid_pixels": 105,
+                "retained_pixels": 91,
+                "units": "m",
+                "source": "current_projected_lidar",
+                "robust_filter": true,
+                "depth_quantiles_m": [
+                  9.246,
+                  9.3656,
+                  10.495,
+                  14.8498,
+                  20.469
+                ],
+                "cluster_count": 3,
+                "support_fraction": 0.8666666666666667,
+                "sufficient_support": true
+              }
+            ]
+          },
+          {
+            "node_id": "track-00000064",
+            "motion_state": "dynamic",
+            "num_detections": 7,
+            "distance_m": 17.872669982866697,
+            "first_failed_gate": "query_requires_confirmed_static",
+            "depth_evidence": [
+              {
+                "mask_pixels": 12453,
+                "valid_pixels": 26,
+                "retained_pixels": 19,
+                "units": "m",
+                "source": "current_projected_lidar",
+                "robust_filter": true,
+                "depth_quantiles_m": [
+                  15.279,
+                  15.410499999999999,
+                  16.7295,
+                  26.1555,
+                  27.038
+                ],
+                "cluster_count": 3,
+                "support_fraction": 0.7307692307692307,
+                "sufficient_support": true
+              }
+            ]
+          },
+          {
+            "node_id": "track-00000065",
+            "motion_state": "dynamic",
+            "num_detections": 7,
+            "distance_m": 21.964742596154085,
+            "first_failed_gate": "query_requires_confirmed_static",
+            "depth_evidence": [
+              {
+                "mask_pixels": 6675,
+                "valid_pixels": 8,
+                "retained_pixels": 7,
+                "units": "m",
+                "source": "current_projected_lidar",
+                "robust_filter": true,
+                "depth_quantiles_m": [
+                  20.731,
+                  20.7562,
+                  21.048499999999997,
+                  25.955599999999997,
+                  36.1
+                ],
+                "cluster_count": 2,
+                "support_fraction": 0.875,
+                "sufficient_support": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "task_id": "reference:scene-0252-main-02",
+        "query": "本次接近观察范围内静止小汽车，而不是卡车",
+        "parsed": {
+          "raw_text": "本次接近观察范围内静止小汽车，而不是卡车",
+          "target_text": "本次接近观察范围内静止小汽车",
+          "anchor_text": null,
+          "relation": null,
+          "prefer_nearest": false,
+          "prefer_front": false,
+          "target_categories": [
+            "car"
+          ],
+          "target_colors": [],
+          "anchor_colors": [],
+          "display_text": "本次接近观察范围内静止小汽车",
+          "query_mode": "class",
+          "near_distance": null,
+          "min_target_distance_m": 6.0,
+          "max_target_distance_m": null,
+          "excluded_categories": [
+            "truck"
+          ],
+          "excluded_colors": [],
+          "requires_static": true
+        },
+        "correct_task_node_records": [
+          {
+            "node_id": "track-00000001",
+            "motion_state": "dynamic",
+            "num_detections": 2,
+            "distance_m": 28.567392614115967,
+            "first_failed_gate": "query_requires_confirmed_static",
+            "depth_evidence": [
+              {
+                "mask_pixels": 7105,
+                "valid_pixels": 14,
+                "retained_pixels": 5,
+                "units": "m",
+                "source": "current_projected_lidar",
+                "robust_filter": true,
+                "depth_quantiles_m": [
+                  27.321,
+                  27.3631,
+                  40.1515,
+                  43.616800000000005,
+                  53.155
+                ],
+                "cluster_count": 4,
+                "support_fraction": 0.35714285714285715,
+                "sufficient_support": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "task_id": "reference:scene-0252-main-04",
+        "query": "观察范围内若有静止小汽车，请安全接近",
+        "parsed": {
+          "raw_text": "观察范围内若有静止小汽车，请安全接近",
+          "target_text": "观察范围内若有静止小汽车，请安全接近",
+          "anchor_text": null,
+          "relation": null,
+          "prefer_nearest": false,
+          "prefer_front": false,
+          "target_categories": [
+            "car"
+          ],
+          "target_colors": [],
+          "anchor_colors": [],
+          "display_text": "观察范围内若有静止小汽车，请安全接近",
+          "query_mode": "class",
+          "near_distance": null,
+          "min_target_distance_m": 6.0,
+          "max_target_distance_m": null,
+          "excluded_categories": [],
+          "excluded_colors": [],
+          "requires_static": true
+        },
+        "correct_task_node_records": [
+          {
+            "node_id": "track-00000001",
+            "motion_state": "dynamic",
+            "num_detections": 4,
+            "distance_m": 21.9577560228095,
+            "first_failed_gate": "query_requires_confirmed_static",
+            "depth_evidence": [
+              {
+                "mask_pixels": 9603,
+                "valid_pixels": 25,
+                "retained_pixels": 7,
+                "units": "m",
+                "source": "current_projected_lidar",
+                "robust_filter": true,
+                "depth_quantiles_m": [
+                  12.956,
+                  20.438,
+                  26.552,
+                  34.5378,
+                  36.871
+                ],
+                "cluster_count": 9,
+                "support_fraction": 0.28,
+                "sufficient_support": true
+              }
+            ]
+          },
+          {
+            "node_id": "track-00000009",
+            "motion_state": "unknown",
+            "num_detections": 1,
+            "distance_m": 34.18914952005254,
+            "first_failed_gate": "query_requires_confirmed_static",
+            "depth_evidence": [
+              {
+                "mask_pixels": 3267,
+                "valid_pixels": 11,
+                "retained_pixels": 8,
+                "units": "m",
+                "source": "current_projected_lidar",
+                "robust_filter": true,
+                "depth_quantiles_m": [
+                  32.812,
+                  32.906,
+                  33.223,
+                  38.63,
+                  50.63
+                ],
+                "cluster_count": 4,
+                "support_fraction": 0.7272727272727273,
+                "sufficient_support": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "task_id": "reference:scene-0252-main-06",
+        "query": "将车辆驶向观察范围内静止小汽车旁的合法区域",
+        "parsed": {
+          "raw_text": "将车辆驶向观察范围内静止小汽车旁的合法区域",
+          "target_text": "将车辆驶向观察范围内静止小汽车旁的合法区域",
+          "anchor_text": null,
+          "relation": null,
+          "prefer_nearest": false,
+          "prefer_front": false,
+          "target_categories": [
+            "car"
+          ],
+          "target_colors": [],
+          "anchor_colors": [],
+          "display_text": "将车辆驶向观察范围内静止小汽车旁的合法区域",
+          "query_mode": "class",
+          "near_distance": null,
+          "min_target_distance_m": 6.0,
+          "max_target_distance_m": null,
+          "excluded_categories": [],
+          "excluded_colors": [],
+          "requires_static": true
+        },
+        "correct_task_node_records": [
+          {
+            "node_id": "track-00000001",
+            "motion_state": "dynamic",
+            "num_detections": 6,
+            "distance_m": 16.82596609891297,
+            "first_failed_gate": "query_requires_confirmed_static",
+            "depth_evidence": [
+              {
+                "mask_pixels": 29354,
+                "valid_pixels": 57,
+                "retained_pixels": 42,
+                "units": "m",
+                "source": "current_projected_lidar",
+                "robust_filter": true,
+                "depth_quantiles_m": [
+                  14.132,
+                  14.1556,
+                  15.004,
+                  21.8974,
+                  30.583
+                ],
+                "cluster_count": 5,
+                "support_fraction": 0.7368421052631579,
+                "sufficient_support": true
+              }
+            ]
+          },
+          {
+            "node_id": "track-00000009",
+            "motion_state": "dynamic",
+            "num_detections": 3,
+            "distance_m": 27.459512133805166,
+            "first_failed_gate": "query_requires_confirmed_static",
+            "depth_evidence": [
+              {
+                "mask_pixels": 5332,
+                "valid_pixels": 16,
+                "retained_pixels": 5,
+                "units": "m",
+                "source": "current_projected_lidar",
+                "robust_filter": true,
+                "depth_quantiles_m": [
+                  26.444,
+                  26.515,
+                  35.0355,
+                  46.6695,
+                  47.702
+                ],
+                "cluster_count": 5,
+                "support_fraction": 0.3125,
+                "sufficient_support": true
+              }
+            ]
+          },
+          {
+            "node_id": "track-00000012",
+            "motion_state": "dynamic",
+            "num_detections": 2,
+            "distance_m": 21.788928738045623,
+            "first_failed_gate": "query_requires_confirmed_static",
+            "depth_evidence": [
+              {
+                "mask_pixels": 9235,
+                "valid_pixels": 22,
+                "retained_pixels": 11,
+                "units": "m",
+                "source": "current_projected_lidar",
+                "robust_filter": true,
+                "depth_quantiles_m": [
+                  20.185,
+                  20.2241,
+                  23.7775,
+                  32.1227,
+                  35.096
+                ],
+                "cluster_count": 5,
+                "support_fraction": 0.5,
+                "sufficient_support": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "task_id": "reference:scene-0252-main-08",
+        "query": "本次接近观察范围内静止小汽车，而不是卡车",
+        "parsed": {
+          "raw_text": "本次接近观察范围内静止小汽车，而不是卡车",
+          "target_text": "本次接近观察范围内静止小汽车",
+          "anchor_text": null,
+          "relation": null,
+          "prefer_nearest": false,
+          "prefer_front": false,
+          "target_categories": [
+            "car"
+          ],
+          "target_colors": [],
+          "anchor_colors": [],
+          "display_text": "本次接近观察范围内静止小汽车",
+          "query_mode": "class",
+          "near_distance": null,
+          "min_target_distance_m": 6.0,
+          "max_target_distance_m": null,
+          "excluded_categories": [
+            "truck"
+          ],
+          "excluded_colors": [],
+          "requires_static": true
+        },
+        "correct_task_node_records": [
+          {
+            "node_id": "track-00000009",
+            "motion_state": "dynamic",
+            "num_detections": 5,
+            "distance_m": 23.15862682766041,
+            "first_failed_gate": "query_requires_confirmed_static",
+            "depth_evidence": [
+              {
+                "mask_pixels": 10594,
+                "valid_pixels": 34,
+                "retained_pixels": 19,
+                "units": "m",
+                "source": "current_projected_lidar",
+                "robust_filter": true,
+                "depth_quantiles_m": [
+                  20.414,
+                  20.5363,
+                  23.3755,
+                  37.625899999999994,
+                  40.653
+                ],
+                "cluster_count": 6,
+                "support_fraction": 0.5588235294117647,
+                "sufficient_support": true
+              }
+            ]
+          },
+          {
+            "node_id": "track-00000012",
+            "motion_state": "dynamic",
+            "num_detections": 4,
+            "distance_m": 16.60351450219016,
+            "first_failed_gate": "query_requires_confirmed_static",
+            "depth_evidence": [
+              {
+                "mask_pixels": 21125,
+                "valid_pixels": 52,
+                "retained_pixels": 42,
+                "units": "m",
+                "source": "current_projected_lidar",
+                "robust_filter": true,
+                "depth_quantiles_m": [
+                  14.207,
+                  14.2288,
+                  14.572,
+                  23.155199999999997,
+                  24.593
+                ],
+                "cluster_count": 4,
+                "support_fraction": 0.8076923076923077,
+                "sufficient_support": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "task_id": "reference:scene-0386-main-06",
+        "query": "将车辆驶向观察范围内静止小汽车旁的合法区域",
+        "parsed": {
+          "raw_text": "将车辆驶向观察范围内静止小汽车旁的合法区域",
+          "target_text": "将车辆驶向观察范围内静止小汽车旁的合法区域",
+          "anchor_text": null,
+          "relation": null,
+          "prefer_nearest": false,
+          "prefer_front": false,
+          "target_categories": [
+            "car"
+          ],
+          "target_colors": [],
+          "anchor_colors": [],
+          "display_text": "将车辆驶向观察范围内静止小汽车旁的合法区域",
+          "query_mode": "class",
+          "near_distance": null,
+          "min_target_distance_m": 6.0,
+          "max_target_distance_m": null,
+          "excluded_categories": [],
+          "excluded_colors": [],
+          "requires_static": true
+        },
+        "correct_task_node_records": [
+          {
+            "node_id": "track-00000000",
+            "motion_state": "dynamic",
+            "num_detections": 6,
+            "distance_m": 14.488633524009074,
+            "first_failed_gate": "query_requires_confirmed_static",
+            "depth_evidence": [
+              {
+                "mask_pixels": 30470,
+                "valid_pixels": 73,
+                "retained_pixels": 70,
+                "units": "m",
+                "source": "current_projected_lidar",
+                "robust_filter": true,
+                "depth_quantiles_m": [
+                  12.588,
+                  12.6184,
+                  12.991,
+                  15.471200000000001,
+                  46.125
+                ],
+                "cluster_count": 3,
+                "support_fraction": 0.958904109589041,
+                "sufficient_support": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "task_id": "reference:scene-0386-main-08",
+        "query": "本次接近观察范围内静止小汽车，而不是卡车",
+        "parsed": {
+          "raw_text": "本次接近观察范围内静止小汽车，而不是卡车",
+          "target_text": "本次接近观察范围内静止小汽车",
+          "anchor_text": null,
+          "relation": null,
+          "prefer_nearest": false,
+          "prefer_front": false,
+          "target_categories": [
+            "car"
+          ],
+          "target_colors": [],
+          "anchor_colors": [],
+          "display_text": "本次接近观察范围内静止小汽车",
+          "query_mode": "class",
+          "near_distance": null,
+          "min_target_distance_m": 6.0,
+          "max_target_distance_m": null,
+          "excluded_categories": [
+            "truck"
+          ],
+          "excluded_colors": [],
+          "requires_static": true
+        },
+        "correct_task_node_records": [
+          {
+            "node_id": "track-00000000",
+            "motion_state": "dynamic",
+            "num_detections": 8,
+            "distance_m": 10.496280249720808,
+            "first_failed_gate": "query_requires_confirmed_static",
+            "depth_evidence": [
+              {
+                "mask_pixels": 61791,
+                "valid_pixels": 137,
+                "retained_pixels": 128,
+                "units": "m",
+                "source": "current_projected_lidar",
+                "robust_filter": true,
+                "depth_quantiles_m": [
+                  8.482,
+                  8.5228,
+                  8.765,
+                  12.011400000000004,
+                  53.154
+                ],
+                "cluster_count": 5,
+                "support_fraction": 0.9343065693430657,
+                "sufficient_support": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "task_id": "reference:scene-0386-main-14",
+        "query": "本次接近观察范围内静止小汽车，而不是卡车",
+        "parsed": {
+          "raw_text": "本次接近观察范围内静止小汽车，而不是卡车",
+          "target_text": "本次接近观察范围内静止小汽车",
+          "anchor_text": null,
+          "relation": null,
+          "prefer_nearest": false,
+          "prefer_front": false,
+          "target_categories": [
+            "car"
+          ],
+          "target_colors": [],
+          "anchor_colors": [],
+          "display_text": "本次接近观察范围内静止小汽车",
+          "query_mode": "class",
+          "near_distance": null,
+          "min_target_distance_m": 6.0,
+          "max_target_distance_m": null,
+          "excluded_categories": [
+            "truck"
+          ],
+          "excluded_colors": [],
+          "requires_static": true
+        },
+        "correct_task_node_records": [
+          {
+            "node_id": "track-00000000",
+            "motion_state": "dynamic",
+            "num_detections": 14,
+            "distance_m": 6.062741137073697,
+            "first_failed_gate": "query_requires_confirmed_static",
+            "depth_evidence": [
+              {
+                "mask_pixels": 173728,
+                "valid_pixels": 222,
+                "retained_pixels": 190,
+                "units": "m",
+                "source": "current_projected_lidar",
+                "robust_filter": true,
+                "depth_quantiles_m": [
+                  3.296,
+                  3.4494,
+                  4.4,
+                  55.791000000000075,
+                  60.848
+                ],
+                "cluster_count": 6,
+                "support_fraction": 0.8558558558558559,
+                "sufficient_support": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "task_id": "reference:scene-0386-main-16",
+        "query": "观察范围内若有静止小汽车，请安全接近",
+        "parsed": {
+          "raw_text": "观察范围内若有静止小汽车，请安全接近",
+          "target_text": "观察范围内若有静止小汽车，请安全接近",
+          "anchor_text": null,
+          "relation": null,
+          "prefer_nearest": false,
+          "prefer_front": false,
+          "target_categories": [
+            "car"
+          ],
+          "target_colors": [],
+          "anchor_colors": [],
+          "display_text": "观察范围内若有静止小汽车，请安全接近",
+          "query_mode": "class",
+          "near_distance": null,
+          "min_target_distance_m": 6.0,
+          "max_target_distance_m": null,
+          "excluded_categories": [],
+          "excluded_colors": [],
+          "requires_static": true
+        },
+        "correct_task_node_records": [
+          {
+            "node_id": "track-00000000",
+            "motion_state": "static",
+            "num_detections": 16,
+            "distance_m": 5.872303430921838,
+            "first_failed_gate": "minimum_target_distance",
+            "depth_evidence": [
+              {
+                "mask_pixels": 163860,
+                "valid_pixels": 199,
+                "retained_pixels": 176,
+                "units": "m",
+                "source": "current_projected_lidar",
+                "robust_filter": true,
+                "depth_quantiles_m": [
+                  3.269,
+                  3.4626,
+                  4.369,
+                  38.766000000000005,
+                  59.994
+                ],
+                "cluster_count": 6,
+                "support_fraction": 0.8844221105527639,
+                "sufficient_support": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "task_id": "reference:scene-0253-main-02",
+        "query": "本次接近观察范围内静止小汽车，而不是卡车",
+        "parsed": {
+          "raw_text": "本次接近观察范围内静止小汽车，而不是卡车",
+          "target_text": "本次接近观察范围内静止小汽车",
+          "anchor_text": null,
+          "relation": null,
+          "prefer_nearest": false,
+          "prefer_front": false,
+          "target_categories": [
+            "car"
+          ],
+          "target_colors": [],
+          "anchor_colors": [],
+          "display_text": "本次接近观察范围内静止小汽车",
+          "query_mode": "class",
+          "near_distance": null,
+          "min_target_distance_m": 6.0,
+          "max_target_distance_m": null,
+          "excluded_categories": [
+            "truck"
+          ],
+          "excluded_colors": [],
+          "requires_static": true
+        },
+        "correct_task_node_records": [
+          {
+            "node_id": "track-00000004",
+            "motion_state": "unknown",
+            "num_detections": 1,
+            "distance_m": 23.49788385878557,
+            "first_failed_gate": "query_requires_confirmed_static",
+            "depth_evidence": [
+              {
+                "mask_pixels": 10059,
+                "valid_pixels": 31,
+                "retained_pixels": 17,
+                "units": "m",
+                "source": "current_projected_lidar",
+                "robust_filter": true,
+                "depth_quantiles_m": [
+                  21.366,
+                  21.393,
+                  23.426,
+                  40.767,
+                  43.145
+                ],
+                "cluster_count": 4,
+                "support_fraction": 0.5483870967741935,
+                "sufficient_support": true
+              }
+            ]
+          },
+          {
+            "node_id": "track-00000006",
+            "motion_state": "unknown",
+            "num_detections": 1,
+            "distance_m": 28.921040517514587,
+            "first_failed_gate": "query_requires_confirmed_static",
+            "depth_evidence": [
+              {
+                "mask_pixels": 4917,
+                "valid_pixels": 13,
+                "retained_pixels": 10,
+                "units": "m",
+                "source": "current_projected_lidar",
+                "robust_filter": true,
+                "depth_quantiles_m": [
+                  26.407,
+                  26.4472,
+                  28.543,
+                  34.11,
+                  34.134
+                ],
+                "cluster_count": 2,
+                "support_fraction": 0.7692307692307693,
+                "sufficient_support": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "task_id": "reference:scene-0324-challenge-06",
+        "query": "观察范围内若有最近的静止小汽车，请安全接近",
+        "parsed": {
+          "raw_text": "观察范围内若有最近的静止小汽车，请安全接近",
+          "target_text": "观察范围内若有最近的静止小汽车，请安全接近",
+          "anchor_text": null,
+          "relation": null,
+          "prefer_nearest": true,
+          "prefer_front": false,
+          "target_categories": [
+            "car"
+          ],
+          "target_colors": [],
+          "anchor_colors": [],
+          "display_text": "观察范围内若有最近的静止小汽车，请安全接近",
+          "query_mode": "nearest",
+          "near_distance": null,
+          "min_target_distance_m": 0.0,
+          "max_target_distance_m": 35.0,
+          "excluded_categories": [],
+          "excluded_colors": [],
+          "requires_static": true
+        },
+        "correct_task_node_records": [
+          {
+            "node_id": "track-00000001",
+            "motion_state": "dynamic",
+            "num_detections": 4,
+            "distance_m": 9.227544427707038,
+            "first_failed_gate": "query_requires_confirmed_static",
+            "depth_evidence": [
+              {
+                "mask_pixels": 73582,
+                "valid_pixels": 136,
+                "retained_pixels": 128,
+                "units": "m",
+                "source": "current_projected_lidar",
+                "robust_filter": true,
+                "depth_quantiles_m": [
+                  5.662,
+                  5.824,
+                  6.71,
+                  9.192499999999999,
+                  23.506
+                ],
+                "cluster_count": 4,
+                "support_fraction": 0.9411764705882353,
+                "sufficient_support": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "task_id": "reference:scene-0261-challenge-06",
+        "query": "观察范围内若有最近的静止公交车，请安全接近",
+        "parsed": {
+          "raw_text": "观察范围内若有最近的静止公交车，请安全接近",
+          "target_text": "观察范围内若有最近的静止公交车，请安全接近",
+          "anchor_text": null,
+          "relation": null,
+          "prefer_nearest": true,
+          "prefer_front": false,
+          "target_categories": [
+            "bus"
+          ],
+          "target_colors": [],
+          "anchor_colors": [],
+          "display_text": "观察范围内若有最近的静止公交车，请安全接近",
+          "query_mode": "nearest",
+          "near_distance": null,
+          "min_target_distance_m": 0.0,
+          "max_target_distance_m": 35.0,
+          "excluded_categories": [],
+          "excluded_colors": [],
+          "requires_static": true
+        },
+        "correct_task_node_records": [
+          {
+            "node_id": "track-00000000",
+            "motion_state": "dynamic",
+            "num_detections": 2,
+            "distance_m": 16.740127857807675,
+            "first_failed_gate": "query_requires_confirmed_static",
+            "depth_evidence": [
+              {
+                "mask_pixels": 79689,
+                "valid_pixels": 201,
+                "retained_pixels": 156,
+                "units": "m",
+                "source": "current_projected_lidar",
+                "robust_filter": true,
+                "depth_quantiles_m": [
+                  14.009,
+                  14.275,
+                  14.454,
+                  44.47,
+                  58.874
+                ],
+                "cluster_count": 9,
+                "support_fraction": 0.7761194029850746,
+                "sufficient_support": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "task_id": "reference:scene-0261-challenge-07",
+        "query": "观察范围内若有最近的静止公交车，请安全接近",
+        "parsed": {
+          "raw_text": "观察范围内若有最近的静止公交车，请安全接近",
+          "target_text": "观察范围内若有最近的静止公交车，请安全接近",
+          "anchor_text": null,
+          "relation": null,
+          "prefer_nearest": true,
+          "prefer_front": false,
+          "target_categories": [
+            "bus"
+          ],
+          "target_colors": [],
+          "anchor_colors": [],
+          "display_text": "观察范围内若有最近的静止公交车，请安全接近",
+          "query_mode": "nearest",
+          "near_distance": null,
+          "min_target_distance_m": 0.0,
+          "max_target_distance_m": 35.0,
+          "excluded_categories": [],
+          "excluded_colors": [],
+          "requires_static": true
+        },
+        "correct_task_node_records": [
+          {
+            "node_id": "track-00000000",
+            "motion_state": "dynamic",
+            "num_detections": 4,
+            "distance_m": 16.698061081786513,
+            "first_failed_gate": "query_requires_confirmed_static",
+            "depth_evidence": [
+              {
+                "mask_pixels": 132630,
+                "valid_pixels": 289,
+                "retained_pixels": 260,
+                "units": "m",
+                "source": "current_projected_lidar",
+                "robust_filter": true,
+                "depth_quantiles_m": [
+                  8.064,
+                  8.9246,
+                  12.78,
+                  24.097399999999872,
+                  50.553
+                ],
+                "cluster_count": 3,
+                "support_fraction": 0.8996539792387543,
+                "sufficient_support": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "task_id": "reference:scene-0394-challenge-05",
+        "query": "观察范围内若有最近的静止小汽车，请安全接近",
+        "parsed": {
+          "raw_text": "观察范围内若有最近的静止小汽车，请安全接近",
+          "target_text": "观察范围内若有最近的静止小汽车，请安全接近",
+          "anchor_text": null,
+          "relation": null,
+          "prefer_nearest": true,
+          "prefer_front": false,
+          "target_categories": [
+            "car"
+          ],
+          "target_colors": [],
+          "anchor_colors": [],
+          "display_text": "观察范围内若有最近的静止小汽车，请安全接近",
+          "query_mode": "nearest",
+          "near_distance": null,
+          "min_target_distance_m": 0.0,
+          "max_target_distance_m": 35.0,
+          "excluded_categories": [],
+          "excluded_colors": [],
+          "requires_static": true
+        },
+        "correct_task_node_records": [
+          {
+            "node_id": "track-00000006",
+            "motion_state": "unknown",
+            "num_detections": 2,
+            "distance_m": 10.738545179120297,
+            "first_failed_gate": "query_requires_confirmed_static",
+            "depth_evidence": [
+              {
+                "mask_pixels": 56599,
+                "valid_pixels": 177,
+                "retained_pixels": 148,
+                "units": "m",
+                "source": "current_projected_lidar",
+                "robust_filter": true,
+                "depth_quantiles_m": [
+                  8.565,
+                  8.624600000000001,
+                  8.961,
+                  23.116400000000002,
+                  34.463
+                ],
+                "cluster_count": 7,
+                "support_fraction": 0.8361581920903954,
+                "sufficient_support": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "task_id": "reference:scene-0252-challenge-04",
+        "query": "观察范围内若有最近的静止小汽车，请安全接近",
+        "parsed": {
+          "raw_text": "观察范围内若有最近的静止小汽车，请安全接近",
+          "target_text": "观察范围内若有最近的静止小汽车，请安全接近",
+          "anchor_text": null,
+          "relation": null,
+          "prefer_nearest": true,
+          "prefer_front": false,
+          "target_categories": [
+            "car"
+          ],
+          "target_colors": [],
+          "anchor_colors": [],
+          "display_text": "观察范围内若有最近的静止小汽车，请安全接近",
+          "query_mode": "nearest",
+          "near_distance": null,
+          "min_target_distance_m": 0.0,
+          "max_target_distance_m": 35.0,
+          "excluded_categories": [],
+          "excluded_colors": [],
+          "requires_static": true
+        },
+        "correct_task_node_records": [
+          {
+            "node_id": "track-00000001",
+            "motion_state": "dynamic",
+            "num_detections": 2,
+            "distance_m": 28.567392614115967,
+            "first_failed_gate": "query_requires_confirmed_static",
+            "depth_evidence": [
+              {
+                "mask_pixels": 7105,
+                "valid_pixels": 14,
+                "retained_pixels": 5,
+                "units": "m",
+                "source": "current_projected_lidar",
+                "robust_filter": true,
+                "depth_quantiles_m": [
+                  27.321,
+                  27.3631,
+                  40.1515,
+                  43.616800000000005,
+                  53.155
+                ],
+                "cluster_count": 4,
+                "support_fraction": 0.35714285714285715,
+                "sufficient_support": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "task_id": "reference:scene-0386-challenge-03",
+        "query": "目标是在行人右侧的静止小汽车，请接近它",
+        "parsed": {
+          "raw_text": "目标是在行人右侧的静止小汽车，请接近它",
+          "target_text": "静止小汽车，请接近它",
+          "anchor_text": "目标是在行人",
+          "relation": "right_of",
+          "prefer_nearest": false,
+          "prefer_front": false,
+          "target_categories": [
+            "car"
+          ],
+          "target_colors": [],
+          "anchor_colors": [],
+          "display_text": "目标是在行人右侧的静止小汽车，请接近它",
+          "query_mode": "right_side",
+          "near_distance": null,
+          "min_target_distance_m": 0.0,
+          "max_target_distance_m": 45.0,
+          "excluded_categories": [],
+          "excluded_colors": [],
+          "requires_static": true
+        },
+        "correct_task_node_records": [
+          {
+            "node_id": "track-00000000",
+            "motion_state": "dynamic",
+            "num_detections": 8,
+            "distance_m": 10.496280249720808,
+            "first_failed_gate": "query_requires_confirmed_static",
+            "depth_evidence": [
+              {
+                "mask_pixels": 61791,
+                "valid_pixels": 137,
+                "retained_pixels": 128,
+                "units": "m",
+                "source": "current_projected_lidar",
+                "robust_filter": true,
+                "depth_quantiles_m": [
+                  8.482,
+                  8.5228,
+                  8.765,
+                  12.011400000000004,
+                  53.154
+                ],
+                "cluster_count": 5,
+                "support_fraction": 0.9343065693430657,
+                "sufficient_support": true
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "used_to_choose_fixes": false
+  },
+  "new_code_fix_verified": false,
+  "no_model_or_planner_calls": true,
+  "protection": {
+    "checked": 95,
+    "unchanged": true,
+    "changed": []
+  }
+}

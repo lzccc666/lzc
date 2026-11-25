@@ -1,0 +1,1447 @@
+{
+  "created_utc": "2026-11-24T13:49:12.522113+00:00",
+  "passed": true,
+  "failures": [],
+  "hash_checks": [
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navsemantic_tasks_20261124_v3/preregistration.json",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navsemantic_tasks_20261124_v3/three_task_readiness.json",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navsemantic_tasks_20261124_v3/evaluation_only/scene-0013_f0_follow_reference.json",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navsemantic_tasks_20261124_v3/evaluation_only/scene-0013_f10_follow_reference.json",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navsemantic_tasks_20261124_v3/evaluation_only/scene-0042_f0_follow_reference.json",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navsemantic_tasks_20261124_v3/evaluation_only/scene-0042_f10_follow_reference.json",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navsemantic_tasks_20261124_v3/evaluation_only/task_candidates.jsonl",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navsemantic_tasks_20261124_v3/evaluation_only/official_selected_frames.jsonl",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navsemantic_tasks_20261124_v3/method_inputs/follow_tasks.jsonl",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/completion/navsemantic_tasks_20261124.py",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/scripts/navsemantic_tasks_20261124_prepare.py",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/raw/nuscenes_trainval/v1.0-trainval/sample_data.json",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/raw/nuscenes_trainval/v1.0-trainval/ego_pose.json",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/raw/nuscenes_trainval/v1.0-trainval/sample_annotation.json",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/raw/nuscenes_trainval/v1.0-trainval/category.json",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/raw/nuscenes_trainval/v1.0-trainval/instance.json",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/raw/nuscenes_trainval/v1.0-trainval/log.json",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/mv136_20261123_sixscene_v1/manifest.json",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navsemantic_tasks_20261124_v2/evaluation_only/official_selected_frames.jsonl",
+      "passed": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/nuscenes_map_expansion/expansion/singapore-onenorth.json",
+      "passed": true
+    }
+  ],
+  "fixed_candidates": 12,
+  "target_bound": 4,
+  "no_current_matching_target": 8,
+  "geometry_time_feasible": 3,
+  "pending": 9,
+  "method_evaluated": false,
+  "inference_checks": [
+    {
+      "task_id": "scene-0012:f0:follow-nearest-same-route-v1",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "task_id": "scene-0012:f10:follow-nearest-same-route-v1",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "task_id": "scene-0013:f0:follow-nearest-same-route-v1",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "task_id": "scene-0013:f10:follow-nearest-same-route-v1",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "task_id": "scene-0019:f0:follow-nearest-same-route-v1",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "task_id": "scene-0019:f10:follow-nearest-same-route-v1",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "task_id": "scene-0035:f0:follow-nearest-same-route-v1",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "task_id": "scene-0035:f10:follow-nearest-same-route-v1",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "task_id": "scene-0042:f0:follow-nearest-same-route-v1",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "task_id": "scene-0042:f10:follow-nearest-same-route-v1",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "task_id": "scene-0047:f0:follow-nearest-same-route-v1",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "task_id": "scene-0047:f10:follow-nearest-same-route-v1",
+      "passed": true,
+      "failures": []
+    }
+  ],
+  "witness_replays": [
+    {
+      "passed": true,
+      "failures": [],
+      "states": 35,
+      "maximum_interpolation_residual": 0.0,
+      "minimum_body_gap_m": 24.155337509782548,
+      "maximum_body_gap_m": 26.158960802755086,
+      "checks": [
+        {
+          "time_s": 0.0,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 26.158960802755086
+        },
+        {
+          "time_s": 0.08340481917063396,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 26.005608228995712
+        },
+        {
+          "time_s": 0.1668096383412679,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 25.85208589958819
+        },
+        {
+          "time_s": 0.25021445751190186,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 25.697913713564354
+        },
+        {
+          "time_s": 0.3336192766825358,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 25.543814325755243
+        },
+        {
+          "time_s": 0.4170240958531698,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 25.388871346316456
+        },
+        {
+          "time_s": 0.5004289150238037,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 25.234247089437616
+        },
+        {
+          "time_s": 0.5838319063186646,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 25.102927594818276
+        },
+        {
+          "time_s": 0.6672348976135254,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 24.972821857076184
+        },
+        {
+          "time_s": 0.7506378889083862,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 24.84272048379114
+        },
+        {
+          "time_s": 0.8340408802032471,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 24.712608950653653
+        },
+        {
+          "time_s": 0.9174438714981079,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 24.58250149083296
+        },
+        {
+          "time_s": 1.0008468627929688,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 24.452412337370603
+        },
+        {
+          "time_s": 1.1008240699768066,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 24.411866431225803
+        },
+        {
+          "time_s": 1.2008012771606444,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 24.37129410789329
+        },
+        {
+          "time_s": 1.3007784843444825,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 24.33073956029388
+        },
+        {
+          "time_s": 1.4007556915283204,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 24.29051936996536
+        },
+        {
+          "time_s": 1.5007328987121582,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 24.250060762447255
+        },
+        {
+          "time_s": 1.5841347376505535,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 24.234259418861704
+        },
+        {
+          "time_s": 1.6675365765889485,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 24.218471904611455
+        },
+        {
+          "time_s": 1.7509384155273438,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 24.202710852365385
+        },
+        {
+          "time_s": 1.834340254465739,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 24.18698889403187
+        },
+        {
+          "time_s": 1.9177420934041343,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 24.17096050613568
+        },
+        {
+          "time_s": 2.0011439323425293,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 24.155337509782548
+        },
+        {
+          "time_s": 2.101134729385376,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 24.166425578518485
+        },
+        {
+          "time_s": 2.2011255264282226,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 24.17756878690554
+        },
+        {
+          "time_s": 2.3011163234710694,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 24.189205995002624
+        },
+        {
+          "time_s": 2.401107120513916,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 24.200529256308485
+        },
+        {
+          "time_s": 2.5010979175567627,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 24.211694425401205
+        },
+        {
+          "time_s": 2.5811604976654055,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 24.25920166504836
+        },
+        {
+          "time_s": 2.6612230777740478,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 24.306708904695327
+        },
+        {
+          "time_s": 2.7412856578826905,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 24.35421614440378
+        },
+        {
+          "time_s": 2.821348237991333,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 24.40245563814546
+        },
+        {
+          "time_s": 2.9014108180999756,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 24.4509890478177
+        },
+        {
+          "time_s": 3.0,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 24.523586767717347
+        }
+      ],
+      "source_audit_passed": true,
+      "task_id": "scene-0013:f0:follow-nearest-same-route-v1"
+    },
+    {
+      "passed": true,
+      "failures": [],
+      "states": 34,
+      "maximum_interpolation_residual": 0.0,
+      "minimum_body_gap_m": 25.238015797055816,
+      "maximum_body_gap_m": 26.907364005969367,
+      "checks": [
+        {
+          "time_s": 0.0,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 25.238015797055816
+        },
+        {
+          "time_s": 0.09997696876525879,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 25.274680749513983
+        },
+        {
+          "time_s": 0.19995393753051757,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 25.311469961320142
+        },
+        {
+          "time_s": 0.29993090629577634,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 25.347991035855863
+        },
+        {
+          "time_s": 0.39990787506103515,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 25.384632484320527
+        },
+        {
+          "time_s": 0.49988484382629395,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 25.421217048767154
+        },
+        {
+          "time_s": 0.5998594760894775,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 25.44954637706868
+        },
+        {
+          "time_s": 0.6998341083526611,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 25.4780056141511
+        },
+        {
+          "time_s": 0.7998087406158447,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 25.506450106783554
+        },
+        {
+          "time_s": 0.8997833728790283,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 25.53474511957134
+        },
+        {
+          "time_s": 0.9997580051422119,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 25.563206832926028
+        },
+        {
+          "time_s": 1.0897759914398193,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 25.64644530452074
+        },
+        {
+          "time_s": 1.1797939777374267,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 25.729821142774
+        },
+        {
+          "time_s": 1.2698119640350343,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 25.813042808703813
+        },
+        {
+          "time_s": 1.3598299503326416,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 25.89642312109634
+        },
+        {
+          "time_s": 1.449847936630249,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 25.979668983639954
+        },
+        {
+          "time_s": 1.5332557757695515,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 26.01957488139088
+        },
+        {
+          "time_s": 1.6166636149088542,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 26.05917220147643
+        },
+        {
+          "time_s": 1.7000714540481567,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 26.098762528195348
+        },
+        {
+          "time_s": 1.7834792931874592,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 26.13831960535256
+        },
+        {
+          "time_s": 1.8668871323267617,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 26.17792996405326
+        },
+        {
+          "time_s": 1.9502949714660645,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 26.217453956641723
+        },
+        {
+          "time_s": 2.05026798248291,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 26.278250075693304
+        },
+        {
+          "time_s": 2.150240993499756,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 26.3390593845055
+        },
+        {
+          "time_s": 2.2502140045166015,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 26.39992414088176
+        },
+        {
+          "time_s": 2.3501870155334474,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 26.460788906140895
+        },
+        {
+          "time_s": 2.450160026550293,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 26.5216536713999
+        },
+        {
+          "time_s": 2.5416746934254966,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 26.585852352206363
+        },
+        {
+          "time_s": 2.6331893603006997,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 26.650051033013238
+        },
+        {
+          "time_s": 2.7247040271759033,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 26.714249713819857
+        },
+        {
+          "time_s": 2.816218694051107,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 26.778448394626405
+        },
+        {
+          "time_s": 2.90773336092631,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 26.842647075433188
+        },
+        {
+          "time_s": 2.9992480278015137,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 26.90684575623987
+        },
+        {
+          "time_s": 3.0,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 26.907364005969367
+        }
+      ],
+      "source_audit_passed": true,
+      "task_id": "scene-0013:f10:follow-nearest-same-route-v1"
+    },
+    {
+      "passed": true,
+      "failures": [],
+      "states": 33,
+      "maximum_interpolation_residual": 0.0,
+      "minimum_body_gap_m": 49.83344718865567,
+      "maximum_body_gap_m": 57.90691351690961,
+      "checks": [
+        {
+          "time_s": 0.0,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 49.83344718865567
+        },
+        {
+          "time_s": 0.09986939430236816,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 50.08202384549694
+        },
+        {
+          "time_s": 0.19973878860473632,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 50.330600502339166
+        },
+        {
+          "time_s": 0.29960818290710445,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 50.57917715918073
+        },
+        {
+          "time_s": 0.39947757720947263,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 50.82775381602141
+        },
+        {
+          "time_s": 0.4993469715118408,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 51.07633047286325
+        },
+        {
+          "time_s": 0.5827523072560629,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 51.362692724047896
+        },
+        {
+          "time_s": 0.6661576430002848,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 51.64905497523325
+        },
+        {
+          "time_s": 0.7495629787445068,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 51.93541722641904
+        },
+        {
+          "time_s": 0.8329683144887288,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 52.221779477603505
+        },
+        {
+          "time_s": 0.9163736502329508,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 52.50814172878838
+        },
+        {
+          "time_s": 0.9997789859771729,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 52.79450397997437
+        },
+        {
+          "time_s": 1.0997558116912842,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 53.14715285705308
+        },
+        {
+          "time_s": 1.1997326374053956,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 53.49980173413265
+        },
+        {
+          "time_s": 1.2997094631195067,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 53.85245061121138
+        },
+        {
+          "time_s": 1.3996862888336181,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 54.2050994882904
+        },
+        {
+          "time_s": 1.4996631145477295,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 54.55774836537016
+        },
+        {
+          "time_s": 1.5995968580245972,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 54.5682163481559
+        },
+        {
+          "time_s": 1.6995306015014648,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 54.578684330941726
+        },
+        {
+          "time_s": 1.7994643449783325,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 54.589152313728036
+        },
+        {
+          "time_s": 1.8993980884552002,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 54.59962029651422
+        },
+        {
+          "time_s": 1.9993768692016602,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 54.88526370089173
+        },
+        {
+          "time_s": 2.0993556499481203,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 55.231477991451754
+        },
+        {
+          "time_s": 2.19933443069458,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 55.60850225697108
+        },
+        {
+          "time_s": 2.29931321144104,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 55.81770737568799
+        },
+        {
+          "time_s": 2.3992919921875,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 56.027457161482275
+        },
+        {
+          "time_s": 2.4991541862487794,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 56.34069846611557
+        },
+        {
+          "time_s": 2.5990163803100588,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 56.653939770749616
+        },
+        {
+          "time_s": 2.6988785743713377,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 56.96718107538314
+        },
+        {
+          "time_s": 2.798740768432617,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 57.280422380017185
+        },
+        {
+          "time_s": 2.8986029624938965,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 57.59366368465065
+        },
+        {
+          "time_s": 2.9493014812469482,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 57.75034485951417
+        },
+        {
+          "time_s": 3.0,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 57.90691351690961
+        }
+      ],
+      "source_audit_passed": true,
+      "task_id": "scene-0042:f0:follow-nearest-same-route-v1"
+    },
+    {
+      "passed": false,
+      "failures": [
+        "gap"
+      ],
+      "states": 34,
+      "maximum_interpolation_residual": 0.0,
+      "minimum_body_gap_m": -30.178608119396042,
+      "maximum_body_gap_m": 5.015127034199796,
+      "checks": [
+        {
+          "time_s": 0.0,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": true,
+          "longitudinal_body_gap_m": 5.015127034199796
+        },
+        {
+          "time_s": 0.08340183893839519,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": false,
+          "longitudinal_body_gap_m": 4.088764090033511
+        },
+        {
+          "time_s": 0.16680367787679037,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": false,
+          "longitudinal_body_gap_m": 3.1624011458665002
+        },
+        {
+          "time_s": 0.25020551681518555,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": false,
+          "longitudinal_body_gap_m": 2.2360382016995466
+        },
+        {
+          "time_s": 0.33360735575358075,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": false,
+          "longitudinal_body_gap_m": 1.3096752575320956
+        },
+        {
+          "time_s": 0.41700919469197595,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": false,
+          "longitudinal_body_gap_m": 0.38331231336518456
+        },
+        {
+          "time_s": 0.5004110336303711,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": false,
+          "longitudinal_body_gap_m": -0.5430506308017691
+        },
+        {
+          "time_s": 0.5838233629862467,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": false,
+          "longitudinal_body_gap_m": -1.4869529650620557
+        },
+        {
+          "time_s": 0.6672356923421224,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": false,
+          "longitudinal_body_gap_m": -2.4308552993227686
+        },
+        {
+          "time_s": 0.750648021697998,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": false,
+          "longitudinal_body_gap_m": -3.37475763358378
+        },
+        {
+          "time_s": 0.8340603510538738,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": false,
+          "longitudinal_body_gap_m": -4.3186599678448765
+        },
+        {
+          "time_s": 0.9174726804097494,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": false,
+          "longitudinal_body_gap_m": -5.262562302105305
+        },
+        {
+          "time_s": 1.000885009765625,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": false,
+          "longitudinal_body_gap_m": -6.206464636365904
+        },
+        {
+          "time_s": 1.0842828353246052,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": false,
+          "longitudinal_body_gap_m": -7.186498993740425
+        },
+        {
+          "time_s": 1.1676806608835857,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": false,
+          "longitudinal_body_gap_m": -8.166533351115088
+        },
+        {
+          "time_s": 1.251078486442566,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": false,
+          "longitudinal_body_gap_m": -9.14656770849022
+        },
+        {
+          "time_s": 1.3344763120015461,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": false,
+          "longitudinal_body_gap_m": -10.126602065865665
+        },
+        {
+          "time_s": 1.4178741375605264,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": false,
+          "longitudinal_body_gap_m": -11.106636423240442
+        },
+        {
+          "time_s": 1.5012719631195068,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": false,
+          "longitudinal_body_gap_m": -12.086670780615247
+        },
+        {
+          "time_s": 1.6012541770935058,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": false,
+          "longitudinal_body_gap_m": -13.252201894064509
+        },
+        {
+          "time_s": 1.7012363910675048,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": false,
+          "longitudinal_body_gap_m": -14.417733007514013
+        },
+        {
+          "time_s": 1.801218605041504,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": false,
+          "longitudinal_body_gap_m": -15.583264120964298
+        },
+        {
+          "time_s": 1.901200819015503,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": false,
+          "longitudinal_body_gap_m": -16.74879523441481
+        },
+        {
+          "time_s": 2.001183032989502,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": false,
+          "longitudinal_body_gap_m": -17.914326347864343
+        },
+        {
+          "time_s": 2.1011526584625244,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": false,
+          "longitudinal_body_gap_m": -19.09453404663652
+        },
+        {
+          "time_s": 2.201122283935547,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": false,
+          "longitudinal_body_gap_m": -20.27474174541059
+        },
+        {
+          "time_s": 2.3010919094085693,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": false,
+          "longitudinal_body_gap_m": -21.45494944418243
+        },
+        {
+          "time_s": 2.401061534881592,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": false,
+          "longitudinal_body_gap_m": -22.635157142955915
+        },
+        {
+          "time_s": 2.5010311603546143,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": false,
+          "longitudinal_body_gap_m": -23.815364841729217
+        },
+        {
+          "time_s": 2.6008249282836915,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": false,
+          "longitudinal_body_gap_m": -24.995966889740995
+        },
+        {
+          "time_s": 2.7006186962127687,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": false,
+          "longitudinal_body_gap_m": -26.488919959737938
+        },
+        {
+          "time_s": 2.8004124641418455,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": false,
+          "longitudinal_body_gap_m": -27.927381720697905
+        },
+        {
+          "time_s": 2.9002062320709228,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": false,
+          "longitudinal_body_gap_m": -29.160567070956585
+        },
+        {
+          "time_s": 3.0,
+          "road_sweep": true,
+          "obstacle_sweep": true,
+          "same_directed_route": true,
+          "heading_compatible": true,
+          "gap_accepted": false,
+          "longitudinal_body_gap_m": -30.178608119396042
+        }
+      ],
+      "source_audit_passed": false,
+      "task_id": "scene-0042:f10:follow-nearest-same-route-v1"
+    }
+  ],
+  "snapshot_diffs": {
+    "v1_v2": "--- \n+++ \n@@ -25,7 +25,7 @@\n from conceptgraph.nuscenes.expansion_benchmark import iter_records\n from conceptgraph.project_paths import experiment_directory\n \n-RUN_ID = 'navsemantic_tasks_20261124_v1'\n+RUN_ID = 'navsemantic_tasks_20261124_v2'\n DEST = ROOT / 'dataset/processed' / RUN_ID\n REPORT = ROOT / 'outputs/reports' / RUN_ID\n META = ROOT / 'dataset/raw/nuscenes_trainval/v1.0-trainval'\n@@ -205,8 +205,8 @@\n             target_length = max(lo[target['instance_token']]['size'][1],ro[target['instance_token']]['size'][1])\n             gap = target_arc-ego_arc-spec.front_from_rear_axle_m-target_length/2\n             same_route = bool(route['polygon'].covers(Point(after.x,after.y)) and route['polygon'].covers(Point(target_xy)))\n-            heading_ok = abs(angle_difference(after.yaw_rad,target_heading)) <= math.radians(POLICY['maximum_heading_difference_deg'])\n-            gap_ok = POLICY['minimum_longitudinal_body_gap_m'] <= gap <= POLICY['maximum_longitudinal_body_gap_m']\n+            heading_ok = bool(abs(angle_difference(after.yaw_rad,target_heading)) <= math.radians(POLICY['maximum_heading_difference_deg']))\n+            gap_ok = bool(POLICY['minimum_longitudinal_body_gap_m'] <= gap <= POLICY['maximum_longitudinal_body_gap_m'])\n             checks.append(dict(time_s=after.time_s, road_sweep=road_ok, obstacle_sweep=obstacle_ok,\n                 same_directed_route=same_route, heading_compatible=heading_ok,\n                 longitudinal_body_gap_m=float(gap), gap_accepted=gap_ok))\n",
+    "v2_v3": "--- \n+++ \n@@ -25,7 +25,7 @@\n from conceptgraph.nuscenes.expansion_benchmark import iter_records\n from conceptgraph.project_paths import experiment_directory\n \n-RUN_ID = 'navsemantic_tasks_20261124_v2'\n+RUN_ID = 'navsemantic_tasks_20261124_v3'\n DEST = ROOT / 'dataset/processed' / RUN_ID\n REPORT = ROOT / 'outputs/reports' / RUN_ID\n META = ROOT / 'dataset/raw/nuscenes_trainval/v1.0-trainval'\n@@ -140,7 +140,23 @@\n     if not candidates:\n         return None, None, 'no_visible_official_forward_vehicle_on_same_directed_lane_route'\n     _, _, target, route = min(candidates, key=lambda t:t[:2])\n+    # Following continues through declared directed successor lanes; the initial\n+    # target's lane end is not a semantic endpoint or a stopping goal.\n+    prefix=route['tokens']\n+    route=dict(route,continuations=[r for r in routes.values() if r['tokens'][:len(prefix)]==prefix])\n     return target, route, None\n+\n+\n+def route_measure(route, ego_xy, target_xy):\n+    common=[]\n+    for candidate in route['continuations']:\n+        if candidate['polygon'].covers(Point(ego_xy)) and candidate['polygon'].covers(Point(target_xy)):\n+            ego_arc=candidate['line'].project(Point(ego_xy))\n+            target_arc=candidate['line'].project(Point(target_xy))\n+            common.append((candidate['line'].distance(Point(ego_xy))+candidate['line'].distance(Point(target_xy)),\n+                candidate['tokens'],target_arc-ego_arc))\n+    if not common:return False,None\n+    return True,min(common,key=lambda r:r[:2])[2]\n \n \n def verify_witness(anchor_frames, initial, target, route, prior, spec):\n@@ -200,16 +216,14 @@\n             alpha = (after.time_s-begin)/dt\n             target_xy = (1-alpha)*np.asarray(lo[target['instance_token']]['translation'][:2])+alpha*np.asarray(ro[target['instance_token']]['translation'][:2])\n             target_heading = yaw(lo[target['instance_token']])+alpha*angle_difference(yaw(ro[target['instance_token']]),yaw(lo[target['instance_token']]))\n-            ego_arc = route['line'].project(Point(after.x, after.y))\n-            target_arc = route['line'].project(Point(target_xy))\n+            same_route,center_distance=route_measure(route,[after.x,after.y],target_xy)\n             target_length = max(lo[target['instance_token']]['size'][1],ro[target['instance_token']]['size'][1])\n-            gap = target_arc-ego_arc-spec.front_from_rear_axle_m-target_length/2\n-            same_route = bool(route['polygon'].covers(Point(after.x,after.y)) and route['polygon'].covers(Point(target_xy)))\n+            gap = center_distance-spec.front_from_rear_axle_m-target_length/2 if same_route else None\n             heading_ok = bool(abs(angle_difference(after.yaw_rad,target_heading)) <= math.radians(POLICY['maximum_heading_difference_deg']))\n-            gap_ok = bool(POLICY['minimum_longitudinal_body_gap_m'] <= gap <= POLICY['maximum_longitudinal_body_gap_m'])\n+            gap_ok = bool(gap is not None and POLICY['minimum_longitudinal_body_gap_m'] <= gap <= POLICY['maximum_longitudinal_body_gap_m'])\n             checks.append(dict(time_s=after.time_s, road_sweep=road_ok, obstacle_sweep=obstacle_ok,\n                 same_directed_route=same_route, heading_compatible=heading_ok,\n-                longitudinal_body_gap_m=float(gap), gap_accepted=gap_ok))\n+                longitudinal_body_gap_m=float(gap) if gap is not None else None, gap_accepted=gap_ok))\n             for key, passed in [('road_sweep',road_ok),('obstacle_sweep',obstacle_ok),\n                                 ('same_directed_route',same_route),('heading',heading_ok),('gap',gap_ok)]:\n                 if not passed:\n@@ -233,18 +247,26 @@\n         old_registry=source_ref(PROTECTED/'task_registry.jsonl'),old_denominator=source_ref(PROTECTED/'denominator_freeze.json')))\n     manifests = {s['scene']:s for s in read(SENSOR)['scenes']}\n     selected_groups = {g['sample_token']:(name,g) for name in SCENES for g in manifests[name]['groups']}\n-    lidar = {r['sample_token']:r for r in iter_records(META/'sample_data.json')\n-             if r['sample_token'] in selected_groups and r['is_key_frame'] and '/LIDAR_TOP/' in r['filename']}\n-    pose_ids = {r['ego_pose_token'] for r in lidar.values()}\n-    poses = {r['token']:r for r in iter_records(META/'ego_pose.json') if r['token'] in pose_ids}\n-    samples = {tok:dict(scene=name,frame_idx=g['frame_idx'],sample_token=tok,\n-        timestamp_s=lidar[tok]['timestamp']/1e6,lidar=lidar[tok],ego_pose=poses[lidar[tok]['ego_pose_token']],objects=[])\n-        for tok,(name,g) in selected_groups.items()}\n+    cache=ROOT/'dataset/processed/navsemantic_tasks_20261124_v2/evaluation_only/official_selected_frames.jsonl'\n+    if cache.exists():\n+        cache_manifest=read(cache.parent.parent/'manifest.json')\n+        assert sha(cache)==cache_manifest['files']['evaluation_only/official_selected_frames.jsonl']\n+        samples={r['sample_token']:r for r in rows(cache)}\n+        assert set(samples)==set(selected_groups)\n+    else:\n+        lidar = {r['sample_token']:r for r in iter_records(META/'sample_data.json')\n+                 if r['sample_token'] in selected_groups and r['is_key_frame'] and '/LIDAR_TOP/' in r['filename']}\n+        pose_ids = {r['ego_pose_token'] for r in lidar.values()}\n+        poses = {r['token']:r for r in iter_records(META/'ego_pose.json') if r['token'] in pose_ids}\n+        samples = {tok:dict(scene=name,frame_idx=g['frame_idx'],sample_token=tok,\n+            timestamp_s=lidar[tok]['timestamp']/1e6,lidar=lidar[tok],ego_pose=poses[lidar[tok]['ego_pose_token']],objects=[])\n+            for tok,(name,g) in selected_groups.items()}\n     categories = {r['token']:r['name'] for r in iter_records(META/'category.json')}\n     instances = {r['token']:categories[r['category_token']] for r in iter_records(META/'instance.json')}\n-    for obj in iter_records(META/'sample_annotation.json'):\n-        if obj['sample_token'] in samples:\n-            samples[obj['sample_token']]['objects'].append(obj)\n+    if not cache.exists():\n+        for obj in iter_records(META/'sample_annotation.json'):\n+            if obj['sample_token'] in samples:\n+                samples[obj['sample_token']]['objects'].append(obj)\n     log_locations = {r['token']:r['location'] for r in iter_records(META/'log.json')}\n     priors = {}; candidates=[]; inputs=[]; summary_rows=[]\n     spec=VehicleSpec()\n@@ -281,6 +303,8 @@\n                 witness=dict(task_id=task_id,contract_sha256=record['contract_sha256'],\n                     chosen_initial_official_instance=target['instance_token'],initial_official_annotation=target,\n                     route_tokens=route['tokens'],route_line_xy=list(route['line'].coords),\n+                    allowed_successor_routes=[dict(tokens=r['tokens'],line_xy=list(r['line'].coords),\n+                        polygon_geojson=mapping(r['polygon'])) for r in route['continuations']],\n                     route_polygon_geojson=mapping(route['polygon']),reference_states=states,\n                     future_official_anchors=future,independent_audit=audit,\n                     method_input_access=False,reference_is_unique_correct_answer=False)\n@@ -317,6 +341,7 @@\n         follow_vehicle=dict(status='official_candidates_created',count=len(candidates),future_for_evaluation_only=True))\n     dump(DEST/'three_task_readiness.json',prerequisites)\n     source_paths=[META/x for x in ['sample_data.json','ego_pose.json','sample_annotation.json','category.json','instance.json','log.json']]+[SENSOR]\n+    if cache.exists():source_paths.append(cache)\n     for prior in priors.values():source_paths.append(Path(prior['path']))\n     protected_ok=all(sha(p)==digest for p,digest in protected.items());assert protected_ok\n     size=sum(p.stat().st_size for p in DEST.rglob('*') if p.is_file())\n@@ -325,6 +350,7 @@\n     for source in source_files:\n         target=run/'source_snapshot'/source.relative_to(ROOT);target.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(source,target)\n     summary=dict(created_utc=now(),seed=17,policy_sha256=content_sha(POLICY),\n+        revision='v2 first complete negative results retained. v3 fixes route truncation at initial target lane by allowing declared map successor routes; no threshold, candidate or semantic contract change.',\n         fixed_follow_candidates=12,status_counts=dict(Counter(t['feasibility_status'] for t in candidates)),\n         geometry_time_feasible_ids=[t['task_id'] for t in candidates if t['new_geometry_time_conditional_eligible']],\n         historical_2015_81_unchanged=True,old_main_table_unchanged=True,new_control_or_real_execution_certificates=0,\n"
+  },
+  "protection": {
+    "checked": 95,
+    "unchanged": true,
+    "changed": []
+  },
+  "scope": "3-second timed XY/yaw geometry under declared linear anchor/box model; no controls, forced from-rest, stopping hold, real execution or unobserved traffic guarantee.",
+  "successor_revision": "v2 negative reference outcome preserved; v3 generic legal successors changed reference checking before any method evaluation, not original v1 certification. No candidate/target/threshold or method input change.",
+  "limitations": [
+    "Three feasible candidates come from two scenes, with scene0013 frames0/10 sharing one physical episode; not three independent scenes.",
+    "8 no-current-target cases are source no-match/not-applicable, not proven unreachable.",
+    "Default speed/steering fields in saved VehicleState are unused placeholders; only timed XY/yaw is certified."
+  ]
+}

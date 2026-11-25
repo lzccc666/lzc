@@ -1,0 +1,80 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "three_independent_raw_current_single_point_position_only",
+      "confirmed": true,
+      "reasons": [],
+      "vehicle_safety_authorized": false
+    },
+    {
+      "name": "two_measurements_unknown",
+      "confirmed": false,
+      "reasons": [
+        "insufficient_distinct_raw_measurements",
+        "raw_span_below_one_second"
+      ],
+      "vehicle_safety_authorized": false
+    },
+    {
+      "name": "duplicate_frame_rejected",
+      "confirmed": false,
+      "reasons": [
+        "insufficient_distinct_raw_measurements"
+      ],
+      "vehicle_safety_authorized": false
+    },
+    {
+      "name": "future_measurement_rejected",
+      "confirmed": false,
+      "reasons": [
+        "noncausal_or_unordered_raw_history",
+        "no_current_real_update"
+      ],
+      "vehicle_safety_authorized": false
+    },
+    {
+      "name": "stale_current_rejected",
+      "confirmed": false,
+      "reasons": [
+        "no_current_real_update"
+      ],
+      "vehicle_safety_authorized": false
+    },
+    {
+      "name": "competing_identity_rejected",
+      "confirmed": false,
+      "reasons": [
+        "ambiguous_assignment_in_raw_history"
+      ],
+      "vehicle_safety_authorized": false
+    },
+    {
+      "name": "heuristic_variance_guard",
+      "confirmed": false,
+      "reasons": [
+        "heuristic_position_variance_too_large"
+      ],
+      "vehicle_safety_authorized": false
+    },
+    {
+      "name": "current_support_guard",
+      "confirmed": false,
+      "reasons": [
+        "current_raw_support_invalid"
+      ],
+      "vehicle_safety_authorized": false
+    },
+    {
+      "name": "moving_raw_track_rejected",
+      "confirmed": false,
+      "reasons": [
+        "raw_motion_not_confirmed_static"
+      ],
+      "vehicle_safety_authorized": false
+    }
+  ],
+  "synthetic_contract_only": true,
+  "planning_runs": 0,
+  "GPU_calls": 0
+}

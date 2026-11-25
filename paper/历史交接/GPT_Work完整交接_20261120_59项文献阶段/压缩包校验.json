@@ -1,0 +1,23 @@
+[
+  {
+    "file": "02_论文源稿图表与历史初稿.zip",
+    "files": 474,
+    "bytes": 155633030,
+    "sha256": "2fd8a25f2d527c3ca23c032e0f88b59873a9ac16be58b2626273b3ee45f82061",
+    "zip_crc": "passed"
+  },
+  {
+    "file": "03_代码与本机实验证据.zip",
+    "files": 1167,
+    "bytes": 16442035,
+    "sha256": "1e4faa54a3f0144e9f9974a869dce2ae7c1b2ec2facacc8a336e5ce76e2a78ab",
+    "zip_crc": "passed"
+  },
+  {
+    "file": "04_阅读资料与协作要求.zip",
+    "files": 36,
+    "bytes": 280913,
+    "sha256": "1d42bb9323faf6add54e1038b709770acc10d64463b708a00ae6506ba75b980e",
+    "zip_crc": "passed"
+  }
+]

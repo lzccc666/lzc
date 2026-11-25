@@ -1,0 +1,2718 @@
+{
+  "note": "Local inputs/models/results remain on this host; these symlinks do not upload their targets. Current-v4 and old frozen-source entity copies have separate source index.",
+  "local_project_root": "/root/autodl-tmp/lizichong",
+  "not_uploaded": [
+    "dataset/raw",
+    "dataset/processed except indexed small evidence",
+    "dataset/qwen except indexed small evidence",
+    "checkpoint",
+    "outputs except indexed small evidence",
+    "third-party nested repositories",
+    "build/lib cache",
+    ".venv",
+    "paper historical linked entities except existing real files"
+  ],
+  "symlinks": [
+    {
+      "path": "paper/历史版本/v1/evidence",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/evidence",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/v1/figure_data",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/figure_data",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/v1/figures",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/figures",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/v1/inputs",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/inputs",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/v1/qa",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/qa",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/v1/references",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/references",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/v1/scripts",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/scripts",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/v1/sources",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/sources",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/v1/交付文件校验清单.csv",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/交付文件校验清单.csv",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/v1/初稿交接说明.md",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/初稿交接说明.md",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/v1/图表来源索引.csv",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/图表来源索引.csv",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/v1/实验_图表_代码_原始结果索引.csv",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/实验_图表_代码_原始结果索引.csv",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/v1/引用核验清单.csv",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/引用核验清单.csv",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/v1/硕士论文初稿_公开数据版_v1.docx",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/硕士论文初稿_公开数据版_v1.docx",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/v1/硕士论文初稿_公开数据版_v1.pdf",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/硕士论文初稿_公开数据版_v1.pdf",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/v1/补充原稿位置说明.md",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/补充原稿位置说明.md",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/v1/质量检查记录.md",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/质量检查记录.md",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/v2/evidence",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v2/evidence",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/v2/figure_data",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v2/figure_data",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/v2/figures",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v2/figures",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/v2/qa",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v2/qa",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/v2/references",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v2/references",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/v2/scripts",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v2/scripts",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/v2/sources",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v2/sources",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/v2/交付文件校验清单.csv",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v2/交付文件校验清单.csv",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/v2/修订交接说明.md",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v2/修订交接说明.md",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/v2/图表来源索引.csv",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v2/图表来源索引.csv",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/v2/实验_图表_代码_原始结果索引.csv",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v2/实验_图表_代码_原始结果索引.csv",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/v2/引用核验清单.csv",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v2/引用核验清单.csv",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/v2/硕士论文初稿_公开数据版_v2.docx",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v2/硕士论文初稿_公开数据版_v2.docx",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/v2/硕士论文初稿_公开数据版_v2.pdf",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v2/硕士论文初稿_公开数据版_v2.pdf",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/v2/论文目录与图表结构说明.md",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v2/论文目录与图表结构说明.md",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/v2/质量检查记录.md",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v2/质量检查记录.md",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/v3/evidence",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v3/evidence",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/v3/figure_data",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v3/figure_data",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/v3/figures",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v3/figures",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/v3/qa",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v3/qa",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/v3/references",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v3/references",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/v3/scripts",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v3/scripts",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/v3/sources",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v3/sources",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/v3/交付文件校验清单.csv",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v3/交付文件校验清单.csv",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/v3/修订交接说明.md",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v3/修订交接说明.md",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/v3/图表来源索引.csv",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v3/图表来源索引.csv",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/v3/实验_图表_代码_原始结果索引.csv",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v3/实验_图表_代码_原始结果索引.csv",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/v3/引用核验清单.csv",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v3/引用核验清单.csv",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/v3/硕士论文初稿_公开数据版_v3.docx",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v3/硕士论文初稿_公开数据版_v3.docx",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/v3/硕士论文初稿_公开数据版_v3.pdf",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v3/硕士论文初稿_公开数据版_v3.pdf",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/v3/论文目录与图表结构说明.md",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v3/论文目录与图表结构说明.md",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/v3/质量检查记录.md",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v3/质量检查记录.md",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/早期阶段稿/manuscript_delivery_001",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis/manuscript_delivery_001",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/早期阶段稿/manuscript_delivery_002",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis/manuscript_delivery_002",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/早期阶段稿/manuscript_delivery_003",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis/manuscript_delivery_003",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/早期阶段稿/manuscript_delivery_004",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis/manuscript_delivery_004",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/早期阶段稿/manuscript_delivery_005",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis/manuscript_delivery_005",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/早期阶段稿/manuscript_delivery_006",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis/manuscript_delivery_006",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/早期阶段稿/manuscript_delivery_007",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis/manuscript_delivery_007",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/早期阶段稿/manuscript_delivery_008",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis/manuscript_delivery_008",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/早期阶段稿/manuscript_delivery_009",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis/manuscript_delivery_009",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/早期阶段稿/manuscript_delivery_010",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis/manuscript_delivery_010",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/早期阶段稿/manuscript_delivery_011",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis/manuscript_delivery_011",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/早期阶段稿/manuscript_delivery_012",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis/manuscript_delivery_012",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/早期阶段稿/manuscript_delivery_013",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis/manuscript_delivery_013",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/早期阶段稿/manuscript_delivery_014",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis/manuscript_delivery_014",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/早期阶段稿/manuscript_delivery_015",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis/manuscript_delivery_015",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/历史版本/早期阶段稿/manuscript_delivery_016",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis/manuscript_delivery_016",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/原始材料/初稿.docx",
+      "target": "/root/autodl-tmp/lizichong/初稿.docx",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/原始材料/论文1-3章初稿.md",
+      "target": "/root/autodl-tmp/lizichong/论文1-3章初稿.md",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/当前版_v4",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/辅助材料/开发实验表格",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/experiment_tables",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "paper/辅助材料/早期实验结果表格",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/lane_qwen_expansion_v1/thesis_tables_v1",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "scripts/experiment_archive/public_20261115",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/public_experiment_completion_20261115/source",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "thesis_materials/existing_draft",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "thesis_materials/figures",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/public_experiment_completion_20261115/figures",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "thesis_materials/historical_handoffs",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "thesis_materials/originals/初稿.docx",
+      "target": "/root/autodl-tmp/lizichong/初稿.docx",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "thesis_materials/originals/论文1-3章初稿.md",
+      "target": "/root/autodl-tmp/lizichong/论文1-3章初稿.md",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "thesis_materials/project_guide",
+      "target": "/root/autodl-tmp/lizichong/doc/project_guide",
+      "exists": true,
+      "content_not_stored_by_git": true
+    },
+    {
+      "path": "thesis_materials/tables",
+      "target": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/public_experiment_completion_20261115/tables",
+      "exists": true,
+      "content_not_stored_by_git": true
+    }
+  ],
+  "filtered_current_v4": [
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/论文源稿与图表_公开数据版_v2.zip",
+      "reason": "environment/archive/cache/large_delivery_excluded",
+      "bytes": 16754566
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/convert_pass1.log",
+      "reason": "environment/archive/cache/large_delivery_excluded",
+      "bytes": 419
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rebuild_conversion_1.log",
+      "reason": "environment/archive/cache/large_delivery_excluded",
+      "bytes": 528
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rebuild_conversion_2.log",
+      "reason": "environment/archive/cache/large_delivery_excluded",
+      "bytes": 528
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_profile/user/GraphicsRenderTests.log",
+      "reason": "environment/archive/cache/large_delivery_excluded",
+      "bytes": 1574
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_profile/user/pack/registrymodifications.pack",
+      "reason": "environment/archive/cache/large_delivery_excluded",
+      "bytes": 772
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_profile/user/pack/ExtensionInfo.pack",
+      "reason": "environment/archive/cache/large_delivery_excluded",
+      "bytes": 32
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_profile/user/pack/config/autotbl.pack",
+      "reason": "environment/archive/cache/large_delivery_excluded",
+      "bytes": 1780
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_profile/user/pack/database/biblio.pack",
+      "reason": "environment/archive/cache/large_delivery_excluded",
+      "bytes": 2432
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_profile/user/pack/database/biblio/biblio.pack",
+      "reason": "environment/archive/cache/large_delivery_excluded",
+      "bytes": 2147
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_profile/user/pack/autotext/mytexts.pack",
+      "reason": "environment/archive/cache/large_delivery_excluded",
+      "bytes": 402
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_profile/user/pack/basic/dialog.pack",
+      "reason": "environment/archive/cache/large_delivery_excluded",
+      "bytes": 238
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_profile/user/pack/basic/script.pack",
+      "reason": "environment/archive/cache/large_delivery_excluded",
+      "bytes": 238
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_profile/user/pack/basic/Standard/Module1.pack",
+      "reason": "environment/archive/cache/large_delivery_excluded",
+      "bytes": 644
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_profile/user/pack/basic/Standard/dialog.pack",
+      "reason": "environment/archive/cache/large_delivery_excluded",
+      "bytes": 220
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_profile/user/pack/basic/Standard/script.pack",
+      "reason": "environment/archive/cache/large_delivery_excluded",
+      "bytes": 241
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_rebuild_profile/user/GraphicsRenderTests.log",
+      "reason": "environment/archive/cache/large_delivery_excluded",
+      "bytes": 1574
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_rebuild_profile/user/pack/ExtensionInfo.pack",
+      "reason": "environment/archive/cache/large_delivery_excluded",
+      "bytes": 32
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_rebuild_profile/user/pack/registrymodifications.pack",
+      "reason": "environment/archive/cache/large_delivery_excluded",
+      "bytes": 1277
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_rebuild_profile/user/pack/autotext/mytexts.pack",
+      "reason": "environment/archive/cache/large_delivery_excluded",
+      "bytes": 402
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_rebuild_profile/user/pack/basic/dialog.pack",
+      "reason": "environment/archive/cache/large_delivery_excluded",
+      "bytes": 238
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_rebuild_profile/user/pack/basic/script.pack",
+      "reason": "environment/archive/cache/large_delivery_excluded",
+      "bytes": 238
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_rebuild_profile/user/pack/basic/Standard/Module1.pack",
+      "reason": "environment/archive/cache/large_delivery_excluded",
+      "bytes": 644
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_rebuild_profile/user/pack/basic/Standard/dialog.pack",
+      "reason": "environment/archive/cache/large_delivery_excluded",
+      "bytes": 220
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_rebuild_profile/user/pack/basic/Standard/script.pack",
+      "reason": "environment/archive/cache/large_delivery_excluded",
+      "bytes": 241
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_rebuild_profile/user/pack/config/autotbl.pack",
+      "reason": "environment/archive/cache/large_delivery_excluded",
+      "bytes": 1780
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_rebuild_profile/user/pack/database/biblio.pack",
+      "reason": "environment/archive/cache/large_delivery_excluded",
+      "bytes": 2432
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_rebuild_profile/user/pack/database/biblio/biblio.pack",
+      "reason": "environment/archive/cache/large_delivery_excluded",
+      "bytes": 2147
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_cover_profile/user/GraphicsRenderTests.log",
+      "reason": "environment/archive/cache/large_delivery_excluded",
+      "bytes": 1574
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_cover_profile/user/pack/registrymodifications.pack",
+      "reason": "environment/archive/cache/large_delivery_excluded",
+      "bytes": 772
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_cover_profile/user/pack/ExtensionInfo.pack",
+      "reason": "environment/archive/cache/large_delivery_excluded",
+      "bytes": 32
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_cover_profile/user/pack/autotext/mytexts.pack",
+      "reason": "environment/archive/cache/large_delivery_excluded",
+      "bytes": 402
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_cover_profile/user/pack/basic/dialog.pack",
+      "reason": "environment/archive/cache/large_delivery_excluded",
+      "bytes": 238
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_cover_profile/user/pack/basic/script.pack",
+      "reason": "environment/archive/cache/large_delivery_excluded",
+      "bytes": 238
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_cover_profile/user/pack/basic/Standard/Module1.pack",
+      "reason": "environment/archive/cache/large_delivery_excluded",
+      "bytes": 644
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_cover_profile/user/pack/basic/Standard/dialog.pack",
+      "reason": "environment/archive/cache/large_delivery_excluded",
+      "bytes": 220
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_cover_profile/user/pack/basic/Standard/script.pack",
+      "reason": "environment/archive/cache/large_delivery_excluded",
+      "bytes": 241
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_cover_profile/user/pack/config/autotbl.pack",
+      "reason": "environment/archive/cache/large_delivery_excluded",
+      "bytes": 1780
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_cover_profile/user/pack/database/biblio.pack",
+      "reason": "environment/archive/cache/large_delivery_excluded",
+      "bytes": 2432
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_cover_profile/user/pack/database/biblio/biblio.pack",
+      "reason": "environment/archive/cache/large_delivery_excluded",
+      "bytes": 2147
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/references/fetch.log",
+      "reason": "environment/archive/cache/large_delivery_excluded",
+      "bytes": 2584
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/references/extra_fetch.log",
+      "reason": "environment/archive/cache/large_delivery_excluded",
+      "bytes": 835
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/references/old_audit.log",
+      "reason": "environment/archive/cache/large_delivery_excluded",
+      "bytes": 16
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/references/1105.1186/paper.pdf",
+      "reason": "environment/archive/cache/large_delivery_excluded",
+      "bytes": 10197043
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/references/2110.06864/paper.pdf",
+      "reason": "environment/archive/cache/large_delivery_excluded",
+      "bytes": 8638055
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/references/2201.13360/paper.pdf",
+      "reason": "environment/archive/cache/large_delivery_excluded",
+      "bytes": 13521940
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/references/2205.13542/paper.pdf",
+      "reason": "environment/archive/cache/large_delivery_excluded",
+      "bytes": 10244020
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/references/2306.13631/paper.pdf",
+      "reason": "environment/archive/cache/large_delivery_excluded",
+      "bytes": 21262278
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/references/2307.06135/paper.pdf",
+      "reason": "environment/archive/cache/large_delivery_excluded",
+      "bytes": 15007428
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/references/2402.12259/paper.pdf",
+      "reason": "environment/archive/cache/large_delivery_excluded",
+      "bytes": 20607795
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/public_experiment_completion_20261115/source/third_party/AB3DMOT_d45e83c/LICENSE",
+      "sha256": "a2223e4291d70d933031ca1fd87e5ba57bef47d8134a41a9d4b84f5c57cb8f5d",
+      "bytes": 6999,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/public_experiment_completion_20261115/source/third_party/AB3DMOT_d45e83c/upstream_receipt.json",
+      "sha256": "34858bcd241b727c342e55316aafb501de6482dc68f04cf446d48020528c337d",
+      "bytes": 1302,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/public_experiment_completion_20261115/source/third_party/AB3DMOT_d45e83c/AB3DMOT_libs/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/public_experiment_completion_20261115/source/third_party/AB3DMOT_d45e83c/AB3DMOT_libs/bbox_utils.py",
+      "sha256": "3bb31e4d1230237e6f92a80ae0d9cb6b2000b94e437b4a6270a90130e1d3af41",
+      "bytes": 4723,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/public_experiment_completion_20261115/source/third_party/AB3DMOT_d45e83c/AB3DMOT_libs/kalman_filter.py",
+      "sha256": "2c123173649804a2dd3a81b68fcbce415cbdd256f44d09fe67d70677fca6d801",
+      "bytes": 5209,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/public_experiment_completion_20261115/source/third_party/AB3DMOT_d45e83c/AB3DMOT_libs/kitti_utils.py",
+      "sha256": "4a433d4179cbf11cbc3fc5b96fdfb558011bb6dc83c8b7e84652f33f634e834c",
+      "bytes": 12252,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/public_experiment_completion_20261115/source/third_party/AB3DMOT_d45e83c/AB3DMOT_libs/model.py",
+      "sha256": "928263535a89378d92225814f1f98ed0f05ea3ac4fc52e4e195ae290d440da30",
+      "bytes": 5229,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/public_experiment_completion_20261115/source/third_party/AB3DMOT_d45e83c/AB3DMOT_libs/utils.py",
+      "sha256": "d0faa62d6ea1058337ef263a1591f070b8afb5356b26fd754811854de6d3bd55",
+      "bytes": 370,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/public_experiment_completion_20261115/source/third_party/AB3DMOT_d45e83c_numpy_compat/LICENSE",
+      "sha256": "a2223e4291d70d933031ca1fd87e5ba57bef47d8134a41a9d4b84f5c57cb8f5d",
+      "bytes": 6999,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/public_experiment_completion_20261115/source/third_party/AB3DMOT_d45e83c_numpy_compat/upstream_receipt.json",
+      "sha256": "34858bcd241b727c342e55316aafb501de6482dc68f04cf446d48020528c337d",
+      "bytes": 1302,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/public_experiment_completion_20261115/source/third_party/AB3DMOT_d45e83c_numpy_compat/compatibility_patch.json",
+      "sha256": "af4e98f71ab2b7fb9a449cd7321b6ac605931786cf564db500d0139c49998866",
+      "bytes": 659,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/public_experiment_completion_20261115/source/third_party/AB3DMOT_d45e83c_numpy_compat/AB3DMOT_libs/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/public_experiment_completion_20261115/source/third_party/AB3DMOT_d45e83c_numpy_compat/AB3DMOT_libs/bbox_utils.py",
+      "sha256": "3bb31e4d1230237e6f92a80ae0d9cb6b2000b94e437b4a6270a90130e1d3af41",
+      "bytes": 4723,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/public_experiment_completion_20261115/source/third_party/AB3DMOT_d45e83c_numpy_compat/AB3DMOT_libs/kalman_filter.py",
+      "sha256": "2c123173649804a2dd3a81b68fcbce415cbdd256f44d09fe67d70677fca6d801",
+      "bytes": 5209,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/public_experiment_completion_20261115/source/third_party/AB3DMOT_d45e83c_numpy_compat/AB3DMOT_libs/kitti_utils.py",
+      "sha256": "4a433d4179cbf11cbc3fc5b96fdfb558011bb6dc83c8b7e84652f33f634e834c",
+      "bytes": 12252,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/public_experiment_completion_20261115/source/third_party/AB3DMOT_d45e83c_numpy_compat/AB3DMOT_libs/model.py",
+      "sha256": "ea6f94f50d9954595b06cdd3d87cda3e9f3a619bcc4973f9be078aa2eaffc92e",
+      "bytes": 5224,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/public_experiment_completion_20261115/source/third_party/AB3DMOT_d45e83c_numpy_compat/AB3DMOT_libs/utils.py",
+      "sha256": "d0faa62d6ea1058337ef263a1591f070b8afb5356b26fd754811854de6d3bd55",
+      "bytes": 370,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/contact_001.jpg",
+      "sha256": "35c0162ca1ea783e76b12d25fe0e1663ee36168ffdeb267b0c8de7d985b923b8",
+      "bytes": 959592,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/contact_013.jpg",
+      "sha256": "11662d1db396e6ab9371fe8e3098e1f1587daefba363b978efbd0e725439160a",
+      "bytes": 1055479,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/contact_025.jpg",
+      "sha256": "e5f348ef4a468c7623c45e9630c54a62b42cd503f2c3215f5c4164658db4a030",
+      "bytes": 1003991,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/contact_037.jpg",
+      "sha256": "68e629b861a1eb5b5040494714c1a385f8daf6a07bc728fd7f8a1f57a4ccf1f9",
+      "bytes": 1054122,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/contact_049.jpg",
+      "sha256": "5d39fc6c4e77e7ab53cd98685fc300056adac510246f0eaab18a0549c735851e",
+      "bytes": 980315,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/contact_061.jpg",
+      "sha256": "fe8128d25aa4dc86395b99ffdf303e5321ca6555010d97c6694124d6a07ec81e",
+      "bytes": 980588,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/contact_073.jpg",
+      "sha256": "916722e34550ef8fcca06d289c3591ff92b3375cd58f4ff01c09e4f1d681efb1",
+      "bytes": 1019357,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/contact_085.jpg",
+      "sha256": "27ff299869d2b5f09d1a639ade3f286fd40f65c02fe244006fe4bf67006f3d08",
+      "bytes": 555178,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_profile/user/registrymodifications.xcu",
+      "sha256": "e3c5dc2caca4088d261b70d7cf1f57a3fd15755b7e74e3c2892de77390a5a27b",
+      "bytes": 3779,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_profile/user/config/autotbl.fmt",
+      "sha256": "713229151490c66f043cb4865147c97458b4f33e4eb5f2bb4133c58cbe77041e",
+      "bytes": 35313,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_profile/user/database/biblio.odb",
+      "sha256": "c3dd4e9008be33cdede3abf822e9b748a201704adf95aad92ab894dd98b3fe85",
+      "bytes": 2892,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_profile/user/database/biblio/biblio.dbf",
+      "sha256": "aefc2bb614c2e307870405e0fd72f4a22cf794c396a73ce0551f18a478e80ed2",
+      "bytes": 75798,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_profile/user/database/biblio/biblio.dbt",
+      "sha256": "3ab142231d8075fdd02c95a691ddce590e0f81450744cb87ca610fd06d75cac1",
+      "bytes": 46601,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_profile/user/extensions/buildid",
+      "sha256": "4e80829cd1c13534fecb420763830c6a6fe6d9a8a463cefc817071e313bdc7bc",
+      "bytes": 11,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_profile/user/extensions/bundled/lastsynchronized",
+      "sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "bytes": 1,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_profile/user/extensions/bundled/registry/com.sun.star.comp.deployment.configuration.PackageRegistryBackend/backenddb.xml",
+      "sha256": "ac6f585621eb04b34549a95c99e015ad5810a4156e021df46c46731e7a087698",
+      "bytes": 135,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_profile/user/extensions/bundled/registry/com.sun.star.comp.deployment.help.PackageRegistryBackend/backenddb.xml",
+      "sha256": "845041424286d5b794c11ff0a59d3df289dcb1567fb448ef0b85297108675b46",
+      "bytes": 117,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_profile/user/extensions/tmp/registry/com.sun.star.comp.deployment.help.PackageRegistryBackend/backenddb.xml",
+      "sha256": "845041424286d5b794c11ff0a59d3df289dcb1567fb448ef0b85297108675b46",
+      "bytes": 117,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_profile/user/extensions/tmp/registry/com.sun.star.comp.deployment.configuration.PackageRegistryBackend/backenddb.xml",
+      "sha256": "ac6f585621eb04b34549a95c99e015ad5810a4156e021df46c46731e7a087698",
+      "bytes": 135,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_profile/user/extensions/shared/lastsynchronized",
+      "sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "bytes": 1,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_profile/user/extensions/shared/registry/com.sun.star.comp.deployment.configuration.PackageRegistryBackend/backenddb.xml",
+      "sha256": "ac6f585621eb04b34549a95c99e015ad5810a4156e021df46c46731e7a087698",
+      "bytes": 135,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_profile/user/extensions/shared/registry/com.sun.star.comp.deployment.help.PackageRegistryBackend/backenddb.xml",
+      "sha256": "845041424286d5b794c11ff0a59d3df289dcb1567fb448ef0b85297108675b46",
+      "bytes": 117,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_profile/user/gallery/sg30.sdv",
+      "sha256": "65365530165a871772e21962a5d7dda107d8d010f329bf59c878eabc3465bbe4",
+      "bytes": 2048,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_profile/user/gallery/sg30.thm",
+      "sha256": "f1f24dff4f58a716033bcf96ad175d3436bff0e0a233ab09f6215973ed843fed",
+      "bytes": 565,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_profile/user/autotext/mytexts.bau",
+      "sha256": "7cc7340aacc334c0731f3346744499958cd3ad192532f0656a9d3562b3b4c277",
+      "bytes": 557,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_profile/user/uno_packages/cache/registry/com.sun.star.comp.deployment.configuration.PackageRegistryBackend/backenddb.xml",
+      "sha256": "ac6f585621eb04b34549a95c99e015ad5810a4156e021df46c46731e7a087698",
+      "bytes": 135,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_profile/user/uno_packages/cache/registry/com.sun.star.comp.deployment.help.PackageRegistryBackend/backenddb.xml",
+      "sha256": "845041424286d5b794c11ff0a59d3df289dcb1567fb448ef0b85297108675b46",
+      "bytes": 117,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_profile/user/basic/dialog.xlc",
+      "sha256": "5b72c4cc5130eccab44cbfb91270befaeaf8ee7ab97cf205ee2abb582fa4a9e5",
+      "bytes": 339,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_profile/user/basic/script.xlc",
+      "sha256": "5b72c4cc5130eccab44cbfb91270befaeaf8ee7ab97cf205ee2abb582fa4a9e5",
+      "bytes": 339,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_profile/user/basic/Standard/Module1.xba",
+      "sha256": "b434faf21386064e2e81af758f307ae8bea72c0cb6c8510d55b1bc1bb38f8612",
+      "bytes": 1124,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_profile/user/basic/Standard/dialog.xlb",
+      "sha256": "85c83411f1285a0d0d9b511a7ea7dd06d5ac9b97f90d286adaca084212e3fe80",
+      "bytes": 288,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_profile/user/basic/Standard/script.xlb",
+      "sha256": "80cb10b100053f6e0b26bb009a2b8ccbdedb761901680500a4736f7afbf1f959",
+      "bytes": 349,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/069.png",
+      "sha256": "1f69dfafb0463b52a8629acc24a68afd9d14106b2a2e4f1587f35af665f89e0d",
+      "bytes": 170629,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/070.png",
+      "sha256": "83d2028464407731d383d2931b3ad9bbe3e0e4d87cec6b0f7225316f6b12ccb9",
+      "bytes": 175953,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/071.png",
+      "sha256": "2d01a70cae449659ee057db7bb3b3137b272e1c2f4c7d38836bb0e9d724705f6",
+      "bytes": 228203,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/072.png",
+      "sha256": "c69842b62a5c372e161fa26260c9e19c97cffe500ff7db066e0583ed48be4ddf",
+      "bytes": 132591,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/073.png",
+      "sha256": "c850544898ff6b924d38ff02cf3e99423ef0d2b04f366ee7800d558c7c18a1b0",
+      "bytes": 157595,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/075.png",
+      "sha256": "e54c421cc000d9fa97388993aea4ef1b4316988d36ef3ad6512735ffc80465c9",
+      "bytes": 228990,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/077.png",
+      "sha256": "61bd0f734e163d115b624a7f5f5ec354cb5d9d0a238311a0dfe7a60181b3171c",
+      "bytes": 137725,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/079.png",
+      "sha256": "8d6b9b6060d68fcfc8f52e5eaa2143ca0921ac0997cd08b039d48ac3fedb14c3",
+      "bytes": 238599,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/080.png",
+      "sha256": "c90c44b69f9f9c6b0cf0b274173515ca89dd59d85f5d1daa3279f124459c3e1a",
+      "bytes": 220061,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/081.png",
+      "sha256": "4727691fef93d38ea7101142a4a923f6917025595a8b847c2cae78e1a8396bbe",
+      "bytes": 215370,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/082.png",
+      "sha256": "af7054daad9da0a457b1b8c5bda45a271c6ed8237bd2e254d1427b4abbca92e0",
+      "bytes": 214647,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/083.png",
+      "sha256": "0b971dc44b8bd49de1e2f6c0a74626cc80e4c136af9e7e7f2f6f2d708e20ea90",
+      "bytes": 223684,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/084.png",
+      "sha256": "6e87b6eca064d6e5d78edd2bc2e1af23ab4a75830da8f47c1883340a3ca9bdd8",
+      "bytes": 133912,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/085.png",
+      "sha256": "23e5dd56f90e755f13f8fcac46f187100d386b00adb043dafa3cc77671fa6086",
+      "bytes": 180388,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/087.png",
+      "sha256": "0f89973a4e05c070a2136272c26c921a2dbfd744fc2a64e8e2c8ace1656dfee3",
+      "bytes": 187512,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/088.png",
+      "sha256": "2f25730de954b590a1fb73370e54ef4a41f3bbaf864a35d4a6f1afc0cd9fbab8",
+      "bytes": 161671,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/008.png",
+      "sha256": "8e4eb7199fd22208b7a34d8a76f424faf034f8e748bc5a7c87dc5ede49c45934",
+      "bytes": 229771,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/009.png",
+      "sha256": "a6785e01c0705cd8785e1499a0c5ccd1fdc0e99b6ea80566b07a20db2dc3e733",
+      "bytes": 231785,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/010.png",
+      "sha256": "4e5998ec32ab3146ea07fe1f486b252dfe608e8f404cc38f73328e60354fbdcb",
+      "bytes": 215438,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/011.png",
+      "sha256": "5228b54933ec4815e8c3fb136943c064fdc872dd923d449c937900bc28587588",
+      "bytes": 223879,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/012.png",
+      "sha256": "427afe5d194f02d88aa35fe419952e7c6cc29876fb84ae5c4e52f940872f95c9",
+      "bytes": 236776,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/013.png",
+      "sha256": "1123ddad39a3ae03bdede7c62353f88d3fdc792b338bf2fb45f09377113c8d51",
+      "bytes": 210217,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/014.png",
+      "sha256": "fd976b6369c5413beb821e5fb7ced0846717132f95e7cc290991c13075b9d926",
+      "bytes": 104476,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/015.png",
+      "sha256": "338c59b33e4a5e0db61130e174ef9e91d53189d07b1e46b7d5ce044c4e280f0d",
+      "bytes": 188580,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/016.png",
+      "sha256": "8d327b5c197349e84eba3e76aa75647a4a471af1762db93138586e31decff80e",
+      "bytes": 221053,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/017.png",
+      "sha256": "85afb0b7974724bb17ca3467dbf53507ff173a00c408268658f457928968a38f",
+      "bytes": 221133,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/018.png",
+      "sha256": "e1cd61d8dd5f84ed1c16d05ca7a150afd03f20e417b1945f86b8825caf792a98",
+      "bytes": 203932,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/019.png",
+      "sha256": "087bd2ee6059326ba62bf22dc4ca37610049678ca2eff63f2fb27a5784e6f66b",
+      "bytes": 228168,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/020.png",
+      "sha256": "7849161b1c20b7eeca308c903b10edef0e6f21476ca5aeba5fd7562b400f5205",
+      "bytes": 220013,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/021.png",
+      "sha256": "7936b4be1ebfc158deadf821a4a27162e79b564feaa49e84822890d337c86d71",
+      "bytes": 196886,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/022.png",
+      "sha256": "c1febc7d1e0c7b5ed44aa9112335d7ae0d5e65ed8bc33fbe39fe085b78c23b55",
+      "bytes": 226413,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/023.png",
+      "sha256": "06c0af00473d89e3a6a5cc5cf5a55eef119f174ee6eac2fd23d287eb5df1dfaa",
+      "bytes": 209029,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/024.png",
+      "sha256": "c5b3b7dbd261b64fdd939ddce4cad71a9ee8bb10674658b7c5f14d8fd82d011f",
+      "bytes": 207659,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/025.png",
+      "sha256": "7e3340f53c4f0c0939b71b9c74f11fef7880e502b41bccae80086934835acc9e",
+      "bytes": 220788,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/026.png",
+      "sha256": "1a2c10684704160ac9f81a577d13b114865247792f50e37e0a4071c3471d4d5f",
+      "bytes": 89268,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/027.png",
+      "sha256": "aa23ba6e9096542238d4bf2ddf86b4e8f68c46cd44a1218b00d84fa41428a9a7",
+      "bytes": 199047,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/028.png",
+      "sha256": "01c37504789bca1ab534f116ad8aafb6cea914bd4f53a3e7e5b21be56719f869",
+      "bytes": 222405,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/029.png",
+      "sha256": "de7f65a0000a38462e7f114028f8fe24c5291243e1cfb996c3ed4177c5e8afb9",
+      "bytes": 188426,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/030.png",
+      "sha256": "0314a2f70d9413396cb7c2c490846d1f731d058927ff292cf9002a738094f37c",
+      "bytes": 196540,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/031.png",
+      "sha256": "0ed65c608410ed5dafd89897fa2086811cd26b68ff74ba7262921cca68349507",
+      "bytes": 191876,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/032.png",
+      "sha256": "b34c8b79a95d9da686cf8ba9dc56fc3184b6178899ee3abb8a16fcd9e3ef9e7c",
+      "bytes": 189274,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/034.png",
+      "sha256": "79e0832d0f755fb0ae06a31fe61b1bdf00fa981640457bb59cc9daa5ea5bc3fb",
+      "bytes": 199136,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/036.png",
+      "sha256": "f871717b5d25ffde321d20bd4134e0cc4b6ee7a84f14a15e387527a353292dfa",
+      "bytes": 233709,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/038.png",
+      "sha256": "38c99293d071d427fb19acadd4c704e83b14753062dd0066f37cf13f3f1eb9cf",
+      "bytes": 210465,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/040.png",
+      "sha256": "ef53ff2f86e59149d371b5b5f6b0a8f9e24f82a09d02559c056fe5a4d6509dd4",
+      "bytes": 209774,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/042.png",
+      "sha256": "c691db7c44ce8f22d6fd1abf502602d54bd75355358b533d127f5a82bc6c3cb7",
+      "bytes": 205496,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/044.png",
+      "sha256": "056623e5cebbd715e41538e07c2f32a52c525861eea7e1638d27b9c3fef2cb19",
+      "bytes": 229190,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/046.png",
+      "sha256": "527a2974b1f74f3e1653ba7a9f95fc147efa3949db69419bc1a9f3651b90446a",
+      "bytes": 201678,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/048.png",
+      "sha256": "747541ae6c6537f0c33e11364d9e47ffa518d54c39fe6ad08e8ab1b85ad38cf4",
+      "bytes": 226386,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/050.png",
+      "sha256": "ef5d4f59175ead410d867c22deeb50a5981e36c7af35538b1837347d5f8e4fef",
+      "bytes": 213980,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/053.png",
+      "sha256": "417ed43b248063a22b8e384681a5b8b7fcc15bf46d5865f26e247d5bd4c97109",
+      "bytes": 221715,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/067.png",
+      "sha256": "182c0819a0bbf0dd3bd8ce5600cbe63ab9451dd187b79aa1dc9b672059eddc39",
+      "bytes": 231008,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/074.png",
+      "sha256": "9bdc53077b644e5f58b5b3925d308d0e40d9e9a49fcf11ebe49c59cea0e4822c",
+      "bytes": 180070,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/076.png",
+      "sha256": "27cf297c9072d136a6ae00ed6591a607431b1a81a51ed1e2fbec65ee2e5abe67",
+      "bytes": 191055,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/078.png",
+      "sha256": "adc6dedd8e577ba77910ae83977570025e36e614b154e7218d5cc4b0f7341e8e",
+      "bytes": 213362,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/086.png",
+      "sha256": "f3ae06b764332b6a628bd22f63f31dd12e5938b3f29b4fab3ab371bee637d4ae",
+      "bytes": 193679,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/089.png",
+      "sha256": "9c52fb99dc3deb5c3f43d84c1f5fb8fd7acaad4f783c3f37e70d6afdf6f83094",
+      "bytes": 110692,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/090.png",
+      "sha256": "618ee5146ad8244aa89f15e8f984330ef9b473ab09de7054fa9e38fe009d5f26",
+      "bytes": 105155,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/001.png",
+      "sha256": "be43655d4fff16b3bdf4f25a68cb569127759a206f7933997acfb2eac5cc9762",
+      "bytes": 37775,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/002.png",
+      "sha256": "3141fa098483626d6b47450af9edd1efe3e221cd7b95724802c0f784e934789c",
+      "bytes": 203764,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/003.png",
+      "sha256": "af9737dafdeed43ac9e1048afb36f6f161bf01dc055299094d2ac885df92473d",
+      "bytes": 162359,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/004.png",
+      "sha256": "286208aa556b2ca19fd65f64fdc401b98b089945a0a43f1e41c00d1fd7f45c18",
+      "bytes": 116783,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/005.png",
+      "sha256": "e61e89d6588e62133d3af95a8f57fa4ecf8a8fa323351526f9877ec5cddd8557",
+      "bytes": 30973,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/006.png",
+      "sha256": "a99355f72b556886444284bb3c866726eb492fe86d74296368a5b4309668968c",
+      "bytes": 197733,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/007.png",
+      "sha256": "aacb74c39a2e590fe7498a128f5805dc1a4b4a4f484a8bf99fc66d5f829684d7",
+      "bytes": 211793,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/033.png",
+      "sha256": "a40726f0de7305c6be6cb221969572fedeb3d1b8bd653cd83e55b2e1163afdea",
+      "bytes": 219146,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/035.png",
+      "sha256": "4ef471026aed5db90394dfafb28a27a4bae83f5ea3924cf5c90281534cf79bcd",
+      "bytes": 415381,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/037.png",
+      "sha256": "c2d06fb200a7a3beff3440b0b95e8a7c86fbc9f41f31b9e589f8535c43d58176",
+      "bytes": 202107,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/039.png",
+      "sha256": "adbdaeb55445ca7fc4eed59dde8727e386316475a41fd42f0e41336713bd5534",
+      "bytes": 222509,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/041.png",
+      "sha256": "d3315e247189e5e36380f7e8694008c8a91f8184d9a1166ea705dfa89773a5f5",
+      "bytes": 217648,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/043.png",
+      "sha256": "e82bc04f7aea3191b93cbe33c96d0fa903b0731df9e6663651d9958105859c36",
+      "bytes": 183995,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/045.png",
+      "sha256": "3d9732292b393830d4c1e8cd43dc7217f3d79a563b4c0c08ebe9a4519536f938",
+      "bytes": 160001,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/047.png",
+      "sha256": "61e3f322ce2566c6a37cf538b7921b455ef7f6d62a65cad35ffe1c8a67334e27",
+      "bytes": 174155,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/051.png",
+      "sha256": "446026bf483e4c67742fc25c9dd724fdcbcf9201fadc241bbd7221f2cea55492",
+      "bytes": 216539,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/054.png",
+      "sha256": "7acf4bfc7172256c8f60054de9a50fd5d737c5e7a2150d004fa07716c086bcd6",
+      "bytes": 209990,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/068.png",
+      "sha256": "f61bcb1823d7c6a6e206198dd067c911c5137899f5c2c13139ba071e9a316b28",
+      "bytes": 230923,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/091.png",
+      "sha256": "3ede7349fba31a6194cadb7855697685c531b2e438d4758ee1b598ad51bfcd57",
+      "bytes": 107247,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/049.png",
+      "sha256": "77a6f0a9dfd3e28e6ebf3e5010476b1dc50997b78558b0d93275348919da30f6",
+      "bytes": 211672,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/052.png",
+      "sha256": "d568dffbef5fdd5681aa3312d0a5ca811e343fcd519cdfaff2bfc990de12bee5",
+      "bytes": 211316,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/055.png",
+      "sha256": "10c20886558b39de8aa28c5505ce1db4f626283c6f0723e268e49d76ae13c53f",
+      "bytes": 228257,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/056.png",
+      "sha256": "46f30d4108a09b4ec7cd056ba5c380c21c504b345bf931b81e2415d0d45d2011",
+      "bytes": 95178,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/057.png",
+      "sha256": "936875bc49e5652b6bc5359705c7e79dbdce6a3a211a5d16190e11fba1dd5265",
+      "bytes": 147866,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/058.png",
+      "sha256": "e95c0fa6153ee416e40818932e9f47651c46b651e4b18a742dd083859ef3daa4",
+      "bytes": 96694,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/059.png",
+      "sha256": "dcc1fb8cec15cbda007cfc036c5dee57acfa91f9ac2c9b88acab6a2041efa8f8",
+      "bytes": 181484,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/060.png",
+      "sha256": "e1cc4cdc63a6a20ff0343f2ffcc85ce4dc594131ab1acc7429f5b2f42b715203",
+      "bytes": 230263,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/061.png",
+      "sha256": "db21d47a135af951c7a3a363d1fbba8571c6733bcb60b6033260a11b13ea24f1",
+      "bytes": 146480,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/062.png",
+      "sha256": "0f31938fa6b0b00e62ae5cdfc8660adc317761aa76edd6c5bd009a821d7a5513",
+      "bytes": 176332,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/063.png",
+      "sha256": "76537e7b629294716e115afd4d4851927096883def92a903859ab89525755479",
+      "bytes": 201189,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/064.png",
+      "sha256": "d67a75cd731deee7044cea23bfc05fbb26d9361242a414e59f19f7b5f47315d8",
+      "bytes": 218540,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/065.png",
+      "sha256": "ad044d35a3b988a0172b1208c88c97b4aa9aab56e657105a2518402b05acb220",
+      "bytes": 160175,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/pages/066.png",
+      "sha256": "cd34d190d3520b330f94a4a56decebfefebd43941928f34d707750b8eacf4c59",
+      "bytes": 159643,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_rebuild_profile/user/registrymodifications.xcu",
+      "sha256": "e3c5dc2caca4088d261b70d7cf1f57a3fd15755b7e74e3c2892de77390a5a27b",
+      "bytes": 3779,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_rebuild_profile/user/extensions/buildid",
+      "sha256": "4e80829cd1c13534fecb420763830c6a6fe6d9a8a463cefc817071e313bdc7bc",
+      "bytes": 11,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_rebuild_profile/user/extensions/shared/lastsynchronized",
+      "sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "bytes": 1,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_rebuild_profile/user/extensions/shared/registry/com.sun.star.comp.deployment.configuration.PackageRegistryBackend/backenddb.xml",
+      "sha256": "ac6f585621eb04b34549a95c99e015ad5810a4156e021df46c46731e7a087698",
+      "bytes": 135,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_rebuild_profile/user/extensions/shared/registry/com.sun.star.comp.deployment.help.PackageRegistryBackend/backenddb.xml",
+      "sha256": "845041424286d5b794c11ff0a59d3df289dcb1567fb448ef0b85297108675b46",
+      "bytes": 117,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_rebuild_profile/user/extensions/bundled/lastsynchronized",
+      "sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "bytes": 1,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_rebuild_profile/user/extensions/bundled/registry/com.sun.star.comp.deployment.help.PackageRegistryBackend/backenddb.xml",
+      "sha256": "845041424286d5b794c11ff0a59d3df289dcb1567fb448ef0b85297108675b46",
+      "bytes": 117,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_rebuild_profile/user/extensions/bundled/registry/com.sun.star.comp.deployment.configuration.PackageRegistryBackend/backenddb.xml",
+      "sha256": "ac6f585621eb04b34549a95c99e015ad5810a4156e021df46c46731e7a087698",
+      "bytes": 135,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_rebuild_profile/user/extensions/tmp/registry/com.sun.star.comp.deployment.configuration.PackageRegistryBackend/backenddb.xml",
+      "sha256": "ac6f585621eb04b34549a95c99e015ad5810a4156e021df46c46731e7a087698",
+      "bytes": 135,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_rebuild_profile/user/extensions/tmp/registry/com.sun.star.comp.deployment.help.PackageRegistryBackend/backenddb.xml",
+      "sha256": "845041424286d5b794c11ff0a59d3df289dcb1567fb448ef0b85297108675b46",
+      "bytes": 117,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_rebuild_profile/user/gallery/sg30.sdv",
+      "sha256": "65365530165a871772e21962a5d7dda107d8d010f329bf59c878eabc3465bbe4",
+      "bytes": 2048,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_rebuild_profile/user/gallery/sg30.thm",
+      "sha256": "f1f24dff4f58a716033bcf96ad175d3436bff0e0a233ab09f6215973ed843fed",
+      "bytes": 565,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_rebuild_profile/user/autotext/mytexts.bau",
+      "sha256": "7cc7340aacc334c0731f3346744499958cd3ad192532f0656a9d3562b3b4c277",
+      "bytes": 557,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_rebuild_profile/user/uno_packages/cache/registry/com.sun.star.comp.deployment.help.PackageRegistryBackend/backenddb.xml",
+      "sha256": "845041424286d5b794c11ff0a59d3df289dcb1567fb448ef0b85297108675b46",
+      "bytes": 117,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_rebuild_profile/user/uno_packages/cache/registry/com.sun.star.comp.deployment.configuration.PackageRegistryBackend/backenddb.xml",
+      "sha256": "ac6f585621eb04b34549a95c99e015ad5810a4156e021df46c46731e7a087698",
+      "bytes": 135,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_rebuild_profile/user/basic/dialog.xlc",
+      "sha256": "5b72c4cc5130eccab44cbfb91270befaeaf8ee7ab97cf205ee2abb582fa4a9e5",
+      "bytes": 339,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_rebuild_profile/user/basic/script.xlc",
+      "sha256": "5b72c4cc5130eccab44cbfb91270befaeaf8ee7ab97cf205ee2abb582fa4a9e5",
+      "bytes": 339,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_rebuild_profile/user/basic/Standard/Module1.xba",
+      "sha256": "b434faf21386064e2e81af758f307ae8bea72c0cb6c8510d55b1bc1bb38f8612",
+      "bytes": 1124,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_rebuild_profile/user/basic/Standard/dialog.xlb",
+      "sha256": "85c83411f1285a0d0d9b511a7ea7dd06d5ac9b97f90d286adaca084212e3fe80",
+      "bytes": 288,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_rebuild_profile/user/basic/Standard/script.xlb",
+      "sha256": "80cb10b100053f6e0b26bb009a2b8ccbdedb761901680500a4736f7afbf1f959",
+      "bytes": 349,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_rebuild_profile/user/config/autotbl.fmt",
+      "sha256": "713229151490c66f043cb4865147c97458b4f33e4eb5f2bb4133c58cbe77041e",
+      "bytes": 35313,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_rebuild_profile/user/database/biblio.odb",
+      "sha256": "c3dd4e9008be33cdede3abf822e9b748a201704adf95aad92ab894dd98b3fe85",
+      "bytes": 2892,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_rebuild_profile/user/database/biblio/biblio.dbf",
+      "sha256": "aefc2bb614c2e307870405e0fd72f4a22cf794c396a73ce0551f18a478e80ed2",
+      "bytes": 75798,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_rebuild_profile/user/database/biblio/biblio.dbt",
+      "sha256": "3ab142231d8075fdd02c95a691ddce590e0f81450744cb87ca610fd06d75cac1",
+      "bytes": 46601,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-10.png",
+      "sha256": "d3ea399da83d5022a7c9f23db3f2faac17b111566ea1e141eb140a34299193c4",
+      "bytes": 319609,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/硕士论文初稿.pdf",
+      "sha256": "2be0a84fc3cef11af3d05cd59bbeb718cd548f132893e22ac6591cd230c4a835",
+      "bytes": 1896127,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-11.png",
+      "sha256": "b73802c5a6b3dfaf799ee2fd917fceb21ff88e8982caba7d0c3e5827bb901634",
+      "bytes": 331974,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-29.png",
+      "sha256": "331453f5aa88bfc89287f2f4eeb63d83254fa3e535188a5ee628d7e50ca0af53",
+      "bytes": 252869,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-15.png",
+      "sha256": "96c01c6133551f3ba3dd0d45d32512725eae329eba477869a41e1e6a8593e3d8",
+      "bytes": 267463,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-49.png",
+      "sha256": "137da1760c0b37a7400e9d852e316a0027061e19ef80c77b7dc1189a0538067c",
+      "bytes": 308628,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-39.png",
+      "sha256": "c35778fcf11dafc4967042e12ed4623d64e5f875c036c841c75a1da606cc54cc",
+      "bytes": 318893,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-62.png",
+      "sha256": "fff6469acbfae1fb12ac909c5842c7aa8ff9e88c724936d59c5e699bbd6427e7",
+      "bytes": 252412,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-12.png",
+      "sha256": "ee68b1b544ea910f65e0d0c016f7e145ea4d750ea539a8b1b6787f30e6cc1903",
+      "bytes": 353197,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-16.png",
+      "sha256": "46ac18adedd7dce6f618326b439669ee555bde4982dc986d60fd3486c25e04d9",
+      "bytes": 314704,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-27.png",
+      "sha256": "09578d58eba5a5a2dacdd29bb760ab7f712bbef7af49502133a121297813367d",
+      "bytes": 284667,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-84.png",
+      "sha256": "639dc2d82490919ae6ed187c2cb755b3a5a4843c4dfd82e2a0ec126bef519514",
+      "bytes": 196918,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-51.png",
+      "sha256": "f503f5cdecfc52f365a026481b4b337dac6fd7db9d4bfb93fff412c3ded65e7f",
+      "bytes": 312565,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-61.png",
+      "sha256": "ce87bfa2934039a394b6cda3a29558cb6e26f241de583a0ca03e8e9ecb1cba4b",
+      "bytes": 192591,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-41.png",
+      "sha256": "5bb6f02391b299d741019380bbf9ab10e40cb1babb2c98cad2e379cc8159c772",
+      "bytes": 308389,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-17.png",
+      "sha256": "d1078eb05733f4a5778074e01be3486aaf55dfc40f3e4cc5a1d36e5770ac1119",
+      "bytes": 324449,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-13.png",
+      "sha256": "ca45f766331d8c77fd135c41d2033e5d279d887f550cd3916ee5f809f2c2703e",
+      "bytes": 304956,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-28.png",
+      "sha256": "baa8b3056170f44033a64a1aefbc0d08c578758dcab4c133981530852d2466da",
+      "bytes": 321928,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-73.png",
+      "sha256": "3e35d06460b0ea0926009b8c31474e74c7c2562e0d36a62e23ac9a6b0baaa54c",
+      "bytes": 215372,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-55.png",
+      "sha256": "7387e621d2f8d36d7c4642752467cfe43d89ec17ae73a6e50c3f0f82b74f6b05",
+      "bytes": 332552,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-20.png",
+      "sha256": "70fd38d0c916995143bc2c23c1f8c52d1a2fd057ed3297c7509a93e3c179adaf",
+      "bytes": 318390,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-14.png",
+      "sha256": "4ef6e6e5e7f10e249cb75e5f4e57fe9431caf908a57570f9c9a34557cc3ee5eb",
+      "bytes": 153765,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-40.png",
+      "sha256": "ac70d31012ac2aebf956261ba456f26af3948d9e66430242cc7a71f03ec00576",
+      "bytes": 297658,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-74.png",
+      "sha256": "db406534345099230d5a42e5f794fdb6009dcf6683431f7285c209b157135d01",
+      "bytes": 253517,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-75.png",
+      "sha256": "c04f0cda7b7ee55e5b8c1f07d7e7bd4bd8f93b1af8230d1f064a43d16c67fa87",
+      "bytes": 343753,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-30.png",
+      "sha256": "6d4ef6ee5979331ea846031e9722ee5c456b2a2ad46ff97cb7bf8c2e97e0ac8e",
+      "bytes": 285609,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-21.png",
+      "sha256": "7ba21cdc725699177dffb0c786768a4918f757882fa1e8d2e65b3031cd0418ec",
+      "bytes": 284009,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-52.png",
+      "sha256": "54482a516bc295ac330cfba0a6df75c87a22cefbe7b77c20730ff0a50acdfa76",
+      "bytes": 303924,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-87.png",
+      "sha256": "8a5d104e9c13c8272b5b423a4b3e7ac5cb0dc8aee3f76fe84013dcde0f7fdd48",
+      "bytes": 253921,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-18.png",
+      "sha256": "eb7f73ba91a52af4fa0bae67683d37ff28d840173782a3051e3b95edc2625b1c",
+      "bytes": 296022,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-19.png",
+      "sha256": "352c72bc9591e3ee4205b20e87f342ba2473581a00e7497fc3078c4e6c8b0ffa",
+      "bytes": 330611,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-63.png",
+      "sha256": "96c646af9af1f439b5ce6dcfc37562770d08bb6606bcfa580bcc7b18fd33435f",
+      "bytes": 287865,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-86.png",
+      "sha256": "5e1676d0d850c3ce741952286b2a30f1b56290e28250c4fde5372b0863daa3dc",
+      "bytes": 266005,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-42.png",
+      "sha256": "deaed852a3437b1a50e4c9a8306592f17c04d15b630b503855472e67f0035630",
+      "bytes": 296776,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-53.png",
+      "sha256": "d267190c2d68589a3b019aeb3b282df0f91aa29d09fd4b810dab0de335d47bc9",
+      "bytes": 317191,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-76.png",
+      "sha256": "3871a55923d3292f1eb8542853f11d54b0a1f79ae13610982276220b3123a652",
+      "bytes": 276934,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-47.png",
+      "sha256": "3e0eb1acd40a1c3e80f549c75ce868a06c0613da491b15b1c26e9ab2ca08bb63",
+      "bytes": 250971,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-22.png",
+      "sha256": "9afd4b57286f9fefa0bd1d55915a0287ec2cea6c3197bae6a4b29211a475fe58",
+      "bytes": 328695,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-31.png",
+      "sha256": "87990496308b68d5fab5b30fc6347f083f2f28934423e251c0436d8dc0d36d13",
+      "bytes": 278537,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-33.png",
+      "sha256": "26f6d98b7851352bd13a3695f94ef6bb92e1bec08247a599a3aa078aefccaeb9",
+      "bytes": 324108,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-64.png",
+      "sha256": "64fe48c0bca934f4f4743e71473d787c99c85e0755e2c977198cd7845270c149",
+      "bytes": 322048,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-50.png",
+      "sha256": "269e147ba7e6ab3a71a814b1010bececcc3bf4aee0c250412cec931f7965f4bf",
+      "bytes": 311058,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-54.png",
+      "sha256": "643d3083f07f12bb1026b6ca7c0b48579ecec949b82ed85bfa7f3b57ec0a37a2",
+      "bytes": 299831,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-77.png",
+      "sha256": "d5e21658f527f5bb8dc3d3c753e7372222db00cacd312fc37450d9c14fc7db27",
+      "bytes": 189572,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-32.png",
+      "sha256": "9674e033c7ed184dde2fbe05e2f5a9b6204f359092b5250b75098ef3e5ac0fb3",
+      "bytes": 268217,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-34.png",
+      "sha256": "fea9dd395f6d96b0f8a237e4d53214678e63d27ae7d46c2ef77c0ed16ce12883",
+      "bytes": 289641,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-65.png",
+      "sha256": "085c4814a3844f09232a5381ece7e355ef4b29db9b60ef5c0fb2ddffb578d0f1",
+      "bytes": 217498,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-68.png",
+      "sha256": "0f13fec3c9eae89b1715b86701ccbb7b1246bd4dfd861b1b98e238e2870e52a2",
+      "bytes": 338129,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-85.png",
+      "sha256": "a57c39b0c52d44bf3718eefe604d7c5c32eb6b2a5f3f90cee1df0a79cf1361d7",
+      "bytes": 245891,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-43.png",
+      "sha256": "28fde78f69be0b5c5d7995857de7e7c5354d7ae10815f1c9eae3aef1cc531d42",
+      "bytes": 249928,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-45.png",
+      "sha256": "f43e3cfa2cac40e2ef47ffa76cdb4977cc0ea68a13a7338aa10097f2447e71f9",
+      "bytes": 232450,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-88.png",
+      "sha256": "95338575bc9fd2e0c0060bbcd6b8160dd3a081001538924a3195fecd190d57cc",
+      "bytes": 217930,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-56.png",
+      "sha256": "bdb85ead9e16842fb355aca7ed960e942b9446b397c33d6b58dd80bd9e9b88ec",
+      "bytes": 138029,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-57.png",
+      "sha256": "cea4da3d09fdd3a5378f2648bd6308668ee1ec3671a1db7e0c6eaeb3d5611036",
+      "bytes": 207045,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-66.png",
+      "sha256": "0960e38a553d7d22baefc239f8c210ef7aa9c3f9ecca96d85c18b7cd5e21e0b1",
+      "bytes": 215022,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-71.png",
+      "sha256": "0ae86c04a52200f4633e77492c077a73a483304f890a5e6cb63b4c18f52f0b92",
+      "bytes": 333041,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-89.png",
+      "sha256": "db9861cb90f3ecfed698aa3ce49191d66a40c43c9bbb6552eab2efcbfda2723a",
+      "bytes": 153538,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-44.png",
+      "sha256": "f513c22f39c28f70033ad79819a5238af339841f09a4af313a07dce866220f05",
+      "bytes": 329735,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-46.png",
+      "sha256": "6c0b9a4cf35496c7eaa455d22019f8480f67f9e9082ee5576a6a598404efd445",
+      "bytes": 296722,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-78.png",
+      "sha256": "eb3f97123242c4c89a31a9c91f86abdaac53bb2c09ad1343bbfbea9094ee7b47",
+      "bytes": 313599,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-79.png",
+      "sha256": "13d6ada1ac866151b211e9a344e92d8ed4facdd2f426285e992291e5b3e85340",
+      "bytes": 352431,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-35.png",
+      "sha256": "48fe3a0ece4706e6748f035338f45f98107b94ac4d6c4941101ac675d5f00c25",
+      "bytes": 439685,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-36.png",
+      "sha256": "2946ae12c1753058bd60b5963ba3360adb871eaec8310777b68bbc72c088f6bf",
+      "bytes": 343751,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-38.png",
+      "sha256": "e0d054ec871962f9b7973c9f150c6711927df12bea8e9a209ad64de63f4da54f",
+      "bytes": 299241,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-67.png",
+      "sha256": "7113dab6495d8c2151c51d75f6a67f1519de5ae003e081bccd245588ba419816",
+      "bytes": 338103,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-69.png",
+      "sha256": "2ed15ace56d8b06d14acca8bfe62ece2f9cbc1c57ed486c8568a2d837d4c904f",
+      "bytes": 241980,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-90.png",
+      "sha256": "bd153d606e740db8990a9f7b97e1f93bb1d425c60a1ec83ec5ab274f1d1b2714",
+      "bytes": 139608,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-91.png",
+      "sha256": "24a5f6ab63141f9f7a44c8e4d7098e39faef5182c2bd7aff7ab03784392e6c23",
+      "bytes": 156909,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-58.png",
+      "sha256": "d63b9bb7d1d431ea0f4b7650bdc2444cbadfc39434032871e75387494b9c1e64",
+      "bytes": 134245,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-60.png",
+      "sha256": "3138c6b6aa56ffc6dbe5f5199eaff2f1bf85b14f9f6fdf183f9d7737298f5b84",
+      "bytes": 338218,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-23.png",
+      "sha256": "21611c2eebdcdae6f198ed823742a8e24baeb1dbe268c277e902e0187c600c9f",
+      "bytes": 308983,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-25.png",
+      "sha256": "1cfa86e29568b4569a638e14f3006b9513b9e413774b8ff1cbf7daefc19b86e2",
+      "bytes": 324414,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-37.png",
+      "sha256": "997483fd188fe7a715259358c48d025a492eba1dd62d831c140707669ec9f1ff",
+      "bytes": 290504,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-59.png",
+      "sha256": "f1f4445141e332cd4eb0bb3a1494be4a5f97997dcf9207e44e868dfc350563de",
+      "bytes": 262361,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-80.png",
+      "sha256": "d4524ac689344497e3a6dd0f5b15754f7f178c94ac412c33bdc5f9931319eda7",
+      "bytes": 319246,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-82.png",
+      "sha256": "4aed9150701f44508ec79709df7a8c36d0b2ec23471a52a26dfd5de5a49693cb",
+      "bytes": 314769,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-70.png",
+      "sha256": "85c673919e0ce134af74cf3c2fd0c5212fe1004c9743ab4e6558b3749d9bd25c",
+      "bytes": 250408,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-24.png",
+      "sha256": "c6a99ec068817021aa2f89a692fee2cb282099c9b7f1bb7864de9c8cccddacfe",
+      "bytes": 290940,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-26.png",
+      "sha256": "56d9513bff5b1a684bb6033415fd2f78010fceed8c0ce9aa2cd89d8e6257c05c",
+      "bytes": 130525,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-48.png",
+      "sha256": "54f778cb28b317b9334e6fc615480087f2d3c1c6324ded78f9cd7812e84a5aba",
+      "bytes": 326722,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-72.png",
+      "sha256": "036997218f95ed3a172ded9ea444ed4e0f49dd4c587c1cc2d01a9a01f1a16a0c",
+      "bytes": 184662,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-81.png",
+      "sha256": "873ca8bd14dd242946dd2889e941fd936f39c6d2d6e07bee3dc3ceee8a9c7214",
+      "bytes": 316914,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-83.png",
+      "sha256": "bc7bad03e534a135144e77a127a80e8e4c116655d5ed2d3705c8c31b9f6f8345",
+      "bytes": 330578,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-1.png",
+      "sha256": "a392f5a6d83174956c1e99ec919c8750800593612dfd11e924ae22a61743ca35",
+      "bytes": 46674,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-2.png",
+      "sha256": "bab76d72f849a95ef1bc14317e8ed033fe7cf1f7a43ff4db3327b0762bfe16f8",
+      "bytes": 310122,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-3.png",
+      "sha256": "bffefe97cce7f583b3c413e379d2bc418a3e71825dda6c11d5d32511fdb0ca06",
+      "bytes": 211813,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-4.png",
+      "sha256": "969f2413361c593a5c24245f40c0ec2cafd385298440cbf58e28b7b4a603c536",
+      "bytes": 153776,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-5.png",
+      "sha256": "7d28b7d72217d17c627461de8cef1f26d122f6ebd6cf38e52d0ce325e90f08cb",
+      "bytes": 39188,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-6.png",
+      "sha256": "9c9deb1c16ba8b3a7ca86cf19875881d8c372df9e6e0c07d6bb895de899eefa1",
+      "bytes": 291080,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-7.png",
+      "sha256": "1b818024a52cf8f57a486f37a4dcf08d126822d06f3e0257543e01cda92517a4",
+      "bytes": 313319,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-8.png",
+      "sha256": "9c87f77cd647dae23b1c172c997d8d462185b4929f78f63384142487bedfc7e0",
+      "bytes": 341816,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/rendered/page-9.png",
+      "sha256": "9f29a2b1d445903ab3b15d8c0cb14dfc59a09670dedd9a7a66e4196480c430ce",
+      "bytes": 348241,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/review_pairs/pair_001.png",
+      "sha256": "4affc6e095daaadbe2eff88dae0f1eeb5b858e5a4b32599353181071299db4d5",
+      "bytes": 373605,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/review_pairs/pair_003.png",
+      "sha256": "a6396d28a3203f178de499bb05fbda9a58d85748ce652f240404db877f1a415b",
+      "bytes": 380954,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/review_pairs/pair_005.png",
+      "sha256": "627913477e4e47c2a668b5269ef50581a5d450da2233c2a42d2c8ab42ca8327f",
+      "bytes": 348423,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/review_pairs/pair_007.png",
+      "sha256": "1dd012ea1fdb1dbaad948d2dad041c5da2092c9a30adc24575fde3f125cedafe",
+      "bytes": 646516,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/review_pairs/pair_009.png",
+      "sha256": "56f1195a119885f9f4b235819e0da3e5aaa486b2b01d9fc276df2afa85462c19",
+      "bytes": 656991,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/review_pairs/pair_011.png",
+      "sha256": "405a25fe9c37ed40063896a2adeb6a80a92c0777cb416a43fa9f9b8312ab8edf",
+      "bytes": 669721,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/review_pairs/pair_013.png",
+      "sha256": "6a14430d7d5b9190e33d43679c1be5c2f265a3ad514c2c66cfa30fac152ffaab",
+      "bytes": 472701,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/review_pairs/pair_015.png",
+      "sha256": "4595f474f80bea79baff875cf84da40eb48f552ddda736e99ec087cdf4bb3e85",
+      "bytes": 594446,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/review_pairs/pair_017.png",
+      "sha256": "5ac0e6f192bed3721d2bb9967d47863caddfda137720d33644e3c88f55a54bf2",
+      "bytes": 627904,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/review_pairs/pair_019.png",
+      "sha256": "2dba92c2b70abf969cac8a78c1ec1a8fd88c8239304bdcc5ceb90b22e8572153",
+      "bytes": 633244,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/review_pairs/pair_021.png",
+      "sha256": "e6b942d71c7d3ba1c3e9324694a026d70eda664b1af17385d0c46fae870777fb",
+      "bytes": 631202,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/review_pairs/pair_023.png",
+      "sha256": "08ee30f002ac5ea06d607701d3326b7357460c1e50235edc9e931f37fc27513a",
+      "bytes": 616897,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/review_pairs/pair_025.png",
+      "sha256": "5515d761b719847540bf248992ad7514709809fba3e66e8b32e46c2b5d7e527f",
+      "bytes": 454947,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/review_pairs/pair_027.png",
+      "sha256": "ff2ea29219d425ae1b9716a73e3f21418cf70131d36e52de8d1c1c73d99c3181",
+      "bytes": 624500,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/review_pairs/pair_029.png",
+      "sha256": "2efeed514275be62ba4c17678f830bd62bae33274fbc0a7f5c57ee7a51556b5d",
+      "bytes": 546624,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/review_pairs/pair_031.png",
+      "sha256": "f6077868c1b8c7a58c8273b48587a0ace32cfea4f99c06433eef8ed2bf5bf669",
+      "bytes": 561378,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/review_pairs/pair_033.png",
+      "sha256": "602291203b26bfbc39a1a4f13e8ab8893c55f3c213dba9251f293731b1b9843d",
+      "bytes": 626956,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/review_pairs/pair_035.png",
+      "sha256": "14bdf5ae8dd722321b2826d93feb037b498721d8e2f0a148c60c16d00e73a714",
+      "bytes": 814996,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/review_pairs/pair_037.png",
+      "sha256": "60ad0489665abeb3fcdc2715f71b2990e95549cd84bd97cc20d6bcf9d84c1707",
+      "bytes": 599371,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/review_pairs/pair_039.png",
+      "sha256": "e747175375dd6d6bb88b1330c849e32096ebc3cb85ef5626a504b0a5c50a1343",
+      "bytes": 605532,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/review_pairs/pair_041.png",
+      "sha256": "b3456dea0a2088659738af7a7262db649062fbc59ec46d62adf359c1d955e9e0",
+      "bytes": 618906,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/review_pairs/pair_043.png",
+      "sha256": "82b53f56a8a9462a11039216d2f3dbec389f4a571839df91c2256a30355b810c",
+      "bytes": 572739,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/review_pairs/pair_045.png",
+      "sha256": "cdac136910f0f82b702573d4731ea3dc24b72c0408029ac8c11e7e44f458b8f3",
+      "bytes": 543456,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/review_pairs/pair_047.png",
+      "sha256": "032c9243873755b5061e9e4b7e03bdffc47d46be49f51dbd0e6ebf347c1fa845",
+      "bytes": 592501,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/review_pairs/pair_049.png",
+      "sha256": "f3356d08bd8d0ad45f223350fb4c548111d5ff59396799807c8c6ef26d26191b",
+      "bytes": 611932,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/review_pairs/pair_051.png",
+      "sha256": "c5ff83615675f8028bb4d529f0338b7cecb9458eed3ec67ea27b648cb6b704df",
+      "bytes": 598803,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/review_pairs/pair_053.png",
+      "sha256": "232609930d464c5fd8ac8edad89160fc04dd7ff70d2f5e442f2c2e483942501f",
+      "bytes": 599615,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/review_pairs/pair_055.png",
+      "sha256": "77661ede31b39f61643e28c913117182690bde77064cda058cdee8f697d1cd4e",
+      "bytes": 470716,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/review_pairs/pair_057.png",
+      "sha256": "9f8ac6447bb5eb7a09d42a7de76a48bf9ad7c813c83d333614cec06f3337d414",
+      "bytes": 348277,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/review_pairs/pair_059.png",
+      "sha256": "a55410ad7d3977607cd75c0c4452068f252afc1e7e2987ad0ce4bb4654e794a2",
+      "bytes": 594539,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/review_pairs/pair_061.png",
+      "sha256": "785fb7f30ea2e6727f92168fa5a00a1431dfe5a48287c58b85251b625fb22822",
+      "bytes": 459609,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/review_pairs/pair_063.png",
+      "sha256": "475756f96dd5fb3b45a3a8b9f47d9429090440fc806da669b5358472cc0812b5",
+      "bytes": 627135,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/review_pairs/pair_065.png",
+      "sha256": "d5595bb5dd4a21129fc20ca8fbb7308871ddef6784013358e9d3f5e2ed6cb8b9",
+      "bytes": 439357,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/review_pairs/pair_067.png",
+      "sha256": "c6f54886796a9c15d61a2ced301311d8d94e360363337c2368c7c5dffb9b14e2",
+      "bytes": 665051,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/review_pairs/pair_069.png",
+      "sha256": "6979c35ed1efdaf5980853ebb37e9cc70b81f1bc21475f986e432e43a46e42df",
+      "bytes": 497529,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/review_pairs/pair_071.png",
+      "sha256": "7fa59976de79f39d4e8887b341d75f20717a94eaa5479857cf2f98399d534a22",
+      "bytes": 519460,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/review_pairs/pair_073.png",
+      "sha256": "7ec5b375d18b60500a0290a568446c047f05aa9e3cd1c4c79b2b0c1c9be606ff",
+      "bytes": 483940,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/review_pairs/pair_075.png",
+      "sha256": "264088ffa07eafaa7c39c4f808e058242827f1d60fb6d1b2c52407f1211ac5cb",
+      "bytes": 611843,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/review_pairs/pair_077.png",
+      "sha256": "44f9496cb8fc34543b0678e82b1fae27c40fc13203540e35b68b7cbfa0988d4c",
+      "bytes": 509458,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/review_pairs/pair_079.png",
+      "sha256": "2e569330c3259916151884b948e3841bd5796e89f0ba2deb9cace228a483a754",
+      "bytes": 655801,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/review_pairs/pair_081.png",
+      "sha256": "5ddfa5ca54df1c629b43de0f3fcdb146ee15c3655c413758260433ed6a9c2102",
+      "bytes": 647165,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/review_pairs/pair_083.png",
+      "sha256": "b1df2266e8b2e1a278d4ae775b9031ae81de658bbce31a1a000a94c3cb67ea21",
+      "bytes": 515331,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/review_pairs/pair_085.png",
+      "sha256": "75e81dbbfa2489b4b2265890b262ef00475340e8b3d19e6075fc2877e3622b7d",
+      "bytes": 507099,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/review_pairs/pair_087.png",
+      "sha256": "2e081e4df65220cb08856b0877243cde841700f35db056bec2ab569f6904483c",
+      "bytes": 456896,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/review_pairs/pair_089.png",
+      "sha256": "7d05d08718fdeba8f593cc3b87e4efcca5a40ffef4545eab5fa41c193447d2e4",
+      "bytes": 299409,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/review_pairs/pair_091.png",
+      "sha256": "a4036e187029aa28c7f600eb7bceb77a681c344b3614d8b83fdc3226f085bc32",
+      "bytes": 173080,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_cover_profile/user/registrymodifications.xcu",
+      "sha256": "e3c5dc2caca4088d261b70d7cf1f57a3fd15755b7e74e3c2892de77390a5a27b",
+      "bytes": 3779,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_cover_profile/user/extensions/buildid",
+      "sha256": "4e80829cd1c13534fecb420763830c6a6fe6d9a8a463cefc817071e313bdc7bc",
+      "bytes": 11,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_cover_profile/user/extensions/shared/lastsynchronized",
+      "sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "bytes": 1,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_cover_profile/user/extensions/shared/registry/com.sun.star.comp.deployment.configuration.PackageRegistryBackend/backenddb.xml",
+      "sha256": "ac6f585621eb04b34549a95c99e015ad5810a4156e021df46c46731e7a087698",
+      "bytes": 135,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_cover_profile/user/extensions/shared/registry/com.sun.star.comp.deployment.help.PackageRegistryBackend/backenddb.xml",
+      "sha256": "845041424286d5b794c11ff0a59d3df289dcb1567fb448ef0b85297108675b46",
+      "bytes": 117,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_cover_profile/user/extensions/bundled/lastsynchronized",
+      "sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "bytes": 1,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_cover_profile/user/extensions/bundled/registry/com.sun.star.comp.deployment.configuration.PackageRegistryBackend/backenddb.xml",
+      "sha256": "ac6f585621eb04b34549a95c99e015ad5810a4156e021df46c46731e7a087698",
+      "bytes": 135,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_cover_profile/user/extensions/bundled/registry/com.sun.star.comp.deployment.help.PackageRegistryBackend/backenddb.xml",
+      "sha256": "845041424286d5b794c11ff0a59d3df289dcb1567fb448ef0b85297108675b46",
+      "bytes": 117,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_cover_profile/user/extensions/tmp/registry/com.sun.star.comp.deployment.configuration.PackageRegistryBackend/backenddb.xml",
+      "sha256": "ac6f585621eb04b34549a95c99e015ad5810a4156e021df46c46731e7a087698",
+      "bytes": 135,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_cover_profile/user/extensions/tmp/registry/com.sun.star.comp.deployment.help.PackageRegistryBackend/backenddb.xml",
+      "sha256": "845041424286d5b794c11ff0a59d3df289dcb1567fb448ef0b85297108675b46",
+      "bytes": 117,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_cover_profile/user/autotext/mytexts.bau",
+      "sha256": "7cc7340aacc334c0731f3346744499958cd3ad192532f0656a9d3562b3b4c277",
+      "bytes": 557,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_cover_profile/user/basic/dialog.xlc",
+      "sha256": "5b72c4cc5130eccab44cbfb91270befaeaf8ee7ab97cf205ee2abb582fa4a9e5",
+      "bytes": 339,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_cover_profile/user/basic/script.xlc",
+      "sha256": "5b72c4cc5130eccab44cbfb91270befaeaf8ee7ab97cf205ee2abb582fa4a9e5",
+      "bytes": 339,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_cover_profile/user/basic/Standard/Module1.xba",
+      "sha256": "b434faf21386064e2e81af758f307ae8bea72c0cb6c8510d55b1bc1bb38f8612",
+      "bytes": 1124,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_cover_profile/user/basic/Standard/dialog.xlb",
+      "sha256": "85c83411f1285a0d0d9b511a7ea7dd06d5ac9b97f90d286adaca084212e3fe80",
+      "bytes": 288,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_cover_profile/user/basic/Standard/script.xlb",
+      "sha256": "80cb10b100053f6e0b26bb009a2b8ccbdedb761901680500a4736f7afbf1f959",
+      "bytes": 349,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_cover_profile/user/config/autotbl.fmt",
+      "sha256": "713229151490c66f043cb4865147c97458b4f33e4eb5f2bb4133c58cbe77041e",
+      "bytes": 35313,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_cover_profile/user/database/biblio.odb",
+      "sha256": "c3dd4e9008be33cdede3abf822e9b748a201704adf95aad92ab894dd98b3fe85",
+      "bytes": 2892,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_cover_profile/user/database/biblio/biblio.dbf",
+      "sha256": "aefc2bb614c2e307870405e0fd72f4a22cf794c396a73ce0551f18a478e80ed2",
+      "bytes": 75798,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_cover_profile/user/database/biblio/biblio.dbt",
+      "sha256": "3ab142231d8075fdd02c95a691ddce590e0f81450744cb87ca610fd06d75cac1",
+      "bytes": 46601,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_cover_profile/user/gallery/sg30.sdv",
+      "sha256": "65365530165a871772e21962a5d7dda107d8d010f329bf59c878eabc3465bbe4",
+      "bytes": 2048,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_cover_profile/user/gallery/sg30.thm",
+      "sha256": "f1f24dff4f58a716033bcf96ad175d3436bff0e0a233ab09f6215973ed843fed",
+      "bytes": 565,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_cover_profile/user/uno_packages/cache/registry/com.sun.star.comp.deployment.configuration.PackageRegistryBackend/backenddb.xml",
+      "sha256": "ac6f585621eb04b34549a95c99e015ad5810a4156e021df46c46731e7a087698",
+      "bytes": 135,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/qa/lo_cover_profile/user/uno_packages/cache/registry/com.sun.star.comp.deployment.help.PackageRegistryBackend/backenddb.xml",
+      "sha256": "845041424286d5b794c11ff0a59d3df289dcb1567fb448ef0b85297108675b46",
+      "bytes": 117,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/references/1404.2334/paper.pdf",
+      "sha256": "1d83d11de0f209b7c67bb17ebe59af331902e1178ef4b2b1447661f6f865b7c9",
+      "bytes": 2102182,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/references/1602.00763/paper.pdf",
+      "sha256": "2c6b0845f8eeabac5a5b1279949e302a181d7d6c8078a10cc4560fba06717d3b",
+      "bytes": 115276,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/references/2006.11275/paper.pdf",
+      "sha256": "991f7c6177ce22a595bff1d12f999559b36ebfa0963157f033a21029fc95ca52",
+      "bytes": 5452928,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4/references/2310.03923/paper.pdf",
+      "sha256": "6148eb692f6762b2d7d52433680b3d1e367d5aded3c086ce33098370aadeca14",
+      "bytes": 1174420,
+      "reason": "Generated page render cache / external literature full PDF / third-party snapshot excluded; original retained locally"
+    }
+  ],
+  "optional_evidence_path_not_found": []
+}

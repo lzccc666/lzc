@@ -664,6 +664,7 @@ def filter_gobs(
     gobs: dict,
     image: np.ndarray,
     BG_CLASSES = ["wall", "floor", "ceiling"],
+    audit=None,
 ):
     # If no detection at all
     if len(gobs['xyxy']) == 0:
@@ -674,13 +675,21 @@ def filter_gobs(
     for mask_idx in range(len(gobs['xyxy'])):
         local_class_id = gobs['class_id'][mask_idx]
         class_name = gobs['classes'][local_class_id]
+        def record_filter(reason):
+            if audit is not None:
+                audit.append(dict(stage='input_filter', reason=reason,
+                    detection_index=int(gobs.get('_audit_indices', np.arange(len(gobs['xyxy'])))[mask_idx]),
+                    category=class_name, confidence=float(gobs['confidence'][mask_idx])
+                    if gobs['confidence'] is not None else None))
         
         # SKip masks that are too small
         if gobs['mask'][mask_idx].sum() < max(cfg.mask_area_threshold, 10):
+            record_filter('mask_area')
             continue
         
         # Skip the BG classes
         if cfg.skip_bg and class_name in BG_CLASSES:
+            record_filter('background')
             continue
         
         # Skip the non-background boxes that are too large
@@ -689,15 +698,18 @@ def filter_gobs(
             bbox_area = (x2 - x1) * (y2 - y1)
             image_area = image.shape[0] * image.shape[1]
             if bbox_area > cfg.max_bbox_area_ratio * image_area:
+                record_filter('bbox_area')
                 # print(f"Skipping {class_name} with area {bbox_area} > {cfg.max_bbox_area_ratio} * {image_area}")
                 continue
             
         # Skip masks with low confidence
         if gobs['confidence'] is not None:
             if gobs['confidence'][mask_idx] < cfg.mask_conf_threshold:
+                record_filter('confidence')
                 continue
         
         idx_to_keep.append(mask_idx)
+        record_filter('retained')
     
     for k in gobs.keys():
         if isinstance(gobs[k], str) or k in {"classes", "frame_provenance"}: # 帧级字段
@@ -752,6 +764,9 @@ def gobs_to_detection_list(
     class_names = None,
     BG_CLASSES = ["wall", "floor", "ceiling"],
     color_path = None,
+    audit=None,
+    observation_policy=None,
+    sparse_callback=None,
 ):
     '''
     Return a DetectionList object from the gobs
@@ -760,8 +775,10 @@ def gobs_to_detection_list(
     fg_detection_list = DetectionList()
     bg_detection_list = DetectionList()
     
+    if audit is not None:
+        gobs['_audit_indices'] = np.arange(len(gobs['xyxy']))
     gobs = resize_gobs(gobs, image)
-    gobs = filter_gobs(cfg, gobs, image, BG_CLASSES)
+    gobs = filter_gobs(cfg, gobs, image, BG_CLASSES, audit=audit)
     
     if len(gobs['xyxy']) == 0:
         return fg_detection_list, bg_detection_list
@@ -780,10 +797,20 @@ def gobs_to_detection_list(
         
         from conceptgraph.completion.depth import depth_support
         robust_depth = getattr(cfg, "depth_policy", "legacy") == "largest_supported_cluster"
-        supported_mask, depth_evidence = depth_support(depth_array, mask, robust=robust_depth)
+        if observation_policy is None:
+            supported_mask, depth_evidence = depth_support(depth_array, mask, robust=robust_depth)
+        else:
+            supported_mask, depth_evidence = observation_policy(
+                depth_array, mask, gobs, mask_idx)
         # 保持原配置的深度范围，只在显式启用的新方法使用质量筛选。
-        if robust_depth:
+        if robust_depth or observation_policy is not None:
             mask = supported_mask
+        def record_geometry(reason, **extra):
+            if audit is not None:
+                audit.append(dict(stage='geometry', reason=reason,
+                    detection_index=int(gobs['_audit_indices'][mask_idx]),
+                    filtered_mask_index=mask_idx, category=class_name,
+                    depth_evidence=depth_evidence, **extra))
         # make the pcd and color it
         camera_object_pcd = create_object_pcd(
             depth_array,
@@ -795,6 +822,10 @@ def gobs_to_detection_list(
         
         # It at least contains 5 points
         if len(camera_object_pcd.points) < max(cfg.min_points_threshold, 5): 
+            record_geometry('insufficient_points', points=len(camera_object_pcd.points),
+                            required_points=int(max(cfg.min_points_threshold, 5)))
+            if sparse_callback is not None and len(camera_object_pcd.points):
+                sparse_callback(depth_array, mask, gobs, mask_idx, depth_evidence)
             continue
         
         if trans_pose is not None:
@@ -809,7 +840,12 @@ def gobs_to_detection_list(
         pcd_bbox.color = [0,1,0]
         
         if pcd_bbox.volume() < 1e-6:
+            record_geometry('degenerate_bbox', points=len(global_object_pcd.points),
+                            volume=float(pcd_bbox.volume()))
             continue
+        record_geometry('accepted', points=len(global_object_pcd.points),
+                        volume=float(pcd_bbox.volume()),
+                        observation_center=np.asarray(pcd_bbox.get_center()).tolist())
         
         # Treat the detection in the same way as a 3D object
         # Store information that is enough to recover the detection

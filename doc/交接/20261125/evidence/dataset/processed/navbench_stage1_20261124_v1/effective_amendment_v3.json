@@ -1,0 +1,36 @@
+{
+  "version": "stage1-effective-amendment-v3",
+  "created_utc": "2026-11-24T13:07:26.708260+00:00",
+  "seed": 17,
+  "previous_protocol": {
+    "path": "/root/autodl-tmp/lizichong/dataset/processed/navbench_stage1_20261124_v1/protocol_v2.json",
+    "sha256": "cf23145ae67d1ba18a2e55fe873f7fb9d1dd782ceba1466f960218defce0e5b8"
+  },
+  "schema_v1": {
+    "path": "/root/autodl-tmp/lizichong/dataset/processed/navbench_stage1_20261124_v1/task_record.schema.json",
+    "sha256": "7f48d078a6057c812f0ce90f7ef046264bd36c4757158fd139c38589f319ed4a"
+  },
+  "schema_v2": {
+    "path": "/root/autodl-tmp/lizichong/dataset/processed/navbench_stage1_20261124_v1/task_record.schema_v2.json",
+    "sha256": "5fab8695b03f09a7e45327b0aab3bc721a03e82ed75d7f6035fd71d97831b353"
+  },
+  "immutable_registry_sha256": "40aca597746a2b73b41ad68d711b7aea350c0af3939cc9b9ed4b49ea6e45c35e",
+  "immutable_denominator_sha256": "c20f0698eb78ee3a1a58ec9a11712265c9fe658d7ede6cd71b4a8fde39142ee8",
+  "reason": "Pre-method independent audit found two schema-only future admission loopholes; no real records were wrongly included.",
+  "main_table_rule": "Only feasible, scene/log/time-bound original scene tasks with independent same-contract certificates; pending is never eligible.",
+  "infeasible_rule": "Requires independently checked, hashed proof covering the complete declared domain; finite search failure is pending.",
+  "proof_validation_scope": "Schema, hashes and declared independent verifier result are checked here; this stage produces no new impossibility proof and does not claim to verify arbitrary mathematics.",
+  "source_binding_overlay": {
+    "path": "/root/autodl-tmp/lizichong/dataset/processed/navbench_stage1_20261124_v1/source_binding_overlay_v1.jsonl",
+    "sha256": "5f64ca493d58310cfc7cbc33acedeb40185050be76108eae56152beb4838befe"
+  },
+  "witness_role": "Independent reference proves existence only. It is not the unique correct route and must never become a pointwise imitation scoring target.",
+  "trajectory_acceptance": "Accept every path/trajectory satisfying the same frozen task target, output mode, motion, horizon where applicable, road, whole-body and sweep constraints; no need to match reference waypoints.",
+  "finite_goal_scope": "Historical static certified small terminal regions are a finite declared conditional benchmark. They do not cover all physically valid nearby locations. A witness-specific terminal region is not the complete target domain.",
+  "historical_goal_evaluation": "For the finite conditional benchmark accept any trajectory reaching any allowed region in the frozen declared union for the acceptable target set; report finite-region membership separately from broader task semantics. Do not transfer the chosen witness instance or region into method inputs.",
+  "goal_scope_change_policy": "A broader semantic target domain requires independent geometry/label definition and a new version before method evaluation; retain old conditional scores and all failures.",
+  "readiness": "Existing 30-scene predictions independently checked: 1196 frames, 878 query bindings; all 81 conditional feasible queries retained, including 23 with empty current prediction graphs.",
+  "model_calls": 0,
+  "planner_calls": 0,
+  "GPU_calls": 0
+}

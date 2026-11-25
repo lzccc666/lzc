@@ -1,0 +1,1952 @@
+{
+  "status": "ok",
+  "message-type": "work-list",
+  "message-version": "1.0.0",
+  "message": {
+    "facets": {},
+    "total-results": 1424874,
+    "items": [
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2026,
+              11,
+              19
+            ]
+          ],
+          "date-time": "2026-11-19T23:26:21Z",
+          "timestamp": 1795130781748,
+          "version": "4.10.3"
+        },
+        "reference-count": 60,
+        "publisher": "IEEE",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2023,
+                  6,
+                  1
+                ]
+              ],
+              "date-time": "2023-06-01T00:00:00Z",
+              "timestamp": 1685577600000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-029"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2023,
+                  6,
+                  1
+                ]
+              ],
+              "date-time": "2023-06-01T00:00:00Z",
+              "timestamp": 1685577600000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-037"
+          }
+        ],
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2023,
+              6
+            ]
+          ]
+        },
+        "DOI": "10.1109/cvpr52729.2023.00085",
+        "type": "proceedings-article",
+        "created": {
+          "date-parts": [
+            [
+              2023,
+              8,
+              22
+            ]
+          ],
+          "date-time": "2023-08-22T17:30:52Z",
+          "timestamp": 1692725452000
+        },
+        "page": "815-824",
+        "source": "Crossref",
+        "is-referenced-by-count": 453,
+        "title": [
+          "OpenScene: 3D Scene Understanding with Open Vocabularies"
+        ],
+        "prefix": "10.1109",
+        "author": [
+          {
+            "given": "Songyou",
+            "family": "Peng",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Google Research"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Kyle",
+            "family": "Genova",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Google Research"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Chiyu",
+            "family": "Jiang",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Waymo LLC"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Andrea",
+            "family": "Tagliasacchi",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Google Research"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Marc",
+            "family": "Pollefeys",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "ETH Zurich"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Thomas",
+            "family": "Funkhouser",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Google Research"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "member": "263",
+        "reference": [
+          {
+            "key": "ref13",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2018.00481"
+          },
+          {
+            "key": "ref57",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR52688.2022.01760"
+          },
+          {
+            "key": "ref12",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2017.261"
+          },
+          {
+            "key": "ref56",
+            "article-title": "3d shapenets: A deep representation for volumetric shapes",
+            "author": "wu",
+            "year": "2015",
+            "journal-title": "CVPR"
+          },
+          {
+            "key": "ref15",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2012.6248074"
+          },
+          {
+            "key": "ref59",
+            "article-title": "Open-vocabulary semantic segmentation using test-time distillation",
+            "author": "zabari",
+            "year": "2022",
+            "journal-title": "ECCVW"
+          },
+          {
+            "key": "ref14",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR46437.2021.00182"
+          },
+          {
+            "key": "ref58",
+            "article-title": "Lidarmultinet: Towards a unified multi-task network for lidar perception",
+            "author": "ye",
+            "year": "2022",
+            "journal-title": "ArXiv Preprint"
+          },
+          {
+            "key": "ref53",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR46437.2021.00928"
+          },
+          {
+            "key": "ref52",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICRA.2015.7138983"
+          },
+          {
+            "key": "ref11",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2019.00319"
+          },
+          {
+            "key": "ref55",
+            "article-title": "Detr3d: 3d object detection from multi-view images via 3d-to-2d queries",
+            "author": "wang",
+            "year": "2022",
+            "journal-title": "CoRL"
+          },
+          {
+            "key": "ref10",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.23919/MVA.2019.8758063"
+          },
+          {
+            "key": "ref54",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/3072959.3073608"
+          },
+          {
+            "key": "ref17",
+            "article-title": "Open-vocabulary image segmentation",
+            "author": "ghiasi",
+            "year": "2022",
+            "journal-title": "ECCV"
+          },
+          {
+            "key": "ref16",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/3DV53792.2021.00046"
+          },
+          {
+            "key": "ref19",
+            "article-title": "Semantic abstraction: Open-world 3d scene understanding from 2d vision-language models",
+            "author": "ha",
+            "year": "2022",
+            "journal-title": "CoRL"
+          },
+          {
+            "key": "ref18",
+            "article-title": "Open-vocabulary object detection via vision and language knowledge distillation",
+            "author": "gu",
+            "year": "2022",
+            "journal-title": "ICLRE"
+          },
+          {
+            "key": "ref51",
+            "article-title": "Visualizing data using t-sne",
+            "author": "van der maaten",
+            "year": "2008",
+            "journal-title": "JMLR"
+          },
+          {
+            "key": "ref50",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2018.00409"
+          },
+          {
+            "key": "ref46",
+            "article-title": "Language-grounded indoor 3d semantic segmentation in the wild",
+            "author": "rozenberszki",
+            "year": "2022",
+            "journal-title": "ECCV"
+          },
+          {
+            "key": "ref45",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR52688.2022.00549"
+          },
+          {
+            "key": "ref48",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR42600.2020.00864"
+          },
+          {
+            "key": "ref47",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR52688.2022.00966"
+          },
+          {
+            "key": "ref42",
+            "article-title": "Pointnet++: Deep hierarchical feature learning on point sets in a metric space",
+            "author": "ruizhongtai qi",
+            "year": "2017",
+            "journal-title": "NIPS"
+          },
+          {
+            "key": "ref41",
+            "article-title": "Mix3d: Out-of-context data aug-mentation for 3d scenes",
+            "author": "nekrasov",
+            "year": "2021",
+            "journal-title": "3DV"
+          },
+          {
+            "key": "ref44",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR52688.2022.01755"
+          },
+          {
+            "key": "ref43",
+            "article-title": "Learning transferable visual models from natural language supervision",
+            "author": "radford",
+            "year": "2021",
+            "journal-title": "ICML"
+          },
+          {
+            "key": "ref49",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR42600.2020.00252"
+          },
+          {
+            "key": "ref8",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/WACV45572.2020.9093545"
+          },
+          {
+            "key": "ref7",
+            "article-title": "Mitigating the hubness problem for zero-shot learning of 3d objects",
+            "author": "cheraghian",
+            "year": "2019",
+            "journal-title": "BMVC"
+          },
+          {
+            "key": "ref9",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1007/s11263-022-01650-4"
+          },
+          {
+            "key": "ref4",
+            "article-title": "nuscenes: A multi-modal dataset for autonomous driving",
+            "author": "caesar",
+            "year": "2020",
+            "journal-title": "CVPR"
+          },
+          {
+            "key": "ref3",
+            "article-title": "Se-mantickitti: A dataset for semantic scene understanding of lidar sequences",
+            "author": "behley",
+            "year": "2019",
+            "journal-title": "ICCV"
+          },
+          {
+            "key": "ref6",
+            "article-title": "Scanrefer: 3d object localization in rgb-d scans using natural language",
+            "author": "zhenyu chen",
+            "year": "2020",
+            "journal-title": "ECCV"
+          },
+          {
+            "key": "ref5",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/3DV.2017.00081"
+          },
+          {
+            "key": "ref40",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2019.00100"
+          },
+          {
+            "key": "ref35",
+            "article-title": "Language-level semantics conditioned 3d point cloud segmentation",
+            "author": "liu",
+            "year": "2021",
+            "journal-title": "ArXiv Preprint"
+          },
+          {
+            "key": "ref34",
+            "article-title": "Kitti-360: A novel dataset and benchmarks for urban scene understanding in 2d and 3d",
+            "author": "liao",
+            "year": "2022",
+            "journal-title": "IEEE TPAMI"
+          },
+          {
+            "key": "ref37",
+            "article-title": "Open-vocabulary semantic segmentation with frozen vision-language models",
+            "author": "ma",
+            "year": "2022",
+            "journal-title": "BMVC"
+          },
+          {
+            "key": "ref36",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICCV48922.2021.00079"
+          },
+          {
+            "key": "ref31",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR52688.2022.01151"
+          },
+          {
+            "key": "ref30",
+            "article-title": "Language-driven semantic segmentation",
+            "author": "li",
+            "year": "2022",
+            "journal-title": "ICLRE"
+          },
+          {
+            "key": "ref33",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR52729.2023.00682"
+          },
+          {
+            "key": "ref32",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2019.01265"
+          },
+          {
+            "key": "ref2",
+            "article-title": "Joint 2d-3d-semantic data for indoor scene understanding",
+            "author": "armeni",
+            "year": "2017",
+            "journal-title": "ArXiv Preprint"
+          },
+          {
+            "key": "ref1",
+            "article-title": "Flamingo: a visual language model for few-shot learning",
+            "author": "alayrac",
+            "year": "2022",
+            "journal-title": "NeurIPS"
+          },
+          {
+            "key": "ref39",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/3DV53792.2021.00107"
+          },
+          {
+            "key": "ref38",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICRA.2017.7989538"
+          },
+          {
+            "key": "ref24",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/3DV.2016.18"
+          },
+          {
+            "key": "ref23",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICCV48922.2021.01520"
+          },
+          {
+            "key": "ref26",
+            "article-title": "Scaling up visual and vision-language representation learning with noisy text supervision",
+            "author": "jia",
+            "year": "2021",
+            "journal-title": "ICML"
+          },
+          {
+            "key": "ref25",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2019.00457"
+          },
+          {
+            "key": "ref20",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR42600.2020.00301"
+          },
+          {
+            "key": "ref22",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR46437.2021.01414"
+          },
+          {
+            "key": "ref21",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1609/aaai.v37i1.25159"
+          },
+          {
+            "key": "ref28",
+            "article-title": "F-vlm: Open-vocabulary object detection upon frozen vision and language models",
+            "author": "kuo",
+            "year": "2023",
+            "journal-title": "ICLRE"
+          },
+          {
+            "key": "ref27",
+            "article-title": "Virtual multi-view fusion for 3d semantic segmentation",
+            "author": "kundu",
+            "year": "2020",
+            "journal-title": "ECCV"
+          },
+          {
+            "key": "ref29",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR42600.2020.00295"
+          },
+          {
+            "key": "ref60",
+            "article-title": "Extract free dense labels from clip",
+            "author": "zhou",
+            "year": "2022",
+            "journal-title": "ECCV"
+          }
+        ],
+        "event": {
+          "name": "2023 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+          "location": "Vancouver, BC, Canada",
+          "start": {
+            "date-parts": [
+              [
+                2023,
+                6,
+                17
+              ]
+            ]
+          },
+          "end": {
+            "date-parts": [
+              [
+                2023,
+                6,
+                24
+              ]
+            ]
+          }
+        },
+        "container-title": [
+          "2023 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)"
+        ],
+        "link": [
+          {
+            "URL": "http://xplorestaging.ieee.org/ielx7/10203037/10203050/10203983.pdf?arnumber=10203983",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2023,
+              9,
+              11
+            ]
+          ],
+          "date-time": "2023-09-11T18:05:04Z",
+          "timestamp": 1694455504000
+        },
+        "score": 60.096897,
+        "resource": {
+          "primary": {
+            "URL": "https://ieeexplore.ieee.org/document/10203983/"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2023,
+              6
+            ]
+          ]
+        },
+        "references-count": 60,
+        "URL": "https://doi.org/10.1109/cvpr52729.2023.00085",
+        "published": {
+          "date-parts": [
+            [
+              2023,
+              6
+            ]
+          ]
+        }
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2026,
+              10,
+              13
+            ]
+          ],
+          "date-time": "2026-10-13T17:01:04Z",
+          "timestamp": 1791910864032,
+          "version": "4.3.4"
+        },
+        "reference-count": 109,
+        "publisher": "IEEE",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2024,
+                  6,
+                  16
+                ]
+              ],
+              "date-time": "2024-06-16T00:00:00Z",
+              "timestamp": 1718496000000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-029"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2024,
+                  6,
+                  16
+                ]
+              ],
+              "date-time": "2024-06-16T00:00:00Z",
+              "timestamp": 1718496000000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-037"
+          }
+        ],
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2024,
+              6,
+              16
+            ]
+          ]
+        },
+        "DOI": "10.1109/cvpr52733.2024.01485",
+        "type": "proceedings-article",
+        "created": {
+          "date-parts": [
+            [
+              2024,
+              9,
+              16
+            ]
+          ],
+          "date-time": "2024-09-16T13:34:53Z",
+          "timestamp": 1726493693000
+        },
+        "page": "15686-15698",
+        "source": "Crossref",
+        "is-referenced-by-count": 26,
+        "title": [
+          "OpenESS: Event-Based Semantic Scene Understanding with Open Vocabularies"
+        ],
+        "prefix": "10.1109",
+        "author": [
+          {
+            "given": "Lingdong",
+            "family": "Kong",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "National University of Singapore"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Youquan",
+            "family": "Liu",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Hochschule Bremerhaven"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Lai Xing",
+            "family": "Ng",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Institute for Infocomm Research,A *STAR"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Benoit R.",
+            "family": "Cottereau",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "IPAL, CNRS IRL 2955,Singapore"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Wei Tsang",
+            "family": "Ooi",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "National University of Singapore"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "member": "263",
+        "reference": [
+          {
+            "key": "ref1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/TPAMI.2012.120"
+          },
+          {
+            "key": "ref2",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPRW.2019.00205"
+          },
+          {
+            "key": "ref3",
+            "article-title": "Beit: Bert pre-training of image transformers",
+            "volume-title": "International Conference on Learning Representations",
+            "author": "Bao"
+          },
+          {
+            "key": "ref4",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPRW.2014.69"
+          },
+          {
+            "key": "ref5",
+            "first-page": "1",
+            "article-title": "Ddd17: End-to-end davis driving dataset",
+            "volume-title": "International Conference on Machine Learning Workshops",
+            "author": "Binas"
+          },
+          {
+            "key": "ref6",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/WACV57701.2024.00586"
+          },
+          {
+            "key": "ref7",
+            "first-page": "9912",
+            "article-title": "Unsupervised learning of visual features by contrasting cluster assignments",
+            "author": "Caron",
+            "year": "2020",
+            "journal-title": "Advances in Neural Information Processing Systems"
+          },
+          {
+            "key": "ref8",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICCV48922.2021.00951"
+          },
+          {
+            "key": "ref9",
+            "first-page": "24975",
+            "article-title": "Differentiable hierarchical and surrogate gradient search for spiking neural networks",
+            "author": "Che",
+            "year": "2022",
+            "journal-title": "Advances in Neural Information Processing Systems"
+          },
+          {
+            "key": "ref10",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/TPAMI.2017.2699184"
+          },
+          {
+            "key": "ref11",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.48550/arXiv.1802.02611"
+          },
+          {
+            "key": "ref12",
+            "article-title": "Towards label-free scene understanding by vision foundation models",
+            "author": "Chen",
+            "year": "2023",
+            "journal-title": "Advances in Neural Information Processing Systems"
+          },
+          {
+            "key": "ref13",
+            "first-page": "1597",
+            "article-title": "A simple framework for contrastive learning of visual representations",
+            "volume-title": "International Conference on Machine Learning",
+            "author": "Chen"
+          },
+          {
+            "key": "ref14",
+            "author": "Chen",
+            "year": "2020",
+            "journal-title": "Improved baselines with momentum contrastive learning"
+          },
+          {
+            "key": "ref15",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICCV48922.2021.00950"
+          },
+          {
+            "key": "ref16",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR52729.2023.01707"
+          },
+          {
+            "key": "ref17",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICCV51070.2023.01819"
+          },
+          {
+            "key": "ref18",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2016.350"
+          },
+          {
+            "key": "ref19",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.3389/fnins.2023.1160034"
+          },
+          {
+            "key": "ref20",
+            "author": "Ding",
+            "year": "2022",
+            "journal-title": "Open-vocabulary panoptic segmentation with maskclip"
+          },
+          {
+            "key": "ref21",
+            "article-title": "An image is worth 16×16 words: Transformers for image recog-nition at scale",
+            "volume-title": "International Conference on Learning Representations",
+            "author": "Dosovitskiy"
+          },
+          {
+            "key": "ref22",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPRW59228.2023.00410"
+          },
+          {
+            "key": "ref23",
+            "author": "Ercan",
+            "year": "2023",
+            "journal-title": "Hypere2vid: Improving event-based video reconstruction via hypernetworks"
+          },
+          {
+            "issue": "1",
+            "key": "ref24",
+            "first-page": "154",
+            "article-title": "Davison, Jorg Conradt, Kostas Daniilidis, and Davide Scaramuzza. Event-based vision: A survey",
+            "volume-title": "IEEE Transactions on Pattern Analysis and Ma-chine Intelligence",
+            "volume": "44",
+            "author": "Gallego"
+          },
+          {
+            "key": "ref25",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1007/978-3-031-20080-9_16"
+          },
+          {
+            "key": "ref26",
+            "author": "Gehrig",
+            "year": "2022",
+            "journal-title": "Pushing the limits of asynchronous graph-based object detection with event cameras"
+          },
+          {
+            "key": "ref27",
+            "author": "Gehrig",
+            "year": "2022",
+            "journal-title": "Are high-resolution event cameras really needed?"
+          },
+          {
+            "key": "ref28",
+            "first-page": "5633",
+            "article-title": "Der-panis, and Davide Scaramuzza. End-to-end learning of representations for asynchronous event-based data",
+            "volume-title": "IEEE/CVF International Conference on Computer Vision",
+            "author": "Gehrig"
+          },
+          {
+            "key": "ref29",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR42600.2020.00364"
+          },
+          {
+            "key": "ref30",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR52729.2023.01334"
+          },
+          {
+            "key": "ref31",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/LRA.2021.3068942"
+          },
+          {
+            "key": "ref32",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/3DV53792.2021.00030"
+          },
+          {
+            "key": "ref33",
+            "author": "Gehrig",
+            "year": "2022",
+            "journal-title": "Dense continuous-time optical flow from events and frames"
+          },
+          {
+            "key": "ref34",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1007/978-3-031-20059-5_31"
+          },
+          {
+            "key": "ref35",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1002/aisy.202200221"
+          },
+          {
+            "key": "ref36",
+            "author": "Guan",
+            "year": "2023",
+            "journal-title": "Pixel-superpixel contrastive learning and pseudo-label cor-rection for hyperspectral image clustering"
+          },
+          {
+            "key": "ref37",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR52729.2023.02190"
+          },
+          {
+            "key": "ref38",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2016.90"
+          },
+          {
+            "key": "ref39",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR52688.2022.01553"
+          },
+          {
+            "key": "ref40",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR52729.2023.01081"
+          },
+          {
+            "key": "ref41",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/3DV50981.2020.00063"
+          },
+          {
+            "key": "ref42",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR52688.2022.00569"
+          },
+          {
+            "key": "ref43",
+            "author": "Huang",
+            "year": "2023",
+            "journal-title": "Event-based simultaneous localization and mapping: A comprehensive survey"
+          },
+          {
+            "key": "ref44",
+            "first-page": "7020",
+            "article-title": "Open-vocabulary instance segmentation via ro-bust cross-modal pseudo-labeling",
+            "volume-title": "IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+            "author": "Huynh"
+          },
+          {
+            "key": "ref45",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICCV48922.2021.00993"
+          },
+          {
+            "key": "ref46",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/TIP.2023.3249579"
+          },
+          {
+            "key": "ref47",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICCV48922.2021.00215"
+          },
+          {
+            "key": "ref48",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1088/2634-4386/ac9b86"
+          },
+          {
+            "key": "ref49",
+            "first-page": "4015",
+            "article-title": "Berg, Wan-Yen Lo, Piotr Dollar, and Ross Girshick. Segment anything",
+            "volume-title": "IEEE/CVF International Conference on Computer Vision",
+            "author": "Kirillov"
+          },
+          {
+            "key": "ref50",
+            "article-title": "Language-driven semantic segmentation",
+            "volume-title": "International Conference on Learning Representations",
+            "author": "Li"
+          },
+          {
+            "key": "ref51",
+            "article-title": "Language-driven semantic segmentation",
+            "volume-title": "International Conference on Learning Representations",
+            "author": "Li"
+          },
+          {
+            "key": "ref52",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR52688.2022.01069"
+          },
+          {
+            "key": "ref53",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/IROS55552.2023.10341802"
+          },
+          {
+            "key": "ref54",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2015.7298741"
+          },
+          {
+            "key": "ref55",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR52729.2023.00682"
+          },
+          {
+            "key": "ref56",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR46437.2021.00490"
+          },
+          {
+            "key": "ref57",
+            "article-title": "Segment any point cloud sequences by distilling vision foundation models",
+            "author": "Liu",
+            "year": "2023",
+            "journal-title": "Advances in Neural Information Processing Systems"
+          },
+          {
+            "key": "ref58",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2015.7298965"
+          },
+          {
+            "key": "ref59",
+            "article-title": "Decoupled weight de-cay regularization",
+            "volume-title": "International Conference on Learning Representations",
+            "author": "Loshchilov"
+          },
+          {
+            "key": "ref60",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2018.00568"
+          },
+          {
+            "key": "ref61",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/LRA.2022.3145053"
+          },
+          {
+            "key": "ref62",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICCV48922.2021.00422"
+          },
+          {
+            "key": "ref63",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/MSP.2019.2931595"
+          },
+          {
+            "key": "ref64",
+            "author": "Oquab",
+            "year": "2023",
+            "journal-title": "Dinov2: Learning ro-bust visual features without supervision"
+          },
+          {
+            "key": "ref65",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/icra57147.2024.10610921"
+          },
+          {
+            "key": "ref66",
+            "article-title": "Pytorch: An imperative style, high-performance deep learning library",
+            "author": "Paszke",
+            "year": "2019",
+            "journal-title": "Advances in Neural Information Processing Systems"
+          },
+          {
+            "key": "ref67",
+            "author": "Peng",
+            "year": "2023",
+            "journal-title": "Learning to adapt sam for segmenting cross-domain point clouds"
+          },
+          {
+            "key": "ref68",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICCV51070.2023.00555"
+          },
+          {
+            "key": "ref69",
+            "first-page": "8748",
+            "article-title": "Learning transferable visual models from natural language supervision",
+            "volume-title": "International Conference on Machine Learning",
+            "author": "Radford"
+          },
+          {
+            "key": "ref70",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/access.2022.3226484"
+          },
+          {
+            "key": "ref71",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR52688.2022.01755"
+          },
+          {
+            "key": "ref72",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/LRA.2016.2645143"
+          },
+          {
+            "key": "ref73",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/TPAMI.2019.2963386"
+          },
+          {
+            "key": "ref74",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR52688.2022.00966"
+          },
+          {
+            "key": "ref75",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2015.7298644"
+          },
+          {
+            "key": "ref76",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ISSCC.2017.7870263"
+          },
+          {
+            "key": "ref77",
+            "first-page": "28",
+            "article-title": "Neuromor-phic stereo vision: A survey of bio- inspired sensors and algorithms",
+            "volume": "13",
+            "author": "Steffen",
+            "year": "2019",
+            "journal-title": "Frontiers in Neuroscience"
+          },
+          {
+            "key": "ref78",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1007/978-3-031-19830-4_20"
+          },
+          {
+            "key": "ref79",
+            "article-title": "Gomez, Lukasz Kaiser, and Illia Polosukhin. Attention is all you need",
+            "author": "Vaswani",
+            "year": "2017",
+            "journal-title": "Advances in Neural Information Processing Systems"
+          },
+          {
+            "key": "ref80",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/TITS.2021.3136358"
+          },
+          {
+            "key": "ref81",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/TIP.2022.3220938"
+          },
+          {
+            "key": "ref82",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1609/aaai.v36i3.20146"
+          },
+          {
+            "key": "ref83",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/iccv48922.2021.00214"
+          },
+          {
+            "key": "ref84",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR46437.2021.00067"
+          },
+          {
+            "key": "ref85",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICCV.2011.6126385"
+          },
+          {
+            "key": "ref86",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICCV48922.2021.00061"
+          },
+          {
+            "key": "ref87",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICCV51070.2023.02005"
+          },
+          {
+            "key": "ref88",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/tpami.2024.3361862"
+          },
+          {
+            "key": "ref89",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR52729.2023.01464"
+          },
+          {
+            "key": "ref90",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.3389/fnins.2018.00331"
+          },
+          {
+            "key": "ref91",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/TPAMI.2022.3202765"
+          },
+          {
+            "key": "ref92",
+            "author": "Wu",
+            "year": "2023",
+            "journal-title": "Eventclip: Adapting clip for event-based object recognition"
+          },
+          {
+            "key": "ref93",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR52729.2023.00289"
+          },
+          {
+            "key": "ref94",
+            "author": "Xu",
+            "year": "2024",
+            "journal-title": "Visual foun-dation models boost cross-modal unsupervised domain adaptation for 3D semantic segmentation"
+          },
+          {
+            "key": "ref95",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICCV51070.2023.00982"
+          },
+          {
+            "key": "ref96",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR52729.2023.02250"
+          },
+          {
+            "key": "ref97",
+            "article-title": "Convolutions die hard: Open-vocabulary segmentation with single frozen convolutional clip",
+            "author": "Yu",
+            "year": "2023",
+            "journal-title": "Advances in Neural Information Processing Systems"
+          },
+          {
+            "issue": "7",
+            "key": "ref98",
+            "first-page": "8372",
+            "article-title": "Yezzi, and Guillermo Gallego. Formulating event-based image reconstruction as a linear inverse problem with deep regularization using optical flow",
+            "volume-title": "IEEE Transactions on Pattern Analysis and Machine Intel-ligence",
+            "volume": "45",
+            "author": "Zhang"
+          },
+          {
+            "key": "ref99",
+            "author": "Zheng",
+            "year": "2023",
+            "journal-title": "Deep learning for event-based vision: A comprehensive survey and benchmarks"
+          },
+          {
+            "key": "ref100",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1007/978-3-031-19815-1_40"
+          },
+          {
+            "key": "ref101",
+            "article-title": "Image bert pre-training with online tokenizer",
+            "volume-title": "International Conference on Learning Representations",
+            "author": "Zhou"
+          },
+          {
+            "key": "ref102",
+            "author": "Zhou",
+            "year": "2023",
+            "journal-title": "E-clip: Towards label-efficient event-based open-world understanding by clip"
+          },
+          {
+            "key": "ref103",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICRA48891.2023.10161563"
+          },
+          {
+            "key": "ref104",
+            "doi-asserted-by": "crossref",
+            "DOI": "10.1007/978-3-030-11024-6_54",
+            "article-title": "Unsupervised event-based optical flow using motion compensation",
+            "volume-title": "European Conference on Computer Vision Workshops",
+            "author": "Zhu"
+          },
+          {
+            "key": "ref105",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2019.00108"
+          },
+          {
+            "key": "ref106",
+            "author": "Zhu",
+            "year": "2023",
+            "journal-title": "A survey on open-vocabulary detection and segmentation: Past, present, and future"
+          },
+          {
+            "key": "ref107",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR52688.2022.00358"
+          },
+          {
+            "key": "ref108",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1007/s11633-022-1370-z"
+          },
+          {
+            "key": "ref109",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICCV51070.2023.01180"
+          }
+        ],
+        "event": {
+          "name": "2024 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+          "location": "Seattle, WA, USA",
+          "start": {
+            "date-parts": [
+              [
+                2024,
+                6,
+                16
+              ]
+            ]
+          },
+          "end": {
+            "date-parts": [
+              [
+                2024,
+                6,
+                22
+              ]
+            ]
+          }
+        },
+        "container-title": [
+          "2024 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)"
+        ],
+        "link": [
+          {
+            "URL": "http://xplorestaging.ieee.org/ielx8/10654794/10654797/10658114.pdf?arnumber=10658114",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2025,
+              5,
+              14
+            ]
+          ],
+          "date-time": "2025-05-14T13:30:02Z",
+          "timestamp": 1747229402000
+        },
+        "score": 33.79084,
+        "resource": {
+          "primary": {
+            "URL": "https://ieeexplore.ieee.org/document/10658114/"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2024,
+              6,
+              16
+            ]
+          ]
+        },
+        "references-count": 109,
+        "URL": "https://doi.org/10.1109/cvpr52733.2024.01485",
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              6,
+              16
+            ]
+          ]
+        }
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2025,
+              10,
+              31
+            ]
+          ],
+          "date-time": "2025-10-31T07:10:11Z",
+          "timestamp": 1761894611522,
+          "version": "build-2065373602"
+        },
+        "reference-count": 33,
+        "publisher": "IEEE",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2025,
+                  6,
+                  30
+                ]
+              ],
+              "date-time": "2025-06-30T00:00:00Z",
+              "timestamp": 1751241600000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-029"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2025,
+                  6,
+                  30
+                ]
+              ],
+              "date-time": "2025-06-30T00:00:00Z",
+              "timestamp": 1751241600000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-037"
+          }
+        ],
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2025,
+              6,
+              30
+            ]
+          ]
+        },
+        "DOI": "10.1109/icme59968.2025.11209525",
+        "type": "proceedings-article",
+        "created": {
+          "date-parts": [
+            [
+              2025,
+              10,
+              30
+            ]
+          ],
+          "date-time": "2025-10-30T17:57:42Z",
+          "timestamp": 1761847062000
+        },
+        "page": "1-6",
+        "source": "Crossref",
+        "is-referenced-by-count": 0,
+        "title": [
+          "Open-Scene Understanding-oriented 3D Scene Graph Generation"
+        ],
+        "prefix": "10.1109",
+        "author": [
+          {
+            "given": "Yuansu",
+            "family": "Hao",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Harbin Institute of Technology"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Fei",
+            "family": "Yu",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Zhejiang Lab"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Yanhao",
+            "family": "Wang",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "East China Normal University"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Yuehua",
+            "family": "Li",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Zhejiang Lab"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Quan",
+            "family": "Deng",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Hangzhou Institute for Advanced Study, UCAS"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Yuan",
+            "family": "Yu",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Zhejiang Lab"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Chen",
+            "family": "Huang",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Zhejiang Lab"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Nan",
+            "family": "Che",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Harbin University of Science and Technology"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "263",
+        "reference": [
+          {
+            "key": "ref1",
+            "first-page": "46",
+            "article-title": "Taskography: Evaluating robot task planning over large 3D scene graphs",
+            "volume-title": "Proceedings of the 6th Conference on Robot Learning",
+            "author": "Agia"
+          },
+          {
+            "key": "ref2",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICRA48891.2023.10161212"
+          },
+          {
+            "key": "ref3",
+            "first-page": "23",
+            "article-title": "SayPlan: Grounding large language models using 3D scene graphs for scalable robot task planning",
+            "volume-title": "Proceedings of the 7th Conference on Robot Learning",
+            "author": "Rana"
+          },
+          {
+            "key": "ref4",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR42600.2020.00402"
+          },
+          {
+            "key": "ref5",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICRA57147.2024.10610792"
+          },
+          {
+            "key": "ref6",
+            "article-title": "When are lemons purple? the concept association bias of CLIP",
+            "volume": "abs/2212.12043",
+            "author": "Yamada",
+            "year": "2022",
+            "journal-title": "CoRR"
+          },
+          {
+            "article-title": "When and why vision-language models behave like bags-of-words, and what to do about it?",
+            "volume-title": "The Eleventh International Conference on Learning Representations",
+            "author": "Yüksekgönül",
+            "key": "ref7"
+          },
+          {
+            "key": "ref8",
+            "article-title": "MobileSAMv2: Faster segment anything to everything",
+            "volume": "abs/2312.09579",
+            "author": "Zhang",
+            "year": "2023",
+            "journal-title": "CoRR"
+          },
+          {
+            "key": "ref9",
+            "article-title": "DINOv2: Learning robust visual features without supervision",
+            "author": "Oquab",
+            "year": "2024",
+            "journal-title": "Trans. Mach. Learn. Res."
+          },
+          {
+            "key": "ref10",
+            "article-title": "Qwen2-VL: Enhancing vision-language model’s perception of the world at any resolution",
+            "volume": "abs/2409.12191",
+            "author": "Wang",
+            "year": "2024",
+            "journal-title": "CoRR"
+          },
+          {
+            "key": "ref11",
+            "first-page": "8748",
+            "article-title": "Learning transferable visual models from natural language supervision",
+            "volume-title": "Proceedings of the 38th International Conference on Machine Learning",
+            "author": "Radford"
+          },
+          {
+            "key": "ref12",
+            "first-page": "4904",
+            "article-title": "Scaling up visual and vision-language representation learning with noisy text supervision",
+            "volume-title": "Proceedings of the 38th International Conference on Machine Learning",
+            "author": "Jia"
+          },
+          {
+            "key": "ref13",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR52729.2023.01457"
+          },
+          {
+            "key": "ref14",
+            "article-title": "FoCTTA: Low-memory continual test-time adaptation with focus",
+            "volume": "abs/2502.20677",
+            "author": "Hu",
+            "year": "2025",
+            "journal-title": "CoRR"
+          },
+          {
+            "key": "ref15",
+            "first-page": "643",
+            "article-title": "Semantic abstraction: Open-world 3D scene understanding from 2D vision-language models",
+            "volume-title": "Proceedings of the 6th Conference on Robot Learning",
+            "author": "Ha"
+          },
+          {
+            "key": "ref16",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR52688.2022.00836"
+          },
+          {
+            "key": "ref17",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICCVW60793.2023.00217"
+          },
+          {
+            "key": "ref18",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICRA57147.2024.10610243"
+          },
+          {
+            "key": "ref19",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICCV.2019.00576"
+          },
+          {
+            "key": "ref20",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR46437.2021.00743"
+          },
+          {
+            "key": "ref21",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR52729.2023.00490"
+          },
+          {
+            "key": "ref22",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR52729.2023.02065"
+          },
+          {
+            "key": "ref23",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR52733.2024.01345"
+          },
+          {
+            "key": "ref24",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR52733.2024.02632"
+          },
+          {
+            "key": "ref25",
+            "article-title": "Beyond bare queries: Open-vocabulary object retrieval with 3D scene graph",
+            "volume": "abs/2406.07113",
+            "author": "Linok",
+            "year": "2024",
+            "journal-title": "CoRR"
+          },
+          {
+            "key": "ref26",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/3068335"
+          },
+          {
+            "key": "ref27",
+            "article-title": "Open3D: A modern library for 3D data processing",
+            "volume": "abs/1801.09847",
+            "author": "Zhou",
+            "year": "2018",
+            "journal-title": "CoRR"
+          },
+          {
+            "article-title": "LLaVA-NeXT: Stronger LLMs supercharge multimodal capabilities in the wild",
+            "year": "2024",
+            "author": "Li",
+            "key": "ref28"
+          },
+          {
+            "key": "ref29",
+            "article-title": "The Replica dataset: A digital replica of indoor spaces",
+            "volume": "abs/1906.05797",
+            "author": "Straub",
+            "year": "2019",
+            "journal-title": "CoRR"
+          },
+          {
+            "key": "ref30",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1007/978-3-319-46448-0_51"
+          },
+          {
+            "key": "ref31",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2017.330"
+          },
+          {
+            "key": "ref32",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR46437.2021.00958"
+          },
+          {
+            "key": "ref33",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.18653/v1/n19–1423"
+          }
+        ],
+        "event": {
+          "name": "2025 IEEE International Conference on Multimedia and Expo (ICME)",
+          "start": {
+            "date-parts": [
+              [
+                2025,
+                6,
+                30
+              ]
+            ]
+          },
+          "location": "Nantes, France",
+          "end": {
+            "date-parts": [
+              [
+                2025,
+                7,
+                4
+              ]
+            ]
+          }
+        },
+        "container-title": [
+          "2025 IEEE International Conference on Multimedia and Expo (ICME)"
+        ],
+        "link": [
+          {
+            "URL": "http://xplorestaging.ieee.org/ielx8/11208895/11208897/11209525.pdf?arnumber=11209525",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2025,
+              10,
+              31
+            ]
+          ],
+          "date-time": "2025-10-31T05:31:46Z",
+          "timestamp": 1761888706000
+        },
+        "score": 32.01427,
+        "resource": {
+          "primary": {
+            "URL": "https://ieeexplore.ieee.org/document/11209525/"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              6,
+              30
+            ]
+          ]
+        },
+        "references-count": 33,
+        "URL": "https://doi.org/10.1109/icme59968.2025.11209525",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              6,
+              30
+            ]
+          ]
+        }
+      }
+    ],
+    "items-per-page": 3,
+    "query": {
+      "start-index": 0,
+      "search-terms": null
+    }
+  }
+}

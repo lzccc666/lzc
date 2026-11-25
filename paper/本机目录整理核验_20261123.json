@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-23",
+  "scope": "local",
+  "current_version": "v4",
+  "catalog": "D:\\study\\Python.Project\\lzc\\paper",
+  "registered_versions_and_stages": 20,
+  "checked_document_fingerprints": 4,
+  "current_files_verified": 506,
+  "current_files_errors": [],
+  "docx_sha256": "576cdc5e65d9973dfec031d003cabade739bd58a835a134218a73c464d4d6072",
+  "pdf_sha256": "37c802fa82529111f0d766c98a3f8719ef616026149911d923e89dd4647922df",
+  "pages": 91,
+  "references": 62,
+  "preexisting_files_accounted_for": 669,
+  "preexisting_files_unchanged": 664,
+  "intentional_metadata_and_script_updates": [
+    {
+      "old": "毕业论文\\交付文件校验清单.csv",
+      "new": "D:\\study\\Python.Project\\lzc\\paper\\当前版_v4\\交付文件校验清单.csv",
+      "before_sha256": "1c12942f7d77afe952fad9ec0cef9cb47340dc6dac41a31c42e31f938c7d2166",
+      "after_sha256": "b6a4c9052adc62da0435f8c71fd3c0dcbf3b9f44a9179a2adb12a3eb25cc47c9"
+    },
+    {
+      "old": "毕业论文\\修订交接说明.md",
+      "new": "D:\\study\\Python.Project\\lzc\\paper\\当前版_v4\\修订交接说明.md",
+      "before_sha256": "411ace99e4fa9c54d42a8b4b3e6e67bd514e9be70e765c9df05ebcb8932e8a45",
+      "after_sha256": "89c3edeafca3db7fd091c0ccef31a0dffc810056b5a7d5a22c652e9c3a6b1c0f"
+    },
+    {
+      "old": "毕业论文\\本机同步校验清单.json",
+      "new": "D:\\study\\Python.Project\\lzc\\paper\\当前版_v4\\本机同步校验清单.json",
+      "before_sha256": "0078be4e1d10b7551b130fd5851b142191a9a28be584ae7693e95410a74fd107",
+      "after_sha256": "4bb30d66f05790fbd3725b7f4928b8d24a1a2b451debc07c2a7718e9fbbb7666"
+    },
+    {
+      "old": "毕业论文\\scripts\\record_current_delivery.py",
+      "new": "D:\\study\\Python.Project\\lzc\\paper\\当前版_v4\\scripts\\record_current_delivery.py",
+      "before_sha256": "4176f225771c44d779bb26df6b597e261c379348cd9a394dc93e71add968db86",
+      "after_sha256": "a26c462d65de237cc45ad26e36650b4a68de9f501141fb9d724f80d6d4937b32"
+    },
+    {
+      "old": "毕业论文\\scripts\\sync_from_remote.py",
+      "new": "D:\\study\\Python.Project\\lzc\\paper\\当前版_v4\\scripts\\sync_from_remote.py",
+      "before_sha256": "f30c8f355b821d486f3965a48c9c9417fe1bbde4967f8e9fc53a51b5f835bf98",
+      "after_sha256": "784836cbfba6d352fe1d2d6a70888eb2c118342768e60da85db3487be7c6119e"
+    }
+  ],
+  "unexpected_loss_or_change": [],
+  "history_local_scope": "已有v2和快照保留；v1、v3、早期阶段稿为明确标注的远端入口索引"
+}

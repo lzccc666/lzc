@@ -1,0 +1,183 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          18
+        ]
+      ],
+      "date-time": "2026-11-18T04:13:39Z",
+      "timestamp": 1794975219809,
+      "version": "4.9.1"
+    },
+    "publisher-location": "San Diego, California, USA",
+    "reference-count": 0,
+    "publisher": "Neural Information Processing Systems Foundation, Inc. (NeurIPS)",
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2024
+        ]
+      ]
+    },
+    "DOI": "10.52202/079017-0171",
+    "type": "proceedings-article",
+    "created": {
+      "date-parts": [
+        [
+          2025,
+          11,
+          3
+        ]
+      ],
+      "date-time": "2025-11-03T11:20:56Z",
+      "timestamp": 1762168856000
+    },
+    "page": "5285-5307",
+    "source": "Crossref",
+    "is-referenced-by-count": 55,
+    "title": [
+      "SG-Nav: Online 3D Scene Graph Prompting for LLM-based Zero-shot Object Navigation"
+    ],
+    "prefix": "10.52202",
+    "author": [
+      {
+        "given": "Hang",
+        "family": "Yin",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Xiuwei",
+        "family": "Xu",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Zhenyu",
+        "family": "Wu",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Jie",
+        "family": "Zhou",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Jiwen",
+        "family": "Lu",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "29733",
+    "event": {
+      "name": "Advances in Neural Information Processing Systems 37",
+      "theme": "38th Conference on Neural Information Processing Systems (NeurIPS 2024)",
+      "location": "Vancouver, BC, Canada",
+      "acronym": "NeurIPS 2024",
+      "number": "37",
+      "start": {
+        "date-parts": [
+          [
+            2024,
+            12,
+            10
+          ]
+        ]
+      },
+      "end": {
+        "date-parts": [
+          [
+            2024,
+            12,
+            15
+          ]
+        ]
+      }
+    },
+    "container-title": [
+      "Advances in Neural Information Processing Systems 37"
+    ],
+    "original-title": [],
+    "deposited": {
+      "date-parts": [
+        [
+          2026,
+          6,
+          19
+        ]
+      ],
+      "date-time": "2026-06-19T15:34:00Z",
+      "timestamp": 1781883240000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "http://www.proceedings.com/079017-0171.html"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2024
+        ]
+      ]
+    },
+    "references-count": 0,
+    "URL": "https://doi.org/10.52202/079017-0171",
+    "relation": {},
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2024
+        ]
+      ]
+    }
+  }
+}

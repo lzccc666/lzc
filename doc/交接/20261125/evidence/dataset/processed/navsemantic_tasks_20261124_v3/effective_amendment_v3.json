@@ -1,0 +1,27 @@
+{
+  "created_utc": "2026-11-24T13:46:49.020074+00:00",
+  "applies_to_all_fixed_candidates": true,
+  "previous_full_negative_version": {
+    "path": "/root/autodl-tmp/lizichong/dataset/processed/navsemantic_tasks_20261124_v2/manifest.json",
+    "sha256": "b6cb9634b94721e7ac0f1c483853ad280e20b8fda3121de8dc73f63e2c2171e7"
+  },
+  "current": {
+    "path": "/root/autodl-tmp/lizichong/dataset/processed/navsemantic_tasks_20261124_v3/manifest.json",
+    "sha256": "a8a6db90c56329776a8fe343b8a2b0c6a13b215e1dab51bb93679f6594f926a7"
+  },
+  "policy_hash_unchanged": "9c5e7b19b257c2b2eff0d8d5e458f1fd310ad6a2302135f5a08b8019cbd20f33",
+  "reason": "v2 reference checker truncated allowed follow route at the lane containing the initial target, incorrectly treating a lane end as the semantic task endpoint. v3 implements continued following through the already-declared directed map successors.",
+  "allowed_route": "Take initial ego lane, initial target nearest-forward directed route prefix, then every legal directed successor within the same frozen maximum 8 hops, 100m search, 0.75m lane joins. Same rule for all12; no future samples select the initial target or method route.",
+  "evaluation_future_only": "Future official states may be checked against this frozen allowed route domain to validate reference geometry; never export them or the chosen official target to methods.",
+  "thresholds_changed": false,
+  "candidate_ids_changed": false,
+  "old_negative_results_preserved": true,
+  "witness_not_unique_route": true,
+  "geometry_time_scope_only": true,
+  "control_or_real_execution_claim": false,
+  "version": "effective-amendment-v3",
+  "timing": "After v2 full negative reference diagnostics and before any tested-method evaluation; not claimed preregistered in v1.",
+  "reference_unused_fields": "reference_states were serialized from VehicleState, whose speed_mps and steering_rad default zero. They are UNUSED placeholders, not measured speed, not a from-rest claim, not control evidence. The scored output is only time_s,x,y,yaw_rad.",
+  "same_all_12": true,
+  "source_status_no_target": "no_visible_official_target; not_applicable to positive target-following; navigation feasibility still pending, not proven infeasible."
+}

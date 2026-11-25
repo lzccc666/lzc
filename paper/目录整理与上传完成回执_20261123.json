@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-23",
+  "state": "complete",
+  "current_version": "v4",
+  "current_manuscript_date": "2026-11-20",
+  "local_current": "D:/study/Python.Project/lzc/paper/当前版_v4",
+  "remote_current": "seeta-nmb1:/root/autodl-tmp/lizichong/paper/当前版_v4",
+  "current_files_verified": 506,
+  "remote_version_and_stage_entries": 20,
+  "remote_document_fingerprints_verified": 64,
+  "preexisting_local_files_accounted_for": 669,
+  "unexpected_change_or_loss": 0,
+  "docx_sha256": "576cdc5e65d9973dfec031d003cabade739bd58a835a134218a73c464d4d6072",
+  "pdf_sha256": "37c802fa82529111f0d766c98a3f8719ef616026149911d923e89dd4647922df",
+  "history_availability": "远端历史稿完整；本机保留已有v2和快照，并为远端独有v1、v3与早期稿提供明确入口索引"
+}

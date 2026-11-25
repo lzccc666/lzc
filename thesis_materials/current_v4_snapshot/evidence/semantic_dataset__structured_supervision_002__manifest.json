@@ -1,0 +1,120 @@
+{
+  "audit": {
+    "counts": {
+      "train/candidate_rerank": 720,
+      "train/query_parse": 1400,
+      "train/object_attributes": 278,
+      "validation/candidate_rerank": 180,
+      "validation/query_parse": 180,
+      "validation/object_attributes": 243
+    },
+    "independent_logs": {
+      "train": [
+        "343d984344e440c7952d1e403b572b2a",
+        "783683d957054175bda1b326453a13f4",
+        "7e25a2c8ea1f41c5b0da1e69ecfa71a2",
+        "b05f285d53744542a3413476d6dd9270",
+        "bc41a49366734ebf978d6a71981537dc",
+        "d31dc715d1c34b99bd5afb0e3aea26ed",
+        "f38ef5a1e9c941aabb2155768670b92a",
+        "symbolic-train-00",
+        "symbolic-train-01",
+        "symbolic-train-02",
+        "symbolic-train-03",
+        "symbolic-train-04",
+        "symbolic-train-05",
+        "symbolic-train-06",
+        "symbolic-train-07",
+        "symbolic-train-08",
+        "symbolic-train-09",
+        "symbolic-train-10",
+        "symbolic-train-11",
+        "symbolic-train-12",
+        "symbolic-train-13"
+      ],
+      "validation": [
+        "53cf9c55dd8644bea67b9f009fc1ee38",
+        "d7fd2bb9696d43af901326664e42340b",
+        "symbolic-validation-00",
+        "symbolic-validation-01",
+        "symbolic-validation-02",
+        "symbolic-validation-03",
+        "symbolic-validation-04",
+        "symbolic-validation-05"
+      ]
+    },
+    "unique_query_texts": {
+      "train": 1400,
+      "validation": 180
+    },
+    "expression_families": {
+      "train": [
+        "train-0",
+        "train-1",
+        "train-2",
+        "train-3",
+        "train-4",
+        "train-5"
+      ],
+      "validation": [
+        "validation-0",
+        "validation-1",
+        "validation-2",
+        "validation-3",
+        "validation-4"
+      ]
+    }
+  },
+  "files": {
+    "train.jsonl": "c18591bed8f9d6b57b18c15840bebdeac8d99f1b772d893f3fd0048de6112ebb",
+    "validation.jsonl": "1a1d60e55de14f09c38cd2723ef5ecc03e9134b2601e642d51e32b2afa7049b0"
+  },
+  "symbolic_banks_sha256": "051a69ea17d0a5d0e6e58637cead8353ec6f7202fdf744bbee0a721770769ad1",
+  "source_sha256": "f26287977c08653592242b6bb594c71e69517ae65b29b3d24aea1a396034429e",
+  "previous_dataset_manifest_sha256": "977611e511c52da8389e5c8f24f6404f29515bb1647b617c320d45e226256c0b",
+  "ranking_distribution": {
+    "train": {
+      "queries": {
+        "category_color_positive": 180,
+        "same_category_nearest": 180,
+        "same_category_no_color_match": 180,
+        "relation_anchor_positive": 180
+      },
+      "selected_positions": {
+        "0": 133,
+        "1": 145,
+        "no_match": 180,
+        "3": 144,
+        "2": 118
+      },
+      "unique_semantic_evidence_before_permutation": 120
+    },
+    "validation": {
+      "queries": {
+        "category_color_positive": 46,
+        "same_category_nearest": 46,
+        "same_category_no_color_match": 44,
+        "relation_anchor_positive": 44
+      },
+      "selected_positions": {
+        "0": 34,
+        "1": 38,
+        "no_match": 44,
+        "3": 30,
+        "2": 34
+      },
+      "unique_semantic_evidence_before_permutation": 44
+    }
+  },
+  "train_row_count": 2398,
+  "validation_row_count": 603,
+  "unique_supervision_payloads": 792,
+  "manual_review_count": 0,
+  "independent_new_test_used": false,
+  "limitations": [
+    "排序为受控符号监督，无真实感知排序标注或真实道路增益信用",
+    "候选置换对不增加场景或独立样本计数",
+    "图像属性仍沿用官方类别，真实颜色、细属性人工记录仍缺失",
+    "结构化数据验证分数不等于实际导航改善"
+  ]
+}

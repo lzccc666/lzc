@@ -1,0 +1,21 @@
+{
+  "created_utc": "2026-11-24T13:52:32.582960+00:00",
+  "checks": {
+    "dataset/processed/navstage2_repair_20261124_v1/manifest.json": {
+      "total": 88,
+      "changed": []
+    },
+    "dataset/processed/navstage2_sparse_evidence_20261124_v1/manifest.json": {
+      "total": 93,
+      "changed": []
+    },
+    "dataset/processed/navstage2_20261124_v2/manifest.json": {
+      "total": 104,
+      "changed": []
+    }
+  },
+  "all_unchanged": true,
+  "new_artifact_bytes_excluding_pycache_and_source": 3360170,
+  "free_bytes": 31029719040,
+  "GPU_calls": 0
+}

@@ -1,0 +1,36 @@
+{
+  "files": 1498,
+  "regular_total_bytes": 52570398,
+  "texts_scanned": 1396,
+  "credential_hits_paths_only": [],
+  "python_ast_checked": 984,
+  "python_parse_errors": [],
+  "source_copy_SHA_checked": 695,
+  "largest_files": [
+    [
+      10499104,
+      "SimSun.ttf"
+    ],
+    [
+      3381138,
+      "thesis_materials/current_v4_snapshot/硕士论文初稿.docx"
+    ],
+    [
+      3374593,
+      "paper/历史版本/阶段快照_文献扩充前_20261120/远端继承旧文件名/硕士论文初稿_公开数据版_v3.docx"
+    ],
+    [
+      3374593,
+      "paper/历史版本/阶段快照_文献扩充前_20261120/远端继承旧文件名/硕士论文初稿_公开数据版_v2.docx"
+    ],
+    [
+      2731135,
+      "thesis_materials/current_v4_snapshot/figures/Figure4-1_nuScenes_scene-0039第2帧检测分割对象定位案例.png"
+    ]
+  ],
+  "protected_memory_SHA": {
+    "MEMORY.md": "f1db9a84f9b586fff70f61d09cd3bdda78d4b2cac953fbde8af45533ed034fd6",
+    "PAPER_MEMORY.md": "2a978751be1efd888a130444bc31f146666c7f4fcb62e37c2f92aa2fe196f2b2"
+  },
+  "full_test_suite_run": false
+}

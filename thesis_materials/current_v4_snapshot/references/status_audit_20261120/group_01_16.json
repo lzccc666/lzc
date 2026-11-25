@@ -1,0 +1,357 @@
+[
+  {
+    "number": 1,
+    "id": "2002.06289",
+    "title": "3D Dynamic Scene Graphs: Actionable Spatial Perception with Places, Objects, and Humans",
+    "exists": true,
+    "arxiv_year": 2020,
+    "published_year": 2020,
+    "venue": "Robotics: Science and Systems XVI",
+    "doi": "10.15607/rss.2020.xvi.079",
+    "status": "published",
+    "evidence_urls": [
+      "https://arxiv.org/abs/2002.06289",
+      "https://doi.org/10.15607/RSS.2020.XVI.079",
+      "https://api.crossref.org/works/10.15607%2FRSS.2020.XVI.079",
+      "https://roboticsproceedings.org/rss16/p079.html"
+    ],
+    "notes": [
+      "原始arXiv条目（如有）已逐条联网打开核对题名、作者及v1年份；正式状态以Crossref出版社登记记录并结合出版/会议页面核验。"
+    ],
+    "verified_date": "2026-11-20",
+    "crossref_record": "01_crossref.json"
+  },
+  {
+    "number": 2,
+    "id": "1604.07446",
+    "title": "A Survey of Motion Planning and Control Techniques for Self-driving Urban Vehicles",
+    "exists": true,
+    "arxiv_year": 2016,
+    "published_year": 2016,
+    "venue": "IEEE Transactions on Intelligent Vehicles",
+    "doi": "10.1109/tiv.2016.2578706",
+    "status": "published",
+    "evidence_urls": [
+      "https://arxiv.org/abs/1604.07446",
+      "https://doi.org/10.1109/TIV.2016.2578706",
+      "https://api.crossref.org/works/10.1109%2FTIV.2016.2578706"
+    ],
+    "notes": [
+      "原始arXiv条目（如有）已逐条联网打开核对题名、作者及v1年份；正式状态以Crossref出版社登记记录并结合出版/会议页面核验。"
+    ],
+    "verified_date": "2026-11-20",
+    "crossref_record": "02_crossref.json"
+  },
+  {
+    "number": 3,
+    "id": "1903.11027",
+    "title": "nuScenes: A multimodal dataset for autonomous driving",
+    "exists": true,
+    "arxiv_year": 2019,
+    "published_year": 2020,
+    "venue": "2020 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+    "doi": "10.1109/cvpr42600.2020.01164",
+    "status": "published",
+    "evidence_urls": [
+      "https://arxiv.org/abs/1903.11027",
+      "https://doi.org/10.1109/CVPR42600.2020.01164",
+      "https://api.crossref.org/works/10.1109%2FCVPR42600.2020.01164",
+      "https://openaccess.thecvf.com/content_CVPR_2020/html/Caesar_nuScenes_A_Multimodal_Dataset_for_Autonomous_Driving_CVPR_2020_paper.html"
+    ],
+    "notes": [
+      "原始arXiv条目（如有）已逐条联网打开核对题名、作者及v1年份；正式状态以Crossref出版社登记记录并结合出版/会议页面核验。",
+      "当前书目引用预印本首发年2019；正式出版年为2020，两个年份分别记录。",
+      "CVF开放版本与IEEE登记页码存在差异，本核验未将两者页码混拼；身份与正式发表年份一致。"
+    ],
+    "verified_date": "2026-11-20",
+    "crossref_record": "03_crossref.json"
+  },
+  {
+    "number": 4,
+    "id": "KITTI2013",
+    "title": "Vision meets robotics: The KITTI dataset",
+    "exists": true,
+    "arxiv_year": null,
+    "published_year": 2013,
+    "venue": "The International Journal of Robotics Research",
+    "doi": "10.1177/0278364913491297",
+    "status": "published",
+    "evidence_urls": [
+      "https://doi.org/10.1177/0278364913491297",
+      "https://api.crossref.org/works/10.1177%2F0278364913491297",
+      "https://www.cvlibs.net/datasets/kitti/"
+    ],
+    "notes": [
+      "KITTI为IJRR 2013正式期刊论文，已核验SAGE DOI、Crossref和作者数据集官网。未为该条目指定arXiv。"
+    ],
+    "verified_date": "2026-11-20",
+    "crossref_record": "04_crossref.json"
+  },
+  {
+    "number": 5,
+    "id": "1502.00956",
+    "title": "ORB-SLAM: a Versatile and Accurate Monocular SLAM System",
+    "exists": true,
+    "arxiv_year": 2015,
+    "published_year": 2015,
+    "venue": "IEEE Transactions on Robotics",
+    "doi": "10.1109/tro.2015.2463671",
+    "status": "published",
+    "evidence_urls": [
+      "https://arxiv.org/abs/1502.00956",
+      "https://doi.org/10.1109/TRO.2015.2463671",
+      "https://api.crossref.org/works/10.1109%2FTRO.2015.2463671"
+    ],
+    "notes": [
+      "原始arXiv条目（如有）已逐条联网打开核对题名、作者及v1年份；正式状态以Crossref出版社登记记录并结合出版/会议页面核验。"
+    ],
+    "verified_date": "2026-11-20",
+    "crossref_record": "05_crossref.json"
+  },
+  {
+    "number": 6,
+    "id": "1610.06475",
+    "title": "ORB-SLAM2: an Open-Source SLAM System for Monocular, Stereo and RGB-D Cameras",
+    "exists": true,
+    "arxiv_year": 2016,
+    "published_year": 2017,
+    "venue": "IEEE Transactions on Robotics",
+    "doi": "10.1109/tro.2017.2705103",
+    "status": "published",
+    "evidence_urls": [
+      "https://arxiv.org/abs/1610.06475",
+      "https://doi.org/10.1109/TRO.2017.2705103",
+      "https://api.crossref.org/works/10.1109%2FTRO.2017.2705103"
+    ],
+    "notes": [
+      "原始arXiv条目（如有）已逐条联网打开核对题名、作者及v1年份；正式状态以Crossref出版社登记记录并结合出版/会议页面核验。",
+      "当前书目引用预印本首发年2016；正式出版年为2017，两个年份分别记录。"
+    ],
+    "verified_date": "2026-11-20",
+    "crossref_record": "06_crossref.json"
+  },
+  {
+    "number": 7,
+    "id": "2007.11898",
+    "title": "ORB-SLAM3: An Accurate Open-Source Library for Visual, Visual-Inertial and Multi-Map SLAM",
+    "exists": true,
+    "arxiv_year": 2020,
+    "published_year": 2021,
+    "venue": "IEEE Transactions on Robotics",
+    "doi": "10.1109/tro.2021.3075644",
+    "status": "published",
+    "evidence_urls": [
+      "https://arxiv.org/abs/2007.11898",
+      "https://doi.org/10.1109/TRO.2021.3075644",
+      "https://api.crossref.org/works/10.1109%2FTRO.2021.3075644"
+    ],
+    "notes": [
+      "原始arXiv条目（如有）已逐条联网打开核对题名、作者及v1年份；正式状态以Crossref出版社登记记录并结合出版/会议页面核验。",
+      "当前书目引用预印本首发年2020；正式出版年为2021，两个年份分别记录。"
+    ],
+    "verified_date": "2026-11-20",
+    "crossref_record": "07_crossref.json"
+  },
+  {
+    "number": 8,
+    "id": "1609.05130",
+    "title": "SemanticFusion: Dense 3D Semantic Mapping with Convolutional Neural Networks",
+    "exists": true,
+    "arxiv_year": 2016,
+    "published_year": 2017,
+    "venue": "2017 IEEE International Conference on Robotics and Automation (ICRA)",
+    "doi": "10.1109/icra.2017.7989538",
+    "status": "published",
+    "evidence_urls": [
+      "https://arxiv.org/abs/1609.05130",
+      "https://doi.org/10.1109/ICRA.2017.7989538",
+      "https://api.crossref.org/works/10.1109%2FICRA.2017.7989538",
+      "https://portal.fis.tum.de/en/publications/semanticfusion-dense-3d-semantic-mapping-with-convolutional-neura/"
+    ],
+    "notes": [
+      "原始arXiv条目（如有）已逐条联网打开核对题名、作者及v1年份；正式状态以Crossref出版社登记记录并结合出版/会议页面核验。",
+      "当前书目引用预印本首发年2016；正式出版年为2017，两个年份分别记录。"
+    ],
+    "verified_date": "2026-11-20",
+    "crossref_record": "08_crossref.json"
+  },
+  {
+    "number": 9,
+    "id": "1903.01177",
+    "title": "PanopticFusion: Online Volumetric Semantic Mapping at the Level of Stuff and Things",
+    "exists": true,
+    "arxiv_year": 2019,
+    "published_year": 2019,
+    "venue": "2019 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)",
+    "doi": "10.1109/iros40897.2019.8967890",
+    "status": "published",
+    "evidence_urls": [
+      "https://arxiv.org/abs/1903.01177",
+      "https://doi.org/10.1109/IROS40897.2019.8967890",
+      "https://api.crossref.org/works/10.1109%2FIROS40897.2019.8967890"
+    ],
+    "notes": [
+      "原始arXiv条目（如有）已逐条联网打开核对题名、作者及v1年份；正式状态以Crossref出版社登记记录并结合出版/会议页面核验。"
+    ],
+    "verified_date": "2026-11-20",
+    "crossref_record": "09_crossref.json"
+  },
+  {
+    "number": 10,
+    "id": "1910.02490",
+    "title": "Kimera: an Open-Source Library for Real-Time Metric-Semantic Localization and Mapping",
+    "exists": true,
+    "arxiv_year": 2019,
+    "published_year": 2020,
+    "venue": "2020 IEEE International Conference on Robotics and Automation (ICRA)",
+    "doi": "10.1109/icra40945.2020.9196885",
+    "status": "published",
+    "evidence_urls": [
+      "https://arxiv.org/abs/1910.02490",
+      "https://doi.org/10.1109/ICRA40945.2020.9196885",
+      "https://api.crossref.org/works/10.1109%2FICRA40945.2020.9196885",
+      "https://www.mit.edu/~arosinol/papers/Rosinol20icra-Kimera.pdf"
+    ],
+    "notes": [
+      "原始arXiv条目（如有）已逐条联网打开核对题名、作者及v1年份；正式状态以Crossref出版社登记记录并结合出版/会议页面核验。",
+      "当前书目引用预印本首发年2019；正式出版年为2020，两个年份分别记录。"
+    ],
+    "verified_date": "2026-11-20",
+    "crossref_record": "10_crossref.json"
+  },
+  {
+    "number": 11,
+    "id": "2106.14386",
+    "title": "Kimera-Multi: Robust, Distributed, Dense Metric-Semantic SLAM for Multi-Robot Systems",
+    "exists": true,
+    "arxiv_year": 2021,
+    "published_year": 2022,
+    "venue": "IEEE Transactions on Robotics",
+    "doi": "10.1109/tro.2021.3137751",
+    "status": "published",
+    "evidence_urls": [
+      "https://arxiv.org/abs/2106.14386",
+      "https://doi.org/10.1109/TRO.2021.3137751",
+      "https://api.crossref.org/works/10.1109%2FTRO.2021.3137751",
+      "https://xplorestaging.ieee.org/ielx7/8860/9851593/09686955.pdf?arnumber=9686955&isnumber=9851593"
+    ],
+    "notes": [
+      "原始arXiv条目（如有）已逐条联网打开核对题名、作者及v1年份；正式状态以Crossref出版社登记记录并结合出版/会议页面核验。",
+      "当前书目引用预印本首发年2021；正式出版年为2022，两个年份分别记录。",
+      "DOI含2021，但实际卷期为TRO 38(4)，2022年8月；近五年正式发表口径计入2022，首次公开口径仍为2021。"
+    ],
+    "verified_date": "2026-11-20",
+    "crossref_record": "11_crossref.json"
+  },
+  {
+    "number": 12,
+    "id": "1808.08378",
+    "title": "Fusion++: Volumetric Object-Level SLAM",
+    "exists": true,
+    "arxiv_year": 2018,
+    "published_year": 2018,
+    "venue": "2018 International Conference on 3D Vision (3DV)",
+    "doi": "10.1109/3dv.2018.00015",
+    "status": "published",
+    "evidence_urls": [
+      "https://arxiv.org/abs/1808.08378",
+      "https://doi.org/10.1109/3DV.2018.00015",
+      "https://api.crossref.org/works/10.1109%2F3DV.2018.00015"
+    ],
+    "notes": [
+      "原始arXiv条目（如有）已逐条联网打开核对题名、作者及v1年份；正式状态以Crossref出版社登记记录并结合出版/会议页面核验。"
+    ],
+    "verified_date": "2026-11-20",
+    "crossref_record": "12_crossref.json"
+  },
+  {
+    "number": 13,
+    "id": "1804.09194",
+    "title": "MaskFusion: Real-Time Recognition, Tracking and Reconstruction of Multiple Moving Objects",
+    "exists": true,
+    "arxiv_year": 2018,
+    "published_year": 2018,
+    "venue": "2018 IEEE International Symposium on Mixed and Augmented Reality (ISMAR)",
+    "doi": "10.1109/ismar.2018.00024",
+    "status": "published",
+    "evidence_urls": [
+      "https://arxiv.org/abs/1804.09194",
+      "https://doi.org/10.1109/ISMAR.2018.00024",
+      "https://api.crossref.org/works/10.1109%2FISMAR.2018.00024"
+    ],
+    "notes": [
+      "原始arXiv条目（如有）已逐条联网打开核对题名、作者及v1年份；正式状态以Crossref出版社登记记录并结合出版/会议页面核验。"
+    ],
+    "verified_date": "2026-11-20",
+    "crossref_record": "13_crossref.json"
+  },
+  {
+    "number": 14,
+    "id": "1806.05620",
+    "title": "DynaSLAM: Tracking, Mapping and Inpainting in Dynamic Scenes",
+    "exists": true,
+    "arxiv_year": 2018,
+    "published_year": 2018,
+    "venue": "IEEE Robotics and Automation Letters",
+    "doi": "10.1109/lra.2018.2860039",
+    "status": "published",
+    "evidence_urls": [
+      "https://arxiv.org/abs/1806.05620",
+      "https://doi.org/10.1109/LRA.2018.2860039",
+      "https://api.crossref.org/works/10.1109%2FLRA.2018.2860039"
+    ],
+    "notes": [
+      "原始arXiv条目（如有）已逐条联网打开核对题名、作者及v1年份；正式状态以Crossref出版社登记记录并结合出版/会议页面核验。"
+    ],
+    "verified_date": "2026-11-20",
+    "crossref_record": "14_crossref.json"
+  },
+  {
+    "number": 15,
+    "id": "1812.05784",
+    "title": "PointPillars: Fast Encoders for Object Detection from Point Clouds",
+    "exists": true,
+    "arxiv_year": 2018,
+    "published_year": 2019,
+    "venue": "2019 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+    "doi": "10.1109/cvpr.2019.01298",
+    "status": "published",
+    "evidence_urls": [
+      "https://arxiv.org/abs/1812.05784",
+      "https://doi.org/10.1109/CVPR.2019.01298",
+      "https://api.crossref.org/works/10.1109%2FCVPR.2019.01298",
+      "https://openaccess.thecvf.com/content_CVPR_2019/html/Lang_PointPillars_Fast_Encoders_for_Object_Detection_From_Point_Clouds_CVPR_2019_paper.html"
+    ],
+    "notes": [
+      "原始arXiv条目（如有）已逐条联网打开核对题名、作者及v1年份；正式状态以Crossref出版社登记记录并结合出版/会议页面核验。",
+      "当前书目引用预印本首发年2018；正式出版年为2019，两个年份分别记录。",
+      "CVF开放版本与IEEE登记页码存在差异，本核验未将两者页码混拼；身份与正式发表年份一致。"
+    ],
+    "verified_date": "2026-11-20",
+    "crossref_record": "15_crossref.json"
+  },
+  {
+    "number": 16,
+    "id": "2006.11275",
+    "title": "Center-based 3D Object Detection and Tracking",
+    "exists": true,
+    "arxiv_year": 2020,
+    "published_year": 2021,
+    "venue": "2021 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+    "doi": "10.1109/cvpr46437.2021.01161",
+    "status": "published",
+    "evidence_urls": [
+      "https://arxiv.org/abs/2006.11275",
+      "https://doi.org/10.1109/CVPR46437.2021.01161",
+      "https://api.crossref.org/works/10.1109%2FCVPR46437.2021.01161",
+      "https://openaccess.thecvf.com/content/CVPR2021/html/Yin_Center-Based_3D_Object_Detection_and_Tracking_CVPR_2021_paper.html"
+    ],
+    "notes": [
+      "原始arXiv条目（如有）已逐条联网打开核对题名、作者及v1年份；正式状态以Crossref出版社登记记录并结合出版/会议页面核验。",
+      "当前书目引用预印本首发年2020；正式出版年为2021，两个年份分别记录。",
+      "CVF开放版本与IEEE登记页码存在差异，本核验未将两者页码混拼；身份与正式发表年份一致。"
+    ],
+    "verified_date": "2026-11-20",
+    "crossref_record": "16_crossref.json"
+  }
+]

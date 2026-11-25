@@ -1,0 +1,45 @@
+/* DOM verification only; fixtures never become human annotations or dataset files. */
+const fs = require('fs');
+const path = require('path');
+const assert = require('assert');
+const crypto = require('crypto');
+const {JSDOM} = require('/tmp/lzc-pilot-ui/node_modules/jsdom');
+const root = '/root/autodl-tmp/lizichong';
+const folder = path.join(root,'dataset/qwen/multiview_task_20261123_intent_candidates_v1');
+const html = fs.readFileSync(path.join(folder,'index.html'),'utf8');
+let downloads=0;
+function create(stored){return new JSDOM(html,{runScripts:'dangerously',url:'https://offline-review.invalid/',beforeParse(w){w.URL.createObjectURL=()=>{downloads++;return 'blob:fixture';};w.URL.revokeObjectURL=()=>{};w.HTMLAnchorElement.prototype.click=function(){};if(stored)w.localStorage.setItem(stored.key,stored.value);}});}
+const dom=create(),w=dom.window,d=w.document,$=id=>d.getElementById(id);
+const bundle=JSON.parse($('bundle').textContent);
+assert.equal(bundle.rows.length,72);
+assert.equal(d.querySelectorAll('#list button').length,24);
+assert.equal(w.IntentReview.exportPayload().review_events.length,0);
+assert.equal($('decision').value,'pending');
+$('save').click();assert.equal(w.IntentReview.exportPayload().review_events.length,0);
+$('reviewer').value='AUTOMATED_DOM_FIXTURE_NOT_HUMAN';$('decision').value='approve';
+$('save').click();assert.equal(w.IntentReview.exportPayload().review_events.length,0);
+$('meaningConfirmed').checked=true;$('save').click();
+let payload=w.IntentReview.exportPayload();assert.equal(payload.review_events.length,1);
+assert.equal(payload.review_events[0].sample_id,'PO01__p1');
+assert.equal(payload.identity_verified,false);assert.equal(payload.training_export_enabled,false);
+assert.equal($('decision').value,'pending');
+$('decision').value='needs_revision';$('notes').value='DOM fixture: wording change';$('instruction').value+='【自动测试】';$('save').click();
+payload=w.IntentReview.exportPayload();assert.equal(payload.review_events.length,2);
+assert(payload.review_events.some(e=>e.decision==='needs_revision'));
+$('export').click();assert.equal(downloads,1);
+const clone=x=>JSON.parse(JSON.stringify(x));
+for(const field of ['package_id','manifest_sha256','intent_schema_sha256']){const bad=clone(payload);bad[field]='WRONG_BATCH';assert.throws(()=>w.IntentReview.importPayload(bad));}
+let bad=clone(payload);bad.review_events[0].sample_id='UNKNOWN';assert.throws(()=>w.IntentReview.importPayload(bad));
+bad=clone(payload);bad.review_events[0].source_instruction_sha256='WRONG_SOURCE';assert.throws(()=>w.IntentReview.importPayload(bad));
+bad=clone(payload);bad.review_events[0].reviewed_intent.allowed=true;assert.throws(()=>w.IntentReview.importPayload(bad));
+bad=clone(payload);bad.training_export_enabled=true;assert.throws(()=>w.IntentReview.importPayload(bad));
+bad=clone(payload);bad.review_events.push(bad.review_events[0]);assert.throws(()=>w.IntentReview.importPayload(bad));
+const restored=create();assert.equal(restored.window.IntentReview.importPayload(clone(payload)),2);
+assert.equal(restored.window.IntentReview.exportPayload().review_events.length,2);
+const key='intentReview:'+bundle.manifest_sha256;
+const local=create({key,value:JSON.stringify(payload)});assert.equal(local.window.IntentReview.exportPayload().review_events.length,2);
+assert.equal(JSON.parse(fs.readFileSync(path.join(folder,'manifest.json'),'utf8')).human_reviewed_rows,0);
+assert(fs.readFileSync(path.join(folder,'candidates.jsonl'),'utf8').split('\n').filter(Boolean).every(s=>JSON.parse(s).human_review_status==='pending'));
+const result={passed:true,rows:72,default_family_rows:24,initial_review_events:0,explicit_save_verified:true,approval_requires_identity_and_meaning_confirmation:true,download_verified:true,JSON_restore_verified:true,local_restore_verified:true,rejected_wrong_batch_and_schema:true,rejected_unknown_sample_and_intent_field:true,rejected_training_permission:true,automated_fixture_events_in_memory_only:2,human_annotations_created:0,dataset_unchanged:true,real_browser_visual_QA:false,dependency:'existing /tmp/lzc-pilot-ui/node_modules/jsdom, no installation',source_sha256:crypto.createHash('sha256').update(fs.readFileSync(__filename)).digest('hex')};
+const report=path.join(root,'outputs/reports/multiview_task_iteration_20261123/qwen/review_ui_dom_verification.json');fs.writeFileSync(report,JSON.stringify(result,null,2)+'\n');
+console.log(JSON.stringify(result));for(const x of [dom,restored,local])x.window.close();

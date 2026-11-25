@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-23",
+  "scope": "remote",
+  "current_version": "v4",
+  "catalog": "/root/autodl-tmp/lizichong/paper",
+  "registered_versions_and_stages": 20,
+  "checked_document_fingerprints": 64,
+  "current_files_verified": 506,
+  "current_files_errors": [],
+  "docx_sha256": "576cdc5e65d9973dfec031d003cabade739bd58a835a134218a73c464d4d6072",
+  "pdf_sha256": "37c802fa82529111f0d766c98a3f8719ef616026149911d923e89dd4647922df",
+  "pages": 91,
+  "references": 62,
+  "original_inputs_unchanged": true,
+  "all_20_remote_entries_valid": true
+}

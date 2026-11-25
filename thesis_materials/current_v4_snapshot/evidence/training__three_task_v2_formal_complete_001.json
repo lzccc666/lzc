@@ -1,0 +1,9 @@
+{
+  "actual_cuda_training": true,
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "goal_complete": false
+}

@@ -1,0 +1,162 @@
+[
+  {
+    "number": 17,
+    "id": "2205.13542",
+    "title": "BEVFusion: Multi-Task Multi-Sensor Fusion with Unified Bird's-Eye View Representation",
+    "dates": [
+      "2022/05/26"
+    ],
+    "history": "Submission history From: Zhijian Liu [ view email ] [v1] Thu, 26 May 2022 17:59:35 UTC (8,338 KB) [v2] Thu, 16 Jun 2022 17:59:55 UTC (9,369 KB) [v3] Sun, 1 Sep 2024 03:33:26 UTC (20,659 KB)",
+    "http_status": 200
+  },
+  {
+    "number": 18,
+    "id": "2203.17270",
+    "title": "BEVFormer: Learning Bird's-Eye-View Representation from Multi-Camera Images via Spatiotemporal Transformers",
+    "dates": [
+      "2022/03/31"
+    ],
+    "history": "Submission history From: Li Zhiqi [ view email ] [v1] Thu, 31 Mar 2022 17:59:01 UTC (4,181 KB) [v2] Wed, 13 Jul 2022 06:57:28 UTC (4,181 KB)",
+    "http_status": 200
+  },
+  {
+    "number": 19,
+    "id": "2103.00020",
+    "title": "Learning Transferable Visual Models From Natural Language Supervision",
+    "dates": [
+      "2021/02/26"
+    ],
+    "history": "Submission history From: Jong Wook Kim [ view email ] [v1] Fri, 26 Feb 2021 19:04:58 UTC (6,174 KB)",
+    "http_status": 200
+  },
+  {
+    "number": 20,
+    "id": "2201.03546",
+    "title": "Language-driven Semantic Segmentation",
+    "dates": [
+      "2022/01/10"
+    ],
+    "history": "Submission history From: Boyi Li [ view email ] [v1] Mon, 10 Jan 2022 18:59:10 UTC (3,841 KB) [v2] Sun, 3 Apr 2022 03:33:43 UTC (3,841 KB)",
+    "http_status": 200
+  },
+  {
+    "number": 21,
+    "id": "2304.07193",
+    "title": "DINOv2: Learning Robust Visual Features without Supervision",
+    "dates": [
+      "2023/04/14"
+    ],
+    "history": "Submission history From: Timothée Darcet [ view email ] [v1] Fri, 14 Apr 2023 15:12:19 UTC (6,968 KB) [v2] Fri, 2 Feb 2024 10:24:09 UTC (6,776 KB)",
+    "http_status": 200
+  },
+  {
+    "number": 22,
+    "id": "2112.03857",
+    "title": "Grounded Language-Image Pre-training",
+    "dates": [
+      "2021/12/07"
+    ],
+    "history": "Submission history From: Liunian Harold Li [ view email ] [v1] Tue, 7 Dec 2021 17:47:50 UTC (9,177 KB) [v2] Fri, 17 Jun 2022 10:32:21 UTC (11,323 KB)",
+    "http_status": 200
+  },
+  {
+    "number": 23,
+    "id": "2201.02605",
+    "title": "Detecting Twenty-thousand Classes using Image-level Supervision",
+    "dates": [
+      "2022/01/07"
+    ],
+    "history": "Submission history From: Xingyi Zhou [ view email ] [v1] Fri, 7 Jan 2022 18:57:19 UTC (3,858 KB) [v2] Mon, 10 Jan 2022 02:32:28 UTC (3,858 KB) [v3] Fri, 29 Jul 2022 06:39:56 UTC (4,118 KB)",
+    "http_status": 200
+  },
+  {
+    "number": 24,
+    "id": "2303.05499",
+    "title": "Grounding DINO: Marrying DINO with Grounded Pre-Training for Open-Set Object Detection",
+    "dates": [
+      "2023/03/09"
+    ],
+    "history": "Submission history From: Shilong Liu [ view email ] [v1] Thu, 9 Mar 2023 18:52:16 UTC (2,240 KB) [v2] Fri, 10 Mar 2023 06:37:04 UTC (2,252 KB) [v3] Thu, 16 Mar 2023 03:26:08 UTC (2,893 KB) [v4] Mon, 20 Mar 2023 06:57:39 UTC (2,912 KB) [v5] Fri, 19 Jul 2024 06:00:41 UTC (4,615 KB)",
+    "http_status": 200
+  },
+  {
+    "number": 25,
+    "id": "2401.17270",
+    "title": "YOLO-World: Real-Time Open-Vocabulary Object Detection",
+    "dates": [
+      "2024/01/30"
+    ],
+    "history": "Submission history From: Tianheng Cheng [ view email ] [v1] Tue, 30 Jan 2024 18:59:38 UTC (5,276 KB) [v2] Fri, 2 Feb 2024 10:06:24 UTC (5,276 KB) [v3] Thu, 22 Feb 2024 13:05:52 UTC (5,277 KB)",
+    "http_status": 200
+  },
+  {
+    "number": 26,
+    "id": "2304.02643",
+    "title": "Segment Anything",
+    "dates": [
+      "2023/04/05"
+    ],
+    "history": "Submission history From: Alexander Kirillov [ view email ] [v1] Wed, 5 Apr 2023 17:59:46 UTC (14,399 KB)",
+    "http_status": 200
+  },
+  {
+    "number": 27,
+    "id": "2408.00714",
+    "title": "SAM 2: Segment Anything in Images and Videos",
+    "dates": [
+      "2024/08/01"
+    ],
+    "history": "Submission history From: Christoph Feichtenhofer [ view email ] [v1] Thu, 1 Aug 2024 17:00:08 UTC (12,189 KB) [v2] Mon, 28 Oct 2024 16:37:57 UTC (31,965 KB)",
+    "http_status": 200
+  },
+  {
+    "number": 28,
+    "id": "2211.15654",
+    "title": "OpenScene: 3D Scene Understanding with Open Vocabularies",
+    "dates": [
+      "2022/11/28"
+    ],
+    "history": "Submission history From: Songyou Peng [ view email ] [v1] Mon, 28 Nov 2022 18:58:36 UTC (15,853 KB) [v2] Thu, 6 Apr 2023 15:35:13 UTC (16,838 KB)",
+    "http_status": 200
+  },
+  {
+    "number": 29,
+    "id": "2302.07241",
+    "title": "ConceptFusion: Open-set Multimodal 3D Mapping",
+    "dates": [
+      "2023/02/14"
+    ],
+    "history": "Submission history From: Krishna Murthy Jatavallabhula [ view email ] [v1] Tue, 14 Feb 2023 18:40:26 UTC (16,510 KB) [v2] Wed, 15 Feb 2023 01:49:09 UTC (16,227 KB) [v3] Mon, 23 Oct 2023 14:56:15 UTC (16,223 KB)",
+    "http_status": 200
+  },
+  {
+    "number": 30,
+    "id": "2303.09553",
+    "title": "LERF: Language Embedded Radiance Fields",
+    "dates": [
+      "2023/03/16"
+    ],
+    "history": "Submission history From: Justin Kerr [ view email ] [v1] Thu, 16 Mar 2023 17:59:20 UTC (37,264 KB)",
+    "http_status": 200
+  },
+  {
+    "number": 31,
+    "id": "2306.13631",
+    "title": "OpenMask3D: Open-Vocabulary 3D Instance Segmentation",
+    "dates": [
+      "2023/06/23"
+    ],
+    "history": "Submission history From: Ayca Takmaz [ view email ] [v1] Fri, 23 Jun 2023 17:36:44 UTC (26,019 KB) [v2] Sun, 29 Oct 2023 14:04:25 UTC (16,657 KB)",
+    "http_status": 200
+  },
+  {
+    "number": 32,
+    "id": "2310.03923",
+    "title": "Open-Fusion: Real-time Open-Vocabulary 3D Mapping and Queryable Scene Representation",
+    "dates": [
+      "2023/10/05"
+    ],
+    "history": "Submission history From: Kashu Yamazaki [ view email ] [v1] Thu, 5 Oct 2023 21:57:36 UTC (854 KB)",
+    "http_status": 200
+  }
+]

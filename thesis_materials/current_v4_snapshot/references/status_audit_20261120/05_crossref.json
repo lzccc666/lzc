@@ -1,0 +1,510 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          20
+        ]
+      ],
+      "date-time": "2026-11-20T03:19:07Z",
+      "timestamp": 1795144747706,
+      "version": "4.10.3"
+    },
+    "reference-count": 48,
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "issue": "5",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2015,
+              10,
+              1
+            ]
+          ],
+          "date-time": "2015-10-01T00:00:00Z",
+          "timestamp": 1443657600000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      }
+    ],
+    "funder": [
+      {
+        "name": "Dirección General de Investigación of Spain",
+        "award": [
+          "DPI2012-32168"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "DPI2012-32168"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Ministerio de Educación Scholarship",
+        "award": [
+          "FPU13/04175"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "FPU13/04175"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Gobierno de Aragón Scholarship",
+        "award": [
+          "B121/13"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "B121/13"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "https://ror.org/0425pg203",
+            "id-type": "ROR",
+            "asserted-by": "crossref"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "IEEE Trans. Robot."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2015,
+          10
+        ]
+      ]
+    },
+    "DOI": "10.1109/tro.2015.2463671",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2015,
+          8,
+          24
+        ]
+      ],
+      "date-time": "2015-08-24T14:33:04Z",
+      "timestamp": 1440426784000
+    },
+    "page": "1147-1163",
+    "source": "Crossref",
+    "is-referenced-by-count": 6780,
+    "title": [
+      "ORB-SLAM: A Versatile and Accurate Monocular SLAM System"
+    ],
+    "prefix": "10.1109",
+    "volume": "31",
+    "author": [
+      {
+        "given": "Raul",
+        "family": "Mur-Artal",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "J. M. M.",
+        "family": "Montiel",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Juan D.",
+        "family": "Tardos",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref39",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/0278364909103911"
+      },
+      {
+        "key": "ref38",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IROS.2012.6385773"
+      },
+      {
+        "key": "ref33",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IROS.2011.6094588"
+      },
+      {
+        "key": "ref32",
+        "first-page": "802",
+        "article-title": "Improving the agility of keyframe-based SLAM",
+        "author": "klein",
+        "year": "2008",
+        "journal-title": "Proc Eur Conf Comput Vision"
+      },
+      {
+        "key": "ref31",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.imavis.2012.02.009"
+      },
+      {
+        "key": "ref30",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2006.263"
+      },
+      {
+        "key": "ref37",
+        "doi-asserted-by": "crossref",
+        "first-page": "3607",
+        "DOI": "10.1109/ICRA.2011.5979949",
+        "article-title": "g2o: A general framework for graph optimization",
+        "author": "kuemmerle",
+        "year": "2011",
+        "journal-title": "Proc IEEE Int Conf Robot Autom"
+      },
+      {
+        "key": "ref36",
+        "first-page": "49",
+        "article-title": "LDB: An ultra-fast feature for scalable augmented reality on mobile devices",
+        "author": "yang",
+        "year": "0",
+        "journal-title": "Proc IEEE Int Symp Mixed Augmented Reality"
+      },
+      {
+        "key": "ref35",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5244/C.27.13"
+      },
+      {
+        "key": "ref34",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICRA.2013.6631246"
+      },
+      {
+        "key": "ref10",
+        "first-page": "834",
+        "article-title": "LSD-SLAM: Large-scale direct monocular SLAM",
+        "author": "engel",
+        "year": "2014",
+        "journal-title": "Proc Eur Conf Comput Vision"
+      },
+      {
+        "key": "ref40",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/0278364913491297"
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICRA.2014.6906953"
+      },
+      {
+        "key": "ref12",
+        "article-title": "ORB-SLAM: Tracking and mapping recognizable features",
+        "author": "mur-artal",
+        "year": "0"
+      },
+      {
+        "key": "ref13",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.robot.2009.06.010"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2006.264"
+      },
+      {
+        "key": "ref15",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/0278364910385483"
+      },
+      {
+        "key": "ref16",
+        "first-page": "778",
+        "article-title": "BRIEF: Binary robust independent elementary features",
+        "author": "calonder",
+        "year": "2010",
+        "journal-title": "Proc Eur Conf Comput Vision"
+      },
+      {
+        "key": "ref17",
+        "first-page": "430",
+        "article-title": "Machine learning for high-speed corner detection",
+        "author": "rosten",
+        "year": "2006",
+        "journal-title": "Proc Eur Conf Comput Vision"
+      },
+      {
+        "key": "ref18",
+        "first-page": "404",
+        "article-title": "SURF: Speeded up robust features",
+        "author": "bay",
+        "year": "2006",
+        "journal-title": "Proc Eur Conf Comput Vision"
+      },
+      {
+        "key": "ref19",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1023/B:VISI.0000029664.99615.94"
+      },
+      {
+        "key": "ref28",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1023/A:1008140928553"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ISMAR.2007.4538852"
+      },
+      {
+        "key": "ref27",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1098/rspb.1986.0030"
+      },
+      {
+        "key": "ref3",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2006.236"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.15607/RSS.2010.VI.010",
+        "article-title": "Scale drift-aware large scale monocular SLAM",
+        "author": "strasdat",
+        "year": "2010"
+      },
+      {
+        "key": "ref29",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/34.993559"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TRO.2012.2197158"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IROS.2010.5652266"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV.2011.6126517"
+      },
+      {
+        "key": "ref2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1017/CBO9780511811685"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV.2011.6126544"
+      },
+      {
+        "key": "ref1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/3-540-44480-7_21"
+      },
+      {
+        "key": "ref46",
+        "doi-asserted-by": "crossref",
+        "first-page": "278",
+        "DOI": "10.1007/3-540-44480-7_19",
+        "article-title": "Feature based methods for structure and motion estimation",
+        "author": "torr",
+        "year": "2000",
+        "journal-title": "Vision Algorithms Theory and Practice"
+      },
+      {
+        "key": "ref20",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPAMI.2007.1049"
+      },
+      {
+        "key": "ref45",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IVS.2011.5940546"
+      },
+      {
+        "key": "ref48",
+        "article-title": "Local accuracy and global consistency for efficient visual SLAM",
+        "author": "strasdat",
+        "year": "2012"
+      },
+      {
+        "key": "ref22",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICRA.2014.6906584"
+      },
+      {
+        "key": "ref47",
+        "article-title": "Probabilistic semi-dense mapping from highly accurate feature-based monocular SLAM",
+        "author": "mur-artal",
+        "year": "0"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TRO.2008.2003276"
+      },
+      {
+        "key": "ref42",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1364/JOSAA.4.000629"
+      },
+      {
+        "key": "ref24",
+        "first-page": "209",
+        "article-title": "Robust monocular SLAM in dynamic environments",
+        "author": "tan",
+        "year": "2013",
+        "journal-title": "Proc IEEE Int Symp Mixed Augmented Reality"
+      },
+      {
+        "key": "ref41",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s11263-008-0152-6"
+      },
+      {
+        "key": "ref23",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1142/S0218001488000285"
+      },
+      {
+        "key": "ref44",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV.2011.6126513"
+      },
+      {
+        "key": "ref26",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPAMI.2004.17"
+      },
+      {
+        "key": "ref43",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TRO.2013.2279412"
+      },
+      {
+        "key": "ref25",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICRA.2014.6907055"
+      }
+    ],
+    "container-title": [
+      "IEEE Transactions on Robotics"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx7/8860/7274528/07219438.pdf?arnumber=7219438",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2022,
+          1,
+          12
+        ]
+      ],
+      "date-time": "2022-01-12T11:03:34Z",
+      "timestamp": 1641985414000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/7219438/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2015,
+          10
+        ]
+      ]
+    },
+    "references-count": 48,
+    "journal-issue": {
+      "issue": "5"
+    },
+    "URL": "https://doi.org/10.1109/tro.2015.2463671",
+    "relation": {},
+    "ISSN": [
+      "1552-3098",
+      "1941-0468"
+    ],
+    "issn-type": [
+      {
+        "value": "1552-3098",
+        "type": "print"
+      },
+      {
+        "value": "1941-0468",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2015,
+          10
+        ]
+      ]
+    }
+  }
+}

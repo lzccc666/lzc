@@ -1,0 +1,78 @@
+[
+  {
+    "number": 22,
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "number": 25,
+    "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
+  },
+  {
+    "number": 26,
+    "matches": [
+      {
+        "doi": "10.1109/iccv51070.2023.00371",
+        "title": [
+          "Segment Anything"
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2023,
+              10,
+              1
+            ]
+          ]
+        },
+        "container-title": [
+          "2023 IEEE/CVF International Conference on Computer Vision (ICCV)"
+        ]
+      }
+    ]
+  },
+  {
+    "number": 28,
+    "matches": [
+      {
+        "doi": "10.1109/cvpr52729.2023.00085",
+        "title": [
+          "OpenScene: 3D Scene Understanding with Open Vocabularies"
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2023,
+              6
+            ]
+          ]
+        },
+        "container-title": [
+          "2023 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)"
+        ]
+      }
+    ]
+  },
+  {
+    "number": 30,
+    "matches": [
+      {
+        "doi": "10.1109/iccv51070.2023.01807",
+        "title": [
+          "LERF: Language Embedded Radiance Fields"
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2023,
+              10,
+              1
+            ]
+          ]
+        },
+        "container-title": [
+          "2023 IEEE/CVF International Conference on Computer Vision (ICCV)"
+        ]
+      }
+    ]
+  }
+]

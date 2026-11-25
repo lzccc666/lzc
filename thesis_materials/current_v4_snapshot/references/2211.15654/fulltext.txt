@@ -1,0 +1,1797 @@
+OpenScene: 3D Scene Understanding with Open Vocabularies
+Songyou Peng1,2,3
+Kyle Genova1
+Chiyu “Max” Jiang4
+Andrea Tagliasacchi1,5
+Marc Pollefeys2
+Thomas Funkhouser1
+1 Google Research
+2 ETH Zurich
+3 MPI for Intelligent Systems, T¨ubingen
+4 Waymo LLC
+5 Simon Fraser University
+pengsongyou.github.io/openscene
+Zero-shot Semantic Segmentation
+“fan” - Object
+“soft” - Property
+“sit” - Affordance
+“kitchen” – Room Type
+“metal” - Material
+Input 3D Point Cloud
+“work” - Activity
+Zero-shot Semantic Segmentation
+Figure 1. Open-vocabulary 3D Scene Understanding. We propose OpenScene, a zero-shot approach to 3D scene understanding that
+co-embeds dense 3D point features with image pixels and text. The examples above show a 3D scene with surface points colored by how
+well they match a user-specified query string – yellow is highest, green is middle, blue is low. Harnessing the power of language-based
+features, OpenScene answers a wide variety of example queries, like “soft”, “kitchen”, or “work”, without labeled 3D data.
+Abstract
+Traditional 3D scene understanding approaches rely on
+labeled 3D datasets to train a model for a single task with
+supervision.
+We propose OpenScene, an alternative ap-
+proach where a model predicts dense features for 3D scene
+points that are co-embedded with text and image pixels in
+CLIP feature space. This zero-shot approach enables task-
+agnostic training and open-vocabulary queries. For exam-
+ple, to perform SOTA zero-shot 3D semantic segmentation
+it first infers CLIP features for every 3D point and later
+classifies them based on similarities to embeddings of ar-
+bitrary class labels. More interestingly, it enables a suite
+of open-vocabulary scene understanding applications that
+have never been done before. For example, it allows a user
+to enter an arbitrary text query and then see a heat map
+indicating which parts of a scene match. Our approach is
+effective at identifying objects, materials, affordances, ac-
+tivities, and room types in complex 3D scenes, all using a
+single model trained without any labeled 3D data.
+1. Introduction
+3D scene understanding is a fundamental task in com-
+puter vision. Given a 3D mesh or point cloud with a set of
+posed RGB images, the goal is to infer the semantics, af-
+fordances, functions, and physical properties of every 3D
+point. For example, given the house shown in Figure 1, we
+would like to predict which surfaces are part of a fan (se-
+mantics), made of metal (materials), within a kitchen (room
+types), where a person can sit (affordances), where a person
+can work (functions), and which surfaces are soft (physical
+properties). Answers to these queries can help a robot inter-
+act intelligently with the scene or help a person understand
+it through interactive query and visualization.
+Achieving this broad scene understanding goal is chal-
+lenging due to the diversity of possible queries.
+Tradi-
+tional 3D scene understanding systems are trained with su-
+pervision from benchmark datasets designed for specific
+tasks (e.g., 3D semantic segmentation for a closed set of 20
+classes [4,11]). They are each designed to answer one type
+of query (is this point on a chair, table, or bed?), but provide
+little assistance for related queries where training data is
+scarce (e.g., segmenting rare objects) or other queries with
+no 3D supervision (e.g., estimating material properties).
+In this paper, we investigate how to use pre-trained text-
+image embedding models (e.g., CLIP [43]) to assist in 3D
+scene understanding. These models have been trained from
+1
+arXiv:2211.15654v2  [cs.CV]  6 Apr 2023
+
+Figure 2. Key idea. We co-embed 3D points with text and im-
+age pixels in the CLIP feature space (visualized with T-SNE [52])
+which has structure learned from large image and text repositories.
+large datasets of captioned images to co-embed visual and
+language concepts in a shared feature space. Recent work
+has shown that these models can be used to increase the flex-
+ibility and generalizability of 2D image semantic segmen-
+tation [17, 30, 44, 59, 61, 63]. However, nobody has inves-
+tigated how to use them to improve the diversity of queries
+possible for 3D scene understanding.
+We present OpenScene, a simple yet effective zero-shot
+approach for open-vocabulary 3D scene understanding. Our
+key idea is to compute dense features for 3D points that are
+co-embedded with text strings and image pixels in the CLIP
+feature space (Fig. 2). To achieve this, we establish associ-
+ations between 3D points and pixels from posed images in
+the 3D scene, and train a 3D network to embed points using
+CLIP pixel features as supervision. This approach brings
+3D points in alignment with pixels in the feature space,
+which in turn are aligned with text features, and thus en-
+ables open vocabulary queries on the 3D points.
+Our 3D point embedding algorithm includes both 2D and
+3D convolutions. We first back-project the 3D position of
+the point into every image and aggregate the features from
+the associated pixels using multi-view fusion.
+Next, we
+train a sparse 3D convolutional network to perform feature
+extraction from only the 3D point cloud geometry with a
+loss that minimizes differences to the aggregated pixel fea-
+tures. Finally, we ensemble the features produced by the
+2D fusion and the 3D network into a single feature for each
+3D point. This hybrid 2D-3D feature strategy enables the
+algorithm to take advantage of salient patterns in both 2D
+images and 3D geometry, and thus is more robust and de-
+scriptive than features from either domain alone.
+Once we have computed features for every 3D point,
+we can perform a variety of 3D scene understanding
+queries. Since the CLIP model is trained with natural lan-
+guage captions, it captures concepts beyond object class la-
+bels, including affordances, materials, attributes, and func-
+tions (Fig. 1). For example, computing the similarity of 3D
+features with the embedding for “soft” produces the result
+shown in the bottom-left image of Fig. 1, which highlights
+the couches, beds, and comfy chairs as the best matches.
+Since our approach is zero-shot (i.e. no use of labeled
+data for the target task), it does not perform as well as fully-
+supervised approaches on the limited set of tasks for which
+there is sufficient training data in traditional benchmarks
+(e.g., 3D semantic segmentation with 20 classes). How-
+ever, it does achieve significantly stronger performance on
+other tasks. For example, it beats a fully-supervised ap-
+proach on indoor 3D semantic segmentation with 40, 80,
+or 160 classes. It also performs better than other zero-shot
+baselines, and can be used without any retraining on novel
+datasets even if they have different label sets. It works for
+indoor RGBD scans as well as outdoor driving captures.
+Overall, our contributions are summarized as follows:
+• We introduce open vocabulary 3D scene understanding
+tasks where arbitrary text queries are used for semantic
+segmentation, affordance estimation, room type classifi-
+cation, 3D object search, and 3D scene exploration.
+• We propose OpenScene, a zero-shot method for extract-
+ing 3D dense features from an open vocabulary embed-
+ding space using multi-view fusion and 3D convolution.
+• We demonstrate that the extracted features can be used
+for 3D semantic segmentation with performance better
+than fully supervised methods for rare classes.
+2. Related Work
+This paper draws on a large literature of previous work
+on 3D scene understanding, multi-modal embedding, and
+zero-shot learning.
+Closed-set 3D Scene Understanding. There is a long his-
+tory of work on 3D scene understanding for vision and
+robotics applications. Most prior work focuses on training
+models with ground-truth 3D labels [10, 20–22, 24, 31, 40,
+42,45,48,56]. These works have yielded network architec-
+tures and training protocols that have significantly pushed
+the boundary of several 3D scene understanding bench-
+marks, including 3D object classification [58], 3D object
+detection and localization [3, 5, 15, 50], 3D semantic and
+instance segmentation [2, 4, 11, 23, 34], 3D affordance pre-
+diction [13, 32, 55], and so on. The most closely related
+work to ours of this type is Rozenberszki et al. [46], since
+they use the CLIP embedding to pre-train a model for 3D
+semantic segmentation. However, they only use the text
+embedding for point encoder pretraining, and then train the
+point decoder with 3D GT annotations afterwards. Their
+focus is on using the CLIP embedding to achieve better
+supervised 3D semantic segmentation, rather than open-
+vocabulary queries.
+Another line of research performs 3D scene under-
+standing experiments with only 2D ground truth supervi-
+sions [16, 27, 38, 47, 53, 57]. For example, [16] generates
+pseudo 3D annotation by backprojecting and fusing the 2D
+2
+
+predicted labels, from which they learn the 3D segmenta-
+tion task. However, their 2D network is trained with ground
+truth 2D labels. A couple of works [36, 47] pretrain the
+3D segmentation network using point-pixel pairs via con-
+trastive learning between 2D and 3D features.
+We also
+utilize 2D image features as our pseudo-supervision when
+training the 3D network and no 2D labels are needed.
+All these approaches have mainly been applied with
+small predefined labelsets containing common object cat-
+egories. They do not work as well when the number of ob-
+ject categories increases, as tail classes have few training
+examples. In contrast, we are able to segment with arbitrary
+labelsets without any re-training, and we show strong abil-
+ity of understanding different contents, ranging from rare
+object types to even materials or physical properties, which
+is impossible for previous methods.
+Open-Vocabulary 2D Scene Understanding. The recent
+advances of large visual language models [1, 25, 43] have
+enabled a remarkable level of robustness in zero-shot 2D
+scene understanding tasks, including recognizing long-tail
+objects in images. However, the learned embeddings are
+often at the image level, thus not applicable for dense pre-
+diction tasks requiring pixel-level information. Many recent
+efforts [17,18,28,30,33,37,44,49,59,61,63] attempt to cor-
+relate the dense image features with the embedding from
+large language models. In this way, given an image at test
+time, users can define arbitrary text labels to classify, detect,
+or segment the image.
+More recently, Ha and Song [19] take a step forward
+and perform open-vocabulary partial scene understanding
+and completion given a single RGB-D frame as input.
+This method is limited to small partial scenes and requires
+ground truth training data for supervision. In contrast, in
+this work, we solely rely on pretrained open-vocabulary 2D
+models and perform a series of 3D scene-level understand-
+ing tasks, without the need for any ground truth training data
+in 2D or 3D. Moreover,in the absence of 2D images, our
+method can perform 3D-only open-vocabulary scene under-
+standing tasks based on a 3D point network distilled from
+an open-vocabulary 2D image model through 3D fusion.
+Zero-shot Learning for 3D Point Clouds. While there
+have been a number of studies on zero-shot learning for 2D
+images, their application to 3D is still recent and scarce. A
+handful of works [6–9, 62] attempt to address the 3D point
+classification and generation tasks. More recently, [35, 39]
+investigated zero-shot learning for semantic segmentation
+for 3D point clouds. They train with supervision of 3D
+ground truth labels for a predefined set of seen classes and
+then evaluate on new unseen classes. However, these meth-
+ods are still limited to the closed-set segmentation setting
+and still require GT training data for the majority of the 3D
+dataset. Our method does not require any labeled 3D data
+𝜙
+𝐟!"
+𝐟#"
+ℰ!"#!
+…
+Multi-view Feature Fusion
+!
+!
+ℒ
+3D Distillation
+2D-3D Ensemble
+!
+“brown chair”
+“end table”
+“floor rug”
+…
+Arbitrary text queries
+𝐟!"#"
+Input Images
+Input 3D Geometry
+Inference
+Figure 3. Method Overview. Given a 3D model (mesh or point
+cloud) and a set of posed images, we train a 3D network E3D to
+produce dense features for 3D points f 3D with a distillation loss L
+to multi-view fused features f 2D for projected pixels. We ensem-
+ble f 2D and f 3D based on cosine similarities to CLIP embeddings
+for an arbitrary set of queries to form f 2D3D. During inference, we
+can use the similarity scores between per-point features and given
+CLIP features to perform open-vocabulary 3D scene understand-
+ing tasks.
+for training, and it handles a broad range of queries sup-
+ported by a large language model.
+3. Method
+An overview of our approach is illustrated in Fig. 3.
+We first compute per-pixel features for every image using
+a model pre-trained for open-vocabulary 2D semantic seg-
+mentation. We then aggregate the pixel features from mul-
+tiple views onto every 3D point to form a per-point fused
+feature vector Sec. 3.1. We next distill a 3D network to re-
+produce the fused features using only the 3D point cloud as
+input Sec. 3.2. Next, we ensemble the fused 2D features and
+distilled 3D features into a single per-point feature Sec. 3.3
+and use it to answer open-vocabulary queries Sec. 3.4.
+3.1. Image Feature Fusion
+The first step in our approach is to extract dense per-
+pixel embeddings for each RGB image from a 2D visual-
+language segmentation model, and then back-project them
+onto the 3D surface points of a scene.
+Image Feature Extraction. Given RGB images with a res-
+olution of H × W, we can simply compute the per-pixel
+embeddings from the (frozen) segmentation model E2D, de-
+noted as Ii ∈RH×W ×C, where C is the feature dimen-
+sion, and i is the index spanning the total number of im-
+ages. For E2D, we experiment with two pretrained image
+segmentation models OpenSeg [17] and LSeg [30].
+2D-3D Pairing. Given a 3D surface point p ∈R3 in the
+point clouds P ∈RM×3 of a scene with M points, we cal-
+3
+
+culate its corresponding pixel u = (u, v) when the intrinsic
+matrix Ii and world-to-camera extrinsic matrix Ei of that
+frame i are provided. We only consider the pinhole camera
+model in this paper so the projection can be represented as
+˜u = Ii ·Ei ·˜p, where ˜u and ˜p are the homogeneous coordi-
+nates of u and p, respectively. Note that for indoor datasets
+like ScanNet and Matterport3D where the depth images are
+provided, we also conduct occlusion tests to guarantee the
+pixel u are only paired with a visible surface point p.
+Fusing Per-Pixel Features. With the 2D-3D pairing, the
+corresponding 2D features in frame i for point p can be
+written as fi = Ii(u) ∈RC. Now, assume a total num-
+ber of K views can be associated with point p, we can
+then fuse such 2D pixel embeddings to obtain a single
+feature vector for this point f 2D = ϕ(f1, · · · , fK), where
+ϕ : RK×C 7→RC is an average pooling operator for multi-
+view features. An ablation study on different fusion strate-
+gies are discussed in supplemental. After repeating the fu-
+sion process for each point, we can build a feature point
+cloud F2D = {f 2D
+1 , · · · , f 2D
+M } ∈RM×C.
+3.2. 3D Distillation
+The feature cloud F2D can be directly used for language-
+driven 3D scene understanding when images are present.
+Nevertheless, such fused features could lead to noisy seg-
+mentation due to potentially inconsistent 2D predictions.
+Moreover, some tasks only provide 3D point clouds or
+meshes. Therefore, we can distill such 2D visual-language
+knowledge into a 3D point network that only takes 3D point
+positions as input.
+Specifically, given an input point cloud P, we seek to
+learn an encoder that outputs per-point embeddings:
+  \ b F ^\tex
+t { 3 D} = \ cE ^\text {3D}(\bP ), \quad \cE ^\text {3D}:\nR ^{M\times 3}\mapsto \nR ^{M\times C} 
+(1)
+where F3D = {f 3D
+1 , · · · , f 3D
+M }. To enforce the output of the
+network F3D to be consistent with the fused features F2D,
+we use a cosine similarity loss:
+  \ c L = 1 - \text {cos}(\bF ^\text {2D}, \bF ^\text {3D}) \label {eq:loss} 
+(2)
+We use MinkowskiNet18A [10] as our 3D backbone E3D,
+and change the dimension of outputs to C.
+Since the open-vocabulary image embeddings from [17,
+30] are co-embedded with CLIP features, the output of our
+distilled 3D model naturally lives in the same embedding
+space as CLIP. Therefore, even without any 2D observa-
+tions, such text-3D co-embeddings F3D allow 3D scene-
+level understanding given arbitrary text prompts. We show
+such results in the ablation study in Sec. 4.2.
+3.3. 2D-3D Feature Ensemble
+Although one can already perform open-vocabulary
+queries with the 2D fused features F2D or 3D distilled fea-
+tures F3D, here we introduce a 2D-3D ensemble method to
+obtain a hybrid feature to yield better performance.
+The inspiration comes from the observation that 2D
+fused features specialize in predicting small objects (e.g. a
+mug on the table) or ones with ambiguous geometry (e.g.,
+a painting on the wall), while 3D features yield good pre-
+dictions for objects with distinctive shapes (e.g. walls and
+floors). We aim to combine the best of both.
+Our ensemble method leverages a set of text prompts, ei-
+ther provided at inference or offline (e.g. predefined classes
+from public benchmarks like ScanNet, or arbitrary classes
+defined by users). We first compute the embeddings for all
+the text prompts using the CLIP [43] text encoder Etext, de-
+noted as T = {t1, · · · , tN} ∈RN×C, where N is the num-
+ber of text prompts and C the feature dimension. Next, for
+each 3D point, we obtain its 2D fused and 3D distilled em-
+beddings f 2D and f 3D (dropping the subscript for simplic-
+ity). We can now correlate text features with these two sets
+of features via cosine similarity, respectively:
+  \
+b s ^\te xt {2D}
+_n 
+= \text {c os}(\bff ^\text {2D}, \bt _n), \qquad \bs ^\text {3D}_n = \text {cos}(\bff ^\text {3D}, \bt _n) \label {eq:cosine_similarity} 
+(3)
+Once having the similarity scores wrt. every text prompt tn,
+we can use the max value s2D = maxn(s2D
+n ) and s3D =
+maxn(s3D
+n ) among all N prompts as the ensemble scores
+for both features. Our final 2D-3D ensemble feature f 2D3D
+is simply the feature with the highest ensemble score.
+3.4. Inference
+With any per-point feature described in the previous sub-
+sections (f 2D, f 3D, or f 2D3D) and CLIP features from an arbi-
+trary set of text prompts, we can estimate their similarities
+by simply calculating the cosine similarity score between
+them. We use this similarity score for all of our scene under-
+standing tasks. For example, for the zero-shot 3D seman-
+tic segmentation using 2D-3D ensemble features, the final
+segmentation for each 3D point is computed point-wise by
+argmax n{cos(f 2D3D, tn)}.
+4. Experiments
+We ran a series of experiments to test how well the
+proposed methods work for a variety of 3D scene under-
+standing tasks. We start by evaluating on traditional closed-
+set 3D semantic segmentation benchmarks (in order to be
+able to compare to previous work), and later demonstrate
+the more novel and exciting open-vocabulary applications
+in the next section.
+Datasets.
+To test our method in a variety of settings,
+we evaluate on three popular public benchmarks: Scan-
+Net [11,46], Matterport3D [4], and nuScenes Lidarseg [3].
+These three datasets span a broad gamut of situations – the
+first two provide RGBD images and 3D meshes of indoor
+scenes, and the last provides Lidar scans of outdoor scenes.
+We use all three datasets to compare to alternative methods.
+Moreover, Matterport3D is a complex dataset with highly
+4
+
+mIoU
+mAcc
+Bookshelf
+Desk
+Sofa
+Toilet
+Mean
+Bookshelf
+Desk
+Sofa
+Toilet
+Mean
+3DGenZ [39]
+6.3
+3.3
+13.1
+8.1
+7.7
+13.4
+5.9
+49.6
+26.3
+23.8
+MSeg Voting
+47.8
+40.3
+56.5
+68.8
+53.4
+50.1
+67.7
+69.8
+81.0
+67.2
+Ours - LSeg
+67.1
+46.4
+60.2
+77.5
+62.8
+85.5
+69.5
+79.0
+90.0
+81.0
+Ours - OpenSeg
+64.1
+27.4
+49.6
+63.7
+51.2
+73.7
+73.4
+92.5
+95.3
+83.7
+Table 1. Comparison on Zero-shot 3D Semantic Segmentation. We show quantitative comparison between our method and the most
+recent zero-shot 3D segmentation approach [39] and a multi-view fusion baseline utilizing MSeg [29]. Following [39], we take 4 classes
+(bookself, desk, sofa, toilet) out of 20 classes from ScanNet validation set for evaluation. Unlike [39], which requires training on 16 seen
+classes, our approach does not train with any 2D or 3D ground labels on any classes. Still, both of our variants show significantly better
+performance in both mIoU and mAcc.
+detailed scenes, and thus provides the opportunity to stress
+open-vocabulary queries.
+4.1. Comparisons
+Comparison on zero-shot 3D semantic segmentation.
+We first compare our approach to the most closely related
+work on zero-shot 3D semantic segmentation: MSeg [29]
+Voting and 3DGenz [39]. MSeg Voting predicts a semantic
+segmentation for each posed image using MSeg [29] with
+mapping to the corresponding label sets. For each 3D point,
+we perform majority voting of the logits from multi-view
+images. 3DGenZ [39] divides the 20 classes of the Scan-
+Net dataset into 16 seen and 4 unseen classes, and trains a
+network utilizing the ground truth supervision on the seen
+classes to generate features for both sets.
+Following the experimental setup in [39], we report the
+mIoU and mAcc values on their 4 unseen classes in Table 1.
+Our results on those classes is significantly better than [39]
+(7.7% vs 62.8% mIoU), even though 3DGenz [39] utilizes
+ground truth data for 16 seen classes and ours does not. We
+also outperform MSeg Voting. In this case, the difference
+is mainly because our method (regress CLIP features and
+then classify) naturally models the similarities and differ-
+ences between classes, where as the MSeg Voting approach
+(classify and then vote) treats every class as equally distinct
+from all other classes (a couch and a love seat are just as
+different as a couch and an airplane in their model).
+Comparison on 3D semantic segmentation benchmarks.
+In Table 2 we compare our approach with both fully-
+supervised and zero-shot methods on all classes of the
+nuScenes [3] validation set, ScanNet [11] validation set,
+and Matterport3D [4] test set. Again, we outperform the
+zero-shot baseline (MSeg Voting) on both mIoU and mAcc
+metrics all three datasets.
+Although we have noticeable
+gap to the state-of-the-art fully-supervised approaches, our
+zero-shot method is surprisingly competitive with fully-
+supervised approaches from a few years ago [12, 24, 51].
+Among all 3 datasets our approach has the smallest gap
+(only -11.6 mIoU and -8.0 mAcc) to the SOTA fully-
+supervised approach on Matterport3D. We conjecture the
+reason is that Matterport3D is more diverse, which makes
+nuScenes [3]
+ScanNet [11]
+Matterport [4]
+mIoU mAcc mIoU mAcc mIoU
+mAcc
+Fully-supervised methods
+TangentConv [51]
+-
+-
+40.9
+-
+-
+46.8
+TextureNet [24]
+-
+-
+54.8
+-
+-
+63.0
+ScanComplete [12]
+-
+-
+56.6
+-
+-
+44.9
+DCM-Net [48]
+-
+-
+65.8
+-
+-
+66.2
+Mix3D [40]
+-
+-
+73.6
+-
+-
+-
+VMNet [22]
+-
+-
+73.2
+-
+-
+67.2
+LidarMultiNet [60]
+82.0
+-
+-
+-
+-
+-
+MinkowskiNet [10]
+78.0
+83.7
+69.0
+77.5
+54.2
+64.6
+Zero-shot methods
+MSeg [29] Voting
+31.0
+36.9
+45.6
+54.4
+33.4
+39.0
+Ours - LSeg
+36.7
+42.7
+54.2
+66.6
+43.4
+53.5
+Ours - OpenSeg
+42.1
+61.8
+47.5
+70.7
+42.6
+59.2
+Table 2. Comparisons on Indoor and Outdoor Benchmarks.
+We compare our method with both zero-shot and fully-supervised
+baselines for semantic segmentation of one outdoor dataset
+(nuScenes) and two indoor datasets (ScanNet and Matterport).
+Note that our zero-shot method performs worse than SOTA ap-
+proaches trained on this data, but comparable to supervised ap-
+proaches from a few years ago, and better than the previous
+SOTA zero-shot approach. Except for [10], the numbers for fully-
+supervised methods (in gray) are taken from previous papers.
+the fully-supervised training harder.
+Visual comparisons of semantic segmentations are
+shown in Fig. 4. They show that some of the predictions
+marked wrong in our results are actually either incorrect or
+ambiguous ground truth annotations. For example, in the
+first row in Fig. 4, we successfully segment the picture on
+the wall, while the GT misses it. And in the nuScenes re-
+sults, the truck composed of a trailer and the truck head is
+segmented correctly, but the annotation is not fine-grained
+enough to separate the parts.
+Impact of increasing the number of object classes. Be-
+sides the standard benchmarks with only a small set of
+classes, we also show comparisons as the number of ob-
+ject classes increases. We evaluate on the most frequent K
+classes1 of Matterport3D, where K = 21, 40, 80, 160. For
+the baseline, we train a separate MinkowskiNet for each K.
+1K = 21 was from original Matterport3D benchmark. For K =
+40, 80, 160 we use most frequent K classes of the NYU label set provided
+with the benchmark.
+5
+
+ScanNet [11]
+Matterport3D [4]
+nuScenes [3]
+Input
+Fully supervised [10]
+MSeg Voting [29]
+Ours
+GT Segmentation
+Figure 4. Qualitative comparisons. Images of 3D semantic segmentation results on public indoor and outdoor benchmarks.
+K = 21
+K = 40
+K = 80
+K = 160
+Fully-supervision [10]
+64.5
+50.8
+33.4
+18.4
+Ours
+59.2
+50.9
+34.6
+23.1
+(a) Results on different number of classes in mAcc
+1 - 20
+21 - 40
+41 - 60
+61 - 80
+81 - 100
+101 - 120
+121 - 140
+141 - 160
+Matterport3D Top 160 Classes
+0
+10
+20
+30
+40
+50
+60
+mAcc (%)
+64.5
+33.2
+15.6
+13.2
+4.5
+7.8
+8.6
+1.7
+42.9
+33.3
+21.9
+24.2
+19.4
+16.0
+19.7
+16.3
+Fully supervised
+Ours
+(b) Window evaluation on groups of 20 classes
+Table 3. Impact of Increasing the Number of Object Classes.
+Here we show (a) mAcc on Matterport3D [4] with different num-
+bers of classes K, and (b) mAcc within a window of 20 classes
+ranked by decreasing numbers of examples in training set, i.e. the
+right-most bars represent average of the 20 classes with fewest ex-
+amples (e.g., only 5 instances). Even though the fully-supervised
+approach [10] is trained on each labelset separately, while our
+model is fixed for all label sets, we can handle the less-common /
+long-tail classes much better.
+However, for ours we use the same model for all K, since it
+is class agnostic.
+As shown in Table 3 (a), when trained on only 21
+classes, the fully-supervised method performs much bet-
+ter due to the rich 3D labels in the most common classes
+(wall, floor, chair, etc.). However, with the increase of the
+number of classes, our zero-shot approach overtakes the
+fully-supervised approach, especially when K gets large.
+The reason is demonstrated in Table 3 (b), where we show
+ScanNet [11]
+Matterport3D [4]
+mIoU
+mAcc
+mIoU
+mAcc
+Ours
+LSeg
+2D Fusion
+50.0
+62.7
+32.3
+40.0
+3D Distill
+52.9
+63.2
+41.9
+51.2
+2D-3D Ens.
+54.2
+66.6
+43.4
+53.5
+Ours
+OpenSeg
+2D Fusion
+41.4
+63.6
+32.4
+45.0
+3D Distill
+46.0
+66.3
+41.3
+55.1
+2D-3D Ens.
+47.5
+70.7
+42.6
+59.2
+Table 4. Ablation Study. Comparison of semantic segmentation
+performance of different 3D features computed by our method.
+the mean accuracy for groups of 20 classes ranked by fre-
+quency. Fully-supervised suffers severely in segmenting tail
+classes because there are only a few instances available in
+the training dataset. In contrast, we are more robust to such
+rare objects since we do not rely upon any 3D labeled data.
+4.2. Ablation Studies & Analysis
+Does it matter which 2D features are used? We tested our
+method with features extracted from both OpenSeg [17] and
+LSeg [30]. In most experiments, we found the accuracy and
+generalizability of OpenSeg features to be better than LSeg
+(Table 1, Table 2, and Table 4), so we use OpenSeg for all
+experiments unless explicitly stated otherwise.
+Is our 2D-3D ensemble method effective? In Table 4, we
+ablate the performance for predicting features on 3D points
+including only image feature fusion (Sec. 3.1), only running
+the distilled MinkowskiNet (Sec. 3.2), and our full 2D-3D
+ensemble model (Sec. 3.3). As can be seen, on all scenarios
+(different datasets, metrics, and 2D features), our proposed
+2D-3D ensemble model performs the best. This suggests
+that leveraging patterns in both 2D and 3D domains makes
+the ensemble features more robust and descriptive.
+6
+
+K = 21
+K = 40
+K = 80
+K = 160
+2D Features
+28.56%
+29.96%
+31.58%
+32.46%
+3D Features
+71.44%
+70.04%
+68.42%
+67.54%
+Table 5. Behavior of Ensemble Model. Each entry indicates the
+percentage of points for which the Ensemble Model selects 2D or
+3D features for semantic segmentation on Matterport3D for differ-
+ent numbers of classes K in the labelset.
+What features does our 2D-3D ensemble method use
+most?
+Here we study how our ensemble model selects
+among the 2D and 3D features, and investigate how it
+changes with increasing numbers of classes in the label set.
+As shown in Table 5, we find that the majority of predictions
+(∼70%) select the 3D features, corroborating the value of
+our 3D distillation model. However, the percentage of pre-
+dictions coming from 2D features increases with the num-
+ber of classes, suggesting that the 2D features are more im-
+portant for long-tailed classes, which tend to be smaller in
+both size and number of training examples.
+5. Applications
+This section investigates new 3D scene understanding
+applications enabled by our approach.
+Since the feature
+vectors estimated for every 3D point are co-embedded with
+text and images, it becomes possible to extract information
+about a scene using arbitrary text and image queries. The
+following are just a few example applications.2
+Open-vocabulary 3D object search. We first investigate
+whether it is possible to query a 3D scene database to find
+examples based on their names – e.g., “find a teddy bear in
+the Matterport3D test set.” To do so, we ask a user to en-
+ter an arbitrary text string as a query, encode the CLIP em-
+bedding vector for the query, and then compute the cosine-
+similarity of that query vector with the features of every 3D
+point in the Matteport3D test set (containing 18 buildings
+with 406 indoor and outdoor regions) to discover the best
+matches.
+In our implementation, we return at most one
+match per region (i.e., room, as defined in the dataset) to
+ensure diversity of the retrieval results.
+Fig. 5 shows a few example top-1 results. Most other
+specific text queries yield nearly perfect results. To evaluate
+that observation quantitatively, we chose a sampling of 10
+raw categories from the ground truth set of Matterport3D,
+retrieved the best matching 3D points from the test set, and
+then visually verified the correctness of the top matches.
+For each query, Table 6 reports the numbers of instances
+in the test set (# Test) along with the number of instances
+found with 100% precision before the first mistake in the
+ranked list. The results are very encouraging. In all of these
+queries, only two ground truth instances were missed (two
+telephones). On the other hand, 26 instances were found
+2Please note that all of these applications are zero-shot – i.e., none of
+them leverage any labeled data from any 3D scene understanding dataset.
+"Teddy Bear"
+"Globe"
+"Toy Giraffe"
+"Yellow Egg-Shaped Vase"
+Figure 5. Open-vocabulary 3D Search. These images show the
+3D point within a database of 3D house models that best matches
+a text query. The inset image shows a zoomed view of the match.
+Class
+#
+#
+#
+#
+#
+Name
+All
+Test
+Found
+Missed
+New
+Fire Extinguisher
+25
+3
+3
+0
+0
+Telephone
+21
+4
+15
+2
+13
+Exit Sign
+15
+5*
+8
+0
+3
+Piano
+15
+1
+2
+0
+1
+Ball
+15
+1*
+4
+0
+3
+Hat
+15
+1*
+1
+0
+0
+Bulletin Board
+6
+0
+1
+0
+1
+Globe
+5
+2
+5
+0
+3
+Teddy Bear
+2
+0
+1
+0
+1
+Toy Giraffe
+1
+1
+1
+0
+0
+Yellow Egg-Shaped Vase
+1
+0
+1
+0
+1
+Table 6. Open-vocabulary 3D Search Results. Each row depicts
+a search of the Matterport3D test set for a class given as a text
+query. The columns list the # of instances in the ground truth for
+the whole dataset (# All), the # in the test set (# Test, counting
+clusters of nearby objects as one when marked with a ’*’), the #
+of top matches found with 100% precision (# Found), the # of GT
+instances missed amongst those top matches (# Missed), and the #
+newly discovered that were not in the GT (# New).
+among these top matches that were not correctly labeled in
+the ground truth, including 13 telephones. Overall, these
+results suggest that our open-vocabulary retrieval applica-
+tion identifies these relatively rare classes at least as well
+as the manually labeling process did. See the supplemental
+material for the full set of results.
+Image-based 3D object detection.
+We next investigate
+whether it is possible to query a 3D scene database to re-
+trieve examples based on similarities to a given input im-
+age – e.g., “find points in a Matterport3D building that
+match this image.” Given a set of query images, we encode
+them with CLIP image encoder, compute cosine-similarities
+to 2D-3D ensemble features for 3D points, and then thresh-
+old to produce a 3D object detection and mask, see Fig. 7.
+Note that the pool table and dining table are identified cor-
+rectly, even though both are types of “tables.”
+Open-vocabulary 3D scene understanding and explo-
+ration.
+Finally, we investigate whether it is possible to
+7
+
+Materials
+Properties
+Activities
+Fireplace
+Oven
+Piano
+Painting
+Oven
+Sink
+Sink
+Window
+Doll
+Doll
+Doll
+Painting
+Cupboard
+Sink
+Tub
+Painting
+Oven
+Fire
+Extinguisher
+Sink
+Tub
+"Comfy"
+"Wet"
+"Hot"
+"Fragile"
+"Artistic"
+"Fabric"
+"Wood"
+"Metal"
+ Porcelain"
+"Glass"
+  "Sleep"
+"Wash"
+"Cook"
+"Dine"
+"Play"
+Figure 6. Open-vocabulary 3D Scene Exploration. Examples of discovering properties, surface materials, and activity sites within a
+scene using open-vocabulary queries. For each example, the query text is listed below (e.g., “Comfy”), and the 3D points are colored based
+on their cosine similarity to the clip embedding for the query text – yellow is highest, green is middle, blue is low, and uncolored is lowest.
+Our Segmentation
+Input 3D Geometry
+Image Queries
+Figure 7. Image-based 3D Object Detection. A 3D scene (bot-
+tom left) can be queried with images from Internet (top) to find
+matching 3D points (bottom right). The colors of the image query
+outlines indicate the corresponding matches in the 3D point cloud.
+All 3 images are under Creative Commons licenses.
+query a 3D scene to understand properties that extend be-
+yond category labels. Since the CLIP embedding space is
+trained with a massive corpus of text, it can represent far
+more than category labels – it can encode physical proper-
+ties, surface materials, human affordances, potential func-
+tions, room types, and so on. We hypothesize that we can
+use the co-embedding our 3D points with the CLIP features
+to discover these types of information about a scene.
+Fig. 6 shows some example results for querying about
+physical properties, surface materials, and potential sites of
+activities. From these examples, we find that the OpenScene
+is indeed able to relate words to relevant areas of the scene
+– e.g., the beds, couches, and stuffed chairs match “Comfy,”
+the oven and fireplace match “Hot,” and the piano keyboard
+matches “Play.” This diversity of 3D scene understanding
+would be difficult to achieve with fully supervised methods
+without massive 3D labeling efforts. In the authors’ opin-
+ion, this is the most interesting result of the paper.
+6. Limitations and Future Work
+This paper introduces a task-agnostic method to co-
+embed 3D points in a feature space with text and im-
+age pixels and demonstrates its utility for zero-shot, open-
+vocabulary 3D scene understanding. It achieves state-of-
+the-art for zero-shot 3D semantic segmentation on standard
+benchmarks, outperforms supervised approaches in 3D se-
+mantic segmentation with many class labels, and enables
+new open-vocabulary applications where arbitrary text and
+image queries can be used to query 3D scenes, all without
+using any labeled 3D data. These results suggest a new di-
+rection for 3D scene understanding, where foundation mod-
+els trained from massive multi-modal datasets guide 3D
+scene understanding systems rather than training them only
+with small labeled 3D datasets.
+There are several limitations of our work and still much
+to do to realize the full potential of the proposed approach.
+First, the inference algorithm could probably take better ad-
+vantage of pixel features when images are present at test
+time using earlier fusion (we tried this with limited success).
+Second, the experiments could be expanded to investigate
+the limits of open-vocabulary 3D scene understanding on a
+wider variety of tasks. We evaluated extensively on closed-
+set 3D semantic segmentation, but provide only qualitative
+results for other tasks since 3D benchmarks with ground
+truth are scarce. In future work, it will be interesting to de-
+sign experiments to quantify the success of open vocabulary
+queries for tasks where ground truth is not available.
+8
+
+Acknowledgement. We sincerely thank Golnaz Ghiasi for
+providing guidance on using OpenSeg model. Our appre-
+ciation extends to Huizhong Chen, Yin Cui, Tom Duerig,
+Dan Gnanapragasam, Xiuye Gu, Leonidas Guibas, Nilesh
+Kulkarni, Abhijit Kundu, Hao-Ning Wu, Louis Yang, Guan-
+dao Yang, Xiaoshuai Zhang, Howard Zhou, and Zihan Zhu
+for helpful discussion. We are also grateful to Charles R. Qi
+and Paul-Edouard Sarlin for their proofreading.
+References
+[1] Jean-Baptiste Alayrac, Jeff Donahue, Pauline Luc, Antoine
+Miech, Iain Barr, Yana Hasson, Karel Lenc, Arthur Mensch,
+Katie Millican, Malcolm Reynolds, et al. Flamingo: a visual
+language model for few-shot learning. In NeurIPS, 2022. 3
+[2] Jens Behley, Martin Garbade, Andres Milioto, Jan Quen-
+zel, Sven Behnke, Cyrill Stachniss, and Jurgen Gall.
+Se-
+mantickitti: A dataset for semantic scene understanding of
+lidar sequences. In ICCV, 2019. 2
+[3] Holger Caesar, Varun Bankiti, Alex H Lang, Sourabh Vora,
+Venice Erin Liong, Qiang Xu, Anush Krishnan, Yu Pan, Gi-
+ancarlo Baldan, and Oscar Beijbom.
+nuscenes: A multi-
+modal dataset for autonomous driving. In CVPR, 2020. 2, 4,
+5, 6
+[4] Angel Chang, Angela Dai, Thomas Funkhouser, Maciej Hal-
+ber, Matthias Niessner, Manolis Savva, Shuran Song, Andy
+Zeng, and Yinda Zhang. Matterport3d: Learning from rgb-d
+data in indoor environments. In 3DV, 2017. 1, 2, 4, 5, 6, 12
+[5] Dave Zhenyu Chen, Angel X Chang, and Matthias Nießner.
+Scanrefer: 3d object localization in rgb-d scans using natural
+language. In ECCV, 2020. 2
+[6] Ali Cheraghian, Shafin Rahman, Dylan Campbell, and Lars
+Petersson.
+Mitigating the hubness problem for zero-shot
+learning of 3d objects. In BMVC, 2019. 3
+[7] Ali Cheraghian, Shafin Rahman, Dylan Campbell, and Lars
+Petersson. Transductive zero-shot learning for 3d point cloud
+classification. In WACV, 2020. 3
+[8] Ali Cheraghian, Shafin Rahman, Townim F Chowdhury, Dy-
+lan Campbell, and Lars Petersson. Zero-shot learning on 3d
+point cloud objects and beyond. IJCV, 2022. 3
+[9] Ali Cheraghian, Shafin Rahman, and Lars Petersson. Zero-
+shot learning of 3d point cloud objects. In MVA, 2019. 3
+[10] Christopher Choy, JunYoung Gwak, and Silvio Savarese. 4d
+spatio-temporal convnets: Minkowski convolutional neural
+networks. In CVPR, 2019. 2, 4, 5, 6
+[11] Angela Dai, Angel X Chang, Manolis Savva, Maciej Hal-
+ber, Thomas Funkhouser, and Matthias Nießner. Scannet:
+Richly-annotated 3d reconstructions of indoor scenes.
+In
+CVPR, 2017. 1, 2, 4, 5, 6, 12
+[12] Angela Dai, Daniel Ritchie, Martin Bokeloh, Scott Reed,
+J¨urgen Sturm, and Matthias Nießner. Scancomplete: Large-
+scale scene completion and semantic segmentation for 3d
+scans. In CVPR, 2018. 5
+[13] Shengheng Deng, Xun Xu, Chaozheng Wu, Ke Chen, and
+Kui Jia. 3d affordancenet: A benchmark for visual object
+affordance understanding. In CVPR, 2021. 2
+[14] Hehe Fan, Xiaojun Chang, Wanyue Zhang, Yi Cheng, Ying
+Sun, and Mohan Kankanhalli. Self-supervised global-local
+structure modeling for point cloud domain adaptation with
+reliable voted pseudo labels. In CVPR, 2022. 12
+[15] Andreas Geiger, Philip Lenz, and Raquel Urtasun. Are we
+ready for autonomous driving? the kitti vision benchmark
+suite. In CVPR, 2012. 2
+[16] Kyle Genova, Xiaoqi Yin, Abhijit Kundu, Caroline Panto-
+faru, Forrester Cole, Avneesh Sud, Brian Brewington, Brian
+Shucker, and Thomas Funkhouser.
+Learning 3d semantic
+segmentation with only 2d image supervision. In 3DV, 2021.
+2
+[17] Golnaz Ghiasi, Xiuye Gu, Yin Cui, and Tsung-Yi Lin. Open-
+vocabulary image segmentation. In ECCV, 2022. 2, 3, 4, 6,
+12
+[18] Xiuye Gu, Tsung-Yi Lin, Weicheng Kuo, and Yin Cui.
+Open-vocabulary object detection via vision and language
+knowledge distillation. In ICLR, 2022. 3
+[19] Huy Ha and Shuran Song.
+Semantic abstraction: Open-
+world 3d scene understanding from 2d vision-language mod-
+els. In CoRL, 2022. 3
+[20] Lei Han, Tian Zheng, Lan Xu, and Lu Fang.
+Occuseg:
+Occupancy-aware 3d instance segmentation. In CVPR, 2020.
+2
+[21] Wenbo Hu, Hengshuang Zhao, Li Jiang, Jiaya Jia, and Tien-
+Tsin Wong. Bidirectional projection network for cross di-
+mension scene understanding. In CVPR, 2021. 2
+[22] Zeyu Hu, Xuyang Bai, Jiaxiang Shang, Runze Zhang, Jiayu
+Dong, Xin Wang, Guangyuan Sun, Hongbo Fu, and Chiew-
+Lan Tai. Vmnet: Voxel-mesh network for geodesic-aware 3d
+semantic segmentation. In ICCV, 2021. 2, 5
+[23] Binh-Son Hua, Quang-Hieu Pham, Duc Thanh Nguyen,
+Minh-Khoi Tran, Lap-Fai Yu, and Sai-Kit Yeung. Scenenn:
+A scene meshes dataset with annotations. In 3DV, 2016. 2
+[24] Jingwei Huang, Haotian Zhang, Li Yi, Thomas Funkhouser,
+Matthias Nießner, and Leonidas J Guibas.
+Texturenet:
+Consistent local parametrizations for learning from high-
+resolution signals on meshes. In CVPR, 2019. 2, 5
+[25] Chao Jia, Yinfei Yang, Ye Xia, Yi-Ting Chen, Zarana Parekh,
+Hieu Pham, Quoc Le, Yun-Hsuan Sung, Zhen Li, and Tom
+Duerig. Scaling up visual and vision-language representation
+learning with noisy text supervision. In ICML, 2021. 3, 12
+[26] Diederik P Kingma and Jimmy Ba. Adam: A method for
+stochastic optimization. In ICLR, 2015. 11
+[27] Abhijit Kundu, Xiaoqi Yin, Alireza Fathi, David Ross, Brian
+Brewington, Thomas Funkhouser, and Caroline Pantofaru.
+Virtual multi-view fusion for 3d semantic segmentation. In
+ECCV, 2020. 2
+[28] Weicheng Kuo, Yin Cui, Xiuye Gu, AJ Piergiovanni, and
+Anelia Angelova. F-vlm: Open-vocabulary object detection
+upon frozen vision and language models. In ICLR, 2023. 3
+[29] John Lambert, Zhuang Liu, Ozan Sener, James Hays, and
+Vladlen Koltun.
+Mseg: A composite dataset for multi-
+domain semantic segmentation. In CVPR, 2020. 5, 6, 11
+[30] Boyi Li, Kilian Q Weinberger, Serge Belongie, Vladlen
+Koltun, and Ren´e Ranftl.
+Language-driven semantic seg-
+mentation. In ICLR, 2022. 2, 3, 4, 6, 12
+9
+
+[31] Jinke Li, Xiao He, Yang Wen, Yuan Gao, Xiaoqiang Cheng,
+and Dan Zhang.
+Panoptic-phnet: Towards real-time and
+high-precision lidar panoptic segmentation via clustering
+pseudo heatmap. In CVPR, 2022. 2
+[32] Xueting Li, Sifei Liu, Kihwan Kim, Xiaolong Wang, Ming-
+Hsuan Yang, and Jan Kautz.
+Putting humans in a scene:
+Learning affordance in 3d indoor environments. In CVPR,
+2019. 2
+[33] Feng Liang, Bichen Wu, Xiaoliang Dai, Kunpeng Li, Yinan
+Zhao, Hang Zhang, Peizhao Zhang, Peter Vajda, and Diana
+Marculescu. Open-vocabulary semantic segmentation with
+mask-adapted clip. In CVPR, 2023. 3
+[34] Yiyi Liao, Jun Xie, and Andreas Geiger. Kitti-360: A novel
+dataset and benchmarks for urban scene understanding in 2d
+and 3d. IEEE TPAMI, 2022. 2
+[35] Bo Liu, Shuang Deng, Qiulei Dong, and Zhanyi Hu.
+Language-level semantics conditioned 3d point cloud seg-
+mentation. arXiv preprint arXiv:2107.00430, 2021. 3
+[36] Yunze Liu, Qingnan Fan, Shanghang Zhang, Hao Dong,
+Thomas Funkhouser, and Li Yi. Contrastive multimodal fu-
+sion with tupleinfonce. In ICCV, 2021. 3
+[37] Chaofan Ma, Yuhuan Yang, Yanfeng Wang, Ya Zhang, and
+Weidi Xie.
+Open-vocabulary semantic segmentation with
+frozen vision-language models. In BMVC, 2022. 3
+[38] John McCormac, Ankur Handa, Andrew Davison, and Ste-
+fan Leutenegger. Semanticfusion: Dense 3d semantic map-
+ping with convolutional neural networks. In ICRA, 2017. 2
+[39] Bj¨orn Michele, Alexandre Boulch, Gilles Puy, Maxime
+Bucher, and Renaud Marlet. Generative zero-shot learning
+for semantic segmentation of 3d point clouds. In 3DV, 2021.
+3, 5, 12
+[40] Alexey Nekrasov, Jonas Schult, Or Litany, Bastian Leibe,
+and Francis Engelmann. Mix3d: Out-of-context data aug-
+mentation for 3d scenes. In 3DV, 2021. 2, 5
+[41] Adam Paszke et al.
+Pytorch: An imperative style, high-
+performance deep learning library. In NeurIPS, 2019. 11
+[42] Charles Ruizhongtai Qi, Li Yi, Hao Su, and Leonidas J
+Guibas. Pointnet++: Deep hierarchical feature learning on
+point sets in a metric space. In NIPS, 2017. 2
+[43] Alec Radford, Jong Wook Kim, Chris Hallacy, Aditya
+Ramesh, Gabriel Goh, Sandhini Agarwal, Girish Sastry,
+Amanda Askell, Pamela Mishkin, Jack Clark, et al. Learn-
+ing transferable visual models from natural language super-
+vision. In ICML, 2021. 1, 3, 4, 12
+[44] Yongming Rao, Wenliang Zhao, Guangyi Chen, Yansong
+Tang, Zheng Zhu, Guan Huang, Jie Zhou, and Jiwen Lu.
+Denseclip: Language-guided dense prediction with context-
+aware prompting. In CVPR, 2022. 2, 3
+[45] Damien Robert, Bruno Vallet, and Loic Landrieu. Learning
+multi-view aggregation in the wild for large-scale 3d seman-
+tic segmentation. In CVPR, 2022. 2
+[46] David Rozenberszki, Or Litany, and Angela Dai. Language-
+grounded indoor 3d semantic segmentation in the wild. In
+ECCV, 2022. 2, 4
+[47] Corentin Sautier, Gilles Puy, Spyros Gidaris, Alexandre
+Boulch, Andrei Bursuc, and Renaud Marlet. Image-to-lidar
+self-supervised distillation for autonomous driving data. In
+CVPR, 2022. 2, 3
+[48] Jonas Schult, Francis Engelmann, Theodora Kontogianni,
+and Bastian Leibe. Dualconvmesh-net: Joint geodesic and
+euclidean convolutions on 3d meshes. In CVPR, 2020. 2, 5
+[49] Nur Muhammad Mahi Shafiullah, Chris Paxton, Lerrel
+Pinto, Soumith Chintala, and Arthur Szlam.
+Clip-fields:
+Weakly supervised semantic fields for robotic memory.
+arXiv preprint arXiv:2210.05663, 2022. 3
+[50] Pei Sun, Henrik Kretzschmar, Xerxes Dotiwalla, Aurelien
+Chouard, Vijaysai Patnaik, Paul Tsui, James Guo, Yin Zhou,
+Yuning Chai, Benjamin Caine, et al. Scalability in perception
+for autonomous driving: Waymo open dataset. In CVPR,
+2020. 2
+[51] Maxim Tatarchenko, Jaesik Park, Vladlen Koltun, and Qian-
+Yi Zhou. Tangent convolutions for dense prediction in 3d. In
+CVPR, 2018. 5
+[52] Laurens Van der Maaten and Geoffrey Hinton. Visualizing
+data using t-sne. JMLR, 2008. 2
+[53] Vibhav Vineet, Ondrej Miksik, Morten Lidegaard, Matthias
+Nießner, Stuart Golodetz, Victor A Prisacariu, Olaf K¨ahler,
+David W Murray, Shahram Izadi, Patrick P´erez, et al. Incre-
+mental dense semantic stereo fusion for large-scale semantic
+scene reconstruction. In ICRA, 2015. 2
+[54] Johanna Wald, Helisa Dhamo, Nassir Navab, and Federico
+Tombari. Learning 3d semantic scene graphs from 3d indoor
+reconstructions. In CVPR, 2020. 13
+[55] Jiashun Wang, Huazhe Xu, Jingwei Xu, Sifei Liu, and Xiao-
+long Wang. Synthesizing long-term 3d human motion and
+interaction in 3d scenes. In CVPR, 2021. 2
+[56] Peng-Shuai Wang, Yang Liu, Yu-Xiao Guo, Chun-Yu Sun,
+and Xin Tong. O-cnn: Octree-based convolutional neural
+networks for 3d shape analysis. ACM TOG, 2017. 2
+[57] Yue Wang, Vitor Campagnolo Guizilini, Tianyuan Zhang,
+Yilun Wang, Hang Zhao, and Justin Solomon.
+Detr3d:
+3d object detection from multi-view images via 3d-to-2d
+queries. In CoRL, 2022. 2
+[58] Zhirong Wu, Shuran Song, Aditya Khosla, Fisher Yu, Lin-
+guang Zhang, Xiaoou Tang, and Jianxiong Xiao.
+3d
+shapenets: A deep representation for volumetric shapes. In
+CVPR, 2015. 2
+[59] Jiarui Xu, Shalini De Mello, Sifei Liu, Wonmin Byeon,
+Thomas Breuel, Jan Kautz, and Xiaolong Wang. Groupvit:
+Semantic segmentation emerges from text supervision. In
+CVPR, 2022. 2, 3
+[60] Dongqiangzi Ye, Zixiang Zhou, Weijia Chen, Yufei Xie, Yu
+Wang, Panqu Wang, and Hassan Foroosh.
+Lidarmultinet:
+Towards a unified multi-task network for lidar perception.
+arXiv preprint arXiv:2209.09385, 2022. 5
+[61] Nir Zabari and Yedid Hoshen. Open-vocabulary semantic
+segmentation using test-time distillation. In ECCVW, 2022.
+2, 3
+[62] Renrui Zhang, Ziyu Guo, Wei Zhang, Kunchang Li, Xu-
+peng Miao, Bin Cui, Yu Qiao, Peng Gao, and Hongsheng
+Li. Pointclip: Point cloud understanding by clip. In CVPR,
+2022. 3
+[63] Chong Zhou, Chen Change Loy, and Bo Dai. Extract free
+dense labels from clip. In ECCV, 2022. 2, 3
+10
+
+OpenScene: 3D Scene Understanding with Open Vocabularies
+—Supplementary Material—
+Songyou Peng1,2,3
+Kyle Genova1
+Chiyu “Max” Jiang4
+Andrea Tagliasacchi1,5
+Marc Pollefeys2
+Thomas Funkhouser1
+1 Google Research
+2 ETH Zurich
+3 MPI for Intelligent Systems, T¨ubingen
+4 Waymo LLC
+5 Simon Fraser University
+pengsongyou.github.io/openscene
+In this supplementary document, we first provide im-
+plementation details in Sec. A. Next, we supply addi-
+tional investigation of our methods in Sec. B. Full results
+of open-vocabulary object retrieval experiments are shown
+in Sec. C. More results of open-vocabulary scene explo-
+ration results can be found in Sec. D.
+A. Implementation Details
+3D Distillation.
+We implement our pipeline in Py-
+Torch [41]. To distill E3D, we use Adam [26] as the op-
+timizer with an initial learning rate of 1e−4 and train for
+100 epochs. For MinkowskiNet we use a voxel size of 2cm
+for ScanNet and Matterport3D experiments, and 5cm for
+nuScenes. For indoor datasets, we input all points of a scene
+to the 3D backbone to have the full contexts, but for the dis-
+tillation loss (Eq. 2) in the paper we only supervise with
+20K uniformly sampled point features at every iteration due
+to the memory constraints. For nuScenes, we input all Lidar
+points within the half-second segments, and only train with
+point features at the last time stamp. We use a batch size
+of 8 for ScanNet and Matterport3D with a single NVIDIA
+A100 (40G). For nuScenes, we use a batch size of 16 with 4
+A100 GPUs. It takes around 24 hours to train, and 0.1 sec-
+onds for inference. Moreover, for all dataset we only take in
+the 3D point position as input to the MinkowskiNet during
+distillation.
+More Details of Feature Fusion. For Matterport3D and
+nuScenes, we use all images of each scene for fusion, while
+for ScanNet, we sample 1 out of every 20 video frames.
+As for the occlusion test, for dataset like ScanNet and
+Matterport3D where the depth map is provided for each
+RGB image, we do occlusion test to guarantee that a pixel
+is only paired with a visible surface point. For every surface
+point, we first find its corresponding pixel in an image, and
+we can obtain the distance between that pixel and 3D point.
+The 3D points and pixel are only paired when the differ-
+ence between the distance and the depth value of that pixel
+is smaller than a threshold σ. The threshold σ is propor-
+tional to the depth value D. We use σ = 0.2D for ScanNet
+due to the highly noisy depths and σ = 0.02D for Matter-
+port. For pixels with “invalid” regions of the depth map, we
+do not project their features to 3D points.
+For nuScenes Lidar points, since no depth images are
+provided, no occlusion test is conducted, and we only
+use the synchronized images and the corresponding Lidar
+points on the last timestamp of a 0.5 second segment.
+Our nuScenes Evaluation. Unlike ScanNet and Matter-
+port where each 3D surface point usually having multi-
+ple corresponding images, in nuScenes most Lidar points
+only have one corresponding view, maximum two views at
+the same time stamp. Therefore, we directly project the
+single pixel feature to most Lidar points, and use average
+pooling when there are 2 views. There are 16 classes in
+the nuScenes lidarseg benchmark, and some of these class
+names are ambiguous. Since our method can take in arbi-
+trary text prompts, we can pre-define some non-ambiguous
+classes names for each class, and then map the predictions
+from these non-ambiguous classes back to the 16 classes.
+The pre-defined classes names are listed in Table A.
+MSeg [29] Voting. MSeg supports a unified taxonomy of
+194 classes. We use their official image semantic segmen-
+tation code1 and their pretrained MSeg-3m-1080p model.
+MSeg already provided the mapping from some of 194
+classes to 20 ScanNet classes, so we directly use the map-
+ping. For Matterport3D, we simply add the mapping from
+“ceiling” in the MSeg labelset. As for nuScenes, we man-
+ually define the mapping from MSeg to nuScenes 16 la-
+belsets. However, for the “construction vehicles”, “traffic
+cone”, and ’other flat’, there is no mapping at all, so we set
+them to unknown.
+As for the majority voting for MSeg multi-view predic-
+tions, what we do is the following. Given a surface point
+and its corresponding multi-view MSeg semantic segmen-
+1https://github.com/mseg-dataset/mseg-semantic
+11
+
+nuScenes 16 labels
+Our pre-defined labels
+barrier
+barrier, barricade
+bicycle
+bicycle
+bus
+bus
+car
+car
+construction vehicle
+bulldozer,
+excavator,
+concrete
+mixer, crane, dump truck
+motorcycle
+motorcycle
+pedestrian
+pedestrian, person
+traffic cone
+traffic cone
+trailer
+trailer,
+semi trailer,
+cargo con-
+tainer, shipping container, freight
+container
+truck
+truck
+driveable surface
+road
+other flat
+curb, traffic island, traffic median
+sidewalk
+sidewalk
+terrain
+grass, grassland, lawn, meadow,
+turf, sod
+manmade
+building, wall, pole, awning
+vegetation
+tree, trunk, tree trunk, bush, shrub,
+plant, flower, woods
+Table A. Label Mappings for nuScenes 16 Classes. Here we list
+the total 43 pre-defined non-ambiguous class names corresponding
+to the 16 nuScenes classes.
+3D-only model
+2D-3D ensemble model
+Evaluation Datasets
+ScanNet20 Matterport40 ScanNet20 Matterport40
+mIoU (%)
+mAcc (%)
+mIoU (%)
+mAcc (%)
+Distill w/ ScanNet images
+46.1
+37.6
+47.7
+46.4
+Distill w/ Matterport images
+38.0
+47.1
+47.1
+50.9
+Table B. Domain Transfer with Open Vocabularies.. These re-
+sults show that it is possible to apply our models trained on Scan-
+Net [11] to a novel 3D semantic segmentation task with a different
+labelset in Matterport3D [4], and vice versa. Since our trained
+models are task-agnostic (they predict only CLIP features), they
+can be applied to arbitrary label sets without retraining.
+tation, we take the class in the majority of views as the vot-
+ing results for this point. If there are two classes and only
+two views, we directly flip the coin to decide point labels.
+Simple Prompt Engineering. Given a set of text prompts,
+we use a simple prompt engineering trick before extract
+CLIP text features. For each object class “XX” (except for
+“other”) we modify the text prompts to “a XX in a scene”,
+for instance “a chair in a scene”. With such a simple modifi-
+cation, we observe +2.3 mIoU performance boost with our
+LSeg ensemble model for ScanNet evaluation. We apply
+the trick for all our benchmark comparison experiments.
+B. Additional Analysis
+Can we transfer to another dataset with different la-
+belsets?
+Here we investigate the ability of our trained
+models to handle domain transfer between 3D segmentation
+benchmarks with different labelsets. We train on one dataset
+(e.g., ScanNet20) and then test on another (e.g., Matter-
+Random
+Median
+Mean
+mIoU
+38.2
+40.1
+41.4
+mAcc
+60.1
+62.2
+63.6
+Table C. Ablation on Multi-view Fusion Strategy. We report
+mIoU and mAcc on ScanNet [11] with our OpenSeg feature fu-
+sion.
+port40) without any retraining (Table B). Since our trained
+model is task agnostic (it predicts only CLIP features), it
+does not over-fit to the classes of the training set, and thus
+can transfer to other datasets with different classes directly.
+Doing the same using a fully-supervised approach would re-
+quire a sophisticated domain-transfer algorithm (e.g., [14]).
+Ablation on multi-view fusion strategy. We ablate differ-
+ent multi-view feature fusion strategies in Table C. Random
+means that having multiple features corresponding to one
+surface point, we randomly assign one feature to the 3D
+point. For Median, we take the feature that has the smallest
+Euclidean distance in the feature space to all other features.
+As can be seen, the simple average pooling yields the best
+results, and we use it for all our experiments.
+Visualization of our 2D-3D ensemble model. In Fig. A
+we study our ensemble model on how to select 2D and 3D
+features for prediction on a Matterport3D house based on
+different labelsets.
+First, we can notice that our ensem-
+ble model uses 3D features for those large areas like floors
+and walls, while 2D features are preferrable for smaller ob-
+jects. Second, when comparing the feature selections us-
+ing 21 and 160 classes, we can see that when the number
+of classes increases, our ensemble model selects more 2D
+features for the segmentation. The possible reason is that
+2D image features can better understand those fine-grained
+concept than purely from 3D point clouds. For example,
+on the bottom-right there is a pool table there. When using
+21 class labels, it is segmented as a table, so 3D features
+are preferrable. When using 160 class labels for 2D-3D en-
+semble, it is much easier to understand the concept of “pool
+table” using 2D images than 3D point clouds.
+Definition of Zero-Shot Learning (ZSL). The terminol-
+ogy for ZSL is ambiguous in the literature.
+In a theo-
+retical ZSL system, there should be no training data of
+any kind from seen classes.
+However, almost all real-
+world ZSL systems utilize general-purpose feature extrac-
+tors pretrained for proxy tasks on large datasets. For exam-
+ple, 3DGenZ [39] proposes a ZSL variant utilizing image
+features pretrained on ImageNet (see section 4.5 in their
+paper), while OpenSeg [17], LSeg [30], CLIP [43], and
+ALIGN [25] propose ZSL methods trained on alt-text, as
+we also do. The authors of those papers all describe their
+methods as ZSL. We followed the same terminology as the
+latter one.
+12
+
+C. Full Results of Open-vocabulary Object Re-
+trieval
+This section details the experiments in the main paper
+on open-vocabulary search in a 3D scenes database (Figure
+4, Table 6). We employed our 2D-3D ensemble method to
+produce features for the Matterport3D test set’s mesh ver-
+tices, using NYU160 as the labelset for ensembling. For
+each given search query, the vertices were sorted by cosine
+similarity to the CLIP text query embedding, resulting in a
+ranked retrieval list with one match per region.
+When selecting the queries to use in the experiment, we
+limited our selections to raw category names provided with
+the ground truth of the dataset. This allows us to reason
+about how many examples exist in the test set so that we can
+know how many matches to expect. Among those candidate
+queries, we used two strategies to select ones to test: 1) we
+chose several of the most specific categories (e.g., “yellow
+egg-shaped vase”) in order to test the method on the most
+difficult cases, and 2) we chose all raw categories with 15
+ground truth examples in the entire Matterport3D dataset
+that had clear definitions (which excepted “lounge chair,”
+“side table,” and “office table”) in order to avoid bias in the
+selection of queries (i.e., no cherry-picking).
+Figures B-E display ranked retrieval lists, with the best
+match first and expected matches in parentheses.
+A red
+wireframe sphere highlights the top match.
+Green/red-
+bordered images show correct/incorrect matches, with in-
+correct ones ranked lower than the last ground truth in-
+stance. Gray-bordered images demonstrate near misses, not
+expected as matches due to their rank exceeding labeled
+ground truth examples.
+We can see that the algorithm is able to retrieve very spe-
+cific objects from the database with great precision. For
+example, when queried with “yellow egg-shaped vase,” its
+top match is indeed a match (which was not labeled in the
+ground truth), and the following retrieval results are tan
+vase, a pumpkin, and a white egg-shaped vase with gold
+decorations.
+Similarly, when queried with “teddy bear,”
+it retrieves two teddy bears (neither labeled in the ground
+truth), a stuffed monkey, and a stuffed lion among the top
+four matches. Among all the queries in all of the exper-
+iments, The only false positive occurred with “telephone”
+where a bowl of stones ranked 15th, while two ground truth
+instances ranked 25th and 29th. In this case, 29 of the top
+30 matches were correct (20 are shown in Figure D).
+These results suggest that the open-vocabulary features
+computed with our 2D-3D ensemble algorithm are very ef-
+fective at retrieving object types with specific names. Fur-
+ther experiments are required to understand the limitations.
+mIoU
+mAcc
+MinkowskiNet (Fully supervised)
+23.5
+30.6
+Ours - 2D Fusion
+18.6
+31.9
+Ours - 3D Model distilled on ScanNet
+15.3
+26.4
+Ours - 2D-3D Ensemble
+20.1
+35.6
+wooden
+padded
+glass
+metal
+ceramic cardboard
+plastic
+carpet
+stone
+concrete
+0
+20
+40
+60
+80
+mAcc (%)
+95.2
+94.4
+85.9
+26.9
+3.3
+0.0
+0.0
+0.0
+0.0
+0.0
+67.2
+58.2
+76.2
+8.8
+24.3
+68.5
+19.6
+19.2
+0.1
+14.2
+Fully supervised
+Ours - 2D-3D Ensemble
+Table D. Comparison on 3DSSG [54] in Material Estimation.
+We report the average of 10 material classes in test set. Classes are
+sorted left-to-right by the number of training examples.
+D. More Results of Open-vocabulary 3D Scene
+Exploration
+The main paper demonstrates that open-vocabulary
+queries can be used to explore the content of 3D scenes via
+text queries (Figures 1 and 6 of the main paper). This sec-
+tion provides more examples demonstrating the power of
+open-vocabulary exploration. Please see the supplemental
+video for a live demo.
+For each query, the user types a text string (e.g., “glass”),
+it gets encoded with the pre-trained CLIP text encoder, we
+compute the cosine similarity with features we’ve computed
+for every 3D vertex, and then color the vertices by similarity
+(yellow is high, green is middle, blue is low).
+Figures F-K show results for a broad range of queries, in-
+cluding ones that describe object categories in Fig. F, room
+types in Fig. G, activities in Fig. H, colors in Fig. I, materi-
+als in Fig. J, and abstract concepts in Fig. K.
+Please note the power of using language models learned
+via CLIP to reason about scene attributes and abstract con-
+cepts that would be difficult to label in a supervised setting.
+For example, searching for “store” highlights 3D points
+mainly on closets and cabinets (middle-right of Fig. H), and
+searching for “cluttered” yields points in a particularly busy
+closet (top-right of Fig. K). These examples demonstrate the
+power of the proposed approach for scene understanding,
+which goes far beyond semantic segmentation.
+Quantitative results on 3DSSG dataset [54]. To evaluate
+3D scene exploration performance, we conduct an experi-
+ment on the 3DSSG dataset that has annotations in object-
+level material estimation. In Table D, we compare mate-
+rial class predictions for the 3DSSG test set using variants
+of our approach trained on ScanNet and a fully-supervised
+MinkowskiNet. Findings align with the paper: 1) 2D-3D
+ensembling is our best variant, 2) it underperforms fully-
+supervised methods for classes with abundant examples,
+and 3) it excels for classes with fewer examples.
+13
+
+Input 3D Geometry
+160-class label sets
+Our top 21-class semantic segmentation results
+2D-3D features selected for 21-class segmentation
+Our top 160-class semantic segmentation results
+2D-3D features selected for 160-class segmentation
+Figure A. Study of Our 2D-3D Ensemble Model. We show semantic segmentation results and the feature selection of our ensemble
+model on a Matterport3D house. We show the comparison between the 21-class and 160-class prediction. As can be seen, when the
+number of classes increases, our ensemble model selects more 2D features for the segmentation. The reason can be that, when involving
+more fine-grained or long-tailed classes, 2D image features can better understand those fine-grained concept than purely from 3D point
+clouds. Points using 2D features for final segmentation are marked as red, while points with 3D features are marked as blue.
+14
+
+"yellow egg-
+shaped vase" 
+(0)
+ 
+ 
+"toy giraffe" 
+(1)
+ 
+ 
+"teddy bear" 
+(0)
+ 
+ 
+"piano" 
+(1)
+ 
+ 
+"globe" 
+(2)
+ 
+ 
+Figure B. Example object retrieval results (page 1 of 4). The query text is in the left column, with the number of ground truth instances
+in the Matterport test set listed in parentheses below. The images show top matching 3D points in the Matterport test set ranked from left to
+right (note the red wireframe sphere around the matching point in each image). Correct matches are marked with green borders. The one
+incorrect match is marked with a red border (in page 3 of 4). Others marked with gray borders are not wrong (since there are no further
+objects matching the query according to the ground truth), but are shown as examples of near matches.
+15
+
+"fire
+extinguisher" 
+(3)
+ 
+ 
+"exit sign" 
+(5)
+ 
+ 
+"antique
+telephone" 
+(4)
+Figure C. Example object retrieval results (page 2 of 4). See caption of Figure B for details.
+16
+
+ 
+ 
+"hat" 
+(1)
+ 
+ 
+"chest of
+drawers"
+Figure D. Example object retrieval results (page 3 of 4). See caption of Figure B for details.
+17
+
+ 
+ 
+"bulletin board" 
+(0)
+ 
+ 
+"ball" 
+(1)
+Figure E. Example object retrieval results (page 4 of 4). See caption of Figure B for details.
+18
+
+Input 3D Geometry
+“bed”
+“chair”
+“table”
+“lamp”
+“plant”
+Figure F. Open-Vocabulary Queries for Common Object Types.
+19
+
+Input 3D Geometry
+“bathroom”
+“bedroom”
+“dining room”
+“kitchen”
+“living room”
+Figure G. Open-Vocabulary Queries for Room Types.
+20
+
+Input 3D Geometry
+“cook”
+“dine”
+“store”
+“wash”
+“sleep”
+Figure H. Open-Vocabulary Queries for Activity Sites.
+21
+
+Input 3D Geometry
+“black”
+“brown”
+“white”
+“orange”
+“red”
+Figure I. Open-Vocabulary Queries for Colors.
+22
+
+Input 3D Geometry
+“fabric”
+“metal”
+“wood”
+Figure J. Open-Vocabulary Queries for Materials.
+23
+
+Input 3D Geometry
+“cluttered”
+“outdoor”
+“open”
+“fire”
+“water”
+Figure K. Open-Vocabulary Queries for Abstract Concepts.
+24

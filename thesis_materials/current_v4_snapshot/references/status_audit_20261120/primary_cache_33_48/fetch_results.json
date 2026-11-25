@@ -1,0 +1,320 @@
+[
+  {
+    "number": 33,
+    "doi": "10.1109/ICIP.2016.7533003",
+    "url": "https://api.crossref.org/works/10.1109/ICIP.2016.7533003",
+    "title": [
+      "Simple online and realtime tracking"
+    ],
+    "venue": [
+      "2016 IEEE International Conference on Image Processing (ICIP)"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2016,
+          9
+        ]
+      ]
+    },
+    "print": {
+      "date-parts": [
+        [
+          2016,
+          9
+        ]
+      ]
+    },
+    "online": null,
+    "page": "3464-3468",
+    "volume": null,
+    "issue": null,
+    "type": "proceedings-article"
+  },
+  {
+    "number": 34,
+    "doi": "10.1109/ICIP.2017.8296962",
+    "url": "https://api.crossref.org/works/10.1109/ICIP.2017.8296962",
+    "title": [
+      "Simple online and realtime tracking with a deep association metric"
+    ],
+    "venue": [
+      "2017 IEEE International Conference on Image Processing (ICIP)"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2017,
+          9
+        ]
+      ]
+    },
+    "print": {
+      "date-parts": [
+        [
+          2017,
+          9
+        ]
+      ]
+    },
+    "online": null,
+    "page": "3645-3649",
+    "volume": null,
+    "issue": null,
+    "type": "proceedings-article"
+  },
+  {
+    "number": 35,
+    "url": "https://api.crossref.org/works/10.1007/978-3-031-20047-2_1",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "number": 37,
+    "doi": "10.1007/978-3-319-48881-3_2",
+    "url": "https://api.crossref.org/works/10.1007/978-3-319-48881-3_2",
+    "title": [
+      "Performance Measures and a Data Set for Multi-target, Multi-camera Tracking"
+    ],
+    "venue": [
+      "Lecture Notes in Computer Science",
+      "Computer Vision – ECCV 2016 Workshops"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2016
+        ]
+      ]
+    },
+    "print": {
+      "date-parts": [
+        [
+          2016
+        ]
+      ]
+    },
+    "online": {
+      "date-parts": [
+        [
+          2016,
+          11,
+          3
+        ]
+      ]
+    },
+    "page": "17-35",
+    "volume": null,
+    "issue": null,
+    "type": "book-chapter"
+  },
+  {
+    "number": 38,
+    "doi": "10.1007/s11263-020-01375-2",
+    "url": "https://api.crossref.org/works/10.1007/s11263-020-01375-2",
+    "title": [
+      "HOTA: A Higher Order Metric for Evaluating Multi-object Tracking"
+    ],
+    "venue": [
+      "International Journal of Computer Vision"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2020,
+          10,
+          8
+        ]
+      ]
+    },
+    "print": {
+      "date-parts": [
+        [
+          2021,
+          2
+        ]
+      ]
+    },
+    "online": {
+      "date-parts": [
+        [
+          2020,
+          10,
+          8
+        ]
+      ]
+    },
+    "page": "548-578",
+    "volume": "129",
+    "issue": "2",
+    "type": "journal-article"
+  },
+  {
+    "number": 40,
+    "url": "https://api.crossref.org/works/10.15607/RSS.2022.XVIII.050",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "number": 42,
+    "doi": "10.15607/RSS.2024.XX.077",
+    "url": "https://api.crossref.org/works/10.15607/RSS.2024.XX.077",
+    "title": [
+      "Hierarchical Open-Vocabulary 3D Scene Graphs for Language-Grounded Robot Navigation"
+    ],
+    "venue": [
+      "Robotics: Science and Systems XX"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          15
+        ]
+      ]
+    },
+    "print": null,
+    "online": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          15
+        ]
+      ]
+    },
+    "page": null,
+    "volume": null,
+    "issue": null,
+    "type": "proceedings-article"
+  },
+  {
+    "number": 43,
+    "doi": "10.1109/LRA.2025.3547643",
+    "url": "https://api.crossref.org/works/10.1109/LRA.2025.3547643",
+    "title": [
+      "Dynamic Open-Vocabulary 3D Scene Graphs for Long-Term Language-Guided Mobile Manipulation"
+    ],
+    "venue": [
+      "IEEE Robotics and Automation Letters"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2025,
+          5
+        ]
+      ]
+    },
+    "print": {
+      "date-parts": [
+        [
+          2025,
+          5
+        ]
+      ]
+    },
+    "online": null,
+    "page": "4252-4259",
+    "volume": "10",
+    "issue": "5",
+    "type": "journal-article"
+  },
+  {
+    "number": 44,
+    "doi": "10.1109/IROS60139.2025.11245861",
+    "url": "https://api.crossref.org/works/10.1109/IROS60139.2025.11245861",
+    "title": [
+      "Collaborative Dynamic 3D Scene Graphs for Open-Vocabulary Urban Scene Understanding"
+    ],
+    "venue": [
+      "2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2025,
+          10,
+          19
+        ]
+      ]
+    },
+    "print": {
+      "date-parts": [
+        [
+          2025,
+          10,
+          19
+        ]
+      ]
+    },
+    "online": null,
+    "page": "6000-6007",
+    "volume": null,
+    "issue": null,
+    "type": "proceedings-article"
+  },
+  {
+    "number": 47,
+    "doi": "10.52202/079017-0171",
+    "url": "https://api.crossref.org/works/10.52202/079017-0171",
+    "title": [
+      "SG-Nav: Online 3D Scene Graph Prompting for LLM-based Zero-shot Object Navigation"
+    ],
+    "venue": [
+      "Advances in Neural Information Processing Systems 37"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2024
+        ]
+      ]
+    },
+    "print": {
+      "date-parts": [
+        [
+          2024
+        ]
+      ]
+    },
+    "online": null,
+    "page": "5285-5307",
+    "volume": null,
+    "issue": null,
+    "type": "proceedings-article"
+  },
+  {
+    "number": 48,
+    "doi": "10.1109/ICRA48891.2023.10160969",
+    "url": "https://api.crossref.org/works/10.1109/ICRA48891.2023.10160969",
+    "title": [
+      "Visual Language Maps for Robot Navigation"
+    ],
+    "venue": [
+      "2023 IEEE International Conference on Robotics and Automation (ICRA)"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2023,
+          5,
+          29
+        ]
+      ]
+    },
+    "print": {
+      "date-parts": [
+        [
+          2023,
+          5,
+          29
+        ]
+      ]
+    },
+    "online": null,
+    "page": "10608-10615",
+    "volume": null,
+    "issue": null,
+    "type": "proceedings-article"
+  }
+]

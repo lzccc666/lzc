@@ -1,0 +1,478 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          19
+        ]
+      ],
+      "date-time": "2026-11-19T23:03:59Z",
+      "timestamp": 1795129439342,
+      "version": "4.10.3"
+    },
+    "reference-count": 42,
+    "publisher": "SAGE Publications",
+    "issue": "5",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2010,
+              1,
+              25
+            ]
+          ],
+          "date-time": "2010-01-25T00:00:00Z",
+          "timestamp": 1264377600000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://journals.sagepub.com/page/policies/text-and-data-mining-license"
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "The International Journal of Robotics Research"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2010,
+          4
+        ]
+      ]
+    },
+    "abstract": "<jats:p>We describe a practical path-planning algorithm for an autonomous vehicle operating in an unknown semi-structured (or unstructured) environment, where obstacles are detected online by the robot’s sensors. This work was motivated by and experimentally validated in the 2007 DARPA Urban Challenge, where robotic vehicles had to autonomously navigate parking lots. The core of our approach to path planning consists of two phases. The first phase uses a variant of A* search (applied to the 3D kinematic state space of the vehicle) to obtain a kinematically feasible trajectory. The second phase then improves the quality of the solution via numeric non-linear optimization, leading to a local (and frequently global) optimum. Further, we extend our algorithm to use prior topological knowledge of the environment to guide path planning, leading to faster search and final trajectories better suited to the structure of the environment. We present experimental results from the DARPA Urban Challenge, where our robot demonstrated near-flawless performance in complex general path-planning tasks such as navigating parking lots and executing U-turns on blocked roads. We also present results on autonomous navigation of real parking lots. In those latter tasks, which are significantly more complex than the ones in the DARPA Urban Challenge, the time of a full replanning cycle of our planner is in the range of 50—300 ms.</jats:p>",
+    "DOI": "10.1177/0278364909359210",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2010,
+          1,
+          25
+        ]
+      ],
+      "date-time": "2010-01-25T20:56:15Z",
+      "timestamp": 1264452975000
+    },
+    "page": "485-501",
+    "source": "Crossref",
+    "is-referenced-by-count": 934,
+    "title": [
+      "Path Planning for Autonomous Vehicles in Unknown Semi-structured Environments"
+    ],
+    "prefix": "10.1177",
+    "volume": "29",
+    "author": [
+      {
+        "given": "Dmitri",
+        "family": "Dolgov",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "AI & Robotics Group, Toyota Research Institute, Ann Arbor, MI 48105, USA,"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Sebastian",
+        "family": "Thrun",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Stanford Artificial Intelligence Laboratory, Stanford University, Stanford CA 94305, USA,"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Michael",
+        "family": "Montemerlo",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Stanford Artificial Intelligence Laboratory, Stanford University, Stanford CA 94305, USA,"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "James",
+        "family": "Diebel",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Stanford Artificial Intelligence Laboratory, Stanford University, Stanford CA 94305, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "179",
+    "published-online": {
+      "date-parts": [
+        [
+          2010,
+          1,
+          25
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "atypb1",
+        "unstructured": "Andrews, J. and Hogan, N. ( 1983). Impedance control as a framework for implementing obstacle avoidance in a manipulator. Control of Manufacturing Processes and Robotic Systems, Boston: ASME: pp. 243-251."
+      },
+      {
+        "key": "atypb2",
+        "first-page": "704",
+        "author": "Bekris, K.E.",
+        "year": "2007",
+        "journal-title": "International Conference on Robotics and Automation"
+      },
+      {
+        "key": "atypb3",
+        "volume-title": "The 2005 DARPA Grand Challenge: The Great Robot Race",
+        "author": "Buehler, M.",
+        "year": "2005"
+      },
+      {
+        "issue": "8",
+        "key": "atypb4",
+        "doi-asserted-by": "crossref",
+        "first-page": "423",
+        "DOI": "10.1002/rob.20257",
+        "volume": "25",
+        "year": "2008",
+        "journal-title": "Journal of Field Robotics"
+      },
+      {
+        "issue": "9",
+        "key": "atypb5",
+        "doi-asserted-by": "crossref",
+        "first-page": "567",
+        "DOI": "10.1002/rob.20259",
+        "volume": "25",
+        "year": "2008",
+        "journal-title": "Journal of Field Robotics"
+      },
+      {
+        "key": "atypb6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/02783640022066770"
+      },
+      {
+        "key": "atypb7",
+        "volume-title": "Principles of Robot Motion: Theory, Algorithms, and Implementations",
+        "author": "Choset, H.",
+        "year": "2005"
+      },
+      {
+        "key": "atypb8",
+        "volume-title": "IEEE International Conference on Robotics and Automation (ICRA)",
+        "author": "Connolly, C."
+      },
+      {
+        "key": "atypb9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/rob.20135"
+      },
+      {
+        "key": "atypb10",
+        "volume-title": "Proceedings of the 2009 IEEE International Conference on Robotics and Automation (ICRA-09)",
+        "author": "Dolgov, D."
+      },
+      {
+        "key": "atypb11",
+        "volume-title": "Proceedings of the First International Symposium on Search Techniques in Artificial Intelligence and Robotics (STAIR-08)",
+        "author": "Dolgov, D."
+      },
+      {
+        "key": "atypb12",
+        "volume-title": "IEEE International Conference on Intelligent Robots and Systems (IROS)",
+        "author": "Ersson, T."
+      },
+      {
+        "key": "atypb13",
+        "volume-title": "Proceedings of the International Symposium on Robotics Research (ISRR)",
+        "author": "Ferguson, D."
+      },
+      {
+        "key": "atypb14",
+        "volume-title": "Proceedings of the IEEE International Conference on Robotics and Automation",
+        "author": "Fraichard, T."
+      },
+      {
+        "key": "atypb15",
+        "volume-title": "Proceedings of the IEEE International Conference on Advanced Robotics",
+        "author": "Fraichard, T."
+      },
+      {
+        "key": "atypb16",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSSC.1968.300136"
+      },
+      {
+        "key": "atypb17",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1056777.1056779"
+      },
+      {
+        "key": "atypb18",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/rob.20252"
+      },
+      {
+        "key": "atypb19",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/70.508439"
+      },
+      {
+        "key": "atypb20",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/027836498600500106"
+      },
+      {
+        "key": "atypb21",
+        "volume-title": "IEEE International Conference on Robotics and Automation (ICRA)",
+        "author": "Koditschek, D.E."
+      },
+      {
+        "key": "atypb22",
+        "volume-title": "IEEE International Conference on Robotics and Automation (ICRA)",
+        "author": "Koenig, S."
+      },
+      {
+        "key": "atypb23",
+        "volume-title": "IEEE International Conference on Robotics and Automation (ICRA)",
+        "author": "Koren, Y."
+      },
+      {
+        "key": "atypb24",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/70.954762"
+      },
+      {
+        "key": "atypb25",
+        "first-page": "1",
+        "author": "Laumond, J.-P.",
+        "year": "1998",
+        "journal-title": "Robot Motion Planning and Control"
+      },
+      {
+        "key": "atypb26",
+        "volume-title": "Rapidly-exploring random trees: a new tool for path planning",
+        "author": "LaValle, S.",
+        "year": "1998"
+      },
+      {
+        "key": "atypb27",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1017/CBO9780511546877"
+      },
+      {
+        "key": "atypb28",
+        "volume-title": "Proceedings of Robotics: Science and Systems IV",
+        "author": "Likhachev, M."
+      },
+      {
+        "key": "atypb29",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/rob.20253"
+      },
+      {
+        "issue": "1",
+        "key": "atypb30",
+        "first-page": "53",
+        "volume": "2",
+        "author": "Miyazaki, F.",
+        "year": "1985",
+        "journal-title": "Journal of Robotic Systems"
+      },
+      {
+        "key": "atypb31",
+        "volume-title": "Proceedings of the AAAI Conference on Artificial Intelligence (AAAI)",
+        "author": "Nash, A."
+      },
+      {
+        "issue": "6",
+        "key": "atypb32",
+        "first-page": "45",
+        "volume": "17",
+        "author": "Pavlov, V.",
+        "year": "1984",
+        "journal-title": "Soviet Automatic Control"
+      },
+      {
+        "key": "atypb33",
+        "author": "Pivtoraiko, M.",
+        "year": "2007",
+        "journal-title": "Technical Report"
+      },
+      {
+        "key": "atypb34",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.15607/RSS.2007.III.040"
+      },
+      {
+        "key": "atypb35",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.2140/pjm.1990.145.367"
+      },
+      {
+        "key": "atypb36",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/70.163777"
+      },
+      {
+        "key": "atypb37",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/321356.321357"
+      },
+      {
+        "key": "atypb38",
+        "volume-title": "Proceedings of the IEEE-RSJ International Conference on Intelligent Robots and Systems",
+        "author": "Scheuer, A."
+      },
+      {
+        "key": "atypb39",
+        "volume-title": "Proceedings of International Joint Conference on Artificial Intelligence (IJCAI-09)",
+        "author": "Seo, Y.-W."
+      },
+      {
+        "key": "atypb40",
+        "volume-title": "Proceedings of the International Joint Conference on Artificial Intelligence",
+        "author": "Stentz, A."
+      },
+      {
+        "key": "atypb41",
+        "volume-title": "IEEE International Conference on Robotics and Automation",
+        "author": "Tilove, R."
+      },
+      {
+        "key": "atypb42",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/rob.20255"
+      }
+    ],
+    "container-title": [
+      "The International Journal of Robotics Research"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://journals.sagepub.com/doi/pdf/10.1177/0278364909359210",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://journals.sagepub.com/doi/pdf/10.1177/0278364909359210",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          29
+        ]
+      ],
+      "date-time": "2026-04-29T10:17:00Z",
+      "timestamp": 1777457820000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://journals.sagepub.com/doi/10.1177/0278364909359210"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2010,
+          1,
+          25
+        ]
+      ]
+    },
+    "references-count": 42,
+    "journal-issue": {
+      "issue": "5",
+      "published-print": {
+        "date-parts": [
+          [
+            2010,
+            4
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "10.1177/0278364909359210"
+    ],
+    "URL": "https://doi.org/10.1177/0278364909359210",
+    "relation": {},
+    "ISSN": [
+      "0278-3649",
+      "1741-3176"
+    ],
+    "issn-type": [
+      {
+        "value": "0278-3649",
+        "type": "print"
+      },
+      {
+        "value": "1741-3176",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2010,
+          1,
+          25
+        ]
+      ]
+    }
+  }
+}

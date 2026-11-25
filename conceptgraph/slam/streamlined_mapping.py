@@ -101,18 +101,7 @@ class StreamlinedMapper:
                         and frame.timestamp_s - obj["timestamp_s"] > ttl)
             ])
         before = [_mapping_object_signature(obj) for obj in self.objects]
-        fg_detection_list, bg_detection_list = gobs_to_detection_list(
-            cfg=self.cfg,
-            image=frame.image_rgb,
-            depth_array=frame.depth_array,
-            cam_K=frame.cam_K,
-            idx=int(frame.frame_idx),
-            gobs=frame.detections,
-            trans_pose=frame.camera_pose,
-            class_names=self.classes,
-            BG_CLASSES=BG_CLASSES,
-            color_path=frame.color_path,
-        )
+        fg_detection_list, bg_detection_list = self.extract_detections(frame)
         for det in fg_detection_list:
             if frame.timestamp_s is not None:
                 det["timestamp_s"] = float(frame.timestamp_s)
@@ -179,13 +168,11 @@ class StreamlinedMapper:
                 detection_contained = (contain_numbers > 0).unsqueeze(1)
                 object_contained = (contain_numbers_objects > 0).unsqueeze(0)
                 agg_sim[detection_contained ^ object_contained] -= self.cfg.contain_mismatch_penalty
-            agg_sim[agg_sim < self.cfg.sim_threshold] = float("-inf")
-            self.objects = merge_detections_to_objects(
-                self.cfg,
-                fg_detection_list,
-                self.objects,
-                agg_sim,
+            agg_sim = self.refine_association_scores(
+                frame, fg_detection_list, spatial_sim, visual_sim, agg_sim
             )
+            agg_sim[agg_sim < self.cfg.sim_threshold] = float("-inf")
+            self.objects = self.merge_associated_detections(fg_detection_list, agg_sim)
             frame_number = int(frame.frame_idx) + 1
             if self.cfg.denoise_interval > 0 and frame_number % self.cfg.denoise_interval == 0:
                 self.objects = denoise_objects(self.cfg, self.objects)
@@ -210,6 +197,29 @@ class StreamlinedMapper:
             foreground_detection_count=len(fg_detection_list),
             object_count=len(self.objects),
         )
+
+    def extract_detections(self, frame):
+        """默认调用原观测入口；实验子类可附加过滤诊断或观测策略。"""
+        return gobs_to_detection_list(
+            cfg=self.cfg,
+            image=frame.image_rgb,
+            depth_array=frame.depth_array,
+            cam_K=frame.cam_K,
+            idx=int(frame.frame_idx),
+            gobs=frame.detections,
+            trans_pose=frame.camera_pose,
+            class_names=self.classes,
+            BG_CLASSES=BG_CLASSES,
+            color_path=frame.color_path,
+        )
+
+    def merge_associated_detections(self, detections, scores):
+        """默认仍采用原分配与几何更新。"""
+        return merge_detections_to_objects(self.cfg, detections, self.objects, scores)
+
+    def refine_association_scores(self, frame, detections, spatial_sim, visual_sim, scores):
+        """默认保持历史关联分数，实验子类可在分配前加入因果运动约束。"""
+        return scores
 
     def effective_objects(self) -> MapObjectList:
         return MapObjectList(

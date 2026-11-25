@@ -1,0 +1,256 @@
+{
+  "counts": {
+    "frames_exact": 1508,
+    "raw_observations": 9145,
+    "sparse_state_frames": 6580,
+    "confirmed_sparse_state_frames": 178,
+    "reject:insufficient_distinct_raw_measurements": 5211,
+    "reject:raw_span_below_one_second": 5021,
+    "reject:raw_motion_not_confirmed_static": 5570,
+    "event:state_created": 2311,
+    "event:state_updated": 3917,
+    "reject:no_current_real_update": 3676,
+    "reject:current_raw_support_invalid": 990,
+    "event:sparse_expired": 1131,
+    "event:original_sparse_dense_handoff": 286,
+    "event:dense_expired": 303,
+    "reject:ambiguous_assignment_in_raw_history": 1134,
+    "event:sparse_to_dense_not_applied_already_current": 154
+  },
+  "per_scene": [
+    {
+      "scene": "scene-0012",
+      "counts": {
+        "frames": 40
+      }
+    },
+    {
+      "scene": "scene-0013",
+      "counts": {
+        "frames": 40
+      }
+    },
+    {
+      "scene": "scene-0014",
+      "counts": {
+        "frames": 40
+      }
+    },
+    {
+      "scene": "scene-0015",
+      "counts": {
+        "frames": 40
+      }
+    },
+    {
+      "scene": "scene-0016",
+      "counts": {
+        "frames": 40
+      }
+    },
+    {
+      "scene": "scene-0019",
+      "counts": {
+        "frames": 40
+      }
+    },
+    {
+      "scene": "scene-0020",
+      "counts": {
+        "frames": 39
+      }
+    },
+    {
+      "scene": "scene-0021",
+      "counts": {
+        "frames": 40
+      }
+    },
+    {
+      "scene": "scene-0025",
+      "counts": {
+        "frames": 40
+      }
+    },
+    {
+      "scene": "scene-0026",
+      "counts": {
+        "frames": 39
+      }
+    },
+    {
+      "scene": "scene-0027",
+      "counts": {
+        "frames": 40
+      }
+    },
+    {
+      "scene": "scene-0030",
+      "counts": {
+        "frames": 40
+      }
+    },
+    {
+      "scene": "scene-0032",
+      "counts": {
+        "frames": 40
+      }
+    },
+    {
+      "scene": "scene-0035",
+      "counts": {
+        "frames": 40
+      }
+    },
+    {
+      "scene": "scene-0038",
+      "counts": {
+        "frames": 40
+      }
+    },
+    {
+      "scene": "scene-0039",
+      "counts": {
+        "frames": 40
+      }
+    },
+    {
+      "scene": "scene-0042",
+      "counts": {
+        "frames": 41
+      }
+    },
+    {
+      "scene": "scene-0043",
+      "counts": {
+        "frames": 39
+      }
+    },
+    {
+      "scene": "scene-0044",
+      "counts": {
+        "frames": 40
+      }
+    },
+    {
+      "scene": "scene-0047",
+      "counts": {
+        "frames": 40
+      }
+    },
+    {
+      "scene": "scene-0048",
+      "counts": {
+        "frames": 40
+      }
+    },
+    {
+      "scene": "scene-0049",
+      "counts": {
+        "frames": 39
+      }
+    },
+    {
+      "scene": "scene-0053",
+      "counts": {
+        "frames": 39
+      }
+    },
+    {
+      "scene": "scene-0054",
+      "counts": {
+        "frames": 39
+      }
+    },
+    {
+      "scene": "scene-0059",
+      "counts": {
+        "frames": 41
+      }
+    },
+    {
+      "scene": "scene-0060",
+      "counts": {
+        "frames": 40
+      }
+    },
+    {
+      "scene": "scene-0075",
+      "counts": {
+        "frames": 39
+      }
+    },
+    {
+      "scene": "scene-0092",
+      "counts": {
+        "frames": 40
+      }
+    },
+    {
+      "scene": "scene-0093",
+      "counts": {
+        "frames": 39
+      }
+    },
+    {
+      "scene": "scene-0095",
+      "counts": {
+        "frames": 39
+      }
+    },
+    {
+      "scene": "scene-0096",
+      "counts": {
+        "frames": 39
+      }
+    },
+    {
+      "scene": "scene-0097",
+      "counts": {
+        "frames": 39
+      }
+    },
+    {
+      "scene": "scene-0098",
+      "counts": {
+        "frames": 39
+      }
+    },
+    {
+      "scene": "scene-0099",
+      "counts": {
+        "frames": 39
+      }
+    },
+    {
+      "scene": "scene-0102",
+      "counts": {
+        "frames": 40
+      }
+    },
+    {
+      "scene": "scene-0129",
+      "counts": {
+        "frames": 40
+      }
+    },
+    {
+      "scene": "scene-0135",
+      "counts": {
+        "frames": 39
+      }
+    },
+    {
+      "scene": "scene-0174",
+      "counts": {
+        "frames": 40
+      }
+    }
+  ],
+  "elapsed_s": 346.75333431735635,
+  "predictions_exact_all1508": true,
+  "GT_in_method": false,
+  "GPU_calls": 0,
+  "frame_file_sha256": "2f694b1311c9b54bd452463216466ca620a1bfd35ed362fe9ff6adc829d16046",
+  "source_and_inputs_unchanged": true
+}

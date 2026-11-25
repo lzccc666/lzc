@@ -1,0 +1,31 @@
+{
+  "created_utc": "2026-11-24T13:46:16.970614+00:00",
+  "ids": [
+    "scene-0013:f0:follow-nearest-same-route-v1",
+    "scene-0013:f10:follow-nearest-same-route-v1",
+    "scene-0042:f0:follow-nearest-same-route-v1"
+  ],
+  "denominator": 3,
+  "all_fixed_candidates": [
+    "scene-0012:f0:follow-nearest-same-route-v1",
+    "scene-0012:f10:follow-nearest-same-route-v1",
+    "scene-0013:f0:follow-nearest-same-route-v1",
+    "scene-0013:f10:follow-nearest-same-route-v1",
+    "scene-0019:f0:follow-nearest-same-route-v1",
+    "scene-0019:f10:follow-nearest-same-route-v1",
+    "scene-0035:f0:follow-nearest-same-route-v1",
+    "scene-0035:f10:follow-nearest-same-route-v1",
+    "scene-0042:f0:follow-nearest-same-route-v1",
+    "scene-0042:f10:follow-nearest-same-route-v1",
+    "scene-0047:f0:follow-nearest-same-route-v1",
+    "scene-0047:f10:follow-nearest-same-route-v1"
+  ],
+  "all_candidate_count": 12,
+  "initial_target_count": 4,
+  "initial_no_match_count": 8,
+  "pending_count": 9,
+  "old_2015_81_main_unchanged": true,
+  "all_method_failures_kept": true,
+  "methods_run_at_freeze": 0,
+  "interpretation": "Three independent geometry/time witness tasks; 2 scenes, 2 logs; not three independent datasets or a reliable general performance estimate. No control execution claim."
+}

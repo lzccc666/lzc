@@ -1,0 +1,453 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          31
+        ]
+      ],
+      "date-time": "2026-10-31T19:51:49Z",
+      "timestamp": 1793476309024,
+      "version": "4.5.0"
+    },
+    "reference-count": 37,
+    "publisher": "IEEE",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2019,
+              11,
+              1
+            ]
+          ],
+          "date-time": "2019-11-01T00:00:00Z",
+          "timestamp": 1572566400000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2019,
+              11,
+              1
+            ]
+          ],
+          "date-time": "2019-11-01T00:00:00Z",
+          "timestamp": 1572566400000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2019,
+          11
+        ]
+      ]
+    },
+    "DOI": "10.1109/iros40897.2019.8967890",
+    "type": "proceedings-article",
+    "created": {
+      "date-parts": [
+        [
+          2020,
+          1,
+          30
+        ]
+      ],
+      "date-time": "2020-01-30T23:53:51Z",
+      "timestamp": 1580428431000
+    },
+    "page": "4205-4212",
+    "source": "Crossref",
+    "is-referenced-by-count": 192,
+    "title": [
+      "PanopticFusion: Online Volumetric Semantic Mapping at the Level of Stuff and Things"
+    ],
+    "prefix": "10.1109",
+    "author": [
+      {
+        "given": "Gaku",
+        "family": "Narita",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "R&#x0026;D Center, Sony Corporation"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Takashi",
+        "family": "Seno",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "R&#x0026;D Center, Sony Corporation"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Tomoya",
+        "family": "Ishikawa",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "R&#x0026;D Center, Sony Corporation"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Yohsuke",
+        "family": "Kaji",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "R&#x0026;D Center, Sony Corporation"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref33",
+        "article-title": "Mid-fusion: Octree-based object-level multi-instance dynamic slam",
+        "author": "xu",
+        "year": "2018",
+        "journal-title": "arXiv preprint arXiv 1812 02588"
+      },
+      {
+        "key": "ref32",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.15607/RSS.2017.XIII.013"
+      },
+      {
+        "key": "ref31",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.15607/RSS.2015.XI.001"
+      },
+      {
+        "key": "ref30",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2018.00272"
+      },
+      {
+        "key": "ref37",
+        "first-page": "1",
+        "article-title": "Semantic understanding of scenes through the ade20k dataset",
+        "author": "zhou",
+        "year": "2016",
+        "journal-title": "International Journal of Computer Vision"
+      },
+      {
+        "key": "ref36",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2017.660"
+      },
+      {
+        "key": "ref35",
+        "article-title": "Gspn: Generative shape proposal network for 3d instance segmentation in point cloud",
+        "author": "yi",
+        "year": "2018",
+        "journal-title": "arXiv preprint arXiv 1812 02588"
+      },
+      {
+        "key": "ref34",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IROS.2017.8202212"
+      },
+      {
+        "key": "ref10",
+        "article-title": "Texturenet: Consistent local parametrizations for learning from high-resolution signals on meshes",
+        "author": "huang",
+        "year": "2018",
+        "journal-title": "arXiv preprint arXiv 1812 02588"
+      },
+      {
+        "key": "ref11",
+        "article-title": "Panoptic segmentation",
+        "author": "kirillov",
+        "year": "2018",
+        "journal-title": "arXiv preprint arXiv 1801 08639"
+      },
+      {
+        "key": "ref12",
+        "article-title": "Efficient inference in fully s connected crfs with gaussian edge potentials",
+        "author": "krähenbühl",
+        "year": "2011",
+        "journal-title": "Advances in neural information processing systems"
+      },
+      {
+        "key": "ref13",
+        "article-title": "Microsoft coco: Common objects in context",
+        "author": "lin",
+        "year": "2014",
+        "journal-title": "European Conf on Computer Vision (ECCV)"
+      },
+      {
+        "key": "ref14",
+        "article-title": "Masc: Multi-scale affinity with sparse convolution for 3d instance segmentation",
+        "author": "liu",
+        "year": "2019",
+        "journal-title": "arXiv preprint arXiv 1902 05023"
+      },
+      {
+        "key": "ref15",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/37402.37422"
+      },
+      {
+        "key": "ref16",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/3DV.2018.00015"
+      },
+      {
+        "key": "ref17",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICRA.2017.7989538"
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ACCESS.2018.2887022"
+      },
+      {
+        "key": "ref19",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ISMAR.2011.6092378"
+      },
+      {
+        "key": "ref28",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2018.00409"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2017.261"
+      },
+      {
+        "key": "ref27",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IROS.2017.8206392"
+      },
+      {
+        "key": "ref3",
+        "author": "abdulla",
+        "year": "2017",
+        "journal-title": "Mask r-cnn for object detection and instance segmentation on keras and tensorflow"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2018.00961"
+      },
+      {
+        "key": "ref29",
+        "article-title": "When 2.5 d is not enough: Simultaneous reconstruction, segmentation and recognition on dense slam",
+        "author": "tateno",
+        "year": "2016",
+        "journal-title": "IEEE Int Conf on Robotics and Automation (ICRA)"
+      },
+      {
+        "key": "ref5",
+        "article-title": "3dmv: Joint 3d-multi-view prediction for 3d semantic scene segmentation",
+        "author": "dai",
+        "year": "2018",
+        "journal-title": "arXiv preprint arXiv 1803 10409"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICRA.2014.6907236"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1109/ICCV.2017.322",
+        "article-title": "Maskr-cnn",
+        "author": "he",
+        "year": "2017",
+        "journal-title": "IEEE Int Conf on Computer Vision (ICCV)"
+      },
+      {
+        "key": "ref2",
+        "year": "2019",
+        "journal-title": "Challenge Benchmarks"
+      },
+      {
+        "key": "ref9",
+        "article-title": "3d-sis: 3d semantic instance segmentation of rgb-d scans",
+        "author": "hou",
+        "year": "2018",
+        "journal-title": "arXiv preprint arXiv 1812 02588"
+      },
+      {
+        "key": "ref1",
+        "year": "0",
+        "journal-title": "Pspnet-keras-tensorflow"
+      },
+      {
+        "key": "ref20",
+        "doi-asserted-by": "crossref",
+        "first-page": "169",
+        "DOI": "10.1145/2508363.2508374",
+        "article-title": "Real-time 3d reconstruction at scale using voxel hashing",
+        "volume": "32",
+        "author": "nießner",
+        "year": "2013",
+        "journal-title": "ACM Transactions on Graphics (TOG)"
+      },
+      {
+        "key": "ref22",
+        "article-title": "Pointnet ++: Deep hierarchical feature learning on point sets in a metric space",
+        "author": "qi",
+        "year": "2017",
+        "journal-title": "Advances in neural information processing systems"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IROS.2017.8202315"
+      },
+      {
+        "key": "ref24",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ISMAR.2018.00024"
+      },
+      {
+        "key": "ref23",
+        "article-title": "Faster r-cnn: Towards real-time object detection with region proposal networks",
+        "author": "ren",
+        "year": "2015",
+        "journal-title": "Advances in neural information processing systems"
+      },
+      {
+        "key": "ref26",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2018.00268"
+      },
+      {
+        "key": "ref25",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2013.178"
+      }
+    ],
+    "event": {
+      "name": "2019 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)",
+      "location": "Macau, China",
+      "start": {
+        "date-parts": [
+          [
+            2019,
+            11,
+            3
+          ]
+        ]
+      },
+      "end": {
+        "date-parts": [
+          [
+            2019,
+            11,
+            8
+          ]
+        ]
+      }
+    },
+    "container-title": [
+      "2019 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx7/8957008/8967518/08967890.pdf?arnumber=8967890",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2025,
+          7,
+          30
+        ]
+      ],
+      "date-time": "2025-07-30T18:44:33Z",
+      "timestamp": 1753901073000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/8967890/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2019,
+          11
+        ]
+      ]
+    },
+    "references-count": 37,
+    "URL": "https://doi.org/10.1109/iros40897.2019.8967890",
+    "relation": {},
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2019,
+          11
+        ]
+      ]
+    }
+  }
+}
