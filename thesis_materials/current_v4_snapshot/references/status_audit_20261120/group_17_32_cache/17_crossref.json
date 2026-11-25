@@ -1,0 +1,648 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          19
+        ]
+      ],
+      "date-time": "2026-11-19T23:22:32Z",
+      "timestamp": 1795130552666,
+      "version": "4.10.3"
+    },
+    "reference-count": 60,
+    "publisher": "IEEE",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2023,
+              5,
+              29
+            ]
+          ],
+          "date-time": "2023-05-29T00:00:00Z",
+          "timestamp": 1685318400000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2023,
+              5,
+              29
+            ]
+          ],
+          "date-time": "2023-05-29T00:00:00Z",
+          "timestamp": 1685318400000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/100000001",
+        "name": "National Science Foundation",
+        "doi-asserted-by": "publisher",
+        "id": [
+          {
+            "id": "10.13039/100000001",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2023,
+          5,
+          29
+        ]
+      ]
+    },
+    "DOI": "10.1109/icra48891.2023.10160968",
+    "type": "proceedings-article",
+    "created": {
+      "date-parts": [
+        [
+          2023,
+          7,
+          4
+        ]
+      ],
+      "date-time": "2023-07-04T13:20:56Z",
+      "timestamp": 1688476856000
+    },
+    "page": "2774-2781",
+    "source": "Crossref",
+    "is-referenced-by-count": 1261,
+    "title": [
+      "BEVFusion: Multi-Task Multi-Sensor Fusion with Unified Bird's-Eye View Representation"
+    ],
+    "prefix": "10.1109",
+    "author": [
+      {
+        "given": "Zhijian",
+        "family": "Liu",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Massachusetts Institute of Technology,Cambridge,MA,USA,02139"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Haotian",
+        "family": "Tang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Massachusetts Institute of Technology,Cambridge,MA,USA,02139"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Alexander",
+        "family": "Amini",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Massachusetts Institute of Technology,Cambridge,MA,USA,02139"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Xinyu",
+        "family": "Yang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Massachusetts Institute of Technology,Cambridge,MA,USA,02139"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Huizi",
+        "family": "Mao",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "OmniML,San Jose,CA,USA,95131"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Daniela L.",
+        "family": "Rus",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Massachusetts Institute of Technology,Cambridge,MA,USA,02139"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Song",
+        "family": "Han",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Massachusetts Institute of Technology,Cambridge,MA,USA,02139"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref13",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR42600.2020.01105"
+      },
+      {
+        "key": "ref57",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV48922.2021.00986"
+      },
+      {
+        "key": "ref12",
+        "article-title": "Class-Balanced Grouping and Sampling for Point Cloud 3D Object Detection",
+        "author": "zhu",
+        "year": "2019",
+        "journal-title": "ArXiv"
+      },
+      {
+        "key": "ref56",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-031-20074-8_39"
+      },
+      {
+        "key": "ref15",
+        "article-title": "PointNet++: Deep Hierarchical Feature Learning on Point Sets in a Metric Space",
+        "author": "qi",
+        "year": "2017",
+        "journal-title": "NeurIPS"
+      },
+      {
+        "key": "ref59",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR42600.2020.01164"
+      },
+      {
+        "key": "ref14",
+        "article-title": "End-to-End Multi-View Fusion for 3D Object Detection in LiDAR Point Clouds",
+        "author": "zhou",
+        "year": "2019",
+        "journal-title": "CoRL"
+      },
+      {
+        "key": "ref58",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2017.106"
+      },
+      {
+        "key": "ref53",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV48922.2021.00313"
+      },
+      {
+        "key": "ref52",
+        "article-title": "Deep Continuous Fusion for Multi-Sensor 3D Object Detection",
+        "author": "liang",
+        "year": "2018",
+        "journal-title": "ECCV"
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.3390/s18103337",
+        "article-title": "SECOND: Sparsely Embedded Convolutional Detection",
+        "author": "yan",
+        "year": "2018",
+        "journal-title": "SENSORS"
+      },
+      {
+        "key": "ref55",
+        "article-title": "MT-Net Submission to the Waymo 3D Detection Leaderboard",
+        "author": "chen",
+        "year": "2022",
+        "journal-title": "ArXiv"
+      },
+      {
+        "key": "ref10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2019.01298"
+      },
+      {
+        "key": "ref54",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV.2017.324"
+      },
+      {
+        "key": "ref17",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR46437.2021.01161"
+      },
+      {
+        "key": "ref16",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2018.00961"
+      },
+      {
+        "key": "ref19",
+        "article-title": "Object a Hotspots: An Anchor-Free 3D Object Detection Approach via Firing of Hotspots",
+        "author": "chen",
+        "year": "2020",
+        "journal-title": "ECCV"
+      },
+      {
+        "key": "ref18",
+        "article-title": "1st Place Solutions to the Real-time 3D Detection and the Most Efficient Model of the Waymo Open Dataset Challenge 2021",
+        "author": "ge",
+        "year": "2021",
+        "journal-title": "cvprw"
+      },
+      {
+        "key": "ref51",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.24963/ijcai.2022/116"
+      },
+      {
+        "key": "ref50",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ITSC48978.2021.9564951"
+      },
+      {
+        "key": "ref46",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IROS40897.2019.8968513"
+      },
+      {
+        "key": "ref45",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2018.00102"
+      },
+      {
+        "key": "ref48",
+        "article-title": "FUTR3D: A Unified Sensor Fusion Framework for 3D Detection",
+        "author": "chen",
+        "year": "2022",
+        "journal-title": "ArXiv"
+      },
+      {
+        "key": "ref47",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/WACV48630.2021.00157"
+      },
+      {
+        "key": "ref42",
+        "article-title": "Categorical depth distributionnetwork for monocular 3d object detection",
+        "author": "reading",
+        "year": "2021",
+        "journal-title": "CVPR"
+      },
+      {
+        "key": "ref41",
+        "article-title": "M2BEV: Multi-Camera Joint 3D Detection and Segmentation with Unified Birds-Eye View Representation",
+        "author": "xie",
+        "year": "2022",
+        "journal-title": "ArXiv"
+      },
+      {
+        "key": "ref44",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2017.691"
+      },
+      {
+        "key": "ref43",
+        "article-title": "BEVFormer: Learning Bird's-Eye-View Representation from Multi-Camera Images via Spatiotemporal Transformers",
+        "author": "li",
+        "year": "2022",
+        "journal-title": "ArXiv"
+      },
+      {
+        "key": "ref49",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR52688.2022.00116"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR52688.2022.01339"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICRA46639.2022.9812383"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2018.00472"
+      },
+      {
+        "key": "ref4",
+        "article-title": "Multimodal Virtual Point 3D Detection",
+        "author": "yin",
+        "year": "2021",
+        "journal-title": "NeurIPS"
+      },
+      {
+        "key": "ref3",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR52688.2022.01667"
+      },
+      {
+        "key": "ref6",
+        "article-title": "Lift, Splat, Shoot: Encoding Images From Arbitrary Camera Rigs by Implicitly Unprojecting to 3D",
+        "author": "philion",
+        "year": "2020",
+        "journal-title": "ECCV"
+      },
+      {
+        "key": "ref5",
+        "author": "pan",
+        "year": "2020",
+        "journal-title": "Cross-view semantic segmentation for sensing surroundings"
+      },
+      {
+        "key": "ref40",
+        "article-title": "BEVDet: High-performance Multi-camera 3D Object Detection in Bird-Eye-View",
+        "author": "huang",
+        "year": "2021",
+        "journal-title": "ArXiv"
+      },
+      {
+        "key": "ref35",
+        "article-title": "PETR: Position Embedding Transformation for Multi-View 3D Object Detection",
+        "author": "liu",
+        "year": "2022",
+        "journal-title": "ArXiv"
+      },
+      {
+        "key": "ref34",
+        "article-title": "DETR3D: 3D Object Detection from Multi-view Images via 3D-to-2D Queries",
+        "author": "wang",
+        "year": "2021",
+        "journal-title": "CoRL"
+      },
+      {
+        "key": "ref37",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1609/aaai.v36i3.20158"
+      },
+      {
+        "key": "ref36",
+        "article-title": "Deformable DETR: Deformable Transformers for End-to-End Object Detection",
+        "author": "zhu",
+        "year": "2021",
+        "journal-title": "ICLRE"
+      },
+      {
+        "key": "ref31",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV.2019.00972"
+      },
+      {
+        "key": "ref30",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCVW54120.2021.00107"
+      },
+      {
+        "key": "ref33",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR52688.2022.00280"
+      },
+      {
+        "key": "ref32",
+        "article-title": "Probabilistic and geometric depth: Detecting objects in perspective",
+        "author": "wang",
+        "year": "2021",
+        "journal-title": "CoRL"
+      },
+      {
+        "key": "ref2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR46437.2021.01162"
+      },
+      {
+        "key": "ref1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR42600.2020.00466"
+      },
+      {
+        "key": "ref39",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR42600.2020.01115"
+      },
+      {
+        "key": "ref38",
+        "article-title": "Orthographic Feature Transform for Monocular 3D Object Detection",
+        "author": "roddick",
+        "year": "2019",
+        "journal-title": "BMVC"
+      },
+      {
+        "key": "ref24",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2019.00086"
+      },
+      {
+        "key": "ref23",
+        "article-title": "Object DGCNN: 3D Object Detection using Dynamic Graphs",
+        "author": "wang",
+        "year": "2021",
+        "journal-title": "NeurIPS"
+      },
+      {
+        "key": "ref26",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1109/TPAMI.2020.2977026",
+        "article-title": "From Points to Parts: 3D Object Detection from Point Cloud with Part-aware and Part-aggregation Network",
+        "author": "shi",
+        "year": "2020",
+        "journal-title": "TPAMI"
+      },
+      {
+        "key": "ref25",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV.2019.00987"
+      },
+      {
+        "key": "ref20",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR46437.2021.00607"
+      },
+      {
+        "key": "ref22",
+        "article-title": "PolarStream: Streaming Lidar Object Detection and Segmentation with Polar Pillars",
+        "author": "chen",
+        "year": "2021",
+        "journal-title": "NeurIPS"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV48922.2021.00291"
+      },
+      {
+        "key": "ref28",
+        "article-title": "PV-RCNN++: Point-Voxel Feature Set Abstraction With Local Vector Representation for 3D Object Detection",
+        "author": "shi",
+        "year": "2021",
+        "journal-title": "ArXiv"
+      },
+      {
+        "key": "ref27",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR42600.2020.01054"
+      },
+      {
+        "key": "ref29",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR46437.2021.00746"
+      },
+      {
+        "key": "ref60",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR42600.2020.00252"
+      }
+    ],
+    "event": {
+      "name": "2023 IEEE International Conference on Robotics and Automation (ICRA)",
+      "location": "London, United Kingdom",
+      "start": {
+        "date-parts": [
+          [
+            2023,
+            5,
+            29
+          ]
+        ]
+      },
+      "end": {
+        "date-parts": [
+          [
+            2023,
+            6,
+            2
+          ]
+        ]
+      }
+    },
+    "container-title": [
+      "2023 IEEE International Conference on Robotics and Automation (ICRA)"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx7/10160211/10160212/10160968.pdf?arnumber=10160968",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2023,
+          7,
+          24
+        ]
+      ],
+      "date-time": "2023-07-24T13:29:58Z",
+      "timestamp": 1690205398000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/10160968/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2023,
+          5,
+          29
+        ]
+      ]
+    },
+    "references-count": 60,
+    "URL": "https://doi.org/10.1109/icra48891.2023.10160968",
+    "relation": {},
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2023,
+          5,
+          29
+        ]
+      ]
+    }
+  }
+}

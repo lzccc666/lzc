@@ -1,0 +1,167 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          19
+        ]
+      ],
+      "date-time": "2026-11-19T23:26:25Z",
+      "timestamp": 1795130785432,
+      "version": "4.10.3"
+    },
+    "reference-count": 0,
+    "publisher": "Robotics: Science and Systems Foundation",
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [],
+    "DOI": "10.15607/rss.2024.xx.077",
+    "type": "proceedings-article",
+    "created": {
+      "date-parts": [
+        [
+          2024,
+          9,
+          9
+        ]
+      ],
+      "date-time": "2024-09-09T13:25:40Z",
+      "timestamp": 1725888340000
+    },
+    "source": "Crossref",
+    "is-referenced-by-count": 152,
+    "title": [
+      "Hierarchical Open-Vocabulary 3D Scene Graphs for Language-Grounded Robot Navigation"
+    ],
+    "prefix": "10.15607",
+    "author": [
+      {
+        "given": "Abdelrhman",
+        "family": "Werby",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Chenguang",
+        "family": "Huang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Martin",
+        "family": "Büchner",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Abhinav",
+        "family": "Valada",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Wolfram",
+        "family": "Burgard",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "6920",
+    "published-online": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          15
+        ]
+      ]
+    },
+    "event": {
+      "name": "Robotics: Science and Systems 2024",
+      "acronym": "RSS2024"
+    },
+    "container-title": [
+      "Robotics: Science and Systems XX"
+    ],
+    "original-title": [],
+    "deposited": {
+      "date-parts": [
+        [
+          2024,
+          9,
+          9
+        ]
+      ],
+      "date-time": "2024-09-09T13:26:17Z",
+      "timestamp": 1725888377000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "http://www.roboticsproceedings.org/rss20/p077.pdf"
+      }
+    },
+    "subtitle": [],
+    "proceedings-subject": "Robotics",
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          15
+        ]
+      ]
+    },
+    "references-count": 0,
+    "URL": "https://doi.org/10.15607/rss.2024.xx.077",
+    "relation": {},
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          15
+        ]
+      ]
+    }
+  }
+}

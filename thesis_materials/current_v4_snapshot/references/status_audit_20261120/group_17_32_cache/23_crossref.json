@@ -1,0 +1,902 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          15
+        ]
+      ],
+      "date-time": "2026-11-15T05:44:49Z",
+      "timestamp": 1794721489492,
+      "version": "4.9.1"
+    },
+    "publisher-location": "Cham",
+    "reference-count": 79,
+    "publisher": "Springer Nature Switzerland",
+    "isbn-type": [
+      {
+        "value": "9783031200762",
+        "type": "print"
+      },
+      {
+        "value": "9783031200779",
+        "type": "electronic"
+      }
+    ],
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              1,
+              1
+            ]
+          ],
+          "date-time": "2022-01-01T00:00:00Z",
+          "timestamp": 1640995200000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              1,
+              1
+            ]
+          ],
+          "date-time": "2022-01-01T00:00:00Z",
+          "timestamp": 1640995200000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "link.springer.com"
+      ],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2022
+        ]
+      ]
+    },
+    "DOI": "10.1007/978-3-031-20077-9_21",
+    "type": "book-chapter",
+    "created": {
+      "date-parts": [
+        [
+          2022,
+          11,
+          5
+        ]
+      ],
+      "date-time": "2022-11-05T12:21:52Z",
+      "timestamp": 1667650912000
+    },
+    "page": "350-368",
+    "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 557,
+    "title": [
+      "Detecting Twenty-Thousand Classes Using Image-Level Supervision"
+    ],
+    "prefix": "10.1007",
+    "author": [
+      {
+        "given": "Xingyi",
+        "family": "Zhou",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Rohit",
+        "family": "Girdhar",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Armand",
+        "family": "Joulin",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Philipp",
+        "family": "Krähenbühl",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Ishan",
+        "family": "Misra",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "297",
+    "published-online": {
+      "date-parts": [
+        [
+          2022,
+          11,
+          6
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "21_CR1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Arbeláez, P., Pont-Tuset, J., Barron, J.T., Marques, F., Malik, J.: Multiscale combinatorial grouping. In: CVPR (2014)",
+        "DOI": "10.1109/CVPR.2014.49"
+      },
+      {
+        "key": "21_CR2",
+        "series-title": "Lecture Notes in Computer Science",
+        "doi-asserted-by": "publisher",
+        "first-page": "397",
+        "DOI": "10.1007/978-3-030-01246-5_24",
+        "volume-title": "Computer Vision – ECCV 2018",
+        "author": "A Bansal",
+        "year": "2018",
+        "unstructured": "Bansal, A., Sikka, K., Sharma, G., Chellappa, R., Divakaran, A.: Zero-shot object detection. In: Ferrari, V., Hebert, M., Sminchisescu, C., Weiss, Y. (eds.) ECCV 2018. LNCS, vol. 11205, pp. 397–414. Springer, Cham (2018). https://doi.org/10.1007/978-3-030-01246-5_24"
+      },
+      {
+        "key": "21_CR3",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Bilen, H., Vedaldi, A.: Weakly supervised deep detection networks. In: CVPR (2016)",
+        "DOI": "10.1109/CVPR.2016.311"
+      },
+      {
+        "key": "21_CR4",
+        "unstructured": "Bochkovskiy, A., Wang, C.Y., Liao, H.Y.M.: Yolov4: optimal speed and accuracy of object detection. arXiv:2004.10934 (2020)"
+      },
+      {
+        "key": "21_CR5",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Cai, Z., Vasconcelos, N.: Cascade R-CNN: delving into high quality object detection. In: CVPR (2018)",
+        "DOI": "10.1109/CVPR.2018.00644"
+      },
+      {
+        "key": "21_CR6",
+        "unstructured": "Chang, N., Yu, Z., Wang, Y.X., Anandkumar, A., Fidler, S., Alvarez, J.M.: Image-level or object-level? A tale of two resampling strategies for long-tailed detection. In: ICML (2021)"
+      },
+      {
+        "key": "21_CR7",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Chen, L., Yang, T., Zhang, X., Zhang, W., Sun, J.: Points as queries: weakly semi-supervised object detection by points. In: CVPR (2021)",
+        "DOI": "10.1109/CVPR46437.2021.00871"
+      },
+      {
+        "key": "21_CR8",
+        "unstructured": "Dave, A., Dollár, P., Ramanan, D., Kirillov, A., Girshick, R.: Evaluating large-vocabulary object detectors: the devil is in the details. arXiv:2102.01066 (2021)"
+      },
+      {
+        "key": "21_CR9",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Dave, A., Tokmakov, P., Ramanan, D.: Towards segmenting anything that moves. In: ICCVW (2019)",
+        "DOI": "10.1109/ICCVW.2019.00187"
+      },
+      {
+        "key": "21_CR10",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Deng, J., Dong, W., Socher, R., Li, L.J., Li, K., Fei-Fei, L.: ImageNet: a large-scale hierarchical image database. In: CVPR (2009)",
+        "DOI": "10.1109/CVPR.2009.5206848"
+      },
+      {
+        "key": "21_CR11",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Desai, K., Johnson, J.: VirTex: learning visual representations from textual annotations. In: CVPR (2021)",
+        "DOI": "10.1109/CVPR46437.2021.01101"
+      },
+      {
+        "key": "21_CR12",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Dong, B., Huang, Z., Guo, Y., Wang, Q., Niu, Z., Zuo, W.: Boosting weakly supervised object detection via learning bounding box adjusters. In: ICCV (2021)",
+        "DOI": "10.1109/ICCV48922.2021.00287"
+      },
+      {
+        "key": "21_CR13",
+        "unstructured": "Fang, S., Cao, Y., Wang, X., Chen, K., Lin, D., Zhang, W.: WSSOD: a new pipeline for weakly-and semi-supervised object detection. arXiv:2105.11293 (2021)"
+      },
+      {
+        "key": "21_CR14",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Feng, C., Zhong, Y., Huang, W.: Exploring classification equilibrium in long-tailed object detection. In: ICCV (2021)",
+        "DOI": "10.1109/ICCV48922.2021.00340"
+      },
+      {
+        "key": "21_CR15",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Ghiasi, G., et al.: Simple copy-paste is a strong data augmentation method for instance segmentation. In: CVPR (2021)",
+        "DOI": "10.1109/CVPR46437.2021.00294"
+      },
+      {
+        "key": "21_CR16",
+        "unstructured": "Ghiasi, G., Gu, X., Cui, Y., Lin, T.Y.: Open-vocabulary image segmentation. arXiv:2112.12143 (2021)"
+      },
+      {
+        "key": "21_CR17",
+        "unstructured": "Gu, X., Lin, T.Y., Kuo, W., Cui, Y.: Open-vocabulary object detection via vision and language knowledge distillation. ICLR (2022)"
+      },
+      {
+        "key": "21_CR18",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Gupta, A., Dollar, P., Girshick, R.: LVIS: a dataset for large vocabulary instance segmentation. In: CVPR (2019)",
+        "DOI": "10.1109/CVPR.2019.00550"
+      },
+      {
+        "key": "21_CR19",
+        "unstructured": "Han, J., Niu, M., Du, Z., Wei, L., Xie, L., Zhang, X., Tian, Q.: Joint coco and Lvis workshop at ECCV 2020: Lvis challenge track technical report: asynchronous semi-supervised learning for large vocabulary instance segmentation (2020)"
+      },
+      {
+        "key": "21_CR20",
+        "doi-asserted-by": "crossref",
+        "unstructured": "He, K., Gkioxari, G., Dollar, P., Girshick, R.: Mask R-CNN. In: ICCV (2017)",
+        "DOI": "10.1109/ICCV.2017.322"
+      },
+      {
+        "key": "21_CR21",
+        "doi-asserted-by": "crossref",
+        "unstructured": "He, K., Zhang, X., Ren, S., Sun, J.: Deep residual learning for image recognition. In: CVPR (2016)",
+        "DOI": "10.1109/CVPR.2016.90"
+      },
+      {
+        "key": "21_CR22",
+        "unstructured": "Huang, Z., Zou, Y., Bhagavatula, V., Huang, D.: Comprehensive attention self-distillation for weakly-supervised object detection. In: NeurIPS (2020)"
+      },
+      {
+        "key": "21_CR23",
+        "doi-asserted-by": "publisher",
+        "unstructured": "Ilharco, G., et al.: Openclip, July 2021. https://doi.org/10.5281/zenodo.5143773",
+        "DOI": "10.5281/zenodo.5143773"
+      },
+      {
+        "key": "21_CR24",
+        "unstructured": "Joulin, A., Grave, E., Bojanowski, P., Douze, M., Jégou, H., Mikolov, T.: Fasttext. Zip: compressing text classification models. arXiv:1612.03651 (2016)"
+      },
+      {
+        "key": "21_CR25",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Kim, D., Lin, T.Y., Angelova, A., Kweon, I.S., Kuo, W.: Learning open-world object proposals without learning to classify. arXiv:2108.06753 (2021)",
+        "DOI": "10.1109/LRA.2022.3146922"
+      },
+      {
+        "key": "21_CR26",
+        "unstructured": "Kingma, D.P., Ba, J.: Adam: a method for stochastic optimization. In: ICLR (2015)"
+      },
+      {
+        "key": "21_CR27",
+        "unstructured": "Konan, S., Liang, K.J., Yin, L.: Extending one-stage detection with open-world proposals. arXiv:2201.02302 (2022)"
+      },
+      {
+        "key": "21_CR28",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Kuznetsova, A., et al.: The open images dataset v4. In: IJCV (2020)",
+        "DOI": "10.1007/s11263-020-01316-z"
+      },
+      {
+        "key": "21_CR29",
+        "unstructured": "Li, B., Weinberger, K.Q., Belongie, S., Koltun, V., Ranftl, R.: Language-driven semantic segmentation. In: ICLR (2022)"
+      },
+      {
+        "key": "21_CR30",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Li, X., Kan, M., Shan, S., Chen, X.: Weakly supervised object detection with segmentation collaboration. In: ICCV (2019)",
+        "DOI": "10.1109/ICCV.2019.00983"
+      },
+      {
+        "key": "21_CR31",
+        "unstructured": "Li, Y., Zhang, J., Huang, K., Zhang, J.: Mixed supervised object detection with robust objectness transfer. In: TPAMI (2018)"
+      },
+      {
+        "key": "21_CR32",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Li, Y., Wang, T., Kang, B., Tang, S., Wang, C., Li, J., Feng, J.: Overcoming classifier imbalance for long-tail object detection with balanced group softmax. In: CVPR (2020)",
+        "DOI": "10.1109/CVPR42600.2020.01100"
+      },
+      {
+        "key": "21_CR33",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Li, Z., Yao, L., Zhang, X., Wang, X., Kanhere, S., Zhang, H.: Zero-shot object detection with textual descriptions. In: AAAI (2019)",
+        "DOI": "10.1609/aaai.v33i01.33018690"
+      },
+      {
+        "key": "21_CR34",
+        "series-title": "Lecture Notes in Computer Science",
+        "doi-asserted-by": "publisher",
+        "first-page": "740",
+        "DOI": "10.1007/978-3-319-10602-1_48",
+        "volume-title": "Computer Vision – ECCV 2014",
+        "author": "T-Y Lin",
+        "year": "2014",
+        "unstructured": "Lin, T.-Y., Maire, M., Belongie, S., Hays, J., Perona, P., Ramanan, D., Dollár, P., Zitnick, C.L.: Microsoft COCO: common objects in context. In: Fleet, D., Pajdla, T., Schiele, B., Tuytelaars, T. (eds.) ECCV 2014. LNCS, vol. 8693, pp. 740–755. Springer, Cham (2014). https://doi.org/10.1007/978-3-319-10602-1_48"
+      },
+      {
+        "key": "21_CR35",
+        "unstructured": "Liu, Y., Zhang, Z., Niu, L., Chen, J., Zhang, L.: Mixed supervised object detection by transferringmask prior and semantic similarity. In: NeurIPS (2021)"
+      },
+      {
+        "key": "21_CR36",
+        "unstructured": "Liu, Y.C., et al.: Unbiased teacher for semi-supervised object detection. In: ICLR (2021)"
+      },
+      {
+        "key": "21_CR37",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Liu, Z., et al.: Swin transformer: hierarchical vision transformer using shifted windows. In: ICCV (2021)",
+        "DOI": "10.1109/ICCV48922.2021.00986"
+      },
+      {
+        "key": "21_CR38",
+        "unstructured": "Maaz, M., Rasheed, H., Khan, S., Khan, F.S., Anwer, R.M., Yang, M.H.: Multi-modal transformers excel at class-agnostic object detection. arXiv:2111.11430 (2021)"
+      },
+      {
+        "key": "21_CR39",
+        "unstructured": "Pan, T.Y., et al.: On model calibration for long-tailed object detection and instance segmentation. In: NeurIPS (2021)"
+      },
+      {
+        "key": "21_CR40",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Pennington, J., Socher, R., Manning, C.D.: GloVe: global vectors for word representation. In: EMNLP (2014)",
+        "DOI": "10.3115/v1/D14-1162"
+      },
+      {
+        "key": "21_CR41",
+        "unstructured": "Pinheiro, P.O., Collobert, R.: Weakly supervised semantic segmentation with convolutional networks. In: CVPR (2015)"
+      },
+      {
+        "key": "21_CR42",
+        "unstructured": "Radford, A., et al.: Learning transferable visual models from natural language supervision. arXiv:2103.00020 (2021)"
+      },
+      {
+        "key": "21_CR43",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Rahman, S., Khan, S., Barnes, N.: Improved visual-semantic alignment for zero-shot object detection. In: AAAI (2020)",
+        "DOI": "10.1609/aaai.v34i07.6868"
+      },
+      {
+        "key": "21_CR44",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Ramanathan, V., Wang, R., Mahajan, D.: DLWL: improving detection for lowshot classes with weakly labelled data. In: CVPR (2020)",
+        "DOI": "10.1109/CVPR42600.2020.00936"
+      },
+      {
+        "key": "21_CR45",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Redmon, J., Farhadi, A.: Yolo9000: better, faster, stronger. In: CVPR (2017)",
+        "DOI": "10.1109/CVPR.2017.690"
+      },
+      {
+        "key": "21_CR46",
+        "unstructured": "Ren, S., He, K., Girshick, R., Sun, J.: Faster R-CNN: towards real-time object detection with region proposal networks. In: NIPS (2015)"
+      },
+      {
+        "key": "21_CR47",
+        "series-title": "Lecture Notes in Computer Science",
+        "doi-asserted-by": "publisher",
+        "first-page": "288",
+        "DOI": "10.1007/978-3-030-58529-7_18",
+        "volume-title": "Computer Vision – ECCV 2020",
+        "author": "Z Ren",
+        "year": "2020",
+        "unstructured": "Ren, Z., Yu, Z., Yang, X., Liu, M.-Y., Schwing, A.G., Kautz, J.: UFO$$^2$$: a unified framework towards omni-supervised object detection. In: Vedaldi, A., Bischof, H., Brox, T., Frahm, J.-M. (eds.) ECCV 2020. LNCS, vol. 12364, pp. 288–313. Springer, Cham (2020). https://doi.org/10.1007/978-3-030-58529-7_18"
+      },
+      {
+        "key": "21_CR48",
+        "unstructured": "Ridnik, T., Ben-Baruch, E., Noy, A., Zelnik-Manor, L.: Imagenet-21k pretraining for the masses. In: NeurIPS (2021)"
+      },
+      {
+        "key": "21_CR49",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Shao, S., et al.: Objects365: a large-scale, high-quality dataset for object detection. In: ICCV (2019)",
+        "DOI": "10.1109/ICCV.2019.00852"
+      },
+      {
+        "key": "21_CR50",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Sharma, P., Ding, N., Goodman, S., Soricut, R.: Conceptual captions: a cleaned, hypernymed, image alt-text dataset for automatic image captioning. In: ACL (2018)",
+        "DOI": "10.18653/v1/P18-1238"
+      },
+      {
+        "key": "21_CR51",
+        "series-title": "Lecture Notes in Computer Science",
+        "doi-asserted-by": "publisher",
+        "first-page": "118",
+        "DOI": "10.1007/978-3-030-58598-3_8",
+        "volume-title": "Computer Vision – ECCV 2020",
+        "author": "Y Shen",
+        "year": "2020",
+        "unstructured": "Shen, Y., et al.: Enabling deep residual networks for weakly supervised object detection. In: Vedaldi, A., Bischof, H., Brox, T., Frahm, J.-M. (eds.) ECCV 2020. LNCS, vol. 12353, pp. 118–136. Springer, Cham (2020). https://doi.org/10.1007/978-3-030-58598-3_8"
+      },
+      {
+        "key": "21_CR52",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Shen, Y., Ji, R., Wang, Y., Wu, Y., Cao, L.: Cyclic guidance for weakly supervised joint detection and segmentation. In: CVPR (2019)",
+        "DOI": "10.1109/CVPR.2019.00079"
+      },
+      {
+        "key": "21_CR53",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Singh, B., Li, H., Sharma, A., Davis, L.S.: R-FCN-3000 at 30fps: decoupling detection and classification. In: CVPR (2018)",
+        "DOI": "10.1109/CVPR.2018.00119"
+      },
+      {
+        "key": "21_CR54",
+        "unstructured": "Sohn, K., Zhang, Z., Li, C.L., Zhang, H., Lee, C.Y., Pfister, T.: A simple semi-supervised learning framework for object detection. arXiv:2005.04757 (2020)"
+      },
+      {
+        "key": "21_CR55",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Tan, J., Lu, X., Zhang, G., Yin, C., Li, Q.: Equalization loss v2: a new gradient balance approach for long-tailed object detection. In: CVPR (2021)",
+        "DOI": "10.1109/CVPR46437.2021.00173"
+      },
+      {
+        "key": "21_CR56",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Tan, J., et al.: Equalization loss for long-tailed object recognition. In: CVPR (2020)",
+        "DOI": "10.1109/CVPR42600.2020.01168"
+      },
+      {
+        "key": "21_CR57",
+        "unstructured": "Tan, J., et al.: 1st place solution of Lvis challenge 2020: a good box is not a guarantee of a good mask. arXiv:2009.01559 (2020)"
+      },
+      {
+        "key": "21_CR58",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Tan, M., Pang, R., Le, Q.V.: Efficientdet: scalable and efficient object detection. In: CVPR (2020)",
+        "DOI": "10.1109/CVPR42600.2020.01079"
+      },
+      {
+        "key": "21_CR59",
+        "unstructured": "Tang, P., et al.: PCL: proposal cluster learning for weakly supervised object detection. In: TPAMI (2018)"
+      },
+      {
+        "key": "21_CR60",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Tang, P., Wang, X., Bai, X., Liu, W.: Multiple instance detection network with online instance classifier refinement. In: CVPR (2017)",
+        "DOI": "10.1109/CVPR.2017.326"
+      },
+      {
+        "key": "21_CR61",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Uijlings, J., Popov, S., Ferrari, V.: Revisiting knowledge transfer for training object class detectors. In: CVPR (2018)",
+        "DOI": "10.1109/CVPR.2018.00121"
+      },
+      {
+        "key": "21_CR62",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Uijlings, J.R., Van De Sande, K.E., Gevers, T., Smeulders, A.W.: Selective search for object recognition. In: IJCV (2013)",
+        "DOI": "10.1007/s11263-013-0620-5"
+      },
+      {
+        "key": "21_CR63",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Wan, F., Liu, C., Ke, W., Ji, X., Jiao, J., Ye, Q.: C-mil:continuation multiple instance learning for weakly supervised object detection. In: CVPR (2019)",
+        "DOI": "10.1109/CVPR.2019.00230"
+      },
+      {
+        "key": "21_CR64",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Wang, J., et al.: Seesaw loss for long-tailed instance segmentation. In: CVPR (2021)",
+        "DOI": "10.1109/CVPR46437.2021.00957"
+      },
+      {
+        "key": "21_CR65",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Wu, J., Song, L., Wang, T., Zhang, Q., Yuan, J.: Forest R-CNN: large-vocabulary long-tailed object detection and instance segmentation. In: ACM Multimedia (2020)",
+        "DOI": "10.1145/3394171.3413970"
+      },
+      {
+        "key": "21_CR66",
+        "unstructured": "Wu, Y., Kirillov, A., Massa, F., Lo, W.Y., Girshick, R.: Detectron2 (2019). https://github.com/facebookresearch/detectron2"
+      },
+      {
+        "key": "21_CR67",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Xu, M., et al.: End-to-end semi-supervised object detection with soft teacher. In: ICCV (2021)",
+        "DOI": "10.1109/ICCV48922.2021.00305"
+      },
+      {
+        "key": "21_CR68",
+        "unstructured": "Yan, Z., Liang, J., Pan, W., Li, J., Zhang, C.: Weakly-and semi-supervised object detection with expectation-maximization algorithm. arXiv:1702.08740 (2017)"
+      },
+      {
+        "key": "21_CR69",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Yang, H., Wu, H., Chen, H.: Detecting 11k classes: large scale object detection without fine-grained bounding boxes. In: ICCV (2019)",
+        "DOI": "10.1109/ICCV.2019.00990"
+      },
+      {
+        "key": "21_CR70",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Yang, K., Li, D., Dou, Y.: Towards precise end-to-end weakly supervised object detection network. In: ICCV (2019)",
+        "DOI": "10.1109/ICCV.2019.00846"
+      },
+      {
+        "key": "21_CR71",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Ye, K., Zhang, M., Kovashka, A., Li, W., Qin, D., Berent, J.: Cap2DET: learning to amplify weak caption supervision for object detection. In: ICCV (2019)",
+        "DOI": "10.1109/ICCV.2019.00978"
+      },
+      {
+        "key": "21_CR72",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Zareian, A., Rosa, K.D., Hu, D.H., Chang, S.F.: Open-vocabulary object detection using captions. In: CVPR (2021)",
+        "DOI": "10.1109/CVPR46437.2021.01416"
+      },
+      {
+        "key": "21_CR73",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Zhang, C., et al.: MosaicOS: a simple and effective use of object-centric images for long-tailed object detection. In: ICCV (2021)",
+        "DOI": "10.1109/ICCV48922.2021.00047"
+      },
+      {
+        "key": "21_CR74",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Zhang, S., Li, Z., Yan, S., He, X., Sun, J.: Distribution alignment: a unified framework for long-tail visual recognition. In: CVPR (2021)",
+        "DOI": "10.1109/CVPR46437.2021.00239"
+      },
+      {
+        "key": "21_CR75",
+        "series-title": "Lecture Notes in Computer Science",
+        "doi-asserted-by": "publisher",
+        "first-page": "615",
+        "DOI": "10.1007/978-3-030-58574-7_37",
+        "volume-title": "Computer Vision – ECCV 2020",
+        "author": "Y Zhong",
+        "year": "2020",
+        "unstructured": "Zhong, Y., Wang, J., Peng, J., Zhang, L.: Boosting weakly supervised object detection with progressive knowledge transfer. In: Vedaldi, A., Bischof, H., Brox, T., Frahm, J.-M. (eds.) ECCV 2020. LNCS, vol. 12371, pp. 615–631. Springer, Cham (2020). https://doi.org/10.1007/978-3-030-58574-7_37"
+      },
+      {
+        "key": "21_CR76",
+        "unstructured": "Zhou, X., Koltun, V., Krähenbühl, P.: Probabilistic two-stage detection. arXiv:2103.07461 (2021)"
+      },
+      {
+        "key": "21_CR77",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Zhou, X., Koltun, V., Krähenbühl, P.: Simple multi-dataset detection. In: CVPR (2022)",
+        "DOI": "10.1109/CVPR52688.2022.00742"
+      },
+      {
+        "key": "21_CR78",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Zhu, P., Wang, H., Saligrama, V.: Don’t even look once: Synthesizing features for zero-shot detection. In: CVPR (2020)",
+        "DOI": "10.1109/CVPR42600.2020.01171"
+      },
+      {
+        "key": "21_CR79",
+        "unstructured": "Zhu, X., Su, W., Lu, L., Li, B., Wang, X., Dai, J.: Deformable DeTR: deformable transformers for end-to-end object detection. In: ICLR (2021)"
+      }
+    ],
+    "container-title": [
+      "Lecture Notes in Computer Science",
+      "Computer Vision – ECCV 2022"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://link.springer.com/content/pdf/10.1007/978-3-031-20077-9_21",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          5
+        ]
+      ],
+      "date-time": "2026-11-05T01:02:53Z",
+      "timestamp": 1793840573000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://link.springer.com/chapter/10.1007/978-3-031-20077-9_21"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2022
+        ]
+      ]
+    },
+    "ISBN": [
+      "9783031200762",
+      "9783031200779"
+    ],
+    "references-count": 79,
+    "URL": "https://doi.org/10.1007/978-3-031-20077-9_21",
+    "relation": {
+      "is-part-of": [
+        {
+          "id-type": "doi",
+          "id": "https://doi.org/10.1007/978-3-031-20077-9",
+          "asserted-by": "object"
+        }
+      ]
+    },
+    "ISSN": [
+      "0302-9743",
+      "1611-3349"
+    ],
+    "issn-type": [
+      {
+        "value": "0302-9743",
+        "type": "print"
+      },
+      {
+        "value": "1611-3349",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2022
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "6 November 2022",
+        "order": 1,
+        "name": "first_online",
+        "label": "First Online",
+        "group": {
+          "name": "ChapterHistory",
+          "label": "Chapter History"
+        }
+      },
+      {
+        "value": "ECCV",
+        "order": 1,
+        "name": "conference_acronym",
+        "label": "Conference Acronym",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "European Conference on Computer Vision",
+        "order": 2,
+        "name": "conference_name",
+        "label": "Conference Name",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "Tel Aviv",
+        "order": 3,
+        "name": "conference_city",
+        "label": "Conference City",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "Israel",
+        "order": 4,
+        "name": "conference_country",
+        "label": "Conference Country",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "2022",
+        "order": 5,
+        "name": "conference_year",
+        "label": "Conference Year",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "23 October 2022",
+        "order": 7,
+        "name": "conference_start_date",
+        "label": "Conference Start Date",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "27 October 2022",
+        "order": 8,
+        "name": "conference_end_date",
+        "label": "Conference End Date",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "17",
+        "order": 9,
+        "name": "conference_number",
+        "label": "Conference Number",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "eccv2022",
+        "order": 10,
+        "name": "conference_id",
+        "label": "Conference ID",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "https://eccv2022.ecva.net/",
+        "order": 11,
+        "name": "conference_url",
+        "label": "Conference URL",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "Double-blind",
+        "order": 1,
+        "name": "type",
+        "label": "Type",
+        "group": {
+          "name": "ConfEventPeerReviewInformation",
+          "label": "Peer Review Information (provided by the conference organizers)"
+        }
+      },
+      {
+        "value": "CMT",
+        "order": 2,
+        "name": "conference_management_system",
+        "label": "Conference Management System",
+        "group": {
+          "name": "ConfEventPeerReviewInformation",
+          "label": "Peer Review Information (provided by the conference organizers)"
+        }
+      },
+      {
+        "value": "5804",
+        "order": 3,
+        "name": "number_of_submissions_sent_for_review",
+        "label": "Number of Submissions Sent for Review",
+        "group": {
+          "name": "ConfEventPeerReviewInformation",
+          "label": "Peer Review Information (provided by the conference organizers)"
+        }
+      },
+      {
+        "value": "1645",
+        "order": 4,
+        "name": "number_of_full_papers_accepted",
+        "label": "Number of Full Papers Accepted",
+        "group": {
+          "name": "ConfEventPeerReviewInformation",
+          "label": "Peer Review Information (provided by the conference organizers)"
+        }
+      },
+      {
+        "value": "0",
+        "order": 5,
+        "name": "number_of_short_papers_accepted",
+        "label": "Number of Short Papers Accepted",
+        "group": {
+          "name": "ConfEventPeerReviewInformation",
+          "label": "Peer Review Information (provided by the conference organizers)"
+        }
+      },
+      {
+        "value": "28% - The value is computed by the equation \"Number of Full Papers Accepted / Number of Submissions Sent for Review * 100\" and then rounded to a whole number.",
+        "order": 6,
+        "name": "acceptance_rate_of_full_papers",
+        "label": "Acceptance Rate of Full Papers",
+        "group": {
+          "name": "ConfEventPeerReviewInformation",
+          "label": "Peer Review Information (provided by the conference organizers)"
+        }
+      },
+      {
+        "value": "3.21",
+        "order": 7,
+        "name": "average_number_of_reviews_per_paper",
+        "label": "Average Number of Reviews per Paper",
+        "group": {
+          "name": "ConfEventPeerReviewInformation",
+          "label": "Peer Review Information (provided by the conference organizers)"
+        }
+      },
+      {
+        "value": "3.91",
+        "order": 8,
+        "name": "average_number_of_papers_per_reviewer",
+        "label": "Average Number of Papers per Reviewer",
+        "group": {
+          "name": "ConfEventPeerReviewInformation",
+          "label": "Peer Review Information (provided by the conference organizers)"
+        }
+      },
+      {
+        "value": "Yes",
+        "order": 9,
+        "name": "external_reviewers_involved",
+        "label": "External Reviewers Involved",
+        "group": {
+          "name": "ConfEventPeerReviewInformation",
+          "label": "Peer Review Information (provided by the conference organizers)"
+        }
+      },
+      {
+        "value": "This content has been made available to all.",
+        "name": "free",
+        "label": "Free to read"
+      }
+    ]
+  }
+}

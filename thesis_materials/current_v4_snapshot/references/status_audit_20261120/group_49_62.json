@@ -1,0 +1,239 @@
+[
+  {
+    "number": 49,
+    "id": "2312.03275",
+    "title": "VLFM: Vision-Language Frontier Maps for Zero-Shot Semantic Navigation",
+    "exists": true,
+    "arxiv_year": 2023,
+    "published_year": 2024,
+    "venue": "2024 IEEE International Conference on Robotics and Automation (ICRA)",
+    "doi": "10.1109/ICRA57147.2024.10610712",
+    "status": "正式发表",
+    "evidence_urls": [
+      "https://arxiv.org/abs/2312.03275",
+      "https://doi.org/10.1109/ICRA57147.2024.10610712"
+    ],
+    "notes": "会议正式发表；Crossref与IEEE一手记录一致。",
+    "checked_on": "2026-11-20"
+  },
+  {
+    "number": 50,
+    "id": "2307.06135",
+    "title": "SayPlan: Grounding Large Language Models using 3D Scene Graphs for Scalable Robot Task Planning",
+    "exists": true,
+    "arxiv_year": 2023,
+    "published_year": 2023,
+    "venue": "Proceedings of the 7th Conference on Robot Learning, PMLR 229:23–72",
+    "doi": null,
+    "status": "正式发表",
+    "evidence_urls": [
+      "https://arxiv.org/abs/2307.06135",
+      "https://proceedings.mlr.press/v229/rana23a.html"
+    ],
+    "notes": "会议正式论文集记录。",
+    "checked_on": "2026-11-20"
+  },
+  {
+    "number": 51,
+    "id": "2307.05973",
+    "title": "VoxPoser: Composable 3D Value Maps for Robotic Manipulation with Language Models",
+    "exists": true,
+    "arxiv_year": 2023,
+    "published_year": 2023,
+    "venue": "Proceedings of the 7th Conference on Robot Learning, PMLR 229:540–562",
+    "doi": null,
+    "status": "正式发表",
+    "evidence_urls": [
+      "https://arxiv.org/abs/2307.05973",
+      "https://proceedings.mlr.press/v229/huang23b.html"
+    ],
+    "notes": "会议正式论文集记录。",
+    "checked_on": "2026-11-20"
+  },
+  {
+    "number": 52,
+    "id": "1909.10838",
+    "title": "Talk2Car: Taking Control of Your Self-Driving Car",
+    "exists": true,
+    "arxiv_year": 2019,
+    "published_year": 2019,
+    "venue": "EMNLP-IJCNLP 2019:2088–2098",
+    "doi": "10.18653/v1/D19-1215",
+    "status": "正式发表",
+    "evidence_urls": [
+      "https://arxiv.org/abs/1909.10838",
+      "https://aclanthology.org/D19-1215/"
+    ],
+    "notes": "ACL正式论文集记录。",
+    "checked_on": "2026-11-20"
+  },
+  {
+    "number": 53,
+    "id": "2409.12191",
+    "title": "Qwen2-VL: Enhancing Vision-Language Model's Perception of the World at Any Resolution",
+    "exists": true,
+    "arxiv_year": 2024,
+    "published_year": null,
+    "venue": null,
+    "doi": null,
+    "status": "预印本已确认；本轮未确认正式出版",
+    "evidence_urls": [
+      "https://arxiv.org/abs/2409.12191"
+    ],
+    "notes": "arXiv论文身份已确认；本轮未取得对应正式期刊或会议出版的一手记录，按预印本处理。",
+    "checked_on": "2026-11-20"
+  },
+  {
+    "number": 54,
+    "id": "2502.13923",
+    "title": "Qwen2.5-VL Technical Report",
+    "exists": true,
+    "arxiv_year": 2025,
+    "published_year": null,
+    "venue": null,
+    "doi": null,
+    "status": "预印本已确认；本轮未确认正式出版",
+    "evidence_urls": [
+      "https://arxiv.org/abs/2502.13923"
+    ],
+    "notes": "arXiv技术报告型预印本，符合用户允许的预印本类别；不将技术报告称为已同行评审论文。",
+    "checked_on": "2026-11-20"
+  },
+  {
+    "number": 55,
+    "id": "2106.09685",
+    "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+    "exists": true,
+    "arxiv_year": 2021,
+    "published_year": 2022,
+    "venue": "International Conference on Learning Representations (ICLR) 2022",
+    "doi": null,
+    "status": "正式发表",
+    "evidence_urls": [
+      "https://arxiv.org/abs/2106.09685",
+      "https://openreview.net/pdf?id=nZeVKeeFYf9"
+    ],
+    "notes": "OpenReview正式PDF页首标注Published as a conference paper at ICLR 2022。预印本首发2021。",
+    "checked_on": "2026-11-20"
+  },
+  {
+    "number": 56,
+    "id": "2305.14314",
+    "title": "QLoRA: Efficient Finetuning of Quantized LLMs",
+    "exists": true,
+    "arxiv_year": 2023,
+    "published_year": 2023,
+    "venue": "Advances in Neural Information Processing Systems 36 (NeurIPS 2023)",
+    "doi": "10.52202/075280-0441",
+    "status": "正式发表",
+    "evidence_urls": [
+      "https://arxiv.org/abs/2305.14314",
+      "https://proceedings.neurips.cc/paper_files/paper/2023/hash/1feb87871436031bdc0f2beaa62a049b-Abstract.html"
+    ],
+    "notes": "NeurIPS正式论文集记录。",
+    "checked_on": "2026-11-20"
+  },
+  {
+    "number": 57,
+    "id": "Dijkstra1959",
+    "title": "A note on two problems in connexion with graphs",
+    "exists": true,
+    "arxiv_year": null,
+    "published_year": 1959,
+    "venue": "Numerische Mathematik 1:269–271",
+    "doi": "10.1007/BF01386390",
+    "status": "正式发表",
+    "evidence_urls": [
+      "https://doi.org/10.1007/BF01386390",
+      "https://link.springer.com/article/10.1007/BF01386390"
+    ],
+    "notes": "Springer与Crossref题名、作者及1959年记录相符。",
+    "checked_on": "2026-11-20"
+  },
+  {
+    "number": 58,
+    "id": "Hart1968",
+    "title": "A Formal Basis for the Heuristic Determination of Minimum Cost Paths",
+    "exists": true,
+    "arxiv_year": null,
+    "published_year": 1968,
+    "venue": "IEEE Transactions on Systems Science and Cybernetics 4(2):100–107",
+    "doi": "10.1109/TSSC.1968.300136",
+    "status": "正式发表",
+    "evidence_urls": [
+      "https://doi.org/10.1109/TSSC.1968.300136",
+      "https://ieeexplore.ieee.org/abstract/document/4082128/authors"
+    ],
+    "notes": "IEEE与Crossref记录一致。",
+    "checked_on": "2026-11-20"
+  },
+  {
+    "number": 59,
+    "id": "1105.1186",
+    "title": "Sampling-based Algorithms for Optimal Motion Planning",
+    "exists": true,
+    "arxiv_year": 2011,
+    "published_year": 2011,
+    "venue": "The International Journal of Robotics Research 30(7):846–894",
+    "doi": "10.1177/0278364911406761",
+    "status": "正式发表",
+    "evidence_urls": [
+      "https://arxiv.org/abs/1105.1186",
+      "https://journals.sagepub.com/doi/abs/10.1177/0278364911406761"
+    ],
+    "notes": "期刊论文，Crossref注册元数据已获取；出版页面部分请求超时，arXiv原始论文可核实。",
+    "checked_on": "2026-11-20"
+  },
+  {
+    "number": 60,
+    "id": "1404.2334",
+    "title": "Informed RRT*: Optimal Sampling-based Path Planning Focused via Direct Sampling of an Admissible Ellipsoidal Heuristic",
+    "exists": true,
+    "arxiv_year": 2014,
+    "published_year": 2014,
+    "venue": "2014 IEEE/RSJ International Conference on Intelligent Robots and Systems:2997–3004",
+    "doi": "10.1109/IROS.2014.6942976",
+    "status": "正式发表",
+    "evidence_urls": [
+      "https://arxiv.org/abs/1404.2334",
+      "https://doi.org/10.1109/IROS.2014.6942976"
+    ],
+    "notes": "arXiv Journal reference与Crossref出版信息一致。",
+    "checked_on": "2026-11-20"
+  },
+  {
+    "number": 61,
+    "id": "Dolgov2010",
+    "title": "Path Planning for Autonomous Vehicles in Unknown Semi-structured Environments",
+    "exists": true,
+    "arxiv_year": null,
+    "published_year": 2010,
+    "venue": "The International Journal of Robotics Research 29(5):485–501",
+    "doi": "10.1177/0278364909359210",
+    "status": "正式发表",
+    "evidence_urls": [
+      "https://doi.org/10.1177/0278364909359210",
+      "https://journals.sagepub.com/doi/10.1177/0278364909359210"
+    ],
+    "notes": "SAGE正式期刊页与Crossref记录一致。",
+    "checked_on": "2026-11-20"
+  },
+  {
+    "number": 62,
+    "id": "2212.10156",
+    "title": "Planning-oriented Autonomous Driving",
+    "exists": true,
+    "arxiv_year": 2022,
+    "published_year": 2023,
+    "venue": "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2023",
+    "doi": null,
+    "status": "正式发表",
+    "evidence_urls": [
+      "https://arxiv.org/abs/2212.10156",
+      "https://openaccess.thecvf.com/content/CVPR2023/html/Hu_Planning-Oriented_Autonomous_Driving_CVPR_2023_paper.html",
+      "https://openaccess.thecvf.com/content/CVPR2023/papers/Hu_Planning-Oriented_Autonomous_Driving_CVPR_2023_paper.pdf"
+    ],
+    "notes": "CVF原始页面的检索内容与官方PDF均确认CVPR 2023，开放版本页码17853–17862；直接HTML请求曾403，已通过同站原始检索记录与PDF交叉核验。预印本首发2022。",
+    "checked_on": "2026-11-20"
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "rows": 1662,
+  "datasets": {
+    "KITTI Object": 64,
+    "KITTI Tracking": 90,
+    "nuScenes": 1508
+  },
+  "source": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/dataset_results_guide_20261115/逐帧结果位置索引.csv",
+  "sha256": "1c88705ac20e969151620ddf497d905fba36e7105f97e3c19b1acba7652295ac"
+}

@@ -1,0 +1,24 @@
+schema_version: stage6-config-v1
+output_root: /root/autodl-tmp/lizichong/outputs/project_v2/integration_regression
+scenes:
+  - scene-0916
+  - scene-0003
+determinism_runs: 2
+incremental_config: /root/autodl-tmp/lizichong/conceptgraph/hydra_configs/incremental_navigation.yaml
+required_stage2_selection:
+  scene-0916:
+    first_reachable: 24
+    joint_utility: 21
+  scene-0003:
+    first_reachable: 9
+    joint_utility: 11
+required_stage3_agreement: 1.0
+qwen_cache_source: /root/autodl-tmp/lizichong/outputs/project_v2/qwen_eval/cache
+runtime_policy:
+  detection: not_executed_cached_input
+  depth_generation: not_executed_cached_input
+  recorded_sequence_disclaimer: nuScenes是录制序列；规划路径不会改变后续传感器观测。
+static_checks:
+  pytest_path: tests
+  ruff_only_changed_python: true
+  git_diff_check: true

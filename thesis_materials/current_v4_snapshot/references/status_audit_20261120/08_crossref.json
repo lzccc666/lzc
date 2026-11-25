@@ -1,0 +1,323 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          20
+        ]
+      ],
+      "date-time": "2026-11-20T03:16:36Z",
+      "timestamp": 1795144596695,
+      "version": "4.10.3"
+    },
+    "reference-count": 26,
+    "publisher": "IEEE",
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2017,
+          5
+        ]
+      ]
+    },
+    "DOI": "10.1109/icra.2017.7989538",
+    "type": "proceedings-article",
+    "created": {
+      "date-parts": [
+        [
+          2017,
+          7,
+          25
+        ]
+      ],
+      "date-time": "2017-07-25T17:44:28Z",
+      "timestamp": 1501004668000
+    },
+    "page": "4628-4635",
+    "source": "Crossref",
+    "is-referenced-by-count": 543,
+    "title": [
+      "SemanticFusion: Dense 3D semantic mapping with convolutional neural networks"
+    ],
+    "prefix": "10.1109",
+    "author": [
+      {
+        "given": "John",
+        "family": "McCormac",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Ankur",
+        "family": "Handa",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Andrew",
+        "family": "Davison",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Stefan",
+        "family": "Leutenegger",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref1",
+        "article-title": "Indoor semantic segmentation using depth information",
+        "volume-title": "Proceedings of the InternationalConference on Learning Representations (ICLR)",
+        "author": "Couprie"
+      },
+      {
+        "key": "ref2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV.2015.304"
+      },
+      {
+        "key": "ref3",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s11263-009-0275-4"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-319-10584-0_23"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2015.7299105"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/cvpr.2016.442"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICRA.2014.6907236"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICRA.2016.7487708"
+      },
+      {
+        "key": "ref9",
+        "article-title": "Squeezenet: Alexnet-level accuracy with 50x fewer parameters and <1mb model size",
+        "author": "Iandola",
+        "year": "2016",
+        "journal-title": "CoRR"
+      },
+      {
+        "key": "ref10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2647868.2654889"
+      },
+      {
+        "key": "ref11",
+        "article-title": "Semantic Labeling of 3D Point Clouds for Indoor Scenes",
+        "author": "Koppula",
+        "year": "2011",
+        "journal-title": "Neural Information Processing Systems (NIPS)"
+      },
+      {
+        "key": "ref12",
+        "article-title": "Efficient Inference in’s Fully Connected CRFs with Gaussian Edge Potentials",
+        "author": "Krähenbühl",
+        "year": "2011",
+        "journal-title": "Neural Information Processing Systems (NIPS)"
+      },
+      {
+        "key": "ref13",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5555/2999134.2999257"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1186562.1015780"
+      },
+      {
+        "key": "ref15",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-319-10602-1_48"
+      },
+      {
+        "key": "ref16",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2015.7298965"
+      },
+      {
+        "key": "ref17",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV.2015.178"
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ISMAR.2014.6948422"
+      },
+      {
+        "key": "ref19",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/cvpr.2013.178"
+      },
+      {
+        "key": "ref20",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-642-33715-4_54"
+      },
+      {
+        "key": "ref21",
+        "article-title": "Very Deep Convolutional Networks for Large-Scale Image Recognition",
+        "volume-title": "Proceedings of the InternationalConference on Learning Representations (ICLR)",
+        "author": "Simonyan"
+      },
+      {
+        "key": "ref22",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2015.7298655"
+      },
+      {
+        "issue": "4",
+        "key": "ref23",
+        "first-page": "599",
+        "article-title": "Multi-resolution surfel maps for efficient dense 3d modeling and tracking",
+        "volume": "10",
+        "author": "Stuckler",
+        "year": "2015",
+        "journal-title": "Journal of Real-Time Image Processing JRTIP"
+      },
+      {
+        "key": "ref24",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2013.269"
+      },
+      {
+        "key": "ref25",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICRA.2015.7138983"
+      },
+      {
+        "key": "ref26",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.15607/RSS.2015.XI.001"
+      }
+    ],
+    "event": {
+      "name": "2017 IEEE International Conference on Robotics and Automation (ICRA)",
+      "location": "Singapore, Singapore",
+      "start": {
+        "date-parts": [
+          [
+            2017,
+            5,
+            29
+          ]
+        ]
+      },
+      "end": {
+        "date-parts": [
+          [
+            2017,
+            6,
+            3
+          ]
+        ]
+      }
+    },
+    "container-title": [
+      "2017 IEEE International Conference on Robotics and Automation (ICRA)"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx7/7960754/7988677/07989538.pdf?arnumber=7989538",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          25
+        ]
+      ],
+      "date-time": "2026-10-25T04:57:11Z",
+      "timestamp": 1792904231000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "http://ieeexplore.ieee.org/document/7989538/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2017,
+          5
+        ]
+      ]
+    },
+    "references-count": 26,
+    "URL": "https://doi.org/10.1109/icra.2017.7989538",
+    "relation": {},
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2017,
+          5
+        ]
+      ]
+    }
+  }
+}

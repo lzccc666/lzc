@@ -1,0 +1,509 @@
+[
+  {
+    "number": 1,
+    "title": [
+      "3D Dynamic Scene Graphs: Actionable Spatial Perception with Places, Objects, and Humans"
+    ],
+    "container": [
+      "Robotics: Science and Systems XVI"
+    ],
+    "DOI": "10.15607/rss.2020.xvi.079",
+    "published": {
+      "date-parts": [
+        [
+          2020,
+          7,
+          12
+        ]
+      ]
+    },
+    "print": null,
+    "online": {
+      "date-parts": [
+        [
+          2020,
+          7,
+          12
+        ]
+      ]
+    },
+    "page": null,
+    "volume": null,
+    "issue": null,
+    "url": "https://api.crossref.org/works/10.15607%2FRSS.2020.XVI.079"
+  },
+  {
+    "number": 2,
+    "title": [
+      "A Survey of Motion Planning and Control Techniques for Self-Driving Urban Vehicles"
+    ],
+    "container": [
+      "IEEE Transactions on Intelligent Vehicles"
+    ],
+    "DOI": "10.1109/tiv.2016.2578706",
+    "published": {
+      "date-parts": [
+        [
+          2016,
+          3
+        ]
+      ]
+    },
+    "print": {
+      "date-parts": [
+        [
+          2016,
+          3
+        ]
+      ]
+    },
+    "online": null,
+    "page": "33-55",
+    "volume": "1",
+    "issue": "1",
+    "url": "https://api.crossref.org/works/10.1109%2FTIV.2016.2578706"
+  },
+  {
+    "number": 3,
+    "title": [
+      "nuScenes: A Multimodal Dataset for Autonomous Driving"
+    ],
+    "container": [
+      "2020 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)"
+    ],
+    "DOI": "10.1109/cvpr42600.2020.01164",
+    "published": {
+      "date-parts": [
+        [
+          2020,
+          6
+        ]
+      ]
+    },
+    "print": {
+      "date-parts": [
+        [
+          2020,
+          6
+        ]
+      ]
+    },
+    "online": null,
+    "page": "11618-11628",
+    "volume": null,
+    "issue": null,
+    "url": "https://api.crossref.org/works/10.1109%2FCVPR42600.2020.01164"
+  },
+  {
+    "number": 4,
+    "title": [
+      "Vision meets robotics: The KITTI dataset"
+    ],
+    "container": [
+      "The International Journal of Robotics Research"
+    ],
+    "DOI": "10.1177/0278364913491297",
+    "published": {
+      "date-parts": [
+        [
+          2013,
+          8,
+          23
+        ]
+      ]
+    },
+    "print": {
+      "date-parts": [
+        [
+          2013,
+          9
+        ]
+      ]
+    },
+    "online": {
+      "date-parts": [
+        [
+          2013,
+          8,
+          23
+        ]
+      ]
+    },
+    "page": "1231-1237",
+    "volume": "32",
+    "issue": "11",
+    "url": "https://api.crossref.org/works/10.1177%2F0278364913491297"
+  },
+  {
+    "number": 5,
+    "title": [
+      "ORB-SLAM: A Versatile and Accurate Monocular SLAM System"
+    ],
+    "container": [
+      "IEEE Transactions on Robotics"
+    ],
+    "DOI": "10.1109/tro.2015.2463671",
+    "published": {
+      "date-parts": [
+        [
+          2015,
+          10
+        ]
+      ]
+    },
+    "print": {
+      "date-parts": [
+        [
+          2015,
+          10
+        ]
+      ]
+    },
+    "online": null,
+    "page": "1147-1163",
+    "volume": "31",
+    "issue": "5",
+    "url": "https://api.crossref.org/works/10.1109%2FTRO.2015.2463671"
+  },
+  {
+    "number": 6,
+    "title": [
+      "ORB-SLAM2: An Open-Source SLAM System for Monocular, Stereo, and RGB-D Cameras"
+    ],
+    "container": [
+      "IEEE Transactions on Robotics"
+    ],
+    "DOI": "10.1109/tro.2017.2705103",
+    "published": {
+      "date-parts": [
+        [
+          2017,
+          10
+        ]
+      ]
+    },
+    "print": {
+      "date-parts": [
+        [
+          2017,
+          10
+        ]
+      ]
+    },
+    "online": null,
+    "page": "1255-1262",
+    "volume": "33",
+    "issue": "5",
+    "url": "https://api.crossref.org/works/10.1109%2FTRO.2017.2705103"
+  },
+  {
+    "number": 7,
+    "title": [
+      "ORB-SLAM3: An Accurate Open-Source Library for Visual, Visual–Inertial, and Multimap SLAM"
+    ],
+    "container": [
+      "IEEE Transactions on Robotics"
+    ],
+    "DOI": "10.1109/tro.2021.3075644",
+    "published": {
+      "date-parts": [
+        [
+          2021,
+          12
+        ]
+      ]
+    },
+    "print": {
+      "date-parts": [
+        [
+          2021,
+          12
+        ]
+      ]
+    },
+    "online": null,
+    "page": "1874-1890",
+    "volume": "37",
+    "issue": "6",
+    "url": "https://api.crossref.org/works/10.1109%2FTRO.2021.3075644"
+  },
+  {
+    "number": 8,
+    "title": [
+      "SemanticFusion: Dense 3D semantic mapping with convolutional neural networks"
+    ],
+    "container": [
+      "2017 IEEE International Conference on Robotics and Automation (ICRA)"
+    ],
+    "DOI": "10.1109/icra.2017.7989538",
+    "published": {
+      "date-parts": [
+        [
+          2017,
+          5
+        ]
+      ]
+    },
+    "print": {
+      "date-parts": [
+        [
+          2017,
+          5
+        ]
+      ]
+    },
+    "online": null,
+    "page": "4628-4635",
+    "volume": null,
+    "issue": null,
+    "url": "https://api.crossref.org/works/10.1109%2FICRA.2017.7989538"
+  },
+  {
+    "number": 9,
+    "title": [
+      "PanopticFusion: Online Volumetric Semantic Mapping at the Level of Stuff and Things"
+    ],
+    "container": [
+      "2019 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)"
+    ],
+    "DOI": "10.1109/iros40897.2019.8967890",
+    "published": {
+      "date-parts": [
+        [
+          2019,
+          11
+        ]
+      ]
+    },
+    "print": {
+      "date-parts": [
+        [
+          2019,
+          11
+        ]
+      ]
+    },
+    "online": null,
+    "page": "4205-4212",
+    "volume": null,
+    "issue": null,
+    "url": "https://api.crossref.org/works/10.1109%2FIROS40897.2019.8967890"
+  },
+  {
+    "number": 10,
+    "title": [
+      "Kimera: an Open-Source Library for Real-Time Metric-Semantic Localization and Mapping"
+    ],
+    "container": [
+      "2020 IEEE International Conference on Robotics and Automation (ICRA)"
+    ],
+    "DOI": "10.1109/icra40945.2020.9196885",
+    "published": {
+      "date-parts": [
+        [
+          2020,
+          5
+        ]
+      ]
+    },
+    "print": {
+      "date-parts": [
+        [
+          2020,
+          5
+        ]
+      ]
+    },
+    "online": null,
+    "page": "1689-1696",
+    "volume": null,
+    "issue": null,
+    "url": "https://api.crossref.org/works/10.1109%2FICRA40945.2020.9196885"
+  },
+  {
+    "number": 11,
+    "title": [
+      "Kimera-Multi: Robust, Distributed, Dense Metric-Semantic SLAM for Multi-Robot Systems"
+    ],
+    "container": [
+      "IEEE Transactions on Robotics"
+    ],
+    "DOI": "10.1109/tro.2021.3137751",
+    "published": {
+      "date-parts": [
+        [
+          2022,
+          8
+        ]
+      ]
+    },
+    "print": {
+      "date-parts": [
+        [
+          2022,
+          8
+        ]
+      ]
+    },
+    "online": null,
+    "page": "2022-2038",
+    "volume": "38",
+    "issue": "4",
+    "url": "https://api.crossref.org/works/10.1109%2FTRO.2021.3137751"
+  },
+  {
+    "number": 12,
+    "title": [
+      "Fusion++: Volumetric Object-Level SLAM"
+    ],
+    "container": [
+      "2018 International Conference on 3D Vision (3DV)"
+    ],
+    "DOI": "10.1109/3dv.2018.00015",
+    "published": {
+      "date-parts": [
+        [
+          2018,
+          9
+        ]
+      ]
+    },
+    "print": {
+      "date-parts": [
+        [
+          2018,
+          9
+        ]
+      ]
+    },
+    "online": null,
+    "page": "32-41",
+    "volume": null,
+    "issue": null,
+    "url": "https://api.crossref.org/works/10.1109%2F3DV.2018.00015"
+  },
+  {
+    "number": 13,
+    "title": [
+      "MaskFusion: Real-Time Recognition, Tracking and Reconstruction of Multiple Moving Objects"
+    ],
+    "container": [
+      "2018 IEEE International Symposium on Mixed and Augmented Reality (ISMAR)"
+    ],
+    "DOI": "10.1109/ismar.2018.00024",
+    "published": {
+      "date-parts": [
+        [
+          2018,
+          10
+        ]
+      ]
+    },
+    "print": {
+      "date-parts": [
+        [
+          2018,
+          10
+        ]
+      ]
+    },
+    "online": null,
+    "page": "10-20",
+    "volume": null,
+    "issue": null,
+    "url": "https://api.crossref.org/works/10.1109%2FISMAR.2018.00024"
+  },
+  {
+    "number": 14,
+    "title": [
+      "DynaSLAM: Tracking, Mapping, and Inpainting in Dynamic Scenes"
+    ],
+    "container": [
+      "IEEE Robotics and Automation Letters"
+    ],
+    "DOI": "10.1109/lra.2018.2860039",
+    "published": {
+      "date-parts": [
+        [
+          2018,
+          10
+        ]
+      ]
+    },
+    "print": {
+      "date-parts": [
+        [
+          2018,
+          10
+        ]
+      ]
+    },
+    "online": null,
+    "page": "4076-4083",
+    "volume": "3",
+    "issue": "4",
+    "url": "https://api.crossref.org/works/10.1109%2FLRA.2018.2860039"
+  },
+  {
+    "number": 15,
+    "title": [
+      "PointPillars: Fast Encoders for Object Detection From Point Clouds"
+    ],
+    "container": [
+      "2019 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)"
+    ],
+    "DOI": "10.1109/cvpr.2019.01298",
+    "published": {
+      "date-parts": [
+        [
+          2019,
+          6
+        ]
+      ]
+    },
+    "print": {
+      "date-parts": [
+        [
+          2019,
+          6
+        ]
+      ]
+    },
+    "online": null,
+    "page": "12689-12697",
+    "volume": null,
+    "issue": null,
+    "url": "https://api.crossref.org/works/10.1109%2FCVPR.2019.01298"
+  },
+  {
+    "number": 16,
+    "title": [
+      "Center-based 3D Object Detection and Tracking"
+    ],
+    "container": [
+      "2021 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)"
+    ],
+    "DOI": "10.1109/cvpr46437.2021.01161",
+    "published": {
+      "date-parts": [
+        [
+          2021,
+          6
+        ]
+      ]
+    },
+    "print": {
+      "date-parts": [
+        [
+          2021,
+          6
+        ]
+      ]
+    },
+    "online": null,
+    "page": "11779-11788",
+    "volume": null,
+    "issue": null,
+    "url": "https://api.crossref.org/works/10.1109%2FCVPR46437.2021.01161"
+  }
+]

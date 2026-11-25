@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import pickle
 from pathlib import Path
 
 import matplotlib
@@ -14,6 +13,15 @@ from matplotlib.font_manager import FontProperties
 from matplotlib.lines import Line2D
 from mpl_toolkits.mplot3d import Axes3D  # noqa: F401
 import numpy as np
+
+from conceptgraph.scenegraph.relations import load_scene_graph_edges
+from conceptgraph.scenegraph.visualization import (
+    edge_alpha,
+    edge_width,
+    filter_edges,
+    parse_relation_types,
+    relation_style,
+)
 
 
 CHINESE_FONT = FontProperties(fname="/root/autodl-tmp/lizichong/checkpoint/fonts/NotoSansCJKsc-Regular.otf")
@@ -35,6 +43,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--edges", default=None)
     parser.add_argument("--out-dir", required=True)
     parser.add_argument("--vehicle-pose", default=None, help="Optional vehicle pose x,y,z to plot")
+    parser.add_argument("--relation-types", default=None, help="Comma-separated relation filter")
+    parser.add_argument("--minimum-confidence", type=float, default=0.0)
     return parser.parse_args()
 
 
@@ -45,10 +55,11 @@ def main() -> None:
     out_dir.mkdir(parents=True, exist_ok=True)
 
     nodes = json.load(open(args.scene_graph, "r", encoding="utf-8"))
-    edges = []
-    if args.edges and Path(args.edges).exists():
-        with open(args.edges, "rb") as f:
-            edges = pickle.load(f)
+    edges = filter_edges(
+        load_scene_graph_edges(args.edges),
+        relation_types=parse_relation_types(args.relation_types),
+        minimum_confidence=args.minimum_confidence,
+    )
     vehicle_pose = None
     if args.vehicle_pose:
         vehicle_pose = np.asarray([float(v) for v in args.vehicle_pose.split(",")], dtype=float)
@@ -87,19 +98,37 @@ def main() -> None:
         center_3d = center.copy()
         center_3d[2] = display_height(center_3d[2], str(node.get("object_tag", "")), ground_z, xy_span)
         node_map[int(node["id"])] = center_3d
-    for src, dst, relation in edges:
-        if int(src) in node_map and int(dst) in node_map:
-            p0 = node_map[int(src)]
-            p1 = node_map[int(dst)]
+    for edge in edges:
+        if edge.source in node_map and edge.target in node_map:
+            p0 = node_map[edge.source]
+            p1 = node_map[edge.target]
+            style = relation_style(edge.relation)
             ax.plot(
                 [p0[0], p1[0]],
                 [p0[1], p1[1]],
                 [p0[2], p1[2]],
-                linewidth=1.5,
-                color="#64748b",
-                linestyle=edge_style(str(relation)),
-                alpha=0.75,
+                linewidth=edge_width(edge),
+                color=style["color"],
+                linestyle=style["matplotlib"],
+                alpha=edge_alpha(edge),
             )
+            if edge.directed:
+                delta = p1 - p0
+                start = p0 + 0.72 * delta
+                arrow = 0.20 * delta
+                ax.quiver(
+                    start[0],
+                    start[1],
+                    start[2],
+                    arrow[0],
+                    arrow[1],
+                    arrow[2],
+                    color=style["color"],
+                    linewidth=max(1.0, edge_width(edge) * 0.7),
+                    alpha=edge_alpha(edge),
+                    arrow_length_ratio=0.45,
+                    normalize=False,
+                )
 
     if vehicle_pose is not None and vehicle_pose.size >= 3:
         ego_z = max(float(xy_span) * 0.015, 1.05)
@@ -129,9 +158,10 @@ def main() -> None:
     legend_ax.axis("off")
     legend_ax.legend(
         handles=[
-            Line2D([0], [0], color="#64748b", lw=2, linestyle="-", label="实线：附近"),
-            Line2D([0], [0], color="#64748b", lw=2, linestyle="--", label="虚线：前方/后方"),
-            Line2D([0], [0], color="#64748b", lw=2, linestyle=":", label="点线：左侧/右侧"),
+            Line2D([0], [0], color="#5B6770", lw=2, linestyle="-", label="附近（无向）"),
+            Line2D([0], [0], color="#0072B2", lw=2, linestyle=":", label="左侧（箭头）"),
+            Line2D([0], [0], color="#009E73", lw=2, linestyle="--", label="前方（箭头）"),
+            Line2D([0], [0], color="#6B7280", lw=1, alpha=0.35, label="线宽/透明度：置信度"),
         ],
         loc="center left",
         frameon=False,
@@ -251,12 +281,7 @@ def colors_to_cn(colors) -> str:
 
 
 def edge_style(relation: str) -> str:
-    relation = str(relation).lower().strip()
-    if relation in {"in_front_of", "behind", "front", "back"}:
-        return "--"
-    if relation in {"left_of", "right_of", "left", "right"}:
-        return ":"
-    return "-"
+    return relation_style(relation)["matplotlib"]
 
 
 def relation_to_cn(relation: str) -> str:

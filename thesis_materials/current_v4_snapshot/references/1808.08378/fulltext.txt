@@ -1,0 +1,1066 @@
+Fusion++: Volumetric Object-Level SLAM
+John McCormac∗Ronald Clark∗Michael Bloesch Andrew J. Davison Stefan Leutenegger
+Dyson Robotics Laboratory
+Department of Computing, Imperial College London
+{brendan.mccormac13,ronald.clark,m.bloesch,a.davison,s.leutenegger}@imperial.ac.uk
+Reconstructed Object Inventory
+Live Frame View
+Object-centric Map
+Figure 1: Fusion++ with pose graph and discovered inventory on the public fr2 desk sequence [33].
+Abstract
+We propose an online object-level SLAM system which
+builds a persistent and accurate 3D graph map of arbi-
+trary reconstructed objects. As an RGB-D camera browses
+a cluttered indoor scene, Mask-RCNN instance segmenta-
+tions are used to initialise compact per-object Truncated
+Signed Distance Function (TSDF) reconstructions with ob-
+ject size-dependent resolutions and a novel 3D foreground
+mask. Reconstructed objects are stored in an optimisable
+6DoF pose graph which is our only persistent map repre-
+sentation. Objects are incrementally reﬁned via depth fu-
+sion, and are used for tracking, relocalisation and loop clo-
+sure detection. Loop closures cause adjustments in the rel-
+ative pose estimates of object instances, but no intra-object
+warping.
+Each object also carries semantic information
+which is reﬁned over time and an existence probability to
+account for spurious instance predictions.
+We demonstrate our approach on a hand-held RGB-D
+sequence from a cluttered ofﬁce scene with a large number
+and variety of object instances, highlighting how the sys-
+tem closes loops and makes good use of existing objects on
+repeated loops. We quantitatively evaluate the trajectory er-
+ror of our system against a baseline approach on the RGB-
+D SLAM benchmark, and qualitatively compare reconstruc-
+tion quality of discovered objects on the YCB video dataset.
+Performance evaluation shows our approach is highly mem-
+ory efﬁcient and runs online at 4-8Hz (excluding relocalisa-
+tion) despite not being optimised at the software level.
+∗These two authors contributed equally.
+1. Introduction
+Indoor scene understanding and 3D mapping is a foun-
+dational technology that can enable autonomous real-world
+robotic task completion and also provide a common in-
+terface for more intelligent and intuitive human-map and
+human-robot interactions. To enable this requires a careful
+choice of map representation. One particularly useful repre-
+sentation is to build an object-oriented map. We argue this
+is a natural and efﬁcient way to represent the things that are
+most important for robotic scene understanding, planning
+and interaction; and it is also highly suitable as the basis for
+human-robot communication.
+In an object level map, the geometric elements which
+make up an object are grouped together as instances and
+can be labelled and reasoned about as units, in contrast to
+approaches which independently label dense geometry such
+as surfels or points. This approach also naturally paves the
+way towards interaction and dynamic object reasoning, al-
+though our system currently assumes a static environment
+and does not yet aim to track individual dynamic objects.
+In this work we demonstrate an object-oriented online
+SLAM system with a focus on indoor scene understand-
+ing using RGB-D data. We aim to produce semantically
+labelled TSDF reconstructions of object instances without
+strong a priori knowledge of the object types present in a
+scene. We use Mask R-CNN [13, 40] to provide 2D instance
+mask predictions and fuse these masks online into the TSDF
+reconstruction (see Figure 1) along with a 3D ‘voxel mask’
+to fuse the instance foreground (see Figure 3).
+Unlike many dense reconstruction systems [24, 39, 43,
+1
+arXiv:1808.08378v2  [cs.CV]  28 Aug 2018
+
+38, 3, 8] we make no attempt to keep a dense representa-
+tion of the entire scene. Our persistent map consists of only
+reconstructed object instances. This allows the use of rigid
+TSDF volumes for high-quality reconstructions to be com-
+bined with the ﬂexibility of a pose-graph system without
+the complication of performing intra-TSDF deformations.
+Each object is contained within a separate volume, allowing
+each one to have a different, suitable, resolution with larger
+objects integrated into lower ﬁdelity TSDF volumes than
+their smaller counterparts. It also enables tracking large
+scenes with relatively small memory usage and high-ﬁdelity
+reconstructions by excluding large volumes of free-space.
+A throw-away local TSDF of unidentiﬁed structure is used
+to assist tracking and model occlusions.
+We capture a repeated loop of an indoor ofﬁce scene to
+evaluate the system under conditions of occasional poorly
+constrained ICP tracking. The scene also contains a large
+number and variety of objects which not only exhibit the
+generality of the approach but is useful for evaluating the
+memory and run-time scaling of the method with many
+objects. While not optimised for real-time operation, we
+achieve ∼4-8Hz operating performance (excluding relocal-
+isation/graph optimisation) on our ofﬁce sequence and are
+conﬁdent that with sufﬁcient optimisation true real-time op-
+eration is possible. We also quantitatively evaluate the tra-
+jectory error improvement of our system over a baseline ap-
+proach on the RGB-D SLAM Benchmark [33].
+In this work we make the following contributions:
+• A generic object-oriented SLAM system which per-
+forms mapping as variable resolution 3D instance re-
+construction.
+• Per-frame instance detections are robustly fused using
+voxel foreground masks and missing detections are ac-
+counted for with an “existence” probability.
+• We show high quality object reconstruction within
+globally consistent loop-closed object SLAM maps.
+2. Related work
+For reconstruction, we follow the TSDF formulation of
+Curless and Levoy [6] and the KinectFusion approach of
+Newcombe et al. [23] for local tracking. Our approach to
+object-level reconstruction is related to the work of Zhou
+and Koltun [42], where “points of interest” were detected
+and the aim was to reconstruct the scene so as to preserve
+detail in these areas while distributing drift and registra-
+tion errors throughout the rest of the environment. In our
+work we analogously aim to optimise the quality of object
+reconstructions and allow residual error to be absorbed in
+the edges of the pose graph.
+SLAM++ by Salas-Moreno et al. [30] was an early
+RGB-D object-oriented mapping system. They used point
+pair features for object detection and a pose graph for
+global optimisation.
+The drawback was the requirement
+that the full set of object instances, with their very detailed
+geometric shapes, had to be known beforehand and pre-
+processed in an ofﬂine stage before running. St¨uckler and
+Behnke [31] also previously tracked object models learned
+beforehand by registering them to a multi-resolution sur-
+fel map.
+Tateno et al. [35] used a pre-trained database
+of objects to generate descriptors, but they used a Kinect-
+Fusion [23] TSDF to incrementally segment regions of a
+reconstructed TSDF volume and match 3D descriptors di-
+rectly against those of other objects in the database.
+A number of approaches to object discovery exist [5, 32,
+4]. Most related to ours is the work of Choudhary et al. [4]
+where they localised the camera in an online manner using
+discovered objects as landmarks in a pose-graph formula-
+tion similar to ours, although they used the point cloud cen-
+troid only whereas our pose-graph object landmark edges
+are full 6 DoF SE(3) constraints provided from ICP on
+dense volumes. They showed that the approach improves
+SLAM results by detecting loop closures. However, unlike
+our work they use point-clouds rather than TSDFs and do
+not train an object detector but instead they use the unsu-
+pervised segmentation approach of Trevor et al. [36].
+Another approach to object discovery is through dense
+change detection between successive mappings of the same
+scene [12, 19, 11]. Unlike these systems, our system is de-
+signed for online use and does not require changes to occur
+in a scene before objects are detected. These approaches are
+complementary to our proposed approach, providing super-
+visory signals for CNN ﬁne-tuning, and enabling additional
+object database ﬁltering mechanisms.
+In RGB-only SLAM for object detection, Pillai and
+Leonard [26] use ORB-SLAM [21] to assist object recogni-
+tion. They use a semi-dense map to produce object propos-
+als and aggregate detection evidence across multiple views
+for object detection and classiﬁcation. MO-SLAM by Dhar-
+masiri et al. [9] focused on object discovery through du-
+plicates. They use ORB [28] descriptors to search for sets
+of landmarks which can be grouped by a single rigid body
+transformation. This approach is similar to our relocali-
+sation method, which uses BRISK features [18] but aug-
+mented with depth.
+Very closely related to ours is work by S¨underhauf et
+al. [34], who proposed an object-oriented mapping system
+composed of instances using bounding box detections from
+a CNN and an unsupervised geometric segmentation algo-
+rithm using RGB-D data. Although the premise is closely
+related, there are a number of differences when compared
+to our system. They use a separate SLAM system, ORB-
+SLAM2 [22], whereas in our system the discovered object
+instances are tightly integrated into the SLAM system itself.
+We also fuse instances into separate TSDF volumes with a
+
+foreground mask from 2D instance mask detection rather
+than using point cloud segments.
+A number of very recent related works have also been an-
+nounced. Pham et al. [25] fuse a TSDF of the entire scene
+and semantically label voxels using a CNN followed by a
+progressive CRF. To segment instances, instead of fusing
+native instance detections, they opt to cluster semantically
+labelled voxels in 3D. This approach, although a natural
+next-step from dense 3D semantic mapping, is not suitable
+for object-level pose graph optimisation and reconstruction
+as the instances are embedded within a shared TSDF. It also
+requires semantic recognition as a pre-requisite for object
+discovery which could prove problematic for similar or un-
+recognised objects in close proximity (Figure 3).
+R¨unz and Agapito [29], as in our method, use Mask R-
+CNN predictions to detect object instances. They aim to
+densely reconstruct and track moving instances using an
+ElasticFusion [38] surfel model for each object, as well as
+for the background static map. Although using the same
+prediction model, the approach and goals of these two sys-
+tems differ substantially. Unlike the present work, they do
+not aim to reconstruct high-quality objects as pose-graph
+landmarks in room-scale SLAM. We on the other hand do
+not currently tackle dynamic scenes and assume all objects
+to be static during an observation. Clearly there is the long-
+term potential to combine these two approaches.
+3. Method
+Our pipeline is visualised in Figure 2. From RGB-D
+input, a coarse background TSDF is initialised for local
+tracking and occlusion handling (Section 3.3). If the pose
+changes sufﬁciently or the system appears lost, relocali-
+sation (Section 3.4) and graph optimisation (Section 3.5)
+are performed to arrive at a new camera location, and the
+coarse TSDF is reset. In a separate thread RGB frames
+are processed by Mask R-CNN and the detections are ﬁl-
+tered and matched to the existing map (Section 3.2). When
+no match occurs, new TSDF object instances are created,
+sized, and added to the map for local tracking, global graph
+optimisation, and relocalisation. On future frames, associ-
+ated foreground detections are fused into the object’s 3D
+‘foreground’ mask alongside semantic and existence prob-
+abilities (Section 3.1).
+3.1. TSDF Object Instances
+Our map is composed of object instances reconstructed
+within separate TSDFs, Vo, each with a pose deﬁned by a
+transformation, TW O ∈SE(3), which maps coordinates
+of a point Op ∈R3 from object frame F
+−→O to coordinates
+W p ∈R3 in World frame F
+−→W . For convenience of nota-
+tion, homogeneous coordinates are assumed where appro-
+priate (e.g. in transformations), however when explicitly
+required they are denoted with italics, Op = [Op⊺, 1]⊺. Ob-
+CNN
+Filter
+IOU Calc
+CNN
+Thread
+Main
+Thread
+RGB-D
+Init / Reset
+Local TSDF
+Track
+Lost?
+Reset?
+Render
+Init / Delete
+Object TSDF
+Integrate TSDF / 
+Update Probs
+Posegraph
+Optimise
+Relocalise
+?
+No
+Yes
+No
+IOU
+Figure 2: Overview of the Fusion++ system.
+ject instance frames have an origin at the centre of the vol-
+ume and are sized cubically with an edge-length, so.
+Initialisation and resizing: Detections not matched by
+the procedure described in 3.2 are used to initialize an ap-
+propriately sized and positioned instance TSDF. In the kth
+frame each detection i produces a binary mask M k
+i . We
+project all the masked image coordinates u = (u1, u2) into
+F
+−→W using the depth map Dk(u),
+W p = ˜Tk
+W CK−1Dk(u)u ,
+(1)
+where K denotes the 3×3 intrinsic camera matrix, ˜Tk
+W C ∈
+SE(3) the camera pose estimate.
+To robustly size the TSDF in the presence of masks
+which can occasionally include far-away background sur-
+faces, we do not directly accept the maximum and mini-
+mum of this point cloud. Instead we use the 10th and 90th
+percentiles of this point cloud (separately for each axis) to
+deﬁne points p10 and p90 respectively, which are used to
+calculate the volume centre po = p90+p10
+2
+and volume size
+so = m∥(p90 −p10)∥∞. We use an m of 1.5 to account for
+erosion and provide additional padding.
+Each instance TSDF has an initial ﬁxed resolution along
+a given axis of ro, which we choose to be 64, and so is used
+to calculate the physical size of a voxel vo =
+so
+ro . There-
+fore, small objects will be reconstructed with ﬁne details
+and large objects more coarsely, making the map as useful
+as possible for a given memory footprint.
+During operation matched objects may need to be re-
+sized as new detections include additional areas. To do this,
+the point cloud of the current mask described above is com-
+bined with a similarly eroded point cloud generated from
+the current TSDF reconstruction. The 3D volume encom-
+passing them both is used to calculate the new volume cen-
+tre and size as before. To avoid aliasing when re-sizing,
+we translate the volume centre by discrete multiples of vo,
+and maintain the same vo but increase ro, while maintain-
+ing an even parity. We also limit the maximum voxel reso-
+lution to 128, by re-initialising the volume as though new if
+ro > 128, and limit the maximum object size to be 3m.
+
+Before initialising an instance we require the volume
+centre to be within 5m of the camera, and a 3D axis-aligned
+bounding box Intersection over Union (IoU) < 0.5 with any
+other volume already in the map. When an object centre is
+moved, the pose-graph node and associated measurements
+are also updated as described in Section 3.5.
+Integration: For integrating surface measurements from
+a depth map Dk into Vo we take an approach similar to
+Newcombe et al. [23]1. Vo stores at each discrete voxel lo-
+cation v = (vx, vy, vz) both the current normalised trun-
+cated signed distance value So
+k−1(v) and its associated
+weight W o
+k−1(v). If v projects into a camera frame pixel
+with a depth value less than the depth measurement plus
+the truncation distance, µ (here chosen as 4vo), then that
+measurement is fused into the volume in a weighted aver-
+age fashion. Integration is performed on every frame where
+the TSDF volume is visible, when 50% of TSDF pixels are
+validly tracked and the ICP RMSE < 0.03 (these error met-
+rics are described in more detail in Section 3.3). This is to
+maintain the reconstruction quality of instances when the
+camera frame may have drifted.
+It is also important to note that the above surface integra-
+tion is performed throughout the entire volume, regardless
+of whether it is a masked region or not. To store which vox-
+els correspond to this instance’s ‘foreground’ we also fuse
+instance mask detections. We view each positive or nega-
+tive detection as the result of a binomial trial sampled from
+a latent foreground probability, po(v ∈foreground). We
+store foreground F o
+k−1(v) and not foreground N o
+k−1(v) de-
+tection counts as the (α, β) shape parameters in a beta dis-
+tribution conjugate prior which are initialised with (1, 1).
+When a new detection is matched and the depth measure-
+ment is within the truncation distance as above, then we also
+update the detection counts using the corresponding mask i:
+F o
+k (v) = F o
+k−1(v) + M i
+k(Kπ(Cp(v))),
+(2)
+N o
+k(v) = N o
+k−1(v) + (1 −M i
+k(Kπ(Cp(v)))),
+(3)
+with π([x, y, z]⊺) = [x/z, y/z, 1]⊺denoting the projection.
+Finally, to compute whether a voxel is part of the foreground
+we calculate the expectation,
+E[po(v)] =
+F o
+k−1(v)
+F o
+k−1(v) + N o
+k−1(v),
+(4)
+and use a decision threshold of E[po(v)] > 0.5. A visuali-
+sation of this is shown in Figure 3.
+Raycasting: For tracking, data association, and visuali-
+sation we render depth, normals, vertices, RGB, and object
+indices. Within each object volume Vo we step along the
+ray with a stepsize of vo
+s (and 0.5vo
+s when So
+k(v) < 0.8,
+where So
+k(v) is the SDF normalised by µ) and search for the
+1Code based on https://github.com/GerhardR/kfusion.
+Figure 3: Object volume foreground. Note that if this value
+falls below 0.5 it is not rendered.
+zero-crossing point in So
+k(v) where E[po(v)] > 0.5 (both
+values are trilinearly interpolated from neighbouring vox-
+els to smooth the representation). We store the ray length
+of the nearest of these intersections to avoid searching past
+that point in another volume.
+This alone results in occluding surfaces which are not
+part of the foreground failing to occlude the ray. If a back-
+ground TSDF is available, and either no intersection with a
+foreground object occurs or the intersection is farther than
+5cm behind the background TSDF intersection, then the
+background TSDF ray intersection is used instead.
+Existence Probability: To prevent spurious instances
+from building up over time, we also model the probability
+of each instance’s existence as p(o) using the Beta distri-
+bution, in a manner identical to the foreground mask. For
+any frame where a predicted instance should be clearly vis-
+ible (i.e. our raycasted image has more than 502 pixels of
+that instance), then if the instance has been associated to a
+detection its existence count eo is incremented, and if not
+its non-existence count, do, is incremented. If E[p(o)] falls
+below 0.1, the instance is deleted and the object node with
+all associated edges are removed from the pose graph (de-
+scribed in Section 3.5).
+Semantic Labels: Each TSDF also stores a probabil-
+ity distribution over potential class labels lo. Mask R-CNN
+provides a probability distribution p(lo|Ik) over the classes
+given the image, Ik. We found that the standard multiplica-
+tive Bayesian update scheme [15, 20]:
+p(lk
+o|I1, . . . , Ik) = Z−1p(lo|Ik)p(lo|I1, . . . , Ik−1),
+(5)
+where Z is a normalising constant, often leads to an overly
+conﬁdent class probability distribution, with scores unsuit-
+able for ranking in object detection. Instead here we fuse
+multiple associated detections by simple averaging:
+p(lk
+o|I1, . . . , Ik) = 1
+k
+k
+X
+i=1
+p(lo|Ii),
+(6)
+which produces a more even class probability distribution.
+
+3.2. Detection and Data Association
+Detections from the Mask R-CNN model [13] for a given
+frame k contain instances i with a binary mask M i
+k and
+class probability distribution p(li|Ik). A forward pass takes
+∼250ms, and although our system is not real-time, this still
+represents a signiﬁcant bottleneck and so can be performed
+in a parallel thread. For GPU memory efﬁciency, we take
+only the top 100 detections (scored according to the region
+proposal network ‘object’ score [27]) and ﬁlter for masks
+not near the image border (within 20 pixels) and where both
+max(p(li|Ik)) > 0.5 and P M i
+k > 502.
+After local tracking (Section 3.3) we use the estimated
+camera pose and TSDFs already initialised in the map to
+raycast a binary mask M o
+k for object instances o in the
+current view.
+We map each detection i to a single in-
+stance o by calculating the intersection of the two as a pro-
+portion of the detection’s area, adetect(i, o) =
+P M o
+k∩M i
+k
+P M i
+k
+and assigning the detection to the largest intersection, ˜o =
+argmaxo adetect(i, o), where adetect(i, ˜o) > 0.2, otherwise
+the detection is unassigned. For the integration step, each
+detection which has been mapped to the same instance is
+combined by taking the union of the detection masks, and
+the average of the class probabilities.
+3.3. Layered Local Tracking
+We maintain an instance-agnostic coarse background
+TSDF,
+a,
+to
+assist
+local
+frame-to-model
+tracking
+where/when there are no instances and to handle oc-
+clusions. It has a resolution of 2563 with a voxel size of
+2cm. Its initialisation point W pa = Tk
+W C[0
+0
+2.56]⊺,
+is 2.56m along the z-axis in the camera frame F
+−→C to
+prevent wasted volume as in [37].
+The volume is re-
+set when its new initialisation point exits a spherical
+threshold (1.28m) around the previous volume centre, i.e.
+∥W pa −Tk
+W C[0
+0
+2.56]⊺∥2 > 1.28.
+We combine the background TSDF with individual in-
+stances to raycast (Section 3.1) a ‘layered’ reference frame,
+denoted r, with vertex map, Vr, normal map, Nr, and ob-
+ject index map, Xr, from the previous camera pose, TW Cr,
+with vertices and normals deﬁned in the world frame F
+−→W .
+The transform to the live frame, denoted l, is estimated by
+aligning the live depth map, after bilateral ﬁltering and pro-
+jection to a vertex map Vl and normal map Nl with pix-
+els ul, to the rendered maps with iterative closest point us-
+ing projective data association and a point-to-plane error,
+Eicp(˜TW Cl), as described in [23]:
+ur = Kπ(T−1
+W Cr ˜TW ClVl(ul)),
+(7)
+ricp(˜TW Cl, ul) = Nr(ur) · (Vr(ur) −˜TW ClVl(ul)), (8)
+Eicp(˜TW Cl) =
+X
+ul∈Vvalid
+ricp(˜TW Cl, ul)2.
+(9)
+Where Vvalid includes any ul with a corresponding vertex
+and normal, where there is a corresponding ur with a valid
+vertex and normal, and where Nr(ur) · Nl(ul) < 0.8 and
+∥Vr(ur) −˜TW ClVl(ul)∥2 < 0.1m.
+We minimize this non-linear least squares problem using
+the Gauss-Newton algorithm. We linearise ˜TW Cl about the
+previous estimate with the perturbation, ζ where ˜TW C =
+exp(ζ)¯TW C. Each row of the |Vvalid| × 6 Jacobian, Jicp,
+corresponds to the residual of a given ul ∈Vvalid:
+∂ricp(ζ, ul)
+∂ζ
+|ζ=0 = −[N ⊺
+r (ur), (Vl(ul) × Nr(ur))⊺].
+(10)
+The Gauss-Newton iteration can then be implemented as
+follows (with iteration index t):
+ζt = −(J⊺
+icpJicp)−1J⊺
+icpricp,
+(11)
+˜Tt+1
+W Cl = exp(ζt)¯Tt
+W Cl.
+(12)
+The 6 × 6 Hessian approximation, J⊺
+icpJicp, and 6 × 1 er-
+ror Jacobian, J⊺
+icpricp, are reduced in parallel on the GPU
+and solved on the CPU using SVD and back substitution.
+We use a three-level coarse-to-ﬁne pyramid scheme with 5
+Gauss-Newton iterations per level.
+We perform an additional reduction on the GPU to
+produce the same system of equations partitioned into
+pixels, ul, associated to each instance in Xr(ur) for
+pose-graph optimisation and to produce per-instance er-
+ror metrics.
+The error metrics are the ICP RMSE,
+(|Vvalid|−1Eicp(˜TW Cl))
+1
+2 , and the proportion of validly
+tracked pixels |Vvalid|
+|Vl| . These are used for instance integra-
+tion and to check whether local tracking is lost. We consider
+local tracking to be lost when the total ICP RMSE is greater
+than 0.05m or when at least 10% of the image consists of
+instance TSDFs and less than half of the pixels are validly
+tracked, in which case we enter relocalisation mode.
+3.4. Relocalisation
+If the system is lost or we reset the coarse TSDF, we per-
+form relocalisation to align the current frame to the current
+set of instances (if there are any). We found direct dense
+ICP methods using only the volume reconstructions did not
+produce accurate results for wide baseline relocalisation as
+they are sensitive to the initial pose and small objects were
+often ambiguous without texture constraints. Although al-
+ternative dense methods may also prove useful here, we
+took the approach of using snapshots of sparse BRISK fea-
+tures2 (with a detection threshold of 10) projected to 3D
+using the depth map. For a given detection of an object if
+there is no existing snapshot of the object within 15◦view
+2BRISK v.2 with homogeneous Harris scale space corner detection on
+only the highest image resolution.
+
+Snapshots
+Min. Angle
+Sphere
+Figure 4: Re-localisation snapshots around an instance.
+angle difference, we then add a new snapshot of the object
+from that pose (see Figure 4).
+To re-localise we perform 3D-3D RANSAC against each
+instance where the dot product with the predicted class dis-
+tribution is greater than 0.6. We use OpenGV [16] with
+a minimum of 5 inlier features (within 2cm) to match each
+object individually. If we ﬁnd one or more matching objects
+in the scene, we run a ﬁnal 3D-3D RANSAC on every point
+in the scene (from all objects and the background jointly)
+with a minimum of 50 inlier features (within 5cm) to arrive
+at a ﬁnal camera pose. This pose is used to render a new ref-
+erence image of the map to produce the constraints required
+for the pose graph optimisation described below.
+3.5. Object-Level Pose Graph
+Our pose-graph formulation is similar to that of [30].
+For every frame with a Mask R-CNN detection (including
+coarse TSDF resets), we add a new camera pose node to our
+graph. When a new instance, index o, is initialised, a corre-
+sponding landmark node is added to the graph, deﬁned by
+the coordinate frame attached to the centre of the object’s
+volume, po. The ﬁrst camera pose node is ﬁxed and deﬁned
+to be the origin of the world frame, F
+−→W . Each node con-
+sists of a full SE(3) transformation from object to World,
+TW O, or camera to world, TW C, and the measurements are
+SE(3) relative pose constraints between nodes.
+Each relative measurement is derived by employing only
+the ICP error terms which correspond to the pixels of the
+speciﬁc object o (for object-camera constraints), or the
+instance-agnostic background a (for camera-camera con-
+straints). To ensure that the measurement coincides with
+the minimum of the partitioned set’s quadratically approx-
+imated error function, an additional Gauss-Newton step is
+performed using the partitioned Jo
+icp (see Section 3.3) to
+produce ‘virtual’ relative pose measurements ˜T′a
+Ck−1Ck, be-
+tween camera nodes, and ˜T′o
+OCk, between camera and land-
+mark objects.
+The resulting measurement errors for the
+graph factors are:
+ecc(TCk−1W , TW Ck) = log((˜T′a
+Ck−1Ck)−1TCk−1W TW Ck),
+(13)
+eoc(To
+OW , TW Ck) = log((˜T′o
+OCk)−1To
+OW TW Ck). (14)
+For every relative measurement, we approximate the in-
+verse measurement covariance by Σ−1 = Jo⊺
+icpJo
+icp. How-
+ever, since the way perturbations are modelled differs be-
+tween the ICP algorithm and the employed pose graph op-
+timiser we need to transform the covariance by consider-
+ing the relation between the local perturbations. The graph
+optimiser models perturbations ζpg to relative pose mea-
+surements via ˜T′o
+O′Ck = ˜T′o
+OCkexp(ζpg) (equivalently for
+˜T′a
+Ck−1Ck). To ensure our information matrix properly cor-
+responds to perturbations ζpg, it is necessary to convert
+Jicp. As can be seen in Eq. 12, Jicp is with respect to per-
+turbations applied via ˜TW ′Ck = exp(ζicp)˜TW Ck. The re-
+lation between ζicp and ζpg is:
+exp(ζicp)TW Ck = To
+W O ˜T′o
+OCkexp(ζpg),
+(15)
+ζicp = log(TW Ckexp(ζpg)T−1
+W Ck) = AdjTW Ck ζpg,
+(16)
+Jpg = ∂ζicp
+∂ζpg
+= AdjTW Ck ,
+(17)
+where AdjTW Ck
+is the Adjoint of TW Ck
+such that
+exp(AdjTW Ck ζpg) = TW Ckexp(ζpg)T−1
+W Ck as described
+in [10]. The derivation for camera nodes results in the same
+transformation and the new information matrix therefore
+becomes,
+Hpg = J⊺
+pg(Jo⊺
+icpJo
+icp)Jpg.
+(18)
+The ﬁnal error to be minimised in the pose graph is the
+sum over all the edges from the camera to objects, O, and
+camera to camera, C, given their state, the measurement,
+and the information matrix,
+Epg =
+X
+cc∈C
+Lσ(e⊺
+ccHpgecc) +
+X
+oc∈O
+Lσ(e⊺
+ocHpg, eoc),
+(19)
+where Lσ denotes a robust Huber kernel. We solve this
+graph in the g2o [17] framework using sparse Cholesky de-
+composition and Levenberg-Marquart. After optimisation
+we update the pose of the instance TSDFs and the camera
+before initialising the new coarse TSDF to that pose and
+continuing with local tracking.
+As described in Section 3.1, when a landmark is re-
+sized, its centre, po, can also be adjusted from F
+−→O to a
+new frame F
+−→O′ via the transform TO′O . In this case we
+also transform the corresponding node variable, To
+W O′ =
+To
+W OT−1
+OO, as well as the measurement for every edge con-
+nected to that node, ˜T′o
+O′C = TO′O ˜T′o
+OC.
+
+Before loop-closure
+After loop-closure
+Figure 5: Comparison of ofﬁce sequence trajectory before loop-closure (left) and after loop-closure (right).
+4. Experiments
+We evaluate the performance and memory usage of our
+system on a Linux system with an Intel Core i7-5820K CPU
+at 3.30GHz, and an nVidia GeForce GTX1080 Ti GPU with
+11.175GB of memory. Our core pipeline is implemented in
+Python and uses Tensorﬂow for instance predictions, and
+Python wrappers around other core components which are
+developed in C++ and/or CUDA, such as KFusion, g2o,
+BRISK, and OpenGV. Our input is standard 640 × 480 res-
+olution RGB-D video. To allow for reproducibility, instead
+of running an asynchronous CNN thread we here perform
+predictions synchronously every 30 frames.
+Our Mask-RCNN uses the ResNet-101 base model [14]
+(up to the conv4 x block) and is ﬁnetuned from the publicly
+available tensorpack implementation and weights [40].3
+For ﬁnetuning on indoor scenes we use the NYUv2 dataset.
+We lock the ResNet-101 weights from the COCO pre-
+training and ﬁne-tune the remaining layers. As the COCO
+dataset consists of 80 classes we re-size and reinitialise the
+class-speciﬁc upper layers of Mask R-CNN and Faster R-
+CNN. We train using stochastic gradient descent with mo-
+mentum of 0.9 for 30 epochs with a learning rate of 0.001.
+4.1. Loop Closure and Map Consistency
+To evaluate the performance of our system while repeat-
+edly viewing a scene of instances we captured a 3,685 frame
+sequence of an indoor ofﬁce scene. We tailored this se-
+quence to evaluate the consistency of our map in the pres-
+ence of poorly constrained (planar ﬂoor) geometry and ICP
+drift, after which we loop over the same scene again. The
+pose-graph and loop closure is shown in Figure 5, it can
+be seen that despite the accumulated drift, the system re-
+localises and corrects the pose graph, this allows the previ-
+ously reconstructed objects to be correctly associated in fu-
+ture frames. On the entirety of the trajectory our system re-
+3http://models.tensorpack.com
+constructed 105 landmark object instances, however, it must
+be noted that despite our ﬁltering mechanisms, a build up of
+noisy partially reconstructed sub-objects still occurs.
+4.2. Reconstruction Quality
+To evaluate the reconstruction quality we use objects
+from the YCB dataset which provides ground truth mod-
+els [1] and reconstruct discovered objects from sequence
+0001 of the public YCB video dataset [41]. Figure 6 shows
+a qualitative comparison against the ground truth. The miss-
+ing portion of the cracker box was caused by an occlusion
+by another object, and a missed foreground detection on one
+of the few frames where the cracker box was unoccluded.
+1
+2
+3
+4
+Fusion++
+Ground Truth
+Figure 6: Reconstruction quality vs ground truth from se-
+quence 0001 of the public YCB video dataset [41].
+4.3. RGB-D SLAM Benchmark
+We evaluate the trajectory error of our system against the
+baseline approach of simple coarse TSDF odometry, i.e. us-
+ing the same coarse resetting background without instances
+layered on top, and without loop-closure pose graph opti-
+misation. Table 1 shows the results. It can be seen that in
+all but one of the sequences evaluated our Fusion++ system
+improved upon the baseline approach (while providing an
+inventory of objects as Figure 1 visualises for the fr2 desk
+sequence).
+It is also worth noting that our system does
+
+Figure 7: GPU memory usage and per-frame wall clock
+scaling by number of objects on the ofﬁce sequence.
+not achieve state-of-the-art performance on these sequences
+such as [38, 22], and would require additional work, such as
+including joint depth and photometric tracking, to become
+competitive. We focused on a usable object map here and
+leave accuracy of motion tracking for future work.
+Table 1: RGB-D SLAM Benchmark ATE RMSE (m).
+Sequence
+TSDF Odometry
+Fusion++
+fr1 desk
+0.066
+0.049
+fr1 desk2
+0.146
+0.153
+fr1 room
+0.305
+0.235
+fr2 desk
+0.342
+0.114
+fr2 xyz
+0.022
+0.020
+fr3 long ofﬁce
+0.281
+0.108
+4.4. Memory and Run-time Analysis
+Memory usage: We use the ofﬁce sequence to evaluate
+the run-time performance and memory usage of our system.
+As memory usage scales cubically with the size of a TSDF,
+it is signiﬁcantly more efﬁcient to compose a map of many
+relatively small, highly detailed, volumes in dense areas of
+interest than to use one large one with a resolution equal to
+the smallest. After loading the CNN and image buffers, our
+remaining ∼7GB GPU memory budget (and 10 bytes per
+voxel) would allow a single 9003 volume or, as here, a 2563
+background volume and up to 2.5K object volumes with di-
+mension 643, 2MB. Our object volumes dynamically vary
+up to 1283 and on our ofﬁce sequence used 377MB for 105
+objects (∼4MB/object), as shown in Figure 7. Of course,
+more efﬁcient alternatives such as an octree or voxel hash-
+ing can also be used to directly eliminate wasted free-space
+voxels, and are also directly applicable to our approach.
+Runtime performance: Our system, although not real-
+time, scales well with the number of objects. Excluding re-
+localisation on the ofﬁce sequence the average frame rate
+was 4-8Hz (shown in Figure 7), with an average additional
+computational cost of 1ms per object.
+A more detailed
+breakdown of the runtime performance of different compo-
+nents and their scaling factors is given in Table 2.
+Table 2: Run-time analysis of system components (ms)
+with approximate scaling performance on ofﬁce sequence.
+Component
+Base (ms)
+Scaling
+Every frame
+Tracking + coarse TSDF
+35
+constant
+Raycast all TSDFs
+25
++0.5/vis. object
+Object integration
+15
++1.6/vis. object
+On detection frames
+Mask R-CNN thread
+260
+constant
+Detection point-cloud
+10
+constant
+New object initialisation
+-
++30/new object
+Object resize+mask fuse
+-
++20/vis. object
+TSDF reset/re-localisation
+Relocalisation
+780
++65/snapshot
+Pose-graph optimisation
+80
++2/object
+5. Conclusions
+We have shown consistent instance mapping and classi-
+ﬁcation of numerous objects of previously unknown shape
+in real, cluttered indoor scenes. Our online and near real-
+time system, which is built from modules for image-based
+instance segmentation, TSDF fusion and tracking, and pose
+graph optimisation, makes a long-term map which focuses
+on the most important object elements of a scene with vari-
+able, object size-dependent resolution.
+A number of shortcomings of the current approach re-
+main to be addressed in future work. There is a balance to
+be struck between ﬁltering detections and providing good
+coverage of a scene, and even with the existence probability
+and deletion mechanism detailed here, over time spurious
+detections result in a growing clutter of partial object recon-
+structions. More thorough object detection precision/recall
+evaluations as well as semantic accuracy metrics will as-
+sist in this. A learned mechanism for ﬁltering and recon-
+structing these objects, such as [7] may prove useful in this
+regard, or combining view-based segmentation and classi-
+ﬁcation with 3D methods which take advantage of object
+databases such as ShapeNet [2].
+There is also signiﬁcant scope in future to better combine
+information from multiple duplicate objects seen from dif-
+ferent views to reconstruct a single better model, rather than
+maintaining separate TSDFs for each. Our object-oriented
+representation can also naturally be extended to model mov-
+ing objects with individually changing poses. This attribute
+would be particularly useful when reasoning about dynamic
+applications in robotics or augmented reality.
+Acknowledgements
+This research was supported by Dyson Technology Ltd.
+
+References
+[1] B. Calli, A. Singh, A. Walsman, P. Srinivasa S. and, Abbeel,
+and A. M. Dollar. The ycb object and model set: Towards
+common benchmarks for manipulation research. In Inter-
+national Conference on Advanced Robotics (ICAR), pages
+510–517, 2015. 7
+[2] A. X. Chang, T. Funkhouser, L. Guibas, P. Hanrahan,
+Q. Huang, Z. Li, S. Savarese, M. Savva, S. Song, H. Su,
+J. Xiao, L. Yi, and F. Yu. ShapeNet: An information-rich 3d
+model repository. arXiv preprint arXiv:1512.03012, 2015. 8
+[3] S. Choi, Q. Zhou, and V. Koltun. Robust Reconstruction of
+Indoor Scenes. In Proceedings of the IEEE Conference on
+Computer Vision and Pattern Recognition (CVPR), 2015. 2
+[4] S. Choudhary, A. J. B. Trevor, H. I. Christensen, and F. Del-
+laert. SLAM with object discovery, modeling and mapping.
+In Proceedings of the IEEE/RSJ Conference on Intelligent
+Robots and Systems (IROS), 2014. 2
+[5] A. Collet, B. Xiong, C. Gurau, M. Hebert, and S. S. Srini-
+vasa.
+Exploiting Domain Knowledge for Object Discov-
+ery. In Proceedings of the IEEE International Conference
+on Robotics and Automation (ICRA), 2013. 2
+[6] B. Curless and M. Levoy. A volumetric method for build-
+ing complex models from range images. In Proceedings of
+SIGGRAPH, 1996. 2
+[7] A. Dai, , J. Sturm, and M. Nießner. Scancomplete: Large-
+scale scene completion and semantic segmentation for 3d
+scans. In Proceedings of the IEEE Conference on Computer
+Vision and Pattern Recognition (CVPR), 2018. 8
+[8] A. Dai, M. Nießner, M. Zollh¨ofer, S. Izadi, and C. Theobalt.
+BundleFusion: Real-time Globally Consistent 3D Recon-
+struction using On-the-ﬂy Surface Re-integration.
+ACM
+Transactions on Graphics (TOG), 36(3):24:1–24:18, 2017.
+2
+[9] T. Dharmasiri, V. Lui, and T. Drummond. MO-SLAM: Multi
+Object SLAM with Run-Time Object Discovery through Du-
+plicates. In Proceedings of the IEEE/RSJ Conference on In-
+telligent Robots and Systems (IROS), 2016. 2
+[10] E. Eade. Lie groups for 2d and 3d transformations, 2017. 6
+[11] M. Fehr, F. Furrer, D. Ivan, J. Sturm, I. Gilitschenski,
+R. Siegwart, and C. Cadena. TSDF-based change detection
+for consistent long-term dense reconstruction and dynamic
+object discovery. In Proceedings of the IEEE International
+Conference on Robotics and Automation (ICRA), 2017. 2
+[12] R. Finman, T. Whelan, and M. Kaess. Toward lifelong ob-
+ject segmentation from change detection in dense RGB-D
+maps. In Proceedings of the European Conference on Mo-
+bile Robotics (ECMR), 2013. 2
+[13] K. He, G. Gkioxari, P. Doll´ar, and R. Girshick. Mask r-cnn.
+In Proceedings of the International Conference on Computer
+Vision (ICCV), 2017. 1, 5
+[14] K. He, X. Zhang, S. Ren, and J. Sun. Deep residual learning
+for image recognition. In Proceedings of the IEEE Confer-
+ence on Computer Vision and Pattern Recognition (CVPR),
+2016. 7
+[15] A. Hermans, G. Floros, and B. Leibe. Dense 3d semantic
+mapping of indoor scenes from rgb-d images. In Proceed-
+ings of the IEEE International Conference on Robotics and
+Automation (ICRA), 2014. 4
+[16] L. Kneip and P. Furgale. Opengv: A uniﬁed and generalized
+approach to real-time calibrated geometric vision. In Pro-
+ceedings of the IEEE International Conference on Robotics
+and Automation (ICRA), 2014. 6
+[17] R. K¨ummerle, G. Grisetti, H. Strasdat, K. Konolige, and
+W. Burgard. g2o: A General Framework for Graph Opti-
+mization. In Proceedings of the IEEE International Confer-
+ence on Robotics and Automation (ICRA), 2011. 6
+[18] S. Leutenegger, M. Chli, and R. Siegwart. BRISK: Binary
+robust invariance scalable keypoints. In Proceedings of the
+International Conference on Computer Vision (ICCV), 2011.
+2
+[19] L. Ma and G. Sibley. Unsupervised Dense Object Discov-
+ery, Detection, Tracking and Reconstruction. In Proceedings
+of the European Conference on Computer Vision (ECCV),
+2014. 2
+[20] J. McCormac, A. Handa, A. J. Davison, and S. Leutenegger.
+SemanticFusion: Dense 3D semantic mapping with convo-
+lutional neural networks.
+In Proceedings of the IEEE In-
+ternational Conference on Robotics and Automation (ICRA),
+2017. 4
+[21] R. Mur-Artal and J. D. Tard´os. ORB-SLAM: Tracking and
+Mapping Recognizable Features. In Workshop on Multi View
+Geometry in Robotics (MVIGRO) - RSS 2014, 2014. 2
+[22] R. Mur-Artal and J. D. Tard´os. ORB-SLAM2: An Open-
+Source SLAM System for Monocular, Stereo, and RGB-
+D Cameras.
+IEEE Transactions on Robotics (T-RO),
+33(5):1255–1262, 2017. 2, 8
+[23] R. A. Newcombe, S. Izadi, O. Hilliges, D. Molyneaux,
+D. Kim, A. J. Davison, P. Kohli, J. Shotton, S. Hodges,
+and A. Fitzgibbon.
+KinectFusion: Real-Time Dense Sur-
+face Mapping and Tracking.
+In Proceedings of the Inter-
+national Symposium on Mixed and Augmented Reality (IS-
+MAR), 2011. 2, 4, 5
+[24] R. A. Newcombe, S. Lovegrove, and A. J. Davison. DTAM:
+Dense Tracking and Mapping in Real-Time. In Proceedings
+of the International Conference on Computer Vision (ICCV),
+2011. 2
+[25] Q. Pham, B. Hua, D. T. Nguyen, and S. Yeung. Real-time
+progressive 3d semantic segmentation for indoor scenes.
+arXiv preprint arXiv:1804.00257, 2018. 3
+[26] S. Pillai and J. J. Leonard.
+Monocular SLAM Supported
+Object Recognition. In Proceedings of Robotics: Science
+and Systems (RSS), 2015. 2
+[27] S. Ren, K. He, R. Girshick, and J. Sun. Faster r-cnn: Towards
+real-time object detection with region proposal networks. In
+Neural Information Processing Systems (NIPS), pages 91–
+99, 2015. 5
+[28] E. Rublee, V. Rabaud, K. Konolige, and G. Bradski. ORB: an
+efﬁcient alternative to SIFT or SURF. In Proceedings of the
+International Conference on Computer Vision (ICCV), pages
+2564–2571. IEEE, 2011. 2
+[29] M. R¨unz and L. Agapito. Maskfusion: Real-time recogni-
+tion, tracking and reconstruction of multiple moving objects.
+arXiv preprint arXiv:1804.09194, 2018. 3
+
+[30] R. F. Salas-Moreno, R. A. Newcombe, H. Strasdat, P. H. J.
+Kelly, and A. J. Davison. SLAM++: Simultaneous Local-
+isation and Mapping at the Level of Objects. In Proceed-
+ings of the IEEE Conference on Computer Vision and Pattern
+Recognition (CVPR), 2013. 2, 6
+[31] J. St¨uckler and S. Behnke.
+Model learning and real-time
+tracking using multi-resolution surfel maps. In Proceedings
+of the National Conference on Artiﬁcial Intelligence (AAAI),
+2012. 2
+[32] J. St¨uckler and S. Behnke. Hierarchical object discovery and
+dense modelling from motion cues in RGB-D video. In Pro-
+ceedings of the International Joint Conference on Artiﬁcial
+Intelligence (IJCAI), 2013. 2
+[33] J. Sturm, N. Engelhard, F. Endres, W. Burgard, and D. Cre-
+mers. A Benchmark for the Evaluation of RGB-D SLAM
+Systems. In Proceedings of the IEEE/RSJ Conference on In-
+telligent Robots and Systems (IROS), 2012. 1, 2
+[34] N. S¨underhauf, T. T. Pham, Y. Latif, M. Milford, and I. Reid.
+Meaningful maps with object-oriented semantic mapping.
+In Proceedings of the IEEE/RSJ Conference on Intelligent
+Robots and Systems (IROS), 2017. 2
+[35] K. Tateno, F. Tombari, and N. Navab.
+When 2.5D is
+not enough: Simultaneous reconstruction, segmentation and
+recognition on dense slam. In Proceedings of the IEEE In-
+ternational Conference on Robotics and Automation (ICRA),
+2016. 2
+[36] A. Trevor, S. Gedikli, R. Rusu, and H. Christensen. Efﬁcient
+Organized Point Cloud Segmentation with Connected Com-
+ponents. In 3rd Workshop on Semantic Perception Mapping
+and Exploration (SPME), 2013. 2
+[37] T. Whelan, M. Kaess, H. Johannsson, M. F. Fallon, J. J.
+Leonard, and J. B. McDonald. Real-time large scale dense
+RGB-D SLAM with volumetric fusion. International Jour-
+nal of Robotics Research (IJRR), 34(4-5):598–626, 2015. 5
+[38] T. Whelan, S. Leutenegger, R. F. Salas-Moreno, B. Glocker,
+and A. J. Davison. ElasticFusion: Dense SLAM without a
+pose graph. In Proceedings of Robotics: Science and Sys-
+tems (RSS), 2015. 2, 3, 8
+[39] T. Whelan, J. B. McDonald, M. Kaess, M. Fallon, H. Jo-
+hannsson, and J. J. Leonard. Kintinuous: Spatially Extended
+KinectFusion. In Workshop on RGB-D: Advanced Reasoning
+with Depth Cameras, in conjunction with Robotics: Science
+and Systems, 2012. 2
+[40] Y. Wu et al.
+Tensorpack.
+https://github.com/
+tensorpack/, 2016. 1, 7
+[41] Y. Xiang, T. Schmidt, V. Narayanan, and D. Fox. Posecnn:
+A convolutional neural network for 6d object pose estimation
+in cluttered scenes. arXiv preprint arXiv:1711.00199, 2017.
+7
+[42] Q. Zhou and V. Koltun.
+Dense scene reconstruction with
+points of interest. In Proceedings of SIGGRAPH, 2013. 2
+[43] Q. Zhou, S. Miller, and V. Koltun. Elastic Fragments for
+Dense Scene Reconstruction. In Proceedings of the Interna-
+tional Conference on Computer Vision (ICCV), 2013. 2

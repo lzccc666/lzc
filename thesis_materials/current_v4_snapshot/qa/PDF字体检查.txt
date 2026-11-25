@@ -1,0 +1,16 @@
+name                                 type              encoding         emb sub uni object ID
+------------------------------------ ----------------- ---------------- --- --- --- ---------
+BAAAAA+DejaVuSans-Bold               TrueType          WinAnsi          yes yes yes    325  0
+CAAAAA+NotoSansCJKjp-Bold-VKana      Type 1            Builtin          yes yes yes    305  0
+DAAAAA+NotoSerifCJKjp-Regular-VKana  Type 1            Builtin          yes yes yes    340  0
+EAAAAA+LiberationSerif               TrueType          WinAnsi          yes yes yes    310  0
+FAAAAA+NotoSerifCJKjp-Regular-VKana  Type 1            Builtin          yes yes yes    345  0
+GAAAAA+NotoSerifCJKjp-Regular-VKana  Type 1            Builtin          yes yes yes    350  0
+HAAAAA+LiberationSerif-Italic        TrueType          WinAnsi          yes yes yes    315  0
+IAAAAA+OpenSymbol                    TrueType          WinAnsi          yes yes yes    360  0
+JAAAAA+NotoSansCJKjp-Regular-VKana   Type 1            Builtin          yes yes yes    300  0
+KAAAAA+DejaVuSerif                   TrueType          WinAnsi          yes yes yes    365  0
+LAAAAA+NotoSerifCJKjp-Regular-VKana  Type 1            Builtin          yes yes yes    355  0
+MAAAAA+NotoSerifCJKjp-Bold-VKana     Type 1            Builtin          yes yes yes    330  0
+NAAAAA+LiberationSerif-Bold          TrueType          WinAnsi          yes yes yes    320  0
+OAAAAA+NotoSerifCJKjp-Bold-VKana     Type 1            Builtin          yes yes yes    335  0

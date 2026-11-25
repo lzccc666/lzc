@@ -1,0 +1,21 @@
+{
+  "series": "公开数据完整稿",
+  "current_version": "v4",
+  "is_current": true,
+  "manuscript_date": "2026-11-20",
+  "catalog_organized_on": "2026-11-23",
+  "local_entry": "D:/study/Python.Project/lzc/paper/当前版_v4",
+  "remote_host": "seeta-nmb1",
+  "remote_entry": "/root/autodl-tmp/lizichong/paper/当前版_v4",
+  "remote_storage": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4",
+  "local_compatibility_alias": "D:/study/Python.Project/lzc/paper/毕业论文",
+  "compatibility_alias_meaning": "Windows Junction指向当前版_v4，同一份文件；新工作使用当前版_v4入口",
+  "docx": "硕士论文初稿.docx",
+  "docx_sha256": "576cdc5e65d9973dfec031d003cabade739bd58a835a134218a73c464d4d6072",
+  "pdf": "硕士论文初稿.pdf",
+  "pdf_sha256": "37c802fa82529111f0d766c98a3f8719ef616026149911d923e89dd4647922df",
+  "references": 62,
+  "pages": 91,
+  "main_prose_cjk": 52913,
+  "next_content_revision": "v5；目录整理和同内容同步不增加修订号"
+}

@@ -1,13 +1,14 @@
 from __future__ import annotations
 
-import math
 import re
 from collections import defaultdict
+from dataclasses import replace
 from functools import lru_cache
 
 import numpy as np
 
 from conceptgraph.navigation.types import CandidateTarget, ParsedNavigationQuery, SceneGraphEdge, SceneGraphNode
+from conceptgraph.scenegraph.relations import edge_relation_for_query, resolve_coordinate_frame
 
 
 RELATION_SYNONYMS = {
@@ -175,15 +176,18 @@ def _contains_chinese(text: str) -> bool:
 
 
 def parse_navigation_query(text: str, default_near_distance: float) -> ParsedNavigationQuery:
+    raw_text = text
+    negative = re.findall(r"(?:不要|排除|而不是|不是)\s*([^，,。；;]+)", text)
+    text = re.sub(r"(?:不要|排除|而不是|不是)\s*[^，,。；;]+", "", text).strip(" ，,。；;")
     normalized = normalize_text(text)
     prefer_nearest = any(word in text or word in normalized for word in NEAREST_WORDS)
-    prefer_far = any(word in text or word in normalized for word in FAR_WORDS)
     prefer_front = "前方" in text or "front" in normalized or "ahead" in normalized
 
     relation = None
     matched_phrase = None
-    for relation_name, phrases in RELATION_SYNONYMS.items():
-        for phrase in sorted(phrases, key=len, reverse=True):
+    for relation_name in ["left_of", "right_of", "in_front_of", "behind", "near"]:
+        phrases = RELATION_SYNONYMS[relation_name]
+        for phrase in sorted(phrases, key=lambda value: (-len(value), value)):
             if phrase in text or phrase in normalized:
                 relation = relation_name
                 matched_phrase = phrase
@@ -202,7 +206,7 @@ def parse_navigation_query(text: str, default_near_distance: float) -> ParsedNav
         r"^(?:前往|去|到)?\s*(?:靠近|位于|在|停在|停靠在|停放在)\s*(?P<anchor>.+?)\s*的\s*(?P<target>.+?)(?:附近|那边|位置)?$",
         text,
     )
-    if anchor_first is not None or beside_first is not None:
+    if (anchor_first is not None or beside_first is not None) and relation in {None, "near"}:
         matched = beside_first if beside_first is not None else anchor_first
         relation = "near"
         anchor_text = matched.group("anchor")
@@ -214,10 +218,25 @@ def parse_navigation_query(text: str, default_near_distance: float) -> ParsedNav
             lhs = raw_parts[0].strip(" ，,。")
             rhs = raw_parts[1].strip(" ，,。")
             if lhs and rhs:
-                target_text = lhs
-                anchor_text = rhs
+                if _contains_chinese(matched_phrase):
+                    # 汉语“锚点左侧的目标”；英语“target left of anchor”。
+                    if infer_query_categories(lhs) and infer_query_categories(rhs):
+                        anchor_text = lhs
+                        target_text = re.sub(r"^的", "", rhs)
+                    else:
+                        target_text = rhs if infer_query_categories(rhs) else lhs
+                        anchor_text = None
+                else:
+                    target_text = lhs
+                    anchor_text = rhs
 
-        if anchor_text is None:
+        if _contains_chinese(matched_phrase) and relation != "near":
+            target_first = re.search(r"(?P<target>.+?)在(?P<anchor>.+?)" + re.escape(matched_phrase), text)
+            if target_first and infer_query_categories(target_first.group('target')) and infer_query_categories(target_first.group('anchor')):
+                target_text = target_first.group('target')
+                anchor_text = target_first.group('anchor')
+
+        if anchor_text is None and not _contains_chinese(matched_phrase):
             normalized_parts = re.split(re.escape(matched_phrase), normalized, maxsplit=1)
             if len(normalized_parts) == 2:
                 lhs = normalized_parts[0].strip(" ,.")
@@ -230,15 +249,20 @@ def parse_navigation_query(text: str, default_near_distance: float) -> ParsedNav
     anchor_text = _clean_query_fragment(anchor_text) if anchor_text is not None else None
     if anchor_text == "":
         anchor_text = None
+    if anchor_text is None:
+        relation = None
+    elif relation == "in_front_of":
+        prefer_front = False
 
     target_categories = infer_query_categories(target_text)
     target_colors = infer_query_colors(target_text)
     anchor_colors = infer_query_colors(anchor_text or "")
     query_mode = infer_query_mode(text, target_categories)
     display_text = to_chinese_query_text(text, query_mode, target_categories, relation, anchor_text, target_text)
+    approach_target = any(word in text or word in normalized for word in RELATION_SYNONYMS['near'])
 
     return ParsedNavigationQuery(
-        raw_text=text,
+        raw_text=raw_text,
         target_text=target_text or text,
         anchor_text=anchor_text,
         relation=relation,
@@ -247,12 +271,58 @@ def parse_navigation_query(text: str, default_near_distance: float) -> ParsedNav
         target_categories=target_categories,
         target_colors=target_colors,
         anchor_colors=anchor_colors,
+        excluded_categories=sorted({category for fragment in negative for category in infer_query_categories(fragment)}),
+        excluded_colors=sorted({color for fragment in negative for color in infer_query_colors(fragment)}),
+        requires_static=any(word in target_text for word in ["停着", "静止", "停放", "停靠", "parked", "stationary"]),
         display_text=display_text,
         query_mode=query_mode,
         near_distance=default_near_distance if relation == "near" else None,
-        min_target_distance_m=0.0 if (prefer_nearest or prefer_front or relation is not None) else 6.0,
+        min_target_distance_m=0.0 if (approach_target or prefer_nearest or prefer_front or relation is not None) else 6.0,
         max_target_distance_m=45.0 if relation is not None else (35.0 if (prefer_nearest or prefer_front) else None),
     )
+
+
+def apply_qwen_query_parse(
+    rule_query: ParsedNavigationQuery,
+    semantic_output: dict | None,
+    default_near_distance: float,
+) -> ParsedNavigationQuery:
+    """把已验证的Qwen字段合并到规则结果，不改变导航几何约束。"""
+    if not isinstance(semantic_output, dict):
+        return rule_query
+    target_categories = list(semantic_output.get("target_categories", rule_query.target_categories))
+    prefer_nearest = bool(semantic_output.get("prefer_nearest", rule_query.prefer_nearest))
+    prefer_front = bool(semantic_output.get("prefer_front", rule_query.prefer_front))
+    relation = semantic_output.get("relation", rule_query.relation)
+    if prefer_front:
+        query_mode = "front"
+    elif prefer_nearest:
+        query_mode = "nearest"
+    elif target_categories:
+        query_mode = "class"
+    else:
+        query_mode = rule_query.query_mode
+    merged = replace(
+        rule_query,
+        target_text=str(semantic_output.get("target_text") or rule_query.target_text),
+        anchor_text=semantic_output.get("anchor_text", rule_query.anchor_text),
+        relation=relation,
+        prefer_nearest=prefer_nearest,
+        prefer_front=prefer_front,
+        target_categories=target_categories,
+        target_colors=list(semantic_output.get("target_colors", rule_query.target_colors)),
+        anchor_colors=list(semantic_output.get("anchor_colors", rule_query.anchor_colors)),
+        excluded_categories=list(semantic_output.get("excluded_categories", rule_query.excluded_categories)),
+        excluded_colors=list(semantic_output.get("excluded_colors", rule_query.excluded_colors)),
+        requires_static=bool(semantic_output.get("requires_static", rule_query.requires_static)),
+        query_mode=query_mode,
+        near_distance=default_near_distance if relation == "near" else None,
+        min_target_distance_m=0.0 if (prefer_nearest or prefer_front or relation is not None) else 6.0,
+        max_target_distance_m=(
+            45.0 if relation is not None else (35.0 if (prefer_nearest or prefer_front) else None)
+        ),
+    )
+    return merged
 
 
 def infer_query_colors(text: str) -> list[str]:
@@ -360,11 +430,38 @@ def _clean_query_fragment(text: str | None) -> str:
     return cleaned
 
 
-def build_relation_index(edges: list[SceneGraphEdge]) -> dict[int, list[tuple[int, str]]]:
-    relation_index: dict[int, list[tuple[int, str]]] = defaultdict(list)
+def build_relation_index(edges: list[SceneGraphEdge]) -> dict[int, list[dict]]:
+    relation_index: dict[int, list[dict]] = defaultdict(list)
     for edge in edges:
-        relation_index[edge.source].append((edge.target, normalize_text(edge.relation)))
-        relation_index[edge.target].append((edge.source, normalize_text(edge.relation)))
+        for source, target in ((edge.source, edge.target), (edge.target, edge.source)):
+            relation = edge_relation_for_query(edge, source, target)
+            if relation is None:
+                continue
+            relation_index[source].append(
+                {
+                    "neighbor_id": target,
+                    "relation": normalize_text(relation),
+                    "confidence": float(edge.confidence),
+                    "distance_m": edge.distance_m,
+                    "coordinate_frame": edge.coordinate_frame,
+                    "edge_format": str(edge.metadata.get("edge_format", "structured")),
+                    "metadata_available": bool(edge.metadata.get("metadata_available", True)),
+                    "stored_source": edge.source,
+                    "stored_target": edge.target,
+                    "stored_relation": edge.relation,
+                    "observation_count": edge.observation_count,
+                    "first_seen_frame": edge.first_seen_frame,
+                    "last_seen_frame": edge.last_seen_frame,
+                }
+            )
+    for entries in relation_index.values():
+        entries.sort(
+            key=lambda item: (
+                int(item["neighbor_id"]),
+                str(item["relation"]),
+                -round(float(item["confidence"]), 12),
+            )
+        )
     return relation_index
 
 
@@ -493,14 +590,47 @@ def score_relation_constraint(
     candidate_node: SceneGraphNode,
     parsed_query: ParsedNavigationQuery,
     all_nodes: dict[int, SceneGraphNode],
-    relation_index: dict[int, list[tuple[int, str]]],
+    relation_index: dict[int, list[dict]],
     anchor_text_scores: dict[int, float] | None = None,
+    minimum_edge_confidence: float = 0.0,
+    fallback_coordinate_frame: str = "world",
+    fallback_coordinate_frame_fallback: str | None = "world",
+    fallback_ego_heading: np.ndarray | None = None,
+    fallback_trajectory: np.ndarray | None = None,
+    fallback_ego_position: np.ndarray | None = None,
+    relation_support_policy: dict | None = None,
 ) -> tuple[float, dict]:
     if parsed_query.relation is None or parsed_query.anchor_text is None:
         return 1.0, {"reason": "no_relation_constraint"}
 
     anchor_scores = []
     debug_matches = []
+    support_checks = {}
+    if relation_support_policy and relation_support_policy.get("enabled", False):
+        for anchor_id, anchor_node in all_nodes.items():
+            score, geometry = _geometric_relation_score_with_debug(
+                parsed_query.relation, candidate_node.bbox_center, anchor_node.bbox_center,
+                parsed_query.near_distance, coordinate_frame=fallback_coordinate_frame,
+                coordinate_frame_fallback=fallback_coordinate_frame_fallback,
+                ego_heading=fallback_ego_heading, trajectory=fallback_trajectory,
+                ego_position=fallback_ego_position,
+            )
+            supported = bool(anchor_id != candidate_node.node_id and score > 0.0)
+            reason = "supported_current_geometry" if supported else "relation_not_supported"
+            if parsed_query.relation in {"left_of", "right_of", "in_front_of", "behind"}:
+                maximum = float(relation_support_policy["maximum_directional_distance_m"])
+                minimum = float(relation_support_policy["minimum_directional_component_m"])
+                if not np.isfinite(maximum) or maximum <= 0 or not np.isfinite(minimum) or minimum < 0:
+                    raise ValueError("invalid directional relation support bounds")
+                component = geometry.get("left_component_m" if parsed_query.relation in
+                    {"left_of", "right_of"} else "forward_component_m")
+                distance = geometry.get("planar_distance_m")
+                if distance is None or not np.isfinite(distance) or distance > maximum:
+                    supported, reason = False, "outside_directional_support_distance"
+                elif component is None or not np.isfinite(component) or abs(component) <= minimum:
+                    supported, reason = False, "inside_directional_support_dead_zone"
+            support_checks[anchor_id] = dict(supported=supported, reason=reason, geometry=geometry)
+    candidate_has_structured_evidence = False
     for anchor_id, anchor_node in all_nodes.items():
         anchor_text_score = (
             float(anchor_text_scores.get(anchor_id, 0.0))
@@ -511,19 +641,109 @@ def score_relation_constraint(
             continue
         if parsed_query.anchor_colors and not node_has_color(anchor_node, parsed_query.anchor_colors):
             continue
+        if anchor_id in support_checks and not support_checks[anchor_id]["supported"]:
+            continue
+        for entry in relation_index.get(candidate_node.node_id, []):
+            if int(entry["neighbor_id"]) != anchor_id:
+                continue
+            if str(entry.get("edge_format", "structured")) == "legacy":
+                continue
+            if not bool(entry.get("metadata_available", True)):
+                continue
+            if float(entry.get("confidence", 0.0)) + 1e-12 < minimum_edge_confidence:
+                continue
+            if _relation_match_score(parsed_query.relation, str(entry["relation"])) > 0.0:
+                candidate_has_structured_evidence = True
+                break
+        if candidate_has_structured_evidence:
+            break
+
+    for anchor_id, anchor_node in all_nodes.items():
+        anchor_text_score = (
+            float(anchor_text_scores.get(anchor_id, 0.0))
+            if anchor_text_scores is not None
+            else score_text_similarity(parsed_query.anchor_text, anchor_node)
+        )
+        if anchor_text_score <= 0.0:
+            continue
+        if parsed_query.anchor_colors and not node_has_color(anchor_node, parsed_query.anchor_colors):
+            continue
+        if anchor_id in support_checks and not support_checks[anchor_id]["supported"]:
+            debug_matches.append(dict(anchor_id=anchor_id, anchor_tag=anchor_node.object_tag,
+                anchor_text_score=anchor_text_score, graph_relation_score=0.0,
+                geometry_relation_score=0.0, combined=0.0, relation_chain=[],
+                edge_source="unsupported_current_geometry",
+                fallback_reason=[support_checks[anchor_id]["reason"]],
+                geometry_debug=support_checks[anchor_id]["geometry"]))
+            anchor_scores.append(0.0)
+            continue
 
         graph_relation_score = 0.0
-        for neighbor_id, relation_text in relation_index.get(candidate_node.node_id, []):
-            if neighbor_id != anchor_id:
+        relation_chain = []
+        fallback_reasons = []
+        for entry in relation_index.get(candidate_node.node_id, []):
+            if int(entry["neighbor_id"]) != anchor_id:
                 continue
-            graph_relation_score = max(graph_relation_score, _relation_match_score(parsed_query.relation, relation_text))
+            edge_format = str(entry.get("edge_format", "structured"))
+            metadata_available = bool(entry.get("metadata_available", True))
+            confidence = float(entry.get("confidence", 0.0))
+            if edge_format == "legacy" or not metadata_available:
+                fallback_reasons.append("legacy_edge_missing_metadata")
+                continue
+            if confidence + 1e-12 < minimum_edge_confidence:
+                fallback_reasons.append("structured_edge_below_confidence")
+                continue
+            relation_match = _relation_match_score(parsed_query.relation, str(entry["relation"]))
+            score = relation_match * confidence
+            if score > graph_relation_score:
+                graph_relation_score = score
+                relation_chain = [
+                    {
+                        "source": candidate_node.node_id,
+                        "target": anchor_id,
+                        "relation": str(entry["relation"]),
+                        "stored_source": int(entry["stored_source"]),
+                        "stored_target": int(entry["stored_target"]),
+                        "stored_relation": str(entry["stored_relation"]),
+                        "confidence": confidence,
+                        "distance_m": entry.get("distance_m"),
+                        "coordinate_frame": entry.get("coordinate_frame"),
+                        "observation_count": int(entry.get("observation_count", 1)),
+                        "first_seen_frame": entry.get("first_seen_frame"),
+                        "last_seen_frame": entry.get("last_seen_frame"),
+                        "edge_source": "structured_edge",
+                    }
+                ]
 
-        geometry_relation_score = geometric_relation_score(
-            parsed_query.relation,
-            candidate_node.bbox_center,
-            anchor_node.bbox_center,
-            parsed_query.near_distance,
-        )
+        geometry_relation_score = 0.0
+        geometry_debug = None
+        if graph_relation_score <= 0.0 and not candidate_has_structured_evidence:
+            if not fallback_reasons:
+                fallback_reasons.append("structured_edge_missing")
+            geometry_relation_score, geometry_debug = _geometric_relation_score_with_debug(
+                parsed_query.relation,
+                candidate_node.bbox_center,
+                anchor_node.bbox_center,
+                parsed_query.near_distance,
+                coordinate_frame=fallback_coordinate_frame,
+                coordinate_frame_fallback=fallback_coordinate_frame_fallback,
+                ego_heading=fallback_ego_heading,
+                trajectory=fallback_trajectory,
+                ego_position=fallback_ego_position,
+            )
+            if geometry_relation_score > 0.0:
+                relation_chain = [
+                    {
+                        "source": candidate_node.node_id,
+                        "target": anchor_id,
+                        "relation": parsed_query.relation,
+                        "edge_source": "geometry_fallback",
+                        "fallback_reason": sorted(set(fallback_reasons)),
+                        "coordinate_frame": geometry_debug.get("actual_coordinate_frame"),
+                    }
+                ]
+        elif graph_relation_score <= 0.0:
+            fallback_reasons.append("structured_edge_preferred_for_other_anchor")
 
         combined = max(graph_relation_score, geometry_relation_score) * anchor_text_score
         anchor_scores.append(combined)
@@ -535,6 +755,14 @@ def score_relation_constraint(
                 "graph_relation_score": graph_relation_score,
                 "geometry_relation_score": geometry_relation_score,
                 "combined": combined,
+                "relation_chain": relation_chain,
+                "edge_source": (
+                    "structured_edge" if graph_relation_score > 0.0 else "geometry_fallback"
+                ),
+                "fallback_reason": (
+                    [] if graph_relation_score > 0.0 else sorted(set(fallback_reasons))
+                ),
+                "geometry_debug": geometry_debug,
             }
         )
 
@@ -548,23 +776,83 @@ def geometric_relation_score(
     candidate_center: np.ndarray,
     anchor_center: np.ndarray,
     near_distance: float | None,
+    coordinate_frame: str = "world",
+    coordinate_frame_fallback: str | None = "world",
+    ego_heading: np.ndarray | None = None,
+    trajectory: np.ndarray | None = None,
+    ego_position: np.ndarray | None = None,
 ) -> float:
+    score, _debug = _geometric_relation_score_with_debug(
+        relation,
+        candidate_center,
+        anchor_center,
+        near_distance,
+        coordinate_frame=coordinate_frame,
+        coordinate_frame_fallback=coordinate_frame_fallback,
+        ego_heading=ego_heading,
+        trajectory=trajectory,
+        ego_position=ego_position,
+    )
+    return score
+
+
+def _geometric_relation_score_with_debug(
+    relation: str,
+    candidate_center: np.ndarray,
+    anchor_center: np.ndarray,
+    near_distance: float | None,
+    *,
+    coordinate_frame: str,
+    coordinate_frame_fallback: str | None,
+    ego_heading: np.ndarray | None,
+    trajectory: np.ndarray | None,
+    ego_position: np.ndarray | None,
+) -> tuple[float, dict]:
     delta = np.asarray(candidate_center, dtype=float) - np.asarray(anchor_center, dtype=float)
-    dx, dy = float(delta[0]), float(delta[1])
-    planar_distance = math.hypot(dx, dy)
+    planar_distance = float(np.linalg.norm(delta[:2]))
 
     if relation == "near":
         threshold = near_distance if near_distance is not None else 8.0
-        return float(max(0.0, 1.0 - planar_distance / max(threshold, 1e-6)))
+        score = float(max(0.0, 1.0 - planar_distance / max(threshold, 1e-6)))
+        return score, {
+            "actual_coordinate_frame": "distance_invariant",
+            "fallback_reason": None,
+            "planar_distance_m": planar_distance,
+        }
+
+    frame = resolve_coordinate_frame(
+        coordinate_frame,
+        coordinate_frame_fallback,
+        ego_heading=ego_heading,
+        trajectory=trajectory,
+        ego_position=ego_position,
+    )
+    if not frame.success:
+        return 0.0, {
+            "actual_coordinate_frame": None,
+            "fallback_reason": frame.failure_reason,
+            "failure_code": frame.failure_code,
+        }
+    forward = float(np.dot(delta[:2], frame.forward_axis_world))
+    left = float(np.dot(delta[:2], frame.left_axis_world))
     if relation == "left_of":
-        return 1.0 if dy > 0 else 0.0
-    if relation == "right_of":
-        return 1.0 if dy < 0 else 0.0
-    if relation == "in_front_of":
-        return 1.0 if dx > 0 else 0.0
-    if relation == "behind":
-        return 1.0 if dx < 0 else 0.0
-    return 0.0
+        score = 1.0 if left > 0 else 0.0
+    elif relation == "right_of":
+        score = 1.0 if left < 0 else 0.0
+    elif relation == "in_front_of":
+        score = 1.0 if forward > 0 else 0.0
+    elif relation == "behind":
+        score = 1.0 if forward < 0 else 0.0
+    else:
+        score = 0.0
+    return score, {
+        "actual_coordinate_frame": frame.actual_frame,
+        "requested_coordinate_frame": frame.requested_frame,
+        "fallback_reason": frame.fallback_reason,
+        "forward_component_m": forward,
+        "left_component_m": left,
+        "planar_distance_m": planar_distance,
+    }
 
 
 def _relation_match_score(expected_relation: str, actual_relation_text: str) -> float:
@@ -587,7 +875,14 @@ def rank_candidate_targets(
     lambda_text: float,
     lambda_relation: float,
     lambda_distance: float,
+    minimum_edge_confidence: float = 0.0,
+    relation_coordinate_frame: str = "world",
+    relation_coordinate_frame_fallback: str | None = "world",
+    relation_trajectory: np.ndarray | None = None,
+    evidence_policy=None,
+    relation_support_policy: dict | None = None,
 ) -> list[CandidateTarget]:
+    from conceptgraph.completion.evidence import target_evidence_decision
     relation_index = build_relation_index(edges)
     vehicle_xy = np.asarray(vehicle_xy, dtype=float)
     max_distance = float(np.max([np.linalg.norm(node.bbox_center[:2] - vehicle_xy) for node in nodes.values()])) if nodes else 1.0
@@ -606,6 +901,18 @@ def rank_candidate_targets(
     dynamic_query = _query_allows_dynamic_target(parsed_query.raw_text)
     heading = _estimate_query_heading(parsed_query, vehicle_xy)
     for node_id, node in nodes.items():
+        if parsed_query.requires_static and (node.motion_state != "static" or node.is_short_term):
+            continue
+        terms = node_category_terms(node)
+        if any(terms & CLASS_COMPATIBILITY.get(c, {c}) for c in parsed_query.excluded_categories):
+            continue
+        if parsed_query.excluded_colors:
+            colors = (node.metadata or {}).get("attributes", {}).get("colors", [])
+            if not colors or "unknown" in colors or any(node_has_color(node, [c]) for c in parsed_query.excluded_colors):
+                continue
+        eligible, evidence_reason = target_evidence_decision(node, evidence_policy)
+        if not eligible:
+            continue
         compatible, compatibility_reason = is_node_compatible_with_query(parsed_query, node)
         if not compatible:
             continue
@@ -624,6 +931,13 @@ def rank_candidate_targets(
             nodes,
             relation_index,
             anchor_text_scores=anchor_text_scores,
+            minimum_edge_confidence=minimum_edge_confidence,
+            fallback_coordinate_frame=relation_coordinate_frame,
+            fallback_coordinate_frame_fallback=relation_coordinate_frame_fallback,
+            fallback_ego_heading=heading,
+            fallback_trajectory=relation_trajectory,
+            fallback_ego_position=vehicle_xy,
+            relation_support_policy=relation_support_policy,
         )
         if parsed_query.relation is not None and relation_score <= 0.05:
             continue
@@ -669,6 +983,7 @@ def rank_candidate_targets(
                     "object_tag": node.object_tag,
                     "caption": node.caption,
                     "motion_state": node.motion_state,
+                    "target_evidence": evidence_reason,
                     "is_short_term": node.is_short_term,
                     "dynamic_penalty": dynamic_penalty,
                     "semantic_compatibility": compatibility_reason,
@@ -681,7 +996,7 @@ def rank_candidate_targets(
             )
         )
 
-    candidates.sort(key=lambda item: item.score, reverse=True)
+    candidates.sort(key=lambda item: (-round(float(item.score), 12), int(item.node_id)))
     return candidates
 
 

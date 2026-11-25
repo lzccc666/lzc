@@ -1,0 +1,923 @@
+Informed RRT*: Optimal Sampling-based Path Planning Focused via
+Direct Sampling of an Admissible Ellipsoidal Heuristic
+Jonathan D. Gammell 1, Siddhartha S. Srinivasa 2, and Timothy D. Barfoot 1
+Abstract— Rapidly-exploring random trees (RRTs) are pop-
+ular in motion planning because they ﬁnd solutions efﬁciently
+to single-query problems. Optimal RRTs (RRT*s) extend RRTs
+to the problem of ﬁnding the optimal solution, but in doing so
+asymptotically ﬁnd the optimal path from the initial state to
+every state in the planning domain. This behaviour is not only
+inefﬁcient but also inconsistent with their single-query nature.
+For problems seeking to minimize path length, the subset
+of states that can improve a solution can be described by a
+prolate hyperspheroid. We show that unless this subset is sam-
+pled directly, the probability of improving a solution becomes
+arbitrarily small in large worlds or high state dimensions. In
+this paper, we present an exact method to focus the search by
+directly sampling this subset.
+The advantages of the presented sampling technique are
+demonstrated with a new algorithm, Informed RRT*. This
+method retains the same probabilistic guarantees on complete-
+ness and optimality as RRT* while improving the convergence
+rate and ﬁnal solution quality. We present the algorithm as a
+simple modiﬁcation to RRT* that could be further extended
+by more advanced path-planning algorithms. We show exper-
+imentally that it outperforms RRT* in rate of convergence,
+ﬁnal solution cost, and ability to ﬁnd difﬁcult passages while
+demonstrating less dependence on the state dimension and
+range of the planning problem.
+I. I NTRODUCTION
+The motion-planning problem is commonly solved by
+ﬁrst discretizing the continuous state space with either a
+grid for graph-based searches or through random sampling
+for stochastic incremental searches. Graph-based searches,
+such as A* [1], are often resolution complete and resolution
+optimal. They are guaranteed to ﬁnd the optimal solution,
+if a solution exists, and return failure otherwise (up to the
+resolution of the discretization). These graph-based algorithms
+do not scale well with problem size (e.g., state dimension or
+problem range).
+Stochastic searches, such as Rapidly-exploring Random
+Trees (RRTs) [2], Probabilistic Roadmaps ( PRMs) [3], and
+Expansive Space Trees ( ESTs) [4], use sampling-based
+methods to avoid requiring a discretization of the state space.
+This allows them to scale more effectively with problem size
+and to directly consider kinodynamic constraints; however,
+the result is a less-strict completeness guarantee. RRTs are
+probabilistically complete, guaranteeing that the probability
+of ﬁnding a solution, if one exists, approaches unity as the
+number of iterations approaches inﬁnity.
+1 J. D. Gammell and T. D. Barfoot are with the Autonomous
+Space Robotics Lab at the University of Toronto Institute for
+Aerospace Studies, Toronto, Ontario, Canada. Email: {jon.gammell,
+tim.barfoot}@utoronto.ca
+2 S. S. Srinivasa is with The Robotics Institute, Carnegie Mellon University,
+Pittsburgh, Pennsylvania, USA. Email: siddh@cs.cmu.edu
+8.26 seconds, cbest = 0 .76 1 second, cbest = 0 .76
+(a) (b)
+RRT* Informed RRT*
+Fig. 1. Solutions of equivalent cost found by RRT* and Informed RRT* on
+a random world. After an initial solution is found, Informed RRT* focuses
+the search on an ellipsoidal informed subset of the state space, Xˆf⊆X,
+that contains all the states that can improve the current solution regardless
+of homotopy class. This allows Informed RRT* to ﬁnd a better solution
+faster than RRT* without requiring any additional user-tuned parameters.
+Until recently, these sampling-based algorithms made no
+claims about the optimality of the solution. Urmson and
+Simmons [5] had found that using a heuristic to bias sampling
+improved RRT solutions, but did not formally quantify the
+effects. Ferguson and Stentz [6] recognized that the length
+of a solution bounds the possible improvements from above,
+and demonstrated an iterative anytime RRT method to solve
+a series of subsequently smaller planning problems. Karaman
+and Frazzoli [7] later showed that RRTs return a suboptimal
+path with probability one, demonstrating that all RRT-based
+methods will almost surely be suboptimal and presented a new
+class of optimal planners. They named their optimal variants
+of RRTs and PRMs, RRT* and PRM*, respectively. These
+algorithms are shown to be asymptotically optimal, with the
+probability of ﬁnding the optimal solution approaching unity
+as the number of iterations approaches inﬁnity.
+RRTs are not asymptotically optimal because the existing
+state graph biases future expansion. RRT* overcomes this
+by introducing incremental rewiring of the graph. New
+states are not only added to a tree, but also considered as
+replacement parents for existing nearby states in the tree.
+With uniform global sampling, this results in an algorithm
+that asymptotically ﬁnds the optimal solution to the planning
+problem by asymptotically ﬁnding the optimal paths from
+the initial state to every state in the problem domain . This
+is inconsistent with their single-query nature and becomes
+expensive in high dimensions.
+In this paper, we present the focused optimal planning
+problem as it relates to the minimization of path length in
+Rn. For such problems, a necessary condition to improve
+the solution at any iteration is the addition of states from
+arXiv:1404.2334v3  [cs.RO]  28 Nov 2014
+17.3 seconds, cbest = 0 .77 0.9 seconds, cbest = 0 .77
+RRT* Informed RRT*
+Solution Cost vs. CPU Time
+Solution Cost
+1.1
+1.0
+0.9
+0.8
+0 5 10 15
+Informed RRT*
+RRT*
+(a) (b) (c)
+20
+CPU Time [s]
+Fig. 2. The solution cost versus computational time for RRT* and Informed RRT* on a random world problem. Both planners were run until they found a
+solution of the same cost. Figs. (a, c) show the ﬁnal result, while Fig. (b) shows the solution cost versus computational time. From Fig. (a), it can be
+observed that RRT* spends signiﬁcant computational resources exploring regions of the planning problem that cannot possibly improve the current solution,
+while Fig. (c) demonstrates how Informed RRT* focuses the search. .
+an ellipsoidal subset of the planning domain [6], [8]–[10].
+We show that the probability of adding such states through
+uniform sampling becomes arbitrarily small as the size of the
+planning problem increases or the solution approaches the
+theoretical minimum, and present an exact method to sample
+the ellipsoidal subset directly. It is also shown that with
+strict assumptions (i.e., no obstacles) that this direct sampling
+results in linear convergence to the optimal solution.
+This direct-sampling method allows for the creation of
+informed-sampling planners. Such a planner, Informed RRT*,
+is presented to demonstrate the advantages of informed
+incremental search (Fig. 1). Informed RRT* behaves as RRT*
+until a ﬁrst solution is found, after which it only samples
+from the subset of states deﬁned by an admissible heuristic to
+possibly improve the solution. This subset implicitly balances
+exploitation versus exploration and requires no additional
+tuning (i.e., there are no additional parameters) or assumptions
+(i.e., all relevant homotopy classes are searched). While
+heuristics may not always improve the search, their promi-
+nence in real-world planning demonstrates their practicality.
+In situations where they provide no additional information
+(e.g., when the informed subset includes the entire planning
+problem), Informed RRT* is equivalent to RRT*.
+Informed RRT* is a simple modiﬁcation to RRT* that
+demonstrates a clear improvement. In simulation, it performs
+as well as existing RRT* algorithms on simple conﬁgurations,
+and demonstrates order-of-magnitude improvements as the
+conﬁgurations become more difﬁcult (Fig. 2). As a result of
+its focused search, the algorithm has less dependence on the
+dimension and domain of the planning problem as well as
+the ability to ﬁnd better topologically distinct paths sooner. It
+is also capable of ﬁnding solutions within tighter tolerances
+of the optimum than RRT* with equivalent computation, and
+in the absence of obstacles can ﬁnd the optimal solution to
+within machine zero in ﬁnite time (Fig. 3). It could also
+be used in combination with other algorithms, such as path-
+smoothing, to further reduce the search space.
+The remainder of this paper is organized as follows.
+Section II presents a formal deﬁnition of the focused op-
+timal planning problem and reviews the existing literature.
+Section III presents a closed-form estimate of the subset of
+states that can improve a solution for problems seeking to
+minimize path length in Rn and analyzes the implications
+on RRT*-style algorithms. Section IV presents a method to
+sample this subset directly. Section V presents the Informed
+RRT* algorithm and Section VI presents simulation results
+comparing RRT* and Informed RRT* on simple planning
+problems of various size and conﬁguration and random
+problems of various dimension. Section VII concludes the
+paper with a discussion of the technique and some related
+ongoing work.
+II. B ACKGROUND
+A. Problem Deﬁnition
+We deﬁne the optimal planning problem similarly to [7].
+Let X ⊆ Rn be the state space of the planning problem.
+Let Xobs ⊊X be the states in collision with obstacles and
+Xfree =X\Xobs be the resulting set of permissible states.
+Let xstart∈Xfree be the initial state and xgoal∈Xfree be
+the desired ﬁnal state. Let σ : [0, 1]↦→X be a sequence of
+states (a path) and Σ be the set of all nontrivial paths.
+The optimal planning problem is then formally deﬁned
+as the search for the path, σ∗, that minimizes a given cost
+function, c : Σ ↦→ R≥0, while connecting xstart to xgoal
+through free space,
+σ∗ = arg min
+σ∈Σ
+{c (σ) | σ(0) = xstart, σ(1) = xgoal,
+∀s∈ [0, 1], σ(s)∈Xfree},
+where R≥0 is the set of non-negative real numbers.
+Letf (x) be the cost of an optimal path from xstart to xgoal
+constrained to pass through x. Then the subset of states that
+can improve the current solution, Xf⊆X, can be expressed
+in terms of the current solution cost, cbest,
+Xf ={x∈X | f (x)<c best}. (1)
+The problem of focusing RRT*’s search in order to increase
+the convergence rate is equivalent to increasing the probability
+of adding a random state from Xf .
+As f (·) is generally unknown, a heuristic function, ˆf (·),
+59 iterations, cbest = 148 .24 175 iterations, cbest = 107 .12 1142 iterations, cbest = 100
+(a) (b) (c)
+After an initial solution is found all
+possible improvements lie within an
+ellipse.
+As the solution is improved the area of
+the ellipse decreases.
+In the absence of obstacles the
+ellipse degenerates to a line.
+Fig. 3. Informed RRT* converging to within machine zero of the optimum in the absence of obstacles. The start and goal states are shown as green and
+red, respectively, and are 100 units apart. The current solution is highlighted in magenta, and the ellipsoidal sampling domain, Xˆf , is shown as a grey
+dashed line for illustration. Improving the solution decreases the size of the sampling domain, creating a feedback effect that converges to within machine
+zero of the theoretical minimum. Fig. (a) shows the ﬁrst solution at 59 iterations, (b) after 175 iterations, and (c), the ﬁnal solution after 1142 iterations, at
+which point the ellipse has degenerated to a line between the start and goal.
+may be used as an estimate. This heuristic is referred to as
+admissible if it never overestimates the true cost of the path,
+i.e.,∀x∈ X, ˆf (x)≤ f (x). An estimate of Xf , Xˆf , can
+then be deﬁned analogously to (1). For admissible heuristics,
+this estimate is guaranteed to completely contain the true set,
+Xˆf⊇Xf , and thus inclusion in the estimated set is also a
+necessary condition to improving the current solution.
+B. Prior Work
+Prior work to focus RRT and RRT* has relied on sample
+biasing, heuristic-based sample rejection, heuristic-based
+graph pruning, and/or iterative searches.
+1) Sample Biasing: Sample biasing attempts to increase
+the frequency that states are sampled from Xf by biasing the
+distribution of samples drawn from X. This continues to add
+states from outside of Xf that cannot improve the solution. It
+also results in a nonuniform density over the problem being
+searched, violating a key RRT* assumption.
+a) Heuristic-biased Sampling: Heuristic-biased sam-
+pling attempts to increase the probability of sampling Xf
+by weighting the sampling of X with a heuristic estimate of
+each state. It is used to improve the quality of a regular RRT
+by Urmson and Simmons [5] in the Heuristically Guided
+RRT (hRRT) by selecting states with a probability inversely
+proportional to their heuristic cost. The hRRT was shown to
+ﬁnd better solutions than RRT; however, the use of RRTs
+means that the solution is almost surely suboptimal [7].
+Kiesel et al. [11] use a two-stage process to create an RRT*
+heuristic in their f-biasing technique. A coarse abstraction of
+the planning problem is initially solved to provide a heuristic
+cost for each discrete state. RRT* then samples new states
+by randomly selecting a discrete state and sampling inside it
+with a continuous uniform distribution. The discrete sampling
+is biased such that states belonging to the abstracted solution
+have the highest probability of selection. This technique
+provides a heuristic bias for the full duration of the RRT*
+algorithm; however, to account for the discrete abstraction it
+maintains a nonzero probability of selecting every state. As
+a result, states that cannot improve the current solution are
+still sampled.
+b) Path Biasing: Path-biased sampling attempts to
+increase the frequency of sampling Xf by sampling around
+the current solution path. This assumes that the current
+solution is either homotopic to the optimum or separated
+only by small obstacles. As this assumption is not generally
+true, path-biasing algorithms must also continue to sample
+globally to avoid local optima. The ratio of these two sampling
+methods is frequently a user-tuned parameter.
+Alterovitz et al. [12] use path biasing to develop the
+Rapidly-exploring Roadmap ( RRM). Once an initial solution
+is found, each iteration of the RRM either samples a new
+state or selects an existing state from the current solution and
+reﬁnes it. Path reﬁnement occurs by connecting the selected
+state to its neighbours resulting in a graph instead of a tree.
+Akgun and Stilman [13] use path biasing in their dual-
+tree version of RRT*. Once an initial solution is found, the
+algorithm spends a user-speciﬁed percentage of its iterations
+reﬁning the current solution. It does this by randomly selecting
+a state from the solution path and then explicitly sampling
+from its V oronoi region. This increases the probability of
+improving the current path at the expense of exploring other
+homotopy classes. Their algorithm also employs sample
+rejection in exploring the state space (Section II-B.2).
+Nasir et al. [14] combine path biasing with smoothing in
+their RRT*-Smart algorithm. When a solution is found, RRT*-
+Smart ﬁrst smooths and reduces the path to its minimum
+number of states before using these states as biases for further
+sampling. This adds the complexity of a path-smoothing
+algorithm to the planner while still requiring global sampling
+to avoid local optima. While the path smoothing quickly
+reduces the cost of the current solution, it may also reduce the
+probability of ﬁnding a different homotopy class by removing
+the number of bias points about which samples are drawn
+and further violates the RRT* assumption of uniform density.
+Kim et al. [15] use a visibility analysis to generate an initial
+bias in their Cloud RRT* algorithm. This bias is updated as a
+solution is found to further concentrate sampling near the path.
+2) Heuristic-based Sample Rejection: Heuristic-based
+sample rejection attempts to increase the real-time rate of
+sampling Xf by using rejection sampling on X to sample
+Xˆf . Samples drawn from a larger distribution are either
+kept or rejected based on their heuristic value. Akgun and
+Stilman [13] use such a technique in their algorithm. While
+this is computationally inexpensive for a single iteration, the
+number of iterations necessary to ﬁnd a single state in Xˆf is
+proportional to its size relative to the sampling domain. This
+becomes nontrivial as the solution approaches the theoretical
+minimum or the planning domain grows.
+Otte and Correll [8] draw samples from a subset of the
+planning domain in their parallelized C-FOREST algorithm.
+This subset is deﬁned as the hyperrectangle that bounds the
+prolate hyperspheroidal informed subset. While this improves
+the performance of sample rejection, its utility decreases as
+the dimension of the problem increases (Remark 2).
+3) Graph Pruning: Graph pruning attempts to increase the
+real-time exploration of Xf by using a heuristic function
+to limit the graph to Xˆf . States in the planning graph
+with a heuristic cost greater than the current solution are
+periodically removed while global sampling is continued.
+The space-ﬁlling nature of RRTs biases the expansion of the
+pruned graph towards the perimeter of Xˆf . After the subset
+is ﬁlled, only samples from within Xˆf itself can add new
+states to the graph. In this way, graph pruning becomes a
+rejection-sampling method after greedily ﬁlling the target
+subset. As adding a new state to an RRT requires a call to
+a nearest-neighbour algorithm, graph pruning will be more
+computationally expensive than simple sample rejection while
+still suffering from the same probabilistic limitations.
+Karaman et al. [16] use graph pruning to implement an
+anytime version of RRT* that improves solutions during
+execution. They use the current vertex cost plus a heuristic
+estimate of the cost from the vertex to the goal to periodically
+remove states from the tree that cannot improve the current
+solution. As RRT* asymptotically approaches the optimal
+cost of a vertex from above, this is an inadmissible heuristic
+for the cost of a solution through a vertex (Section III). This
+can overestimate the heuristic cost of a vertex resulting in
+erroneous removal, especially early in the algorithm when the
+tree is coarse. Jordan and Perez [17] use the same inadmissible
+heuristic in their bidirectional RRT* algorithm.
+Arslan and Tsiotras [18] use a graph structure and lifelong
+planning A* ( LPA*) [19] techniques in the RRT# algorithm
+to prune the existing graph. Each existing state is given a
+LPA*-style key that is updated after the addition of each new
+state. Only keys that are less than the current best solution are
+updated, and only up-to-date keys are available for connection
+with newly drawn samples.
+4) Anytime RRTs: Ferguson and Stentz [6] recognized
+that a solution bounds the subset of states that can provide
+further improvement from above. Their iterative RRT method,
+Anytime RRTs, solves a series of independent planning
+problems whose domains are deﬁned by the previous solution.
+They represent these domains as ellipses [6, Fig. 2], but do
+not discuss how to generate samples. Restricting the planning
+domain encourages each RRT to ﬁnd a better solution than
+the previous; however, to do so they must discard the states
+already found in Xˆf .
+The algorithm presented in this paper calculates Xˆf
+xstart xgoal
+cbest
+√
+c2best − c2min cmin
+Fig. 4. The heuristic sampling domain, Xˆf , for a R2 problem seeking to
+minimize path length is an ellipse with the initial state, xstart, and the goal
+state, xgoal as focal points. The shape of the ellipse depends on both the
+initial and goal states, the theoretical minimum cost between the two, cmin,
+and the cost of the best solution found to date, cbest. The eccentricity of
+the ellipse is given by cmin/cbest.
+explicitly and samples from it directly. Unlike path biasing
+it makes no assumptions about the homotopy class of the
+optimum and unlike heuristic biasing does not explore states
+that cannot improve the solution. As it is based on RRT*,
+it is able to keep all states found in Xˆf for the duration of
+the search, unlike Anytime RRTs. By sampling Xˆf directly,
+it always samples potential improvements regardless of the
+relative size of Xˆf to X. This allows it to work effectively
+regardless of the size of the planning problem or the relative
+cost of the current solution to the theoretical minimum,
+unlike sample rejection and graph pruning methods. In
+problems where the heuristic does not provide any additional
+information, it performs identically to RRT*.
+III. A NALYSIS OF THE ELLIPSOIDAL INFORMED SUBSET
+Given a positive cost function, the cost of an optimal path
+from xstart to xgoal constrained to pass through x∈ X,
+f (x), is equal to the cost of the optimal path from xstart to
+x, g (x), plus the cost of the optimal path from x to xgoal,
+h (x). As RRT*-based algorithms asymptotically approach
+the optimal path to every state from above, an admissible
+heuristic estimate, ˆf (·), must estimate both these terms. A
+sufﬁcient condition for admissibility is that the components,
+ˆg (·) andˆh (·), are individually admissible heuristics of g (·)
+and h (·), respectively.
+For problems seeking to minimize path length in Rn,
+Euclidean distance is an admissible heuristic for both terms
+(even with motion constraints). This informed subset of states
+that may improve the current solution, Xˆf⊇Xf , can then be
+expressed in closed form in terms of the cost of the current
+solution, cbest, as
+Xˆf =
+{
+x∈X
+⏐⏐ ||xstart− x||2 +||x− xgoal||2≤cbest},
+which is the general equation of an n-dimensional prolate
+hyperspheroid (i.e., a special hyperellipsoid). The focal points
+are xstart and xgoal, the transverse diameter is cbest, and the
+conjugate diameters are
+√
+c2best−c2min (Fig. 4).
+Admissibility of ˆf (·) makes adding a state in Xˆf a
+necessary condition to improve the solution. With the space-
+ﬁlling nature of RRT, the probability of adding such a state
+quickly becomes the probability of sampling such a state 1.
+Thus, the probability of improving the solution at any iteration
+by uniformly sampling a larger subset, xi+1∼U (Xs), Xs⊇
+1States may be added to Xˆf with a sample from outside the subset until
+it is ﬁlled to within the RRT growth-limiting parameter, η, of its boundary.
+Xˆf , is less than or equal to the ratio of set measures λ (·),
+P
+(
+ci+1best <c ibest)≤P(xi+1∈Xf) (2)
+≤P
+(
+xi+1∈Xˆf
+)
+=
+λ(Xˆf)
+λ(Xs).
+Using the volume of a prolate hyperspheroid in Rn gives
+P
+(
+ci+1best <c ibest)≤ cibest
+(
+ci2best−c2min)n−12 ζn
+2nλ(Xs) , (3)
+with ζn being the volume of a unit n-ball.
+Remark 1 (Rejection sampling): From (3) it can be ob-
+served that the probability of improving a solution through
+uniform sampling becomes arbitrarily small for large subsets
+(e.g., global sampling) or as the solution approaches the
+theoretical minimum.
+Remark 2 (Rectangular rejection sampling): Let Xs be a
+hyperrectangle that tightly bounds the informed subset (i.e.,
+the widths of each side correspond to the diameters of the
+prolate hyperspheroid) [8]. From (3), the probability that a
+sample drawn uniformly from Xs will be in Xˆf is then ζn2n ,
+which decreases rapidly with n. For example, with n = 6 this
+gives a maximum 8% probability of improving a solution at
+each iteration through rejection sampling regardless of the
+speciﬁc solution, problem, or algorithm parameters.
+Theorem 1 (Obstacle-free linear convergence): With uni-
+form sampling of the informed subset, x∼U
+(
+Xˆf
+)
+, the cost
+of the best solution, cbest, converges linearly to the theoretical
+minimum, cmin, in the absence of obstacles.
+Proof: The heuristic value of a state is equal to the
+transverse diameter of a prolate hyperspheroid that passes
+through the state and has focal points at xstart and xgoal.
+With uniform sampling, the expectation is then [20]
+E
+[
+ˆf (x)
+]
+= nc2best+c2min(n+1)cbest . (4)
+We assume that the RRT* rewiring parameter is greater than
+the diameter of the informed subset, similarly to how the proof
+of the asymptotic optimality of RRT* assumes thatη is greater
+than the diameter of the planning problem [7]. The expectation
+of the solution cost, cibest, is then the expectation of the
+heuristic cost of a sample drawn from a prolate hyperspheroid
+of diameter ci−1best, i.e., E[cibest] =E[ˆf(xi)]. From (4) it
+follows that the solution cost converges linearly with a rate,
+µ, that depends only on the state dimension [20],
+µ =
+∂E[cibest]
+∂ci−1best
+⏐⏐⏐⏐
+ci−1best=cmin
+= n−1n+1.
+While the obstacle-free assumption is impractical, Thm. 1
+illustrates the fundamental effectiveness of direct informed
+sampling and provides possible insight for future work.
+IV. D IRECT SAMPLING OF AN ELLIPSOIDAL SUBSET
+Uniformly distributed samples in a hyperellipsoid,
+xellipse ∼ U(Xellipse), can be generated by transforming
+uniformly distributed samples from the unit n-ball, xball∼
+U (Xball),
+xellipse = Lxball + xcentre,
+where xcentre = (xf1 + xf2)/2 is the centre of the hyper-
+ellipsoid in terms of its two focal points, xf1 and xf2, and
+Xball ={x∈X | ||x||2≤ 1} [21].
+This transformation can be calculated by Cholesky decom-
+position of the hyperellipsoid matrix, S∈ Rn×n,
+LLT≡ S,
+where
+(x− xcentre)T S (x− xcentre) = 1,
+with S having eigenvectors corresponding to the axes of the
+hyperellipsoid,{ai}, and eigenvalues corresponding to the
+squares of its radii,
+{
+r2i}. The transformation, L, maintains
+the uniform distribution in Xellipse [22].
+For prolate hyperspheroids, such as Xˆf , the transformation
+can be calculated from just the transverse axis and the radii.
+The hyperellipsoid matrix in a coordinate system aligned with
+the transverse axis is the diagonal matrix
+S = diag
+{
+c2best
+4 , c2best−c2min4 ,..., c2best−c2min4 },
+with a resulting decomposition of
+L = diag
+{
+cbest
+2 ,
+√
+c2best−c2min
+2 ,...,
+√
+c2best−c2min
+2
+}
+, (5)
+where diag{·} denotes a diagonal matrix.
+The rotation from the hyperellipsoid frame to the world
+frame, C∈ SO (n), can be solved directly as a general
+Wahba problem [23]. It has been shown that a valid solution
+can be found even when the problem is underspeciﬁed [24].
+The rotation matrix is given by
+C = U diag{1,..., 1, det (U) det (V)} VT, (6)
+where det (·) is the matrix determinant and U∈ Rn×n and
+V∈ Rn×n are unitary matrices such that UΣVT≡ M via
+singular value decomposition. The matrix M is given by the
+outer product of the transverse axis in the world frame, a1,
+and the ﬁrst column of the identity matrix, 11,
+M = a11T1,where
+a1 = (xgoal− xstart)/||xgoal− xstart||2.
+A state uniformly distributed in the informed subset,
+xˆf∼U
+(
+Xˆf
+)
+, can thus be calculated from a sample drawn
+uniformly from a unit n-ball, xball∼U (Xball), through a
+transformation (5), rotation (6), and translation,
+xˆf = CLxball + xcentre. (7)
+This procedure is presented algorithmically in Alg. 2.
+V. I NFORMED RRT*
+An example algorithm using direct informed sampling,
+Informed RRT*, is presented in Algs. 1 and 2. It is identical
+to RRT* as presented in [7], with the addition of lines 3, 6,
+7, 30, and 31. Like RRT*, it searches for the optimal path,
+σ∗, to a planning problem by incrementally building a tree
+in state space, T = (V,E ), consisting of a set of vertices,
+V ⊆Xfree, and edges, E⊆Xfree×Xfree. New vertices are
+added by growing the graph in free space towards randomly
+selected states. The graph is rewired with each new vertex
+such that the cost of the nearby vertices are minimized.
+The algorithm differs from RRT* in that once a solution
+is found, it focuses the search on the part of the planning
+Algorithm 1: Informed RRT*(xstart, xgoal)
+1 V ←{ xstart};
+2 E←∅ ;
+3 Xsoln←∅ ;
+4 T = (V,E );
+5 for iteration = 1 ...N do
+6 cbest← minxsoln∈Xsoln{Cost (xsoln)};
+7 xrand← Sample
+(
+xstart, xgoal,c best
+)
+;
+8 xnearest← Nearest (T, xrand);
+9 xnew← Steer (xnearest, xrand);
+10 if CollisionFree (xnearest, xnew) then
+11 V ←∪{ xnew};
+12 Xnear← Near (T, xnew,r RR T∗ );
+13 xmin← xnearest;
+14 cmin← Cost (xmin) +c· Line (xnearest, xnew);
+15 for∀xnear∈Xnear do
+16 cnew← Cost (xnear) +c· Line (xnear, xnew);
+17 if cnew <c min then
+18 if CollisionFree (xnear, xnew) then
+19 xmin← xnear;
+20 cmin←cnew;
+21 E←E∪{ (xmin, xnew)};
+22 for∀xnear∈Xnear do
+23 cnear← Cost (xnear);
+24 cnew← Cost (xnew) +c· Line (xnew, xnear);
+25 if cnew <c near then
+26 if CollisionFree (xnew, xnear) then
+27 xparent← Parent (xnear);
+28 E←E\{ (xparent, xnear)};
+29 E←E∪{ (xnew, xnear)};
+30 if InGoalRegion (xnew) then
+31 Xsoln←Xsoln∪{ xnew};
+32 returnT ;
+problem that can improve the solution. It does this through
+direct sampling of the ellipsoidal heuristic. As solutions are
+found (line 30), Informed RRT* adds them to a list of possible
+solutions (line 31). It uses the minimum of this list (line 6) to
+calculate and sample Xˆf directly (line 7). As is conventional,
+we take the minimum of an empty set to be inﬁnity. The
+new subfunctions are described below, while descriptions of
+subfunctions common to RRT* can be found in [7]:
+Sample: Given two poses, xfrom, xto ∈ Xfree and
+a maximum heuristic value, cmax ∈ R, the function
+Sample (xfrom, xto,c max) returns independent and identically
+distributed (i.i.d.) samples from the state space, xnew∈X,
+such that the cost of an optimal path between xfrom and
+xto that is constrained to go through xnew is less than cmax
+as described in Section III and Alg. 2. In most planning
+problems, xfrom≡ xstart, xto≡ xgoal, and lines 2 to 4 of
+Alg. 2 can be calculated once at the start of the problem.
+InGoalRegion: Given a pose, x∈Xfree, the function
+InGoalRegion (x) returns True if and only if the state is in
+the goal region, Xgoal, as deﬁned by the planning problem,
+otherwise it returns False. One common goal region is a
+ball of radius rgoal centred about the goal, i.e.,
+Xgoal =
+{
+x∈Xfree
+⏐⏐ ||x− xgoal||2≤rgoal}.
+RotationToWorldFrame: Given two poses as the
+focal points of a hyperellipsoid, xfrom, xto∈X, the function
+RotationToWorldFrame (xfrom, xto) returns the rotation
+matrix, C∈SO (n), from the hyperellipsoid-aligned frame
+to the world frame as per (6). As previously discussed, in
+Algorithm 2: Sample (xstart, xgoal,c max)
+1 if cmax <∞ then
+2 cmin←
+⏐⏐⏐⏐xgoal− xstart⏐⏐⏐⏐2;
+3 xcentre←
+(
+xstart + xgoal
+)
+/2;
+4 C← RotationToWorldFrame
+(
+xstart, xgoal
+)
+;
+5 r1←cmax/2;
+6 {ri}i=2,...,n←
+(√
+c2max−c2min
+)
+/2;
+7 L← diag{r1,r 2,...,r n};
+8 xball← SampleUnitNBall;
+9 xrand← (CLxball + xcentre)∩X;
+10 else
+11 xrand∼U (X);
+12 return xrand;
+most planning problems this rotation matrix only needs to
+be calculated at the beginning of the problem.
+SampleUnitNBall: The function, SampleUnitNBall
+returns a uniform sample from the volume of an n-ball of
+unit radius centred at the origin, i.e. xball∼U (Xball).
+A. Calculating the Rewiring Radius
+At each iteration, the rewiring radius, rRRT∗, must be large
+enough to guarantee almost-sure asymptotic convergence
+while being small enough to only generate a tractable number
+of rewiring candidates. Karaman and Frazzoli [7] present a
+lower-bound for this rewiring radius in terms of the measure
+of the problem space and the number of vertices in the graph.
+Their expression assumes a uniform distribution of samples
+of a unit square. As Informed RRT* uniformly samples the
+subset of the planning problem that can improve the solution,
+a rewiring radius can be calculated from the measure of this
+informed subset and the related vertices inside it. This updated
+radius reduces the amount of rewiring necessary and further
+improves the performance of Informed RRT*. Ongoing work
+is focused on ﬁnding the exact form of this expression, but
+the radius provided by [7] appears appropriate. There also
+exists a k-nearest neighbour version of this expression.
+VI. S IMULATIONS
+Informed RRT* was compared to RRT* on a variety
+of simple planning problems (Figs. 5 to 7) and randomly
+generated worlds (e.g., Figs. 1, 2). Simple problems were
+used to test speciﬁc challenges, while the random worlds
+were used to provide more challenging problems in a variety
+of state dimensions.
+Fig. 5(a) was used to examine the effects of the problem
+range and the ability to ﬁnd paths within a speciﬁed tolerance
+of the true optimum, with the width of the obstacle, w, se-
+lected randomly. Fig. 5(b) was used to demonstrate Informed
+RRT*’s ability to ﬁnd topologically distinct solutions, with
+the position of the narrow passage, yg, selected randomly.
+For these toy problems, experiments were ended when the
+planner found a solution cost within the target tolerance of
+the optimum. Random worlds, as in Fig. 2, were used to
+test Informed RRT* on more complicated problems and in
+higher state dimensions by giving the algorithms 60 seconds
+to improve their initial solutions. For each variation of every
+experiment, 100 different runs of both RRT* and Informed
+RRT* were performed with a common pseudo-random seed
+and map.
+xstart xgoal
+dgoal
+l
+l
+w
+w
+xstart
+dgoal
+t
+h
+xgoalhg
+(a) (b)
+l
+yg
+Fig. 5. The two planning problems used in Section VI. The width of the
+obstacle, w, and the location of the gap, yg, were selected randomly for
+each experimental run.
+The algorithms share the same unoptimized code, allowing
+for the comparison of relative computational time 2. While
+further optimization would reduce the effect of graph size on
+the computational cost and reduce the difference between the
+two planners, as they have approximately the same cost per
+iteration it will not effect the order. To minimize the effects of
+the steer parameter on our results, we set it equal to the RRT*
+rewiring radius at each iteration calculated from γRRT =
+1.1γ∗RRT, a choice we found improved the performance of
+RRT*. As discussed in Section V-A, for Informed RRT* we
+calculated the rewiring radius for the subproblem deﬁned by
+the current solution using the expression in [7].
+Experiments varying the width of the problem range, l,
+while keeping a ﬁxed distance between the start and goal show
+that Informed RRT* ﬁnds a suitable solution in approximately
+the same time regardless of the relative size of the problem
+(Fig. 8). As a result of considering only the informed subset
+once an initial solution is found, the size of the search space
+is independent of the planning range (Fig. 6). In contrast,
+the time needed by RRT* to ﬁnd a similar solution increases
+as the problem range grows as proportionately more time
+is spent searching states that cannot improve the solution
+(Fig. 8).
+Experiments varying the target solution cost show that
+Informed RRT* is capable of ﬁnding near-optimal solutions
+in signiﬁcantly fewer iterations than RRT* (Fig. 9). The
+direct sampling of the informed subset increases density
+around the optimal solution faster than global sampling and
+therefore increases the probability of improving the solution
+and further focusing the search. In contrast, RRT* has uniform
+density across the entire planning domain and improving the
+solution actually decreases the probability of ﬁnding further
+improvements (Fig. 6).
+Experiments varying the height of hg in Fig. 5(b) demon-
+strate that Informed RRT* ﬁnds difﬁcult passages that
+improve the current solution, regardless of their homotopy
+class, quicker than RRT* (Fig. 10). Once again, the result of
+considering only the informed subset is an increased state
+density in the region of the planning problem that includes the
+optimal solution. Compared to global sampling, this increases
+the probability of sampling within difﬁcult passages, such as
+narrow gaps between obstacles, decreasing the time necessary
+2Experiments were run in Ubuntu 12.04 on an Intel i5-2500K CPU with
+8GB of RAM.
+5 seconds, cbest = 114 .86 5 seconds, cbest = 112 .52
+(a) (b)
+RRT* Informed RRT*
+Fig. 6. An example of Fig. 5(a) after 5 seconds for a problem with
+an optimal solution cost of 112.01. Note that the presence of an obstacle
+provides a lower bound on the size of the ellipsoidal subset but that Informed
+RRT* still searches a signiﬁcantly reduced domain than RRT*, increasing
+both the convergence rate and quality of ﬁnal solution.
+12.32 seconds 4.00 seconds
+(a) (b)
+RRT* Informed RRT*
+Fig. 7. An example of Fig. 5(b) for a 3% off-centre gap. By focusing the
+search space on the subset of states that may improve an initial solution
+ﬂanking the obstacle, Informed RRT* is able to ﬁnd a path through the
+narrow opening in 4.00 seconds while RRT* requires 12.32 seconds.
+to ﬁnd such solutions (Fig. 7).
+Finally, experiments on random worlds demonstrate that
+the improvements of Informed RRT* apply to a wide range
+of planning problems and state dimensions (Fig. 11).
+VII. D ISCUSSION & C ONCLUSION
+In this paper, we discuss that a necessary condition for
+RRT* algorithms to improve a solution is the addition of a
+state from a subset of the planning problem, Xf⊆X. For
+problems seeking to minimize path length in Rn, this subset
+can be estimated, Xˆf⊇Xf , by a prolate hyperspheroid (a
+special type of hyperellipsoid) with the initial and goal states
+as focal points. It is shown that the probability of adding a new
+state from this subset through rejection sampling of a larger
+set becomes arbitrarily small as the dimension of the problem
+increases, the size of the sampled set increases, or the solution
+approaches the theoretical minimum. A simple method to
+sample Xˆf directly is presented that allows for the creation
+of informed-sampling planners, such as Informed RRT*. It is
+shown that Informed RRT* outperforms RRT* in the ability
+to ﬁnd near-optimal solutions in ﬁnite time regardless of
+state dimension without requiring any assumptions about the
+optimal homotopy class.
+Informed RRT* uses heuristics to shrink the planning
+1 1.5 2 2.5 3 3.5 4 4.5 5 5.5 6
+1
+10
+100
+Performance vs. Map Size
+CPU Time [s]
+Map width as a factor of the distance between start and goal,l/dgoal [×]
+ 
+ 
+RR T* Time [s] Informed RR T* Time [s]
+Fig. 8. The median computational time needed by RRT* and Informed
+RRT* to ﬁnd a path within 2% of the optimal cost in R2 for various map
+widths,l, for the problem in Fig. 5(a). Error bars denote a nonparametric
+95% conﬁdence interval for the median number of iterations calculated from
+100 independent runs.
+11.21.41.61.822.22.42.62.83
+1
+10
+100
+Performance vs. T arget T olerance
+CPU Time [s]
+T arget path cost as a percentage above optimal cost,cbest/c∗ −1 [%]
+ 
+ 
+RR T* Time [s] Informed RR T* Time [s]
+Fig. 9. The median computational time needed by RRT* and Informed
+RRT* to ﬁnd a path within the speciﬁed tolerance of the optimal cost, c∗,
+in R2 for the problem in Fig. 5(a). Error bars denote a nonparametric 95%
+conﬁdence interval for the median number of iterations calculated from 100
+independent runs.
+problem to subsets of the original domain. This makes it
+inherently dependent on the current solution cost, as it cannot
+focus the search when the associated prolate hyperspheroid is
+larger than the planning problem itself. Similarly, it can only
+shrink the subset down to the lower bound deﬁned by the
+optimal solution. We are currently investigating techniques
+to focus the search without requiring an initial solution.
+These techniques, such as Batch Informed Trees ( BIT*) [25],
+incrementally increase the search subset. By doing so, they
+prioritize the initial search of low-cost solutions.
+An open motion planning library ( OMPL) implementa-
+tion of Informed RRT* is described at http://asrl.utias.
+utoronto.ca/code.
+ACKNOWLEDGMENT
+This research was funded by contributions from the Natural
+Sciences and Engineering Research Council of Canada
+(NSERC) through the NSERC Canadian Field Robotics
+Network ( NCFRN), the Ontario Ministry of Research and
+Innovation’s Early Researcher Award Program, and the Ofﬁce
+of Naval Research (ONR) Young Investigator Program.
+REFERENCES
+[1] P. E. Hart, N. J. Nilsson, and B. Raphael, “A formal basis for the
+heuristic determination of minimum cost paths,” TSSC, 4(2): 100–107,
+Jul. 1968
+[2] S. M. LaValle and J. J. Kuffner Jr., “Randomized kinodynamic planning,”
+IJRR, 20(5): 378–400, 2001.
+[3] L. E. Kavraki, P. ˇSvestka, J.-C. Latombe, and M. H. Overmars, “Prob-
+abilistic roadmaps for path planning in high-dimensional conﬁguration
+spaces,” TRA, 12(4): 566–580, 1996.
+[4] D. Hsu, R. Kindel, J.-C. Latombe, and S. Rock, “Randomized
+kinodynamic motion planning with moving obstacles,” IJRR, 21(3):
+233–255, 2002.
+[5] C. Urmson and R. Simmons, “Approaches for heuristically biasing
+RRT growth,” IROS, 2: 1178–1183, 2003.
+[6] D. Ferguson and A. Stentz, “Anytime RRTs,” IROS, 5369–5375, 2006.
+22.533.544.55
+1
+10
+100
+Performance vs. Gap Size
+CPU Time [s]
+Gap height as a percentage of total wall height,hg/h [%]
+ 
+ 
+RR T* Time [s] Informed RR T* Time [s]
+Fig. 10. The median computational time needed by RRT* and Informed
+RRT* to ﬁnd a path cheaper than ﬂanking the obstacle for various gap ratios,
+hg/h for the problem deﬁned in Fig. 5(b). Error bars denote a nonparametric
+95% conﬁdence interval for the median number of iterations calculated from
+100 independent runs.
+2 4 6 8 10 12 14 16
+0
+25
+50
+% Improvement vs. Rn
+Improvement [%]
+State dimension,n
+Fig. 11. The median performance of RRT* and Informed RRT* 60 seconds
+after ﬁnding an initial solution for random worlds (e.g., Figs. 1, 2) in Rn.
+Plotted as the relative difference in cost, (cRRT*best−cInformed RRT*best )/(cRRT*best). Errorbars denote a nonparametric 95% conﬁdence interval for the median number
+of iterations calculated from 100 independent runs.
+[7] S. Karaman and E. Frazzoli, “Sampling-based algorithms for optimal
+motion planning,” IJRR, 30(7): 846–894, 2011.
+[8] M. Otte and N. Correll, “C-FOREST: Parallel shortest path planning
+with superlinear speedup,” TRO, 29(3): 798–806, Jun. 2013
+[9] Y . Gabriely and E. Rimon, “CBUG: A quadratically competitive mobile
+robot navigation algorithm,” TRO, 24(6): 1451–1457, Dec. 2008.
+[10] N. Gasilov, M. Dogan, and V . Arici, “Two-stage shortest path algorithm
+for solving optimal obstacle avoidance problem,” IETE Jour. of
+Research, 57(3): 278–285, May 2011.
+[11] S. Kiesel, E. Burns, and W. Ruml, “Abstraction-guided sampling for
+motion planning,” SoCS, 2012.
+[12] R. Alterovitz, S. Patil, and A. Derbakova, “Rapidly-exploring roadmaps:
+Weighing exploration vs. reﬁnement in optimal motion planning,” ICRA,
+3706–3712, 2011.
+[13] B. Akgun and M. Stilman, “Sampling heuristics for optimal motion
+planning in high dimensions,” IROS, 2640–2645, 2011.
+[14] J. Nasir, F. Islam, U. Malik, Y . Ayaz, O. Hasan, M. Khan, and
+M. S. Muhammad, “RRT*-SMART: A rapid convergence implementa-
+tion of RRT*,” Int. Jour. of Adv. Robotic Systems , 10, 2013.
+[15] D. Kim, J. Lee, and S. Yoon, “Cloud RRT*: Sampling cloud based
+RRT*,” ICRA, 2014.
+[16] S. Karaman, M. R. Walter, A. Perez, E. Frazzoli, and S. Teller, “Anytime
+motion planning using the RRT*,” ICRA, 1478–1483, 2011.
+[17] M. Jordan and A. Perez, “Optimal bidirectional rapidly-exploring
+random trees,” CSAIL, MIT, MIT-CSAIL-TR-2013-021, 2013.
+[18] O. Arslan and P. Tsiotras, “Use of relaxation methods in sampling-based
+algorithms for optimal motion planning,” ICRA, 2013.
+[19] S. Koenig, M. Likhachev, and D. Furcy, “Lifelong planning A*,”
+Artiﬁcial Intelligence, 155(1–2): 93–146, 2004.
+[20] J. D. Gammell, S. S. Srinivasa, and T. D. Barfoot, “On recursive random
+prolate hyperspheroids,” Autonomous Space Robotics Lab, University
+of Toronto, TR-2014-JDG002, 2014. arXiv:1403.7664 [math.ST]
+[21] H. Sun and M. Farooq, “Note on the generation of random points
+uniformly distributed in hyper-ellipsoids,” in Fifth Int. Conf. on
+Information Fusion, 1: 489–496, 2002.
+[22] J. D. Gammell, and T. D. Barfoot, “The probability density function of a
+transformation-based hyperellipsoid sampling technique,” Autonomous
+Space Robotics Lab, University of Toronto, TR-2014-JDG004, 2014.
+arXiv:1404.1347 [math.ST]
+[23] G. Wahba, “A least squares estimate of satellite attitude,” SIAM Review,
+7: 409, 1965.
+[24] A. H. J. de Ruiter and J. R. Forbes, “On the solution of Wahba’s problem
+on SO(n),” Jour. of the Astronautical Sciences , 2014, to appear.
+[25] J. D. Gammell, S. S. Srinivasa, and T. D. Barfoot, “BIT*: Batch
+informed trees for optimal sampling-based planning via dynamic
+programming on implicit random geometric graphs,” Autonomous
+Space Robotics Lab, University of Toronto, TR-2014-JDG006, 2014.
+arXiv:1405.5848 [cs.RO]

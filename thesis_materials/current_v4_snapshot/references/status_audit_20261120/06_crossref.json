@@ -1,0 +1,327 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          20
+        ]
+      ],
+      "date-time": "2026-11-20T03:19:07Z",
+      "timestamp": 1795144747770,
+      "version": "4.10.3"
+    },
+    "reference-count": 22,
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "issue": "5",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2017,
+              10,
+              1
+            ]
+          ],
+          "date-time": "2017-10-01T00:00:00Z",
+          "timestamp": 1506816000000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      }
+    ],
+    "funder": [
+      {
+        "name": "Spanish government",
+        "award": [
+          "DPI2015-67275"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "DPI2015-67275"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Aragón regional government",
+        "award": [
+          "DGA T04-FSE"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "DGA T04-FSE"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Ministerio de Educación Scholarship",
+        "award": [
+          "FPU13/04175"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "FPU13/04175"
+            ]
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "IEEE Trans. Robot."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2017,
+          10
+        ]
+      ]
+    },
+    "DOI": "10.1109/tro.2017.2705103",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2017,
+          6,
+          12
+        ]
+      ],
+      "date-time": "2017-06-12T14:07:02Z",
+      "timestamp": 1497276422000
+    },
+    "page": "1255-1262",
+    "source": "Crossref",
+    "is-referenced-by-count": 6336,
+    "title": [
+      "ORB-SLAM2: An Open-Source SLAM System for Monocular, Stereo, and RGB-D Cameras"
+    ],
+    "prefix": "10.1109",
+    "volume": "33",
+    "author": [
+      {
+        "given": "Raul",
+        "family": "Mur-Artal",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Juan D.",
+        "family": "Tardos",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IROS.2015.7353546"
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IROS.2015.7353631"
+      },
+      {
+        "key": "ref12",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/0278364914551008"
+      },
+      {
+        "key": "ref13",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TRO.2013.2279412"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IROS.2013.6696650"
+      },
+      {
+        "key": "ref15",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/0278364916669237"
+      },
+      {
+        "key": "ref16",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TRO.2012.2197158"
+      },
+      {
+        "key": "ref17",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV.2011.6126544"
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICRA.2014.6906953"
+      },
+      {
+        "key": "ref19",
+        "first-page": "3607",
+        "article-title": "g2o: A general framework for graph optimization",
+        "author": "kuemmerle",
+        "year": "0",
+        "journal-title": "Proc IEEE Int Conf Robot Autom"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ISMAR.2011.6092378"
+      },
+      {
+        "key": "ref3",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IROS.2012.6385773"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TRO.2008.2003276"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TRO.2008.2004637"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV.2011.6126517"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.imavis.2012.02.009"
+      },
+      {
+        "key": "ref2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/0278364913491297"
+      },
+      {
+        "key": "ref1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TRO.2015.2463671"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s11263-010-0361-7"
+      },
+      {
+        "key": "ref20",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.15607/RSS.2010.VI.010"
+      },
+      {
+        "key": "ref22",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/LRA.2017.2653359"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/0278364915620033"
+      }
+    ],
+    "container-title": [
+      "IEEE Transactions on Robotics"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx7/8860/8055018/07946260.pdf?arnumber=7946260",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2022,
+          1,
+          12
+        ]
+      ],
+      "date-time": "2022-01-12T11:04:40Z",
+      "timestamp": 1641985480000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "http://ieeexplore.ieee.org/document/7946260/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2017,
+          10
+        ]
+      ]
+    },
+    "references-count": 22,
+    "journal-issue": {
+      "issue": "5"
+    },
+    "URL": "https://doi.org/10.1109/tro.2017.2705103",
+    "relation": {},
+    "ISSN": [
+      "1552-3098",
+      "1941-0468"
+    ],
+    "issn-type": [
+      {
+        "value": "1552-3098",
+        "type": "print"
+      },
+      {
+        "value": "1941-0468",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2017,
+          10
+        ]
+      ]
+    }
+  }
+}

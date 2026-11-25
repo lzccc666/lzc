@@ -1,0 +1,864 @@
+TY  - GEN
+TI  - 3D Dynamic Scene Graphs: Actionable Spatial Perception with Places, Objects, and Humans
+AU  - Rosinol, Antoni
+AU  - Gupta, Arjun
+AU  - Abate, Marcus
+AU  - Shi, Jingnan
+AU  - Carlone, Luca
+PY  - 2020
+DO  - 
+UR  - https://arxiv.org/abs/2002.06289
+ER  - 
+
+TY  - GEN
+TI  - A Survey of Motion Planning and Control Techniques for Self-driving Urban Vehicles
+AU  - Paden, Brian
+AU  - Cap, Michal
+AU  - Yong, Sze Zheng
+AU  - Yershov, Dmitry
+AU  - Frazzoli, Emilio
+PY  - 2016
+DO  - 
+UR  - https://arxiv.org/abs/1604.07446
+ER  - 
+
+TY  - GEN
+TI  - nuScenes: A multimodal dataset for autonomous driving
+AU  - Caesar, Holger
+AU  - Bankiti, Varun
+AU  - Lang, Alex H.
+AU  - Vora, Sourabh
+AU  - Liong, Venice Erin
+AU  - Xu, Qiang
+AU  - Krishnan, Anush
+AU  - Pan, Yu
+AU  - Baldan, Giancarlo
+AU  - Beijbom, Oscar
+PY  - 2019
+DO  - 
+UR  - https://arxiv.org/abs/1903.11027
+ER  - 
+
+TY  - JOUR
+TI  - Vision meets robotics: The KITTI dataset
+AU  - A Geiger
+AU  - P Lenz
+AU  - C Stiller
+AU  - R Urtasun
+PY  - 2013
+DO  - 10.1177/0278364913491297
+UR  - https://doi.org/10.1177/0278364913491297
+ER  - 
+
+TY  - GEN
+TI  - ORB-SLAM: a Versatile and Accurate Monocular SLAM System
+AU  - Mur-Artal, Raul
+AU  - Montiel, J. M. M.
+AU  - Tardos, Juan D.
+PY  - 2015
+DO  - 10.1109/TRO.2015.2463671
+UR  - https://arxiv.org/abs/1502.00956
+ER  - 
+
+TY  - GEN
+TI  - ORB-SLAM2: an Open-Source SLAM System for Monocular, Stereo and RGB-D Cameras
+AU  - Mur-Artal, Raul
+AU  - Tardos, Juan D.
+PY  - 2016
+DO  - 10.1109/TRO.2017.2705103
+UR  - https://arxiv.org/abs/1610.06475
+ER  - 
+
+TY  - GEN
+TI  - ORB-SLAM3: An Accurate Open-Source Library for Visual, Visual-Inertial and Multi-Map SLAM
+AU  - Campos, Carlos
+AU  - Elvira, Richard
+AU  - Rodríguez, Juan J. Gómez
+AU  - Montiel, José M. M.
+AU  - Tardós, Juan D.
+PY  - 2020
+DO  - 10.1109/TRO.2021.3075644
+UR  - https://arxiv.org/abs/2007.11898
+ER  - 
+
+TY  - GEN
+TI  - SemanticFusion: Dense 3D Semantic Mapping with Convolutional Neural Networks
+AU  - McCormac, John
+AU  - Handa, Ankur
+AU  - Davison, Andrew
+AU  - Leutenegger, Stefan
+PY  - 2016
+DO  - 
+UR  - https://arxiv.org/abs/1609.05130
+ER  - 
+
+TY  - GEN
+TI  - PanopticFusion: Online Volumetric Semantic Mapping at the Level of Stuff and Things
+AU  - Narita, Gaku
+AU  - Seno, Takashi
+AU  - Ishikawa, Tomoya
+AU  - Kaji, Yohsuke
+PY  - 2019
+DO  - 
+UR  - https://arxiv.org/abs/1903.01177
+ER  - 
+
+TY  - GEN
+TI  - Kimera: an Open-Source Library for Real-Time Metric-Semantic Localization and Mapping
+AU  - Rosinol, Antoni
+AU  - Abate, Marcus
+AU  - Chang, Yun
+AU  - Carlone, Luca
+PY  - 2019
+DO  - 
+UR  - https://arxiv.org/abs/1910.02490
+ER  - 
+
+TY  - GEN
+TI  - Kimera-Multi: Robust, Distributed, Dense Metric-Semantic SLAM for Multi-Robot Systems
+AU  - Tian, Yulun
+AU  - Chang, Yun
+AU  - Arias, Fernando Herrera
+AU  - Nieto-Granda, Carlos
+AU  - How, Jonathan P.
+AU  - Carlone, Luca
+PY  - 2021
+DO  - 
+UR  - https://arxiv.org/abs/2106.14386
+ER  - 
+
+TY  - GEN
+TI  - Fusion++: Volumetric Object-Level SLAM
+AU  - McCormac, John
+AU  - Clark, Ronald
+AU  - Bloesch, Michael
+AU  - Davison, Andrew J.
+AU  - Leutenegger, Stefan
+PY  - 2018
+DO  - 
+UR  - https://arxiv.org/abs/1808.08378
+ER  - 
+
+TY  - GEN
+TI  - MaskFusion: Real-Time Recognition, Tracking and Reconstruction of Multiple Moving Objects
+AU  - Rünz, Martin
+AU  - Buffier, Maud
+AU  - Agapito, Lourdes
+PY  - 2018
+DO  - 
+UR  - https://arxiv.org/abs/1804.09194
+ER  - 
+
+TY  - GEN
+TI  - DynaSLAM: Tracking, Mapping and Inpainting in Dynamic Scenes
+AU  - Bescos, Berta
+AU  - Fácil, José M.
+AU  - Civera, Javier
+AU  - Neira, José
+PY  - 2018
+DO  - 10.1109/LRA.2018.2860039
+UR  - https://arxiv.org/abs/1806.05620
+ER  - 
+
+TY  - GEN
+TI  - PointPillars: Fast Encoders for Object Detection from Point Clouds
+AU  - Lang, Alex H.
+AU  - Vora, Sourabh
+AU  - Caesar, Holger
+AU  - Zhou, Lubing
+AU  - Yang, Jiong
+AU  - Beijbom, Oscar
+PY  - 2018
+DO  - 
+UR  - https://arxiv.org/abs/1812.05784
+ER  - 
+
+TY  - GEN
+TI  - Center-based 3D Object Detection and Tracking
+AU  - Yin, Tianwei
+AU  - Zhou, Xingyi
+AU  - Krähenbühl, Philipp
+PY  - 2020
+DO  - 
+UR  - https://arxiv.org/abs/2006.11275
+ER  - 
+
+TY  - GEN
+TI  - BEVFusion: Multi-Task Multi-Sensor Fusion with Unified Bird's-Eye View Representation
+AU  - Liu, Zhijian
+AU  - Tang, Haotian
+AU  - Amini, Alexander
+AU  - Yang, Xinyu
+AU  - Mao, Huizi
+AU  - Rus, Daniela
+AU  - Han, Song
+PY  - 2022
+DO  - 
+UR  - https://arxiv.org/abs/2205.13542
+ER  - 
+
+TY  - GEN
+TI  - BEVFormer: Learning Bird's-Eye-View Representation from Multi-Camera Images via Spatiotemporal Transformers
+AU  - Li, Zhiqi
+AU  - Wang, Wenhai
+AU  - Li, Hongyang
+AU  - Xie, Enze
+AU  - Sima, Chonghao
+AU  - Lu, Tong
+AU  - Yu, Qiao
+AU  - Dai, Jifeng
+PY  - 2022
+DO  - 
+UR  - https://arxiv.org/abs/2203.17270
+ER  - 
+
+TY  - GEN
+TI  - Learning Transferable Visual Models From Natural Language Supervision
+AU  - Radford, Alec
+AU  - Kim, Jong Wook
+AU  - Hallacy, Chris
+AU  - Ramesh, Aditya
+AU  - Goh, Gabriel
+AU  - Agarwal, Sandhini
+AU  - Sastry, Girish
+AU  - Askell, Amanda
+AU  - Mishkin, Pamela
+AU  - Clark, Jack
+AU  - Krueger, Gretchen
+AU  - Sutskever, Ilya
+PY  - 2021
+DO  - 
+UR  - https://arxiv.org/abs/2103.00020
+ER  - 
+
+TY  - GEN
+TI  - Language-driven Semantic Segmentation
+AU  - Li, Boyi
+AU  - Weinberger, Kilian Q.
+AU  - Belongie, Serge
+AU  - Koltun, Vladlen
+AU  - Ranftl, René
+PY  - 2022
+DO  - 
+UR  - https://arxiv.org/abs/2201.03546
+ER  - 
+
+TY  - GEN
+TI  - DINOv2: Learning Robust Visual Features without Supervision
+AU  - Oquab, Maxime
+AU  - Darcet, Timothée
+AU  - Moutakanni, Théo
+AU  - Vo, Huy
+AU  - Szafraniec, Marc
+AU  - Khalidov, Vasil
+AU  - Fernandez, Pierre
+AU  - Haziza, Daniel
+AU  - Massa, Francisco
+AU  - El-Nouby, Alaaeldin
+AU  - Assran, Mahmoud
+AU  - Ballas, Nicolas
+AU  - Galuba, Wojciech
+AU  - Howes, Russell
+AU  - Huang, Po-Yao
+AU  - Li, Shang-Wen
+AU  - Misra, Ishan
+AU  - Rabbat, Michael
+AU  - Sharma, Vasu
+AU  - Synnaeve, Gabriel
+AU  - Xu, Hu
+AU  - Jegou, Hervé
+AU  - Mairal, Julien
+AU  - Labatut, Patrick
+AU  - Joulin, Armand
+AU  - Bojanowski, Piotr
+PY  - 2023
+DO  - 
+UR  - https://arxiv.org/abs/2304.07193
+ER  - 
+
+TY  - GEN
+TI  - Grounded Language-Image Pre-training
+AU  - Li, Liunian Harold
+AU  - Zhang, Pengchuan
+AU  - Zhang, Haotian
+AU  - Yang, Jianwei
+AU  - Li, Chunyuan
+AU  - Zhong, Yiwu
+AU  - Wang, Lijuan
+AU  - Yuan, Lu
+AU  - Zhang, Lei
+AU  - Hwang, Jenq-Neng
+AU  - Chang, Kai-Wei
+AU  - Gao, Jianfeng
+PY  - 2021
+DO  - 
+UR  - https://arxiv.org/abs/2112.03857
+ER  - 
+
+TY  - GEN
+TI  - Detecting Twenty-thousand Classes using Image-level Supervision
+AU  - Zhou, Xingyi
+AU  - Girdhar, Rohit
+AU  - Joulin, Armand
+AU  - Krähenbühl, Philipp
+AU  - Misra, Ishan
+PY  - 2022
+DO  - 
+UR  - https://arxiv.org/abs/2201.02605
+ER  - 
+
+TY  - GEN
+TI  - Grounding DINO: Marrying DINO with Grounded Pre-Training for Open-Set Object Detection
+AU  - Liu, Shilong
+AU  - Zeng, Zhaoyang
+AU  - Ren, Tianhe
+AU  - Li, Feng
+AU  - Zhang, Hao
+AU  - Yang, Jie
+AU  - Jiang, Qing
+AU  - Li, Chunyuan
+AU  - Yang, Jianwei
+AU  - Su, Hang
+AU  - Zhu, Jun
+AU  - Zhang, Lei
+PY  - 2023
+DO  - 
+UR  - https://arxiv.org/abs/2303.05499
+ER  - 
+
+TY  - GEN
+TI  - YOLO-World: Real-Time Open-Vocabulary Object Detection
+AU  - Cheng, Tianheng
+AU  - Song, Lin
+AU  - Ge, Yixiao
+AU  - Liu, Wenyu
+AU  - Wang, Xinggang
+AU  - Shan, Ying
+PY  - 2024
+DO  - 
+UR  - https://arxiv.org/abs/2401.17270
+ER  - 
+
+TY  - GEN
+TI  - Segment Anything
+AU  - Kirillov, Alexander
+AU  - Mintun, Eric
+AU  - Ravi, Nikhila
+AU  - Mao, Hanzi
+AU  - Rolland, Chloe
+AU  - Gustafson, Laura
+AU  - Xiao, Tete
+AU  - Whitehead, Spencer
+AU  - Berg, Alexander C.
+AU  - Lo, Wan-Yen
+AU  - Dollár, Piotr
+AU  - Girshick, Ross
+PY  - 2023
+DO  - 
+UR  - https://arxiv.org/abs/2304.02643
+ER  - 
+
+TY  - GEN
+TI  - SAM 2: Segment Anything in Images and Videos
+AU  - Ravi, Nikhila
+AU  - Gabeur, Valentin
+AU  - Hu, Yuan-Ting
+AU  - Hu, Ronghang
+AU  - Ryali, Chaitanya
+AU  - Ma, Tengyu
+AU  - Khedr, Haitham
+AU  - Rädle, Roman
+AU  - Rolland, Chloe
+AU  - Gustafson, Laura
+AU  - Mintun, Eric
+AU  - Pan, Junting
+AU  - Alwala, Kalyan Vasudev
+AU  - Carion, Nicolas
+AU  - Wu, Chao-Yuan
+AU  - Girshick, Ross
+AU  - Dollár, Piotr
+AU  - Feichtenhofer, Christoph
+PY  - 2024
+DO  - 
+UR  - https://arxiv.org/abs/2408.00714
+ER  - 
+
+TY  - GEN
+TI  - OpenScene: 3D Scene Understanding with Open Vocabularies
+AU  - Peng, Songyou
+AU  - Genova, Kyle
+AU  - Jiang, Chiyu "Max"
+AU  - Tagliasacchi, Andrea
+AU  - Pollefeys, Marc
+AU  - Funkhouser, Thomas
+PY  - 2022
+DO  - 
+UR  - https://arxiv.org/abs/2211.15654
+ER  - 
+
+TY  - GEN
+TI  - ConceptFusion: Open-set Multimodal 3D Mapping
+AU  - Jatavallabhula, Krishna Murthy
+AU  - Kuwajerwala, Alihusein
+AU  - Gu, Qiao
+AU  - Omama, Mohd
+AU  - Chen, Tao
+AU  - Maalouf, Alaa
+AU  - Li, Shuang
+AU  - Iyer, Ganesh
+AU  - Saryazdi, Soroush
+AU  - Keetha, Nikhil
+AU  - Tewari, Ayush
+AU  - Tenenbaum, Joshua B.
+AU  - de Melo, Celso Miguel
+AU  - Krishna, Madhava
+AU  - Paull, Liam
+AU  - Shkurti, Florian
+AU  - Torralba, Antonio
+PY  - 2023
+DO  - 
+UR  - https://arxiv.org/abs/2302.07241
+ER  - 
+
+TY  - GEN
+TI  - LERF: Language Embedded Radiance Fields
+AU  - Kerr, Justin
+AU  - Kim, Chung Min
+AU  - Goldberg, Ken
+AU  - Kanazawa, Angjoo
+AU  - Tancik, Matthew
+PY  - 2023
+DO  - 
+UR  - https://arxiv.org/abs/2303.09553
+ER  - 
+
+TY  - GEN
+TI  - OpenMask3D: Open-Vocabulary 3D Instance Segmentation
+AU  - Takmaz, Ayça
+AU  - Fedele, Elisabetta
+AU  - Sumner, Robert W.
+AU  - Pollefeys, Marc
+AU  - Tombari, Federico
+AU  - Engelmann, Francis
+PY  - 2023
+DO  - 
+UR  - https://arxiv.org/abs/2306.13631
+ER  - 
+
+TY  - GEN
+TI  - Open-Fusion: Real-time Open-Vocabulary 3D Mapping and Queryable Scene Representation
+AU  - Yamazaki, Kashu
+AU  - Hanyu, Taisei
+AU  - Vo, Khoa
+AU  - Pham, Thang
+AU  - Tran, Minh
+AU  - Doretto, Gianfranco
+AU  - Nguyen, Anh
+AU  - Le, Ngan
+PY  - 2023
+DO  - 
+UR  - https://arxiv.org/abs/2310.03923
+ER  - 
+
+TY  - GEN
+TI  - Simple Online and Realtime Tracking
+AU  - Bewley, Alex
+AU  - Ge, Zongyuan
+AU  - Ott, Lionel
+AU  - Ramos, Fabio
+AU  - Upcroft, Ben
+PY  - 2016
+DO  - 10.1109/ICIP.2016.7533003
+UR  - https://arxiv.org/abs/1602.00763
+ER  - 
+
+TY  - GEN
+TI  - Simple Online and Realtime Tracking with a Deep Association Metric
+AU  - Wojke, Nicolai
+AU  - Bewley, Alex
+AU  - Paulus, Dietrich
+PY  - 2017
+DO  - 
+UR  - https://arxiv.org/abs/1703.07402
+ER  - 
+
+TY  - GEN
+TI  - ByteTrack: Multi-Object Tracking by Associating Every Detection Box
+AU  - Zhang, Yifu
+AU  - Sun, Peize
+AU  - Jiang, Yi
+AU  - Yu, Dongdong
+AU  - Weng, Fucheng
+AU  - Yuan, Zehuan
+AU  - Luo, Ping
+AU  - Liu, Wenyu
+AU  - Wang, Xinggang
+PY  - 2021
+DO  - 
+UR  - https://arxiv.org/abs/2110.06864
+ER  - 
+
+TY  - GEN
+TI  - AB3DMOT: A Baseline for 3D Multi-Object Tracking and New Evaluation Metrics
+AU  - Weng, Xinshuo
+AU  - Wang, Jianren
+AU  - Held, David
+AU  - Kitani, Kris
+PY  - 2020
+DO  - 
+UR  - https://arxiv.org/abs/2008.08063
+ER  - 
+
+TY  - GEN
+TI  - Performance Measures and a Data Set for Multi-Target, Multi-Camera Tracking
+AU  - Ristani, Ergys
+AU  - Solera, Francesco
+AU  - Zou, Roger S.
+AU  - Cucchiara, Rita
+AU  - Tomasi, Carlo
+PY  - 2016
+DO  - 
+UR  - https://arxiv.org/abs/1609.01775
+ER  - 
+
+TY  - GEN
+TI  - HOTA: A Higher Order Metric for Evaluating Multi-Object Tracking
+AU  - Luiten, Jonathon
+AU  - Osep, Aljosa
+AU  - Dendorfer, Patrick
+AU  - Torr, Philip
+AU  - Geiger, Andreas
+AU  - Leal-Taixe, Laura
+AU  - Leibe, Bastian
+PY  - 2020
+DO  - 10.1007/s11263-020-01375-2
+UR  - https://arxiv.org/abs/2009.07736
+ER  - 
+
+TY  - GEN
+TI  - Learning 3D Semantic Scene Graphs from 3D Indoor Reconstructions
+AU  - Wald, Johanna
+AU  - Dhamo, Helisa
+AU  - Navab, Nassir
+AU  - Tombari, Federico
+PY  - 2020
+DO  - 
+UR  - https://arxiv.org/abs/2004.03967
+ER  - 
+
+TY  - GEN
+TI  - Hydra: A Real-time Spatial Perception System for 3D Scene Graph Construction and Optimization
+AU  - Hughes, Nathan
+AU  - Chang, Yun
+AU  - Carlone, Luca
+PY  - 2022
+DO  - 
+UR  - https://arxiv.org/abs/2201.13360
+ER  - 
+
+TY  - GEN
+TI  - Open3DSG: Open-Vocabulary 3D Scene Graphs from Point Clouds with Queryable Objects and Open-Set Relationships
+AU  - Koch, Sebastian
+AU  - Vaskevicius, Narunas
+AU  - Colosi, Mirco
+AU  - Hermosilla, Pedro
+AU  - Ropinski, Timo
+PY  - 2024
+DO  - 
+UR  - https://arxiv.org/abs/2402.12259
+ER  - 
+
+TY  - GEN
+TI  - Hierarchical Open-Vocabulary 3D Scene Graphs for Language-Grounded Robot Navigation
+AU  - Werby, Abdelrhman
+AU  - Huang, Chenguang
+AU  - Büchner, Martin
+AU  - Valada, Abhinav
+AU  - Burgard, Wolfram
+PY  - 2024
+DO  - 10.15607/RSS.2024.XX.077
+UR  - https://arxiv.org/abs/2403.17846
+ER  - 
+
+TY  - GEN
+TI  - Dynamic Open-Vocabulary 3D Scene Graphs for Long-term Language-Guided Mobile Manipulation
+AU  - Yan, Zhijie
+AU  - Li, Shufei
+AU  - Wang, Zuoxu
+AU  - Wu, Lixiu
+AU  - Wang, Han
+AU  - Zhu, Jun
+AU  - Chen, Lijiang
+AU  - Liu, Jihong
+PY  - 2024
+DO  - 
+UR  - https://arxiv.org/abs/2410.11989
+ER  - 
+
+TY  - GEN
+TI  - Collaborative Dynamic 3D Scene Graphs for Open-Vocabulary Urban Scene Understanding
+AU  - Steinke, Tim
+AU  - Büchner, Martin
+AU  - Vödisch, Niclas
+AU  - Valada, Abhinav
+PY  - 2025
+DO  - 
+UR  - https://arxiv.org/abs/2503.08474
+ER  - 
+
+TY  - GEN
+TI  - Vision-and-Language Navigation: Interpreting visually-grounded navigation instructions in real environments
+AU  - Anderson, Peter
+AU  - Wu, Qi
+AU  - Teney, Damien
+AU  - Bruce, Jake
+AU  - Johnson, Mark
+AU  - Sünderhauf, Niko
+AU  - Reid, Ian
+AU  - Gould, Stephen
+AU  - Hengel, Anton van den
+PY  - 2017
+DO  - 
+UR  - https://arxiv.org/abs/1711.07280
+ER  - 
+
+TY  - GEN
+TI  - LM-Nav: Robotic Navigation with Large Pre-Trained Models of Language, Vision, and Action
+AU  - Shah, Dhruv
+AU  - Osinski, Blazej
+AU  - Ichter, Brian
+AU  - Levine, Sergey
+PY  - 2022
+DO  - 
+UR  - https://arxiv.org/abs/2207.04429
+ER  - 
+
+TY  - GEN
+TI  - SG-Nav: Online 3D Scene Graph Prompting for LLM-based Zero-shot Object Navigation
+AU  - Yin, Hang
+AU  - Xu, Xiuwei
+AU  - Wu, Zhenyu
+AU  - Zhou, Jie
+AU  - Lu, Jiwen
+PY  - 2024
+DO  - 
+UR  - https://arxiv.org/abs/2410.08189
+ER  - 
+
+TY  - GEN
+TI  - Visual Language Maps for Robot Navigation
+AU  - Huang, Chenguang
+AU  - Mees, Oier
+AU  - Zeng, Andy
+AU  - Burgard, Wolfram
+PY  - 2022
+DO  - 
+UR  - https://arxiv.org/abs/2210.05714
+ER  - 
+
+TY  - GEN
+TI  - VLFM: Vision-Language Frontier Maps for Zero-Shot Semantic Navigation
+AU  - Yokoyama, Naoki
+AU  - Ha, Sehoon
+AU  - Batra, Dhruv
+AU  - Wang, Jiuguang
+AU  - Bucher, Bernadette
+PY  - 2023
+DO  - 
+UR  - https://arxiv.org/abs/2312.03275
+ER  - 
+
+TY  - GEN
+TI  - SayPlan: Grounding Large Language Models using 3D Scene Graphs for Scalable Robot Task Planning
+AU  - Rana, Krishan
+AU  - Haviland, Jesse
+AU  - Garg, Sourav
+AU  - Abou-Chakra, Jad
+AU  - Reid, Ian
+AU  - Suenderhauf, Niko
+PY  - 2023
+DO  - 
+UR  - https://arxiv.org/abs/2307.06135
+ER  - 
+
+TY  - GEN
+TI  - VoxPoser: Composable 3D Value Maps for Robotic Manipulation with Language Models
+AU  - Huang, Wenlong
+AU  - Wang, Chen
+AU  - Zhang, Ruohan
+AU  - Li, Yunzhu
+AU  - Wu, Jiajun
+AU  - Fei-Fei, Li
+PY  - 2023
+DO  - 
+UR  - https://arxiv.org/abs/2307.05973
+ER  - 
+
+TY  - GEN
+TI  - Talk2Car: Taking Control of Your Self-Driving Car
+AU  - Deruyttere, Thierry
+AU  - Vandenhende, Simon
+AU  - Grujicic, Dusan
+AU  - Van Gool, Luc
+AU  - Moens, Marie-Francine
+PY  - 2019
+DO  - 10.18653/v1/D19-1215
+UR  - https://arxiv.org/abs/1909.10838
+ER  - 
+
+TY  - GEN
+TI  - Qwen2-VL: Enhancing Vision-Language Model's Perception of the World at Any Resolution
+AU  - Wang, Peng
+AU  - Bai, Shuai
+AU  - Tan, Sinan
+AU  - Wang, Shijie
+AU  - Fan, Zhihao
+AU  - Bai, Jinze
+AU  - Chen, Keqin
+AU  - Liu, Xuejing
+AU  - Wang, Jialin
+AU  - Ge, Wenbin
+AU  - Fan, Yang
+AU  - Dang, Kai
+AU  - Du, Mengfei
+AU  - Ren, Xuancheng
+AU  - Men, Rui
+AU  - Liu, Dayiheng
+AU  - Zhou, Chang
+AU  - Zhou, Jingren
+AU  - Lin, Junyang
+PY  - 2024
+DO  - 
+UR  - https://arxiv.org/abs/2409.12191
+ER  - 
+
+TY  - GEN
+TI  - Qwen2.5-VL Technical Report
+AU  - Bai, Shuai
+AU  - Chen, Keqin
+AU  - Liu, Xuejing
+AU  - Wang, Jialin
+AU  - Ge, Wenbin
+AU  - Song, Sibo
+AU  - Dang, Kai
+AU  - Wang, Peng
+AU  - Wang, Shijie
+AU  - Tang, Jun
+AU  - Zhong, Humen
+AU  - Zhu, Yuanzhi
+AU  - Yang, Mingkun
+AU  - Li, Zhaohai
+AU  - Wan, Jianqiang
+AU  - Wang, Pengfei
+AU  - Ding, Wei
+AU  - Fu, Zheren
+AU  - Xu, Yiheng
+AU  - Ye, Jiabo
+AU  - Zhang, Xi
+AU  - Xie, Tianbao
+AU  - Cheng, Zesen
+AU  - Zhang, Hang
+AU  - Yang, Zhibo
+AU  - Xu, Haiyang
+AU  - Lin, Junyang
+PY  - 2025
+DO  - 
+UR  - https://arxiv.org/abs/2502.13923
+ER  - 
+
+TY  - GEN
+TI  - LoRA: Low-Rank Adaptation of Large Language Models
+AU  - Hu, Edward J.
+AU  - Shen, Yelong
+AU  - Wallis, Phillip
+AU  - Allen-Zhu, Zeyuan
+AU  - Li, Yuanzhi
+AU  - Wang, Shean
+AU  - Wang, Lu
+AU  - Chen, Weizhu
+PY  - 2021
+DO  - 
+UR  - https://arxiv.org/abs/2106.09685
+ER  - 
+
+TY  - GEN
+TI  - QLoRA: Efficient Finetuning of Quantized LLMs
+AU  - Dettmers, Tim
+AU  - Pagnoni, Artidoro
+AU  - Holtzman, Ari
+AU  - Zettlemoyer, Luke
+PY  - 2023
+DO  - 
+UR  - https://arxiv.org/abs/2305.14314
+ER  - 
+
+TY  - JOUR
+TI  - A note on two problems in connexion with graphs
+AU  - E. W. Dijkstra
+PY  - 1959
+DO  - 10.1007/BF01386390
+UR  - https://doi.org/10.1007/BF01386390
+ER  - 
+
+TY  - JOUR
+TI  - A Formal Basis for the Heuristic Determination of Minimum Cost Paths
+AU  - Peter Hart
+AU  - Nils Nilsson
+AU  - Bertram Raphael
+PY  - 1968
+DO  - 10.1109/TSSC.1968.300136
+UR  - https://doi.org/10.1109/TSSC.1968.300136
+ER  - 
+
+TY  - GEN
+TI  - Sampling-based Algorithms for Optimal Motion Planning
+AU  - Karaman, Sertac
+AU  - Frazzoli, Emilio
+PY  - 2011
+DO  - 
+UR  - https://arxiv.org/abs/1105.1186
+ER  - 
+
+TY  - GEN
+TI  - Informed RRT*: Optimal Sampling-based Path Planning Focused via Direct Sampling of an Admissible Ellipsoidal Heuristic
+AU  - Gammell, Jonathan D.
+AU  - Srinivasa, Siddhartha S.
+AU  - Barfoot, Timothy D.
+PY  - 2014
+DO  - 10.1109/IROS.2014.6942976
+UR  - https://arxiv.org/abs/1404.2334
+ER  - 
+
+TY  - JOUR
+TI  - Path Planning for Autonomous Vehicles in Unknown Semi-structured Environments
+AU  - Dmitri Dolgov
+AU  - Sebastian Thrun
+AU  - Michael Montemerlo
+AU  - James Diebel
+PY  - 2010
+DO  - 10.1177/0278364909359210
+UR  - https://doi.org/10.1177/0278364909359210
+ER  - 
+
+TY  - GEN
+TI  - Planning-oriented Autonomous Driving
+AU  - Hu, Yihan
+AU  - Yang, Jiazhi
+AU  - Chen, Li
+AU  - Li, Keyu
+AU  - Sima, Chonghao
+AU  - Zhu, Xizhou
+AU  - Chai, Siqi
+AU  - Du, Senyao
+AU  - Lin, Tianwei
+AU  - Wang, Wenhai
+AU  - Lu, Lewei
+AU  - Jia, Xiaosong
+AU  - Liu, Qiang
+AU  - Dai, Jifeng
+AU  - Qiao, Yu
+AU  - Li, Hongyang
+PY  - 2022
+DO  - 
+UR  - https://arxiv.org/abs/2212.10156
+ER  - 

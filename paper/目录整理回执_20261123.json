@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-23",
+  "current": "v4",
+  "catalog": "/root/autodl-tmp/lizichong/paper",
+  "current_entry": "/root/autodl-tmp/lizichong/paper/当前版_v4",
+  "storage": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v4",
+  "legacy_sources": {
+    "v1": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1",
+    "v2": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v2",
+    "v3": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/thesis_public_datasets_draft_v1/revision_v3"
+  },
+  "archived_stage": "/root/autodl-tmp/lizichong/paper/历史版本/阶段快照_文献扩充前_20261120",
+  "early_stage_count": 16,
+  "originals_unchanged": true
+}

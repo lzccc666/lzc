@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="zh">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>真实逐帧实验浏览</title>
+<style>
+*{box-sizing:border-box}body{font:15px system-ui,sans-serif;line-height:1.55;margin:0;background:#f3f5f7;color:#203247}header{padding:20px 28px;background:#fff;border-bottom:1px solid #ddd}h1{font-size:24px;margin:0 0 8px}a{color:#205d87}nav{display:flex;gap:20px;flex-wrap:wrap}main{max-width:1600px;margin:auto;padding:20px}.controls{display:flex;gap:12px;align-items:center;flex-wrap:wrap;background:white;padding:14px;border-radius:8px}select,button,input{font:inherit}select,button{padding:7px}#seek{flex:1;min-width:160px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}.card{background:white;padding:12px;border-radius:8px;min-width:0}h2{font-size:17px;margin:0 0 8px}.card img{display:block;width:100%;aspect-ratio:16/9;object-fit:contain;background:#10151c}#space{display:block;width:100%;height:350px;background:#fafcfd;touch-action:none}.note{color:#586779;font-size:13px}#status{white-space:pre-line;margin:12px 0}pre{white-space:pre-wrap;word-break:break-word;max-height:420px;overflow:auto;font-size:12px}#state{font-size:14px;margin:8px 0}button:disabled{opacity:.45}.bad{color:#9a321c}@media(max-width:900px){.grid{grid-template-columns:1fr}header{padding:16px}main{padding:12px}}
+</style>
+<header><h1>真实逐帧实验浏览</h1>
+<p>nuScenes 新测试：30 个场景、1196 帧、10 种建图方案。这里只看保存的真实感知结果，属于离线建图与目标提议，不能当作实际导航到达。</p>
+<nav><a href="/public_experiment_completion_20261115/kitti_tracking_expanded/index.html">KITTI：10 段连续序列 / 1000 帧</a><a href="/public_experiment_completion_20261115/当前卡点与十回合范围_076.md">CARLA：已有 10 回合与当前卡点</a><a href="/public_experiment_completion_20261115/carla_official/carla_ten_041/episodes.csv">CARLA 逐回合原始表</a><a href="使用说明.md">使用说明</a></nav></header>
+<main><div class="controls"><label>场景 <select id="scene"></select></label><label>方案 <select id="condition"></select></label><button id="prev">上一帧</button><input id="seek" type="range" value="0" min="0" max="0"><button id="next">下一帧</button><span id="counter"></span></div>
+<div id="status" role="status">正在读取已有结果……</div>
+<div class="grid"><section class="card"><h2>相机原图</h2><img id="rgb" alt="当前帧相机原图"></section><section class="card"><h2>目标检测与 SAM 分割叠加</h2><img id="detection" alt="当前帧检测和掩膜叠加"></section><section class="card"><h2>当前 LiDAR 投影的稀疏深度</h2><img id="depth" alt="当前帧稀疏深度灰度显示"><p class="note">越亮越近，黑色无测量。统一显示范围 0—65 米，没有补点或填洞。</p></section><section class="card"><h2>保存的三维对象框与关系</h2><canvas id="space" width="900" height="420"></canvas><p class="note">拖动旋转，滚轮缩放。显示真实保存的中心和轴对齐尺寸；不是完整点云。关系最多显示 200 条，完整数据见下方原始记录。</p></section></div>
+<p id="state"></p><details><summary>本帧对象、关系和原始文件位置</summary><p id="links"></p><pre id="details"></pre></details>
+</main><script src="viewer.js"></script></html>

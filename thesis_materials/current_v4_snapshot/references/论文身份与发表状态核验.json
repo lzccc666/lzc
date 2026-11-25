@@ -1,0 +1,2970 @@
+{
+  "summary": {
+    "checked_on": "2026-11-20",
+    "recent_year_window": [
+      2022,
+      2026
+    ],
+    "total": 62,
+    "verified_existing_papers": 62,
+    "confirmed_formal_publications": 59,
+    "preprints_confirmed_formal_publication_not_established": [
+      36,
+      53,
+      54
+    ],
+    "early_access_only_confirmed": 0,
+    "recent_cited_version_year_count": 29,
+    "recent_formal_priority_year_count": 33,
+    "recent_first_public_year_count": 29,
+    "cited_version_year_histogram": {
+      "1959": 1,
+      "1968": 1,
+      "2010": 1,
+      "2011": 1,
+      "2013": 1,
+      "2014": 1,
+      "2015": 1,
+      "2016": 5,
+      "2017": 2,
+      "2018": 4,
+      "2019": 4,
+      "2020": 6,
+      "2021": 5,
+      "2022": 9,
+      "2023": 11,
+      "2024": 7,
+      "2025": 2
+    },
+    "formal_priority_year_histogram": {
+      "1959": 1,
+      "1968": 1,
+      "2010": 1,
+      "2011": 1,
+      "2013": 1,
+      "2014": 1,
+      "2015": 1,
+      "2016": 3,
+      "2017": 3,
+      "2018": 4,
+      "2019": 3,
+      "2020": 5,
+      "2021": 4,
+      "2022": 8,
+      "2023": 12,
+      "2024": 9,
+      "2025": 4
+    },
+    "word_sha256": "576cdc5e65d9973dfec031d003cabade739bd58a835a134218a73c464d4d6072",
+    "pdf_sha256": "37c802fa82529111f0d766c98a3f8719ef616026149911d923e89dd4647922df",
+    "scope": "论文存在性、出版状态及年份核验；不等于全文通读、逐项论点支撑验证或所有作者卷期页逐字段无误。",
+    "recent_cited_version_year_percentage": 46.77,
+    "recent_formal_priority_year_percentage": 53.23,
+    "recent_first_public_year_percentage": 46.77
+  },
+  "references": [
+    {
+      "number": 1,
+      "id": "2002.06289",
+      "title": "3D Dynamic Scene Graphs: Actionable Spatial Perception with Places, Objects, and Humans",
+      "exists": true,
+      "arxiv_year": 2020,
+      "published_year": 2020,
+      "venue": "Robotics: Science and Systems XVI",
+      "doi": "10.15607/rss.2020.xvi.079",
+      "status": "published",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2002.06289",
+        "https://doi.org/10.15607/RSS.2020.XVI.079",
+        "https://api.crossref.org/works/10.15607%2FRSS.2020.XVI.079",
+        "https://roboticsproceedings.org/rss16/p079.html"
+      ],
+      "notes": [
+        "原始arXiv条目（如有）已逐条联网打开核对题名、作者及v1年份；正式状态以Crossref出版社登记记录并结合出版/会议页面核验。"
+      ],
+      "verified_date": "2026-11-20",
+      "crossref_record": "01_crossref.json",
+      "cited_version_year": 2020,
+      "formal_or_preprint_year": 2020,
+      "first_public_year": 2020,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": false,
+      "within_2022_2026_formal_priority": false
+    },
+    {
+      "number": 2,
+      "id": "1604.07446",
+      "title": "A Survey of Motion Planning and Control Techniques for Self-driving Urban Vehicles",
+      "exists": true,
+      "arxiv_year": 2016,
+      "published_year": 2016,
+      "venue": "IEEE Transactions on Intelligent Vehicles",
+      "doi": "10.1109/tiv.2016.2578706",
+      "status": "published",
+      "evidence_urls": [
+        "https://arxiv.org/abs/1604.07446",
+        "https://doi.org/10.1109/TIV.2016.2578706",
+        "https://api.crossref.org/works/10.1109%2FTIV.2016.2578706"
+      ],
+      "notes": [
+        "原始arXiv条目（如有）已逐条联网打开核对题名、作者及v1年份；正式状态以Crossref出版社登记记录并结合出版/会议页面核验。"
+      ],
+      "verified_date": "2026-11-20",
+      "crossref_record": "02_crossref.json",
+      "cited_version_year": 2016,
+      "formal_or_preprint_year": 2016,
+      "first_public_year": 2016,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": false,
+      "within_2022_2026_formal_priority": false
+    },
+    {
+      "number": 3,
+      "id": "1903.11027",
+      "title": "nuScenes: A multimodal dataset for autonomous driving",
+      "exists": true,
+      "arxiv_year": 2019,
+      "published_year": 2020,
+      "venue": "2020 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+      "doi": "10.1109/cvpr42600.2020.01164",
+      "status": "published",
+      "evidence_urls": [
+        "https://arxiv.org/abs/1903.11027",
+        "https://doi.org/10.1109/CVPR42600.2020.01164",
+        "https://api.crossref.org/works/10.1109%2FCVPR42600.2020.01164",
+        "https://openaccess.thecvf.com/content_CVPR_2020/html/Caesar_nuScenes_A_Multimodal_Dataset_for_Autonomous_Driving_CVPR_2020_paper.html"
+      ],
+      "notes": [
+        "原始arXiv条目（如有）已逐条联网打开核对题名、作者及v1年份；正式状态以Crossref出版社登记记录并结合出版/会议页面核验。",
+        "当前书目引用预印本首发年2019；正式出版年为2020，两个年份分别记录。",
+        "CVF开放版本与IEEE登记页码存在差异，本核验未将两者页码混拼；身份与正式发表年份一致。"
+      ],
+      "verified_date": "2026-11-20",
+      "crossref_record": "03_crossref.json",
+      "cited_version_year": 2019,
+      "formal_or_preprint_year": 2020,
+      "first_public_year": 2019,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": false,
+      "within_2022_2026_formal_priority": false
+    },
+    {
+      "number": 4,
+      "id": "KITTI2013",
+      "title": "Vision meets robotics: The KITTI dataset",
+      "exists": true,
+      "arxiv_year": null,
+      "published_year": 2013,
+      "venue": "The International Journal of Robotics Research",
+      "doi": "10.1177/0278364913491297",
+      "status": "published",
+      "evidence_urls": [
+        "https://doi.org/10.1177/0278364913491297",
+        "https://api.crossref.org/works/10.1177%2F0278364913491297",
+        "https://www.cvlibs.net/datasets/kitti/"
+      ],
+      "notes": [
+        "KITTI为IJRR 2013正式期刊论文，已核验SAGE DOI、Crossref和作者数据集官网。未为该条目指定arXiv。"
+      ],
+      "verified_date": "2026-11-20",
+      "crossref_record": "04_crossref.json",
+      "cited_version_year": 2013,
+      "formal_or_preprint_year": 2013,
+      "first_public_year": 2013,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": false,
+      "within_2022_2026_formal_priority": false
+    },
+    {
+      "number": 5,
+      "id": "1502.00956",
+      "title": "ORB-SLAM: a Versatile and Accurate Monocular SLAM System",
+      "exists": true,
+      "arxiv_year": 2015,
+      "published_year": 2015,
+      "venue": "IEEE Transactions on Robotics",
+      "doi": "10.1109/tro.2015.2463671",
+      "status": "published",
+      "evidence_urls": [
+        "https://arxiv.org/abs/1502.00956",
+        "https://doi.org/10.1109/TRO.2015.2463671",
+        "https://api.crossref.org/works/10.1109%2FTRO.2015.2463671"
+      ],
+      "notes": [
+        "原始arXiv条目（如有）已逐条联网打开核对题名、作者及v1年份；正式状态以Crossref出版社登记记录并结合出版/会议页面核验。"
+      ],
+      "verified_date": "2026-11-20",
+      "crossref_record": "05_crossref.json",
+      "cited_version_year": 2015,
+      "formal_or_preprint_year": 2015,
+      "first_public_year": 2015,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": false,
+      "within_2022_2026_formal_priority": false
+    },
+    {
+      "number": 6,
+      "id": "1610.06475",
+      "title": "ORB-SLAM2: an Open-Source SLAM System for Monocular, Stereo and RGB-D Cameras",
+      "exists": true,
+      "arxiv_year": 2016,
+      "published_year": 2017,
+      "venue": "IEEE Transactions on Robotics",
+      "doi": "10.1109/tro.2017.2705103",
+      "status": "published",
+      "evidence_urls": [
+        "https://arxiv.org/abs/1610.06475",
+        "https://doi.org/10.1109/TRO.2017.2705103",
+        "https://api.crossref.org/works/10.1109%2FTRO.2017.2705103"
+      ],
+      "notes": [
+        "原始arXiv条目（如有）已逐条联网打开核对题名、作者及v1年份；正式状态以Crossref出版社登记记录并结合出版/会议页面核验。",
+        "当前书目引用预印本首发年2016；正式出版年为2017，两个年份分别记录。"
+      ],
+      "verified_date": "2026-11-20",
+      "crossref_record": "06_crossref.json",
+      "cited_version_year": 2016,
+      "formal_or_preprint_year": 2017,
+      "first_public_year": 2016,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": false,
+      "within_2022_2026_formal_priority": false
+    },
+    {
+      "number": 7,
+      "id": "2007.11898",
+      "title": "ORB-SLAM3: An Accurate Open-Source Library for Visual, Visual-Inertial and Multi-Map SLAM",
+      "exists": true,
+      "arxiv_year": 2020,
+      "published_year": 2021,
+      "venue": "IEEE Transactions on Robotics",
+      "doi": "10.1109/tro.2021.3075644",
+      "status": "published",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2007.11898",
+        "https://doi.org/10.1109/TRO.2021.3075644",
+        "https://api.crossref.org/works/10.1109%2FTRO.2021.3075644"
+      ],
+      "notes": [
+        "原始arXiv条目（如有）已逐条联网打开核对题名、作者及v1年份；正式状态以Crossref出版社登记记录并结合出版/会议页面核验。",
+        "当前书目引用预印本首发年2020；正式出版年为2021，两个年份分别记录。"
+      ],
+      "verified_date": "2026-11-20",
+      "crossref_record": "07_crossref.json",
+      "cited_version_year": 2020,
+      "formal_or_preprint_year": 2021,
+      "first_public_year": 2020,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": false,
+      "within_2022_2026_formal_priority": false
+    },
+    {
+      "number": 8,
+      "id": "1609.05130",
+      "title": "SemanticFusion: Dense 3D Semantic Mapping with Convolutional Neural Networks",
+      "exists": true,
+      "arxiv_year": 2016,
+      "published_year": 2017,
+      "venue": "2017 IEEE International Conference on Robotics and Automation (ICRA)",
+      "doi": "10.1109/icra.2017.7989538",
+      "status": "published",
+      "evidence_urls": [
+        "https://arxiv.org/abs/1609.05130",
+        "https://doi.org/10.1109/ICRA.2017.7989538",
+        "https://api.crossref.org/works/10.1109%2FICRA.2017.7989538",
+        "https://portal.fis.tum.de/en/publications/semanticfusion-dense-3d-semantic-mapping-with-convolutional-neura/"
+      ],
+      "notes": [
+        "原始arXiv条目（如有）已逐条联网打开核对题名、作者及v1年份；正式状态以Crossref出版社登记记录并结合出版/会议页面核验。",
+        "当前书目引用预印本首发年2016；正式出版年为2017，两个年份分别记录。"
+      ],
+      "verified_date": "2026-11-20",
+      "crossref_record": "08_crossref.json",
+      "cited_version_year": 2016,
+      "formal_or_preprint_year": 2017,
+      "first_public_year": 2016,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": false,
+      "within_2022_2026_formal_priority": false
+    },
+    {
+      "number": 9,
+      "id": "1903.01177",
+      "title": "PanopticFusion: Online Volumetric Semantic Mapping at the Level of Stuff and Things",
+      "exists": true,
+      "arxiv_year": 2019,
+      "published_year": 2019,
+      "venue": "2019 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)",
+      "doi": "10.1109/iros40897.2019.8967890",
+      "status": "published",
+      "evidence_urls": [
+        "https://arxiv.org/abs/1903.01177",
+        "https://doi.org/10.1109/IROS40897.2019.8967890",
+        "https://api.crossref.org/works/10.1109%2FIROS40897.2019.8967890"
+      ],
+      "notes": [
+        "原始arXiv条目（如有）已逐条联网打开核对题名、作者及v1年份；正式状态以Crossref出版社登记记录并结合出版/会议页面核验。"
+      ],
+      "verified_date": "2026-11-20",
+      "crossref_record": "09_crossref.json",
+      "cited_version_year": 2019,
+      "formal_or_preprint_year": 2019,
+      "first_public_year": 2019,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": false,
+      "within_2022_2026_formal_priority": false
+    },
+    {
+      "number": 10,
+      "id": "1910.02490",
+      "title": "Kimera: an Open-Source Library for Real-Time Metric-Semantic Localization and Mapping",
+      "exists": true,
+      "arxiv_year": 2019,
+      "published_year": 2020,
+      "venue": "2020 IEEE International Conference on Robotics and Automation (ICRA)",
+      "doi": "10.1109/icra40945.2020.9196885",
+      "status": "published",
+      "evidence_urls": [
+        "https://arxiv.org/abs/1910.02490",
+        "https://doi.org/10.1109/ICRA40945.2020.9196885",
+        "https://api.crossref.org/works/10.1109%2FICRA40945.2020.9196885",
+        "https://www.mit.edu/~arosinol/papers/Rosinol20icra-Kimera.pdf"
+      ],
+      "notes": [
+        "原始arXiv条目（如有）已逐条联网打开核对题名、作者及v1年份；正式状态以Crossref出版社登记记录并结合出版/会议页面核验。",
+        "当前书目引用预印本首发年2019；正式出版年为2020，两个年份分别记录。"
+      ],
+      "verified_date": "2026-11-20",
+      "crossref_record": "10_crossref.json",
+      "cited_version_year": 2019,
+      "formal_or_preprint_year": 2020,
+      "first_public_year": 2019,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": false,
+      "within_2022_2026_formal_priority": false
+    },
+    {
+      "number": 11,
+      "id": "2106.14386",
+      "title": "Kimera-Multi: Robust, Distributed, Dense Metric-Semantic SLAM for Multi-Robot Systems",
+      "exists": true,
+      "arxiv_year": 2021,
+      "published_year": 2022,
+      "venue": "IEEE Transactions on Robotics",
+      "doi": "10.1109/tro.2021.3137751",
+      "status": "published",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2106.14386",
+        "https://doi.org/10.1109/TRO.2021.3137751",
+        "https://api.crossref.org/works/10.1109%2FTRO.2021.3137751",
+        "https://xplorestaging.ieee.org/ielx7/8860/9851593/09686955.pdf?arnumber=9686955&isnumber=9851593"
+      ],
+      "notes": [
+        "原始arXiv条目（如有）已逐条联网打开核对题名、作者及v1年份；正式状态以Crossref出版社登记记录并结合出版/会议页面核验。",
+        "当前书目引用预印本首发年2021；正式出版年为2022，两个年份分别记录。",
+        "DOI含2021，但实际卷期为TRO 38(4)，2022年8月；近五年正式发表口径计入2022，首次公开口径仍为2021。"
+      ],
+      "verified_date": "2026-11-20",
+      "crossref_record": "11_crossref.json",
+      "cited_version_year": 2021,
+      "formal_or_preprint_year": 2022,
+      "first_public_year": 2021,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": false,
+      "within_2022_2026_formal_priority": true
+    },
+    {
+      "number": 12,
+      "id": "1808.08378",
+      "title": "Fusion++: Volumetric Object-Level SLAM",
+      "exists": true,
+      "arxiv_year": 2018,
+      "published_year": 2018,
+      "venue": "2018 International Conference on 3D Vision (3DV)",
+      "doi": "10.1109/3dv.2018.00015",
+      "status": "published",
+      "evidence_urls": [
+        "https://arxiv.org/abs/1808.08378",
+        "https://doi.org/10.1109/3DV.2018.00015",
+        "https://api.crossref.org/works/10.1109%2F3DV.2018.00015"
+      ],
+      "notes": [
+        "原始arXiv条目（如有）已逐条联网打开核对题名、作者及v1年份；正式状态以Crossref出版社登记记录并结合出版/会议页面核验。"
+      ],
+      "verified_date": "2026-11-20",
+      "crossref_record": "12_crossref.json",
+      "cited_version_year": 2018,
+      "formal_or_preprint_year": 2018,
+      "first_public_year": 2018,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": false,
+      "within_2022_2026_formal_priority": false
+    },
+    {
+      "number": 13,
+      "id": "1804.09194",
+      "title": "MaskFusion: Real-Time Recognition, Tracking and Reconstruction of Multiple Moving Objects",
+      "exists": true,
+      "arxiv_year": 2018,
+      "published_year": 2018,
+      "venue": "2018 IEEE International Symposium on Mixed and Augmented Reality (ISMAR)",
+      "doi": "10.1109/ismar.2018.00024",
+      "status": "published",
+      "evidence_urls": [
+        "https://arxiv.org/abs/1804.09194",
+        "https://doi.org/10.1109/ISMAR.2018.00024",
+        "https://api.crossref.org/works/10.1109%2FISMAR.2018.00024"
+      ],
+      "notes": [
+        "原始arXiv条目（如有）已逐条联网打开核对题名、作者及v1年份；正式状态以Crossref出版社登记记录并结合出版/会议页面核验。"
+      ],
+      "verified_date": "2026-11-20",
+      "crossref_record": "13_crossref.json",
+      "cited_version_year": 2018,
+      "formal_or_preprint_year": 2018,
+      "first_public_year": 2018,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": false,
+      "within_2022_2026_formal_priority": false
+    },
+    {
+      "number": 14,
+      "id": "1806.05620",
+      "title": "DynaSLAM: Tracking, Mapping and Inpainting in Dynamic Scenes",
+      "exists": true,
+      "arxiv_year": 2018,
+      "published_year": 2018,
+      "venue": "IEEE Robotics and Automation Letters",
+      "doi": "10.1109/lra.2018.2860039",
+      "status": "published",
+      "evidence_urls": [
+        "https://arxiv.org/abs/1806.05620",
+        "https://doi.org/10.1109/LRA.2018.2860039",
+        "https://api.crossref.org/works/10.1109%2FLRA.2018.2860039"
+      ],
+      "notes": [
+        "原始arXiv条目（如有）已逐条联网打开核对题名、作者及v1年份；正式状态以Crossref出版社登记记录并结合出版/会议页面核验。"
+      ],
+      "verified_date": "2026-11-20",
+      "crossref_record": "14_crossref.json",
+      "cited_version_year": 2018,
+      "formal_or_preprint_year": 2018,
+      "first_public_year": 2018,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": false,
+      "within_2022_2026_formal_priority": false
+    },
+    {
+      "number": 15,
+      "id": "1812.05784",
+      "title": "PointPillars: Fast Encoders for Object Detection from Point Clouds",
+      "exists": true,
+      "arxiv_year": 2018,
+      "published_year": 2019,
+      "venue": "2019 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+      "doi": "10.1109/cvpr.2019.01298",
+      "status": "published",
+      "evidence_urls": [
+        "https://arxiv.org/abs/1812.05784",
+        "https://doi.org/10.1109/CVPR.2019.01298",
+        "https://api.crossref.org/works/10.1109%2FCVPR.2019.01298",
+        "https://openaccess.thecvf.com/content_CVPR_2019/html/Lang_PointPillars_Fast_Encoders_for_Object_Detection_From_Point_Clouds_CVPR_2019_paper.html"
+      ],
+      "notes": [
+        "原始arXiv条目（如有）已逐条联网打开核对题名、作者及v1年份；正式状态以Crossref出版社登记记录并结合出版/会议页面核验。",
+        "当前书目引用预印本首发年2018；正式出版年为2019，两个年份分别记录。",
+        "CVF开放版本与IEEE登记页码存在差异，本核验未将两者页码混拼；身份与正式发表年份一致。"
+      ],
+      "verified_date": "2026-11-20",
+      "crossref_record": "15_crossref.json",
+      "cited_version_year": 2018,
+      "formal_or_preprint_year": 2019,
+      "first_public_year": 2018,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": false,
+      "within_2022_2026_formal_priority": false
+    },
+    {
+      "number": 16,
+      "id": "2006.11275",
+      "title": "Center-based 3D Object Detection and Tracking",
+      "exists": true,
+      "arxiv_year": 2020,
+      "published_year": 2021,
+      "venue": "2021 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+      "doi": "10.1109/cvpr46437.2021.01161",
+      "status": "published",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2006.11275",
+        "https://doi.org/10.1109/CVPR46437.2021.01161",
+        "https://api.crossref.org/works/10.1109%2FCVPR46437.2021.01161",
+        "https://openaccess.thecvf.com/content/CVPR2021/html/Yin_Center-Based_3D_Object_Detection_and_Tracking_CVPR_2021_paper.html"
+      ],
+      "notes": [
+        "原始arXiv条目（如有）已逐条联网打开核对题名、作者及v1年份；正式状态以Crossref出版社登记记录并结合出版/会议页面核验。",
+        "当前书目引用预印本首发年2020；正式出版年为2021，两个年份分别记录。",
+        "CVF开放版本与IEEE登记页码存在差异，本核验未将两者页码混拼；身份与正式发表年份一致。"
+      ],
+      "verified_date": "2026-11-20",
+      "crossref_record": "16_crossref.json",
+      "cited_version_year": 2020,
+      "formal_or_preprint_year": 2021,
+      "first_public_year": 2020,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": false,
+      "within_2022_2026_formal_priority": false
+    },
+    {
+      "number": 17,
+      "id": "2205.13542",
+      "title": "BEVFusion: Multi-Task Multi-Sensor Fusion with Unified Bird's-Eye View Representation",
+      "exists": true,
+      "arxiv_year": 2022,
+      "published_year": 2023,
+      "venue": "2023 IEEE International Conference on Robotics and Automation (ICRA)",
+      "doi": "10.1109/ICRA48891.2023.10160968",
+      "status": "published",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2205.13542",
+        "https://par.nsf.gov/servlets/purl/10467175",
+        "https://api.crossref.org/works/10.1109%2FICRA48891.2023.10160968"
+      ],
+      "notes": "已核对arXiv首发记录及正式论文记录；预印本与正式版为同一工作，不重复计数。",
+      "preprint_first_date": "2022/05/26",
+      "checked_date": "2026-11-20",
+      "recent_2022_2026_by_preprint": true,
+      "recent_2022_2026_by_publication": true,
+      "published_metadata_cache": "group_17_32_cache/17_crossref.json",
+      "published_authors": [
+        {
+          "given": "Zhijian",
+          "family": "Liu",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Massachusetts Institute of Technology,Cambridge,MA,USA,02139"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Haotian",
+          "family": "Tang",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Massachusetts Institute of Technology,Cambridge,MA,USA,02139"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Alexander",
+          "family": "Amini",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Massachusetts Institute of Technology,Cambridge,MA,USA,02139"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Xinyu",
+          "family": "Yang",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Massachusetts Institute of Technology,Cambridge,MA,USA,02139"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Huizi",
+          "family": "Mao",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "OmniML,San Jose,CA,USA,95131"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Daniela L.",
+          "family": "Rus",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Massachusetts Institute of Technology,Cambridge,MA,USA,02139"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Song",
+          "family": "Han",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Massachusetts Institute of Technology,Cambridge,MA,USA,02139"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "published_title": "BEVFusion: Multi-Task Multi-Sensor Fusion with Unified Bird's-Eye View Representation",
+      "published_pages": "2774-2781",
+      "published_date_parts": [
+        [
+          2023,
+          5,
+          29
+        ]
+      ],
+      "cited_version_year": 2022,
+      "formal_or_preprint_year": 2023,
+      "first_public_year": 2022,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": true,
+      "within_2022_2026_formal_priority": true
+    },
+    {
+      "number": 18,
+      "id": "2203.17270",
+      "title": "BEVFormer: Learning Bird's-Eye-View Representation from Multi-Camera Images via Spatiotemporal Transformers",
+      "exists": true,
+      "arxiv_year": 2022,
+      "published_year": 2022,
+      "venue": "Computer Vision – ECCV 2022",
+      "doi": "10.1007/978-3-031-20077-9_1",
+      "status": "published",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2203.17270",
+        "https://www.ecva.net/papers/eccv_2022/papers_ECCV/html/694_ECCV_2022_paper.php",
+        "https://api.crossref.org/works/10.1007%2F978-3-031-20077-9_1"
+      ],
+      "notes": "已核对arXiv首发记录及正式论文记录；预印本与正式版为同一工作，不重复计数。",
+      "preprint_first_date": "2022/03/31",
+      "checked_date": "2026-11-20",
+      "recent_2022_2026_by_preprint": true,
+      "recent_2022_2026_by_publication": true,
+      "published_metadata_cache": "group_17_32_cache/18_crossref.json",
+      "published_authors": [
+        {
+          "given": "Zhiqi",
+          "family": "Li",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Wenhai",
+          "family": "Wang",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Hongyang",
+          "family": "Li",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Enze",
+          "family": "Xie",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Chonghao",
+          "family": "Sima",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Tong",
+          "family": "Lu",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Yu",
+          "family": "Qiao",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Jifeng",
+          "family": "Dai",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "published_title": "BEVFormer: Learning Bird’s-Eye-View Representation from Multi-camera Images via Spatiotemporal Transformers",
+      "published_pages": "1-18",
+      "published_date_parts": [
+        [
+          2022
+        ]
+      ],
+      "cited_version_year": 2022,
+      "formal_or_preprint_year": 2022,
+      "first_public_year": 2022,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": true,
+      "within_2022_2026_formal_priority": true
+    },
+    {
+      "number": 19,
+      "id": "2103.00020",
+      "title": "Learning Transferable Visual Models From Natural Language Supervision",
+      "exists": true,
+      "arxiv_year": 2021,
+      "published_year": 2021,
+      "venue": "Proceedings of the 38th International Conference on Machine Learning, PMLR 139",
+      "doi": null,
+      "status": "published",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2103.00020",
+        "https://proceedings.mlr.press/v139/radford21a.html"
+      ],
+      "notes": "CLIP为ICML 2021正式论文，2022—2026口径不计入近五年；PMLR正式记录可核验。",
+      "preprint_first_date": "2021/02/26",
+      "checked_date": "2026-11-20",
+      "recent_2022_2026_by_preprint": false,
+      "recent_2022_2026_by_publication": false,
+      "cited_version_year": 2021,
+      "formal_or_preprint_year": 2021,
+      "first_public_year": 2021,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": false,
+      "within_2022_2026_formal_priority": false
+    },
+    {
+      "number": 20,
+      "id": "2201.03546",
+      "title": "Language-driven Semantic Segmentation",
+      "exists": true,
+      "arxiv_year": 2022,
+      "published_year": 2022,
+      "venue": "International Conference on Learning Representations (ICLR 2022)",
+      "doi": null,
+      "status": "published",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2201.03546",
+        "https://openreview.net/pdf/9214428c3de4dee047f2ade9ea22c54498592843.pdf"
+      ],
+      "notes": "OpenReview论坛页有浏览器验证；OpenReview论文PDF及作者机构托管PDF明确标注ICLR 2022，arXiv注释亦为ICLR 2022。",
+      "preprint_first_date": "2022/01/10",
+      "checked_date": "2026-11-20",
+      "recent_2022_2026_by_preprint": true,
+      "recent_2022_2026_by_publication": true,
+      "cited_version_year": 2022,
+      "formal_or_preprint_year": 2022,
+      "first_public_year": 2022,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": true,
+      "within_2022_2026_formal_priority": true
+    },
+    {
+      "number": 21,
+      "id": "2304.07193",
+      "title": "DINOv2: Learning Robust Visual Features without Supervision",
+      "exists": true,
+      "arxiv_year": 2023,
+      "published_year": 2024,
+      "venue": "Transactions on Machine Learning Research (TMLR)",
+      "doi": null,
+      "status": "published",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2304.07193",
+        "https://openreview.net/pdf?id=a68SUt6zFt"
+      ],
+      "notes": "arXiv首发2023，正式TMLR论文PDF页眉为01/2024；OpenReview论坛页有浏览器验证，PDF可核验。",
+      "preprint_first_date": "2023/04/14",
+      "checked_date": "2026-11-20",
+      "recent_2022_2026_by_preprint": true,
+      "recent_2022_2026_by_publication": true,
+      "cited_version_year": 2023,
+      "formal_or_preprint_year": 2024,
+      "first_public_year": 2023,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": true,
+      "within_2022_2026_formal_priority": true
+    },
+    {
+      "number": 22,
+      "id": "2112.03857",
+      "title": "Grounded Language-Image Pre-training",
+      "exists": true,
+      "arxiv_year": 2021,
+      "published_year": 2022,
+      "venue": "2022 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+      "doi": "10.1109/CVPR52688.2022.01069",
+      "status": "published",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2112.03857",
+        "https://openaccess.thecvf.com/content/CVPR2022/html/Li_Grounded_Language-Image_Pre-Training_CVPR_2022_paper.html",
+        "https://api.crossref.org/works/10.1109%2FCVPR52688.2022.01069"
+      ],
+      "notes": "预印本首发2021，正式CVPR 2022。CVF页面页码10965—10975，Crossref登记10955—10965；如采用正式版须以出版社登记核对整条元数据，勿与预印本信息混搭。本轮不修改主书目。",
+      "preprint_first_date": "2021/12/07",
+      "checked_date": "2026-11-20",
+      "recent_2022_2026_by_preprint": false,
+      "recent_2022_2026_by_publication": true,
+      "published_metadata_cache": "group_17_32_cache/22_crossref.json",
+      "published_authors": [
+        {
+          "given": "Liunian Harold",
+          "family": "Li",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "UCLA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Pengchuan",
+          "family": "Zhang",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Microsoft Research"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Haotian",
+          "family": "Zhang",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of Washington"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Jianwei",
+          "family": "Yang",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Microsoft Research"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Chunyuan",
+          "family": "Li",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Microsoft Research"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Yiwu",
+          "family": "Zhong",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of Wisconsin-Madison"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Lijuan",
+          "family": "Wang",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Microsoft Cloud and AI"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Lu",
+          "family": "Yuan",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Microsoft Cloud and AI"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Lei",
+          "family": "Zhang",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Intemational Digital Economy Academy"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Jenq-Neng",
+          "family": "Hwang",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of Washington"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Kai-Wei",
+          "family": "Chang",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "UCLA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Jianfeng",
+          "family": "Gao",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Microsoft Research"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "published_title": "Grounded Language-Image Pre-training",
+      "published_pages": "10955-10965",
+      "published_date_parts": [
+        [
+          2022,
+          6
+        ]
+      ],
+      "cited_version_year": 2021,
+      "formal_or_preprint_year": 2022,
+      "first_public_year": 2021,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": false,
+      "within_2022_2026_formal_priority": true
+    },
+    {
+      "number": 23,
+      "id": "2201.02605",
+      "title": "Detecting Twenty-thousand Classes using Image-level Supervision",
+      "exists": true,
+      "arxiv_year": 2022,
+      "published_year": 2022,
+      "venue": "Computer Vision – ECCV 2022",
+      "doi": "10.1007/978-3-031-20077-9_21",
+      "status": "published",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2201.02605",
+        "https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136690344.pdf",
+        "https://api.crossref.org/works/10.1007%2F978-3-031-20077-9_21"
+      ],
+      "notes": "已核对arXiv首发记录及正式论文记录；预印本与正式版为同一工作，不重复计数。",
+      "preprint_first_date": "2022/01/07",
+      "checked_date": "2026-11-20",
+      "recent_2022_2026_by_preprint": true,
+      "recent_2022_2026_by_publication": true,
+      "published_metadata_cache": "group_17_32_cache/23_crossref.json",
+      "published_authors": [
+        {
+          "given": "Xingyi",
+          "family": "Zhou",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Rohit",
+          "family": "Girdhar",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Armand",
+          "family": "Joulin",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Philipp",
+          "family": "Krähenbühl",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Ishan",
+          "family": "Misra",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "published_title": "Detecting Twenty-Thousand Classes Using Image-Level Supervision",
+      "published_pages": "350-368",
+      "published_date_parts": [
+        [
+          2022
+        ]
+      ],
+      "cited_version_year": 2022,
+      "formal_or_preprint_year": 2022,
+      "first_public_year": 2022,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": true,
+      "within_2022_2026_formal_priority": true
+    },
+    {
+      "number": 24,
+      "id": "2303.05499",
+      "title": "Grounding DINO: Marrying DINO with Grounded Pre-Training for Open-Set Object Detection",
+      "exists": true,
+      "arxiv_year": 2023,
+      "published_year": 2024,
+      "venue": "Computer Vision – ECCV 2024",
+      "doi": "10.1007/978-3-031-72970-6_3",
+      "status": "published",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2303.05499",
+        "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/06319.pdf",
+        "https://api.crossref.org/works/10.1007%2F978-3-031-72970-6_3"
+      ],
+      "notes": "预印本首发2023，正式ECCV 2024。正式版作者表含Qing Jiang；引用正式版时须按正式版作者顺序整条核验。",
+      "preprint_first_date": "2023/03/09",
+      "checked_date": "2026-11-20",
+      "recent_2022_2026_by_preprint": true,
+      "recent_2022_2026_by_publication": true,
+      "published_metadata_cache": "group_17_32_cache/24_crossref.json",
+      "published_authors": [
+        {
+          "given": "Shilong",
+          "family": "Liu",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Zhaoyang",
+          "family": "Zeng",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Tianhe",
+          "family": "Ren",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Feng",
+          "family": "Li",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Hao",
+          "family": "Zhang",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Jie",
+          "family": "Yang",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Qing",
+          "family": "Jiang",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Chunyuan",
+          "family": "Li",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Jianwei",
+          "family": "Yang",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Hang",
+          "family": "Su",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Jun",
+          "family": "Zhu",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Lei",
+          "family": "Zhang",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "published_title": "Grounding DINO: Marrying DINO with Grounded Pre-training for Open-Set Object Detection",
+      "published_pages": "38-55",
+      "published_date_parts": [
+        [
+          2024,
+          11,
+          23
+        ]
+      ],
+      "cited_version_year": 2023,
+      "formal_or_preprint_year": 2024,
+      "first_public_year": 2023,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": true,
+      "within_2022_2026_formal_priority": true
+    },
+    {
+      "number": 25,
+      "id": "2401.17270",
+      "title": "YOLO-World: Real-Time Open-Vocabulary Object Detection",
+      "exists": true,
+      "arxiv_year": 2024,
+      "published_year": 2024,
+      "venue": "2024 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+      "doi": "10.1109/CVPR52733.2024.01599",
+      "status": "published",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2401.17270",
+        "https://openaccess.thecvf.com/content/CVPR2024/html/Cheng_YOLO-World_Real-Time_Open-Vocabulary_Object_Detection_CVPR_2024_paper.html",
+        "https://api.crossref.org/works/10.1109%2FCVPR52733.2024.01599"
+      ],
+      "notes": "已核对arXiv首发记录及正式论文记录；预印本与正式版为同一工作，不重复计数。",
+      "preprint_first_date": "2024/01/30",
+      "checked_date": "2026-11-20",
+      "recent_2022_2026_by_preprint": true,
+      "recent_2022_2026_by_publication": true,
+      "published_metadata_cache": "group_17_32_cache/25_crossref.json",
+      "published_authors": [
+        {
+          "given": "Tianheng",
+          "family": "Cheng",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "School of EIC, Huazhong University of Science &#x0026; Technology"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Lin",
+          "family": "Song",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Tencent AI Lab"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Yixiao",
+          "family": "Ge",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Tencent AI Lab"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Wenyu",
+          "family": "Liu",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "School of EIC, Huazhong University of Science &#x0026; Technology"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Xinggang",
+          "family": "Wang",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "School of EIC, Huazhong University of Science &#x0026; Technology"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Ying",
+          "family": "Shan",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Tencent AI Lab"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "published_title": "YOLO-World: Real-Time Open-Vocabulary Object Detection",
+      "published_pages": "16901-16911",
+      "published_date_parts": [
+        [
+          2024,
+          6,
+          16
+        ]
+      ],
+      "cited_version_year": 2024,
+      "formal_or_preprint_year": 2024,
+      "first_public_year": 2024,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": true,
+      "within_2022_2026_formal_priority": true
+    },
+    {
+      "number": 26,
+      "id": "2304.02643",
+      "title": "Segment Anything",
+      "exists": true,
+      "arxiv_year": 2023,
+      "published_year": 2023,
+      "venue": "2023 IEEE/CVF International Conference on Computer Vision (ICCV)",
+      "doi": "10.1109/ICCV51070.2023.00371",
+      "status": "published",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2304.02643",
+        "https://openaccess.thecvf.com/content/ICCV2023/html/Kirillov_Segment_Anything_ICCV_2023_paper.html",
+        "https://api.crossref.org/works/10.1109%2FICCV51070.2023.00371"
+      ],
+      "notes": "已核对arXiv首发记录及正式论文记录；预印本与正式版为同一工作，不重复计数。",
+      "preprint_first_date": "2023/04/05",
+      "checked_date": "2026-11-20",
+      "recent_2022_2026_by_preprint": true,
+      "recent_2022_2026_by_publication": true,
+      "crossref_search_match": {
+        "doi": "10.1109/iccv51070.2023.00371",
+        "title": [
+          "Segment Anything"
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2023,
+              10,
+              1
+            ]
+          ]
+        },
+        "container-title": [
+          "2023 IEEE/CVF International Conference on Computer Vision (ICCV)"
+        ]
+      },
+      "cited_version_year": 2023,
+      "formal_or_preprint_year": 2023,
+      "first_public_year": 2023,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": true,
+      "within_2022_2026_formal_priority": true
+    },
+    {
+      "number": 27,
+      "id": "2408.00714",
+      "title": "SAM 2: Segment Anything in Images and Videos",
+      "exists": true,
+      "arxiv_year": 2024,
+      "published_year": 2025,
+      "venue": "International Conference on Learning Representations (ICLR 2025)",
+      "doi": null,
+      "status": "published",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2408.00714",
+        "https://openreview.net/pdf/7c41968163abe4e3700e3e3a15174a9d679fcd52.pdf"
+      ],
+      "notes": "预印本首发2024，OpenReview正式论文PDF明确标注ICLR 2025，非仅投稿记录。",
+      "preprint_first_date": "2024/08/01",
+      "checked_date": "2026-11-20",
+      "recent_2022_2026_by_preprint": true,
+      "recent_2022_2026_by_publication": true,
+      "cited_version_year": 2024,
+      "formal_or_preprint_year": 2025,
+      "first_public_year": 2024,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": true,
+      "within_2022_2026_formal_priority": true
+    },
+    {
+      "number": 28,
+      "id": "2211.15654",
+      "title": "OpenScene: 3D Scene Understanding with Open Vocabularies",
+      "exists": true,
+      "arxiv_year": 2022,
+      "published_year": 2023,
+      "venue": "2023 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+      "doi": "10.1109/CVPR52729.2023.00085",
+      "status": "published",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2211.15654",
+        "https://openaccess.thecvf.com/content/CVPR2023/html/Peng_OpenScene_3D_Scene_Understanding_With_Open_Vocabularies_CVPR_2023_paper.html",
+        "https://api.crossref.org/works/10.1109%2FCVPR52729.2023.00085"
+      ],
+      "notes": "已核对arXiv首发记录及正式论文记录；预印本与正式版为同一工作，不重复计数。",
+      "preprint_first_date": "2022/11/28",
+      "checked_date": "2026-11-20",
+      "recent_2022_2026_by_preprint": true,
+      "recent_2022_2026_by_publication": true,
+      "crossref_search_match": {
+        "doi": "10.1109/cvpr52729.2023.00085",
+        "title": [
+          "OpenScene: 3D Scene Understanding with Open Vocabularies"
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2023,
+              6
+            ]
+          ]
+        },
+        "container-title": [
+          "2023 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)"
+        ]
+      },
+      "cited_version_year": 2022,
+      "formal_or_preprint_year": 2023,
+      "first_public_year": 2022,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": true,
+      "within_2022_2026_formal_priority": true
+    },
+    {
+      "number": 29,
+      "id": "2302.07241",
+      "title": "ConceptFusion: Open-set Multimodal 3D Mapping",
+      "exists": true,
+      "arxiv_year": 2023,
+      "published_year": 2023,
+      "venue": "Robotics: Science and Systems XIX",
+      "doi": "10.15607/RSS.2023.XIX.066",
+      "status": "published",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2302.07241",
+        "https://www.roboticsproceedings.org/rss19/p066.html",
+        "https://api.crossref.org/works/10.15607%2FRSS.2023.XIX.066"
+      ],
+      "notes": "ConceptFusion为RSS 2023独立论文，并非用户排除的ConceptGraphs。RSS正式作者顺序将Ganesh Iyer、Soroush Saryazdi列在Tao Chen之前，与当前arXiv顺序不同；应按所引版本保留整套元数据。",
+      "preprint_first_date": "2023/02/14",
+      "checked_date": "2026-11-20",
+      "recent_2022_2026_by_preprint": true,
+      "recent_2022_2026_by_publication": true,
+      "published_metadata_cache": "group_17_32_cache/29_crossref.json",
+      "published_authors": [
+        {
+          "given": "Krishna",
+          "family": "Jatavallabhula",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Alihusein",
+          "family": "Kuwajerwala",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Qiao",
+          "family": "Gu",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Mohd",
+          "family": "Omama",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Ganesh",
+          "family": "Iyer",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Soroush",
+          "family": "Saryazdi",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Tao",
+          "family": "Chen",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Alaa",
+          "family": "Maalouf",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Shuang",
+          "family": "Li",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Nikhil",
+          "family": "Keetha",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Ayush",
+          "family": "Tewari",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Joshua",
+          "family": "Tenenbaum",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Celso",
+          "family": "Melo",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Madhava",
+          "family": "Krishna",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Liam",
+          "family": "Paull",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Florian",
+          "family": "Shkurti",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Antonio",
+          "family": "Torralba",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "published_title": "ConceptFusion: Open-set multimodal 3D mapping",
+      "published_pages": null,
+      "published_date_parts": [
+        [
+          2023,
+          7,
+          10
+        ]
+      ],
+      "cited_version_year": 2023,
+      "formal_or_preprint_year": 2023,
+      "first_public_year": 2023,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": true,
+      "within_2022_2026_formal_priority": true
+    },
+    {
+      "number": 30,
+      "id": "2303.09553",
+      "title": "LERF: Language Embedded Radiance Fields",
+      "exists": true,
+      "arxiv_year": 2023,
+      "published_year": 2023,
+      "venue": "2023 IEEE/CVF International Conference on Computer Vision (ICCV)",
+      "doi": "10.1109/ICCV51070.2023.01807",
+      "status": "published",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2303.09553",
+        "https://openaccess.thecvf.com/content/ICCV2023/html/Kerr_LERF_Language_Embedded_Radiance_Fields_ICCV_2023_paper.html",
+        "https://api.crossref.org/works/10.1109%2FICCV51070.2023.01807"
+      ],
+      "notes": "已核对arXiv首发记录及正式论文记录；预印本与正式版为同一工作，不重复计数。",
+      "preprint_first_date": "2023/03/16",
+      "checked_date": "2026-11-20",
+      "recent_2022_2026_by_preprint": true,
+      "recent_2022_2026_by_publication": true,
+      "crossref_search_match": {
+        "doi": "10.1109/iccv51070.2023.01807",
+        "title": [
+          "LERF: Language Embedded Radiance Fields"
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2023,
+              10,
+              1
+            ]
+          ]
+        },
+        "container-title": [
+          "2023 IEEE/CVF International Conference on Computer Vision (ICCV)"
+        ]
+      },
+      "cited_version_year": 2023,
+      "formal_or_preprint_year": 2023,
+      "first_public_year": 2023,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": true,
+      "within_2022_2026_formal_priority": true
+    },
+    {
+      "number": 31,
+      "id": "2306.13631",
+      "title": "OpenMask3D: Open-Vocabulary 3D Instance Segmentation",
+      "exists": true,
+      "arxiv_year": 2023,
+      "published_year": 2023,
+      "venue": "Advances in Neural Information Processing Systems 36 (NeurIPS 2023)",
+      "doi": "10.52202/075280-2989",
+      "status": "published",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2306.13631",
+        "https://proceedings.neurips.cc/paper_files/paper/2023/hash/d77b5482e38339a8068791d939126be2-Abstract-Conference.html",
+        "https://api.crossref.org/works/10.52202%2F075280-2989"
+      ],
+      "notes": "已核对arXiv首发记录及正式论文记录；预印本与正式版为同一工作，不重复计数。",
+      "preprint_first_date": "2023/06/23",
+      "checked_date": "2026-11-20",
+      "recent_2022_2026_by_preprint": true,
+      "recent_2022_2026_by_publication": true,
+      "published_metadata_cache": "group_17_32_cache/31_crossref.json",
+      "published_authors": [
+        {
+          "given": "Ayca",
+          "family": "Takmaz",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Elisabetta",
+          "family": "Fedele",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Robert",
+          "family": "Sumner",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Marc",
+          "family": "Pollefeys",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Federico",
+          "family": "Tombari",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Francis",
+          "family": "Engelmann",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "published_title": "OpenMask3D: Open-Vocabulary 3D Instance Segmentation",
+      "published_pages": "68367-68390",
+      "published_date_parts": [
+        [
+          2023
+        ]
+      ],
+      "cited_version_year": 2023,
+      "formal_or_preprint_year": 2023,
+      "first_public_year": 2023,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": true,
+      "within_2022_2026_formal_priority": true
+    },
+    {
+      "number": 32,
+      "id": "2310.03923",
+      "title": "Open-Fusion: Real-time Open-Vocabulary 3D Mapping and Queryable Scene Representation",
+      "exists": true,
+      "arxiv_year": 2023,
+      "published_year": 2024,
+      "venue": "2024 IEEE International Conference on Robotics and Automation (ICRA)",
+      "doi": "10.1109/ICRA57147.2024.10610193",
+      "status": "published",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2310.03923",
+        "https://ieeexplore.ieee.org/abstract/document/10610193/figures",
+        "https://api.crossref.org/works/10.1109%2FICRA57147.2024.10610193"
+      ],
+      "notes": "已核对arXiv首发记录及正式论文记录；预印本与正式版为同一工作，不重复计数。",
+      "preprint_first_date": "2023/10/05",
+      "checked_date": "2026-11-20",
+      "recent_2022_2026_by_preprint": true,
+      "recent_2022_2026_by_publication": true,
+      "published_metadata_cache": "group_17_32_cache/32_crossref.json",
+      "published_authors": [
+        {
+          "given": "Kashu",
+          "family": "Yamazaki",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "University of Arkansas,AICV Lab,Department of EECS,USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Taisei",
+          "family": "Hanyu",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of Arkansas,AICV Lab,Department of EECS,USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Khoa",
+          "family": "Vo",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of Arkansas,AICV Lab,Department of EECS,USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Thang",
+          "family": "Pham",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of Arkansas,AICV Lab,Department of EECS,USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Minh",
+          "family": "Tran",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of Arkansas,AICV Lab,Department of EECS,USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Gianfranco",
+          "family": "Doretto",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "West Virginia University,Department of CSCE,USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Anh",
+          "family": "Nguyen",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of Liverpool,Department of CS,UK"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Ngan",
+          "family": "Le",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of Arkansas,AICV Lab,Department of EECS,USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "published_title": "Open-Fusion: Real-time Open-Vocabulary 3D Mapping and Queryable Scene Representation",
+      "published_pages": "9411-9417",
+      "published_date_parts": [
+        [
+          2024,
+          5,
+          13
+        ]
+      ],
+      "cited_version_year": 2023,
+      "formal_or_preprint_year": 2024,
+      "first_public_year": 2023,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": true,
+      "within_2022_2026_formal_priority": true
+    },
+    {
+      "number": 33,
+      "id": "1602.00763",
+      "title": "Simple Online and Realtime Tracking",
+      "exists": true,
+      "arxiv_year": 2016,
+      "published_year": 2016,
+      "venue": "2016 IEEE International Conference on Image Processing (ICIP)",
+      "doi": "10.1109/ICIP.2016.7533003",
+      "status": "published",
+      "evidence_urls": [
+        "https://arxiv.org/abs/1602.00763",
+        "https://api.crossref.org/works/10.1109/ICIP.2016.7533003"
+      ],
+      "notes": "Crossref出版社注册记录与arXiv题名一致；会议页3464—3468。",
+      "verified_on": "2026-11-20",
+      "primary_arxiv_page_opened": true,
+      "current_citation_year": 2016,
+      "recent_by_arxiv_2022_2026": false,
+      "recent_by_publication_2022_2026": false,
+      "cited_version_year": 2016,
+      "formal_or_preprint_year": 2016,
+      "first_public_year": 2016,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": false,
+      "within_2022_2026_formal_priority": false
+    },
+    {
+      "number": 34,
+      "id": "1703.07402",
+      "title": "Simple Online and Realtime Tracking with a Deep Association Metric",
+      "exists": true,
+      "arxiv_year": 2017,
+      "published_year": 2017,
+      "venue": "2017 IEEE International Conference on Image Processing (ICIP)",
+      "doi": "10.1109/ICIP.2017.8296962",
+      "status": "published",
+      "evidence_urls": [
+        "https://arxiv.org/abs/1703.07402",
+        "https://api.crossref.org/works/10.1109/ICIP.2017.8296962",
+        "https://ieeexplore.ieee.org/abstract/document/8296962/authors"
+      ],
+      "notes": "IEEE页面给出会议2017、Xplore收录日2018；按会议出版年2017记录，页3645—3649。",
+      "verified_on": "2026-11-20",
+      "primary_arxiv_page_opened": true,
+      "current_citation_year": 2017,
+      "recent_by_arxiv_2022_2026": false,
+      "recent_by_publication_2022_2026": false,
+      "cited_version_year": 2017,
+      "formal_or_preprint_year": 2017,
+      "first_public_year": 2017,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": false,
+      "within_2022_2026_formal_priority": false
+    },
+    {
+      "number": 35,
+      "id": "2110.06864",
+      "title": "ByteTrack: Multi-Object Tracking by Associating Every Detection Box",
+      "exists": true,
+      "arxiv_year": 2021,
+      "published_year": 2022,
+      "venue": "Computer Vision – ECCV 2022",
+      "doi": "10.1007/978-3-031-20047-2_1",
+      "status": "published",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2110.06864",
+        "https://link.springer.com/chapter/10.1007/978-3-031-20047-2_1"
+      ],
+      "notes": "Springer原始页面First Online为2022-10-23，页1—21；预印本首次提交2021，两个年份分别保留。Crossref本次请求429，使用出版社原始页面核实。",
+      "verified_on": "2026-11-20",
+      "primary_arxiv_page_opened": true,
+      "current_citation_year": 2021,
+      "recent_by_arxiv_2022_2026": false,
+      "recent_by_publication_2022_2026": true,
+      "cited_version_year": 2021,
+      "formal_or_preprint_year": 2022,
+      "first_public_year": 2021,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": false,
+      "within_2022_2026_formal_priority": true
+    },
+    {
+      "number": 36,
+      "id": "2008.08063",
+      "title": "AB3DMOT: A Baseline for 3D Multi-Object Tracking and New Evaluation Metrics",
+      "exists": true,
+      "arxiv_year": 2020,
+      "published_year": null,
+      "venue": "ECCV 2020 Workshops（作者说明为extended abstract）",
+      "doi": null,
+      "status": "preprint_confirmed; workshop_extended_abstract_claimed_by_authors",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2008.08063"
+      ],
+      "notes": "arXiv原始页面明确为ECCV 2020 Workshops的extended abstract。当前准确题名的可确认身份为2020年公开预印本；本次没有查得该准确题名的独立出版社出版记录，published_year留空，不将工作坊呈现说明冒充正式出版证明。相关完整版可能采用不同题名，不混填。",
+      "verified_on": "2026-11-20",
+      "primary_arxiv_page_opened": true,
+      "current_citation_year": 2020,
+      "recent_by_arxiv_2022_2026": false,
+      "recent_by_publication_2022_2026": false,
+      "cited_version_year": 2020,
+      "formal_or_preprint_year": 2020,
+      "first_public_year": 2020,
+      "has_confirmed_formal_publication": false,
+      "within_2022_2026_cited_version": false,
+      "within_2022_2026_formal_priority": false
+    },
+    {
+      "number": 37,
+      "id": "1609.01775",
+      "title": "Performance Measures and a Data Set for Multi-Target, Multi-Camera Tracking",
+      "exists": true,
+      "arxiv_year": 2016,
+      "published_year": 2016,
+      "venue": "Computer Vision – ECCV 2016 Workshops",
+      "doi": "10.1007/978-3-319-48881-3_2",
+      "status": "published",
+      "evidence_urls": [
+        "https://arxiv.org/abs/1609.01775",
+        "https://link.springer.com/chapter/10.1007/978-3-319-48881-3_2",
+        "https://api.crossref.org/works/10.1007/978-3-319-48881-3_2"
+      ],
+      "notes": "Springer原始页面First Online为2016-11-03，页17—35；属于正式工作坊论文。",
+      "verified_on": "2026-11-20",
+      "primary_arxiv_page_opened": true,
+      "current_citation_year": 2016,
+      "recent_by_arxiv_2022_2026": false,
+      "recent_by_publication_2022_2026": false,
+      "cited_version_year": 2016,
+      "formal_or_preprint_year": 2016,
+      "first_public_year": 2016,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": false,
+      "within_2022_2026_formal_priority": false
+    },
+    {
+      "number": 38,
+      "id": "2009.07736",
+      "title": "HOTA: A Higher Order Metric for Evaluating Multi-Object Tracking",
+      "exists": true,
+      "arxiv_year": 2020,
+      "published_year": 2021,
+      "venue": "International Journal of Computer Vision",
+      "doi": "10.1007/s11263-020-01375-2",
+      "status": "published",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2009.07736",
+        "https://link.springer.com/article/10.1007/s11263-020-01375-2",
+        "https://api.crossref.org/works/10.1007/s11263-020-01375-2"
+      ],
+      "notes": "Springer页面与Crossref一致：online published 2020-10-08；正式卷129(2):548—578归属2021。published_year记录卷年2021，online_year另外记录为2020；两者均不在2022—2026。",
+      "verified_on": "2026-11-20",
+      "primary_arxiv_page_opened": true,
+      "current_citation_year": 2020,
+      "recent_by_arxiv_2022_2026": false,
+      "recent_by_publication_2022_2026": false,
+      "published_online_year": 2020,
+      "cited_version_year": 2020,
+      "formal_or_preprint_year": 2021,
+      "first_public_year": 2020,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": false,
+      "within_2022_2026_formal_priority": false
+    },
+    {
+      "number": 39,
+      "id": "2004.03967",
+      "title": "Learning 3D Semantic Scene Graphs from 3D Indoor Reconstructions",
+      "exists": true,
+      "arxiv_year": 2020,
+      "published_year": 2020,
+      "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+      "doi": null,
+      "status": "published",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2004.03967",
+        "https://openaccess.thecvf.com/content_CVPR_2020/html/Wald_Learning_3D_Semantic_Scene_Graphs_From_3D_Indoor_Reconstructions_CVPR_2020_paper.html"
+      ],
+      "notes": "CVF原始书目2020，页3961—3970；作者及题名与arXiv一致。本次CVF直接打开403，检索工具返回同一CVF原始页面完整书目。未核实DOI，不填猜测值。",
+      "verified_on": "2026-11-20",
+      "primary_arxiv_page_opened": true,
+      "current_citation_year": 2020,
+      "recent_by_arxiv_2022_2026": false,
+      "recent_by_publication_2022_2026": false,
+      "cited_version_year": 2020,
+      "formal_or_preprint_year": 2020,
+      "first_public_year": 2020,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": false,
+      "within_2022_2026_formal_priority": false
+    },
+    {
+      "number": 40,
+      "id": "2201.13360",
+      "title": "Hydra: A Real-time Spatial Perception System for 3D Scene Graph Construction and Optimization",
+      "exists": true,
+      "arxiv_year": 2022,
+      "published_year": 2022,
+      "venue": "Proceedings of Robotics: Science and Systems XVIII",
+      "doi": "10.15607/RSS.2022.XVIII.050",
+      "status": "published",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2201.13360",
+        "https://roboticsproceedings.org/rss18/p050.html"
+      ],
+      "notes": "RSS正式论文集页面BibTeX明确YEAR=2022及DOI；Crossref本次429，原始论文集核实成功。",
+      "verified_on": "2026-11-20",
+      "primary_arxiv_page_opened": true,
+      "current_citation_year": 2022,
+      "recent_by_arxiv_2022_2026": true,
+      "recent_by_publication_2022_2026": true,
+      "cited_version_year": 2022,
+      "formal_or_preprint_year": 2022,
+      "first_public_year": 2022,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": true,
+      "within_2022_2026_formal_priority": true
+    },
+    {
+      "number": 41,
+      "id": "2402.12259",
+      "title": "Open3DSG: Open-Vocabulary 3D Scene Graphs from Point Clouds with Queryable Objects and Open-Set Relationships",
+      "exists": true,
+      "arxiv_year": 2024,
+      "published_year": 2024,
+      "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+      "doi": null,
+      "status": "published",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2402.12259",
+        "https://openaccess.thecvf.com/content/CVPR2024/html/Koch_Open3DSG_Open-Vocabulary_3D_Scene_Graphs_from_Point_Clouds_with_Queryable_CVPR_2024_paper.html",
+        "https://openaccess.thecvf.com/content/CVPR2024/papers/Koch_Open3DSG_Open-Vocabulary_3D_Scene_Graphs_from_Point_Clouds_with_Queryable_CVPR_2024_paper.pdf"
+      ],
+      "notes": "CVF正式书目2024，页14183—14193；作者及题名与arXiv一致。本次CVF直接打开403，检索工具返回同一CVF原始页面书目及原始PDF。未核实DOI，不填猜测值。",
+      "verified_on": "2026-11-20",
+      "primary_arxiv_page_opened": true,
+      "current_citation_year": 2024,
+      "recent_by_arxiv_2022_2026": true,
+      "recent_by_publication_2022_2026": true,
+      "cited_version_year": 2024,
+      "formal_or_preprint_year": 2024,
+      "first_public_year": 2024,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": true,
+      "within_2022_2026_formal_priority": true
+    },
+    {
+      "number": 42,
+      "id": "2403.17846",
+      "title": "Hierarchical Open-Vocabulary 3D Scene Graphs for Language-Grounded Robot Navigation",
+      "exists": true,
+      "arxiv_year": 2024,
+      "published_year": 2024,
+      "venue": "Proceedings of Robotics: Science and Systems XX",
+      "doi": "10.15607/RSS.2024.XX.077",
+      "status": "published",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2403.17846",
+        "https://roboticsproceedings.org/rss20/p077.html",
+        "https://api.crossref.org/works/10.15607/RSS.2024.XX.077"
+      ],
+      "notes": "RSS正式页面YEAR=2024，Crossref已核实相同题名、DOI和2024-07-15出版日期。",
+      "verified_on": "2026-11-20",
+      "primary_arxiv_page_opened": true,
+      "current_citation_year": 2024,
+      "recent_by_arxiv_2022_2026": true,
+      "recent_by_publication_2022_2026": true,
+      "cited_version_year": 2024,
+      "formal_or_preprint_year": 2024,
+      "first_public_year": 2024,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": true,
+      "within_2022_2026_formal_priority": true
+    },
+    {
+      "number": 43,
+      "id": "2410.11989",
+      "title": "Dynamic Open-Vocabulary 3D Scene Graphs for Long-term Language-Guided Mobile Manipulation",
+      "exists": true,
+      "arxiv_year": 2024,
+      "published_year": 2025,
+      "venue": "IEEE Robotics and Automation Letters",
+      "doi": "10.1109/LRA.2025.3547643",
+      "status": "published",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2410.11989",
+        "https://api.crossref.org/works/10.1109/LRA.2025.3547643",
+        "https://ieeexplore.ieee.org/document/10909193",
+        "https://github.com/BJHYZJ/DovSG"
+      ],
+      "notes": "IEEE向Crossref注册的题名、卷期页均已取得：10(5):4252—4259，2025-05。作者arXiv明确RA-L2025 accepted；作者官方项目仓库BibTeX与注册记录一致。Xplore直接页面触发JavaScript机器人检查，未把受限访问误记为论文不存在。",
+      "verified_on": "2026-11-20",
+      "primary_arxiv_page_opened": true,
+      "current_citation_year": 2024,
+      "recent_by_arxiv_2022_2026": true,
+      "recent_by_publication_2022_2026": true,
+      "cited_version_year": 2024,
+      "formal_or_preprint_year": 2025,
+      "first_public_year": 2024,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": true,
+      "within_2022_2026_formal_priority": true
+    },
+    {
+      "number": 44,
+      "id": "2503.08474",
+      "title": "Collaborative Dynamic 3D Scene Graphs for Open-Vocabulary Urban Scene Understanding",
+      "exists": true,
+      "arxiv_year": 2025,
+      "published_year": 2025,
+      "venue": "2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)",
+      "doi": "10.1109/IROS60139.2025.11245861",
+      "status": "published",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2503.08474",
+        "https://api.crossref.org/works/10.1109/IROS60139.2025.11245861",
+        "https://ieeexplore.ieee.org/document/11245861",
+        "https://ov-curb.cs.uni-freiburg.de/"
+      ],
+      "notes": "IEEE向Crossref注册的原始元数据已取得：题名一致，IROS2025，2025-10-19，页6000—6007。Xplore直接页面触发JavaScript机器人检查，出版状态以取得的注册记录确认。",
+      "verified_on": "2026-11-20",
+      "primary_arxiv_page_opened": true,
+      "current_citation_year": 2025,
+      "recent_by_arxiv_2022_2026": true,
+      "recent_by_publication_2022_2026": true,
+      "cited_version_year": 2025,
+      "formal_or_preprint_year": 2025,
+      "first_public_year": 2025,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": true,
+      "within_2022_2026_formal_priority": true
+    },
+    {
+      "number": 45,
+      "id": "1711.07280",
+      "title": "Vision-and-Language Navigation: Interpreting visually-grounded navigation instructions in real environments",
+      "exists": true,
+      "arxiv_year": 2017,
+      "published_year": 2018,
+      "venue": "Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)",
+      "doi": null,
+      "status": "published",
+      "evidence_urls": [
+        "https://arxiv.org/abs/1711.07280",
+        "https://openaccess.thecvf.com/content_cvpr_2018/html/Anderson_Vision-and-Language_Navigation_Interpreting_CVPR_2018_paper.html",
+        "https://openaccess.thecvf.com/content_cvpr_2018/papers/Anderson_Vision-and-Language_Navigation_Interpreting_CVPR_2018_paper.pdf"
+      ],
+      "notes": "CVF正式页面列2018及页3674—3683；预印本首次提交2017。未核实DOI，不填猜测值。",
+      "verified_on": "2026-11-20",
+      "primary_arxiv_page_opened": true,
+      "current_citation_year": 2017,
+      "recent_by_arxiv_2022_2026": false,
+      "recent_by_publication_2022_2026": false,
+      "cited_version_year": 2017,
+      "formal_or_preprint_year": 2018,
+      "first_public_year": 2017,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": false,
+      "within_2022_2026_formal_priority": false
+    },
+    {
+      "number": 46,
+      "id": "2207.04429",
+      "title": "LM-Nav: Robotic Navigation with Large Pre-Trained Models of Language, Vision, and Action",
+      "exists": true,
+      "arxiv_year": 2022,
+      "published_year": 2023,
+      "venue": "Proceedings of The 6th Conference on Robot Learning, PMLR 205",
+      "doi": null,
+      "status": "published",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2207.04429",
+        "https://proceedings.mlr.press/v205/shah23b.html"
+      ],
+      "notes": "会议为CoRL2022；原始PMLR页面和BibTeX均采用正式论文集年份2023，页492—504。预印本2022、会议2022、论文集2023分别保留；不混用。PMLR页面无DOI字段。",
+      "verified_on": "2026-11-20",
+      "primary_arxiv_page_opened": true,
+      "current_citation_year": 2022,
+      "recent_by_arxiv_2022_2026": true,
+      "recent_by_publication_2022_2026": true,
+      "conference_year": 2022,
+      "cited_version_year": 2022,
+      "formal_or_preprint_year": 2023,
+      "first_public_year": 2022,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": true,
+      "within_2022_2026_formal_priority": true
+    },
+    {
+      "number": 47,
+      "id": "2410.08189",
+      "title": "SG-Nav: Online 3D Scene Graph Prompting for LLM-based Zero-shot Object Navigation",
+      "exists": true,
+      "arxiv_year": 2024,
+      "published_year": 2024,
+      "venue": "Advances in Neural Information Processing Systems 37 (NeurIPS 2024)",
+      "doi": "10.52202/079017-0171",
+      "status": "published",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2410.08189",
+        "https://proceedings.neurips.cc/paper_files/paper/2024/hash/098491b37deebbe6c007e69815729e09-Abstract-Conference.html",
+        "https://api.crossref.org/works/10.52202/079017-0171"
+      ],
+      "notes": "NeurIPS正式论文集页面明确Main Conference Track、2024及DOI；Crossref已核实相同题名和页5285—5307。",
+      "verified_on": "2026-11-20",
+      "primary_arxiv_page_opened": true,
+      "current_citation_year": 2024,
+      "recent_by_arxiv_2022_2026": true,
+      "recent_by_publication_2022_2026": true,
+      "cited_version_year": 2024,
+      "formal_or_preprint_year": 2024,
+      "first_public_year": 2024,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": true,
+      "within_2022_2026_formal_priority": true
+    },
+    {
+      "number": 48,
+      "id": "2210.05714",
+      "title": "Visual Language Maps for Robot Navigation",
+      "exists": true,
+      "arxiv_year": 2022,
+      "published_year": 2023,
+      "venue": "2023 IEEE International Conference on Robotics and Automation (ICRA)",
+      "doi": "10.1109/ICRA48891.2023.10160969",
+      "status": "published",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2210.05714",
+        "https://ieeexplore.ieee.org/abstract/document/10160969/media",
+        "https://api.crossref.org/works/10.1109/ICRA48891.2023.10160969"
+      ],
+      "notes": "IEEE原始页面及Crossref注册记录一致：2023年ICRA，页10608—10615；预印本首次提交2022。",
+      "verified_on": "2026-11-20",
+      "primary_arxiv_page_opened": true,
+      "current_citation_year": 2022,
+      "recent_by_arxiv_2022_2026": true,
+      "recent_by_publication_2022_2026": true,
+      "cited_version_year": 2022,
+      "formal_or_preprint_year": 2023,
+      "first_public_year": 2022,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": true,
+      "within_2022_2026_formal_priority": true
+    },
+    {
+      "number": 49,
+      "id": "2312.03275",
+      "title": "VLFM: Vision-Language Frontier Maps for Zero-Shot Semantic Navigation",
+      "exists": true,
+      "arxiv_year": 2023,
+      "published_year": 2024,
+      "venue": "2024 IEEE International Conference on Robotics and Automation (ICRA)",
+      "doi": "10.1109/ICRA57147.2024.10610712",
+      "status": "正式发表",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2312.03275",
+        "https://doi.org/10.1109/ICRA57147.2024.10610712"
+      ],
+      "notes": "会议正式发表；Crossref与IEEE一手记录一致。",
+      "checked_on": "2026-11-20",
+      "cited_version_year": 2023,
+      "formal_or_preprint_year": 2024,
+      "first_public_year": 2023,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": true,
+      "within_2022_2026_formal_priority": true
+    },
+    {
+      "number": 50,
+      "id": "2307.06135",
+      "title": "SayPlan: Grounding Large Language Models using 3D Scene Graphs for Scalable Robot Task Planning",
+      "exists": true,
+      "arxiv_year": 2023,
+      "published_year": 2023,
+      "venue": "Proceedings of the 7th Conference on Robot Learning, PMLR 229:23–72",
+      "doi": null,
+      "status": "正式发表",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2307.06135",
+        "https://proceedings.mlr.press/v229/rana23a.html"
+      ],
+      "notes": "会议正式论文集记录。",
+      "checked_on": "2026-11-20",
+      "cited_version_year": 2023,
+      "formal_or_preprint_year": 2023,
+      "first_public_year": 2023,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": true,
+      "within_2022_2026_formal_priority": true
+    },
+    {
+      "number": 51,
+      "id": "2307.05973",
+      "title": "VoxPoser: Composable 3D Value Maps for Robotic Manipulation with Language Models",
+      "exists": true,
+      "arxiv_year": 2023,
+      "published_year": 2023,
+      "venue": "Proceedings of the 7th Conference on Robot Learning, PMLR 229:540–562",
+      "doi": null,
+      "status": "正式发表",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2307.05973",
+        "https://proceedings.mlr.press/v229/huang23b.html"
+      ],
+      "notes": "会议正式论文集记录。",
+      "checked_on": "2026-11-20",
+      "cited_version_year": 2023,
+      "formal_or_preprint_year": 2023,
+      "first_public_year": 2023,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": true,
+      "within_2022_2026_formal_priority": true
+    },
+    {
+      "number": 52,
+      "id": "1909.10838",
+      "title": "Talk2Car: Taking Control of Your Self-Driving Car",
+      "exists": true,
+      "arxiv_year": 2019,
+      "published_year": 2019,
+      "venue": "EMNLP-IJCNLP 2019:2088–2098",
+      "doi": "10.18653/v1/D19-1215",
+      "status": "正式发表",
+      "evidence_urls": [
+        "https://arxiv.org/abs/1909.10838",
+        "https://aclanthology.org/D19-1215/"
+      ],
+      "notes": "ACL正式论文集记录。",
+      "checked_on": "2026-11-20",
+      "cited_version_year": 2019,
+      "formal_or_preprint_year": 2019,
+      "first_public_year": 2019,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": false,
+      "within_2022_2026_formal_priority": false
+    },
+    {
+      "number": 53,
+      "id": "2409.12191",
+      "title": "Qwen2-VL: Enhancing Vision-Language Model's Perception of the World at Any Resolution",
+      "exists": true,
+      "arxiv_year": 2024,
+      "published_year": null,
+      "venue": null,
+      "doi": null,
+      "status": "预印本已确认；本轮未确认正式出版",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2409.12191"
+      ],
+      "notes": "arXiv论文身份已确认；本轮未取得对应正式期刊或会议出版的一手记录，按预印本处理。",
+      "checked_on": "2026-11-20",
+      "cited_version_year": 2024,
+      "formal_or_preprint_year": 2024,
+      "first_public_year": 2024,
+      "has_confirmed_formal_publication": false,
+      "within_2022_2026_cited_version": true,
+      "within_2022_2026_formal_priority": true
+    },
+    {
+      "number": 54,
+      "id": "2502.13923",
+      "title": "Qwen2.5-VL Technical Report",
+      "exists": true,
+      "arxiv_year": 2025,
+      "published_year": null,
+      "venue": null,
+      "doi": null,
+      "status": "预印本已确认；本轮未确认正式出版",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2502.13923"
+      ],
+      "notes": "arXiv技术报告型预印本，符合用户允许的预印本类别；不将技术报告称为已同行评审论文。",
+      "checked_on": "2026-11-20",
+      "cited_version_year": 2025,
+      "formal_or_preprint_year": 2025,
+      "first_public_year": 2025,
+      "has_confirmed_formal_publication": false,
+      "within_2022_2026_cited_version": true,
+      "within_2022_2026_formal_priority": true
+    },
+    {
+      "number": 55,
+      "id": "2106.09685",
+      "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+      "exists": true,
+      "arxiv_year": 2021,
+      "published_year": 2022,
+      "venue": "International Conference on Learning Representations (ICLR) 2022",
+      "doi": null,
+      "status": "正式发表",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2106.09685",
+        "https://openreview.net/pdf?id=nZeVKeeFYf9"
+      ],
+      "notes": "OpenReview正式PDF页首标注Published as a conference paper at ICLR 2022。预印本首发2021。",
+      "checked_on": "2026-11-20",
+      "cited_version_year": 2021,
+      "formal_or_preprint_year": 2022,
+      "first_public_year": 2021,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": false,
+      "within_2022_2026_formal_priority": true
+    },
+    {
+      "number": 56,
+      "id": "2305.14314",
+      "title": "QLoRA: Efficient Finetuning of Quantized LLMs",
+      "exists": true,
+      "arxiv_year": 2023,
+      "published_year": 2023,
+      "venue": "Advances in Neural Information Processing Systems 36 (NeurIPS 2023)",
+      "doi": "10.52202/075280-0441",
+      "status": "正式发表",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2305.14314",
+        "https://proceedings.neurips.cc/paper_files/paper/2023/hash/1feb87871436031bdc0f2beaa62a049b-Abstract.html"
+      ],
+      "notes": "NeurIPS正式论文集记录。",
+      "checked_on": "2026-11-20",
+      "cited_version_year": 2023,
+      "formal_or_preprint_year": 2023,
+      "first_public_year": 2023,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": true,
+      "within_2022_2026_formal_priority": true
+    },
+    {
+      "number": 57,
+      "id": "Dijkstra1959",
+      "title": "A note on two problems in connexion with graphs",
+      "exists": true,
+      "arxiv_year": null,
+      "published_year": 1959,
+      "venue": "Numerische Mathematik 1:269–271",
+      "doi": "10.1007/BF01386390",
+      "status": "正式发表",
+      "evidence_urls": [
+        "https://doi.org/10.1007/BF01386390",
+        "https://link.springer.com/article/10.1007/BF01386390"
+      ],
+      "notes": "Springer与Crossref题名、作者及1959年记录相符。",
+      "checked_on": "2026-11-20",
+      "cited_version_year": 1959,
+      "formal_or_preprint_year": 1959,
+      "first_public_year": 1959,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": false,
+      "within_2022_2026_formal_priority": false
+    },
+    {
+      "number": 58,
+      "id": "Hart1968",
+      "title": "A Formal Basis for the Heuristic Determination of Minimum Cost Paths",
+      "exists": true,
+      "arxiv_year": null,
+      "published_year": 1968,
+      "venue": "IEEE Transactions on Systems Science and Cybernetics 4(2):100–107",
+      "doi": "10.1109/TSSC.1968.300136",
+      "status": "正式发表",
+      "evidence_urls": [
+        "https://doi.org/10.1109/TSSC.1968.300136",
+        "https://ieeexplore.ieee.org/abstract/document/4082128/authors"
+      ],
+      "notes": "IEEE与Crossref记录一致。",
+      "checked_on": "2026-11-20",
+      "cited_version_year": 1968,
+      "formal_or_preprint_year": 1968,
+      "first_public_year": 1968,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": false,
+      "within_2022_2026_formal_priority": false
+    },
+    {
+      "number": 59,
+      "id": "1105.1186",
+      "title": "Sampling-based Algorithms for Optimal Motion Planning",
+      "exists": true,
+      "arxiv_year": 2011,
+      "published_year": 2011,
+      "venue": "The International Journal of Robotics Research 30(7):846–894",
+      "doi": "10.1177/0278364911406761",
+      "status": "正式发表",
+      "evidence_urls": [
+        "https://arxiv.org/abs/1105.1186",
+        "https://journals.sagepub.com/doi/abs/10.1177/0278364911406761"
+      ],
+      "notes": "期刊论文，Crossref注册元数据已获取；出版页面部分请求超时，arXiv原始论文可核实。",
+      "checked_on": "2026-11-20",
+      "cited_version_year": 2011,
+      "formal_or_preprint_year": 2011,
+      "first_public_year": 2011,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": false,
+      "within_2022_2026_formal_priority": false
+    },
+    {
+      "number": 60,
+      "id": "1404.2334",
+      "title": "Informed RRT*: Optimal Sampling-based Path Planning Focused via Direct Sampling of an Admissible Ellipsoidal Heuristic",
+      "exists": true,
+      "arxiv_year": 2014,
+      "published_year": 2014,
+      "venue": "2014 IEEE/RSJ International Conference on Intelligent Robots and Systems:2997–3004",
+      "doi": "10.1109/IROS.2014.6942976",
+      "status": "正式发表",
+      "evidence_urls": [
+        "https://arxiv.org/abs/1404.2334",
+        "https://doi.org/10.1109/IROS.2014.6942976"
+      ],
+      "notes": "arXiv Journal reference与Crossref出版信息一致。",
+      "checked_on": "2026-11-20",
+      "cited_version_year": 2014,
+      "formal_or_preprint_year": 2014,
+      "first_public_year": 2014,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": false,
+      "within_2022_2026_formal_priority": false
+    },
+    {
+      "number": 61,
+      "id": "Dolgov2010",
+      "title": "Path Planning for Autonomous Vehicles in Unknown Semi-structured Environments",
+      "exists": true,
+      "arxiv_year": null,
+      "published_year": 2010,
+      "venue": "The International Journal of Robotics Research 29(5):485–501",
+      "doi": "10.1177/0278364909359210",
+      "status": "正式发表",
+      "evidence_urls": [
+        "https://doi.org/10.1177/0278364909359210",
+        "https://journals.sagepub.com/doi/10.1177/0278364909359210"
+      ],
+      "notes": "SAGE正式期刊页与Crossref记录一致。",
+      "checked_on": "2026-11-20",
+      "cited_version_year": 2010,
+      "formal_or_preprint_year": 2010,
+      "first_public_year": 2010,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": false,
+      "within_2022_2026_formal_priority": false
+    },
+    {
+      "number": 62,
+      "id": "2212.10156",
+      "title": "Planning-oriented Autonomous Driving",
+      "exists": true,
+      "arxiv_year": 2022,
+      "published_year": 2023,
+      "venue": "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2023",
+      "doi": null,
+      "status": "正式发表",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2212.10156",
+        "https://openaccess.thecvf.com/content/CVPR2023/html/Hu_Planning-Oriented_Autonomous_Driving_CVPR_2023_paper.html",
+        "https://openaccess.thecvf.com/content/CVPR2023/papers/Hu_Planning-Oriented_Autonomous_Driving_CVPR_2023_paper.pdf"
+      ],
+      "notes": "CVF原始页面的检索内容与官方PDF均确认CVPR 2023，开放版本页码17853–17862；直接HTML请求曾403，已通过同站原始检索记录与PDF交叉核验。预印本首发2022。",
+      "checked_on": "2026-11-20",
+      "cited_version_year": 2022,
+      "formal_or_preprint_year": 2023,
+      "first_public_year": 2022,
+      "has_confirmed_formal_publication": true,
+      "within_2022_2026_cited_version": true,
+      "within_2022_2026_formal_priority": true
+    }
+  ]
+}

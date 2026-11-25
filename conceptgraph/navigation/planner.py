@@ -224,6 +224,48 @@ def load_occupancy_grid(
     )
 
 
+def overlay_scene_objects_on_grid(
+    base_grid: OccupancyGrid2D,
+    scene_map,
+    *,
+    robot_radius_m: float,
+    object_bbox_scale: float = 0.18,
+    max_object_radius_m: float = 1.2,
+    ignore_dynamic_obstacles: bool = False,
+) -> OccupancyGrid2D:
+    """Overlay live in-memory objects without re-reading the BEV map."""
+    occupancy = _overlay_scene_object_obstacles(
+        occupancy=np.asarray(base_grid.occupancy, dtype=np.uint8),
+        origin_xy=np.asarray(base_grid.origin_xy, dtype=float),
+        resolution=float(base_grid.resolution),
+        scene_map=scene_map,
+        robot_radius_m=float(robot_radius_m),
+        object_bbox_scale=float(object_bbox_scale),
+        max_object_radius_m=float(max_object_radius_m),
+        ignore_dynamic_obstacles=bool(ignore_dynamic_obstacles),
+    )
+    metadata = dict(base_grid.metadata or {})
+    metadata.update(
+        {
+            "live_object_overlay": True,
+            "live_object_count": len(scene_map),
+            "robot_radius_m": float(robot_radius_m),
+            "object_bbox_scale": float(object_bbox_scale),
+            "max_object_radius_m": float(max_object_radius_m),
+            "ignore_dynamic_obstacles": bool(ignore_dynamic_obstacles),
+        }
+    )
+    return OccupancyGrid2D(
+        occupancy=occupancy,
+        resolution=float(base_grid.resolution),
+        origin_xy=np.asarray(base_grid.origin_xy, dtype=float).copy(),
+        clearance_m=distance_transform_edt(1 - occupancy) * float(base_grid.resolution),
+        source=f"{base_grid.source}+live_objects",
+        fallback_used=bool(base_grid.fallback_used),
+        metadata=metadata,
+    )
+
+
 def find_reachable_goal_near_point(
     grid: OccupancyGrid2D,
     target_xy: np.ndarray,
@@ -512,7 +554,42 @@ def smooth_grid_path(
         smoothed_rc.insert(0, path_grid[0])
     if smoothed_rc[-1] != path_grid[-1]:
         smoothed_rc.append(path_grid[-1])
+    if not path_is_collision_free(grid, smoothed_rc):
+        return shortcut
     return smoothed_rc
+
+
+def path_is_collision_free(grid: OccupancyGrid2D, path_grid: list[tuple[int, int]]) -> bool:
+    """Check every grid cell crossed by every segment of a path."""
+    if not path_grid:
+        return False
+    if len(path_grid) == 1:
+        return grid.is_free(path_grid[0])
+    return all(_line_is_free(grid, start, end) for start, end in zip(path_grid[:-1], path_grid[1:]))
+
+
+def path_length_m(grid: OccupancyGrid2D, path_grid: list[tuple[int, int]]) -> float:
+    if len(path_grid) < 2:
+        return 0.0
+    points = np.asarray([grid.grid_to_world(rc) for rc in path_grid], dtype=float)
+    return float(np.linalg.norm(np.diff(points, axis=0), axis=1).sum())
+
+
+def minimum_path_clearance_m(grid: OccupancyGrid2D, path_grid: list[tuple[int, int]]) -> float:
+    if not path_grid:
+        return 0.0
+    if grid.clearance_m is None:
+        return float("inf")
+    crossed_cells = {
+        rc
+        for start, end in zip(path_grid[:-1], path_grid[1:])
+        for rc in _supercover_cells(start, end)
+    }
+    if len(path_grid) == 1:
+        crossed_cells.add(path_grid[0])
+    if not crossed_cells:
+        return 0.0
+    return float(min(grid.clearance_m[rc] for rc in crossed_cells if grid.in_bounds(rc)))
 
 
 def _heuristic(a: tuple[int, int], b: tuple[int, int]) -> float:
@@ -527,6 +604,8 @@ def _neighbors(grid: OccupancyGrid2D, current: tuple[int, int]):
     ]:
         nxt = (row + d_row, col + d_col)
         if grid.is_free(nxt):
+            if d_row and d_col and (not grid.is_free((row+d_row,col)) or not grid.is_free((row,col+d_col))):
+                continue
             yield nxt, float(np.hypot(d_row, d_col))
 
 
@@ -603,10 +682,34 @@ def _shortcut_path(grid: OccupancyGrid2D, path: list[tuple[int, int]]) -> list[t
 
 
 def _line_is_free(grid: OccupancyGrid2D, start: tuple[int, int], end: tuple[int, int]) -> bool:
-    for rc in _bresenham_cells(start, end):
+    for rc in _supercover_cells(start, end):
         if not grid.is_free(rc):
             return False
     return True
+
+
+def _supercover_cells(start: tuple[int,int], end: tuple[int,int]):
+    """Visit every closed cell touched by a segment between integer cell centers."""
+    row, col = start
+    dy, dx = end[0]-row, end[1]-col
+    ny, nx = abs(dy), abs(dx)
+    sy, sx = (1 if dy > 0 else -1), (1 if dx > 0 else -1)
+    iy = ix = 0
+    yield row, col
+    while ix < nx or iy < ny:
+        decision = (1+2*ix)*ny - (1+2*iy)*nx
+        if decision == 0:
+            yield row+sy,col
+            yield row,col+sx
+            row, col = row+sy, col+sx
+            iy, ix = iy+1, ix+1
+        elif decision < 0:
+            col += sx
+            ix += 1
+        else:
+            row += sy
+            iy += 1
+        yield row,col
 
 
 def _bresenham_cells(start: tuple[int, int], end: tuple[int, int]):

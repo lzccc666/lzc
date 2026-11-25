@@ -1,0 +1,563 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          20
+        ]
+      ],
+      "date-time": "2026-11-20T03:16:51Z",
+      "timestamp": 1795144611337,
+      "version": "4.10.3"
+    },
+    "reference-count": 50,
+    "publisher": "IEEE",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2023,
+              5,
+              29
+            ]
+          ],
+          "date-time": "2023-05-29T00:00:00Z",
+          "timestamp": 1685318400000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2023,
+              5,
+              29
+            ]
+          ],
+          "date-time": "2023-05-29T00:00:00Z",
+          "timestamp": 1685318400000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/501100013549",
+        "name": "German Federal Ministry of Education and Research",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "01IS18040B-OML"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "01IS18040B-OML"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100013549",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2023,
+          5,
+          29
+        ]
+      ]
+    },
+    "DOI": "10.1109/icra48891.2023.10160969",
+    "type": "proceedings-article",
+    "created": {
+      "date-parts": [
+        [
+          2023,
+          7,
+          4
+        ]
+      ],
+      "date-time": "2023-07-04T13:20:56Z",
+      "timestamp": 1688476856000
+    },
+    "page": "10608-10615",
+    "source": "Crossref",
+    "is-referenced-by-count": 372,
+    "title": [
+      "Visual Language Maps for Robot Navigation"
+    ],
+    "prefix": "10.1109",
+    "author": [
+      {
+        "given": "Chenguang",
+        "family": "Huang",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "University of Freiburg,Germany"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Oier",
+        "family": "Mees",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Freiburg,Germany"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Andy",
+        "family": "Zeng",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Google Research,USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Wolfram",
+        "family": "Burgard",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Technology Nuremberg,Germany"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref13",
+        "article-title": "Lm-nav: Robotic navigation with large pre-trained models of language, vision, and action",
+        "author": "shah",
+        "year": "2022",
+        "journal-title": "ArXiv Preprint"
+      },
+      {
+        "key": "ref12",
+        "article-title": "Clip on wheels: Zero-shot object navigation as object localization and exploration",
+        "author": "gadre",
+        "year": "2022",
+        "journal-title": "ArXiv Preprint"
+      },
+      {
+        "key": "ref15",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2013.178"
+      },
+      {
+        "key": "ref14",
+        "article-title": "Socratic models: Composing zero-shot multimodal reasoning with language",
+        "author": "zeng",
+        "year": "2022",
+        "journal-title": "ArXiv Preprint"
+      },
+      {
+        "key": "ref11",
+        "article-title": "Language-driven semantic segmentation",
+        "author": "li",
+        "year": "0",
+        "journal-title": "International Conference on Learning Representations"
+      },
+      {
+        "key": "ref10",
+        "first-page": "8748",
+        "article-title": "Learning transferable visual models from natural language supervision",
+        "author": "radford",
+        "year": "0",
+        "journal-title": "International Conference on Machine Learning"
+      },
+      {
+        "key": "ref17",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ISMAR.2018.00024"
+      },
+      {
+        "key": "ref16",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICRA.2017.7989538"
+      },
+      {
+        "key": "ref19",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICRA.2019.8794371"
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/3DV.2018.00015"
+      },
+      {
+        "key": "ref50",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2015.7298965"
+      },
+      {
+        "key": "ref46",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/3DV.2017.00081"
+      },
+      {
+        "key": "ref45",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV.2019.00943"
+      },
+      {
+        "key": "ref48",
+        "article-title": "On evaluation of embodied navigation agents",
+        "author": "anderson",
+        "year": "2018",
+        "journal-title": "ArXiv Preprint"
+      },
+      {
+        "key": "ref47",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s11263-019-01228-7"
+      },
+      {
+        "key": "ref42",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICRA46639.2022.9811889"
+      },
+      {
+        "key": "ref41",
+        "author": "zeng",
+        "year": "2019",
+        "journal-title": "Learning visual affordances for robotic manipulation"
+      },
+      {
+        "key": "ref44",
+        "article-title": "Evaluating large language models trained on code",
+        "author": "chen",
+        "year": "2021",
+        "journal-title": "arXiv 2107 03374"
+      },
+      {
+        "key": "ref43",
+        "article-title": "Code as policies: Language model programs for embodied control",
+        "author": "liang",
+        "year": "2022",
+        "journal-title": "ArXiv Preprint"
+      },
+      {
+        "key": "ref49",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/rob.21831"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2018.00387"
+      },
+      {
+        "key": "ref7",
+        "first-page": "4",
+        "article-title": "Walk the talk: Connecting language, knowledge, and action in route instructions",
+        "volume": "2",
+        "author": "macmahon",
+        "year": "2006",
+        "journal-title": "Def"
+      },
+      {
+        "key": "ref9",
+        "first-page": "671",
+        "article-title": "Sim-to-real transfer for vision-and-language navigation",
+        "author": "anderson",
+        "year": "0",
+        "journal-title": "Conference on Robot Learning"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1023/A:1008806205438"
+      },
+      {
+        "key": "ref3",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.cognition.2006.05.013"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1609/aaai.v25i1.7979"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICRA.2012.6225199"
+      },
+      {
+        "key": "ref40",
+        "article-title": "Inner monologue: Embodied reasoning through planning with language models",
+        "author": "huang",
+        "year": "2022",
+        "journal-title": "ArXiv Preprint"
+      },
+      {
+        "key": "ref35",
+        "article-title": "Do as i can, not as i say: Grounding language in robotic affordances",
+        "author": "ahn",
+        "year": "2022",
+        "journal-title": "ArXiv Preprint"
+      },
+      {
+        "key": "ref34",
+        "article-title": "Open-vocabulary queryable scene representations for real world planning",
+        "author": "chen",
+        "year": "2022",
+        "journal-title": "ArXiv Preprint"
+      },
+      {
+        "key": "ref37",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICRA46639.2022.9812165"
+      },
+      {
+        "key": "ref36",
+        "first-page": "537",
+        "article-title": "Xirl: Cross-embodiment inverse reinforcement learning",
+        "author": "zakka",
+        "year": "0",
+        "journal-title": "Conference on Robot Learning"
+      },
+      {
+        "key": "ref31",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/LRA.2022.3180108"
+      },
+      {
+        "key": "ref30",
+        "first-page": "894",
+        "article-title": "Cliport: What and where pathways for robotic manipulation",
+        "author": "shridhar",
+        "year": "0",
+        "journal-title": "Conference on Robot Learning"
+      },
+      {
+        "key": "ref33",
+        "article-title": "Grounding language with visual affordances over unstructured data",
+        "author": "mees",
+        "year": "2022",
+        "journal-title": "ArXiv Preprint"
+      },
+      {
+        "key": "ref32",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/LRA.2022.3196123"
+      },
+      {
+        "key": "ref2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1006/cogp.1998.0681"
+      },
+      {
+        "key": "ref1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1037/0278-7393.15.2.211"
+      },
+      {
+        "key": "ref39",
+        "author": "huang",
+        "year": "2022",
+        "journal-title": "Language models as zero-shot planners Extracting actionable knowledge for embodied agents"
+      },
+      {
+        "key": "ref38",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICRA48506.2021.9561359"
+      },
+      {
+        "key": "ref24",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV48922.2021.00166"
+      },
+      {
+        "key": "ref23",
+        "article-title": "Speaker-follower models for vision-and-language navigation",
+        "volume": "31",
+        "author": "fried",
+        "year": "2018",
+        "journal-title": "Advances in neural information processing systems"
+      },
+      {
+        "key": "ref26",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR52688.2022.01500"
+      },
+      {
+        "key": "ref25",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV48922.2021.01488"
+      },
+      {
+        "key": "ref20",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.15607/RSS.2022.XVIII.050",
+        "article-title": "Hydra: a real-time spatial perception system for 3d scene graph construction and optimization",
+        "author": "hughes",
+        "year": "2022",
+        "journal-title": "Proceedings of Robotics Science and Systems"
+      },
+      {
+        "key": "ref22",
+        "first-page": "104",
+        "article-title": "Beyond the nav-graph: Vision-and-language navigation in continuous environments",
+        "author": "krantz",
+        "year": "0",
+        "journal-title": "European Conference on Computer Vision"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR46437.2021.00743"
+      },
+      {
+        "key": "ref28",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV48922.2021.00180"
+      },
+      {
+        "key": "ref27",
+        "first-page": "1877",
+        "article-title": "Language models are few-shot learners",
+        "volume": "33",
+        "author": "brown",
+        "year": "2020",
+        "journal-title": "Advances in neural information processing systems"
+      },
+      {
+        "key": "ref29",
+        "article-title": "Open-vocabulary object detection via vision and language knowledge distillation",
+        "author": "gu",
+        "year": "0",
+        "journal-title": "International Conference on Learning Representations"
+      }
+    ],
+    "event": {
+      "name": "2023 IEEE International Conference on Robotics and Automation (ICRA)",
+      "location": "London, United Kingdom",
+      "start": {
+        "date-parts": [
+          [
+            2023,
+            5,
+            29
+          ]
+        ]
+      },
+      "end": {
+        "date-parts": [
+          [
+            2023,
+            6,
+            2
+          ]
+        ]
+      }
+    },
+    "container-title": [
+      "2023 IEEE International Conference on Robotics and Automation (ICRA)"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx7/10160211/10160212/10160969.pdf?arnumber=10160969",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2023,
+          7,
+          24
+        ]
+      ],
+      "date-time": "2023-07-24T13:32:48Z",
+      "timestamp": 1690205568000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/10160969/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2023,
+          5,
+          29
+        ]
+      ]
+    },
+    "references-count": 50,
+    "URL": "https://doi.org/10.1109/icra48891.2023.10160969",
+    "relation": {},
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2023,
+          5,
+          29
+        ]
+      ]
+    }
+  }
+}

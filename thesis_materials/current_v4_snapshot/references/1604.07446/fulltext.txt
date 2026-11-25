@@ -1,0 +1,3443 @@
+1
+A Survey of Motion Planning and Control
+Techniques for Self-driving Urban Vehicles
+Brian Paden∗,1, Michal ˇCáp∗,1,2, Sze Zheng Yong1, Dmitry Yershov1, and Emilio Frazzoli1
+Abstract
+Self-driving vehicles are a maturing technology with the potential to reshape mobility by enhancing the safety, accessibility,
+efﬁciency, and convenience of automotive transportation. Safety-critical tasks that must be executed by a self-driving vehicle include
+planning of motions through a dynamic environment shared with other vehicles and pedestrians, and their robust executions via
+feedback control. The objective of this paper is to survey the current state of the art on planning and control algorithms with
+particular regard to the urban setting. A selection of proposed techniques is reviewed along with a discussion of their effectiveness.
+The surveyed approaches differ in the vehicle mobility model used, in assumptions on the structure of the environment, and in
+computational requirements. The side-by-side comparison presented in this survey helps to gain insight into the strengths and
+limitations of the reviewed approaches and assists with system level design choices.
+CONTENTS
+I
+Introduction
+2
+II
+Overview of the Decision-Making Hierarchy used in Driverless Cars
+3
+II-A
+Route Planning . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+3
+II-B
+Behavioral Decision Making . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+3
+II-C
+Motion Planning . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4
+II-D
+Vehicle Control . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4
+III
+Modeling for Planning and Control
+4
+III-A
+The Kinematic Single-Track Model . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4
+III-B
+Inertial Effects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6
+IV
+Motion Planning
+7
+IV-A
+Path Planning . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+7
+IV-B
+Trajectory Planning
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9
+IV-C
+Variational Methods . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9
+IV-D
+Graph Search Methods . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+11
+IV-D1
+Lane Graph . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+11
+IV-D2
+Geometric Methods . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+12
+IV-D3
+Sampling-based Methods . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+12
+IV-D4
+Graph Search Strategies . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+14
+IV-E
+Incremental Search Techniques
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+15
+IV-F
+Practical Deployments . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+16
+V
+Vehicle Control
+17
+V-A
+Path Stabilization for the Kinematic Model . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+18
+V-A1
+Pure Pursuit . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+18
+V-A2
+Rear wheel position based feedback . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+19
+V-A3
+Front wheel position based feedback
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+19
+V-B
+Trajectory Tracking Control for the Kinematic Model . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+20
+V-B1
+Control Lyapunov based design . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+20
+V-B2
+Output feedback linearization
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+21
+V-C
+Predictive Control Approaches . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+21
+V-C1
+Unconstrained MPC with Kinematic Models . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+22
+V-C2
+Path Tracking Controllers
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+22
+V-C3
+Trajectory Tracking Controllers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+22
+V-D
+Linear Parameter Varying Controllers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+23
+VI
+Conclusions
+23
+References
+23
+∗The ﬁrst two authors contributed equally to this work.
+1 The authors are with the Laboratory for Information and Decision Sys-
+tems, Massachusetts Institute of Technology, Cambridge MA, USA. email:
+bapaden@mit.edu, mcap@mit.edu, szyong@mit.edu,
+yershov@mit.edu, frazzoli@mit.edu
+2 Michal ˇCáp is also afﬁliated with Dept. of Computer Science, Faculty of
+Electrical Engineering, CTU in Prague, Czech Republic.
+arXiv:1604.07446v1  [cs.RO]  25 Apr 2016
+
+2
+I. INTRODUCTION
+The last three decades have seen steadily increasing research
+efforts, both in academia and in industry, towards developing
+driverless vehicle technology. These developments have been
+fueled by recent advances in sensing and computing tech-
+nology together with the potential transformative impact on
+automotive transportation and the perceived societal beneﬁt:
+In 2014 there were 32,675 trafﬁc related fatalities, 2.3 million
+injuries, and 6.1 million reported collisions [1]. Of these,
+an estimated 94% are attributed to driver error with 31%
+involving legally intoxicated drivers, and 10% from distracted
+drivers [2]. Autonomous vehicles have the potential to dramat-
+ically reduce the contribution of driver error and negligence
+as the cause of vehicle collisions. They will also provide a
+means of personal mobility to people who are unable to drive
+due to physical or visual disability. Finally, for the 86% of the
+US work force that commutes by car, on average 25 minutes
+(one way) each day [3], autonomous vehicles would facilitate
+more productive use of the transit time, or simply reduce the
+measurable ill effects of driving stress [4].
+Considering the potential impacts of this new technology,
+it is not surprising that self-driving cars have had a long
+history. The idea has been around as early as in the 1920s,
+but it was not until the 1980s that driverless cars seemed like
+a real possibility. Pioneering work led by Ernst Dickmanns
+(e.g., [5]) in the 1980s paved the way for the development
+of autonomous vehicles. At that time a massive research
+effort, the PROMETHEUS project, was funded to develop
+an autonomous vehicle. A notable demonstration in 1994
+resulting from the work was a 1,600 km drive by the VaMP
+driverless car, of which 95% was driven autonomously [6].
+At a similar time, the CMU NAVLAB was making advances
+in the area and in 1995 demonstrated further progress with
+a 5,000 km drive across the US of which 98% was driven
+autonomously [7].
+The next major milestone in driverless vehicle technology
+was the ﬁrst DARPA Grand Challenge in 2004. The objective
+was for a driverless car to navigate a 150-mile off-road
+course as quickly as possible. This was a major challenge
+in comparison to previous demonstrations in that there was
+to be no human intervention during the race. Although prior
+works demonstrated nearly autonomous driving, eliminating
+human intervention at critical moments proved to be a major
+challenge. None of the 15 vehicles entered into the event
+completed the race. In 2005 a similar event was held; this
+time 5 of 23 teams reached the ﬁnish line [8]. Later, in 2007,
+the DARPA Urban Challenge was held, in which vehicles
+were required to drive autonomously in a simulated urban
+setting. Six teams ﬁnished the event demonstrating that fully
+autonomous urban driving is possible [9].
+Numerous events and major autonomous vehicle system
+tests have been carried out since the DARPA challenges.
+Notable examples include the Intelligent Vehicle Future Chal-
+lenges from 2009 to 2013 [10], Hyundai Autonomous Chal-
+lenge in 2010 [11], the VisLab Intercontinental Autonomous
+Challenge in 2010 [12], the Public Road Urban Driverless-
+Car Test in 2013 [13], and the autonomous drive of the
+Bertha-Benz historic route [14]. Simultaneously, research has
+continued at an accelerated pace in both the academic setting
+as well as in industry. The Google self-driving car [15] and
+Tesla’s Autopilot system [16] are two examples of commercial
+efforts receiving considerable media attention.
+The extent to which a car is automated can vary from
+fully human operated to fully autonomous. The SAE J3016
+standard [17] introduces a scale from 0 to 5 for grading vehicle
+automation. In this standard, the level 0 represents a vehicle
+where all driving tasks are the responsibility of a human
+driver. Level 1 includes basic driving assistance such as adap-
+tive cruise control, anti-lock braking systems and electronic
+stability control [18]. Level 2 includes advanced assistance
+such as hazard-minimizing longitudinal/lateral control [19] or
+emergency braking [20], [21], often based upon set-based
+formal control theoretic methods to compute ‘worst-case’ sets
+of provably collision free (safe) states [22]–[24]. At level 3
+the system monitors the environment and can drive with full
+autonomy under certain conditions, but the human operator
+is still required to take control if the driving task leaves the
+autonomous system’s operational envelope. A vehicle with
+level 4 automation is capable of fully autonomous driving in
+certain conditions and will safely control the vehicle if the
+operator fails to take control upon request to intervene. Level
+5 systems are fully autonomous in all driving modes.
+The availability of on-board computation and wireless com-
+munication technology allows cars to exchange information
+with other cars and with the road infrastructure giving rise
+to a closely related area of research on connected intelligent
+vehicles [25]. This research aims to improve the safety and
+performance of road transport through information sharing
+and coordination between individual vehicles. For instance,
+connected vehicle technology has a potential to improve
+throughput at intersections [26] or prevent formation of trafﬁc
+shock waves [27].
+To limit the scope of this survey, we focus on aspects of
+decision making, motion planning, and control for self-driving
+cars, in particular, for systems falling into the automation
+level of 3 and above. For the same reason, the broad ﬁeld
+of perception for autonomous driving is omitted and instead
+the reader is referred to a number of comprehensive surveys
+and major recent contributions on the subject [28]–[31].
+The decision making in contemporary autonomous driv-
+ing systems is typically hierarchically structured into route
+planning, behavioral decision making, local motion planning
+and feedback control. The partitioning of these levels are,
+however, rather blurred with different variations of this scheme
+occurring in the literature. This paper provides a survey of pro-
+posed methods to address these core problems of autonomous
+driving. Particular emphasis is placed on methods for local
+motion planning and control.
+The remainder of the paper is structured as follows: In
+Section II, a high level overview of the hierarchy of decision
+making processes and some of the methods for their design are
+presented. Section III reviews models used to approximate the
+mobility of cars in urban settings for the purposes of motion
+planning and feedback control. Section IV surveys the rich
+literature on motion planning and discusses its applicability for
+
+3
+self-driving cars. Similarly, Section V discusses the problems
+of path and trajectory stabilization and speciﬁc feedback con-
+trol methods for driverless cars. Lastly, Section VI concludes
+with remarks on the state of the art and potential areas for
+future research.
+II. OVERVIEW OF THE DECISION-MAKING HIERARCHY
+USED IN DRIVERLESS CARS
+In this section we describe the decision making architecture
+of a typical self-driving car and comment on the respon-
+sibilities of each component. Driverless cars are essentially
+autonomous decision-making systems that process a stream of
+observations from on-board sensors such as radars, LIDARs,
+cameras, GPS/INS units, and odometry. These observations,
+together with prior knowledge about the road network, rules
+of the road, vehicle dynamics, and sensor models, are used
+to automatically select values for controlled variables gov-
+erning the vehicle’s motion. Intelligent vehicle research aims
+at automating as much of the driving task as possible. The
+commonly adopted approach to this problem is to partition
+and organize perception and decision-making tasks into a
+hierarchical structure. The prior information and collected
+observation data are used by the perception system to provide
+an estimate of the state of the vehicle and its surrounding
+environment; the estimates are then used by the decision-
+making system to control the vehicle so that the driving
+objectives are accomplished.
+The decision making system of a typical self-driving car is
+hierarchically decomposed into four components (cf. Figure
+II.1): At the highest level a route is planned through the
+road network. This is followed by a behavioral layer, which
+decides on a local driving task that progresses the car towards
+the destination and abides by rules of the road. A motion
+planning module then selects a continuous path through the
+environment to accomplish a local navigational task. A control
+system then reactively corrects errors in the execution of the
+planned motion. In the remainder of the section we discuss the
+responsibilities of each of these components in more detail.
+A. Route Planning
+At the highest level, a vehicle’s decision-making system
+must select a route through the road network from its current
+position to the requested destination. By representing the road
+network as a directed graph with edge weights corresponding
+to the cost of traversing a road segment, such a route can
+be formulated as the problem of ﬁnding a minimum-cost
+path on a road network graph. The graphs representing road
+networks can however contain millions of edges making
+classical shortest path algorithms such as Dijkstra [32] or
+A* [33] impractical. The problem of efﬁcient route planning
+in transportation networks has attracted signiﬁcant interest in
+the transportation science community leading to the invention
+of a family of algorithms that after a one-time pre-processing
+step return an optimal route on a continent-scale network in
+milliseconds [34], [35]. For a comprehensive survey and com-
+parison of practical algorithms that can be used to efﬁciently
+plan routes for both human-driven and self-driving vehicles,
+see [36].
+User speciﬁied
+destination 
+Route Planning
+Negotiate 
+Intersection
+Unstructured
+Environment
+Change
+Lanes
+Parking
+Maneuver
+Lane
+Following
+Behavioral Layer
+Motion Planning
+Local Feedback
+Control
+Perceived agents,
+obstacles, and 
+signage 
+Estimate of vehicle 
+state 
+Estimated pose and 
+collision free space 
+Road network data 
+Sequence of waypoints through road network
+Motion Speciﬁcation
+Reference path or trajectory
+Steering, throttle and brake commands
+Figure II.1: Illustration of the hierarchy of decision-making
+processes. A destination is passed to a route planner that
+generates a route through the road network. A behavioral
+layer reasons about the environment and generates a motion
+speciﬁcation to progress along the selected route. A motion
+planner then solves for a feasible motion accomplishing the
+speciﬁcation. A feedback control adjusts actuation variables to
+correct errors in executing the reference path.
+B. Behavioral Decision Making
+After a route plan has been found, the autonomous vehicle
+must be able to navigate the selected route and interact with
+other trafﬁc participants according to driving conventions and
+rules of the road. Given a sequence of road segments spec-
+ifying the selected route, the behavioral layer is responsible
+for selecting an appropriate driving behavior at any point
+of time based on the perceived behavior of other trafﬁc
+participants, road conditions, and signals from infrastructure.
+For example, when the vehicle is reaching the stop line before
+an intersection, the behavioral layer will command the vehicle
+
+4
+to come to a stop, observe the behavior of other vehicles,
+bikes, and pedestrians at the intersection, and let the vehicle
+proceed once it is its turn to go.
+Driving manuals dictate qualitative actions for speciﬁc driv-
+ing contexts. Since both driving contexts and the behaviors
+available in each context can be modeled as ﬁnite sets, a
+natural approach to automating this decision making is to
+model each behavior as a state in a ﬁnite state machine with
+transitions governed by the perceived driving context such
+as relative position with respect to the planned route and
+nearby vehicles. In fact, ﬁnite state machines coupled with
+different heuristics speciﬁc to considered driving scenarios
+were adopted as a mechanism for behavior control by most
+teams in the DARPA Urban Challenge [9].
+Real-world driving, especially in an urban setting, is how-
+ever characterized by uncertainty over the intentions of other
+trafﬁc participants. The problem of intention prediction and
+estimation of future trajectories of other vehicles, bikes and
+pedestrians has also been studied. Among the proposed so-
+lution techniques are machine learning based techniques,
+e.g., Gaussian mixture models [37], Gaussian process regres-
+sion [38], the learning techniques reportedly used in Google’s
+self-driving system for intention prediction [39], and model-
+based approaches for directly estimating intentions from sen-
+sor measurements [40], [41].
+This uncertainty in the behavior of other trafﬁc participants
+is commonly considered in the behavioral layer for deci-
+sion making using probabilistic planning formalisms, such as
+Markov Decision Processes (MDPs) and their generalizations.
+For example, [42] formulates the behavioral decision-making
+problem in the MDP framework. Several works [43]–[46]
+model unobserved driving scenarios and pedestrian intentions
+explicitly using a partially-observable Markov decision pro-
+cess (POMDP) framework and propose speciﬁc approximate
+solution strategies.
+C. Motion Planning
+When the behavioral layer decides on the driving behavior
+to be performed in the current context, which could be,
+e.g., cruise-in-lane, change-lane, or turn-right, the selected
+behavior has to be translated into a path or trajectory that
+can be tracked by the low-level feedback controller. The
+resulting path or trajectory must be dynamically feasible for
+the vehicle, comfortable for the passenger, and avoid collisions
+with obstacles detected by the on-board sensors. The task of
+ﬁnding such a path or trajectory is a responsibility of the
+motion planning system.
+The task of motion planning for an autonomous vehicle
+corresponds to solving the standard motion planning problem
+as discussed in the robotics literature. Exact solutions to the
+motion planning problem are in most cases computationally
+intractable. Thus, numerical approximation methods are typ-
+ically used in practice. Among the most popular numerical
+approaches are variational methods that pose the problem as
+non-linear optimization in a function space, graph-search ap-
+proaches that construct graphical discretization of the vehicle’s
+state space and search for a shortest path using graph search
+methods, and incremental tree-based approaches that incre-
+mentally construct a tree of reachable states from the initial
+state of the vehicle and then select the best branch of such a
+tree. The motion planning methods relevant for autonomous
+driving are discussed in greater detail in Section IV.
+D. Vehicle Control
+In order to execute the reference path or trajectory from the
+motion planning system a feedback controller is used to select
+appropriate actuator inputs to carry out the planned motion
+and correct tracking errors. The tracking errors generated
+during the execution of a planned motion are due in part to
+the inaccuracies of the vehicle model. Thus, a great deal of
+emphasis is placed on the robustness and stability of the closed
+loop system.
+Many effective feedback controllers have been proposed
+for executing the reference motions provided by the motion
+planning system. A survey of related techniques are discussed
+in detail in Section V.
+III. MODELING FOR PLANNING AND CONTROL
+In this section we will survey the most commonly used
+models of mobility of car-like vehicles. Such models are
+widely used in control and motion planning algorithms to
+approximate a vehicle’s behavior in response to control actions
+in relevant operating conditions. A high-ﬁdelity model may
+accurately reﬂect the response of the vehicle, but the added
+detail may complicate the planning and control problems.
+This presents a trade-off between the accuracy of the selected
+model and the difﬁculty of the decision problems. This section
+provides an overview of general modeling concepts and a
+survey of models used for motion planning and control.
+Modeling begins with the notion of the vehicle conﬁgu-
+ration, representing its pose or position in the world. For
+example, conﬁguration can be expressed as the planar coordi-
+nate of a point on the car together with the car’s heading.
+This is a coordinate system for the conﬁguration space of
+the car. This coordinate system describes planar rigid-body
+motions (represented by the Special Euclidean group in two
+dimensions, SE(2)) and is a commonly used conﬁguration
+space [47]–[49]. Vehicle motion must then be planned and
+regulated to accomplish driving tasks and while respecting the
+constraints introduced by the selected model.
+A. The Kinematic Single-Track Model
+In the most basic model of practical use, the car consists of
+two wheels connected by a rigid link and is restricted to move
+in a plane [48]–[52]. It is assumed that the wheels do not slip
+at their contact point with the ground, but can rotate freely
+about their axes of rotation. The front wheel has an added
+degree of freedom where it is allowed to rotate about an axis
+normal to the plane of motion. This is to model steering. These
+two modeling features reﬂect the experience most passengers
+have where the car is unable to make lateral displacement
+without simultaneously moving forward. More formally, the
+limitation on maneuverability is referred to as a nonholo-
+nomic constraint [47], [53]. The nonholonomic constraint is
+
+5
+expressed as a differential constraint on the motion of the car.
+This expression varies depending on the choice of coordinate
+system. Variations of this model have been referred to as the
+car-like robot, bicycle model, kinematic model, or single track
+model.
+The following is a derivation of the differential constraint
+in several popular coordinate systems for the conﬁguration.
+In reference to Figure III.1, the vectors pr and pf denote the
+location of the rear and front wheels in a stationary or inertial
+coordinate system with basis vectors (ˆex, ˆey, ˆez). The heading
+θ is an angle describing the direction that the vehicle is facing.
+This is deﬁned as the angle between vectors ˆex and pf −pr.
+Differential constraints will be derived for the coordinate
+systems consisting of the angle θ, together with the motion of
+one of the points pr as in [54], and pf as in [55].
+Figure III.1: Kinematics of the single track model. pr and
+pf are the ground contact points of the rear and front tire
+respectively. θ is the vehicle heading. Time derivatives of pr
+and pf are restricted by the nonholonomic constraint to the
+direction indicated by the blue arrows. δ is the steering angle
+of the front wheel.
+The motion of the points pr and pf must be collinear
+with the wheel orientation to satisfy the no-slip assumption.
+Expressed as an equation, this constraint on the rear wheel is
+( ˙pr · ˆey) cos(θ) −( ˙pr · ˆex) sin(θ) = 0,
+(III.1)
+and for the front wheel:
+( ˙pf · ˆey) cos(θ + δ) −( ˙pf · ˆex) sin(θ + δ) = 0.
+(III.2)
+This expression is usually rewritten in terms of the component-
+wise motion of each point along the basis vectors. The motion
+of the rear wheel along the ˆex-direction is xr := pr · ˆex.
+Similarly, for ˆey-direction, yr := pr · ˆey. The forward speed is
+vr := ˙pr · (pf −pr)/∥(pf −pr)∥, which is the magnitude of
+˙pr with the correct sign to indicate forward or reverse driving.
+In terms of the scalar quantities xr, yr, and θ, the differential
+constraint is
+˙xr
+=
+vr cos(θ),
+˙yr
+=
+vr sin(θ),
+˙θ
+=
+vr
+l tan(δ).
+(III.3)
+Alternatively, the differential constraint can be written in terms
+the motion of pf,
+˙xf
+=
+vf cos(θ + δ),
+˙yf
+=
+vf sin(θ + δ),
+˙θ
+=
+vf
+l sin(δ),
+(III.4)
+where the front wheel forward speed vf is now used. The front
+wheel speed, vf, is related to the rear wheel speed by
+vr
+vf
+= cos(δ).
+(III.5)
+The planning and control problems for this model involve
+selecting the steering angle δ within the mechanical limits of
+the vehicle δ ∈[δmin, δmax], and forward speed vr within an
+acceptable range, vr ∈[vmin, vmax].
+A simpliﬁcation that is sometimes utilized, e.g. [56], is to
+select the heading rate ω instead of steering angle δ. These
+quantities are related by
+δ = arctan
+lω
+vr
+
+,
+(III.6)
+simplifying the heading dynamics to
+˙θ = ω,
+ω ∈
+hvr
+l tan (δmin) , vr
+l tan (δmax)
+i
+.
+(III.7)
+In this situation, the model is sometimes referred to as the
+unicycle model since it can be derived by considering the
+motion of a single wheel.
+An important variation of this model is the case when vr
+is ﬁxed. This is sometimes referred to as the Dubins car,
+after Lester Dubins who derived the minimum time motion
+between to points with prescribed tangents [57]. Another
+notable variation is the Reeds-Shepp car for which minimum
+length paths are known when vr takes a single forward and
+reverse speed [58]. These two models have proven to be of
+some importance to motion planning and will be discussed
+further in Section IV.
+The kinematic models are suitable for planning paths at
+low speeds (e.g. parking maneuvers and urban driving) where
+inertial effects are small in comparison to the limitations
+on mobility imposed by the no-slip assumption. A major
+drawback of this model is that it permits instantaneous steering
+angle changes which can be problematic if the motion planning
+module generates solutions with such instantaneous changes.
+Continuity of the steering angle can be imposed by aug-
+menting (III.4), where the steering angle integrates a com-
+manded rate as in [49]. Equation (III.4) becomes
+˙xf
+=
+vf cos(θ + δ),
+˙yf
+=
+vf sin(θ + δ),
+˙θ
+=
+vf
+l sin(δ),
+˙δ
+=
+vδ.
+(III.8)
+In addition to the limit on the steering angle, the steering rate
+can now be limited: vδ ∈
+h
+˙δmin, ˙δmax
+i
+. The same problem
+can arise with the car’s speed vr and can be resolved in the
+same way. The drawback to this technique is the increased
+dimension of the model which can complicate motion planning
+and control problems.
+The choice of coordinate system is not limited to using one
+of the wheel locations as a position coordinate. For models
+
+6
+derived using principles from classical mechanics it can be
+convenient to use the center of mass as the position coordinate
+as in [59], [60], or the center of oscillation as in [61], [62].
+B. Inertial Effects
+When the acceleration of the vehicle is sufﬁciently large,
+the no-slip assumption between the tire and ground becomes
+invalid. In this case a more accurate model for the vehicle is
+as a rigid body satisfying basic momentum principles. That
+is, the acceleration is proportional to the force generated by
+the ground on the tires. Taking pc to be the vehicles center of
+mass, and a coordinate of the conﬁguration (cf. Figure III.2),
+the motion of the vehicle is governed by
+m¨pc
+=
+Ff + Fr,
+Izz ¨θ
+=
+(pc −pf) × Ff + (pc −pr) × Fr,
+(III.9)
+where Fr and Ff are the forces applied to the vehicle by the
+ground through the ground-tire interaction, m is the vehicles
+total mass, and Izz is the polar moment of inertia in the ˆez
+direction about the center of mass. In the following derivations
+we tacitly neglect the motion of pc in the ˆez direction with
+the assumptions that the road is level, the suspension is rigid
+and vehicle remains on the road.
+The expressions for Fr and Ff vary depending on mod-
+eling assumptions [18], [59], [60], [62], but in any case the
+expression can be tedious to derive. Equations (III.10)-(III.15)
+therefore provide a detailed derivation as a reference.
+The force between the ground and tires is modeled as
+being dependent on the rate that the tire slips on the ground.
+Although the center of mass serves as a coordinate for the
+conﬁguration, the velocity of each wheel relative to the ground
+is needed to determine this relative speed. The kinematic
+relations between these three points are
+pr
+=
+pc +
+
+
+−lr cos(θ)
+−lr sin(θ)
+0
+
+,
+˙pr
+=
+˙pc +
+
+
+0
+0
+˙θ
+
+×
+
+
+−lr cos(θ)
+−lr sin(θ)
+0
+
+,
+pf
+=
+pc +
+
+
+lf cos(θ)
+lf sin(θ)
+0
+
+,
+˙pf
+=
+˙pc +
+
+
+0
+0
+˙θ
+
+×
+
+
+lf cos(θ)
+lf sin(θ)
+0
+
+.
+(III.10)
+These kinematic relations are used to determine the velocities
+of the point on each tire in contact with the ground, sr and
+sf. The velocity of these points are referred to as the tire slip
+velocity. In general, sr and sf differ from ˙pr and ˙pf through
+the angular velocity of the wheel. The kinematic relation is
+sr
+=
+˙pr + ωr × R,
+sf
+=
+˙pf + ωf × R.
+(III.11)
+The angular velocities of the wheels are given by
+ωr =
+
+
+Ωr sin(θ)
+−Ωr cos(θ)
+0
+
+,
+ωf =
+
+
+Ωf sin(θ + δ)
+−Ωf cos(θ + δ)
+0
+
+,
+(III.12)
+and R =
+ 0,
+0,
+−rT . The wheel radius is the scalar
+quantity r, and Ω{r,f} are the angular speeds of each wheel
+relative to the car. This is illustrated for the rear wheel in
+Figure III.3.
+Under static conditions, or when the height of the center of
+mass can be approximated as pc · ˆez ≈0, the component of
+the force normal to the ground, F{r,f} · ˆez can be computed
+from a static force-torque balance as
+Ff · ˆez = lrmg
+lf + lr
+,
+Fr · ˆez = lfmg
+lf + lr
+.
+(III.13)
+The normal force is then used to compute the traction force
+on each tire together with the slip and a friction coefﬁcient
+model, µ, for the tire behavior. The traction force on the rear
+tire is given component-wise by
+Fr · ˆex
+=
+−
+(Fr·ˆez)µ(
+∥sr∥
+Ωrr )sr
+∥sr∥
+· ˆex,
+Fr · ˆey
+=
+−
+(Fr·ˆez)µ(
+∥sr∥
+Ωrr )sr
+∥sr∥
+· ˆey.
+(III.14)
+The same expression describes the front tire with the r-
+subscript replaced by an f-subscript. The formula above
+models the traction force as being anti-parallel to the slip with
+magnitude proportional to the normal force with a nonlinear
+Figure III.2: Illustration of single track model kinematics
+without the no-slip assumption. ω{r,f} are relative angular
+velocities of the wheels with respect to the vehicle.
+Figure III.3: Illustration of the rear wheel kinematics in two
+dimensions showing the wheel slip, sr, in relation to the rear
+wheel velocity, ˙pr, and angular speed, Ωr. In general, sr and
+˙pr are not collinear and may have nonzero components normal
+to the plane depicted.
+
+7
+dependence on the slip ratio (the magnitude of the slip normal-
+ized by Ωrr for the rear and Ωfr for the front). Combining
+(III.10)-(III.15) yields expressions for the net force on each
+wheel of the car in terms of the control variables, generalized
+coordinates, and their velocities. Equation (III.14), together
+with the following model for µ,
+µ
+∥sr∥
+Ωrr
+
+= D sin
+
+C arctan
+
+B ∥sr∥
+Ωrr
+
+,
+(III.15)
+are a frequently used model for tire interaction with the
+ground. Equation (III.15) is a simpliﬁed version of the well
+known model due to Pacejka [63].
+The rotational symmetry of (III.14) together with the peak
+in (III.15) lead to a maximum norm force that the tire can
+exert in any direction. This peak is referred to as the friction
+circle depicted in Figure III.4.
+Figure III.4: A zoomed in view of the wheel slip to traction
+force map at each tire (top) and a zoomed out view empha-
+sizing the peak that deﬁnes the friction circle (bottom); cf.
+Equation (III.15).
+The models discussed in this section appear frequently in
+the literature on motion planning and control for driverless
+cars. They are suitable for the motion planning and control
+tasks discussed in this survey. However, lower level control
+tasks such as electronic stability control and active suspen-
+sion systems typically use more sophisticated models for the
+chassis, steering and, drive-train.
+IV. MOTION PLANNING
+The motion planning layer is responsible for computing a
+safe, comfortable, and dynamically feasible trajectory from
+the vehicle’s current conﬁguration to the goal conﬁguration
+provided by the behavioral layer of the decision making
+hierarchy. Depending on context, the goal conﬁguration may
+differ. For example, the goal location may be the center point
+of the current lane a number of meters ahead in the direction
+of travel, the center of the stop line at the next intersection,
+or the next desired parking spot. The motion planning compo-
+nent accepts information about static and dynamic obstacles
+around the vehicle and generates a collision-free trajectory that
+satisﬁes dynamic and kinematic constraints on the motion of
+the vehicle. Oftentimes, the motion planner also minimizes
+a given objective function. In addition to travel time, the
+objective function may penalize hazardous motions or motions
+that cause passenger discomfort. In a typical setup, the output
+of the motion planner is then passed to the local feedback
+control layer. In turn, feedback controllers generate an input
+signal to regulate the vehicle to follow this given motion plan.
+A motion plan for the vehicle can take the form of a path or
+a trajectory. Within the path planning framework, the solution
+path is represented as a function σ(α) : [0, 1] →X, where
+X is the conﬁguration space of the vehicle. Note that such a
+solution does not prescribe how this path should be followed
+and one can either choose a velocity proﬁle for the path or
+delegate this task to lower layers of the decision hierarchy.
+Within the trajectory planning framework, the control execu-
+tion time is explicitly considered. This consideration allows for
+direct modeling of vehicle dynamics and dynamic obstacles.
+In this case, the solution trajectory is represented as a time-
+parametrized function π(t) :
+[0, T] →X, where T is the
+planning horizon. Unlike a path, the trajectory prescribes how
+the conﬁguration of the vehicle evolves over time.
+In the following two sections, we provide a formal problem
+deﬁnition of the path planning and trajectory planning prob-
+lems and review the main complexity and algorithmic results
+for both formulations.
+A. Path Planning
+The path planning problem is to ﬁnd a path σ(α) : [0, 1] →
+X in the conﬁguration space X of the vehicle (or more
+generally, a robot) that starts at the initial conﬁguration and
+reaches the goal region while satisfying given global and
+local constraints. Depending on whether the quality of the
+solution path is considered, the terms feasible and optimal
+are used to describe this path. Feasible path planning refers
+to the problem of determining a path that satisﬁes some given
+problem constraints without focusing on the quality of the
+solution; whereas optimal path planning refers to the problem
+of ﬁnding a path that optimizes some quality criterion subject
+to given constraints.
+The optimal path planning problem can be formally stated
+as follows. Let X be the conﬁguration space of the vehicle and
+let Σ(X) denote the set of all continuous functions [0, 1] →X.
+The initial conﬁguration of the vehicle is xinit ∈X. The
+path is required to end in a goal region Xgoal ⊆X. The
+set of all allowed conﬁgurations of the vehicle is called the
+free conﬁguration space and denoted Xfree. Typically, the free
+conﬁgurations are those that do not result in collision with ob-
+stacles, but the free-conﬁguration set can also represent other
+holonomic constraints on the path. The differential constraints
+on the path are represented by a predicate D(x, x′, x′′, . . .) and
+can be used to enforce some degree of smoothness of the path
+for the vehicle, such as the bound on the path curvature and/or
+
+8
+the rate of curvature. For example, in the case of X ⊆R2, the
+differential constraint may enforce the maximum curvature κ
+of the path using Frenet-Serret formula as follows:
+D(x, x′, x′′, . . .) ⇔∥x′ × x′′∥
+∥x′∥3
+≤κ.
+Further, let J(σ) : Σ(X) →R be the cost functional. Then, the
+optimal version of the path planning problem can be generally
+stated as follows.
+Problem IV.1 (Optimal path planning). Given a 5-tuple
+(Xfree, xinit, Xgoal, D, J) ﬁnd σ∗=
+arg min
+σ∈Σ(X)
+J(σ)
+subj. to
+σ(0) = xinit and σ(1) ∈Xgoal
+σ(α) ∈Xfree
+∀α ∈[0, 1]
+D(σ(α), σ′(α), σ′′(α), . . .)
+∀α ∈[0, 1].
+The problem of feasible and optimal path planning has been
+studied extensively in the past few decades. The complexity of
+this problem is well understood, and many practical algorithms
+have been developed.
+Complexity: A signiﬁcant body of literature is devoted to
+studying the complexity of motion planning problems. The
+following is a brief survey of some of the major results
+regarding the computational complexity of these problems.
+The problem of ﬁnding an optimal path subject to holo-
+nomic and differential constraints as formulated in Prob-
+lem IV.1 is known to be PSPACE-hard [64]. This means that
+it is at least as hard as solving any NP-complete problem and
+thus, assuming P̸ = NP, there is no efﬁcient (polynomial-
+time) algorithm able to solve all instances of the problem.
+Research attention has since been directed toward studying
+approximate methods, or approaches to subsets of the general
+motion planning problem.
+Initial research focused primarily on feasible (i.e., non-
+optimal) path planning for a holonomic vehicle model in
+polygonal/polyhedral environments. That is, the obstacles are
+assumed to be polygons/polyhedra and there are no differential
+constraints on the resulting path. In 1970, Reif [64] found
+that an obstacle-free path for a holonomic vehicle, whose
+footprint can be described as a single polyhedron, can be
+found in polynomial time in both 2-D and 3-D environments.
+Canny [65] has shown that the problem of feasible path
+planning in a free space represented using polynomials is
+in PSPACE, which rendered the decision version of feasible
+path planning without differential constraints as a PSPACE-
+complete problem.
+For the optimal planning formulation, where the objective
+is to ﬁnd the shortest obstacle-free path. It has been long
+known that a shortest path for a holonomic vehicle in a 2-
+D environment with polygonal obstacles can be found in
+polynomial time [66], [67]. More precisely, it can be computed
+in time O(n2), where n is the number of vertices of the
+polygonal obstacles [68]. This can be solved by constructing
+and searching the so-called visibility graph [69]. In contrast,
+Lazard, Reif and Wang [70] established that the problem
+of ﬁnding a shortest curvature-bounded path in a 2-D plane
+amidst polygonal obstacles (i.e., a path for a car-like robot) is
+NP-hard, which suggests that there is no known polynomial
+time algorithm for ﬁnding a shortest path for a car-like robot
+among polygonal obstacles. A related result is that, that
+the existence of a curvature constrained path in polygonal
+environment can be decided in EXPTIME [71].
+A special case where a solution can be efﬁciently computed
+is the shortest curvature bounded path in an obstacle free
+environment. Dubins [57] has shown that the shortest path
+having curvature bounded by κ between given two points
+p1, p2 and with prescribed tangents θ1, θ2 is a curve consisting
+of at most three segments, each one being either a circular arc
+segment or a straight line. Reeds and Shepp [58] extended
+the method for a car that can move both forwards and
+backwards. Another notable case due to Agraval et al. [72]
+is an O(n2 log n) algorithm for ﬁnding a shortest path with
+bounded curvature inside a convex polygon. Similarly, Bois-
+sonnat and Lazard [73] proposed a polynomial time algorithm
+for ﬁnding an exact curvature-bounded path in environments
+where obstacles have bounded-curvature boundary.
+Since for most problems of interest in autonomous driving,
+exact algorithms with practical computational complexity are
+unavailable [70], one has to resort to more general, numerical
+solution methods. These methods generally do not ﬁnd an
+exact solution, but attempt to ﬁnd a satisfactory solution or
+a sequence of feasible solutions that converge to the optimal
+solution. The utility and performance of these approaches are
+typically quantiﬁed by the class of problems for which they
+are applicable as well as their guarantees for converging to
+an optimal solution. The numerical methods for path planning
+can be broadly divided in three main categories:
+Variational methods represent the path as a function
+parametrized by a ﬁnite-dimensional vector and the optimal
+path is sought by optimizing over the vector parameter using
+non-linear continuous optimization techniques. These methods
+are attractive for their rapid convergence to locally optimal
+solutions; however, they typically lack the ability to ﬁnd
+globally optimal solutions unless an appropriate initial guess
+in provided. For a detailed discussion on variational methods,
+see Section IV-C.
+Graph-search methods discretize the conﬁguration space of
+the vehicle as a graph, where the vertices represent a ﬁnite
+collection of vehicle conﬁgurations and the edges represent
+transitions between vertices. The desired path is found by
+performing a search for a minimum-cost path in such a graph.
+Graph search methods are not prone to getting stuck in local
+minima, however, they are limited to optimize only over a
+ﬁnite set of paths, namely those that can be constructed from
+the atomic motion primitives in the graph. For a detailed
+discussion about graph search methods, see Section IV-D.
+Incremental search methods sample the conﬁguration space
+and incrementally build a reachability graph (oftentimes a tree)
+that maintains a discrete set of reachable conﬁgurations and
+feasible transitions between them. Once the graph is large
+enough so that at least one node is in the goal region, the
+desired path is obtained by tracing the edges that lead to that
+node from the start conﬁguration. In contrast to more basic
+graph search methods, sampling-based methods incrementally
+
+9
+increase the size of the graph until a satisfactory solution
+is found within the graph. For a detailed discussion about
+incremental search methods, see Section IV-E.
+Clearly, it is possible to exploit the advantages of each
+of these methods by combining them. For example, one can
+use a coarse graph search to obtain an initial guess for the
+variational method as reported in [74] and [75]. A comparison
+of key properties of select path planning methods is given in
+Table I. In the remainder of this section, we will discuss the
+path planning algorithms and their properties in detail.
+B. Trajectory Planning
+The motion planning problems in dynamic environments or
+with dynamic constraints may be more suitably formulated in
+the trajectory planning framework, in which the solution of the
+problem is a trajectory, i.e. a time-parametrized function π(t) :
+[0, T] →X prescribing the evolution of the conﬁguration of
+the vehicle in time.
+Let Π(X, T) denote the set of all continuous functions
+[0, T] →X and xinit ∈X. be the initial conﬁguration
+of the vehicle. The goal region is Xgoal ⊆X. The set of
+all allowed conﬁgurations at time t ∈[0, T] is denoted as
+Xfree(t) and used to encode holonomic constraints such as the
+requirement on the path to avoid collisions with static and,
+possibly, dynamic obstacles. The differential constraints on the
+trajectory are represented by a predicate D(x, x′, x′′, . . .) and
+can be used to enforce dynamic constraints on the trajectory.
+Further, let J(π) :
+Π(X, T) →R be the cost functional.
+Under these assumptions, the optimal version of the trajectory
+planning problem can be very generally stated as:
+Problem IV.2 (Optimal trajectory planning). Given a 6-tuple
+(Xfree, xinit, Xgoal, D, J, T) ﬁnd π∗=
+arg min
+π∈Π(X,T )
+J(π)
+subj. to
+π(0) = xinit and π(T) ∈Xgoal
+π(t) ∈Xfree
+∀t ∈[0, T]
+D(π(t), π′(t), π′′(t), . . .)
+∀t ∈[0, T].
+Complexity: Since trajectory planning in a dynamic en-
+vironment is a generalization of path planning in static en-
+vironments, the problem remains PSPACE-hard. Moreover,
+trajectory planning in dynamic environments has been shown
+to be harder than path planning in the sense that some variants
+of the problem that are tractable in static environments become
+intractable when an analogical problem is considered in a
+dynamic environment. In particular, recall that a shortest path
+for a point robot in a static 2-D polygonal environment can be
+found efﬁciently in polynomial time and contrast it with the re-
+sult of Canny and Reif [76] establishing that ﬁnding velocity-
+bounded collision-free trajectory for a holonomic point robot
+amidst moving polygonal obstacles1 is NP-hard. Similarly,
+while path planning for a robot with a ﬁxed number of degrees
+1In fact, the authors considered an even more constrained 2-D asteroid
+avoidance problem, where the task is to ﬁnd a collision-free trajectory for a
+point robot with a bounded velocity in a 2-D plane with convex polygonal
+obstacles moving with a ﬁxed linear speed.
+of freedom in 3-D polyhedral environments is tractable, Reif
+and Sharir [85] established that trajectory planning for robot
+with 2 degrees of freedom among translating and rotating 3-D
+polyhedral obstacles is PSPACE-hard.
+Tractable exact algorithms are not available for non-trivial
+trajectory planning problems occurring in autonomous driving,
+making the numerical methods a popular choice for the task.
+Trajectory planning problems can be numerically solved using
+some variational methods directly in the time domain or by
+converting the trajectory planning problem to path planning in
+a conﬁguration space with an added time-dimension [86].
+The
+conversion
+from
+a
+trajectory
+planning
+problem
+(X T
+free, xT
+init, XT
+goal, DT , JT , T) to a path planning problem
+(X P
+free, xP
+init, XP
+goal, DP , JP ) is usually done as follows. The
+conﬁguration space where the path planning takes place is
+deﬁned as X P
+:= X T × [0, T]. For any y ∈X P , let
+t(y) ∈[0, T] denote the time component and c(y) ∈X T
+denote the "conﬁguration" component of the point y. A path
+σ(α) :
+[0, 1] →X P can be converted to a trajectory
+π(t) : [0, T] →X T if the time component at start and end
+point of the path is constrained as
+t(σ(0)) = 0
+t(σ(1)) = T
+and the path is monotonically-increasing, which can be en-
+forced by a differential constraint
+t(σ′(α)) > 0
+∀α ∈[0, 1].
+Further, the free conﬁguration space, initial conﬁguration, goal
+region and differential constraints is mapped to their path
+planning counterparts as follows:
+X P
+free
+=
+{(x, t) : x ∈X T
+free(t) ∧t ∈[0, T]}
+xP
+init
+=
+(xT
+init, 0)
+XP
+goal
+=
+{(x, T) : x ∈XT
+goal}
+DP (y, y′, y′′, . . .)
+=
+DT (c(y), c(y′)
+t(y′), c(y′′)
+t(y′′), . . .).
+A solution to such a path planning problem is then found
+using a path planning algorithm that can handle differential
+constraints and converted back to the trajectory form.
+C. Variational Methods
+We will ﬁrst address the trajectory planning problem in
+the framework of non-linear continuous optimization. In this
+context, the problem is often referred to as trajectory opti-
+mization. Within this subsection we will adopt the trajectory
+planning formulation with the understanding that doing so
+does not affect generality since path planning can be formu-
+lated as trajectory optimization over the unit time interval.
+To leverage existing nonlinear optimization methods, it is
+necessary to project the inﬁnite-dimensional function space of
+trajectories to a ﬁnite-dimensional vector space. In addition,
+most nonlinear programming techniques require the trajectory
+optimization problem, as formulated in Problem IV.2, to be
+
+10
+Model assumptions
+Completeness
+Optimality
+Time Complexity
+Anytime
+Geometric Methods
+Visibility graph [33]
+2-D polyg. conf.
+space,
+no diff. constraints
+Yes
+Yes a
+O(n2) [68] b
+No
+Cyl. algebr. decomp. [76]
+No diff. constraints
+Yes
+No
+Exp. in dimension. [65]
+No
+Variational Methods
+Variational methods
+(Sec IV-C)
+Lipschitz-continuous
+Jacobian
+No
+Locally optimal
+O(1/ϵ) [77] k,l
+Yes
+Graph-search Methods
+Road lane graph +
+Dijkstra (Sec IV-D1)
+Arbitrary
+No c
+No d
+O(n + m log m) [78] e,f
+No
+Lattice/tree of motion prim.
++ Dijkstra (Sec IV-E)
+Arbitrary
+No c
+No d
+O(n + m log m) [78] e,f
+No
+PRM [79] g + Dijkstra
+Exact steering
+procedure available
+Probabilistically
+complete [80] ∗
+Asymptotically
+optimal ∗[80]
+O(n2) [80] h,f,∗
+No
+PRM* [80], [81] + Dijkstra
+Exact steering
+procedure available
+Probabilistically
+complete
+[80]–[82] ∗,†
+Asymptotically
+optimal
+[80]–[82] ∗,†
+O(n log n) [80],
+[82] h,f,∗,†
+No
+RRG [80] + Dijkstra
+Exact steering
+procedure available
+Probabilistically
+complete [80] ∗
+Asymptotically
+optimal [80] ∗
+O(n log n) [80] h,f,∗
+Yes
+Incremental Search
+RRT [83]
+Arbitrary
+Probabilistically
+complete [83] i,∗
+Suboptimal [80] ∗
+O(n log n) [80] h,f,∗
+Yes
+RRT* [80]
+Exact steering
+procedure available
+Probabilistically
+complete [80],
+[82] ∗,†
+Asymptotically
+optimal [80],
+[82] ∗,†
+O(n log n) [80],
+[82] h,f,∗,†
+Yes
+SST* [84]
+Lipschitz-continuous
+dynamics
+Probabilistically
+complete [84] †
+Asymptotically
+optimal [84] †
+N/A j
+Yes
+Table I: Comparison of path planning methods. Legend: a: for the shortest path problem; b: n is the number of points deﬁning
+obstacles; c: complete only w.r.t. the set of paths induced by the given graph; d: optimal only w.r.t. the set of paths induced
+by the given graph; e: n and m are the number of edges and vertices in the graph respectively; f: assuming O(1) collision
+checking; g: batch version with ﬁxed-radius connection strategy; h: n is the number of samples/algorithm iterations; i: for
+certain variants; j: not explicitly analyzed; k: ϵ is the required distance from the optimal cost; l: faster rates possible with
+additional assumptions; ∗: shown for systems without differential constraints; †: shown for some class of nonholonomic systems.
+converted into the following form
+arg min
+π∈Π(X,T )
+J(π)
+subj. to
+π(0) = xinit and π(T) ∈Xgoal
+f(π(t), π′(t), . . .) = 0
+∀t ∈[0, T]
+g(π(t), π′(t), . . .) ≤0
+∀t ∈[0, T],
+where the holonomic and differential constraints are repre-
+sented as a system of equality and inequality constraints.
+In some applications the constrained optimization problem
+is relaxed to an unconstrained one using penalty or barrier
+functions. In both cases, the constraints are replaced by an
+augmented cost functional. With the penalty method, the cost
+functional takes the form
+˜J(π) = J(π) + 1
+ε
+Z T
+0
+h
+∥f(π, π′, . . .)∥2+
+∥max(0, g(π, π′, . . .))∥2i
+dt .
+Similarly, barrier functions can be used in place of inequality
+constraints. The augmented cost functional in this case takes
+the form
+˜J(π) = J(π) + ε
+Z T
+0
+h(π(t))dt ,
+where the barrier function satisﬁes g(π) < 0 ⇒h(π) < ∞,
+g(π) ≥0 ⇒h(π) = ∞, and limg(π)→0 {h(π)} = ∞.
+The intuition behind both of the augmented cost functionals
+is that, by making ε small, minima in cost will be close
+to minima of the original cost functional. An advantage of
+barrier functions is that local minima remain feasible, but
+must be initialized with a feasible solution to have ﬁnite
+augmented cost. Penalty methods on the other hand can be
+initialized with any trajectory and optimized to a local minima.
+However, local minima may violate the problem constraints.
+A variational formulation using barrier functions is proposed
+in [60] where a change of coordinates is used to convert the
+constraint that the vehicle remain on the road into a linear
+constraint. A logarithmic barrier is used with a Newton-like
+method in a similar fashion to interior point methods. The
+approach effectively computes minimum time trajectories for
+a detailed vehicle model over a segment of roadway.
+
+11
+Next, two subclasses of variational methods are discussed:
+Direct and indirect methods.
+Direct Methods: A general principle behind direct varia-
+tional methods is to restrict the approximate solution to a
+ﬁnite-dimensional subspace of Π(X, T). To this end, it is
+usually assumed that
+π(t) ≈˜π(t) =
+N
+X
+i=1
+πiφi(t),
+where πi is a coefﬁcient from R, and φi(t) are basis functions
+of the chosen subspace. A number of numerical approximation
+schemes have proven useful for representing the trajectory
+optimization problem as a nonlinear program. We mention
+here the two most common schemes: Numerical integrators
+with collocation and pseudospectral methods.
+1) Numerical Integrators with Collocation: With collo-
+cation, it is required that the approximate trajectory satisﬁes
+the constraints in a set of discrete points {tj}M
+j=1. This
+requirement results in two systems of discrete constraints: A
+system of nonlinear equations which approximates the system
+dynamics
+f(˜π(tj), ˜π′(tj)) = 0
+∀j = 1, . . . , M
+and a system of nonlinear inequalities which approximates the
+state constraints placed on the trajectory
+g(˜π(tj), ˜π′(tj)) ≤0
+∀j = 1, . . . , M .
+Numerical integration techniques are used to approximate
+the trajectory between the collocation points. For example,
+a piecewise linear basis
+φi(t) =
+
+
+
+(t −ti−1)/(ti −ti−1)
+if t ∈[ti−1 , ti]
+(ti+1 −t)/(ti+1 −ti)
+if t ∈[ti , ti+1]
+0
+otherwise
+together with collocation gives rise to the Euler integration
+method. Higher order polynomials result in the Runge-Kutta
+family of integration methods. Formulating the nonlinear pro-
+gram with collocation and Euler’s method or one of the Runge-
+Kutta methods is more straightforward than some other meth-
+ods making it a popular choice. An experimental system which
+successfully uses Euler’s method for numerical approximation
+of the trajectory is presented in [14].
+In contrast to Euler’s method, the Adams approximation, is
+investigated in [87] for optimizing the trajectory for a detailed
+vehicle model and is shown to provide improved numerical
+accuracy and convergence rates.
+2) Pseudospectral Methods: Numerical integration tech-
+niques utilize a discretization of the time interval with an inter-
+polating function between collocation points. Pseudospectral
+approximation schemes build on this technique by additionally
+representing the interpolating function with a basis. Typical
+basis functions interpolating between collocation points are
+ﬁnite subsets of the Legendre or Chebyshev polynomials.
+These methods typically have improved convergence rates
+over basic collocation methods, which is especially true when
+adaptive methods for selecting collocation points and basis
+functions are used as in [88].
+Indirect Methods: Pontryagin’s minimum principle [89],
+is a celebrated result from optimal control which provides
+optimality conditions of a solution to Problem IV.2. Indirect
+methods, as the name suggests, solve the problem by ﬁnding
+solutions satisfying these optimality conditions. These opti-
+mality conditions are described as an augmented system of
+ordinary differential equations (ODEs) governing the states
+and a set of co-states. However, this system of ODEs results
+in a two point boundary value problem and can be difﬁcult
+to solve numerically. One technique is to vary the free initial
+conditions of the problem and integrate the system forward
+in search of the initial conditions which leads to the desired
+terminal states. This method is known as the shooting method,
+and a version of this approach has been applied to planning
+parking maneuvers in [90]. The advantage of indirect methods,
+as in the case of the shooting method, is the reduction in
+dimensionality of the optimization problem to the dimension
+of the state space.
+The topic of variational approaches is very extensive and
+hence, the above is only a brief description of select ap-
+proaches. See [91], [92] for dedicated surveys on this topic.
+D. Graph Search Methods
+Although useful in many contexts, the applicability of vari-
+ational methods is limited by their convergence to only local
+minima. In this section, we will discuss the class of methods
+that attempts to mitigate the problem by performing global
+search in the discretized version of the path space. These so-
+called graph search methods discretize the conﬁguration space
+X of the vehicle and represent it in the form of a graph and
+then search for a minimum cost path on such a graph.
+In this approach, the conﬁguration space is represented as a
+graph G = (V, E), where V ⊂X is a discrete set of selected
+conﬁgurations called vertices and E = {(oi, di, σi)} is the set
+of edges, where oi ∈V represents the origin of the edge,
+di represents the destination of the edge and σi represents the
+path segments connecting oi and di. It is assumed that the path
+segment σi connects the two vertices: σi(0) = oi and σi(1) =
+di. Further, it is assumed that the initial conﬁguration xinit is
+a vertex of the graph. The edges are constructed in such a way
+that the path segments associated with them lie completely in
+Xfree and satisfy differential constraints. As a result, any path
+on the graph can be converted to a feasible path for the vehicle
+by concatenating the path segments associated with edges of
+the path through the graph.
+There is a number of strategies for constructing a graph
+discretizing the free conﬁguration space of a vehicle. In the
+following subsections, we discuss three common strategies:
+Hand-crafted lane graphs, graphs derived from geometric
+representations and graphs constructed by either control or
+conﬁguration sampling.
+1) Lane Graph: When the path planning problem involves
+driving on a structured road network, a sufﬁcient graph dis-
+cretization may consist of edges representing the path that
+the car should follow within each lane and paths that traverse
+intersections.
+Road lane graphs are often partly algorithmically generated
+
+12
+from higher-level street network maps and partly human
+edited. An example of such a graph is in Figure IV.1.
+Figure IV.1: Hand-crafted graph representing desired driving
+paths under normal circumstances.
+Although most of the time it is sufﬁcient for the autonomous
+vehicle to follow the paths encoded in the road lane graph,
+occasionally it must be able to navigate around obstacles that
+were not considered when the road network graph was de-
+signed or in environments not covered by the graph. Consider
+for example a faulty vehicle blocking the lane that the vehicle
+plans to traverse – in such a situation a more general motion
+planning approach must be used to ﬁnd a collision-free path
+around the detected obstacle.
+The general path planning approaches can be broadly di-
+vided into two categories based on how they represent the
+obstacles in the environment. So-called geometric or combi-
+natorial methods work with geometric representations of the
+obstacles, where in practice the obstacles are most commonly
+described using polygons or polyhedra. On the other hand, so-
+called sampling-based methods abstract away from how the
+obstacles are internally represented and only assumes access
+to a function that determines if any given path segment is in
+collision with any of the obstacles.
+2) Geometric Methods: In this section, we will focus on
+path planning methods that work with geometric representa-
+tions of obstacles. We will ﬁrst concentrate on path planning
+without differential constraints because for this formulation,
+efﬁcient exact path planning algorithms exist. Although not
+being able to enforce differential constraints is limiting for
+path planning for traditionally-steered cars because the con-
+straint on minimum turn radius cannot be accounted for, these
+methods can be useful for obtaining the lower- and upper-
+bounds2 on the length of a curvature-constrained path and for
+path planning for more exotic car constructions that can turn
+on the spot.
+In path planning, the term roadmap is used to describe a
+graph discretization of Xfree that describes well the connectiv-
+ity of the free conﬁguration space and has the property that any
+point in Xfree is trivially reachable from some vertices of the
+roadmap. When the set Xfree can be described geometrically
+2Lower bound is the length of the path without curvature constraint, upper
+bound is the length of a path for a large robot that serves as an envelope
+within which the car can turn in any direction.
+using a linear or semi-algebraic model, different types of
+roadmaps for Xfree can be algorithmically constructed and
+subsequently used to obtain complete path planning algo-
+rithms. Most notably, for Xfree ⊆R2 and polygonal models
+of the conﬁguration space, several efﬁcient algorithms for
+constructing such roadmaps exists such as the vertical cell
+decomposition [93], generalized Voronoi diagrams [94], [95],
+and visibility graphs [33], [96]. For higher dimensional conﬁg-
+uration spaces described by a general semi-algebraic model,
+the technique known as cylindrical algebraic decomposition
+can be used to construct a roadmap in the conﬁguration
+space [47], [97] leading to complete algorithms for a very
+general class of path planning problems. The fastest of this
+class is an algorithm developed by Canny [65] that has (single)
+exponential time complexity in the dimension of the conﬁg-
+uration space. The result is however mostly of a theoretical
+nature without any known implementation to date.
+Due to its relevance to path planning for car-like vehicles,
+a number of results also exist for the problem of path plan-
+ning with a constraint on maximum curvature. Backer and
+Kirkpatrick [98] provide an algorithm for constructing a path
+with bounded curvature that is polynomial in the number of
+features of the domain, the precision of the input and the
+number of segments on the simplest obstacle-free Dubins path
+connecting the speciﬁed conﬁgurations. Since the problem of
+ﬁnding a shortest path with bounded curvature amidst polyg-
+onal obstacles is NP-hard, it is not surprising that no exact
+polynomial solution algorithm is known. An approximation
+algorithm for ﬁnding shortest curvature-bounded path amidst
+polygonal obstacles has been ﬁrst proposed by Jacobs and
+Canny [99] and later improved by Wang and Agarwal [100]
+with time complexity O( n2
+ϵ4 log n), where n is the number of
+vertices of the obstacles and ϵ is the approximation factor.
+For the special case of so-called moderate obstacles that are
+characterized by smooth boundary with curvature bounded
+by κ, an exact polynomial algorithm for ﬁnding a path with
+curvature bounded by at most κ have been developed by
+Boissonnat and Lazard [73].
+3) Sampling-based Methods:
+In autonomous driving, a
+geometric model of Xfree is usually not directly available
+and it would be too costly to construct from raw sensoric
+data. Moreover, the requirements on the resulting path are
+often far more complicated than a simple maximum curvature
+constraint. This may explain the popularity of sampling-based
+techniques that do not enforce a speciﬁc representation of
+the free conﬁguration set and dynamic constraints. Instead of
+reasoning over a geometric representation, the sampling based
+methods explore the reachability of the free conﬁguration
+space using steering and collision checking routines:
+The steering function steer(x, y) returns a path segment
+starting from conﬁguration x going towards conﬁguration
+y (but not necessarily reaching y) ensuring the differential
+constraints are satisﬁed, i.e., the resulting motion is feasible
+for the vehicle model in consideration. The exact manner in
+which the steering function is implemented depends on the
+context in which it is used. Some typical choices encountered
+in the literature are:
+1) Random steering: The function returns a path that results
+
+13
+from applying a random control input through a forward
+model of the vehicle from state x for either a ﬁxed or
+variable time step [101].
+2) Heuristic steering: The function returns a path that
+results from applying control that is heuristically con-
+structed to guide the system from x towards y [102]–
+[104]. This includes selecting the maneuver from a pre-
+designed discrete set (library) of maneuvers.
+3) Exact steering: The function returns a feasible path that
+guides the system from x to y. Such a path corresponds
+to a solution of a 2-point boundary value problem. For
+some systems and cost functionals, such a path can be
+obtained analytically, e.g., a straight line for holonomic
+systems, a Dubins curve for forward-moving unicycle
+[57], or a Reeds-Shepp curve for bi-directional unicycle
+[58]. An analytic solution also exists for differentially
+ﬂat systems [61], while for more complicated models,
+the exact steering can be obtained by solving the two-
+point boundary value problem.
+4) Optimal exact steering: The function returns an opti-
+mal exact steering path with respect to the given cost
+functional. In fact, the straight line, the Dubins curve,
+and the Reeds-Shepp curve from the previous point are
+optimal solutions assuming that the cost functional is
+the arc-length of the path [57], [58].
+The collision checking function col-free(σ) returns true
+if path segment σ lies entirely in Xfree and it is used to
+ensure that the resulting path does not collide with any of
+the obstacles.
+Having access to steering and collision checking functions,
+the major challenge becomes how to construct a discretization
+that approximates well the connectivity of Xfree without hav-
+ing access to an explicit model of its geometry. We will now
+review sampling-based discretization strategies from literature.
+A straightforward approach is to choose a set of motion
+primitives (ﬁxed maneuvers) and generate the search graph by
+recursively applying them starting from the vehicle’s initial
+conﬁguration xinit, e.g., using the method in Algorithm 1.
+For path planning without differential constraints, the motion
+primitives can be simply a set of straight lines with different
+directions and lengths. For a car-like vehicle, such motion
+primitive might by a set of arcs representing the path the car
+would follow with different values of steering. A variety of
+techniques can be used for generating motion primitives for
+driverless vehicles. A simple approach is to sample a number
+of control inputs and to simulate forwards in time using a
+vehicle model to obtain feasible motions. In the interest of
+having continuous curvature paths, clothoid segments are also
+sometimes used [105]. The motion primitives can be also
+obtained by recording the motion of a vehicle driven by an
+expert driver [106].
+Observe that the recursive application of motion primitives
+may generate a tree graph in which in the worst-case no two
+edges lead to the same conﬁguration. There are, however, sets
+of motion primitives, referred to as lattice-generating, that re-
+sult in regular graphs resembling a lattice. See Figure IV.2a for
+an illustration. The advantage of lattice generating primitives
+is that the vertices of the search graph cover the conﬁguration
+space uniformly, while trees in general may have a high
+density of vertices around the root vertex. Pivtoraiko et al. use
+the term "state lattice" to describe such graphs in [107] and
+point out that a set of lattice-generating motion primitives for
+a system in hand can be obtained by ﬁrst generating regularly
+spaced conﬁgurations around origin and then connecting the
+origin to such conﬁgurations by a path that represents the
+solution to the two-point boundary value problem between the
+two conﬁgurations.
+Algorithm 1: Recursive Roadmap Construction
+V ←{xinit}; E ←∅; Q ←new queue(xinit);
+while Q̸ = ∅do
+x ←pop element from Q;
+M ←generate a set of path segments by applying
+motion primitives from conﬁguration x;
+for σ ∈M do
+if col-free(σ) then
+E ←E ∪{(x, σ(1), σ)};
+if σ(1)̸ ∈V then
+add σ(1) to Q;
+V ←V ∪{σ(1)};
+return (V,E)
+An effect that is similar to recursive application of lattice-
+generating motion primitives from the initial conﬁguration can
+be achieved by generating a discrete set of samples covering
+the (free) conﬁguration space and connecting them by feasible
+path segments obtained using an exact steering procedure.
+Most sampling-based roadmap construction approaches fol-
+low the algorithmic scheme shown in Algorithm 2, but dif-
+fer in the implementation of the sample-points(X, n)
+and neighbors(x, V ) routines. The function sample-
+points(X, n) represents the strategy for selecting n
+points from the conﬁguration space X, while the function
+neighbors(x, V ) represents the strategy for selecting a set
+of neighboring vertices N ⊆V for a vertex x, which the
+algorithm will attempt to connect to x by a path segment
+using an exact steering function, steerexact(x, y).
+Algorithm 2: Sampling-based Roadmap Construction
+V ←{xinit} ∪sample-points(X, n); E ←∅;
+for x ∈V do
+for y ∈neighbors(x, V ) do
+σ ←steerexact(x, y);
+if col-free(σ) then
+E ←E ∪{(x, y, σ)};
+return (V,E)
+The two most common implementations of sample-
+points(X, n) function are 1) return n points arranged in a
+regular grid and 2) return n randomly sampled points from X.
+While random sampling has an advantage of being generally
+applicable and easy to implement, so-called Sukharev grids
+
+14
+(a) Lattice graph
+(b) Non-lattice graph
+Figure IV.2: Lattice and non-lattice graph, both with 5000 edges. (a) The graph resulting from recursive application of 90◦left
+circular arc, 90◦right circular arc, and a straight line. (b) The graph resulting from recursive application of 89◦left circular
+arc, 89◦right circular arc, and a straight line. The recursive application of those primitives does form a tree instead of a
+lattice with many branches looping in the neighborhood of the origin. As a consequence, the area covered by the right graph
+is smaller.
+have been shown to achieve optimal L∞-dispersion in unit
+hypercubes, i.e. they minimize the radius of the largest empty
+ball with no sample point inside. For in depth discussion
+of relative merits of random and deterministic sampling in
+the context of sampling-based path planning, we refer the
+reader to [108]. The two most commonly used strategies for
+implementing neighbors(x, V ) function are to take 1) the
+set of k-nearest neighbors to x or 2) the set of points lying
+within the ball centered at x with radius r.
+In particular, samples arranged deterministically in a d-
+dimensional grid with the neighborhood taken as 4 or 8 nearest
+neighbors in 2-D or the analogous pattern in higher dimensions
+represents a straightforward deterministic discretization of the
+free conﬁguration space. This is in part because they arise
+naturally from widely used bitmap representations of free and
+occupied regions of robots’ conﬁguration space [109].
+Kavraki et al. [110] advocate the use of random sampling
+within the framework of Probabilistic Roadmaps (PRM) in
+order to construct roadmaps in high-dimensional conﬁguration
+spaces, because unlike grids, they can be naturally run in an
+anytime fashion. The batch version of PRM [79] follows the
+scheme in Algorithm 2 with random sampling and neighbors
+selected within a ball with ﬁxed radius r. Due to the general
+formulation of PRMs, they have been used for path planning
+for a variety of systems, including systems with differential
+constraints. However, the theoretical analyses of the algorithm
+have primarily been focused on the performance of the algo-
+rithm for systems without differential constraints, i.e. when
+a straight line is used to connect two conﬁgurations. Under
+such an assumption, PRMs have been shown in [80] to be
+probabilistically complete and asymptotically optimal. That is,
+the probability that the resulting graph contains a valid solution
+(if it exists) converges to one with increasing size of the graph
+and the cost of the shortest path in the graph converges to the
+optimal cost. Karaman and Frazzoli [80] proposed an adapta-
+tion of batch PRM, called PRM*, that instead only connects
+neighboring vertices in a ball with a logarithmically shrinking
+radius with increasing number of samples to maintain both
+asymptotic optimality and computational efﬁciency.
+In the same paper, the authors propose Rapidly-exploring
+Random Graphs (RRG*), which is an incremental discretiza-
+tion strategy that can be terminated at any time while main-
+taining the asymptotic optimality property. Recently, Fast
+Marching Tree (FMT*) [111] has been proposed as an asymp-
+totically optimal alternative to PRM*. The algorithm combines
+discretization and search into one process by performing a lazy
+dynamic programming recursion over a set of sampled vertices
+that can be subsequently used to quickly determine the path
+from initial conﬁguration to the goal region.
+Recently, the theoretical analysis has been extended also
+to differentially constrained systems. Schmerling et al. [81]
+propose differential versions of PRM* and FMT* and prove
+asymptotic optimality of the algorithms for driftless control-
+afﬁne dynamical systems, a class that includes models of non-
+slipping wheeled vehicles.
+4) Graph Search Strategies: In the previous section, we
+have discussed techniques for the discretization of the free
+conﬁguration space in the form of a graph. To obtain an actual
+optimal path in such a discretization, one must employ one of
+the graph search algorithms. In this section, we are going to
+review the graph search algorithms that are relevant for path
+planning.
+The most widely recognized algorithm for ﬁnding shortest
+paths in a graph is probably the Dijkstra’s algorithm [32].
+The algorithm performs the best ﬁrst search to build a tree
+representing shortest paths from a given source vertex to all
+other vertices in the graph. When only a path to a single
+vertex is required, a heuristic can be used to guide the search
+process. The most prominent heuristic search algorithm is A*
+developed by Hart, Nilsson and Raphael [112]. If the provided
+
+15
+heuristic function is admissible (i.e., it never overestimates
+the cost-to-go), A* has been shown to be optimally efﬁcient
+and is guaranteed to return an optimal solution. For many
+problems, a bounded suboptimal solution can be obtained with
+less computational effort using Weighted A* [113], which
+corresponds to simply multiplying the heuristic by a constant
+factor ϵ > 1. It can be shown that the solution path returned
+by A* with such an inﬂated heuristics is guaranteed to be no
+worse than (1 + ϵ) times the cost of an optimal path.
+Often, the shortest path from the vehicle’s current conﬁgu-
+ration to the goal region is sought repeatedly every time the
+model of the world is updated using sensory data. Since each
+such update usually affects only a minor part of the graph, it
+might be wasteful to run the search every time completely from
+scratch. The family of real-time replanning search algorithms
+such as D* [114], Focussed D* [115] and D* Lite [116] has
+been designed to efﬁciently recompute the shortest path every
+time the underlying graph changes, while making use of the
+information from previous search efforts.
+Anytime search algorithms attempt to provide a ﬁrst subop-
+timal path quickly and continually improve the solution with
+more computational time. Anytime A* [117] uses a weighted
+heuristic to ﬁnd the ﬁrst solution and achieves the anytime
+behavior by continuing the search with the cost of the ﬁrst
+path as an upper bound and the admissible heuristic as a
+lower bound, whereas Anytime Repairing A* (ARA*) [118]
+performs a series of searches with inﬂated heuristic with
+decreasing weight and reuses information from previous itera-
+tions. On the other hand, Anytime Dynamic A* (ADA*) [119]
+combines ideas behind D* Lite and ARA* to produce an
+anytime search algorithm for real-time replanning in dynamic
+environments.
+A clear limitation of algorithms that search for a path on
+a graph discretization of the conﬁguration space is that the
+resulting optimal path on such graph may be signiﬁcantly
+longer than the true shortest path in the conﬁguration space.
+Any-angle path planning algorithms [120]–[122] are designed
+to operate on grids, or more generally on graphs representing
+cell decomposition of the free conﬁguration space, and try to
+mitigate this shortcoming by considering "shortcuts" between
+the vertices on the graph during search. In addition, Field
+D* introduces linear-interpolation to the search procedure to
+produce smooth paths [123].
+E. Incremental Search Techniques
+A disadvantage of the techniques that search over a ﬁxed
+graph discretization is that they search only over the set of
+paths that can be constructed from primitives in the graph
+discretization. Therefore, these techniques may fail to return
+a feasible path or return a noticeably suboptimal one.
+The incremental feasible motion planners strive to address
+this problem and provide a feasible path to any motion
+planning problem instance, if one exists, given enough com-
+putation time. Typically, these methods incrementally build
+increasingly ﬁner discretization of the conﬁguration space
+while concurrently attempting to determine if a path from
+initial conﬁguration to the goal region exists in the discretiza-
+tion at each step. If the instance is “easy”, the solution is
+provided quickly, but in general the computation time can be
+unbounded. Similarly, incremental optimal motion planning
+approaches on top of ﬁnding a feasible path fast attempt to
+provide a sequence of solutions of increasing quality that
+converges to an optimal path.
+The term probabilistically complete is used in the literature
+to describe algorithms that ﬁnd a solution, if one exists,
+with probability approaching one with increasing computation
+time. Note that probabilistically complete algorithm may not
+terminate if the solution does not exist. Similarly, the term
+asymptotically optimal is used for algorithms that converge to
+optimal solution with probability one.
+A naïve strategy for obtaining completeness and optimality
+in the limit is to solve a sequence of path planning problems
+on a ﬁxed discretization of the conﬁguration space, each time
+with a higher resolution of the discretization. One disadvan-
+tage of this approach is that the path planning processes
+on individual resolution levels are independent without any
+information reuse. Moreover, it is not obvious how fast the
+resolution of the discretization should be increased before a
+new graph search is initiated, i.e., if it is more appropriate
+to add a single new conﬁguration, double the number of
+conﬁguration, or double the number of discrete values along
+each conﬁguration space dimension. To overcome such issues,
+incremental motion planning methods interweave incremental
+discretization of conﬁguration space with search for a path
+within one integrated process.
+An important class of methods for incremental path plan-
+ning is based on the idea of incrementally growing a tree
+rooted at the initial conﬁguration of the vehicle outwards to
+explore the reachable conﬁguration space. The "exploratory"
+behavior is achieved by iteratively selecting a random vertex
+from the tree and by expanding the selected vertex by applying
+the steering function from it. Once the tree grows large enough
+to reach the goal region, the resulting path is recovered by trac-
+ing the links from the vertex in the goal region backwards to
+the initial conﬁguration. The general algorithmic scheme of an
+incremental tree-based algorithm is described in Algorithm 3.
+Algorithm 3: Incremental Tree-based Algorithm
+V ←{xinit} ∪sample-points(X, n); E ←∅;
+while not interrupted do
+xselected ←select(V );
+σ ←extend(xselected, V );
+if col-free(σ) then
+xnew = σ(1);
+V ←V ∪{xnew}; E ←E∪{(xselected, xnew, σ)};
+return (V,E)
+One of the ﬁrst randomized tree-based incremental planners
+was the expansive spaces tree (EST) planner proposed by Hsu
+et al. [124]. The algorithm selects a vertex for expansion,
+xselected, randomly from V with a probability that is inversely
+proportional to the number of vertices in its neighborhood,
+which promotes growth towards unexplored regions. During
+expansion, the algorithm samples a new vertex y within a
+
+16
+neighborhood of a ﬁxed radius around xselected, and use the
+same technique for biasing the sampling procedure to select a
+vertex from the region that is relatively less explored. Then
+it returns a straight line path between xselected and y. A
+generalization of the idea for planning with kinodynamic
+constraints in dynamic environments was introduced in [125],
+where the capabilities of the algorithm were demonstrated
+on different non-holonomic robotic systems and the authors
+use an idealized version of the algorithm to establish that
+the probability of failure to ﬁnd a feasible path depends on
+the expansiveness property of the state space and decays
+exponentially with the number of samples.
+Rapidly-exploring Random Trees (RRT) [101] have been
+proposed by La Valle as an efﬁcient method for ﬁnding feasi-
+ble trajectories for high-dimensional non-holonomic systems.
+The rapid exploration is achieved by taking a random sample
+xrnd from the free conﬁguration space and extending the tree
+in the direction of the random sample. In RRT, the vertex
+selection function select(V) returns the nearest neighbor
+to the random sample xrnd according to the given distance
+metric between the two conﬁgurations. The extension function
+extend() then generates a path in the conﬁguration space
+by applying a control for a ﬁxed time step that minimizes
+the distance to xrnd. Under certain simplifying assumptions
+(random steering is used for extension), the RRT algorithm
+has been shown to be probabilistic complete [83]. We remark
+that the result on probabilistic completeness does not readily
+generalize to many practically implemented versions of RRT
+that often use heuristic steering. In fact, it has been recently
+shown in [126] that RRT using heuristic steering with ﬁxed
+time step is not probabilistically complete.
+Moreover, Karaman and Frazzoli [127] demonstrated that
+the RRT converges to a suboptimal solution with probability
+one and designed an asymptotically optimal adaptation of the
+RRT algorithm, called RRT*. As shown in Algorithm 4, the
+RRT* at every iteration considers a set of vertices that lie in
+the neighborhood of newly added vertex xnew and a) connects
+xnew to the vertex in the neighborhood that minimizes the
+cost of path from xinit to xnew and b) rewires any vertex in
+the neighborhood to xnew if that results in a lower cost path
+from xinit to that vertex. An important characteristic of the
+algorithm is that the neighborhood region is deﬁned as the
+ball centered at xnew with radius being function of the size
+of the tree: r = γ dp
+(log n)/n, where n is the number of
+vertices in the tree, d is the dimension of the conﬁguration
+space, and γ is an instance-dependent constant. It is shown
+that for such a function, the expected number of vertices in the
+ball is logarithmic in the size of the tree, which is necessary to
+ensure that the algorithm almost surely converges to an optimal
+path while maintaining the same asymptotic complexity as the
+suboptimal RRT.
+Sufﬁcient conditions for asymptotic optimality of RRT* un-
+der differential constraints are stated in [80] and demonstrated
+to be satisﬁable for Dubins vehicle and double integrator
+systems. In a later work, the authors further show in the context
+of small-time locally attainable systems that the algorithm can
+be adapted to maintain not only asymptotic optimality, but
+also computational efﬁciency [82]. Other related works focus
+Algorithm 4: RRT* Algorithm. The cost-to-come to ver-
+tex x is denoted as c(x), the cost of path segment σ
+is denoted as c(σ) and the parent vertex of vertex x is
+denoted by p(x).
+V ←{xinit}; E ←∅;
+while not interrupted do
+xselected ←select(V );
+σ ←extend(xselected, V );
+if col-free(σ) then
+xnew = σ(1) ;
+V ←V ∪{xnew};
+// consider all vertices in ball
+of radius r around xnew
+r = γ dq
+log |V |
+|V | ;
+Xnear ←{x ∈V \ {xnew} : d(xnew, x} < r};
+// find best parent
+xpar ←arg minx∈Xnear c(x) +
+c(connect(x, xnew)) subj. to
+col-free(steerexact(x, xnew));
+σ′ = steerexact(xpar, xnew);
+E ←E ∪{(xpar, xnew, σ′)};
+// rewire vertices in neighborhood
+for x ∈Xnear do
+σ′ ←steerexact(xnew, x);
+if c(xnew) + c(σ′) < c(x) and
+col-free(σ′) then
+E ←(E \ {(p(x), x, σ′′)}) ∪
+{(xnew, x, σ′)}, where σ′′ is the path
+from p(x) to x;
+return (V,E)
+on deriving distance and steering functions for non-holonomic
+systems by locally linearizing the system dynamics [128] or
+by deriving a closed-form solution for systems with linear
+dynamics [129]. On the other hand, RRTX is an algorithm that
+extends RRT∗to allow for real-time incremental replanning
+when the obstacle region changes, e.g., in the face of new
+data from sensors [130].
+New developments in the ﬁeld of sampling-based algorithms
+include algorithms that achieve asymptotic optimality without
+having access to an exact steering procedure. In particular,
+Li at al. [84] recently proposed the Stable Sparse Tree (SST)
+method for asymptotically (near-)optimal path planning, which
+is based on building a tree of randomly sampled controls
+propagated through a forward model of the dynamics of the
+system such that the locally suboptimal branches are pruned
+out to ensure that the tree remains sparse.
+F. Practical Deployments
+Three categories of path planning methodologies have been
+discussed for self-driving vehicles: variational methods, graph-
+
+17
+searched methods and incremental tree-based methods. The
+actual ﬁeld-deployed algorithms on self-driving systems come
+from all the categories described above. For example, even
+among the ﬁrst four successful participants of DARPA Ur-
+ban Challenge, the approaches used for motion planning
+signiﬁcantly differed. The winner of the challenge, CMU’s
+Boss vehicle used variational techniques for local trajectory
+generation in structured environments and a lattice graph
+in 4-dimensional conﬁguration space (consisting of position,
+orientation, and velocity) together with Anytime D* to ﬁnd
+a collision-free paths in parking lots [131]. The runner-up
+vehicle developed by Stanford’s team reportedly used a search
+strategy coined Hybrid A* that during search, lazily constructs
+a tree of motion primitives by recursively applying a ﬁnite set
+of maneuvers. The search is guided by a carefully designed
+heuristic and the sparsity of the tree is ensured by only keeping
+a single node within a given region of the conﬁguration
+space [132]. Similarly, the vehicle arriving third developed by
+the VictorTango team from Virginia Tech constructs a graph
+discretization of possible maneuvers and searches the graph
+with the A* algorithm [133]. Finally, the vehicle developed
+by MIT used a variant of RRT algorithm called closed-loop
+RRT with biased sampling [134].
+V. VEHICLE CONTROL
+Solutions to Problem IV.1 or IV.2 are provided by the
+motion planning process. The role of the feedback controller
+is to stabilize to the reference path or trajectory in the presence
+of modeling error and other forms of uncertainty. Depending
+on the reference provided by the motion planner, the control
+objective may be path stabilization or trajectory stabilization.
+More formally, the path stabilization problem is stated as
+follows:
+Problem V.1. (Path stabilization) Given a controlled differen-
+tial equation ˙x = f(x, u), reference path xref : R →Rn, and
+velocity vref : R →R, ﬁnd a feedback law, u(x), such that
+solutions to ˙x = f(x, u(x)) satisfy the following: ∀ε > 0 and
+t1 < t2, there exists a δ > 0 and a differentiable s : R →R
+such that
+1)
+∥x(t1) −xref(s(t1))∥≤δ
+⇒∥x(t2) −xref(s(t2))∥≤ε
+2) limt→∞∥x(t) −xref(s(t))∥= 0
+3) limt→∞˙s(t) = vref(s(t)).
+Qualitatively, these conditions are that (1) a small initial
+tracking error will remain small, (2) the tracking error must
+converge to zero, and (3) progress along the reference path
+tends to a nominal rate.
+Many of the proposed vehicle control laws, including sev-
+eral discussed in this section, use a feedback law of the form
+u(x) = f
+
+argmin
+γ
+∥x −xref(γ)∥
+
+,
+(V.1)
+where the feedback is a function of the nearest point on the
+reference path. An important issue with controls of this form
+is that the closed loop vector ﬁeld f(x, u(x)) will not be
+continuous. If the path is self intersecting or not differentiable
+at some point, a discontinuity in which f(x, u(x)) is will
+lie directly on the path. This leads to unpredictable behavior
+if the executed trajectory encounters the discontinuity. This
+discontinuity is illustrated in Figure V.1. A backstepping
+control design which does not use a feedback law of the form
+(V.1) is presented in [135].
+Figure V.1: Visualization of (V.5) for a sample reference path
+shown in black. The color indicates the value of s for each
+point in the plane and illustrates discontinuities in (V.5).
+The trajectory stabilization problem is more straightforward,
+but these controllers are prone to performance limitations
+[136].
+Problem V.2. (Trajectory stabilization) Given a controlled
+differential equation ˙x = f(x, u) and a reference trajectory
+xref(t), ﬁnd π(x) such that solutions to ˙x = f(x, π(x)) satisfy
+the following: ∀ε > 0 and t1 < t2, there exists a δ > 0 such
+that
+1) ∥x(t1) −xref(t1)∥≤δ ⇒∥x(t2) −xref(t2)∥≤ε
+2) limt→∞∥x(t) −xref(t)∥= 0
+In many cases, analyzing the stability of trajectories can
+be reduced to determining the origin’s stability in a time
+varying system. The basic form of Lyapunov’s theorem is only
+applicable to time invariant systems. However, stability theory
+for time varying systems is also well established (e.g. [137,
+Theorem 4.9]).
+Some useful qualiﬁers for various types of stability include:
+• Uniform asymptotic stability for a time varying system
+which asserts that δ in condition 1 of the above problem
+is independent of t1.
+• Exponential stability asserts that the rate of convergence
+is bounded above by an exponential decay.
+A delicate issue that should be noted is that controller spec-
+iﬁcations are usually expressed in terms of the asymptotic
+tracking error as time tends to inﬁnity. In practice, reference
+trajectories are ﬁnite so there should also be consideration for
+the transient response of the system.
+The remainder of this section is devoted to a survey of
+select control designs which are applicable to driverless cars.
+An overview of these controllers is provided in Table II.
+
+18
+Controller
+Model
+Stability
+Time Complexity
+Comments/Assumptions
+Pure Pursuit
+(V-A1)
+Kinematic
+LES⋆to
+ref. path
+O(n)∗
+No path curvature
+Rear wheel
+based feedback
+(V-A2)
+Kinematic
+LES⋆to
+ref. path
+O(n)∗
+C2(Rn) ref. paths
+Front wheel
+based feedback
+(V-A3)
+Kinematic
+LES⋆to
+ref. path
+O(n)∗
+C1(Rn) ref. paths;
+Forward driving only
+Feedback
+linearization
+(V-B2)
+Steering rate
+controlled kinematic
+LES⋆
+to ref. traj.
+O(1)
+C1(Rn) ref. traj.;
+Forward driving only
+Control Lyapunov
+design
+(V-B1)
+Kinematic
+LES⋆to
+ref. traj.
+O(1)
+Stable for constant path
+curvature and velocity
+Linear MPC
+(V-C)
+C1(Rn × Rm)
+model♯
+LES⋆to ref.
+or path
+O
+√
+N ln
+  N
+ε
+†
+Stability depends
+on horizon length
+Nonlinear MPC
+(V-C)
+C1(Rn × Rm)
+model♯
+Not guaranteed
+O( 1
+ε) ‡
+Works well in practice
+Table II: Overview of controllers discussed within this section. Legend: ⋆: local exponential stability (LES); ∗: assuming (V.1)
+is evaluated by a linear search over an n-point discretization of the path or trajectory; †: assuming the use of an interior-point
+method to solve (V.28) with a time horizon of n and solution accuracy of ε; ‡: based on asymptotic convergence rate to local
+minimum of (V.25) using steepest descent. Not guaranteed to return solution or ﬁnd global minimum.; ♯: vector ﬁeld over
+the state space Rn deﬁned by each input in Rm is a continuously differentiable function so that the gradient of the cost or
+linearization about the reference is deﬁned.
+Subsection V-A details a number of effective control strategies
+for path stabilization of the kinematic model, and subsection
+V-B2 discusses trajectory stabilization techniques. Predictive
+control strategies, discussed in subsection V-C, are effective
+for more complex vehicle models and can be applied to path
+and trajectory stabilization.
+A. Path Stabilization for the Kinematic Model
+1) Pure Pursuit: Among the earliest proposed path tracking
+strategies is pure pursuit. The ﬁrst discussion appeared in
+[138], and was elaborated upon in [52], [139]. This strategy
+and its variations (e.g. [140], [141]) have proven to be an
+indispensable tool for vehicle control owing to its simple im-
+plementation and satisfactory performance. Numerous publi-
+cations including two vehicles in the DARPA Grand Challenge
+[8] and three vehicles in the DARPA Urban challenge [9]
+reported using the pure pursuit controller.
+The control law is based on ﬁtting a semi-circle through
+the vehicle’s current conﬁguration to a point on the reference
+path ahead of the vehicle by a distance L called the lookahead
+distance. Figure V.2 illustrates the geometry. The circle is
+deﬁned as passing through the position of the car and the
+point on the path ahead of the car by one lookahead distance
+with the circle tangent to the car’s heading. The curvature of
+the circle is given by
+κ = 2 sin(α)
+L
+.
+(V.2)
+For a vehicle speed vr, the commanded heading rate is
+ω = 2vr sin(α)
+L
+.
+(V.3)
+In the original publication of this controller [138], the angle
+α is computed directly from camera output data. However, α
+Figure V.2: Geometry of the pure pursuit controller. A circle
+(blue) is ﬁt between rear wheel position and the reference path
+(brown) such that the chord length (green) is the look ahead
+distance L and the circle is tangent to the current heading
+direction.
+can be expressed in terms of the inertial coordinate system
+to deﬁne a state feedback control. Consider the conﬁguration
+(xr, yr, θ)T and the points on the path, (xref(s), yref(s)),
+such that ∥(xref(s), yref(s)) −(xr, yr)∥= L. Since there
+is generally more than one such point on the reference, take
+the one with the greatest value of the parameter s to uniquely
+deﬁne a control. Then α is given by
+α = arctan
+ yref −yr
+xref −xr
+
+−θ.
+(V.4)
+Assuming that the path has no curvature and the vehicle speed
+is constant (potentially negative), the pure pursuit controller
+solves Problem V.1. For a ﬁxed nonzero curvature, pure pursuit
+has a small steady state tracking error.
+In the case where the vehicle’s distance to the path is greater
+than L, the controller output is not deﬁned. Another consid-
+eration is that changes in reference path curvature can lead to
+
+19
+the car deviating from the reference trajectory. This may be
+acceptable for driving along a road, but can be problematic for
+tracking parking maneuvers. Lastly, the heading rate command
+ω becomes increasingly sensitive to the feedback angle α as
+the vehicle speed increases. A common ﬁx for this issue is to
+scale L with the vehicle speed.
+2) Rear wheel position based feedback: The next approach
+uses the rear wheel position as an output to stabilize a nominal
+rear wheel path [56]. The controller assigns
+s(t) = argmin
+γ
+∥(xr(t), yr(t)) −(xref(γ), yref(γ))∥.
+(V.5)
+Detailed assumptions on the reference path and a ﬁnite domain
+containing the reference path where (V.5) is a continuous
+function are described in [56]. The unit tangent to the path
+at s(t) is given by
+ˆt =
+
+∂xref
+∂s
+
+s(t) , ∂yref
+∂s
+
+s(t)
+
+
+
+∂xref (s(t))
+∂s
+, ∂yref (s(t))
+∂s
+
+,
+(V.6)
+and the tracking error vector is
+d(t) := (xr(t), yr(t)) −(xref(s(t)), yref(s(t))) .
+(V.7)
+These values are used to compute a transverse error coordinate
+from the path e which is a cross product between the two
+vectors
+e = dxˆty −dyˆtx
+(V.8)
+with the subscript denoting the component indices of the
+vector. The control uses the angle θe between the vehicle’s
+heading vector and the tangent vector to the path.
+θe(t) = θ −arctan2
+∂yref(s(t))
+∂s
+, ∂xref(s(t))
+∂s
+
+.
+(V.9)
+The geometry is illustrated in Figure V.3.
+Figure V.3: Feedback variables for the rear wheel based
+feedback control. θe is the difference between the tangent at
+the nearest point on the path to the rear wheel and the car
+heading. The magnitude of the scalar value e is illustrated in
+red. As illustrated e > 0, and for the case where the car is to
+the left of the path, e < 0.
+A change of coordinates to (s, e, θe) yields
+˙s
+=
+vr cos(θe)
+1−κ(s)e ,
+˙e
+=
+vr sin(θe),
+˙θe
+=
+ω −vrκ(s) cos(θe)
+1−κ(s)e
+,
+(V.10)
+where κ(s) denotes the curvature of the path at s. The
+following heading rate command provides local asymptotic
+convergence to twice continuously differentiable paths:
+ω = vrκ(s) cos(θe)
+1 −κ(s)e
+−g1(e, θe, t)θe −k2vr
+sin(θe)
+θe
+e, (V.11)
+with g1(e, θe, t) > 0, k2 > 0, and vr̸ = 0 which is veriﬁed
+with the Lyapunov function V (e, θe) = e2 + θ2
+e/k2 in [56]
+using the coordinate system (V.10). The requirement that the
+path be twice differentiable comes from the appearance of the
+curvature in the feedback law. An advantage of this control
+law is that stability is unaffected by the sign of vr making it
+suitable for reverse driving.
+Setting g1(vr, θe, t) = kθ|vr| for ke > 0 leads to local
+exponential convergence with a rate independent of the vehicle
+speed so long as vr̸ = 0. The control law in this case is
+ω = vrκ(s) cos(θe)
+1 −κ(s)e
+−(kθ|vr|) θe−
+
+kevr
+sin(θe)
+θe
+
+e. (V.12)
+3) Front wheel position based feedback: This approach was
+proposed and used in Stanford University’s entry to the 2005
+DARPA Grand Challenge [55], [8]. The approach is to take
+the front wheel position as the regulated variable. The control
+uses the variables s(t), e(t), and θe(t) as in the previous
+subsections, with the modiﬁcation that e(t) is computed with
+the front wheel position as opposed to the rear wheel position.
+Taking the time derivative of the transverse error reveals
+˙e = vf sin (θe + δ)
+(V.13)
+The error rate in (V.13) can be directly controlled by the
+steering angle for error rates with magnitude less than vf.
+Solving for the steering angle such that ˙e = −ke drives e(t)
+to zero exponentially fast.
+vf sin (δ + θe)
+=
+−ke
+⇒
+δ
+=
+arcsin(−ke/vf) −θe.
+(V.14)
+The term θe in this case is not interpreted as heading error
+since it will be nonzero even with perfect tracking. It is more
+appropriately interpreted as a combination of a feed-forward
+term of the nominal steering angle to trace out the reference
+path and a heading error term.
+The drawback to this control law is that it is not deﬁned
+when |ke/vf| > 1. The exponential convergence over a ﬁnite
+domain can be relaxed to local exponential convergence with
+the feedback law
+δ = arctan(−ke/vf) −θe,
+(V.15)
+which, to ﬁrst order in e, is identical to the previous equation.
+This is illustrated in Figure V.4.
+Like the control law in (V.14) this controller locally expo-
+nentially stabilizes the car to paths with varying curvature with
+the condition that the path is continuously differentiable. The
+condition on the path arises from the deﬁnition of θe in the
+feedback policy. A drawback to this controller is that it is not
+stable in reverse making it unsuitable for parking.
+
+20
+Figure V.4: Front wheel output based control. The control
+strategy is to point the front wheel towards the path so that the
+component of the front wheel’s velocity normal to the path is
+proportional to the distance to the path. This is achieved locally
+and yields local exponential convergence.
+Comparison of path tracking controllers for kinematic
+models: The advantages of controllers based on the kine-
+matic model with the no-slip constraint on the wheels is
+that they have low computational requirements, are readily
+implemented, and have good performance at moderate speeds.
+Figure V.5 provides a qualitative comparison of the path
+stabilizing controllers of this sections based on, and simulated
+with, (III.3) for a lane change maneuver. In the simulation
+of the front wheel output based controller, the rear wheel
+reference path is replaced by the front wheel reference path
+satisfying
+xref(s) 7→xref(s) + l cos(θ),
+yref(s) 7→yref(s) + l sin(θ).
+(V.16)
+The parameters of the simulation are summarized in Table
+III.
+In reference to Figure V.5, the pure pursuit control tracks
+the reference path during periods with no curvature. In the
+region where the path has high curvature, the pure pursuit
+control causes the system to deviate from the reference path.
+In contrast, the latter two controllers converge to the path and
+track it through the high curvature regions.
+In both controllers using (V.5) in the feedback policy, local
+exponential stability can only be proven if there is a neigh-
+borhood of the path where (V.5) is continuous. Intuitively,
+this means the path cannot cross over itself and must be
+differentiable.
+B. Trajectory Tracking Control for the Kinematic Model
+1) Control Lyapunov based design:
+A control design
+based on a control Lyapunov function is described in [142].
+The approach is to deﬁne the tracking error in a coordi-
+nate frame ﬁxed to the car. The conﬁguration error can
+be expressed by a change of basis from the inertial co-
+ordinate frame using the reference trajectory, and velocity,
+(xref, yref, θref, vref, ωref),
+
+
+xe
+ye
+θe
+
+=
+
+
+cos(θ)
+sin(θ)
+0
+−sin(θ)
+cos(θ)
+0
+0
+0
+1
+
+
+
+
+xref −xr
+yref −yr
+θref −θ
+
+.
+Figure V.5: Tracking performance comparison for the three
+path stabilizing control laws discussed in this section. (a) Pure
+pursuit deviates from reference when curvature is nonzero. (b)
+The rear wheel output based controller drives the rear wheel
+to the rear wheel reference path. Overshoot is a result of
+the second order response of the system. (c) The front wheel
+output based controller drives the front wheel to the reference
+path with a ﬁrst order response and tracks the path through
+the maneuver.
+Example Parameters
+Reference path
+Wheel-
+base
+Steering
+limit
+Initial
+Conﬁguration
+(xref(s), yref(s)) =
+(s, 4 · tanh
+  s−40
+4
+
+L = 5 |δ| ≤π/4 (xr(0), yr(0), θ(0))
+= (0, −2, 0)
+Controller Parameters
+Pure pursuit
+Rear wheel feedback
+Front wheel
+feedback
+L = 5, vr = 1
+ke = 0.25, kθ = 0.75,
+vr = 1
+k = 0.5, vr = 1
+Table III: Simulation and controller parameters used to gener-
+ate Figure V.5.
+The evolution of the conﬁguration error is then
+˙xe =ωye −vr + vref cos(θe),
+˙ye =−ωxe + vref sin(θe),
+˙θe =ωref −ω.
+With the control assignment,
+vr =vref cos(θe) + k1xe,
+ω=ωref + vref (k2ye + k3 sin(θe)) .
+
+21
+the closed loop error dynamics become
+˙xe=(ωref + vref (k2ye + k3 sin(θe)))ye −k1xe,
+˙ye=−(ωref + vref (k2ye + k3 sin(θe))) xe + vref sin (θe) ,
+˙θe=ωref −ω.
+Stability is veriﬁed for k1,2,3 > 0, ˙ωref = 0, and ˙vref = 0 by
+the Lyapunov function
+V = 1
+2
+ x2
+e + y2
+e
+
++ (1 −cos(θe))
+k2
+,
+with negative semi-deﬁnite time derivative,
+˙V = −k1x2
+e −vrefk3 sin2(θe)
+k2
+.
+A local analysis shows that the control law provides local
+exponential stability. However, for the system to be time
+invariant, ωref and vref are required to be constant.
+A related controller is proposed in [143] which utilizes
+a backstepping design to achieve uniform local exponential
+stability for a ﬁnite domain with time varying references.
+2) Output
+feedback
+linearization:
+For
+higher
+vehicle
+speeds, it is appropriate to constrain the steering angle to
+have continuous motion as in (III.8). With the added state,
+it becomes more difﬁcult to design a controller from simple
+geometric considerations. A good option in this case is to
+output-linearize the system.
+This is not easily accomplished using the front or rear
+wheel positions. An output which simpliﬁes the feedback
+linearization is proposed in [144], where a point ahead of the
+vehicle by any distance d̸ = 0, aligned with the steering angle
+is selected.
+Let xp = xf + d cos(θ + δ) and yp = yf + d sin(θ + δ) be
+the output of the system. Taking the derivative of these outputs
+and substituting the dynamics of III.8 yields
+ ˙xp
+˙yp
+
+=
+cos(θ + δ) −d
+l sin(θ + δ) sin(δ) −d sin(θ + δ)
+sin(θ + δ) + d
+l cos(θ + δ) sin(δ) d cos(θ + δ)
+
+|
+{z
+}
+A(θ,δ)
+vf
+vδ
+
+.
+(V.17)
+Then, deﬁning the right hand side of (V.17) as auxiliary
+control variables ux and uy yields
+ ˙xp
+˙yp
+
+=
+
+ux
+uy
+
+,
+(V.18)
+which makes control straightforward. From ux and uy, the
+original controls vf and vδ are recovered by using the inverse
+of the matrix in (V.17), provided below:
+[A(θ, δ)]−1 =
+
+cos(θ + δ)
+sin(θ + δ)
+−1
+d sin(θ+δ)−1
+l cos(θ+δ) sin(δ)
+1
+d cos(θ+δ)−1
+l sin(θ+δ) sin(δ)
+
+.
+(V.19)
+From the input-output linear system, local trajectory stabi-
+lization can be accomplished with the controls
+ux = ˙xp,ref + kx(xp,ref −xp),
+uy = ˙yp,ref + ky(yp,ref −yp).
+(V.20)
+To avoid confusion, note that in this case, the output position
+(xp, yp) and controlled speed vf are not collocated as in the
+previously discussed controllers.
+C. Predictive Control Approaches
+The simple control laws discussed above are suitable for
+moderate driving conditions. However, slippery roads or emer-
+gency maneuvers may require a more accurate model, such as
+the one introduced in Section III-B. The added detail of more
+sophisticated models complicates the control design making it
+difﬁcult to construct controllers from intuition and geometry
+of the conﬁguration space.
+Model predictive control [145] is a general control design
+methodology which can be very effective for this problem.
+Conceptually, the approach is to solve the motion planning
+problem over a short time horizon, take a short interval of the
+resulting open loop control, and apply it to the system. While
+executing, the motion planning problem is re-solved to ﬁnd
+an appropriate control for the next time interval. Advances
+in computing hardware as well as mathematical programming
+algorithms have made predictive control feasible for real-time
+use in driverless vehicles. MPC is a major ﬁeld of research
+on its own and this section is only intended to provide a
+brief description of the technique and to survey results on
+its application to driverless vehicle control.
+Since model predictive control is a very general control
+technique, the model takes the form of a general continuous
+time control system with control, u(t) ∈Rm, and state,
+x(t) ∈Rn,
+˙x = f(x, u, t)
+(V.21)
+A feasible reference trajectory xref(t), and for some motion
+planners uref(t), are provided satisfying (V.21). The system
+is then discretized by an appropriate choice of numerical
+approximation so that (V.21) is given at discrete time instances
+by
+xk+1=Fk (xk, uk) ,
+k ∈N,
+(V.22)
+One of the simplest discretization schemes is Euler’s method
+with a zero order hold on control:
+Fk (x(k · ∆t), u(k · ∆t)) =
+x(k · ∆t) + ∆t · f (x(k · ∆t), u(k · ∆t), tk) ,
+k ∈N.
+(V.23)
+The state and control are discretized by their approximation
+at times tk = k · ∆t. Solutions to the discretized system are
+approximate and will not match the continuous time equation
+exactly. Similarly, the reference trajectory and control sampled
+at the discrete times tk will not satisfy the discrete time
+equation. For example, the mismatch between solutions to
+(V.23) and (V.21) will be O(∆t) and the reference trajectory
+sampled at time tk will result in
+Fk (xref(tk), uref(tk)) −xref(tk+1) = O(∆t2).
+(V.24)
+To avoid over-complicating the following discussion, we
+assume the discretization is exact for the remainder of the
+
+22
+section. The control law typically takes the form
+uk(xmeas.) = argmin
+xn ∈Xn,
+un ∈Un
+
+h(xN −xref,N, uN −uref,N)
++
+k+N−1
+X
+n=k
+gn(xn −xref,n, un −uref,n)
+)
+(V.25)
+subject to
+xk = xmeas.
+xn+1 = F(xn, un),
+n ∈{k, ..., k + N −1}.
+The function gn penalizes deviations from the reference tra-
+jectory and control at each time step, while the function h
+is a terminal penalty at the end of the time horizon. The set
+Xn is the set of allowable states which can restrict undesirable
+positions or velocities, e.g., excessive tire slip or obstacles. The
+set Un encodes limits on the magnitude of the input signals.
+Important considerations are whether the solutions to the right
+hand side of (V.25) exist, and when they do, the stability
+and robustness of the closed loop system. These issues are
+investigated in the predictive control literature [146], [147].
+To implement an MPC on a driverless car, (V.25) must be
+solved several times per second which is a major obstacle to
+its use. In the special case that h and gn are quadratic, Un
+and Xn are polyhedral, and F is linear, the problem becomes
+a quadratic program. Unlike a general nonlinear programming
+formulation, interior point algorithms are available for solving
+quadratic programs in polynomial time. To leverage this, the
+complex vehicle model is often linearized to obtain an approx-
+imate linear model. Linearization approaches typically differ
+in the reference about which the linearization is computed—
+current operating point [148]–[150], reference path [151] or
+more generally, about a reference trajectory, which results in
+the following approximate linear model:
+xref,k+1 + ξk+1 = Fk(xref,k, uref,k)
++∇xFk(xref,k, uref,k)
+|
+{z
+}
+Ak
+ξk + ∇uFk(xref,k, uref,k)
+|
+{z
+}
+Bk
+ηk
++O(∥ξk∥2) + O(∥ηk∥2),
+(V.26)
+where ξ := x −xref and η := u −uref are the deviations of
+the state and control from the reference trajectory. This ﬁrst
+order expansion of the perturbation dynamics yields a linear
+time varying (LTV) system,
+ξk+1 = Akξk + Bkηk.
+(V.27)
+Then using a quadratic objective, and expressing the polyhe-
+dral constraints algebraically, we obtain
+uk(xmeas.)=argmin
+ξk,ηk
+(
+ξT
+NHξN +
+k+N−1
+X
+n=k
+ξT
+k Qkξk+ηT
+k Rkηk
+)
+subject to
+ξk = xmeas. −xref
+Cnξn ≤0,
+Dnηn ≤0
+ξk+1 = Akξk + Bnηn, n ∈{k, ..., k + N −1},
+(V.28)
+where Rk and Qk are positive semi-deﬁnite. If the states
+and inputs are unconstrained, i.e., Un = Rm, Xn = Rn,
+a semi-closed form solution can be obtained by dynamic
+programming requiring only the calculation of an N step
+matrix recursion [152]. Similar closed form recursive solutions
+have also been explored when vehicle models are repre-
+sented by controlled auto-regressive integrated moving average
+(CARIMA) with no state and input constraints [153], [154].
+A further variation in the model predictive control approach
+is to replace state constraints (e.g., obstacles) and input con-
+straints by penalty functions in the performance functional.
+Such a predictive control approach based on a dynamic model
+with nonlinear tire behavior is presented in [155]. In addition
+to penalizing control effort and deviation from a reference path
+to a goal which does not consider obstacles, the performance
+functional penalizes input constraint violations and collisions
+with obstacles over the ﬁnite control horizon. In this sense
+it is similar to potential ﬁeld based motion planning, but is
+demonstrated to have improved performance.
+The following are some variations of the model predictive
+control framework that are found in the literature of car
+controllers:
+1) Unconstrained MPC with Kinematic Models: The earli-
+est predictive controller in [153] falls under this category, in
+which the model predictive control framework is applied with-
+out input or state constraints using a CARIMA model. The re-
+sulting semi-closed form solution has minimal computational
+requirements and has also been adopted in [154]. Moreover,
+the time-varying linear quadratic programming approach with
+no input or state constraints was considered in [154] using a
+linearized kinematic model.
+2) Path Tracking Controllers: In [151], a predictive control
+is investigated using a center of mass based linear dynamic
+model (assuming constant velocity) for path tracking and an
+approximate steering model. The resulting integrated model is
+validated with a detailed automatic steering model and a 27
+degree-of-freedom CarSim vehicle model.
+3) Trajectory Tracking Controllers: A predictive controller
+using a tire model similar to Section III was investigated
+in [148]. The full nonlinear predictive control strategy was
+carried out in simulation and shown to stabilize a simu-
+lated emergency maneuver in icy conditions with a control
+frequency of 20 Hz. However, with a control horizon of
+just two time steps the computation time was three times
+the sample time of the controller making experimental val-
+idation impossible. A linearization based approach was also
+investigated in [148]–[150] based on a single linearization
+about the state of the vehicle at the current time step. The
+reduced complexity of solving the quadratic program resulted
+in acceptable computation time, and successful experimental
+results are reported for driving in icy conditions at speeds up
+to 21m/s. The promising simulation and experimental results
+of this approach are improved upon in [150] by providing
+
+23
+conditions for the uniform local-asymptotic stability of the
+time varying system.
+D. Linear Parameter Varying Controllers
+Many controller design techniques are available for linear
+systems making a linear model desirable. However, the broad
+range of operating points encountered under normal driving
+conditions make it difﬁcult to rely on a model linearized about
+a single operating point. To illustrate this, consider the lateral
+error dynamics in (V.10). If the tracking error is assumed
+to remain small a linearization of the dynamics around the
+operating point θe = 0 and e = 0 yields
+
+˙e
+˙θe
+
+=
+ 0
+vr
+0
+0
+  e
+θe
+
++
+ 0
+1
+
+ω +
+
+0
+−vrκ(s)
+
+.
+(V.29)
+Introducing a new control variable incorporating a feed-
+forward u = ω + vrκ(s) simpliﬁes the discussion. The
+dynamics are now
+
+˙e
+˙θe
+
+=
+
+0
+vr
+0
+0
+ 
+e
+θe
+
++
+
+0
+1
+
+u.
+(V.30)
+Observe that the model is indeed linear, but the forward speed
+vr appears in the linear model. A simple proportional plus
+derivative control with gains kp and kd will stabilize the lateral
+dynamics but the poles of the closed loop system are given by
+
+−kd ±
+p
+k2
+d −4kpvr
+
+/2. At higher speeds the poles move
+into the complex plane leading to an oscillatory response.
+In contrast, a small kp gain leads to a poor response at
+low speed. A very intuitive and widely used remedy to this
+challenge is gain scheduling. In this example, parameterizing
+kp as a function of vr ﬁxes the poles to a single value for
+each speed. This technique falls into the category of control
+design for linear parameter varying (LPV) models [156]. Gain
+scheduling is a classical approach to this type of controller
+design. Tools from robust control and convex optimization are
+readily applied to address more complex models.
+LPV control designs for lateral control are presented in
+[157]–[159]. LPV models are used in [160], [161] together
+with predictive control approaches for path and trajectory
+stabilization. At a lower level of automation, LPV control
+techniques have been proposed for integrated system control.
+In these designs, several subsystems are combined under a
+single controller to achieve improved handling performance.
+LPV control strategies for actuating active and semi-active
+suspension systems are developed in [162], [163], while inte-
+grated suspension and braking control systems are developed
+in [164], [165].
+VI. CONCLUSIONS
+The past three decades have seen increasingly rapid progress
+in driverless vehicle technology. In addition to the advances
+in computing and perception hardware, this rapid progress has
+been enabled by major theoretical progress in the computa-
+tional aspects of mobile robot motion planning and feedback
+control theory. Research efforts have undoubtedly been spurred
+by the improved utilization and safety of road networks that
+driverless vehicles would provide.
+Driverless vehicles are complex systems which have been
+decomposed into a hierarchy of decision making problems,
+where the solution of one problem is the input to the next.
+The breakdown into individual decision making problems has
+enabled the use of well developed methods and technologies
+from a variety of research areas. The task is then to integrate
+these methods so that their interactions are semantically valid,
+and the combined system is computationally efﬁcient. A more
+efﬁcient motion planning algorithm may only be compatible
+with a computationally intensive feedback controller such as
+model predictive control. Conversely, a simple control law may
+require less computation to execute, but is also less robust and
+requires using a more detailed model for motion planning.
+This paper has provided a survey of the various aspects
+of driverless vehicle decision making problems with a focus
+on motion planning and feedback control. The survey of per-
+formance and computational requirements of various motion
+planning and control techniques serves as a reference for
+assessing compatibility and computational tradeoffs between
+various choices for system level design.
+REFERENCES
+[1] “2014 crash data key ﬁndings.”
+National Highway Trafﬁc Safety
+Administration, Report No. DOT HS 812 219, 2014.
+[2] S. Singh, “Critical reasons for crashes investigated in the national
+motor vehicle crash causation survey.” National Highway Trafﬁc Safety
+Administration, Report No. DOT HS 812 115, 2014.
+[3] B. McKenzie and M. Rapino, “Commuting in the United States: 2009,
+American Community Survey Reports,” U.S. Census Bureau, 2011.
+ACS-15, 2011.
+[4] D. A. Hennessy and D. L. Wiesenthal, “Trafﬁc congestion, driver stress,
+and driver aggression,” Aggressive behavior, pp. 409–423, 1999.
+[5] E. D. Dickmanns and V. Graefe, “Dynamic monocular machine vision,”
+Machine vision and applications, vol. 1, pp. 223–240, 1988.
+[6] E. D. Dickmanns et al., “Vehicles capable of dynamic vision,” in IJCAI,
+pp. 1577–1592, 1997.
+[7] “No Hands Across America Journal.” http://www.cs.cmu.edu/afs/cs/
+usr/tjochem/www/nhaa/Journal.html. Accessed: 2015-12-14.
+[8] M. Buehler, K. Iagnemma, and S. Singh, The 2005 DARPA Grand
+Challenge: The great robot race, vol. 36. Springer Science & Business
+Media, 2007.
+[9] M. Buehler, K. Iagnemma, and S. Singh, The DARPA Urban Challenge:
+Autonomous vehicles in city trafﬁc, vol. 56. springer, 2009.
+[10] J. Xin, C. Wang, Z. Zhang, and N. Zheng, “China future challenge: Be-
+yond the intelligent vehicle,” IEEE Intell. Transp. Syst. Soc. Newslett,
+vol. 16, pp. 8–10, 2014.
+[11] P. Cerri, G. Soprani, P. Zani, J. Choi, J. Lee, D. Kim, K. Yi, and
+A. Broggi, “Computer vision at the Hyundai autonomous challenge,”
+in International Conference on Intelligent Transportation Systems,
+pp. 777–783, IEEE, 2011.
+[12] A. Broggi, P. Cerri, M. Felisa, M. C. Laghi, L. Mazzei, and P. P. Porta,
+“The vislab intercontinental autonomous challenge: an extensive test
+for a platoon of intelligent vehicles,” International Journal of Vehicle
+Autonomous Systems, vol. 10, pp. 147–164, 2012.
+[13] A. Broogi, P. Cerri, S. Debattisti, M. C. Laghi, P. Medici, D. Molinari,
+M. Panciroli, and A. Prioletti, “Proud-public road urban driverless-
+car test,” Transactions on Intelligent Transportation Systems, vol. 16,
+pp. 3508–3519, 2015.
+[14] J. Ziegler, P. Bender, M. Schreiber, H. Lategahn, T. Strauss, C. Stiller,
+T. Dang, U. Franke, N. Appenrodt, C. G. Keller, et al., “Making
+Bertha drive—an autonomous journey on a historic route,” Intelligent
+Transportation Systems Magazine, vol. 6, pp. 8–20, 2014.
+[15] “Google
+Self-Driving
+Car
+Project.”
+https://www.google.com/
+selfdrivingcar/. Accessed: 2015-12-14.
+[16] “Tesla Motors: Model S Press Kit.” https://www.teslamotors.com/
+presskit/autopilot. Accessed: 2016-3-15.
+
+24
+[17] S. O.-R. A. V. S. Committee et al., “Taxonomy and deﬁnitions for
+terms related to on-road motor vehicle automated driving systems,”
+2014.
+[18] R. Rajamani, Vehicle dynamics and control.
+Springer Science &
+Business Media, 2011.
+[19] J. C. Gerdes and E. J. Rossetter, “A uniﬁed approach to driver
+assistance systems based on artiﬁcial potential ﬁelds,” Journal of
+Dynamic Systems, Measurement, and Control, vol. 123, pp. 431–438,
+2001.
+[20] M. Brännström, E. Coelingh, and J. Sjöberg, “Model-based threat
+assessment for avoiding arbitrary vehicle collisions,” Transactions on
+Intelligent Transportation Systems, vol. 11, pp. 658–669, 2010.
+[21] A. Vahidi and A. Eskandarian, “Research advances in intelligent colli-
+sion avoidance and adaptive cruise control,” Transactions on Intelligent
+Transportation Systems, vol. 4, pp. 143–153, 2003.
+[22] M. R. Hafner, D. Cunningham, L. Caminiti, and D. Del Vecchio,
+“Cooperative collision avoidance at intersections: Algorithms and ex-
+periments,” Transactions on Intelligent Transportation Systems, vol. 14,
+pp. 1162–1175, 2013.
+[23] A. Colombo and D. Del Vecchio, “Efﬁcient algorithms for collision
+avoidance at intersections,” in Proceedings of the 15th ACM inter-
+national conference on Hybrid Systems: Computation and Control,
+pp. 145–154, ACM, 2012.
+[24] H. Kowshik, D. Caveney, and P. Kumar, “Provable systemwide safety
+in intelligent intersections,” Vehicular Technology, IEEE Transactions
+on, vol. 60, pp. 804–818, 2011.
+[25] A. Eskandarian, Handbook of intelligent vehicles. Springer London,
+UK, 2012.
+[26] D. Miculescu and S. Karaman, “Polling-systems-based control of high-
+performance provably-safe autonomous intersections,” in Decision and
+Control (CDC), 2014 IEEE 53rd Annual Conference on, pp. 1417–
+1423, IEEE, 2014.
+[27] F. Zhou, X. Li, and J. Ma, “Parsimonious shooting heuristic for trajec-
+tory control of connected automated trafﬁc part I: Theoretical analysis
+with generalized time geography,” arXiv preprint arXiv:1511.04810,
+2015.
+[28] D. Geronimo, A. M. Lopez, A. D. Sappa, and T. Graf, “Survey of
+pedestrian detection for advanced driver assistance systems,” Trans-
+actions on Pattern Analysis & Machine Intelligence, pp. 1239–1258,
+2009.
+[29] G. Ros, A. Sappa, D. Ponsa, and A. M. Lopez, “Visual SLAM for
+driverless cars: A brief survey,” in Intelligent Vehicles Symposium (IV)
+Workshops, 2012.
+[30] A. Geiger, J. Ziegler, and C. Stiller, “Stereoscan: Dense 3d reconstruc-
+tion in real-time,” in Intelligent Vehicles Symposium (IV), 2011 IEEE,
+pp. 963–968, IEEE, 2011.
+[31] P. Liu, A. Kurt, K. Redmill, and U. Ozguner, “Classiﬁcation of highway
+lane change behavior to detect dangerous cut-in maneuvers,” in The
+Transportation Research Board (TRB) 95th Annual Meeting, 2015.
+[32] E. W. Dijkstra, “A note on two problems in connexion with graphs,”
+Numerische mathematik, vol. 1, pp. 269–271, 1959.
+[33] N. J. Nilsson, “A mobile automaton: An application of artiﬁcial
+intelligence techniques,” tech. rep., DTIC Document, 1969.
+[34] A. V. Goldberg and C. Harrelson, “Computing the shortest path: A
+search meets graph theory,” in Proceedings of the sixteenth annual
+ACM-SIAM symposium on Discrete algorithms, pp. 156–165, Society
+for Industrial and Applied Mathematics, 2005.
+[35] R. Geisberger, P. Sanders, D. Schultes, and C. Vetter, “Exact routing
+in large road networks using contraction hierarchies,” Transportation
+Science, vol. 46, pp. 388–404, 2012.
+[36] H. Bast, D. Delling, A. Goldberg, M. Müller-Hannemann, T. Pajor,
+P. Sanders, D. Wagner, and R. F. Werneck, “Route planning in
+transportation networks,” arXiv preprint arXiv:1504.05140, 2015.
+[37] F. Havlak and M. Campbell, “Discrete and continuous, probabilistic an-
+ticipation for autonomous robots in urban environments,” Transactions
+on Robotics, vol. 30, pp. 461–474, 2014.
+[38] Q. Tran and J. Firl, “Modelling of trafﬁc situations at urban inter-
+sections with probabilistic non-parametric regression,” in Intelligent
+Vehicles Symposium (IV), 2013 IEEE, pp. 334–339, IEEE, 2013.
+[39] A. C. Madrigal, “The trick that makes Google’s self-driving cars
+work,” The Atlantic, 2015.
+http://www.theatlantic.com/technology/
+archive/2014/05/all-the-world-a-track-the-trick-that-makes-googles-
+self-driving-cars-work/370871/.
+[40] R. Verma and D. D. Vecchio, “Semiautonomous multivehicle safety,”
+Robotics & Automation Magazine, IEEE, vol. 18, pp. 44–54, 2011.
+[41] S. Z. Yong, M. Zhu, and E. Frazzoli, “Generalized innovation and in-
+ference algorithms for hidden mode switched linear stochastic systems
+with unknown inputs,” in Decision and Control (CDC), 2014 IEEE
+53rd Annual Conference on, pp. 3388–3394, IEEE, 2014.
+[42] S. Brechtel, T. Gindele, and R. Dillmann, “Probabilistic MDP-behavior
+planning for cars,” in 14th International Conference on Intelligent
+Transportation Systems, pp. 1537–1542, IEEE, 2011.
+[43] S. Ulbrich and M. Maurer, “Probabilistic online POMDP decision
+making for lane changes in fully automated driving,” in 16th Inter-
+national Conference on Intelligent Transportation Systems, pp. 2063–
+2067, IEEE, 2013.
+[44] S. Brechtel, T. Gindele, and R. Dillmann, “Probabilistic decision-
+making under uncertainty for autonomous driving using continuous
+POMDPs,” in 17th International Conference on Intelligent Transporta-
+tion Systems, pp. 392–399, IEEE, 2014.
+[45] E. Galceran, A. G. Cunningham, R. M. Eustice, and E. Olson, “Multi-
+policy decision-making for autonomous driving via changepoint-based
+behavior prediction,” in Proceedings of Robotics: Science & Systems
+Conference, p. 2, 2015.
+[46] T. Bandyopadhyay, K. S. Won, E. Frazzoli, D. Hsu, W. S. Lee, and
+D. Rus, “Intention-aware motion planning,” in Algorithmic Foundations
+of Robotics X, pp. 475–491, Springer, 2013.
+[47] S. M. LaValle, Planning algorithms. Cambridge university press, 2006.
+[48] A. De Luca, G. Oriolo, and C. Samson, “Feedback control of a
+nonholonomic car-like robot,” in Robot motion planning and control,
+pp. 171–253, Springer, 1998.
+[49] R. M. Murray and S. S. Sastry, “Nonholonomic motion planning:
+Steering using sinusoids,” Transactions on Automatic Control, vol. 38,
+pp. 700–716, 1993.
+[50] T. Fraichard and R. Mermond, “Path planning with uncertainty for car-
+like robots,” in International Conference on Robotics and Automation,
+vol. 1, pp. 27–32, IEEE, 1998.
+[51] M. Egerstedt, X. Hu, H. Rehbinder, and A. Stotsky, “Path planning
+and robust tracking for a car-like robot,” in Proceedings of the 5th
+symposium on intelligent robotic systems, pp. 237–243, Citeseer, 1997.
+[52] R. C. Coulter, “Implementation of the pure pursuit path tracking
+algorithm,” tech. rep., DTIC Document, 1992.
+[53] H. Goldstein, Classical mechanics. Pearson Education India, 1965.
+[54] Y. Kuwata, S. Karaman, J. Teo, E. Frazzoli, J. P. How, and G. Fiore,
+“Real-time motion planning with applications to autonomous ur-
+ban driving,” Transactions on Control Systems Technology, vol. 17,
+pp. 1105–1118, 2009.
+[55] M. D. Ventures, “Stanley: The robot that won the DARPA Grand
+Challenge,” Journal of ﬁeld Robotics, vol. 23, pp. 661–692, 2006.
+[56] C. Samson, “Path following and time-varying feedback stabilization of
+a wheeled mobile robot,” in 2nd Int. Conf. on Automation, Robotics
+and Computer Vision, 1992.
+[57] L. E. Dubins, “On curves of minimal length with a constraint on
+average curvature, and with prescribed initial and terminal positions
+and tangents,” American Journal of Mathematics, vol. 79, pp. 497–
+516, 1957.
+[58] J. Reeds and L. Shepp, “Optimal paths for a car that goes both forwards
+and backwards,” Paciﬁc journal of mathematics, vol. 145, pp. 367–393,
+1990.
+[59] E. Velenis and P. Tsiotras, “Minimum time vs maximum exit velocity
+path optimization during cornering,” in International symposium on
+industrial electronics, pp. 355–360, 2005.
+[60] A. Rucco, G. Notarstefano, and J. Hauser, “Computing minimum lap-
+time trajectories for a single-track car with load transfer,” in Conference
+on Decision and Control, pp. 6321–6326, IEEE, 2012.
+[61] J. H. Jeon, R. V. Cowlagi, S. C. Peters, S. Karaman, E. Frazzoli,
+P. Tsiotras, and K. Iagnemma, “Optimal motion planning with the half-
+car dynamical model for autonomous high-speed driving,” in American
+Control Conference, pp. 188–193, IEEE, 2013.
+[62] S. C. Peters, E. Frazzoli, and K. Iagnemma, “Differential ﬂatness
+of a front-steered vehicle with tire force control,” in International
+Conference on Intelligent Robots and Systems (IROS), pp. 298–304,
+IEEE, 2011.
+[63] E. Bakker, L. Nyborg, and H. B. Pacejka, “Tyre modelling for use in
+vehicle dynamics studies,” tech. rep., SAE Technical Paper, 1987.
+[64] J. H. Reif, “Complexity of the mover’s problem and generalizations,”
+in 20th Annual Symposium on Foundations of Computer Science, SFCS
+’79, (Washington, DC, USA), pp. 421–427, IEEE, 1979.
+[65] J. Canny, The complexity of robot motion planning. MIT press, 1988.
+[66] T. Lozano-Pérez and M. A. Wesley, “An algorithm for planning
+collision-free paths among polyhedral obstacles,” Communications of
+the ACM, vol. 22, pp. 560–570, 1979.
+[67] J. A. Storer and J. H. Reif, “Shortest paths in the plane with polygonal
+obstacles,” Journal of the ACM, vol. 41, pp. 982–1012, 1994.
+
+25
+[68] M. H. Overmars and E. Welzl, “New methods for computing visibility
+graphs,” in Proceedings of the fourth annual symposium on Computa-
+tional geometry, pp. 164–171, ACM, 1988.
+[69] M. De Berg, M. Van Kreveld, M. Overmars, and O. C. Schwarzkopf,
+Computational geometry. Springer, 2000.
+[70] S. Lazard, J. Reif, and H. Wang, “The complexity of the two dimen-
+sional curvatureconstrained shortest-path problem,” in Proceedings of
+the Third International Workshop on the Algorithmic Foundations of
+Robotics, pp. 49–57, 1998.
+[71] S. Fortune and G. Wilfong, “Planning constrained motion,” Annals of
+Mathematics and Artiﬁcial Intelligence, vol. 3, pp. 21–82, 1991.
+[72] P. K. Agarwal, T. Biedl, S. Lazard, S. Robbins, S. Suri, and S. White-
+sides, “Curvature-constrained shortest paths in a convex polygon,”
+SIAM Journal on Computing, vol. 31, pp. 1814–1851, 2002.
+[73] J.-D. Boissonnat and S. Lazard, “A polynomial-time algorithm for com-
+puting a shortest path of bounded curvature amidst moderate obstacles,”
+in Proceedings of the twelfth annual symposium on Computational
+geometry, pp. 242–251, ACM, 1996.
+[74] F. Lamiraux, E. Ferre, and E. Vallee, “Kinodynamic motion planning:
+Connecting exploration trees using trajectory optimization methods,”
+in International Conference on Robotics and Automation, vol. 4,
+pp. 3987–3992, IEEE, 2004.
+[75] F. Boyer and F. Lamiraux, “Trajectory deformation applied to kino-
+dynamic motion planning for a realistic car model,” in International
+Conference on Robotics and Automation, pp. 487–492, IEEE, 2006.
+[76] J. Canny and J. Reif, “New lower bound techniques for robot motion
+planning problems,” in 28th Symposium on Foundations of Computer
+Science, pp. 49–60, IEEE, 1987.
+[77] D. P. Bertsekas, Nonlinear programming. Athena scientiﬁc, 1999.
+[78] M. L. Fredman and R. E. Tarjan, “Fibonacci heaps and their uses
+in improved network optimization algorithms,” Journal of the ACM
+(JACM), vol. 34, pp. 596–615, 1987.
+[79] L. E. Kavraki, M. N. Kolountzakis, and J.-C. Latombe, “Analysis of
+probabilistic roadmaps for path planning,” Transactions on Robotics
+and Automation, vol. 14, pp. 166–171, 1998.
+[80] S. Karaman and E. Frazzoli, “Sampling-based algorithms for optimal
+motion planning,” The International Journal of Robotics Research,
+vol. 30, pp. 846–894, 2011.
+[81] E. Schmerling, L. Janson, and M. Pavone, “Optimal sampling-based
+motion planning under differential constraints: the driftless case,”
+International Conference on Robotics and Automation, 2015.
+[82] S. Karaman and E. Frazzoli, “Sampling-based optimal motion planning
+for non-holonomic dynamical systems,” in International Conference on
+Robotics and Automation, pp. 5041–5047, IEEE, 2013.
+[83] S. M. LaValle and J. J. Kuffner, “Randomized kinodynamic planning,”
+The International Journal of Robotics Research, vol. 20, pp. 378–400,
+2001.
+[84] Y. Li, Z. Littleﬁeld, and K. E. Bekris, “Sparse methods for efﬁcient
+asymptotically optimal kinodynamic planning,” in Algorithmic Foun-
+dations of Robotics XI, pp. 263–282, Springer, 2015.
+[85] J. Reif and M. Sharir, “Motion planning in the presence of moving
+obstacles,” Journal of the ACM, vol. 41, pp. 764–790, 1994.
+[86] T. Fraichard, “Trajectory planning in a dynamic workspace: a’state-time
+space’approach,” Advanced Robotics, vol. 13, pp. 75–94, 1998.
+[87] J. Kasac, J. Deur, B. Novakovic, I. Kolmanovsky, and F. Assadian,
+“A conjugate gradient-based BPTT-like optimal control algorithm with
+vehicle dynamics control application,” Transactions on Control Systems
+Technology, vol. 19, pp. 1587–1595, 2011.
+[88] C. L. Darby, W. W. Hager, and A. V. Rao, “An hp-adaptive pseudospec-
+tral method for solving optimal control problems,” Optimal Control
+Applications and Methods, vol. 32, pp. 476–502, 2011.
+[89] L. S. Pontryagin, Mathematical theory of optimal processes.
+CRC
+Press, 1987.
+[90] Y. Tassa, N. Mansard, and E. Todorov, “Control-limited differential
+dynamic programming,” in International Conference on Robotics and
+Automation, pp. 1168–1175, IEEE, 2014.
+[91] J. T. Betts, “Survey of numerical methods for trajectory optimization,”
+Journal of Guidance, Control, and Dynamics, vol. 21, pp. 193–207,
+1998.
+[92] E. Polak, “An historical survey of computational methods in optimal
+control,” SIAM Review, vol. 15, pp. 553–584, 1973.
+[93] B. Chazelle, “Approximation and decomposition of shapes,” Advances
+in Robotics, vol. 1, pp. 145–185, 1987.
+[94] C. Ó’Dúnlaing and C. K. Yap, “A "retraction" method for planning the
+motion of a disc,” Journal of Algorithms, vol. 6, pp. 104–111, 1985.
+[95] O. Takahashi and R. J. Schilling, “Motion planning in a plane using
+generalized voronoi diagrams,” Transactions on Robotics and Automa-
+tion, vol. 5, pp. 143–150, 1989.
+[96] J.-C. Latombe, Robot motion planning, vol. 124. Springer Science &
+Business Media, 2012.
+[97] J. T. Schwartz and M. Sharir, “On the "piano movers" problem. ii. gen-
+eral techniques for computing topological properties of real algebraic
+manifolds,” Advances in applied Mathematics, vol. 4, pp. 298–351,
+1983.
+[98] J. Backer and D. Kirkpatrick, “Finding curvature-constrained paths that
+avoid polygonal obstacles,” in Proceedings of the twenty-third annual
+symposium on Computational geometry, pp. 66–73, ACM, 2007.
+[99] P. Jacobs and J. Canny, “Planning smooth paths for mobile robots,” in
+Nonholonomic Motion Planning, pp. 271–342, Springer, 1993.
+[100] H. Wang and P. K. Agarwal, “Approximation algorithms for curvature-
+constrained shortest paths.,” in SODA, vol. 96, pp. 409–418, 1996.
+[101] S. M. La Valle, “Rapidly-exploring random trees a new tool for path
+planning,” tech. rep., Computer Science Dept., Iowa State University,
+1998.
+[102] S. Petti and T. Fraichard, “Safe motion planning in dynamic environ-
+ments,” in Intelligent Robots and Systems, 2005.(IROS 2005). 2005
+IEEE/RSJ International Conference on, pp. 2210–2215, IEEE, 2005.
+[103] A. Bhatia and E. Frazzoli, “Incremental search methods for reacha-
+bility analysis of continuous and hybrid systems,” in Hybrid Systems:
+Computation and Control: 7th International Workshop, HSCC 2004,
+Philadelphia, PA, USA, March 25-27, 2004. Proceedings (R. Alur and
+G. J. Pappas, eds.), pp. 142–156, Springer Berlin Heidelberg, 2004.
+[104] E. Glassman and R. Tedrake, “A quadratic regulator-based heuristic
+for rapidly exploring state space,” in Robotics and Automation (ICRA),
+2010 IEEE International Conference on, pp. 5021–5028, IEEE, 2010.
+[105] S. Fleury, P. Soueres, J.-P. Laumond, and R. Chatila, “Primitives for
+smoothing mobile robot trajectories,” Transactions on Robotics and
+Automation, vol. 11, pp. 441–448, 1995.
+[106] E. Velenis, P. Tsiotras, and J. Lu, “Aggressive maneuvers on loose
+surfaces: Data analysis and input parametrization,” in Mediterranean
+Conference on Control Automation, pp. 1–6, 2007.
+[107] M. Pivtoraiko, R. A. Knepper, and A. Kelly, “Differentially constrained
+mobile robot motion planning in state lattices,” Journal of Field
+Robotics, vol. 26, pp. 308–333, 2009.
+[108] S. M. LaValle, M. S. Branicky, and S. R. Lindemann, “On the
+relationship between classical grid search and probabilistic roadmaps,”
+The International Journal of Robotics Research, vol. 23, pp. 673–692,
+2004.
+[109] J. Lengyel, M. Reichert, B. R. Donald, and D. P. Greenberg, Real-time
+robot motion planning using rasterizing computer graphics hardware,
+vol. 24. ACM, 1990.
+[110] L. E. Kavraki, P. Švestka, J.-C. Latombe, and M. H. Overmars, “Prob-
+abilistic roadmaps for path planning in high-dimensional conﬁguration
+spaces,” Transactions on Robotics and Automation, vol. 12, pp. 566–
+580, 1996.
+[111] L. Janson, E. Schmerling, A. Clark, and M. Pavone, “Fast marching
+tree: A fast marching sampling-based method for optimal motion
+planning in many dimensions,” The International Journal of Robotics
+Research, 2015.
+[112] P. E. Hart, N. J. Nilsson, and B. Raphael, “A formal basis for
+the heuristic determination of minimum cost paths,” Transactions on
+Systems Science and Cybernetics, vol. 4, pp. 100–107, 1968.
+[113] I. Pohl, “First results on the effect of error in heuristic search,” Machine
+Intelligence, pp. 219–236, 1970.
+[114] A. Stentz, “Optimal and efﬁcient path planning for partially-known
+environments,” in International Conference Robotics and Automation,
+pp. 3310–3317, IEEE, 1994.
+[115] S. Anthony, “The focussed D* algorithm for real-time replanning.,” in
+IJCAI, vol. 95, pp. 1652–1659, 1995.
+[116] S. Koenig and M. Likhachev, “Fast replanning for navigation in
+unknown terrain,” Transactions on Robotics, vol. 21, pp. 354–363,
+2005.
+[117] E. A. Hansen and R. Zhou, “Anytime heuristic search.,” J. Artif. Intell.
+Res.(JAIR), vol. 28, pp. 267–297, 2007.
+[118] M. Likhachev, G. J. Gordon, and S. Thrun, “ARA*: Anytime A* with
+provable bounds on sub-optimality,” in Advances in Neural Information
+Processing Systems, p. None, 2003.
+[119] M. Likhachev, D. I. Ferguson, G. J. Gordon, A. Stentz, and S. Thrun,
+“Anytime dynamic A*: An anytime, replanning algorithm.,” in ICAPS,
+pp. 262–271, 2005.
+[120] K. Daniel, A. Nash, S. Koenig, and A. Felner, “Theta*: Any-angle
+path planning on grids,” Journal of Artiﬁcial Intelligence Research,
+pp. 533–579, 2010.
+
+26
+[121] A. Nash, S. Koenig, and C. Tovey, “Lazy theta*: Any-angle path
+planning and path length analysis in 3d,” in Third Annual Symposium
+on Combinatorial Search, 2010.
+[122] P. Yap, N. Burch, R. C. Holte, and J. Schaeffer, “Block a*: Database-
+driven search with applications in any-angle path-planning.,” in AAAI,
+2011.
+[123] D. Ferguson and A. Stentz, “Using interpolation to improve path
+planning: The ﬁeld d* algorithm,” Journal of Field Robotics, vol. 23,
+pp. 79–101, 2006.
+[124] D. Hsu, J.-C. Latombe, and R. Motwani, “Path planning in expansive
+conﬁguration spaces,” in International Conference on Robotics and
+Automation, vol. 3, pp. 2719–2726, IEEE, 1997.
+[125] D. Hsu, R. Kindel, J.-C. Latombe, and S. Rock, “Randomized kino-
+dynamic motion planning with moving obstacles,” The International
+Journal of Robotics Research, vol. 21, pp. 233–255, 2002.
+[126] T. Kunz and M. Stilman, “Kinodynamic RRTs with ﬁxed time step and
+best-input extension are not probabilistically complete,” in Algorithmic
+Foundations of Robotics XI, pp. 233–244, Springer, 2015.
+[127] S. Karaman and E. Frazzoli, “Optimal kinodynamic motion planning
+using incremental sampling-based methods,” in Conference on Decision
+and Control, pp. 7681–7687, IEEE, 2010.
+[128] A. Perez, R. Platt Jr, G. Konidaris, L. Kaelbling, and T. Lozano-
+Perez, “LQR-RRT*: Optimal sampling-based motion planning with
+automatically derived extension heuristics,” in International Conference
+on Robotics and Automation, pp. 2537–2542, IEEE, 2012.
+[129] D. J. Webb and J. van den Berg, “Kinodynamic RRT*: Asymptotically
+optimal motion planning for robots with linear dynamics,” in Interna-
+tional Conference on Robotics and Automation, pp. 5054–5061, IEEE,
+2013.
+[130] M.
+Otte
+and
+E.
+Frazzoli,
+“RRT-X:
+Real-time
+motion
+plan-
+ning/replanning for environments with unpredictable obstacles,” in
+International Workshop on the Algorithmic Foundations of Robotics,
+2014.
+[131] C. Urmson, J. Anhalt, D. Bagnell, C. Baker, R. Bittner, M. Clark,
+J. Dolan, D. Duggins, T. Galatali, C. Geyer, et al., “Autonomous driving
+in urban environments: Boss and the Urban Challenge,” Journal of
+Field Robotics, vol. 25, pp. 425–466, 2008.
+[132] D. Dolgov, S. Thrun, M. Montemerlo, and J. Diebel, “Practical search
+techniques in path planning for autonomous driving,” Ann Arbor,
+vol. 1001, p. 48105, 2008.
+[133] A. Bacha, C. Bauman, R. Faruque, M. Fleming, C. Terwelp, C. Rein-
+holtz, D. Hong, A. Wicks, T. Alberi, D. Anderson, et al., “Odin: Team
+victorTango’s entry in the DARPA Urban Challenge,” Journal of Field
+Robotics, vol. 25, pp. 467–492, 2008.
+[134] J. Leonard, J. How, S. Teller, M. Berger, S. Campbell, G. Fiore,
+L. Fletcher, E. Frazzoli, A. Huang, S. Karaman, et al., “A perception-
+driven autonomous urban vehicle,” Journal of Field Robotics, vol. 25,
+pp. 727–774, 2008.
+[135] J. P. Hespanha et al., “Trajectory-tracking and path-following of under-
+actuated autonomous vehicles with parametric modeling uncertainty,”
+Transactions on Automatic Control, vol. 52, pp. 1362–1379, 2007.
+[136] A. P. Aguiar, J. P. Hespanha, and P. V. Kokotovi´c, “Path-following
+for nonminimum phase systems removes performance limitations,”
+Transactions on Automatic Control, vol. 50, pp. 234–239, 2005.
+[137] H. K. Khalil, Nonlinear systems, vol. 3. Prentice hall New Jersey, 1996.
+[138] R. Wallace, A. Stentz, C. E. Thorpe, H. Maravec, W. Whittaker, and
+T. Kanade, “First results in robot road-following.,” in IJCAI, pp. 1089–
+1095, 1985.
+[139] O. Amidi and C. E. Thorpe, “Integrated mobile robot control,” in
+Fibers’ 91, Boston, MA, pp. 504–523, International Society for Optics
+and Photonics, 1991.
+[140] A. L. Rankin, C. D. Crane III, D. G. Armstrong II, A. D. Nease, and
+H. E. Brown, “Autonomous path-planning navigation system for site
+characterization,” in Aerospace/Defense Sensing and Controls, pp. 176–
+186, International Society for Optics and Photonics, 1996.
+[141] J. Wit, C. D. Crane, and D. Armstrong, “Autonomous ground vehicle
+path tracking,” Journal of Robotic Systems, vol. 21, pp. 439–449, 2004.
+[142] Y. Kanayama, Y. Kimura, F. Miyazaki, and T. Noguchi, “A stable track-
+ing control method for an autonomous mobile robot,” in International
+Conference on Robotics and Automation, pp. 384–389, IEEE, 1990.
+[143] Z.-P. Jiang and H. Nijmeijer, “Tracking control of mobile robots: a case
+study in backstepping,” Automatica, vol. 33, pp. 1393–1399, 1997.
+[144] B. d’Andréa Novel, G. Campion, and G. Bastin, “Control of nonholo-
+nomic wheeled mobile robots by state feedback linearization,” The
+International journal of robotics research, vol. 14, pp. 543–559, 1995.
+[145] C. E. Garcia, D. M. Prett, and M. Morari, “Model predictive control:
+theory and practice-a survey,” Automatica, vol. 25, pp. 335–348, 1989.
+[146] E. F. Camacho and C. B. Alba, Model predictive control. Springer
+Science & Business Media, 2013.
+[147] D. Q. Mayne, J. B. Rawlings, C. V. Rao, and P. O. Scokaert, “Con-
+strained model predictive control: Stability and optimality,” Automatica,
+vol. 36, pp. 789–814, 2000.
+[148] P. Falcone, F. Borrelli, J. Asgari, H. E. Tseng, and D. Hrovat,
+“Predictive active steering control for autonomous vehicle systems,”
+Transactions on Control Systems Technology, vol. 15, pp. 566–580,
+2007.
+[149] P. Falcone, M. Tufo, F. Borrelli, J. Asgari, and H. E. Tseng, “A linear
+time varying model predictive control approach to the integrated vehicle
+dynamics control problem in autonomous systems,” in 46th Conference
+on Decision and Control, pp. 2980–2985, IEEE, 2007.
+[150] P. Falcone, F. Borrelli, H. E. Tseng, J. Asgari, and D. Hrovat,
+“Linear time-varying model predictive control and its application to
+active steering systems: Stability analysis and experimental validation,”
+International journal of robust and nonlinear control, vol. 18, pp. 862–
+875, 2008.
+[151] E. Kim, J. Kim, and M. Sunwoo, “Model predictive control strategy
+for smooth path tracking of autonomous vehicles with steering actuator
+dynamics,” International Journal of Automotive Technology, vol. 15,
+pp. 1155–1164, 2014.
+[152] D. E. Kirk, Optimal control theory: an introduction. Courier Corpora-
+tion, 2012.
+[153] A. Ollero and O. Amidi, “Predictive path tracking of mobile robots.
+application to the CMU Navlab,” in 5th International Conference on
+Advanced Robotics, vol. 91, pp. 1081–1086, 1991.
+[154] G. V. Raffo, G. K. Gomes, J. E. Normey-Rico, C. R. Kelber, and
+L. B. Becker, “A predictive controller for autonomous vehicle path
+tracking,” Transactions on Intelligent Transportation Systems, vol. 10,
+pp. 92–102, 2009.
+[155] Y. Yoon, J. Shin, H. J. Kim, Y. Park, and S. Sastry, “Model-predictive
+active steering and obstacle avoidance for autonomous ground vehi-
+cles,” Control Engineering Practice, vol. 17, pp. 741–750, 2009.
+[156] O. Sename, P. Gaspar, and J. Bokor, Robust control and linear param-
+eter varying approaches: application to vehicle dynamics, vol. 437.
+Springer, 2013.
+[157] P. Gáspár, Z. Szabó, and J. Bokor, “LPV design of fault-tolerant control
+for road vehicles,” International Journal of Applied Mathematics and
+Computer Science, vol. 22, pp. 173–182, 2012.
+[158] J. Huang and M. Tomizuka, “LTV controller design for vehicle lateral
+control under fault in rear sensors,” Transactions on Mechatronics,
+vol. 10, pp. 1–7, 2005.
+[159] S. Ç. Baslamisli, ˙I. E. Köse, and G. Anla¸s, “Gain-scheduled integrated
+active steering and differential control for vehicle handling improve-
+ment,” Vehicle System Dynamics, vol. 47, pp. 99–119, 2009.
+[160] T. Besselmann and M. Morari, “Autonomous vehicle steering using
+explicit LPV-MPC,” in Control Conference (ECC), 2009 European,
+pp. 2628–2633, IEEE, 2009.
+[161] T. Besselmann, P. Rostalski, and M. Morari, “Hybrid parameter-varying
+model predictive control for lateral vehicle stabilization,” in European
+Control Conference, pp. 1068–1075, IEEE, 2007.
+[162] P. Gáspár, Z. Szabó, and J. Bokor, “The design of an integrated control
+system in heavy vehicles based on an LPV method,” in Conference on
+Decision and Control, pp. 6722–6727, IEEE, 2005.
+[163] C. Poussot-Vassal, O. Sename, L. Dugard, P. Gaspar, Z. Szabo, and
+J. Bokor, “A new semi-active suspension control strategy through LPV
+technique,” Control Engineering Practice, vol. 16, pp. 1519–1534,
+2008.
+[164] M. Doumiati, O. Sename, L. Dugard, J.-J. Martinez-Molina, P. Gaspar,
+and Z. Szabo, “Integrated vehicle dynamics control via coordination of
+active front steering and rear braking,” European Journal of Control,
+vol. 19, pp. 121–143, 2013.
+[165] P. Gaspar, Z. Szabo, J. Bokor, C. Poussot-Vassal, O. Sename, and
+L. Dugard, “Toward global chassis control by integrating the brake
+and suspension systems,” in 5th IFAC Symposium on Advances in
+Automotive Control, IFAC AAC 2007, p. 6, IFAC, 2007.
+
+27
+Brian Paden received B.S. and M.S. degrees in
+Mechanical Engineering in 2011 and 2013 respec-
+tively from UC Santa Barbara. Concurrently from
+2011 to 2013 he was an Engineer at LaunchPoint
+Technologies developing electronically controlled
+automotive valve-train systems. His research in-
+terests are in the areas of control theory and
+motion planning with a focus on applications for
+autonomous vehicles. His current afﬁliation is with
+the Laboratory for Information and Decision sys-
+tems and he is a Doctoral Candidate in the depart-
+ment of Mechanical Engineering at MIT.
+Michal ˇCáp received his Bc. degree in Informa-
+tion Technology from Brno University of Tech-
+nology, the Czech Republic and MSc degree in
+Agent Technologies from Utrecht University, the
+Netherlands. He is currently pursuing PhD de-
+gree in Artiﬁcial Intelligence at CTU in Prague,
+Czech Republic. At the moment, Michal Cap holds
+the position of Fulbright-funded visiting researcher
+at Massachusetts Institute of Technology, USA.
+His research interests include motion planning,
+multi-robot trajectory coordination and autonomous
+transportation systems in general.
+Sze Zheng Yong is currently a postdoctoral asso-
+ciate in the Laboratory for Information and Deci-
+sion Systems at Massachusetts Institute of Tech-
+nology. He obtained his Dipl.-Ing.(FH) degree in
+automotive engineering with a specialization in
+mechatronics and control systems from the Esslin-
+gen University of Applied Sciences, Germany in
+2008 and his S.M. and Ph.D. degrees in mechanical
+engineering from MIT in 2010 and 2016, respec-
+tively. His research interests lie in the broad area
+of control and estimation of hidden mode hybrid
+systems, with applications to intention-aware autonomous systems and
+resilient cyber-physical systems.
+Dmitry Yershov was born in Kharkov, Ukraine,
+in 1983. He received his B.S. and M.S. degree
+in applied mathematics from Kharkov National
+University in 2004 and 2005, respectively. In 2013,
+he graduated with a Ph.D. degree from the the
+Department of Computer Science at the University
+of Illinois at Urbana-Champaign. He joined the
+Laboratory for Information and Decision Systems
+at the Massachusetts Institute of Technology in
+years 2013–2015 where he was a postdoctoral
+associate. Currently, he is with nuTonomy inc.
+His research is focused primarily on the feedback planning problem in
+robotics, which extends to planning in information spaces and planning
+under uncertainties.
+Emilio Frazzoli is a Professor of Aeronautics and
+Astronautics with the Laboratory for Information
+and Decision Systems at the Massachusetts Insti-
+tute of Technology. He received a Laurea degree
+in Aerospace Engineering from the University of
+Rome, “Sapienza" , Italy, in 1994, and a Ph.
+D. degree from the Department of Aeronautics
+and Astronautics of the Massachusetts Institute of
+Technology, in 2001. Before returning to MIT in
+2006, he held faculty positions at the University of
+Illinois, Urbana-Champaign, and at the University
+of California, Los Angeles. He was the recipient of a NSF CAREER award
+in 2002, and of the IEEE George S. Axelby award in 2015. His current
+research interests focus primarily on autonomous vehicles, mobile robotics,
+and transportation systems.

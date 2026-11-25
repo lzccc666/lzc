@@ -1,0 +1,212 @@
+[
+  {
+    "type": "报告",
+    "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/statistics/causal_mapping_full_001/report.json",
+    "sha256": "577e0cdc3ab6ea293a6d232c6304312151229165c7d83b70c9d82ec08ec3dac9"
+  },
+  {
+    "type": "报告",
+    "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/statistics/temporal_identity_full_001/report.json",
+    "sha256": "62e6667882206c8c84ac2ac925e0dc796a0b663dcc44c7a7116cbb158c2d498a"
+  },
+  {
+    "type": "报告",
+    "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_relations_full_001/summary.json",
+    "sha256": "c555c9d4e43f5a8b75dccf3697a2bcf9878c5ba7d3696e1d183de9806ceef1f1"
+  },
+  {
+    "type": "报告",
+    "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/statistics/causal_retrieval_full_001/report.json",
+    "sha256": "50e285bd819e85fce8e0aa75a05a4c9cbbbb4b7829880ddf32bd476b61791ac2"
+  },
+  {
+    "type": "报告",
+    "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/statistics/fair_three_task_full_validation_001/report.json",
+    "sha256": "edeae971bf93f20e9306a6fb12d1566f2b778fa83c1f8ac2bf3041fbeab4552c"
+  },
+  {
+    "type": "报告",
+    "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/statistics/causal_modules_full_001/report.json",
+    "sha256": "3d3b8b53a181f0d909010c3150247ef8897500bc8d5b571ba62b194c16cccd0f"
+  },
+  {
+    "type": "报告",
+    "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_selection_ablation_full_001/report.json",
+    "sha256": "de43cb1617e9f61841d076f39fb19640a2560b101bbb83b1dcb72bbbc281542c"
+  },
+  {
+    "type": "报告",
+    "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_goals_full_001/report.json",
+    "sha256": "3c8b6b691239983d9753aa081d808e26e40d1d8955a0c02d7888a89508bc01a6"
+  },
+  {
+    "type": "报告",
+    "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/statistics/causal_maps_full_001/report.json",
+    "sha256": "55f31604f141bc06ca8f4fbbea0ad0e11562196c774bfa60ff535edc5370eee4"
+  },
+  {
+    "type": "报告",
+    "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/statistics/kitti_object_cpu_full_001/report.json",
+    "sha256": "f9d721a62720bdf668133c29d9c4e09e1834056346c81ad6df616d272deb8d24"
+  },
+  {
+    "type": "报告",
+    "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/statistics/kitti_tracking_full_001/report.json",
+    "sha256": "692eaf9ea640621b8500bb8053655e8bdfc0f5e6076ef9998001ca4c664e7de0"
+  },
+  {
+    "type": "报告",
+    "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/statistics/causal_mapping_parameters_full_001/report.json",
+    "sha256": "c0543ab340733329b545cda28f8dfda7c1bfe9c791a1f5c93901a606c2a36d5f"
+  },
+  {
+    "type": "报告",
+    "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/performance/causal_selection_parameters_full_001/report.json",
+    "sha256": "0b4d44b5af0eded724d3d4dc230751f0a710ddea113e3dac5e53af1bdf89df79"
+  },
+  {
+    "type": "报告",
+    "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/github_sync_001/runtime_environment.json",
+    "sha256": "32a5a3191939fa91a1133c384eef503af360116b02aeaa21a0676d6692a6903e"
+  },
+  {
+    "type": "报告",
+    "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/statistics/causal_modules_motion_full_001/report.json",
+    "sha256": "8df31fa048405344a8a241b9c9f88dc8716746212fc4895bc8b789da7aa883fd"
+  },
+  {
+    "type": "报告",
+    "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/semantic_dataset/structured_supervision_002/manifest.json",
+    "sha256": "5ce7c27827b8387f4c83ceebfce857bd4acade228a7200f730f0256e6d5d4f7e"
+  },
+  {
+    "type": "报告",
+    "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/training/three_task_v2_formal_seed17_001/release.json",
+    "sha256": "f90c4905c75a063193ccd8261ff69733bde77da72bd97dcd919735f7e20488e3"
+  },
+  {
+    "type": "报告",
+    "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/main_experiments/fair_three_task_full_validation_001/release.json",
+    "sha256": "5bf7cfcf692bfcebe5981db1b430d5e0692f079771e0b94fbbca29fc5494e37c"
+  },
+  {
+    "type": "报告",
+    "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/main_experiments/fair_three_task_full_validation_001/report.json",
+    "sha256": "2edddf7c04e7dca40e5f71c06c81ab7728aba3966ea3e2b850e58a400255f1d7"
+  },
+  {
+    "type": "报告",
+    "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/validation_report.json",
+    "sha256": "3cd181b5ab3ea65933331fbd9058ac4af1680dfcb2bad174a682f07a850af8f2"
+  },
+  {
+    "type": "报告",
+    "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/最终代码与实验交付回执_031.json",
+    "sha256": "1af1282e5743ed17668d8a1206c1528b99e83e5a4fc8252d020fe0445fa29874"
+  },
+  {
+    "type": "代码",
+    "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/github_sync_001/checkout/conceptgraph/completion/development_causal_inputs.py",
+    "sha256": "4c7c03b1b668dea412bb5414cdb73c0805915eee20cbcdc9c9a68f51863fceb9"
+  },
+  {
+    "type": "代码",
+    "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/github_sync_001/checkout/conceptgraph/slam/streamlined_mapping.py",
+    "sha256": "ee8bf3af95408267b9fc005c3edd06e3977b043a4dce3566a768165dc2193fd7"
+  },
+  {
+    "type": "代码",
+    "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/github_sync_001/checkout/conceptgraph/completion/depth.py",
+    "sha256": "c3d0b1efa3cdc91a82b75cdf872fe923ff68b240090a49022d3a7481ab653b0e"
+  },
+  {
+    "type": "代码",
+    "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/github_sync_001/checkout/conceptgraph/completion/association.py",
+    "sha256": "13154cc664d9b1528c869575539c444bb20d8e2cc3a119aa1e4d01f7c9d5ccd4"
+  },
+  {
+    "type": "代码",
+    "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/github_sync_001/checkout/conceptgraph/completion/motion.py",
+    "sha256": "d9555773c6badfc4e6cf9b23eb8c8cb5396e16912cc9146f50e00ab36e5abb01"
+  },
+  {
+    "type": "代码",
+    "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/github_sync_001/checkout/conceptgraph/scenegraph/relations.py",
+    "sha256": "099e967bdbe5cd0ecf63fe90d094e5f9638d5c4df3643148d7671ee6fa25c105"
+  },
+  {
+    "type": "代码",
+    "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/github_sync_001/checkout/conceptgraph/scenegraph/incremental_graph.py",
+    "sha256": "904fedec44a276080b083ed3459982e7c177f747bbfd0186fa0164e2f1b91f68"
+  },
+  {
+    "type": "代码",
+    "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/github_sync_001/checkout/conceptgraph/navigation/semantic.py",
+    "sha256": "1070d7458dbddd0063ae8bbfb7bea7548e2329bf1005794704f704ee0cfd68ee"
+  },
+  {
+    "type": "代码",
+    "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/source_bundle/github_sync_001/checkout/conceptgraph/completion/stage9.py",
+    "sha256": "466a5b34dfd039e691232dc02e01869ab700b46ae8162f8fb05232c30a805dd5"
+  },
+  {
+    "type": "图像/图表来源",
+    "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/statistics/causal_mapping_full_001/report.json",
+    "sha256": "577e0cdc3ab6ea293a6d232c6304312151229165c7d83b70c9d82ec08ec3dac9",
+    "figure": "mapping"
+  },
+  {
+    "type": "图像/图表来源",
+    "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/statistics/causal_retrieval_full_001/report.json",
+    "sha256": "50e285bd819e85fce8e0aa75a05a4c9cbbbb4b7829880ddf32bd476b61791ac2",
+    "figure": "retrieval"
+  },
+  {
+    "type": "图像/图表来源",
+    "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/statistics/fair_three_task_full_validation_001/report.json",
+    "sha256": "edeae971bf93f20e9306a6fb12d1566f2b778fa83c1f8ac2bf3041fbeab4552c",
+    "figure": "qwen"
+  },
+  {
+    "type": "图像/图表来源",
+    "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/statistics/causal_maps_full_001/report.json",
+    "sha256": "55f31604f141bc06ca8f4fbbea0ad0e11562196c774bfa60ff535edc5370eee4",
+    "figure": "maps"
+  },
+  {
+    "type": "图像/图表来源",
+    "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0039/frames.jsonl",
+    "sha256": "d05f116b7c8de8736aae0512d6c50eef63b2b48cf6cc1e619c0ca27eb01da6de",
+    "figure": "case"
+  },
+  {
+    "type": "图像/图表来源",
+    "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_frontend_reuse_full_001/inputs/scene-0039/color/000002.jpg",
+    "sha256": "dade025ee8f6a5678ec36eea1933c9ffd2f0dce47ff40a9b89ce4b397d478629",
+    "figure": "case"
+  },
+  {
+    "type": "图像/图表来源",
+    "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_frontend_reuse_full_001/inputs/scene-0039/depth/000002.png",
+    "sha256": "a436fdfba4a95a99f76c0dfad471a3b511e679051cfb25229d8b98b8259e51d8",
+    "figure": "case"
+  },
+  {
+    "type": "图像/图表来源",
+    "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_frontend_reuse_full_001/inputs/scene-0039/exp_streamlined_yolo_outdoor_objects_v1/detections/000002.pkl.gz",
+    "sha256": "2412e3451897dd3008698535e523165f20fa4a73c2714736e311393f3d063c4e",
+    "figure": "case"
+  },
+  {
+    "type": "图像/图表来源",
+    "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0039/frames.jsonl",
+    "sha256": "d05f116b7c8de8736aae0512d6c50eef63b2b48cf6cc1e619c0ca27eb01da6de",
+    "figure": "relations_case"
+  },
+  {
+    "type": "图像/图表来源",
+    "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_relations_full_001/release.json",
+    "sha256": "b5b315e8e3dba5f2a0e247e757a27fe6e7c675b01723c4cb984efd5caf3e5602",
+    "figure": "relations_case"
+  }
+]

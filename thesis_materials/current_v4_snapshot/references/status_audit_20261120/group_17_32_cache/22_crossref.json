@@ -1,0 +1,790 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          19
+        ]
+      ],
+      "date-time": "2026-11-19T23:10:33Z",
+      "timestamp": 1795129833645,
+      "version": "4.10.3"
+    },
+    "reference-count": 68,
+    "publisher": "IEEE",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              6,
+              1
+            ]
+          ],
+          "date-time": "2022-06-01T00:00:00Z",
+          "timestamp": 1654041600000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              6,
+              1
+            ]
+          ],
+          "date-time": "2022-06-01T00:00:00Z",
+          "timestamp": 1654041600000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2022,
+          6
+        ]
+      ]
+    },
+    "DOI": "10.1109/cvpr52688.2022.01069",
+    "type": "proceedings-article",
+    "created": {
+      "date-parts": [
+        [
+          2022,
+          9,
+          27
+        ]
+      ],
+      "date-time": "2022-09-27T15:56:41Z",
+      "timestamp": 1664294201000
+    },
+    "page": "10955-10965",
+    "source": "Crossref",
+    "is-referenced-by-count": 1157,
+    "title": [
+      "Grounded Language-Image Pre-training"
+    ],
+    "prefix": "10.1109",
+    "author": [
+      {
+        "given": "Liunian Harold",
+        "family": "Li",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "UCLA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Pengchuan",
+        "family": "Zhang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Microsoft Research"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Haotian",
+        "family": "Zhang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Washington"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Jianwei",
+        "family": "Yang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Microsoft Research"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Chunyuan",
+        "family": "Li",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Microsoft Research"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Yiwu",
+        "family": "Zhong",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Wisconsin-Madison"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Lijuan",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Microsoft Cloud and AI"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Lu",
+        "family": "Yuan",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Microsoft Cloud and AI"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Lei",
+        "family": "Zhang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Intemational Digital Economy Academy"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Jenq-Neng",
+        "family": "Hwang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Washington"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Kai-Wei",
+        "family": "Chang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "UCLA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Jianfeng",
+        "family": "Gao",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Microsoft Research"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref39",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV.2015.303"
+      },
+      {
+        "key": "ref38",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3115/v1/D14-1162"
+      },
+      {
+        "key": "ref33",
+        "article-title": "Pre-train, prompt, and predict: A systematic survey of prompting methods in natural language processing",
+        "author": "liu",
+        "year": "2021",
+        "journal-title": "ArXiv Preprint"
+      },
+      {
+        "key": "ref32",
+        "first-page": "740",
+        "article-title": "Microsoft coco: Common objects in context",
+        "author": "lin",
+        "year": "0",
+        "journal-title": "European Conference on Computer Vision"
+      },
+      {
+        "key": "ref31",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV.2017.324"
+      },
+      {
+        "key": "ref30",
+        "first-page": "121",
+        "article-title": "Oscar: Object-semantics aligned pre-training for vision-language tasks",
+        "author": "li",
+        "year": "0",
+        "journal-title": "Proceedings of the European Conference on Computer Vision (ECCV)"
+      },
+      {
+        "key": "ref37",
+        "first-page": "1143",
+        "article-title": "Im2text: Describing images using 1 million captioned photographs",
+        "volume": "24",
+        "author": "ordonez",
+        "year": "2011",
+        "journal-title": "Advances in neural information processing systems"
+      },
+      {
+        "key": "ref36",
+        "first-page": "13",
+        "article-title": "ViL-BERT: Pretraining task-agnostic visiolinguistic representations for vision-and-language tasks",
+        "author": "lu",
+        "year": "0",
+        "journal-title": "Advances in Neural IInformation Processing Systems"
+      },
+      {
+        "key": "ref35",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2015.7298965"
+      },
+      {
+        "key": "ref34",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV48922.2021.00986"
+      },
+      {
+        "key": "ref60",
+        "article-title": "Focal self-attention for local-global interactions in vision transformers",
+        "author": "yang",
+        "year": "2021",
+        "journal-title": "ArXiv Preprint"
+      },
+      {
+        "key": "ref62",
+        "article-title": "Multi-scale vision long-former: A new vision transformer for high-resolution image encoding",
+        "author": "zhang",
+        "year": "2021",
+        "journal-title": "ArXiv Preprint"
+      },
+      {
+        "key": "ref61",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR46437.2021.01416"
+      },
+      {
+        "key": "ref63",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR46437.2021.00553"
+      },
+      {
+        "key": "ref28",
+        "article-title": "Visualbert: A simple and performant baseline for vision and language",
+        "author": "li",
+        "year": "2019",
+        "journal-title": "ArXiv Preprint"
+      },
+      {
+        "key": "ref64",
+        "article-title": "Learning to prompt for vision-language models",
+        "author": "zhou",
+        "year": "2021",
+        "journal-title": "ArXiv Preprint"
+      },
+      {
+        "key": "ref27",
+        "article-title": "Unicoder-VL: A universal encoder for vision and language by cross-modal pre-training",
+        "author": "li",
+        "year": "2019",
+        "journal-title": "ArXiv Preprint"
+      },
+      {
+        "key": "ref65",
+        "article-title": "Unified vision-language pretraining for image captioning and VQA",
+        "author": "zhou",
+        "year": "2020",
+        "journal-title": "AAAI"
+      },
+      {
+        "key": "ref66",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR42600.2020.01171"
+      },
+      {
+        "key": "ref29",
+        "article-title": "Unsupervised vision-and-language pre-training without parallel images and captions",
+        "author": "li",
+        "year": "2020",
+        "journal-title": "ArXiv Preprint"
+      },
+      {
+        "key": "ref67",
+        "article-title": "Deformable detr: Deformable transformers for end-to-end object detection",
+        "author": "zhu",
+        "year": "2020",
+        "journal-title": "ArXiv Preprint"
+      },
+      {
+        "key": "ref68",
+        "article-title": "Rethinking pretraining and self-training",
+        "volume": "33",
+        "author": "zoph",
+        "year": "2020",
+        "journal-title": "Advances in neural information processing systems"
+      },
+      {
+        "key": "ref2",
+        "author": "bird",
+        "year": "2009",
+        "journal-title": "Natural Language Processing with Python Analyzing Text with the Natural Language Toolkit"
+      },
+      {
+        "key": "ref1",
+        "first-page": "384",
+        "article-title": "Zero-shot object detection",
+        "author": "bansal",
+        "year": "0",
+        "journal-title": "Proceedings of the European Conference on Computer Vision (ECCV)"
+      },
+      {
+        "key": "ref20",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV.2019.00851"
+      },
+      {
+        "key": "ref22",
+        "first-page": "18",
+        "volume": "2",
+        "author": "krasin",
+        "year": "2017",
+        "journal-title": "Openimages A public dataset for large-scale multi-label and multi-class image classification"
+      },
+      {
+        "key": "ref21",
+        "article-title": "Bilinear attention networks",
+        "author": "kim",
+        "year": "0",
+        "journal-title": "Proceedings of the 32Nd International Conference on Neural Information Processing Systems"
+      },
+      {
+        "key": "ref24",
+        "first-page": "1097",
+        "article-title": "Imagenet classification with deep convolutional neural networks",
+        "volume": "25",
+        "author": "krizhevsky",
+        "year": "2012",
+        "journal-title": "Advances in neural information processing systems"
+      },
+      {
+        "key": "ref23",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s11263-016-0981-7"
+      },
+      {
+        "key": "ref26",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/2021.emnlp-main.243"
+      },
+      {
+        "key": "ref25",
+        "article-title": "The open images dataset v4: Unified image classification, object detection, and visual relationship detection at scale",
+        "author": "kuznetsova",
+        "year": "2018",
+        "journal-title": "ArXiv Preprint"
+      },
+      {
+        "key": "ref50",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/D19-1514"
+      },
+      {
+        "key": "ref51",
+        "first-page": "6105",
+        "article-title": "Efficientnet: Rethinking model scaling for convolutional neural networks",
+        "author": "tan",
+        "year": "0",
+        "journal-title": "International Conference on Machine Learning"
+      },
+      {
+        "key": "ref59",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV.2019.00967"
+      },
+      {
+        "key": "ref58",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV48922.2021.00305"
+      },
+      {
+        "key": "ref57",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2017.330"
+      },
+      {
+        "key": "ref56",
+        "first-page": "466",
+        "article-title": "Simple baselines for human pose estimation and tracking",
+        "author": "xiao",
+        "year": "0",
+        "journal-title": "Proceedings of the European Conference on Computer Vision (ECCV)"
+      },
+      {
+        "key": "ref55",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV.2019.01002"
+      },
+      {
+        "key": "ref54",
+        "article-title": "Frustratingly simple few-shot object detection",
+        "author": "wang",
+        "year": "2020",
+        "journal-title": "ArXiv Preprint"
+      },
+      {
+        "key": "ref53",
+        "first-page": "5998",
+        "article-title": "Attention is all you need",
+        "author": "vaswani",
+        "year": "0",
+        "journal-title": "Advances in neural information processing systems"
+      },
+      {
+        "key": "ref52",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV.2019.00972"
+      },
+      {
+        "key": "ref10",
+        "article-title": "Bert: Pre-training of deep bidirectional transformers for language understanding",
+        "author": "devlin",
+        "year": "2018",
+        "journal-title": "ArXiv Preprint"
+      },
+      {
+        "key": "ref11",
+        "article-title": "Clip-adapter: Better vision-language models with feature adapters",
+        "author": "gao",
+        "year": "2021",
+        "journal-title": "ArXiv Preprint"
+      },
+      {
+        "key": "ref40",
+        "article-title": "Learning transferable visual models from natural language supervision",
+        "author": "radford",
+        "year": "0",
+        "journal-title": "International Conference on Machine Learning (ICML)"
+      },
+      {
+        "key": "ref12",
+        "article-title": "Zero-shot detection via vision and language knowledge distillation",
+        "author": "gu",
+        "year": "2021",
+        "journal-title": "ArXiv Preprint"
+      },
+      {
+        "key": "ref13",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2019.00550"
+      },
+      {
+        "key": "ref14",
+        "author": "han",
+        "year": "2021",
+        "journal-title": "Image scene graph generation (sgg) benchmark"
+      },
+      {
+        "key": "ref15",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2016.90"
+      },
+      {
+        "key": "ref16",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2019.00686"
+      },
+      {
+        "key": "ref17",
+        "author": "ji",
+        "year": "2019",
+        "journal-title": "Action genome Actions as composition of spatio-temporal scene graphs"
+      },
+      {
+        "key": "ref18",
+        "article-title": "Scaling up visual and vision-language representation learning with noisy text supervision",
+        "author": "jia",
+        "year": "0",
+        "journal-title": "International Conference on Machine Learning (ICML)"
+      },
+      {
+        "key": "ref19",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV48922.2021.00180"
+      },
+      {
+        "key": "ref4",
+        "first-page": "213",
+        "article-title": "End-to-end object detection with transformers",
+        "author": "carion",
+        "year": "0",
+        "journal-title": "European Conference on Computer Vision"
+      },
+      {
+        "key": "ref3",
+        "article-title": "Language models are few-shot learners",
+        "author": "brown",
+        "year": "2020",
+        "journal-title": "ArXiv Preprint"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "crossref",
+        "first-page": "834",
+        "DOI": "10.1109/TPAMI.2017.2699184",
+        "article-title": "Deeplab: Semantic image segmentation with deep convolutional nets, atrous convolution, and fully connected crfs",
+        "volume": "40",
+        "author": "chen",
+        "year": "2017",
+        "journal-title": "IEEE Transactions on Pattern Analysis and Machine Intelligence"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2019.00511"
+      },
+      {
+        "key": "ref8",
+        "first-page": "379",
+        "article-title": "R-fcn: Object detection via region-based fully convolutional networks",
+        "author": "dai",
+        "year": "0",
+        "journal-title": "Advances in neural information processing systems"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.29007/3b2l"
+      },
+      {
+        "key": "ref49",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2019.00584"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR46437.2021.00729"
+      },
+      {
+        "key": "ref46",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/P18-1238"
+      },
+      {
+        "key": "ref45",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV.2019.00852"
+      },
+      {
+        "key": "ref48",
+        "article-title": "VL-BERT: Pre-training of generic visual-linguistic representations",
+        "author": "su",
+        "year": "2019",
+        "journal-title": "ArXiv Preprint"
+      },
+      {
+        "key": "ref47",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/2020.emnlp-main.346"
+      },
+      {
+        "key": "ref42",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s11263-020-01355-6"
+      },
+      {
+        "key": "ref41",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1609/aaai.v34i07.6868"
+      },
+      {
+        "key": "ref44",
+        "first-page": "91",
+        "article-title": "Faster r-cnn: Towards real-time object detection with region proposal networks",
+        "volume": "28",
+        "author": "ren",
+        "year": "2015",
+        "journal-title": "Advances in neural information processing systems"
+      },
+      {
+        "key": "ref43",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2016.91"
+      }
+    ],
+    "event": {
+      "name": "2022 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+      "location": "New Orleans, LA, USA",
+      "start": {
+        "date-parts": [
+          [
+            2022,
+            6,
+            18
+          ]
+        ]
+      },
+      "end": {
+        "date-parts": [
+          [
+            2022,
+            6,
+            24
+          ]
+        ]
+      }
+    },
+    "container-title": [
+      "2022 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx7/9878378/9878366/09879567.pdf?arnumber=9879567",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2022,
+          10,
+          14
+        ]
+      ],
+      "date-time": "2022-10-14T16:54:19Z",
+      "timestamp": 1665766459000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/9879567/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2022,
+          6
+        ]
+      ]
+    },
+    "references-count": 68,
+    "URL": "https://doi.org/10.1109/cvpr52688.2022.01069",
+    "relation": {},
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2022,
+          6
+        ]
+      ]
+    }
+  }
+}

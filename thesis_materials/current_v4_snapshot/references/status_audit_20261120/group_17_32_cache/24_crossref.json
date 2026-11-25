@@ -1,0 +1,796 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          20
+        ]
+      ],
+      "date-time": "2026-11-20T03:57:34Z",
+      "timestamp": 1795147054094,
+      "version": "4.10.3"
+    },
+    "publisher-location": "Cham",
+    "reference-count": 62,
+    "publisher": "Springer Nature Switzerland",
+    "isbn-type": [
+      {
+        "value": "9783031729690",
+        "type": "print"
+      },
+      {
+        "value": "9783031729706",
+        "type": "electronic"
+      }
+    ],
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              11,
+              23
+            ]
+          ],
+          "date-time": "2024-11-23T00:00:00Z",
+          "timestamp": 1732320000000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              11,
+              23
+            ]
+          ],
+          "date-time": "2024-11-23T00:00:00Z",
+          "timestamp": 1732320000000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "link.springer.com"
+      ],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2025
+        ]
+      ]
+    },
+    "DOI": "10.1007/978-3-031-72970-6_3",
+    "type": "book-chapter",
+    "created": {
+      "date-parts": [
+        [
+          2024,
+          11,
+          22
+        ]
+      ],
+      "date-time": "2024-11-22T05:50:43Z",
+      "timestamp": 1732254643000
+    },
+    "page": "38-55",
+    "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 2135,
+    "title": [
+      "Grounding DINO: Marrying DINO with Grounded Pre-training for Open-Set Object Detection"
+    ],
+    "prefix": "10.1007",
+    "author": [
+      {
+        "given": "Shilong",
+        "family": "Liu",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Zhaoyang",
+        "family": "Zeng",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Tianhe",
+        "family": "Ren",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Feng",
+        "family": "Li",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Hao",
+        "family": "Zhang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Jie",
+        "family": "Yang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Qing",
+        "family": "Jiang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Chunyuan",
+        "family": "Li",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Jianwei",
+        "family": "Yang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Hang",
+        "family": "Su",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Jun",
+        "family": "Zhu",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Lei",
+        "family": "Zhang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "297",
+    "published-online": {
+      "date-parts": [
+        [
+          2024,
+          11,
+          23
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "3_CR1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Anderson, P., et al.: Bottom-up and top-down attention for image captioning and visual question answering. In: Computer Vision and Pattern Recognition (2017)",
+        "DOI": "10.1109/CVPR.2018.00636"
+      },
+      {
+        "key": "3_CR2",
+        "series-title": "Lecture Notes in Computer Science",
+        "doi-asserted-by": "publisher",
+        "first-page": "213",
+        "DOI": "10.1007/978-3-030-58452-8_13",
+        "volume-title": "Computer Vision – ECCV 2020",
+        "author": "N Carion",
+        "year": "2020",
+        "unstructured": "Carion, N., Massa, F., Synnaeve, G., Usunier, N., Kirillov, A., Zagoruyko, S.: End-to-end object detection with transformers. In: Vedaldi, A., Bischof, H., Brox, T., Frahm, J.-M. (eds.) ECCV 2020. LNCS, vol. 12346, pp. 213–229. Springer, Cham (2020). https://doi.org/10.1007/978-3-030-58452-8_13"
+      },
+      {
+        "key": "3_CR3",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Chen, K., et al.: Hybrid task cascade for instance segmentation. In: Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pp. 4974–4983 (2019)",
+        "DOI": "10.1109/CVPR.2019.00511"
+      },
+      {
+        "key": "3_CR4",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Chen, Q., et al.: Group DETR: fast DETR training with group-wise one-to-many assignment (2022)",
+        "DOI": "10.1109/ICCV51070.2023.00610"
+      },
+      {
+        "key": "3_CR5",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Dai, X., et al.: Dynamic head: unifying object detection heads with attentions. In: Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pp. 7373–7382 (2021)",
+        "DOI": "10.1109/CVPR46437.2021.00729"
+      },
+      {
+        "key": "3_CR6",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Deng, J., Yang, Z., Chen, T., Zhou, W., Li, H.: TransVG: end-to-end visual grounding with transformers. arXiv, Computer Vision and Pattern Recognition (2021)",
+        "DOI": "10.1109/ICCV48922.2021.00179"
+      },
+      {
+        "key": "3_CR7",
+        "unstructured": "Devlin, J., Chang, M.W., Lee, K., Toutanova, K.: BERT: pre-training of deep bidirectional transformers for language understanding. arXiv preprint arXiv:1810.04805 (2018)"
+      },
+      {
+        "key": "3_CR8",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Dong, N., Zhang, Y., Ding, M., Lee, G.H.: Boosting long-tailed object detection via step-wise learning on smooth-tail data (2023). https://arxiv.org/abs/2305.12833",
+        "DOI": "10.1109/ICCV51070.2023.00639"
+      },
+      {
+        "key": "3_CR9",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Du, Y., Fu, Z., Liu, Q., Wang, Y.: Visual grounding with transformers (2021)",
+        "DOI": "10.1109/ICME52920.2022.9859880"
+      },
+      {
+        "key": "3_CR10",
+        "unstructured": "Gan, Z., Chen, Y.C., Li, L., Zhu, C., Cheng, Y., Liu, J.: Large-scale adversarial training for vision-and-language representation learning. In: Neural Information Processing Systems (2020)"
+      },
+      {
+        "key": "3_CR11",
+        "unstructured": "Gao, P., et al.: Clip-adapter: better vision-language models with feature adapters. arXiv preprint arXiv:2110.04544 (2021)"
+      },
+      {
+        "key": "3_CR12",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Gao, P., Zheng, M., Wang, X., Dai, J., Li, H.: Fast convergence of DETR with spatially modulated co-attention. arXiv preprint arXiv:2101.07448 (2021)",
+        "DOI": "10.1109/ICCV48922.2021.00360"
+      },
+      {
+        "key": "3_CR13",
+        "unstructured": "Gu, X., Lin, T.Y., Kuo, W., Cui, Y.: Open-vocabulary object detection via vision and language knowledge distillation. Learning (2021)"
+      },
+      {
+        "key": "3_CR14",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Gupta, A., Dollar, P., Girshick, R.: LVIS: a dataset for large vocabulary instance segmentation. In: Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pp. 5356–5364 (2019)",
+        "DOI": "10.1109/CVPR.2019.00550"
+      },
+      {
+        "key": "3_CR15",
+        "doi-asserted-by": "crossref",
+        "unstructured": "He, K., Zhang, X., Ren, S., Sun, J.: Deep residual learning for image recognition. In: 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), pp. 770–778 (2016)",
+        "DOI": "10.1109/CVPR.2016.90"
+      },
+      {
+        "key": "3_CR16",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Jia, D., et al.: DETRs with hybrid matching (2022)",
+        "DOI": "10.1109/CVPR52729.2023.01887"
+      },
+      {
+        "key": "3_CR17",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Kamath, A., Singh, M., LeCun, Y., Synnaeve, G., Misra, I., Carion, N.: MDETR-modulated detection for end-to-end multi-modal understanding. In: Proceedings of the IEEE/CVF International Conference on Computer Vision, pp. 1780–1790 (2021)",
+        "DOI": "10.1109/ICCV48922.2021.00180"
+      },
+      {
+        "key": "3_CR18",
+        "unstructured": "Krasin, I., et al.: Openimages: a public dataset for large-scale multi-label and multi-class image classification. Dataset https://github.com/openimages, 2(3), 18 (2017)"
+      },
+      {
+        "key": "3_CR19",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Krishna, R., et al.: Visual genome: connecting language and vision using crowdsourced dense image annotations. Int. J. Comput. Vis. (2017)",
+        "DOI": "10.1007/s11263-016-0981-7"
+      },
+      {
+        "key": "3_CR20",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Kuo, W., Bertsch, F., Li, W., Piergiovanni, A., Saffar, M., Angelova, A.: Findit: generalized localization with natural language queries (2022)",
+        "DOI": "10.1007/978-3-031-20059-5_29"
+      },
+      {
+        "key": "3_CR21",
+        "unstructured": "Kuznetsova, A., et al.: The open images dataset v4: unified image classification, object detection, and visual relationship detection at scale. arXiv, Computer Vision and Pattern Recognition (2018)"
+      },
+      {
+        "key": "3_CR22",
+        "unstructured": "Li, C., et al.: Elevater: a benchmark and toolkit for evaluating language-augmented visual models (2022)"
+      },
+      {
+        "key": "3_CR23",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Li, F., Zhang, H., Liu, S., Guo, J., Ni, L.M., Zhang, L.: DN-DETR: accelerate DETR training by introducing query denoising. In: Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pp. 13619–13627 (2022)",
+        "DOI": "10.1109/CVPR52688.2022.01325"
+      },
+      {
+        "key": "3_CR24",
+        "unstructured": "Li, L.H., et al.: Grounded language-image pre-training. arXiv preprint arXiv:2112.03857 (2021)"
+      },
+      {
+        "key": "3_CR25",
+        "unstructured": "Li, M., Sigal, L.: Referring transformer: a one-step approach to multi-task visual grounding. arXiv, Computer Vision and Pattern Recognition (2021)"
+      },
+      {
+        "key": "3_CR26",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Li, Y., et al.: GLIGEN: open-set grounded text-to-image generation. In: CVPR (2023)",
+        "DOI": "10.1109/CVPR52729.2023.02156"
+      },
+      {
+        "key": "3_CR27",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Lin, T.Y., Goyal, P., Girshick, R., He, K., Dollár, P.: Focal loss for dense object detection. In: Proceedings of the IEEE International Conference on Computer Vision, pp. 2980–2988 (2017)",
+        "DOI": "10.1109/ICCV.2017.324"
+      },
+      {
+        "key": "3_CR28",
+        "series-title": "Lecture Notes in Computer Science",
+        "doi-asserted-by": "publisher",
+        "first-page": "740",
+        "DOI": "10.1007/978-3-319-10602-1_48",
+        "volume-title": "Computer Vision – ECCV 2014",
+        "author": "T-Y Lin",
+        "year": "2014",
+        "unstructured": "Lin, T.-Y., et al.: Microsoft COCO: common objects in context. In: Fleet, D., Pajdla, T., Schiele, B., Tuytelaars, T. (eds.) ECCV 2014. LNCS, vol. 8693, pp. 740–755. Springer, Cham (2014). https://doi.org/10.1007/978-3-319-10602-1_48"
+      },
+      {
+        "key": "3_CR29",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Liu, J., Wang, L., Yang, M.H.: Referring expression generation and comprehension via attributes. In: International Conference on Computer Vision (2017)",
+        "DOI": "10.1109/ICCV.2017.520"
+      },
+      {
+        "key": "3_CR30",
+        "unstructured": "Liu, S., et al.: DAB-DETR: dynamic anchor boxes are better queries for DETR. In: International Conference on Learning Representations (2022). https://openreview.net/forum?id=oMI9PjOb9Jl"
+      },
+      {
+        "key": "3_CR31",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Liu, Z., et al.: Swin transformer: hierarchical vision transformer using shifted windows. arXiv preprint arXiv:2103.14030 (2021)",
+        "DOI": "10.1109/ICCV48922.2021.00986"
+      },
+      {
+        "key": "3_CR32",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Meng, D., et al.: Conditional DETR for fast training convergence. arXiv preprint arXiv:2108.06152 (2021)",
+        "DOI": "10.1109/ICCV48922.2021.00363"
+      },
+      {
+        "key": "3_CR33",
+        "unstructured": "Miao, P., Su, W., Wang, L., Fu, Y., Li, X.: Referring expression comprehension via cross-level multi-modal fusion. arXiv abs/2204.09957 (2022)"
+      },
+      {
+        "key": "3_CR34",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Minderer, M., et al.: Simple open-vocabulary object detection with vision transformers (2022)",
+        "DOI": "10.1007/978-3-031-20080-9_42"
+      },
+      {
+        "key": "3_CR35",
+        "unstructured": "Ordonez, V., Kulkarni, G., Berg, T.L.: Im2text: describing images using 1 million captioned photographs. In: Neural Information Processing Systems (2011)"
+      },
+      {
+        "key": "3_CR36",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Plummer, B.A., Wang, L., Cervantes, C.M., Caicedo, J.C., Hockenmaier, J., Lazebnik, S.: Flickr30k entities: collecting region-to-phrase correspondences for richer image-to-sentence models. In: Proceedings of the IEEE International Conference on Computer Vision, pp. 2641–2649 (2015)",
+        "DOI": "10.1109/ICCV.2015.303"
+      },
+      {
+        "key": "3_CR37",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Plummer, B.A., Wang, L., Cervantes, C.M., Caicedo, J.C., Hockenmaier, J., Lazebnik, S.: Flickr30k entities: collecting region-to-phrase correspondences for richer image-to-sentence models. Int. J. Comput. Vis. (2015)",
+        "DOI": "10.1109/ICCV.2015.303"
+      },
+      {
+        "issue": "6",
+        "key": "3_CR38",
+        "doi-asserted-by": "publisher",
+        "first-page": "1137",
+        "DOI": "10.1109/TPAMI.2016.2577031",
+        "volume": "39",
+        "author": "S Ren",
+        "year": "2017",
+        "unstructured": "Ren, S., He, K., Girshick, R., Sun, J.: Faster R-CNN: towards real-time object detection with region proposal networks. IEEE Trans. Pattern Anal. Mach. Intell. 39(6), 1137–1149 (2017)",
+        "journal-title": "IEEE Trans. Pattern Anal. Mach. Intell."
+      },
+      {
+        "key": "3_CR39",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Rezatofighi, H., Tsoi, N., Gwak, J., Sadeghian, A., Reid, I., Savarese, S.: Generalized intersection over union: a metric and a loss for bounding box regression. In: Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pp. 658–666 (2019)",
+        "DOI": "10.1109/CVPR.2019.00075"
+      },
+      {
+        "key": "3_CR40",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Rombach, R., Blattmann, A., Lorenz, D., Esser, P., Ommer, B.: High-resolution image synthesis with latent diffusion models (2021)",
+        "DOI": "10.1109/CVPR52688.2022.01042"
+      },
+      {
+        "key": "3_CR41",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Sennrich, R., Haddow, B., Birch, A.: Neural machine translation of rare words with subword units. In: Meeting of the Association for Computational Linguistics (2015)",
+        "DOI": "10.18653/v1/P16-1162"
+      },
+      {
+        "key": "3_CR42",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Shao, S., et al.: Objects365: a large-scale, high-quality dataset for object detection. In: Proceedings of the IEEE International Conference on Computer Vision, pp. 8430–8439 (2019)",
+        "DOI": "10.1109/ICCV.2019.00852"
+      },
+      {
+        "key": "3_CR43",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Sharma, P., Ding, N., Goodman, S., Soricut, R.: Conceptual captions: a cleaned, hypernymed, image alt-text dataset for automatic image captioning. In: Meeting of the Association for Computational Linguistics (2018)",
+        "DOI": "10.18653/v1/P18-1238"
+      },
+      {
+        "key": "3_CR44",
+        "unstructured": "Shilong, L., et al.: DQ-DETR: dual query detection transformer for phrase extraction and grounding. In: Proceedings of the AAAI Conference on Artificial Intelligence (2023)"
+      },
+      {
+        "key": "3_CR45",
+        "unstructured": "Tan, M., Le, Q.V.: EfficientNet: rethinking model scaling for convolutional neural networks. In: International Conference on Machine Learning (2019)"
+      },
+      {
+        "key": "3_CR46",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Thomee, B., et al.: YFCC100M: the new data in multimedia research. Commun. ACM (2016)",
+        "DOI": "10.1145/2812802"
+      },
+      {
+        "key": "3_CR47",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Wang, Y., Zhang, X., Yang, T., Sun, J.: Anchor DETR: query design for transformer-based detector. In: National Conference on Artificial Intelligence (2021)",
+        "DOI": "10.1609/aaai.v36i3.20158"
+      },
+      {
+        "key": "3_CR48",
+        "unstructured": "Wolf, T., et al.: Huggingface’s transformers: state-of-the-art natural language processing. arXiv preprint arXiv:1910.03771 (2019)"
+      },
+      {
+        "key": "3_CR49",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Xu, M., et al.: End-to-end semi-supervised object detection with soft teacher. arXiv preprint arXiv:2106.09018 (2021)",
+        "DOI": "10.1109/ICCV48922.2021.00305"
+      },
+      {
+        "key": "3_CR50",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Yao, L., et al.: DetCLIPv2: scalable open-vocabulary object detection pre-training via word-region alignment (2023)",
+        "DOI": "10.1109/CVPR52729.2023.02250"
+      },
+      {
+        "key": "3_CR51",
+        "unstructured": "Yao, L., et al.: Detclip: dictionary-enriched visual-concept paralleled pre-training for open-world detection (2022)"
+      },
+      {
+        "key": "3_CR52",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Yu, L., et al.: Mattnet: modular attention network for referring expression comprehension. In: Computer Vision and Pattern Recognition (2018)",
+        "DOI": "10.1109/CVPR.2018.00142"
+      },
+      {
+        "key": "3_CR53",
+        "unstructured": "Yuan, L., et al.: Florence: a new foundation model for computer vision (2022)"
+      },
+      {
+        "key": "3_CR54",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Zang, Y., Li, W., Zhou, K., Huang, C., Loy, C.C.: Open-vocabulary DETR with conditional matching (2022)",
+        "DOI": "10.1007/978-3-031-20077-9_7"
+      },
+      {
+        "key": "3_CR55",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Zareian, A., Rosa, K.D., Hu, D.H., Chang, S.F.: Open-vocabulary object detection using captions. In: Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pp. 14393–14402 (2021)",
+        "DOI": "10.1109/CVPR46437.2021.01416"
+      },
+      {
+        "key": "3_CR56",
+        "unstructured": "Zhang, H., et al.: DINO: DETR with improved denoising anchor boxes for end-to-end object detection (2022)"
+      },
+      {
+        "key": "3_CR57",
+        "unstructured": "Zhang, H., et al.: GLIPv2: unifying localization and vision-language understanding (2022)"
+      },
+      {
+        "key": "3_CR58",
+        "unstructured": "Zhao, T., Liu, P., Lu, X., Lee, K.: OmDet: language-aware object detection with large-scale vision-language multi-dataset pre-training (2022)"
+      },
+      {
+        "key": "3_CR59",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Zhong, Y., et al.: Regionclip: region-based language-image pretraining (2022)",
+        "DOI": "10.1109/CVPR52688.2022.01629"
+      },
+      {
+        "key": "3_CR60",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Zhou, X., Girdhar, R., Joulin, A., Krähenbühl, P., Misra, I.: Detecting twenty-thousand classes using image-level supervision. In: ECCV (2022)",
+        "DOI": "10.1007/978-3-031-20077-9_21"
+      },
+      {
+        "key": "3_CR61",
+        "unstructured": "Zhou, X., Wang, D., Krähenbühl, P.: Objects as points. arXiv preprint arXiv:1904.07850 (2019)"
+      },
+      {
+        "key": "3_CR62",
+        "unstructured": "Zhu, X., Su, W., Lu, L., Li, B., Wang, X., Dai, J.: Deformable DETR: deformable transformers for end-to-end object detection. In: ICLR 2021: The Ninth International Conference on Learning Representations (2021)"
+      }
+    ],
+    "container-title": [
+      "Lecture Notes in Computer Science",
+      "Computer Vision – ECCV 2024"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://link.springer.com/content/pdf/10.1007/978-3-031-72970-6_3",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2024,
+          11,
+          22
+        ]
+      ],
+      "date-time": "2024-11-22T06:10:24Z",
+      "timestamp": 1732255824000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://link.springer.com/10.1007/978-3-031-72970-6_3"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2024,
+          11,
+          23
+        ]
+      ]
+    },
+    "ISBN": [
+      "9783031729690",
+      "9783031729706"
+    ],
+    "references-count": 62,
+    "URL": "https://doi.org/10.1007/978-3-031-72970-6_3",
+    "relation": {
+      "is-part-of": [
+        {
+          "id-type": "doi",
+          "id": "https://doi.org/10.1007/978-3-031-72970-6",
+          "asserted-by": "object"
+        }
+      ]
+    },
+    "ISSN": [
+      "0302-9743",
+      "1611-3349"
+    ],
+    "issn-type": [
+      {
+        "value": "0302-9743",
+        "type": "print"
+      },
+      {
+        "value": "1611-3349",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2024,
+          11,
+          23
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "23 November 2024",
+        "order": 1,
+        "name": "first_online",
+        "label": "First Online",
+        "group": {
+          "name": "ChapterHistory",
+          "label": "Chapter History"
+        }
+      },
+      {
+        "value": "ECCV",
+        "order": 1,
+        "name": "conference_acronym",
+        "label": "Conference Acronym",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "European Conference on Computer Vision",
+        "order": 2,
+        "name": "conference_name",
+        "label": "Conference Name",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "Milan",
+        "order": 3,
+        "name": "conference_city",
+        "label": "Conference City",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "Italy",
+        "order": 4,
+        "name": "conference_country",
+        "label": "Conference Country",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "2024",
+        "order": 5,
+        "name": "conference_year",
+        "label": "Conference Year",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "29 September 2024",
+        "order": 7,
+        "name": "conference_start_date",
+        "label": "Conference Start Date",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "4 October 2024",
+        "order": 8,
+        "name": "conference_end_date",
+        "label": "Conference End Date",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "18",
+        "order": 9,
+        "name": "conference_number",
+        "label": "Conference Number",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "eccv2024",
+        "order": 10,
+        "name": "conference_id",
+        "label": "Conference ID",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "https://eccv2024.ecva.net/",
+        "order": 11,
+        "name": "conference_url",
+        "label": "Conference URL",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "return_code": 2,
+  "diagnostic_lines": 1103,
+  "first_diagnostics": [
+    "scripts/experiment_archive/public_20261115_snapshot/build_current_delivery_061.py:162: trailing whitespace.",
+    "scripts/experiment_archive/public_20261115_snapshot/mapping_assignment_isolated_001.py:7: trailing whitespace.",
+    "scripts/experiment_archive/public_20261115_snapshot/mapping_assignment_isolated_001.py:8: trailing whitespace.",
+    "scripts/experiment_archive/public_20261115_snapshot/mapping_assignment_isolated_001.py:9: trailing whitespace.",
+    "scripts/experiment_archive/public_20261115_snapshot/mapping_assignment_isolated_001.py:13: trailing whitespace.",
+    "scripts/experiment_archive/public_20261115_snapshot/mapping_assignment_isolated_001.py:25: trailing whitespace.",
+    "scripts/experiment_archive/public_20261115_snapshot/mapping_assignment_isolated_001.py:48: trailing whitespace.",
+    "scripts/experiment_archive/public_20261115_snapshot/mapping_assignment_isolated_001.py:54: trailing whitespace.",
+    "scripts/experiment_archive/public_20261115_snapshot/mapping_assignment_isolated_001.py:66: trailing whitespace.",
+    "scripts/experiment_archive/public_20261115_snapshot/mapping_assignment_isolated_001.py:68: trailing whitespace.",
+    "scripts/experiment_archive/public_20261115_snapshot/mapping_assignment_isolated_001.py:74: trailing whitespace.",
+    "scripts/experiment_archive/public_20261115_snapshot/mapping_assignment_isolated_001.py:85: trailing whitespace.",
+    "scripts/experiment_archive/public_20261115_snapshot/mapping_assignment_isolated_001.py:89: trailing whitespace.",
+    "scripts/experiment_archive/public_20261115_snapshot/mapping_assignment_isolated_001.py:90: trailing whitespace.",
+    "scripts/experiment_archive/public_20261115_snapshot/mapping_assignment_isolated_001.py:91: trailing whitespace."
+  ],
+  "frozen_bytes_not_reformatted": true,
+  "CRLF_treated_as_existing_input": true
+}

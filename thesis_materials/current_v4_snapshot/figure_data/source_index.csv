@@ -1,0 +1,13 @@
+﻿内容,报告/记录入口
+对象建图,statistics/causal_mapping_full_001/report.json
+逐帧对象,mapping_evaluation/causal_mapping_full_001/scene-*/frames.jsonl
+连续身份,statistics/temporal_identity_full_001/report.json
+关系,mapping_evaluation/causal_relations_full_001/summary.json
+检索,statistics/causal_retrieval_full_001/report.json
+专项对比,statistics/fair_three_task_full_validation_001/report.json
+维护/运动,statistics/causal_modules[_motion]_full_001/report.json
+地图,statistics/causal_maps_full_001/report.json
+选择/接近,ablations/causal_selection_ablation_full_001；causal_goals_full_001
+KITTI,statistics/kitti_object_cpu_full_001；kitti_tracking_full_001
+参数,statistics/causal_mapping_parameters_full_001；performance/causal_selection_parameters_full_001
+代码说明,source_bundle/github_sync_001/checkout/thesis_materials/

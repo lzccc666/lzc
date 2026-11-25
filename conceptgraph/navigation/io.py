@@ -2,15 +2,17 @@ from __future__ import annotations
 
 import gzip
 import json
-import pickle as pkl
 from pathlib import Path
 
 import numpy as np
 
 from conceptgraph.navigation.types import SceneGraphEdge, SceneGraphNode
+from conceptgraph.scenegraph.relations import load_scene_graph_edges as load_relation_edges
 
 
 def load_scene_map(scene_map_path: str | Path):
+    import pickle as pkl
+
     with gzip.open(scene_map_path, "rb") as f:
         payload = pkl.load(f)
     if isinstance(payload, list):
@@ -43,9 +45,11 @@ def load_scene_graph_nodes(
         bbox_center = item.get("bbox_center")
         bbox_extent = item.get("bbox_extent")
         if bbox_center is None and "bbox" in item:
-            bbox_center = getattr(item["bbox"], "center", [0.0, 0.0, 0.0])
+            bbox = item["bbox"]
+            bbox_center = bbox.get("center") if isinstance(bbox, dict) else getattr(bbox, "center", None)
         if bbox_extent is None and "bbox" in item:
-            bbox_extent = getattr(item["bbox"], "extent", [0.0, 0.0, 0.0])
+            bbox = item["bbox"]
+            bbox_extent = bbox.get("extent") if isinstance(bbox, dict) else getattr(bbox, "extent", None)
         nodes[node_id] = SceneGraphNode(
             node_id=node_id,
             object_tag=str(item.get("object_tag", "")),
@@ -63,11 +67,4 @@ def load_scene_graph_nodes(
 
 
 def load_scene_graph_edges(edge_pkl_path: str | Path | None) -> list[SceneGraphEdge]:
-    if edge_pkl_path is None or not Path(edge_pkl_path).exists():
-        return []
-    with open(edge_pkl_path, "rb") as f:
-        edge_tuples = pkl.load(f)
-    return [
-        SceneGraphEdge(source=int(src), target=int(dst), relation=str(rel))
-        for src, dst, rel in edge_tuples
-    ]
+    return load_relation_edges(edge_pkl_path)

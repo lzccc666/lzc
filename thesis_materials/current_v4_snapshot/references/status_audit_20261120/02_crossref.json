@@ -1,0 +1,1110 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          20
+        ]
+      ],
+      "date-time": "2026-11-20T02:16:15Z",
+      "timestamp": 1795140975624,
+      "version": "4.10.3"
+    },
+    "reference-count": 155,
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "issue": "1",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2016,
+              3,
+              1
+            ]
+          ],
+          "date-time": "2016-03-01T00:00:00Z",
+          "timestamp": 1456790400000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "IEEE Trans. Intell. Veh."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2016,
+          3
+        ]
+      ]
+    },
+    "DOI": "10.1109/tiv.2016.2578706",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2016,
+          6,
+          13
+        ]
+      ],
+      "date-time": "2016-06-13T17:24:08Z",
+      "timestamp": 1465838648000
+    },
+    "page": "33-55",
+    "source": "Crossref",
+    "is-referenced-by-count": 2412,
+    "title": [
+      "A Survey of Motion Planning and Control Techniques for Self-Driving Urban Vehicles"
+    ],
+    "prefix": "10.1109",
+    "volume": "1",
+    "author": [
+      {
+        "given": "Brian",
+        "family": "Paden",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Michal",
+        "family": "Cap",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Sze Zheng",
+        "family": "Yong",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Dmitry",
+        "family": "Yershov",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Emilio",
+        "family": "Frazzoli",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref39",
+        "article-title": "The trick that makes Google's self-driving cars work",
+        "author": "madrigal",
+        "year": "2015",
+        "journal-title": "The Atlantic"
+      },
+      {
+        "key": "ref38",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IVS.2013.6629491"
+      },
+      {
+        "key": "ref33",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.21236/ADA459660",
+        "article-title": "A mobile automaton: An application of artificial intelligence techniques",
+        "author": "nilsson",
+        "year": "1969"
+      },
+      {
+        "key": "ref32",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/BF01386390"
+      },
+      {
+        "key": "ref31",
+        "article-title": "Classification of highway lane change behavior to detect dangerous cut-in maneuvers",
+        "author": "liu",
+        "year": "0"
+      },
+      {
+        "key": "ref30",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IVS.2011.5940405"
+      },
+      {
+        "key": "ref37",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TRO.2013.2291620"
+      },
+      {
+        "key": "ref36",
+        "article-title": "Route planning in transportation networks",
+        "author": "bast",
+        "year": "2015"
+      },
+      {
+        "key": "ref35",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1287/trsc.1110.0401"
+      },
+      {
+        "key": "ref34",
+        "first-page": "156",
+        "article-title": "Computing the shortest path: A search meets graph theory",
+        "author": "goldberg",
+        "year": "0",
+        "journal-title": "Proc 16th Annu ACM-SIAM Symp Discrete Algorithms"
+      },
+      {
+        "key": "ref28",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPAMI.2009.122"
+      },
+      {
+        "key": "ref27",
+        "article-title": "Parsimonious shooting heuristic for trajectory control of connected automated traffic part I: Theoretical analysis with generalized time geography",
+        "author": "zhou",
+        "year": "2015"
+      },
+      {
+        "key": "ref29",
+        "article-title": "Visual SLAM for driverless cars: A brief survey",
+        "author": "ros",
+        "year": "2012",
+        "journal-title": "IEEE Workshop on Navigation Perception Accurate Positioning and Mapping for Int Veh"
+      },
+      {
+        "key": "ref20",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TITS.2010.2048314"
+      },
+      {
+        "key": "ref22",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TITS.2013.2252901"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TITS.2003.821292"
+      },
+      {
+        "key": "ref24",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TVT.2011.2107584"
+      },
+      {
+        "key": "ref23",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2185632.2185656"
+      },
+      {
+        "key": "ref26",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CDC.2014.7039600"
+      },
+      {
+        "key": "ref101",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/rob.20285"
+      },
+      {
+        "key": "ref25",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-0-85729-085-4"
+      },
+      {
+        "key": "ref100",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/MED.2007.4433885"
+      },
+      {
+        "key": "ref50",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ROBOT.1998.676244"
+      },
+      {
+        "key": "ref51",
+        "first-page": "237",
+        "article-title": "Path planning and robust tracking for a car-like robot",
+        "author": "egerstedt",
+        "year": "0",
+        "journal-title": "Proc 5th Symp Intell Robot Syst"
+      },
+      {
+        "key": "ref154",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.ejcon.2013.03.004"
+      },
+      {
+        "key": "ref153",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.conengprac.2008.05.002"
+      },
+      {
+        "key": "ref155",
+        "first-page": "563",
+        "article-title": "Toward global chassis control by integrating the brake and suspension systems",
+        "author": "gaspar",
+        "year": "0",
+        "journal-title": "Proc IFAC Symp Advances Automotive Contr"
+      },
+      {
+        "key": "ref150",
+        "first-page": "2628",
+        "article-title": "Autonomous vehicle steering using explicit LPV-MPC",
+        "author": "besselmann",
+        "year": "0",
+        "journal-title": "Proc Eur Control Conf"
+      },
+      {
+        "key": "ref152",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CDC.2005.1583242"
+      },
+      {
+        "key": "ref151",
+        "first-page": "1068",
+        "article-title": "Hybrid parameter-varying model predictive control for lateral vehicle stabilization",
+        "author": "besselmann",
+        "year": "0",
+        "journal-title": "Proc Eur Control Conf"
+      },
+      {
+        "key": "ref146",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-642-36110-4"
+      },
+      {
+        "key": "ref147",
+        "doi-asserted-by": "crossref",
+        "first-page": "173",
+        "DOI": "10.2478/v10006-012-0013-x",
+        "article-title": "LPV design of fault-tolerant control for road vehicles",
+        "volume": "22",
+        "author": "gáspár",
+        "year": "2012",
+        "journal-title": "Int J Appl Math Comput Sci"
+      },
+      {
+        "key": "ref148",
+        "doi-asserted-by": "crossref",
+        "first-page": "1",
+        "DOI": "10.1109/TMECH.2004.83904410.1109",
+        "article-title": "LTV controller design for vehicle lateral control under fault in rear sensors",
+        "volume": "10",
+        "author": "huang",
+        "year": "2005",
+        "journal-title": "Trans Mechatronics"
+      },
+      {
+        "key": "ref149",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/00423110801927100"
+      },
+      {
+        "key": "ref59",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.4271/870421"
+      },
+      {
+        "key": "ref58",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.2140/pjm.1990.145.367"
+      },
+      {
+        "key": "ref57",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.2307/2372560"
+      },
+      {
+        "key": "ref56",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/9.362899"
+      },
+      {
+        "key": "ref55",
+        "doi-asserted-by": "crossref",
+        "first-page": "661",
+        "DOI": "10.1002/rob.20147",
+        "article-title": "Stanley: The robot that won the DARPA Grand Challenge",
+        "volume": "23",
+        "author": "ventures",
+        "year": "2006",
+        "journal-title": "J Field Robot"
+      },
+      {
+        "key": "ref54",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TCST.2008.2012116"
+      },
+      {
+        "key": "ref53",
+        "author": "goldstein",
+        "year": "1965",
+        "journal-title": "Classical Mechanics"
+      },
+      {
+        "key": "ref52",
+        "article-title": "Implementation of the pure pursuit path tracking algorithm",
+        "author": "coulter",
+        "year": "1992"
+      },
+      {
+        "key": "ref40",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/MRA.2011.942114"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/(SICI)1098-2337(1999)25:6<409::AID-AB2>3.0.CO;2-0"
+      },
+      {
+        "key": "ref3",
+        "article-title": "Commuting in the United States: 2009, American Community Survey Reports",
+        "author": "mckenzie",
+        "year": "2011"
+      },
+      {
+        "key": "ref6",
+        "first-page": "1577",
+        "article-title": "Vehicles capable of dynamic vision",
+        "author": "dickmanns",
+        "year": "0",
+        "journal-title": "Proc 15th Int Joint Conf Artif Intell"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/BF01212361"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-540-73429-1"
+      },
+      {
+        "key": "ref7",
+        "article-title": "No Hands Across America Journal",
+        "year": "0"
+      },
+      {
+        "key": "ref49",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/9.277235"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-642-03991-1"
+      },
+      {
+        "key": "ref46",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-642-36279-8_29"
+      },
+      {
+        "key": "ref45",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.15607/RSS.2015.XI.043"
+      },
+      {
+        "key": "ref48",
+        "first-page": "171",
+        "article-title": "Feedback control of a nonholonomic car-like robot",
+        "author": "luca",
+        "year": "0",
+        "journal-title": "Robot Motion Plannning and Control"
+      },
+      {
+        "key": "ref47",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1017/CBO9780511546877"
+      },
+      {
+        "key": "ref42",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ITSC.2011.6082928"
+      },
+      {
+        "key": "ref41",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CDC.2014.7039914"
+      },
+      {
+        "key": "ref44",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ITSC.2014.6957722"
+      },
+      {
+        "key": "ref43",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ITSC.2013.6728533"
+      },
+      {
+        "key": "ref127",
+        "volume": "3",
+        "author": "khalil",
+        "year": "1996",
+        "journal-title": "Nonlinear Systems"
+      },
+      {
+        "key": "ref126",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TAC.2004.841924"
+      },
+      {
+        "key": "ref125",
+        "doi-asserted-by": "crossref",
+        "first-page": "1362",
+        "DOI": "10.1109/TAC.2007.902731",
+        "article-title": "Trajectory-tracking and path-following of underactuated autonomous vehicles with parametric modeling uncertainty",
+        "volume": "52",
+        "author": "hespanha",
+        "year": "2007",
+        "journal-title": "Trans Automat Control"
+      },
+      {
+        "key": "ref124",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/rob.20262"
+      },
+      {
+        "key": "ref73",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/0278364911406761"
+      },
+      {
+        "key": "ref72",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/70.660866"
+      },
+      {
+        "key": "ref129",
+        "first-page": "504",
+        "article-title": "Integrated mobile robot control",
+        "author": "amidi",
+        "year": "0",
+        "journal-title": "Proc Fibers"
+      },
+      {
+        "key": "ref71",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/28869.28874"
+      },
+      {
+        "key": "ref128",
+        "first-page": "1089",
+        "article-title": "First results in robot road-following",
+        "author": "wallace",
+        "year": "0",
+        "journal-title": "Proc 9th Int Joint Conf Artif Intell"
+      },
+      {
+        "key": "ref70",
+        "author": "bertsekas",
+        "year": "1999",
+        "journal-title": "Nonlinear Programming"
+      },
+      {
+        "key": "ref76",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/02783640122067453"
+      },
+      {
+        "key": "ref130",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1117/12.241081"
+      },
+      {
+        "key": "ref77",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-319-16595-0_16"
+      },
+      {
+        "key": "ref74",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICRA.2015.7139514"
+      },
+      {
+        "key": "ref75",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICRA.2013.6631297"
+      },
+      {
+        "key": "ref133",
+        "first-page": "1393",
+        "article-title": "Tracking control of mobile robots: A case study in backstepping",
+        "volume": "33",
+        "author": "jiang",
+        "year": "1997",
+        "journal-title": "Automatica"
+      },
+      {
+        "key": "ref134",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/027836499501400602"
+      },
+      {
+        "key": "ref131",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/rob.20031"
+      },
+      {
+        "key": "ref78",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/179812.179911"
+      },
+      {
+        "key": "ref132",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ROBOT.1990.126006"
+      },
+      {
+        "key": "ref79",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1163/156855399X00928"
+      },
+      {
+        "key": "ref136",
+        "author": "camacho",
+        "year": "2013",
+        "journal-title": "Model Predictive Control"
+      },
+      {
+        "key": "ref135",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/0005-1098(89)90002-2"
+      },
+      {
+        "key": "ref138",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TCST.2007.894653"
+      },
+      {
+        "key": "ref137",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/S0005-1098(99)00214-9"
+      },
+      {
+        "key": "ref60",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ISIE.2005.1528936"
+      },
+      {
+        "key": "ref139",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CDC.2007.4434137"
+      },
+      {
+        "key": "ref62",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CDC.2012.6426265"
+      },
+      {
+        "key": "ref61",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IROS.2011.6094800"
+      },
+      {
+        "key": "ref63",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/SFCS.1979.10"
+      },
+      {
+        "key": "ref64",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/73393.73410"
+      },
+      {
+        "key": "ref140",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/rnc.1245"
+      },
+      {
+        "key": "ref65",
+        "first-page": "49",
+        "article-title": "The complexity of the two dimensional curvatureconstrained shortest-path problem",
+        "author": "lazard",
+        "year": "0",
+        "journal-title": "Proc Int Worksh Algorithm Found Robot"
+      },
+      {
+        "key": "ref141",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s12239-014-0120-9"
+      },
+      {
+        "key": "ref66",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ROBOT.2004.1308894"
+      },
+      {
+        "key": "ref142",
+        "author": "kirk",
+        "year": "2012",
+        "journal-title": "Optimal Control Theory An Introduction"
+      },
+      {
+        "key": "ref67",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ROBOT.2006.1641758"
+      },
+      {
+        "key": "ref143",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICAR.1991.240412"
+      },
+      {
+        "key": "ref68",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/SFCS.1987.42"
+      },
+      {
+        "key": "ref2",
+        "article-title": "Critical reasons for crashes investigated in the national motor vehicle crash causation survey",
+        "author": "singh",
+        "year": "2014"
+      },
+      {
+        "key": "ref144",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TITS.2008.2011697"
+      },
+      {
+        "key": "ref69",
+        "author": "canny",
+        "year": "1988",
+        "journal-title": "The Complexity of Robot Motion Planning"
+      },
+      {
+        "key": "ref1",
+        "article-title": "2014 crash data key findings",
+        "year": "2014"
+      },
+      {
+        "key": "ref145",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.conengprac.2008.12.001"
+      },
+      {
+        "key": "ref95",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IROS.2005.1545549"
+      },
+      {
+        "key": "ref109",
+        "first-page": "1652",
+        "article-title": "The focussed D* algorithm for real-time replanning",
+        "volume": "95",
+        "author": "anthony",
+        "year": "0",
+        "journal-title": "Proc 14th Int Joint Conf Artif Intell"
+      },
+      {
+        "key": "ref94",
+        "article-title": "Rapidly-exploring random trees a new tool for path planning",
+        "author": "valle",
+        "year": "1998"
+      },
+      {
+        "key": "ref108",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ROBOT.1994.351061"
+      },
+      {
+        "key": "ref93",
+        "first-page": "409",
+        "article-title": "Approximation algorithms for curvature-constrained shortest paths",
+        "volume": "96",
+        "author": "wang",
+        "year": "0",
+        "journal-title": "Proc 7th Annu ACM-SIAM Symp Discrete Algorithms"
+      },
+      {
+        "key": "ref107",
+        "first-page": "219",
+        "article-title": "First results on the effect of error in heuristic search",
+        "volume": "5",
+        "author": "pohl",
+        "year": "1970",
+        "journal-title": "Mach Intell"
+      },
+      {
+        "key": "ref92",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-1-4615-3176-0_8"
+      },
+      {
+        "key": "ref106",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSSC.1968.300136"
+      },
+      {
+        "key": "ref91",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1247069.1247080"
+      },
+      {
+        "key": "ref105",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/0278364915577958"
+      },
+      {
+        "key": "ref90",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/0196-8858(83)90014-3"
+      },
+      {
+        "key": "ref104",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/70.508439"
+      },
+      {
+        "key": "ref103",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/97880.97915"
+      },
+      {
+        "key": "ref102",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/0278364904045481"
+      },
+      {
+        "key": "ref111",
+        "doi-asserted-by": "crossref",
+        "first-page": "267",
+        "DOI": "10.1613/jair.2096",
+        "article-title": "Anytime heuristic search",
+        "volume": "28",
+        "author": "hansen",
+        "year": "2007",
+        "journal-title": "J Artif Intell Res"
+      },
+      {
+        "key": "ref112",
+        "first-page": "767",
+        "article-title": "ARA*: Anytime A* with provable bounds on sub-optimality",
+        "author": "likhachev",
+        "year": "0",
+        "journal-title": "Proc Adv Neural Inform Process Syst"
+      },
+      {
+        "key": "ref110",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TRO.2004.838026"
+      },
+      {
+        "key": "ref98",
+        "first-page": "188",
+        "article-title": "Optimal motion planning with the half-car dynamical model for autonomous high-speed driving",
+        "author": "jeon",
+        "year": "0",
+        "journal-title": "Proc Amer Control Conf"
+      },
+      {
+        "key": "ref99",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/70.388788"
+      },
+      {
+        "key": "ref96",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-540-24743-2_10"
+      },
+      {
+        "key": "ref97",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ROBOT.2010.5509718"
+      },
+      {
+        "key": "ref10",
+        "first-page": "8",
+        "article-title": "China future challenge: Beyond the intelligent vehicle",
+        "volume": "16",
+        "author": "xin",
+        "year": "2014",
+        "journal-title": "IEEE Intell Transp Syst Soc Newslett"
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ITSC.2011.6082859"
+      },
+      {
+        "key": "ref12",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1504/IJVAS.2012.051250"
+      },
+      {
+        "key": "ref13",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TITS.2015.2477556"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/MITS.2014.2306552"
+      },
+      {
+        "key": "ref15",
+        "article-title": "Google Self-Driving Car Project",
+        "year": "0"
+      },
+      {
+        "key": "ref118",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICRA.2012.6225177"
+      },
+      {
+        "key": "ref16",
+        "article-title": "Tesla Motors: Model S Press Kit",
+        "year": "0"
+      },
+      {
+        "key": "ref82",
+        "author": "pontryagin",
+        "year": "1987",
+        "journal-title": "Mathematical Theory of Optimal Processes"
+      },
+      {
+        "key": "ref117",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CDC.2010.5717430"
+      },
+      {
+        "key": "ref17",
+        "article-title": "Taxonomy and definitions for terms related to on-road motor vehicle automated driving systems",
+        "year": "2014"
+      },
+      {
+        "key": "ref81",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/oca.957"
+      },
+      {
+        "key": "ref18",
+        "author": "rajamani",
+        "year": "2011",
+        "journal-title": "Vehicle Dynamics and Control"
+      },
+      {
+        "key": "ref84",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.2514/2.4231"
+      },
+      {
+        "key": "ref119",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICRA.2013.6631299"
+      },
+      {
+        "key": "ref19",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1115/1.1386788"
+      },
+      {
+        "key": "ref83",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICRA.2014.6907001"
+      },
+      {
+        "key": "ref114",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ROBOT.1997.619371"
+      },
+      {
+        "key": "ref113",
+        "first-page": "262",
+        "article-title": "Anytime dynamic A*: An anytime, replanning algorithm",
+        "author": "likhachev",
+        "year": "0",
+        "journal-title": "Proc Int Conf Autom Planning Scheduling"
+      },
+      {
+        "key": "ref116",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-319-16595-0_14"
+      },
+      {
+        "key": "ref80",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TCST.2010.2084088"
+      },
+      {
+        "key": "ref115",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/027836402320556421"
+      },
+      {
+        "key": "ref120",
+        "doi-asserted-by": "crossref",
+        "first-page": "461",
+        "DOI": "10.1007/978-3-319-16595-0_27",
+        "article-title": "RRTX: Real-time motion planning/replanning for environments with unpredictable obstacles",
+        "author": "otte",
+        "year": "2015",
+        "journal-title": "Algorithmic Foundations of Robotics XI"
+      },
+      {
+        "key": "ref89",
+        "volume": "124",
+        "author": "latombe",
+        "year": "2012",
+        "journal-title": "Robot Motion Planning"
+      },
+      {
+        "key": "ref121",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/rob.20255"
+      },
+      {
+        "key": "ref122",
+        "article-title": "Practical search techniques in path planning for autonomous driving",
+        "volume": "1001",
+        "author": "dolgov",
+        "year": "2008",
+        "journal-title": "Ann Arbor"
+      },
+      {
+        "key": "ref123",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/rob.20248"
+      },
+      {
+        "key": "ref85",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1137/1015071"
+      },
+      {
+        "key": "ref86",
+        "first-page": "145",
+        "article-title": "Approximation and decomposition of shapes",
+        "volume": "1",
+        "author": "chazelle",
+        "year": "1987",
+        "journal-title": "Adv Robot"
+      },
+      {
+        "key": "ref87",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/0196-6774(85)90021-5"
+      },
+      {
+        "key": "ref88",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/70.88035"
+      }
+    ],
+    "container-title": [
+      "IEEE Transactions on Intelligent Vehicles"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx7/7274857/7433488/07490340.pdf?arnumber=7490340",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2022,
+          1,
+          12
+        ]
+      ],
+      "date-time": "2022-01-12T11:43:35Z",
+      "timestamp": 1641987815000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "http://ieeexplore.ieee.org/document/7490340/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2016,
+          3
+        ]
+      ]
+    },
+    "references-count": 155,
+    "journal-issue": {
+      "issue": "1"
+    },
+    "URL": "https://doi.org/10.1109/tiv.2016.2578706",
+    "relation": {},
+    "ISSN": [
+      "2379-8904",
+      "2379-8858"
+    ],
+    "issn-type": [
+      {
+        "value": "2379-8904",
+        "type": "electronic"
+      },
+      {
+        "value": "2379-8858",
+        "type": "print"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2016,
+          3
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "核验性质": "读取既有报告区间及原始查询；无新增模型推理或实验",
+  "mapping_source": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/statistics/causal_mapping_full_001/report.json",
+  "mapping_sha256": "577e0cdc3ab6ea293a6d232c6304312151229165c7d83b70c9d82ec08ec3dac9",
+  "mapping_paired": [
+    {
+      "method": "one_to_one_depth_quality",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "recall",
+      "difference": 0.12877861261576098,
+      "ci95": [
+        0.08122589569599477,
+        0.18076694664279103
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "one_to_one_depth_quality",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "matched_prediction_precision",
+      "difference": 0.2718724434214598,
+      "ci95": [
+        0.22462802693699147,
+        0.32022823951382207
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "one_to_one_depth_quality",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "center_error_m_mean",
+      "difference": -0.3930226735333977,
+      "ci95": [
+        -0.5431194934061812,
+        -0.27021371370397973
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "one_to_one_depth_quality",
+      "baseline": "original_fusion",
+      "group": "all",
+      "metric": "identity_switch_rate",
+      "difference": -0.01524390243902439,
+      "ci95": [
+        -0.03972335647635597,
+        0.023393267713443158
+      ],
+      "valid_resamples": 4000
+    }
+  ],
+  "kitti_source": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/statistics/kitti_object_cpu_full_001/report.json",
+  "kitti_sha256": "f9d721a62720bdf668133c29d9c4e09e1834056346c81ad6df616d272deb8d24",
+  "kitti_common_supported_pairs": {
+    "count": 251,
+    "mean_error_m": {
+      "mask_points_mean": 1.7575965270833276,
+      "mask_points_robust_mean": 1.5396559342377985
+    },
+    "paired_difference_ci95_m": [
+      -0.4441017720376348,
+      -0.0474201013939011
+    ],
+    "valid_resamples": 4000,
+    "scope": "两条件都有深度的相同二维正确匹配，不能代替全GT召回"
+  },
+  "queries_source": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/main_experiments/causal_retrieval_full_001/queries.jsonl",
+  "queries_sha256": "694d3008b45e75fde9be23efcce24bea0768886c283e0884ed4f0b6fb626f68f",
+  "cases": [
+    {
+      "line": 4,
+      "record": {
+        "scene": "scene-0012",
+        "frame_idx": 0,
+        "query_index": 0,
+        "query_text": "去最近的停着的小汽车附近",
+        "clip_text": "a parked car",
+        "query_type": "no_static_match_in_current_annotated_view",
+        "method": "existing_object_joint_rule",
+        "selected": false,
+        "evaluation_identity": null,
+        "association_status": "unknown_or_no_selection",
+        "clip_score": null,
+        "positive": false,
+        "acceptable_instances": [],
+        "selected_correct": null,
+        "false_selection_on_no_match": false,
+        "gt_in_inference": false,
+        "actual_arrival_evaluated": false
+      }
+    },
+    {
+      "line": 596,
+      "record": {
+        "scene": "scene-0020",
+        "frame_idx": 16,
+        "query_index": 0,
+        "query_text": "去最近的停着的小汽车附近",
+        "clip_text": "a parked car",
+        "query_type": "nearest_static_positive",
+        "method": "existing_object_joint_rule",
+        "selected": true,
+        "evaluation_identity": "35089bba17e74327ba86ce1541031caa",
+        "association_status": "associated",
+        "clip_score": null,
+        "positive": true,
+        "acceptable_instances": [
+          "35089bba17e74327ba86ce1541031caa"
+        ],
+        "selected_correct": true,
+        "false_selection_on_no_match": null,
+        "gt_in_inference": false,
+        "actual_arrival_evaluated": false
+      }
+    },
+    {
+      "line": 1856,
+      "record": {
+        "scene": "scene-0043",
+        "frame_idx": 28,
+        "query_index": 1,
+        "query_text": "去最近的停着的小汽车附近",
+        "clip_text": "a parked car",
+        "query_type": "no_static_match_in_current_annotated_view",
+        "method": "existing_object_joint_rule",
+        "selected": true,
+        "evaluation_identity": null,
+        "association_status": "unknown_or_no_selection",
+        "clip_score": null,
+        "positive": false,
+        "acceptable_instances": [],
+        "selected_correct": null,
+        "false_selection_on_no_match": true,
+        "gt_in_inference": false,
+        "actual_arrival_evaluated": false
+      }
+    }
+  ],
+  "正文简单算术": {
+    "深度质量未配对GT观测": 4000,
+    "稳健运动未关联预测观测_不全等于真实误检": 2185,
+    "地图车身通过占全部查询百分比": 0.9433962264150944,
+    "地图车身通过占生成路线百分比": 2.127659574468085
+  }
+}

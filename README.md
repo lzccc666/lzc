@@ -1,3 +1,11 @@
+# 当前项目快照与进度（2026-11-25）
+
+本分支 `codex/project-sync-20261125` 保存《面向智能车辆的三维语义场景图构建与导航方法研究》的当前代码和真实进度。先看 [最新交接](doc/交接/20261125/当前进度与代码同步.md) 和 [项目导航](项目导航.md)。下方保留原上游说明。
+
+远端 `main` 与本机历史没有共同祖先；本分支是完整本地快照，未合并或覆盖远端 `main`。数据、模型和大型实验结果保留本机；论文与旧实验源码的可克隆实体副本及恢复边界见交接，不把本地绝对链接当作已备份文件。
+
+---
+
 # ConceptGraphs: Open-Vocabulary 3D Scene Graphs for Perception and Planning
 
 [**Project Page**](https://concept-graphs.github.io/) |

@@ -1,0 +1,60 @@
+defaults:
+  - _self_
+
+relation_distance_thresholds_m:
+  near: 8.0
+  directional: 12.0
+  left_of: 12.0
+  right_of: 12.0
+  in_front_of: 12.0
+  behind: 12.0
+
+direction_angle_threshold_deg: 40.0
+minimum_direction_distance_m: 0.50
+coordinate_frame: local_trajectory
+coordinate_frame_fallback: ego_heading
+
+confidence_weights:
+  distance: 0.30
+  angle_margin: 0.20
+  observation_count: 0.15
+  stability: 0.15
+  coordinate_frame: 0.10
+  dynamic_state: 0.10
+
+minimum_confidence: 0.35
+static_stability_frames: 4
+dynamic_edge_ttl_frames: 3
+position_update_threshold_m: 0.10
+
+top_k_per_relation:
+  near: 8
+  left_of: 6
+  right_of: 6
+  in_front_of: 6
+  behind: 6
+
+max_out_degree: 16
+max_in_degree: 16
+max_total_edges: 512
+conflict_margin: 0.03
+deterministic_tie_break: confidence_stability_distance_relation_source_target
+
+visualization:
+  minimum_confidence: 0.35
+  relation_styles:
+    near:
+      color: "#5B6770"
+      line_style: solid
+    left_of:
+      color: "#0072B2"
+      line_style: dotted
+    right_of:
+      color: "#56B4E9"
+      line_style: dotted
+    in_front_of:
+      color: "#009E73"
+      line_style: dashed
+    behind:
+      color: "#D55E00"
+      line_style: dashed

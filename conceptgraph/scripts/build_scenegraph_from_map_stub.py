@@ -14,6 +14,13 @@ from matplotlib.font_manager import FontProperties
 import numpy as np
 from PIL import Image
 
+from conceptgraph.scenegraph.relations import (
+    build_relations,
+    save_legacy_edge_pickle,
+    save_relation_result,
+    save_structured_edges,
+)
+
 
 CHINESE_FONT = FontProperties()
 COLOR_RGB = {
@@ -51,6 +58,10 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--max-edges-per-node", type=int, default=4)
     parser.add_argument("--write-debug-crops", action="store_true")
     parser.add_argument("--max-detections-per-object", type=int, default=6)
+    parser.add_argument("--coordinate-frame", choices=["world", "ego_heading", "local_trajectory"], default="world")
+    parser.add_argument("--coordinate-frame-fallback", choices=["world", "ego_heading", "local_trajectory"], default="world")
+    parser.add_argument("--ego-heading", default=None, help="Optional heading vector hx,hy")
+    parser.add_argument("--trajectory-poses", type=Path, default=None)
     return parser.parse_args()
 
 
@@ -119,48 +130,63 @@ def main() -> None:
             }
         )
 
-    edge_candidates = []
-    centers = [np.asarray(node["bbox_center"], dtype=float) for node in scene_graph]
-    for i in range(len(centers)):
-        for j in range(i + 1, len(centers)):
-            dist = float(np.linalg.norm(centers[i][:2] - centers[j][:2]))
-            if dist > args.max_edge_distance_m:
-                continue
-            relation, confidence = infer_relation(centers[i], centers[j], dist, args.max_edge_distance_m)
-            if confidence < args.min_relation_confidence:
-                continue
-            dynamic = bool(scene_graph[i].get("is_short_term") or scene_graph[j].get("is_short_term")) or (
-                scene_graph[i].get("motion_state") == "dynamic" or scene_graph[j].get("motion_state") == "dynamic"
-            )
-            edge_candidates.append(
-                (
-                    i,
-                    j,
-                    relation,
-                    {
-                        "source": i,
-                        "target": j,
-                        "relation": relation,
-                        "distance_m": dist,
-                        "confidence": float(confidence),
-                        "relation_type": "temporal" if dynamic else "stable",
-                        "dynamic_relation": dynamic,
-                        "source_motion_state": scene_graph[i].get("motion_state", "unknown"),
-                        "target_motion_state": scene_graph[j].get("motion_state", "unknown"),
-                    },
-                )
-            )
-    edges, edge_metadata = select_edges_per_node(edge_candidates, args.max_edges_per_node)
+    heading = None
+    if args.ego_heading:
+        heading = np.asarray([float(value) for value in args.ego_heading.split(",")], dtype=float)
+    trajectory = load_trajectory_xy(args.trajectory_poses)
+    relation_config = {
+        "relation_distance_thresholds_m": {
+            "near": args.max_edge_distance_m,
+            "directional": args.max_edge_distance_m,
+            "left_of": args.max_edge_distance_m,
+            "right_of": args.max_edge_distance_m,
+            "in_front_of": args.max_edge_distance_m,
+            "behind": args.max_edge_distance_m,
+        },
+        "coordinate_frame": args.coordinate_frame,
+        "coordinate_frame_fallback": args.coordinate_frame_fallback,
+        "minimum_confidence": args.min_relation_confidence,
+        "max_out_degree": args.max_edges_per_node,
+        "max_in_degree": args.max_edges_per_node,
+    }
+    relation_result = build_relations(
+        scene_graph,
+        relation_config,
+        ego_heading=heading,
+        trajectory=trajectory,
+        ego_position=trajectory[-1] if trajectory is not None else None,
+    )
+    if not relation_result.success:
+        raise RuntimeError(f"{relation_result.failure_code}: {relation_result.failure_reason}")
+    edges = [(edge.source, edge.target, edge.relation) for edge in relation_result.edges]
+    edge_metadata = [edge.to_dict() for edge in relation_result.edges]
 
     map_dir = args.out_dir / "map"
     map_dir.mkdir(exist_ok=True)
     with gzip.open(map_dir / "scene_map_cfslam_pruned.pkl.gz", "wb") as f:
         pickle.dump(serialize_objects(pruned_objects), f)
     (args.out_dir / "scene_graph.json").write_text(json.dumps(scene_graph, indent=2, ensure_ascii=False), encoding="utf-8")
-    with open(args.out_dir / "cfslam_scenegraph_edges.pkl", "wb") as f:
-        pickle.dump(edges, f)
+    save_legacy_edge_pickle(relation_result.edges, args.out_dir / "cfslam_scenegraph_edges.pkl")
+    save_structured_edges(relation_result.edges, args.out_dir / "cfslam_scenegraph_edges_structured.pkl")
+    save_structured_edges(relation_result.edges, args.out_dir / "cfslam_scenegraph_edges_structured.json")
+    save_relation_result(relation_result, args.out_dir / "scenegraph_relation_build_result.json")
     (args.out_dir / "cfslam_scenegraph_edge_metadata.json").write_text(json.dumps(edge_metadata, indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"Wrote {len(scene_graph)} nodes and {len(edges)} edges to {args.out_dir}")
+
+
+def load_trajectory_xy(path: Path | None) -> np.ndarray | None:
+    if path is None or not path.exists():
+        return None
+    poses = np.loadtxt(path)
+    if poses.ndim == 1:
+        poses = poses.reshape(1, -1)
+    centers = []
+    for row in poses:
+        if row.size >= 16:
+            centers.append(row.reshape(4, 4)[:2, 3])
+        elif row.size >= 2:
+            centers.append(row[:2])
+    return None if not centers else np.asarray(centers, dtype=float)
 
 
 def infer_relation(source: np.ndarray, target: np.ndarray, distance_m: float, max_distance_m: float) -> tuple[str, float]:

@@ -1,0 +1,139 @@
+[
+  {
+    "number": 17,
+    "doi": "10.1109/ICRA48891.2023.10160968",
+    "title": [
+      "BEVFusion: Multi-Task Multi-Sensor Fusion with Unified Bird's-Eye View Representation"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2023,
+          5,
+          29
+        ]
+      ]
+    },
+    "container-title": [
+      "2023 IEEE International Conference on Robotics and Automation (ICRA)"
+    ],
+    "http": 200
+  },
+  {
+    "number": 18,
+    "doi": "10.1007/978-3-031-20077-9_1",
+    "title": [
+      "BEVFormer: Learning Bird’s-Eye-View Representation from Multi-camera Images via Spatiotemporal Transformers"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2022
+        ]
+      ]
+    },
+    "container-title": [
+      "Lecture Notes in Computer Science",
+      "Computer Vision – ECCV 2022"
+    ],
+    "http": 200
+  },
+  {
+    "number": 23,
+    "doi": "10.1007/978-3-031-20077-9_21",
+    "title": [
+      "Detecting Twenty-Thousand Classes Using Image-Level Supervision"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2022
+        ]
+      ]
+    },
+    "container-title": [
+      "Lecture Notes in Computer Science",
+      "Computer Vision – ECCV 2022"
+    ],
+    "http": 200
+  },
+  {
+    "number": 24,
+    "doi": "10.1007/978-3-031-72970-6_3",
+    "title": [
+      "Grounding DINO: Marrying DINO with Grounded Pre-training for Open-Set Object Detection"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2024,
+          11,
+          23
+        ]
+      ]
+    },
+    "container-title": [
+      "Lecture Notes in Computer Science",
+      "Computer Vision – ECCV 2024"
+    ],
+    "http": 200
+  },
+  {
+    "number": 29,
+    "doi": "10.15607/RSS.2023.XIX.066",
+    "title": [
+      "ConceptFusion: Open-set multimodal 3D mapping"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2023,
+          7,
+          10
+        ]
+      ]
+    },
+    "container-title": [
+      "Robotics: Science and Systems XIX"
+    ],
+    "http": 200
+  },
+  {
+    "number": 31,
+    "doi": "10.52202/075280-2989",
+    "title": [
+      "OpenMask3D: Open-Vocabulary 3D Instance Segmentation"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2023
+        ]
+      ]
+    },
+    "container-title": [
+      "Advances in Neural Information Processing Systems 36"
+    ],
+    "http": 200
+  },
+  {
+    "number": 32,
+    "doi": "10.1109/ICRA57147.2024.10610193",
+    "title": [
+      "Open-Fusion: Real-time Open-Vocabulary 3D Mapping and Queryable Scene Representation"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2024,
+          5,
+          13
+        ]
+      ]
+    },
+    "container-title": [
+      "2024 IEEE International Conference on Robotics and Automation (ICRA)"
+    ],
+    "http": 200
+  }
+]

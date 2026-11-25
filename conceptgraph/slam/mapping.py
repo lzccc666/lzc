@@ -3,7 +3,6 @@ import torch.nn.functional as F
 import numpy as np
 
 from conceptgraph.slam.slam_classes import MapObjectList, DetectionList
-from conceptgraph.utils.general_utils import Timer
 from conceptgraph.utils.ious import (
     compute_iou_batch, 
     compute_giou_batch, 
@@ -92,6 +91,8 @@ def merge_detections_to_objects(
     objects: MapObjectList, 
     agg_sim: torch.Tensor
 ) -> MapObjectList:
+    if getattr(cfg, "association_policy", "legacy") == "one_to_one":
+        return _merge_one_to_one(cfg, detection_list, objects, agg_sim)
     if not bool(getattr(cfg, "enable_dynamic_object_handling", True)):
         return _merge_detections_to_objects_legacy(cfg, detection_list, objects, agg_sim)
 
@@ -139,6 +140,37 @@ def merge_detections_to_objects(
                 merged_obj = merge_obj2_into_obj1(cfg, matched_obj, matched_det, run_dbscan=False)
             objects[j] = merged_obj
     
+    return objects
+
+
+def _merge_one_to_one(cfg, detection_list, objects, agg_sim):
+    """Freeze all associations before mutating geometry; each track gets one observation."""
+    from conceptgraph.completion.association import gated_assignment
+
+    scores = agg_sim.detach().cpu().numpy().copy()
+    for i, det in enumerate(detection_list):
+        initialize_motion_metadata(cfg, det)
+        for j, obj in enumerate(objects):
+            det_classes = set(np.atleast_1d(det["class_id"]).tolist())
+            obj_classes = set(np.atleast_1d(obj["class_id"]).tolist())
+            distance = np.linalg.norm(_bbox_center_from_object(det["bbox"])
+                                      - _bbox_center_from_object(obj["bbox"]))
+            if (det_classes.isdisjoint(obj_classes)
+                    or distance > float(getattr(cfg, "max_tracking_distance_m", 8.0))):
+                scores[i, j] = -np.inf
+    assignments = gated_assignment(scores)
+    for i, det in enumerate(detection_list):
+        if i not in assignments:
+            objects.append(det)
+            continue
+        j = assignments[i]
+        obj = objects[j]
+        velocity, center, frame_idx = estimate_observation_velocity(cfg, obj, det)
+        if should_use_short_term_update(cfg, obj, det, velocity):
+            merged = update_dynamic_object_short_term(cfg, obj, det, velocity, center, frame_idx)
+        else:
+            merged = merge_obj2_into_obj1(cfg, obj, det, run_dbscan=False)
+        objects[j] = merged
     return objects
 
 

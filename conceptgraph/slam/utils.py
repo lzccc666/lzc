@@ -12,7 +12,7 @@ import torch.nn.functional as F
 
 import faiss
 
-from conceptgraph.utils.general_utils import to_tensor, to_numpy, Timer
+from conceptgraph.utils.general_utils import to_tensor, to_numpy
 from conceptgraph.slam.slam_classes import MapObjectList, DetectionList
 
 from conceptgraph.utils.ious import compute_3d_iou, compute_3d_iou_accuracte_batch, mask_subtract_contained, compute_iou_batch
@@ -40,6 +40,9 @@ DEFAULT_STATIC_CLASSES = {
 }
 
 MOTION_STATE_KEYS = {
+    "timestamp_history_s",
+    "timestamp_s",
+    "stable_object_id",
     "is_potential_dynamic",
     "motion_state",
     "center_history",
@@ -93,7 +96,7 @@ def create_object_pcd(depth_array, mask, cam_K, image, obj_color=None) -> o3d.ge
     fx, fy, cx, cy = from_intrinsics_matrix(cam_K)
     
     # Also remove points with invalid depth values
-    mask = np.logical_and(mask, depth_array > 0)
+    mask = np.asarray(mask, dtype=bool) & np.isfinite(depth_array) & (depth_array > 0)
 
     if mask.sum() == 0:
         pcd = o3d.geometry.PointCloud()
@@ -129,7 +132,8 @@ def create_object_pcd(depth_array, mask, cam_K, image, obj_color=None) -> o3d.ge
         colors = np.full(points.shape, obj_color)
     
     if points.shape[0] == 0:
-        import pdb; pdb.set_trace()
+        import pdb
+        pdb.set_trace()
 
     # Create an Open3D PointCloud object
     pcd = o3d.geometry.PointCloud()
@@ -269,15 +273,14 @@ def initialize_motion_metadata(cfg, obj: dict, frame_idx: int | None = None) -> 
         return obj
     class_names = get_object_class_names(obj)
     is_potential_dynamic = is_potential_dynamic_class(cfg, class_names)
-    is_static = is_static_class(cfg, class_names)
     center = get_object_center(obj).astype(float).tolist()
     if frame_idx is None:
         frame_idx = get_object_frame_idx(obj)
 
     obj.setdefault("is_potential_dynamic", bool(is_potential_dynamic))
-    # A vehicle/person class is only "potentially dynamic"; without observed
-    # motion evidence it should remain a long-term, mergeable static object.
-    obj.setdefault("motion_state", "static")
+    # 兼容旧配置；新协议中潜在动态类别的首帧不含静止证据。
+    initial_unknown = bool(getattr(cfg, "initial_motion_unknown", False)) and is_potential_dynamic
+    obj.setdefault("motion_state", "unknown" if initial_unknown else "static")
     obj.setdefault("center_history", [center])
     obj.setdefault("frame_history", [int(frame_idx)])
     obj.setdefault("velocity", 0.0)
@@ -295,7 +298,7 @@ def trim_motion_history(cfg, obj: dict) -> None:
     max_size = int(getattr(cfg, "center_history_size", 8))
     if max_size <= 0:
         return
-    for key in ("center_history", "frame_history"):
+    for key in ("center_history", "frame_history", "timestamp_history_s"):
         if key in obj and isinstance(obj[key], list) and len(obj[key]) > max_size:
             obj[key] = obj[key][-max_size:]
 
@@ -309,13 +312,33 @@ def estimate_observation_velocity(cfg, obj: dict, det: dict) -> tuple[float, np.
     previous_frame = get_object_frame_idx(obj)
     frame_dt = float(getattr(cfg, "frame_dt", 1.0))
     delta_frames = max(1, int(current_frame) - int(previous_frame))
-    delta_t = max(frame_dt * delta_frames, 1e-6)
+    delta_t = frame_dt * delta_frames
+    if obj.get("timestamp_s") is not None and det.get("timestamp_s") is not None:
+        delta_t = float(det["timestamp_s"]) - float(obj["timestamp_s"])
+        if delta_t == 0 and current_frame == previous_frame:
+            # Legacy many-to-one may fuse two detections from the same image.
+            # There is no second time interval: preserve the prior estimate.
+            det["motion_evidence_duplicate_timestamp"] = True
+            return float(obj.get("velocity", 0.0)), current_center, current_frame
+    if not np.isfinite(delta_t) or delta_t <= 0:
+        raise ValueError("object observations require strictly increasing timestamps")
     velocity = float(np.linalg.norm(current_center - previous_center) / delta_t)
+    if getattr(cfg, "motion_estimator", "legacy") == "robust_xy":
+        from conceptgraph.completion.motion import robust_xy_speed
+        history=obj.get("timestamp_history_s", [])
+        centers=obj.get("center_history", [])
+        if len(history)==len(centers) and len(history)>0 and det.get("timestamp_s") is not None:
+            velocity=robust_xy_speed([*centers,current_center], [*history,float(det["timestamp_s"])])
+        else:
+            velocity=float(np.linalg.norm((current_center-previous_center)[:2])/delta_t)
     return velocity, current_center, current_frame
 
 
 def update_motion_metadata_after_match(cfg, obj: dict, det: dict, velocity: float, current_center: np.ndarray, current_frame: int) -> dict:
     if not bool(getattr(cfg, "enable_dynamic_object_handling", True)):
+        return obj
+    if det.get("motion_evidence_duplicate_timestamp", False):
+        obj["motion_evidence_duplicate_timestamp"] = True
         return obj
     class_names = get_object_class_names(obj) | get_object_class_names(det)
     is_potential_dynamic = is_potential_dynamic_class(cfg, class_names)
@@ -325,6 +348,9 @@ def update_motion_metadata_after_match(cfg, obj: dict, det: dict, velocity: floa
     obj["is_potential_dynamic"] = bool(is_potential_dynamic)
     obj["velocity"] = float(velocity)
     obj["last_seen_frame"] = int(current_frame)
+    if det.get("timestamp_s") is not None:
+        obj["timestamp_s"] = float(det["timestamp_s"])
+        obj.setdefault("timestamp_history_s", []).append(float(det["timestamp_s"]))
     obj.setdefault("center_history", [])
     obj.setdefault("frame_history", [])
     obj["center_history"].append(np.asarray(current_center, dtype=float).tolist())
@@ -338,7 +364,8 @@ def update_motion_metadata_after_match(cfg, obj: dict, det: dict, velocity: floa
         obj["motion_state"] = "dynamic"
         obj["is_short_term"] = True
     elif is_potential_dynamic:
-        obj["motion_state"] = "static"
+        minimum_observations = int(getattr(cfg, "static_confirmation_observations", 1))
+        obj["motion_state"] = "static" if len(obj["frame_history"]) >= minimum_observations else "unknown"
         obj["is_short_term"] = False
     else:
         obj["motion_state"] = obj.get("motion_state", "unknown")
@@ -490,7 +517,7 @@ def compute_overlap_matrix(cfg, objects: MapObjectList):
                 
                 # # Use range_search to find points within the threshold
                 # _, I = indices[j].range_search(point_arrays[i], threshold ** 2)
-                D, I = indices[j].search(point_arrays[i], 1)
+                D, nearest_indices = indices[j].search(point_arrays[i], 1)
 
                 # # If any points are found within the threshold, increase overlap count
                 # overlap += sum([len(i) for i in I])
@@ -550,7 +577,7 @@ def compute_overlap_matrix_2set(cfg, objects_map: MapObjectList, objects_new: De
             if iou[i,j] < 1e-6:
                 continue
             
-            D, I = indices[i].search(points_new[j], 1) # search new object j in map object i
+            D, nearest_indices = indices[i].search(points_new[j], 1) # search new object j in map object i
 
             overlap = (D < cfg.downsample_voxel_size ** 2).sum() # D is the squared distance
 
@@ -637,6 +664,7 @@ def filter_gobs(
     gobs: dict,
     image: np.ndarray,
     BG_CLASSES = ["wall", "floor", "ceiling"],
+    audit=None,
 ):
     # If no detection at all
     if len(gobs['xyxy']) == 0:
@@ -647,13 +675,21 @@ def filter_gobs(
     for mask_idx in range(len(gobs['xyxy'])):
         local_class_id = gobs['class_id'][mask_idx]
         class_name = gobs['classes'][local_class_id]
+        def record_filter(reason):
+            if audit is not None:
+                audit.append(dict(stage='input_filter', reason=reason,
+                    detection_index=int(gobs.get('_audit_indices', np.arange(len(gobs['xyxy'])))[mask_idx]),
+                    category=class_name, confidence=float(gobs['confidence'][mask_idx])
+                    if gobs['confidence'] is not None else None))
         
         # SKip masks that are too small
         if gobs['mask'][mask_idx].sum() < max(cfg.mask_area_threshold, 10):
+            record_filter('mask_area')
             continue
         
         # Skip the BG classes
         if cfg.skip_bg and class_name in BG_CLASSES:
+            record_filter('background')
             continue
         
         # Skip the non-background boxes that are too large
@@ -662,18 +698,21 @@ def filter_gobs(
             bbox_area = (x2 - x1) * (y2 - y1)
             image_area = image.shape[0] * image.shape[1]
             if bbox_area > cfg.max_bbox_area_ratio * image_area:
+                record_filter('bbox_area')
                 # print(f"Skipping {class_name} with area {bbox_area} > {cfg.max_bbox_area_ratio} * {image_area}")
                 continue
             
         # Skip masks with low confidence
         if gobs['confidence'] is not None:
             if gobs['confidence'][mask_idx] < cfg.mask_conf_threshold:
+                record_filter('confidence')
                 continue
         
         idx_to_keep.append(mask_idx)
+        record_filter('retained')
     
     for k in gobs.keys():
-        if isinstance(gobs[k], str) or k == "classes": # Captions
+        if isinstance(gobs[k], str) or k in {"classes", "frame_provenance"}: # 帧级字段
             continue
         elif isinstance(gobs[k], list):
             gobs[k] = [gobs[k][i] for i in idx_to_keep]
@@ -725,6 +764,9 @@ def gobs_to_detection_list(
     class_names = None,
     BG_CLASSES = ["wall", "floor", "ceiling"],
     color_path = None,
+    audit=None,
+    observation_policy=None,
+    sparse_callback=None,
 ):
     '''
     Return a DetectionList object from the gobs
@@ -733,8 +775,10 @@ def gobs_to_detection_list(
     fg_detection_list = DetectionList()
     bg_detection_list = DetectionList()
     
+    if audit is not None:
+        gobs['_audit_indices'] = np.arange(len(gobs['xyxy']))
     gobs = resize_gobs(gobs, image)
-    gobs = filter_gobs(cfg, gobs, image, BG_CLASSES)
+    gobs = filter_gobs(cfg, gobs, image, BG_CLASSES, audit=audit)
     
     if len(gobs['xyxy']) == 0:
         return fg_detection_list, bg_detection_list
@@ -751,6 +795,22 @@ def gobs_to_detection_list(
         class_name = gobs['classes'][local_class_id]
         global_class_id = -1 if class_names is None else class_names.index(class_name)
         
+        from conceptgraph.completion.depth import depth_support
+        robust_depth = getattr(cfg, "depth_policy", "legacy") == "largest_supported_cluster"
+        if observation_policy is None:
+            supported_mask, depth_evidence = depth_support(depth_array, mask, robust=robust_depth)
+        else:
+            supported_mask, depth_evidence = observation_policy(
+                depth_array, mask, gobs, mask_idx)
+        # 保持原配置的深度范围，只在显式启用的新方法使用质量筛选。
+        if robust_depth or observation_policy is not None:
+            mask = supported_mask
+        def record_geometry(reason, **extra):
+            if audit is not None:
+                audit.append(dict(stage='geometry', reason=reason,
+                    detection_index=int(gobs['_audit_indices'][mask_idx]),
+                    filtered_mask_index=mask_idx, category=class_name,
+                    depth_evidence=depth_evidence, **extra))
         # make the pcd and color it
         camera_object_pcd = create_object_pcd(
             depth_array,
@@ -762,6 +822,10 @@ def gobs_to_detection_list(
         
         # It at least contains 5 points
         if len(camera_object_pcd.points) < max(cfg.min_points_threshold, 5): 
+            record_geometry('insufficient_points', points=len(camera_object_pcd.points),
+                            required_points=int(max(cfg.min_points_threshold, 5)))
+            if sparse_callback is not None and len(camera_object_pcd.points):
+                sparse_callback(depth_array, mask, gobs, mask_idx, depth_evidence)
             continue
         
         if trans_pose is not None:
@@ -776,7 +840,12 @@ def gobs_to_detection_list(
         pcd_bbox.color = [0,1,0]
         
         if pcd_bbox.volume() < 1e-6:
+            record_geometry('degenerate_bbox', points=len(global_object_pcd.points),
+                            volume=float(pcd_bbox.volume()))
             continue
+        record_geometry('accepted', points=len(global_object_pcd.points),
+                        volume=float(pcd_bbox.volume()),
+                        observation_center=np.asarray(pcd_bbox.get_center()).tolist())
         
         # Treat the detection in the same way as a 3D object
         # Store information that is enough to recover the detection
@@ -793,6 +862,7 @@ def gobs_to_detection_list(
             'n_points': [len(global_object_pcd.points)],
             'pixel_area': [mask.sum()],
             'contain_number': [None],                          # This will be computed later
+            'depth_evidence': [depth_evidence],
             "inst_color": np.random.rand(3),                 # A random color used for this segment instance
             'is_background': class_name in BG_CLASSES,
             

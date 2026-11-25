@@ -1,0 +1,30 @@
+[
+  {
+    "source": "track-00000000",
+    "target": "track-00000002",
+    "distance_m": 10.49534618895353,
+    "relations": [
+      "远",
+      "前",
+      "左"
+    ]
+  },
+  {
+    "source": "track-00000000",
+    "target": "track-00000006",
+    "distance_m": 8.198210514463442,
+    "relations": [
+      "远",
+      "后"
+    ]
+  },
+  {
+    "source": "track-00000001",
+    "target": "track-00000006",
+    "distance_m": 5.60625992763772,
+    "relations": [
+      "近",
+      "前"
+    ]
+  }
+]

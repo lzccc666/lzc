@@ -4,7 +4,7 @@ The script is used to model Grounded SAM detections in 3D, it assumes the tag2te
 
 # Standard library imports
 import copy
-from datetime import datetime
+from dataclasses import dataclass
 import os
 from pathlib import Path
 import gzip
@@ -12,13 +12,11 @@ import pickle
 
 # Related third party imports
 from PIL import Image
-import cv2
 import imageio
 import numpy as np
 import open3d as o3d
 import torch
-import torch.nn.functional as F
-from tqdm import tqdm, trange
+from tqdm import trange
 
 import hydra
 import omegaconf
@@ -30,9 +28,7 @@ from conceptgraph.utils.vis import OnlineObjectRenderer
 from conceptgraph.utils.ious import (
     compute_2d_box_contained_batch
 )
-from conceptgraph.utils.general_utils import to_tensor
-
-from conceptgraph.slam.slam_classes import MapObjectList, DetectionList
+from conceptgraph.slam.slam_classes import MapObjectList
 from conceptgraph.slam.utils import (
     create_or_load_colors,
     merge_obj2_into_obj1, 
@@ -52,6 +48,194 @@ BG_CLASSES = ["wall", "floor", "ceiling"]
 
 # Disable torch gradient computation
 torch.set_grad_enabled(False)
+
+
+@dataclass(frozen=True)
+class MappingFrame:
+    frame_idx: int
+    image_rgb: np.ndarray
+    depth_array: np.ndarray
+    cam_K: np.ndarray
+    camera_pose: np.ndarray
+    detections: dict
+    color_path: str
+    timestamp_s: float | None = None
+
+
+@dataclass
+class MappingUpdate:
+    frame_idx: int
+    objects: MapObjectList
+    bg_objects: dict | None
+    changed_object_ids: list[int]
+    skipped: bool
+    foreground_detection_count: int
+    object_count: int
+
+
+class StreamlinedMapper:
+    """Reusable single-frame object fusion core used by the legacy CLI and stage 5."""
+
+    def __init__(self, cfg, classes, class_colors=None):
+        self.cfg = cfg
+        self.classes = list(classes)
+        self.class_colors = class_colors
+        self.objects = MapObjectList(device=cfg.device)
+        self.bg_objects = None if cfg.skip_bg else {name: None for name in BG_CLASSES}
+        self.last_observations = []
+        self._next_object_id = 0
+        self._last_timestamp_s = None
+
+    def update(self, frame: MappingFrame) -> MappingUpdate:
+        if frame.timestamp_s is not None:
+            if (not np.isfinite(frame.timestamp_s) or (self._last_timestamp_s is not None
+                    and frame.timestamp_s <= self._last_timestamp_s)):
+                raise ValueError("mapping requires strictly increasing finite timestamps")
+            self._last_timestamp_s = frame.timestamp_s
+        if getattr(self.cfg, "association_policy", "legacy") == "one_to_one":
+            ttl = float(getattr(self.cfg, "dynamic_ttl_s", 2.0))
+            self.objects = MapObjectList([
+                obj for obj in self.objects
+                if not (frame.timestamp_s is not None and obj.get("is_short_term", False)
+                        and obj.get("timestamp_s") is not None
+                        and frame.timestamp_s - obj["timestamp_s"] > ttl)
+            ])
+        before = [_mapping_object_signature(obj) for obj in self.objects]
+        fg_detection_list, bg_detection_list = self.extract_detections(frame)
+        for det in fg_detection_list:
+            if frame.timestamp_s is not None:
+                det["timestamp_s"] = float(frame.timestamp_s)
+                det["timestamp_history_s"] = [float(frame.timestamp_s)]
+            if getattr(self.cfg, "association_policy", "legacy") == "one_to_one":
+                det["stable_object_id"] = f"track-{self._next_object_id:08d}"
+                self._next_object_id += 1
+        self.last_observations = copy.deepcopy(fg_detection_list)
+
+        if len(bg_detection_list) > 0 and self.bg_objects is not None:
+            for detected_object in bg_detection_list:
+                class_name = detected_object["class_name"][0]
+                if self.bg_objects[class_name] is None:
+                    self.bg_objects[class_name] = detected_object
+                else:
+                    self.bg_objects[class_name] = merge_obj2_into_obj1(
+                        self.cfg,
+                        self.bg_objects[class_name],
+                        detected_object,
+                        run_dbscan=False,
+                    )
+
+        if len(fg_detection_list) == 0:
+            return MappingUpdate(
+                frame_idx=int(frame.frame_idx),
+                objects=self.objects,
+                bg_objects=self.bg_objects,
+                changed_object_ids=[],
+                skipped=True,
+                foreground_detection_count=0,
+                object_count=len(self.objects),
+            )
+
+        contain_numbers = None
+        if self.cfg.use_contain_number:
+            xyxy = fg_detection_list.get_stacked_values_torch("xyxy", 0)
+            contain_numbers = compute_2d_box_contained_batch(
+                xyxy,
+                self.cfg.contain_area_thresh,
+            )
+            for index in range(len(fg_detection_list)):
+                fg_detection_list[index]["contain_number"] = [contain_numbers[index]]
+
+        if len(self.objects) == 0:
+            for detected_object in fg_detection_list:
+                self.objects.append(detected_object)
+            skipped = True
+        else:
+            spatial_sim = compute_spatial_similarities(
+                self.cfg,
+                fg_detection_list,
+                self.objects,
+            )
+            visual_sim = compute_visual_similarities(
+                self.cfg,
+                fg_detection_list,
+                self.objects,
+            )
+            agg_sim = aggregate_similarities(self.cfg, spatial_sim, visual_sim)
+            if self.cfg.use_contain_number:
+                contain_numbers_objects = torch.Tensor(
+                    [obj["contain_number"][0] for obj in self.objects]
+                )
+                detection_contained = (contain_numbers > 0).unsqueeze(1)
+                object_contained = (contain_numbers_objects > 0).unsqueeze(0)
+                agg_sim[detection_contained ^ object_contained] -= self.cfg.contain_mismatch_penalty
+            agg_sim = self.refine_association_scores(
+                frame, fg_detection_list, spatial_sim, visual_sim, agg_sim
+            )
+            agg_sim[agg_sim < self.cfg.sim_threshold] = float("-inf")
+            self.objects = self.merge_associated_detections(fg_detection_list, agg_sim)
+            frame_number = int(frame.frame_idx) + 1
+            if self.cfg.denoise_interval > 0 and frame_number % self.cfg.denoise_interval == 0:
+                self.objects = denoise_objects(self.cfg, self.objects)
+            if self.cfg.filter_interval > 0 and frame_number % self.cfg.filter_interval == 0:
+                self.objects = filter_objects(self.cfg, self.objects)
+            if self.cfg.merge_interval > 0 and frame_number % self.cfg.merge_interval == 0:
+                self.objects = merge_objects(self.cfg, self.objects)
+            skipped = False
+
+        after = [_mapping_object_signature(obj) for obj in self.objects]
+        changed = [
+            index
+            for index in range(max(len(before), len(after)))
+            if index >= len(before) or index >= len(after) or before[index] != after[index]
+        ]
+        return MappingUpdate(
+            frame_idx=int(frame.frame_idx),
+            objects=self.objects,
+            bg_objects=self.bg_objects,
+            changed_object_ids=changed,
+            skipped=skipped,
+            foreground_detection_count=len(fg_detection_list),
+            object_count=len(self.objects),
+        )
+
+    def extract_detections(self, frame):
+        """默认调用原观测入口；实验子类可附加过滤诊断或观测策略。"""
+        return gobs_to_detection_list(
+            cfg=self.cfg,
+            image=frame.image_rgb,
+            depth_array=frame.depth_array,
+            cam_K=frame.cam_K,
+            idx=int(frame.frame_idx),
+            gobs=frame.detections,
+            trans_pose=frame.camera_pose,
+            class_names=self.classes,
+            BG_CLASSES=BG_CLASSES,
+            color_path=frame.color_path,
+        )
+
+    def merge_associated_detections(self, detections, scores):
+        """默认仍采用原分配与几何更新。"""
+        return merge_detections_to_objects(self.cfg, detections, self.objects, scores)
+
+    def refine_association_scores(self, frame, detections, spatial_sim, visual_sim, scores):
+        """默认保持历史关联分数，实验子类可在分配前加入因果运动约束。"""
+        return scores
+
+    def effective_objects(self) -> MapObjectList:
+        return MapObjectList(
+            [obj for obj in self.objects if obj["num_detections"] >= self.cfg.obj_min_detections]
+        )
+
+
+def _mapping_object_signature(obj) -> tuple:
+    bbox = obj.get("bbox")
+    center = np.asarray(bbox.get_center(), dtype=float) if bbox is not None else np.zeros(3)
+    return (
+        tuple(np.round(center, 6).tolist()),
+        int(obj.get("num_detections", 0)),
+        str(obj.get("motion_state", "unknown")),
+        bool(obj.get("is_short_term", False)),
+    )
 
 def compute_match_batch(cfg, spatial_sim: torch.Tensor, visual_sim: torch.Tensor) -> torch.Tensor:
     '''
@@ -159,16 +343,9 @@ def main(cfg : DictConfig):
     
     classes, class_colors = create_or_load_colors(cfg, cfg.color_file_name)
 
-    objects = MapObjectList(device=cfg.device)
-    
-    if not cfg.skip_bg:
-        # Handle the background detection separately 
-        # Each class of them are fused into the map as a single object
-        bg_objects = {
-            c: None for c in BG_CLASSES
-        }
-    else:
-        bg_objects = None
+    mapper = StreamlinedMapper(cfg, classes, class_colors)
+    objects = mapper.objects
+    bg_objects = mapper.bg_objects
         
     # For visualization
     if cfg.vis_render:
@@ -249,75 +426,21 @@ def main(cfg : DictConfig):
         # else:
         #     continue
         
-        fg_detection_list, bg_detection_list = gobs_to_detection_list(
-            cfg = cfg,
-            image = image_rgb,
-            depth_array = depth_array,
-            cam_K = cam_K,
-            idx = idx,
-            gobs = gobs,
-            trans_pose = adjusted_pose,
-            class_names = classes,
-            BG_CLASSES = BG_CLASSES,
-            color_path = color_path,
+        mapping_update = mapper.update(
+            MappingFrame(
+                frame_idx=idx,
+                image_rgb=image_rgb,
+                depth_array=depth_array,
+                cam_K=cam_K,
+                camera_pose=adjusted_pose,
+                detections=gobs,
+                color_path=color_path,
+            )
         )
-        
-        if len(bg_detection_list) > 0:
-            for detected_object in bg_detection_list:
-                class_name = detected_object['class_name'][0]
-                if bg_objects[class_name] is None:
-                    bg_objects[class_name] = detected_object
-                else:
-                    matched_obj = bg_objects[class_name]
-                    matched_det = detected_object
-                    bg_objects[class_name] = merge_obj2_into_obj1(cfg, matched_obj, matched_det, run_dbscan=False)
-            
-        if len(fg_detection_list) == 0:
+        objects = mapping_update.objects
+        bg_objects = mapping_update.bg_objects
+        if mapping_update.skipped:
             continue
-            
-        if cfg.use_contain_number:
-            xyxy = fg_detection_list.get_stacked_values_torch('xyxy', 0)
-            contain_numbers = compute_2d_box_contained_batch(xyxy, cfg.contain_area_thresh)
-            for i in range(len(fg_detection_list)):
-                fg_detection_list[i]['contain_number'] = [contain_numbers[i]]
-            
-        if len(objects) == 0:
-            # Add all detections to the map
-            for i in range(len(fg_detection_list)):
-                objects.append(fg_detection_list[i])
-
-            # Skip the similarity computation 
-            continue
-                
-        spatial_sim = compute_spatial_similarities(cfg, fg_detection_list, objects)
-        visual_sim = compute_visual_similarities(cfg, fg_detection_list, objects)
-        agg_sim = aggregate_similarities(cfg, spatial_sim, visual_sim)
-        
-        # Compute the contain numbers for each detection
-        if cfg.use_contain_number:
-            # Get the contain numbers for all objects
-            contain_numbers_objects = torch.Tensor([obj['contain_number'][0] for obj in objects])
-            detection_contained = contain_numbers > 0 # (M,)
-            object_contained = contain_numbers_objects > 0 # (N,)
-            detection_contained = detection_contained.unsqueeze(1) # (M, 1)
-            object_contained = object_contained.unsqueeze(0) # (1, N)                
-
-            # Get the non-matching entries, penalize their similarities
-            xor = detection_contained ^ object_contained
-            agg_sim[xor] = agg_sim[xor] - cfg.contain_mismatch_penalty
-        
-        # Threshold sims according to cfg. Set to negative infinity if below threshold
-        agg_sim[agg_sim < cfg.sim_threshold] = float('-inf')
-        
-        objects = merge_detections_to_objects(cfg, fg_detection_list, objects, agg_sim)
-        
-        # Perform post-processing periodically if told so
-        if cfg.denoise_interval > 0 and (idx+1) % cfg.denoise_interval == 0:
-            objects = denoise_objects(cfg, objects)
-        if cfg.filter_interval > 0 and (idx+1) % cfg.filter_interval == 0:
-            objects = filter_objects(cfg, objects)
-        if cfg.merge_interval > 0 and (idx+1) % cfg.merge_interval == 0:
-            objects = merge_objects(cfg, objects)
             
         if cfg.save_objects_all_frames:
             save_all_path = save_all_folder / f"{idx:06d}.pkl.gz"
@@ -382,8 +505,6 @@ def main(cfg : DictConfig):
     
     # Save the full point cloud before post-processing
     if cfg.save_pcd:
-        ts = datetime.now().strftime("%Y%m%d_%H%M%S")
-        
         results = {
             'objects': objects.to_serializable(),
             'bg_objects': None if bg_objects is None else bg_objects.to_serializable(),
@@ -416,7 +537,7 @@ def main(cfg : DictConfig):
     save_scene_map_for_downstream(cfg, objects, bg_objects, classes, class_colors)
         
     if cfg.save_objects_all_frames:
-        save_meta_path = save_all_folder / f"meta.pkl.gz"
+        save_meta_path = save_all_folder / "meta.pkl.gz"
         with gzip.open(save_meta_path, "wb") as f:
             pickle.dump({
                 'cfg': cfg,

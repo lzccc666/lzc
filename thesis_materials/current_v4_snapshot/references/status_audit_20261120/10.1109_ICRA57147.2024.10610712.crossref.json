@@ -1,0 +1,481 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          20
+        ]
+      ],
+      "date-time": "2026-11-20T03:16:40Z",
+      "timestamp": 1795144600709,
+      "version": "4.10.3"
+    },
+    "reference-count": 38,
+    "publisher": "IEEE",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              5,
+              13
+            ]
+          ],
+          "date-time": "2024-05-13T00:00:00Z",
+          "timestamp": 1715558400000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              5,
+              13
+            ]
+          ],
+          "date-time": "2024-05-13T00:00:00Z",
+          "timestamp": 1715558400000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/501100003662",
+        "name": "Korea Evaluation Institute of Industrial Technology",
+        "doi-asserted-by": "publisher",
+        "id": [
+          {
+            "id": "10.13039/501100003662",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2024,
+          5,
+          13
+        ]
+      ]
+    },
+    "DOI": "10.1109/icra57147.2024.10610712",
+    "type": "proceedings-article",
+    "created": {
+      "date-parts": [
+        [
+          2024,
+          8,
+          8
+        ]
+      ],
+      "date-time": "2024-08-08T13:51:05Z",
+      "timestamp": 1723125065000
+    },
+    "page": "42-48",
+    "source": "Crossref",
+    "is-referenced-by-count": 186,
+    "title": [
+      "VLFM: Vision-Language Frontier Maps for Zero-Shot Semantic Navigation"
+    ],
+    "prefix": "10.1109",
+    "author": [
+      {
+        "given": "Naoki",
+        "family": "Yokoyama",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Boston Dynamics AI Institute"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Sehoon",
+        "family": "Ha",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Georgia Institute of Technology"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Dhruv",
+        "family": "Batra",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Georgia Institute of Technology"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Jiuguang",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Boston Dynamics AI Institute"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Bernadette",
+        "family": "Bucher",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Boston Dynamics AI Institute"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR52729.2023.02219"
+      },
+      {
+        "key": "ref2",
+        "article-title": "ESC: Exploration with Soft Commonsense Constraints for Zero-shot Object Navigation",
+        "author": "Zhou",
+        "year": "2023"
+      },
+      {
+        "key": "ref3",
+        "article-title": "How To Not Train Your Dragon: Training-free Embodied Object Navigation with Semantic Frontiers",
+        "author": "Chen",
+        "year": "2023",
+        "journal-title": "RSS"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/lra.2023.3346800"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV.2019.00943"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2018.00945"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/3DV.2017.00081"
+      },
+      {
+        "key": "ref8",
+        "article-title": "Habitat-Matterport 3D Dataset (HM3D): 1000 Large-scale 3D Environments for Embodied AI",
+        "volume-title": "Thirty-fifth Conference on Neural Information Processing Systems Datasets and Benchmarks Track",
+        "author": "Ramakrishnan"
+      },
+      {
+        "key": "ref9",
+        "first-page": "7727",
+        "article-title": "VER: Scaling On-Policy RL Leads to the Emergence of Navigation in Embodied Rearrangement",
+        "volume": "35",
+        "author": "Wijmans",
+        "year": "2022",
+        "journal-title": "NeurIPS"
+      },
+      {
+        "key": "ref10",
+        "article-title": "ObjectNav Revisited: On Evaluation of Embodied Agents Navigating to Objects",
+        "author": "Batra",
+        "year": "2020"
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/iccv48922.2021.01581"
+      },
+      {
+        "key": "ref12",
+        "article-title": "Semantic Visual Navigation by Watching YouTube Videos",
+        "author": "Chang",
+        "year": "2020",
+        "journal-title": "NeurIPS"
+      },
+      {
+        "key": "ref13",
+        "first-page": "5982",
+        "article-title": "ProcTHOR: Large-Scale Embodied AI Using Procedural Generation",
+        "volume": "35",
+        "author": "Deitke",
+        "year": "2022",
+        "journal-title": "NeurIPS"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CASE49997.2022.9926452"
+      },
+      {
+        "key": "ref15",
+        "article-title": "Ovrl-v2: A simple state-of-art baseline for imagenav and objectnav",
+        "author": "Yadav",
+        "year": "2023"
+      },
+      {
+        "key": "ref16",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR52729.2023.01716"
+      },
+      {
+        "key": "ref17",
+        "article-title": "Object Goal Navigation using Goal-Oriented Semantic Exploration",
+        "author": "Chaplot",
+        "year": "2020",
+        "journal-title": "NeurIPS"
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV48922.2021.01485"
+      },
+      {
+        "key": "ref19",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IROS47612.2022.9981646"
+      },
+      {
+        "key": "ref20",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR52688.2022.01832"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR52729.2023.00645"
+      },
+      {
+        "key": "ref22",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CIRA.1997.613851"
+      },
+      {
+        "key": "ref23",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IROS.2011.6095018"
+      },
+      {
+        "key": "ref24",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IROS55552.2023.10341773"
+      },
+      {
+        "key": "ref25",
+        "first-page": "8748",
+        "article-title": "Learning Transferable Visual Models from Natural Language Supervision",
+        "author": "Radford",
+        "year": "2021",
+        "journal-title": "ICML"
+      },
+      {
+        "key": "ref26",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/n19–1423"
+      },
+      {
+        "key": "ref27",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/springerreference_9081"
+      },
+      {
+        "key": "ref28",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR52729.2023.00721"
+      },
+      {
+        "key": "ref29",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-319-10602-1_48"
+      },
+      {
+        "key": "ref30",
+        "article-title": "Grounding DINO: Marrying DINO with Grounded Pre-Training for Open-Set Object Detection",
+        "author": "Liu",
+        "year": "2023"
+      },
+      {
+        "key": "ref31",
+        "article-title": "Faster Segment Anything: Towards Lightweight SAM for Mobile Applications",
+        "author": "Zhang",
+        "year": "2023"
+      },
+      {
+        "key": "ref32",
+        "article-title": "On Evaluation of Embodied Navigation Agents",
+        "author": "Anderson",
+        "year": "2018"
+      },
+      {
+        "key": "ref33",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/LRA.2023.3336109"
+      },
+      {
+        "key": "ref34",
+        "article-title": "Rethinking Sim2Real: Lower Fidelity Simulation Leads to Higher Sim2Real Transfer in Navigation",
+        "volume-title": "Conference on Robot Learning (CoRL)",
+        "author": "Truong"
+      },
+      {
+        "key": "ref35",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR52688.2022.01672"
+      },
+      {
+        "key": "ref36",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IROS51168.2021.9636743"
+      },
+      {
+        "key": "ref37",
+        "article-title": "ZSON: Zero-Shot Object-Goal Navigation using Multimodal Goal Embeddings",
+        "author": "Majumdar",
+        "year": "2022",
+        "journal-title": "NeurIPS"
+      },
+      {
+        "key": "ref38",
+        "article-title": "ZoeDepth: Zero-shot Transfer by Combining Relative and Metric Depth",
+        "author": "Bhat",
+        "year": "2023"
+      }
+    ],
+    "event": {
+      "name": "2024 IEEE International Conference on Robotics and Automation (ICRA)",
+      "location": "Yokohama, Japan",
+      "start": {
+        "date-parts": [
+          [
+            2024,
+            5,
+            13
+          ]
+        ]
+      },
+      "end": {
+        "date-parts": [
+          [
+            2024,
+            5,
+            17
+          ]
+        ]
+      }
+    },
+    "container-title": [
+      "2024 IEEE International Conference on Robotics and Automation (ICRA)"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx8/10609961/10609862/10610712.pdf?arnumber=10610712",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2024,
+          8,
+          10
+        ]
+      ],
+      "date-time": "2024-08-10T01:21:27Z",
+      "timestamp": 1723252887000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/10610712/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2024,
+          5,
+          13
+        ]
+      ]
+    },
+    "references-count": 38,
+    "URL": "https://doi.org/10.1109/icra57147.2024.10610712",
+    "relation": {},
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2024,
+          5,
+          13
+        ]
+      ]
+    }
+  }
+}

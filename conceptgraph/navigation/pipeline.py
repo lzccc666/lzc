@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import json
-import os
 import time
 from pathlib import Path
 
@@ -15,21 +14,25 @@ from matplotlib.patches import Patch
 import numpy as np
 
 from conceptgraph.navigation.io import load_scene_graph_edges, load_scene_graph_nodes, load_scene_map
+from conceptgraph.navigation.lane_constraints import load_lane_topology, project_to_legal_lane
 from conceptgraph.navigation.planner import (
-    astar_plan,
-    astar_plan_with_stats,
-    compute_clearance_bias_grid,
-    compute_semantic_bias_grid,
-    evaluate_reachable_goal_near_point_from_start,
     find_reachable_goal_near_point,
-    find_reachable_goal_near_point_from_start,
     free_component,
     load_occupancy_grid,
     path_grid_to_world,
-    smooth_grid_path,
 )
-from conceptgraph.navigation.semantic import parse_navigation_query, rank_candidate_targets
-from conceptgraph.navigation.types import NavigationPlan
+from conceptgraph.navigation.semantic import (
+    apply_qwen_query_parse,
+    parse_navigation_query,
+    rank_candidate_targets,
+)
+from conceptgraph.navigation.target_selector import (
+    TargetSelectionConfig,
+    TargetSelector,
+    candidate_target_to_dict,
+    target_selection_result_to_dict,
+)
+from conceptgraph.navigation.types import NavigationPlan, TargetSelectionResult
 
 CHINESE_FONT = FontProperties(fname="/root/autodl-tmp/lizichong/checkpoint/fonts/NotoSansCJKsc-Regular.otf")
 
@@ -48,23 +51,69 @@ _configure_chinese_font()
 
 
 class SemanticNavigationPipeline:
-    def __init__(self, cfg):
+    def __init__(self, cfg, semantic_delegate=None):
         self.cfg = cfg
+        self._semantic_delegate = semantic_delegate
+        self._semantic_delegate_initialized = semantic_delegate is not None
+        self._last_query_audit = None
         self._viz_occupancy_grid = None
         self._nodes = None
         self._edges = None
         self._occupancy_grid = None
+        self._lane_topology = None
 
-    def run(self, query_text: str, vehicle_pose: np.ndarray) -> NavigationPlan:
+    def set_in_memory_inputs(self, *, nodes, edges, occupancy_grid) -> None:
+        """Inject a live navigation snapshot and bypass all final-graph file loads."""
+        self._nodes = dict(nodes)
+        self._edges = list(edges)
+        self._occupancy_grid = occupancy_grid
+        self._viz_occupancy_grid = occupancy_grid
+
+    def select(
+        self,
+        query_text: str,
+        vehicle_pose: np.ndarray,
+        *,
+        parsed_query=None,
+        target_node_id: int | None = None,
+        run_semantic_delegate: bool = True,
+    ) -> TargetSelectionResult:
         run_start = time.perf_counter()
         vehicle_pose = np.asarray(vehicle_pose, dtype=float)
         vehicle_xy = vehicle_pose[:2]
+        if parsed_query is None:
+            parsed_query, query_audit = self._parse_query_once(query_text)
+        else:
+            query_audit = None
+        self._last_query_audit = query_audit
 
-        nodes = self._load_nodes()
-        edges = self._load_edges()
-        occupancy_grid = self._get_occupancy_grid(nodes)
+        try:
+            nodes = self._load_nodes()
+            edges = self._load_edges()
+        except (OSError, ValueError, KeyError, TypeError) as exc:
+            return self._failure_result(
+                mode=self._selection_config().mode,
+                code="INPUT_LOAD_FAILED",
+                reason=f"Failed to load navigation inputs: {exc}",
+                started=run_start,
+            )
+        if not nodes:
+            return self._failure_result(
+                mode=self._selection_config().mode,
+                code="EMPTY_SCENE_GRAPH",
+                reason="Scene graph contains no target nodes.",
+                started=run_start,
+            )
+        try:
+            occupancy_grid = self._get_occupancy_grid(nodes)
+        except (OSError, ValueError, KeyError, TypeError) as exc:
+            return self._failure_result(
+                mode=self._selection_config().mode,
+                code="OCCUPANCY_GRID_FAILED",
+                reason=f"Failed to build or load occupancy grid: {exc}",
+                started=run_start,
+            )
 
-        parsed_query = parse_navigation_query(query_text, self.cfg.default_near_distance_m)
         if vehicle_pose.shape[0] >= 5:
             parsed_query.vehicle_heading_xy = np.asarray(vehicle_pose[3:5], dtype=float)
         candidates = rank_candidate_targets(
@@ -75,146 +124,245 @@ class SemanticNavigationPipeline:
             lambda_text=self.cfg.lambda_text,
             lambda_relation=self.cfg.lambda_relation,
             lambda_distance=self.cfg.lambda_distance_prior,
+            minimum_edge_confidence=float(
+                getattr(self.cfg, "relation_edge_minimum_confidence", 0.35)
+            ),
+            relation_coordinate_frame=str(
+                getattr(self.cfg, "relation_coordinate_frame", "world")
+            ),
+            relation_coordinate_frame_fallback=str(
+                getattr(self.cfg, "relation_coordinate_frame_fallback", "world")
+            ),
+            relation_trajectory=self._load_relation_trajectory(),
+            evidence_policy=getattr(self.cfg, "target_evidence_policy", None),
         )
         if not candidates:
-            raise RuntimeError(f"No semantic target found for query: {query_text}")
+            return self._failure_result(
+                mode=self._selection_config().mode,
+                code="NO_SEMANTIC_CANDIDATES",
+                reason=f"No semantic target found for query: {query_text}",
+                started=run_start,
+            )
+        if target_node_id is not None:
+            candidates = [
+                candidate for candidate in candidates if candidate.node_id == int(target_node_id)
+            ]
+            if not candidates:
+                return self._failure_result(
+                    mode=self._selection_config().mode,
+                    code="LOCKED_TARGET_NOT_CANDIDATE",
+                    reason=f"Locked target {int(target_node_id)} is not a semantic candidate.",
+                    started=run_start,
+                )
         top1_semantic_node_id = int(candidates[0].node_id)
 
-        start_rc = occupancy_grid.world_to_grid(vehicle_xy)
-        start_reachable = find_reachable_goal_near_point(
-            occupancy_grid,
-            vehicle_xy,
-            self.cfg.start_search_radius_m,
+        selection_config = self._selection_config()
+        lane_topology = None
+        if selection_config.mode == "lane_constrained":
+            try:
+                lane_topology = self._get_lane_topology()
+                from conceptgraph.navigation.lane_constraints import check_lane_grid_alignment
+                check_lane_grid_alignment(occupancy_grid, lane_topology)
+            except (OSError, ValueError, KeyError, TypeError) as exc:
+                return self._failure_result(
+                    mode=selection_config.mode,
+                    code="NO_LANE_MAP",
+                    reason=f"Lane-constrained planning requires a valid lane map: {exc}",
+                    started=run_start,
+                    candidates=candidates,
+                )
+            start_projection = project_to_legal_lane(
+                occupancy_grid,
+                lane_topology,
+                vehicle_xy,
+                max_distance_m=float(getattr(self.cfg, "lane_projection_max_distance_m", 8.0)),
+            )
+            if start_projection is None:
+                return self._failure_result(
+                    mode=selection_config.mode,
+                    code="NO_LEGAL_LANE_START",
+                    reason="Vehicle pose cannot be projected to a free lane cell within the configured error bound.",
+                    started=run_start,
+                    candidates=candidates,
+                )
+            start_rc = start_projection[0]
+            start_component = free_component(occupancy_grid, start_rc)
+        else:
+            start_reachable = find_reachable_goal_near_point(
+                occupancy_grid,
+                vehicle_xy,
+                self.cfg.start_search_radius_m,
+            )
+            if start_reachable is None:
+                return self._failure_result(
+                    mode=selection_config.mode,
+                    code="NO_FREE_START_CELL",
+                    reason="Current vehicle pose has no free cell within the configured start search radius.",
+                    started=run_start,
+                    candidates=candidates,
+                )
+            _, start_rc = start_reachable
+            start_component = free_component(occupancy_grid, start_rc)
+            if not start_component:
+                return self._failure_result(
+                    mode=selection_config.mode,
+                    code="EMPTY_START_COMPONENT",
+                    reason="Current vehicle pose has no connected free component in the occupancy grid.",
+                    started=run_start,
+                    candidates=candidates,
+                )
+        selector = TargetSelector(
+            grid=occupancy_grid,
+            nodes=nodes,
+            start_rc=start_rc,
+            start_component=start_component,
+            config=selection_config,
+            semantic_cost_weight=float(getattr(self.cfg, "semantic_cost_weight", 0.0)),
+            clearance_cost_weight=float(getattr(self.cfg, "clearance_cost_weight", 0.0)),
+            path_smoothing_iterations=int(getattr(self.cfg, "path_smoothing_iterations", 2)),
+            legacy_max_candidates=int(getattr(self.cfg, "max_candidates", selection_config.top_k)),
+            legacy_goal_search_radius_m=float(getattr(self.cfg, "goal_search_radius_m", 25.0)),
+            legacy_allow_goal_fallback=bool(getattr(self.cfg, "allow_goal_fallback", True)),
+            lane_topology=lane_topology,
+            vehicle_xy=vehicle_xy,
+            lane_projection_max_distance_m=float(getattr(self.cfg, "lane_projection_max_distance_m", 8.0)),
+            lane_centerline_weight=float(getattr(self.cfg, "lane_centerline_weight", 0.25)),
+            lane_direction_tolerance_deg=float(getattr(self.cfg, "lane_direction_tolerance_deg", 75.0)),
+            start_heading_xy=vehicle_pose[3:5] if vehicle_pose.shape[0] >= 5 else None,
         )
-        if start_reachable is None:
-            raise RuntimeError("Current vehicle pose is not connected to a free cell in the occupancy grid.")
-        _, start_rc = start_reachable
-        start_component = free_component(occupancy_grid, start_rc)
-        if not start_component:
-            raise RuntimeError("Current vehicle pose has no connected free component in the occupancy grid.")
+        result = selector.select(candidates)
+        result.timing["total_s"] = float(time.perf_counter() - run_start)
+        if query_audit is not None:
+            result.debug["qwen_query_parse"] = query_audit
+        rerank_audit = (
+            self._rerank_verified_candidates(query_text, result, edges)
+            if run_semantic_delegate
+            else None
+        )
+        if rerank_audit is not None:
+            result.debug["qwen_candidate_rerank"] = rerank_audit
+        if not result.success or result.selected_candidate is None:
+            return result
 
-        best_plan = None
-        last_failure = "no candidate evaluated"
-        for rank, candidate in enumerate(candidates[: self.cfg.max_candidates], start=1):
-            node = nodes[candidate.node_id]
-            target_rc = occupancy_grid.world_to_grid(node.bbox_center[:2])
-            candidate.debug["target_grid_raw"] = list(target_rc)
-            candidate.debug["target_in_map"] = occupancy_grid.in_bounds(target_rc)
-            candidate.debug["target_free"] = occupancy_grid.is_free(target_rc)
-            reachable = evaluate_reachable_goal_near_point_from_start(
-                occupancy_grid,
-                node.bbox_center[:2],
-                start_rc,
-                self.cfg.goal_search_radius_m,
-                allow_global_fallback=bool(getattr(self.cfg, "allow_goal_fallback", True)),
-                component=start_component,
+        selected = result.selected_candidate
+        selected_goal = next(
+            (
+                goal
+                for goal in selected.goal_candidates
+                if goal.path_found and goal.goal_rc == selected.target_grid
+            ),
+            None,
+        )
+        if selected_goal is None:
+            return self._failure_result(
+                mode=result.mode,
+                code="INTERNAL_SELECTED_PATH_MISSING",
+                reason="Selected target has no corresponding validated path.",
+                started=run_start,
+                candidates=result.evaluated_candidates,
+                scoring_weights=result.scoring_weights,
             )
-            if reachable is None:
-                reason = "no_free_goal_nearby"
-                if not occupancy_grid.in_bounds(target_rc):
-                    reason = "out_of_map"
-                elif not occupancy_grid.is_free(target_rc):
-                    reason = "occupied_target"
-                candidate.debug["reachability"] = reason
-                candidate.reachability_reason = reason
-                last_failure = f"candidate {candidate.node_id} failed reachability: {reason}"
-                continue
 
-            goal_xy, goal_rc = reachable.goal_xy, reachable.goal_rc
-            candidate.debug.update(
-                {
-                    "reachability": "reachable",
-                    "reachability_reason": reachable.reason,
-                    "fallback_used": reachable.fallback_used,
-                    "fallback_distance_m": reachable.fallback_distance_m,
-                    "selected_goal_xy": goal_xy.tolist(),
-                }
-            )
-            semantic_bias = compute_semantic_bias_grid(
-                occupancy_grid,
-                goal_rc,
-                self.cfg.semantic_cost_weight,
-            )
-            clearance_bias = compute_clearance_bias_grid(occupancy_grid, self.cfg.clearance_cost_weight)
-            planned = astar_plan_with_stats(
-                occupancy_grid,
-                start_rc,
-                goal_rc,
-                semantic_bias=semantic_bias + clearance_bias,
-                clearance_weight=self.cfg.clearance_cost_weight,
-            )
-            if planned is None:
-                candidate.debug["reachability"] = "astar_failed"
-                candidate.reachability_reason = "astar_failed"
-                last_failure = f"candidate {candidate.node_id} path planning failed"
-                continue
+        node = nodes[selected.node_id]
+        z = float(vehicle_pose[2] if vehicle_pose.shape[0] > 2 else 0.0)
+        path_world = path_grid_to_world(occupancy_grid, selected_goal.path_grid, z=z)
+        path_world_raw = path_grid_to_world(occupancy_grid, selected_goal.path_grid_raw, z=z)
+        fallback_reason = selected_goal.fallback_reason
+        fallback_used = bool(selected.debug.get("fallback_used", False))
+        if result.mode == "joint_utility":
+            fallback_used = fallback_reason not in {None, "grid_quantization"}
+        planning_time_s = float(time.perf_counter() - run_start)
+        plan = NavigationPlan(
+            query=parsed_query,
+            selected_node_id=node.node_id,
+            selected_object_tag=node.object_tag,
+            selected_target_point=selected.target_point,
+            path_world=path_world,
+            path_grid=selected_goal.path_grid,
+            path_cost=float(selected_goal.path_cost),
+            candidate_targets=candidates,
+            occupancy_origin_xy=occupancy_grid.origin_xy,
+            occupancy_resolution=float(occupancy_grid.resolution),
+            occupancy_shape=occupancy_grid.shape,
+            path_world_raw=path_world_raw,
+            top1_semantic_node_id=top1_semantic_node_id,
+            fallback_used=fallback_used,
+            fallback_reason=fallback_reason,
+            fallback_distance_m=float(selected_goal.fallback_distance_m or 0.0),
+            planning_time_s=planning_time_s,
+            target_selection_mode=result.mode,
+            selection_utility=selected.selection_utility,
+            scoring_weights=result.scoring_weights,
+            selection_timing=result.timing,
+            debug={
+                "selected_candidate_score": selected.score,
+                "selected_candidate_debug": selected.debug,
+                "planning_time_s": planning_time_s,
+                "top1_semantic_node_id": top1_semantic_node_id,
+                "selected_reachable_rank": selected.reachable_rank,
+                "astar_expanded_nodes": selected_goal.expanded_nodes,
+                "raw_astar_waypoints": len(selected_goal.path_grid_raw),
+                "smoothed_waypoints": len(selected_goal.path_grid),
+                "path_smoothing_iterations": int(getattr(self.cfg, "path_smoothing_iterations", 2)),
+                "continuous_collision_check": True,
+                "start_grid": list(start_rc),
+                "goal_grid": list(selected_goal.goal_rc),
+                "occupancy_free_ratio": float((occupancy_grid.occupancy == 0).mean()),
+                "occupancy_source": occupancy_grid.source,
+                "occupancy_fallback_used": occupancy_grid.fallback_used,
+                "occupancy_metadata": occupancy_grid.metadata or {},
+                "obstacle_profile": str(getattr(self.cfg, "obstacle_profile", "thesis")),
+                "robot_radius_m": float(getattr(self.cfg, "robot_radius_m", 0.8)),
+                "object_bbox_obstacle_scale": float(getattr(self.cfg, "object_bbox_obstacle_scale", 0.18)),
+                "max_object_obstacle_radius_m": float(getattr(self.cfg, "max_object_obstacle_radius_m", 1.2)),
+                "goal_search_radius_m": float(getattr(self.cfg, "goal_search_radius_m", 20.0)),
+                "candidate_failure_reasons": [
+                    {
+                        "node_id": int(candidate.node_id),
+                        "reason": candidate.rejection_reason or candidate.reachability_reason,
+                        "score": float(candidate.score),
+                    }
+                    for candidate in result.evaluated_candidates
+                ],
+                "relation_query": self._relation_query_diagnostics(selected),
+                "qwen_query_parse": query_audit,
+                "qwen_candidate_rerank": rerank_audit,
+            },
+        )
+        result.plan = plan
+        return result
 
-            path_grid_raw, path_cost = planned.path, planned.cost
-            smooth_iterations = int(getattr(self.cfg, "path_smoothing_iterations", 2))
-            path_grid = smooth_grid_path(occupancy_grid, path_grid_raw, chaikin_iterations=smooth_iterations)
-            candidate.reachable = True
-            candidate.target_point = np.asarray([goal_xy[0], goal_xy[1], node.bbox_center[2]], dtype=float)
-            candidate.target_grid = goal_rc
-            candidate.reachable_rank = rank
+    def run(self, query_text: str, vehicle_pose: np.ndarray) -> NavigationPlan:
+        """Legacy success API; use select() when business failures must stay structured."""
+        result = self.select(query_text, vehicle_pose)
+        if not result.success or result.plan is None:
+            raise RuntimeError(f"{result.failure_code}: {result.failure_reason}")
+        return result.plan
 
-            path_world = path_grid_to_world(occupancy_grid, path_grid, z=float(vehicle_pose[2] if vehicle_pose.shape[0] > 2 else 0.0))
-            path_world_raw = path_grid_to_world(occupancy_grid, path_grid_raw, z=float(vehicle_pose[2] if vehicle_pose.shape[0] > 2 else 0.0))
-            best_plan = NavigationPlan(
-                query=parsed_query,
-                selected_node_id=node.node_id,
-                selected_object_tag=node.object_tag,
-                selected_target_point=candidate.target_point,
-                path_world=path_world,
-                path_grid=path_grid,
-                path_cost=float(path_cost),
-                candidate_targets=candidates,
-                occupancy_origin_xy=occupancy_grid.origin_xy,
-                occupancy_resolution=float(occupancy_grid.resolution),
-                occupancy_shape=occupancy_grid.shape,
-                path_world_raw=path_world_raw,
-                top1_semantic_node_id=top1_semantic_node_id,
-                fallback_used=bool(reachable.fallback_used),
-                fallback_reason=reachable.reason,
-                fallback_distance_m=float(reachable.fallback_distance_m),
-                planning_time_s=float(time.perf_counter() - run_start),
-                debug={
-                    "selected_candidate_score": candidate.score,
-                    "selected_candidate_debug": candidate.debug,
-                    "planning_time_s": float(time.perf_counter() - run_start),
-                    "top1_semantic_node_id": top1_semantic_node_id,
-                    "selected_reachable_rank": rank,
-                    "astar_expanded_nodes": planned.expanded_nodes,
-                    "raw_astar_waypoints": len(path_grid_raw),
-                    "smoothed_waypoints": len(path_grid),
-                    "path_smoothing_iterations": smooth_iterations,
-                    "start_grid": list(start_rc),
-                    "goal_grid": list(goal_rc),
-                    "occupancy_free_ratio": float((occupancy_grid.occupancy == 0).mean()),
-                    "occupancy_source": occupancy_grid.source,
-                    "occupancy_fallback_used": occupancy_grid.fallback_used,
-                    "occupancy_metadata": occupancy_grid.metadata or {},
-                    "obstacle_profile": str(getattr(self.cfg, "obstacle_profile", "thesis")),
-                    "robot_radius_m": float(getattr(self.cfg, "robot_radius_m", 0.8)),
-                    "object_bbox_obstacle_scale": float(getattr(self.cfg, "object_bbox_obstacle_scale", 0.18)),
-                    "max_object_obstacle_radius_m": float(getattr(self.cfg, "max_object_obstacle_radius_m", 1.2)),
-                    "goal_search_radius_m": float(getattr(self.cfg, "goal_search_radius_m", 20.0)),
-                    "candidate_failure_reasons": [
-                        {
-                            "node_id": int(c.node_id),
-                            "reason": c.reachability_reason or c.debug.get("reachability"),
-                            "score": float(c.score),
-                        }
-                        for c in candidates[: self.cfg.max_candidates]
-                    ],
-                },
-            )
-            break
+    def save_selection_result(
+        self,
+        result: TargetSelectionResult,
+        output_dir: str | Path,
+        save_plan: bool = True,
+        save_visualizations: bool = False,
+    ) -> Path:
+        output_dir = Path(output_dir)
+        output_dir.mkdir(parents=True, exist_ok=True)
+        output_path = output_dir / "target_selection_result.json"
+        payload = target_selection_result_to_dict(result)
+        if result.success and result.plan is not None and save_plan:
+            plan_path = self.save_plan(result.plan, output_dir, save_visualizations=save_visualizations)
+            payload["plan_path"] = str(plan_path)
+        with open(output_path, "w") as f:
+            json.dump(payload, f, indent=2, ensure_ascii=False, sort_keys=True)
+        return output_path
 
-        if best_plan is None:
-            raise RuntimeError(f"Semantic target found but all path plans failed: {last_failure}")
-        return best_plan
-
-    def save_plan(self, plan: NavigationPlan, output_dir: str | Path) -> Path:
+    def save_plan(
+        self,
+        plan: NavigationPlan,
+        output_dir: str | Path,
+        save_visualizations: bool = True,
+    ) -> Path:
         output_dir = Path(output_dir)
         output_dir.mkdir(parents=True, exist_ok=True)
         output_path = output_dir / "semantic_navigation_plan.json"
@@ -242,6 +390,11 @@ class SemanticNavigationPipeline:
                 "fallback_used": plan.fallback_used,
                 "fallback_reason": plan.fallback_reason,
                 "fallback_distance_m": plan.fallback_distance_m,
+                "semantic_rank": next(
+                    (candidate.semantic_rank for candidate in plan.candidate_targets if candidate.node_id == plan.selected_node_id),
+                    None,
+                ),
+                "selection_utility": plan.selection_utility,
             },
             "path": {
                 "world_xyz": plan.path_world.tolist(),
@@ -254,31 +407,168 @@ class SemanticNavigationPipeline:
                 "resolution": plan.occupancy_resolution,
                 "shape": list(plan.occupancy_shape),
             },
-            "candidates": [
-                {
-                    "node_id": cand.node_id,
-                    "score": cand.score,
-                    "text_score": cand.text_score,
-                    "relation_score": cand.relation_score,
-                    "distance_prior": cand.distance_prior,
-                    "reachable": cand.reachable,
-                    "target_point": None if cand.target_point is None else cand.target_point.tolist(),
-                    "target_grid": None if cand.target_grid is None else list(cand.target_grid),
-                    "reachability_reason": cand.reachability_reason,
-                    "reachable_rank": cand.reachable_rank,
-                    "debug": cand.debug,
-                }
-                for cand in plan.candidate_targets
-            ],
+            "target_selection": {
+                "success": True,
+                "mode": plan.target_selection_mode,
+                "scoring_weights": plan.scoring_weights,
+                "timing": plan.selection_timing,
+            },
+            "candidates": [candidate_target_to_dict(candidate) for candidate in plan.candidate_targets],
             "debug": plan.debug,
         }
         with open(output_path, "w") as f:
-            json.dump(payload, f, indent=2, ensure_ascii=False)
-        self.save_plan_visualization(plan, output_dir)
-        self.save_astar_visualization(plan, output_dir)
-        self.save_candidate_visualization(plan, output_dir)
-        self.save_reachable_goal_visualization(plan, output_dir)
+            json.dump(payload, f, indent=2, ensure_ascii=False, sort_keys=True)
+        if save_visualizations:
+            self.save_plan_visualization(plan, output_dir)
+            self.save_astar_visualization(plan, output_dir)
+            self.save_candidate_visualization(plan, output_dir)
+            self.save_reachable_goal_visualization(plan, output_dir)
         return output_path
+
+    def _selection_config(self) -> TargetSelectionConfig:
+        return TargetSelectionConfig.from_pipeline_config(self.cfg)
+
+    def _failure_result(
+        self,
+        mode: str,
+        code: str,
+        reason: str,
+        started: float,
+        candidates=None,
+        scoring_weights=None,
+    ) -> TargetSelectionResult:
+        weights = scoring_weights or TargetSelectionConfig.from_pipeline_config(self.cfg).utility_weights
+        result = TargetSelectionResult(
+            success=False,
+            mode=mode,
+            selected_candidate=None,
+            evaluated_candidates=list(candidates or []),
+            failure_code=code,
+            failure_reason=reason,
+            scoring_weights={key: float(value) for key, value in weights.items()},
+            timing={"total_s": float(time.perf_counter() - started)},
+        )
+        if self._last_query_audit is not None:
+            result.debug["qwen_query_parse"] = self._last_query_audit
+        return result
+
+    def _parse_query_once(self, query_text: str):
+        default_distance = float(self.cfg.default_near_distance_m)
+        rule_query = parse_navigation_query(query_text, default_distance)
+        delegate = self._get_semantic_delegate()
+        if delegate is None:
+            return rule_query, None
+        try:
+            audit = delegate.parse_query(
+                query_text,
+                default_near_distance_m=default_distance,
+                rule_result=rule_query,
+            )
+        except Exception as exc:  # noqa: BLE001 - injected delegates cannot break navigation
+            audit = {
+                "task": "query_parse",
+                "used_qwen": False,
+                "fallback_used": True,
+                "fallback_reason": f"delegate exception: {type(exc).__name__}: {str(exc)[:240]}",
+                "failure_code": "DELEGATE_EXCEPTION",
+                "normalized_output": None,
+            }
+            return rule_query, audit
+        if not audit.get("used_qwen", False):
+            return rule_query, audit
+        return apply_qwen_query_parse(
+            rule_query,
+            audit.get("normalized_output"),
+            default_distance,
+        ), audit
+
+    def _rerank_verified_candidates(self, query_text, result, edges):
+        delegate = self._get_semantic_delegate()
+        if delegate is None or not result.success or result.selected_candidate is None:
+            return None
+        verified = [
+            candidate
+            for candidate in result.evaluated_candidates
+            if candidate.reachable
+            and any(goal.path_found and goal.rejection_reason is None for goal in candidate.goal_candidates)
+        ]
+        if not verified:
+            return None
+        selected_id = int(result.selected_candidate.node_id)
+        verified.sort(
+            key=lambda candidate: (
+                0 if candidate.node_id == selected_id else 1,
+                -float(
+                    candidate.selection_utility
+                    if candidate.selection_utility is not None
+                    else float("-inf")
+                ),
+                int(candidate.semantic_rank or 10**9),
+                int(candidate.node_id),
+            )
+        )
+        payload = [
+            {
+                "node_id": int(candidate.node_id),
+                "semantic_rank": candidate.semantic_rank,
+                "stage2_scores": {
+                    "combined_semantic": float(candidate.score),
+                    "text": float(candidate.text_score),
+                    "relation": float(candidate.relation_score),
+                    "distance_prior": float(candidate.distance_prior),
+                    "joint_utility": candidate.selection_utility,
+                    "path_cost": candidate.path_cost,
+                    "path_length_m": candidate.path_length_m,
+                    "min_clearance_m": candidate.min_clearance_m,
+                },
+                "path_validated": True,
+            }
+            for candidate in verified
+        ]
+        ids = {item["node_id"] for item in payload}
+        edge_payload = [
+            edge.to_dict()
+            for edge in edges
+            if int(edge.source) in ids or int(edge.target) in ids
+        ]
+        try:
+            audit = delegate.rerank_candidates(query_text, payload, edge_payload)
+        except Exception as exc:  # noqa: BLE001 - reranking is advisory
+            return {
+                "used_qwen": False,
+                "fallback_used": True,
+                "failure_code": "DELEGATE_EXCEPTION",
+                "fallback_reason": f"delegate exception: {type(exc).__name__}: {str(exc)[:240]}",
+                "verified_candidate_ids": [item["node_id"] for item in payload],
+                "authoritative_selected_node_id": selected_id,
+                "selection_applied": False,
+            }
+        recommendation = audit.get("selected_node_id")
+        audit["verified_candidate_ids"] = [item["node_id"] for item in payload]
+        audit["authoritative_selected_node_id"] = selected_id
+        audit["recommendation_changed"] = recommendation != selected_id
+        audit["selection_applied"] = False
+        audit["selection_policy"] = "stage2_joint_utility_and_validated_path_are_authoritative"
+        return audit
+
+    def _get_semantic_delegate(self):
+        if self._semantic_delegate_initialized:
+            return self._semantic_delegate
+        self._semantic_delegate_initialized = True
+        qwen_cfg = getattr(self.cfg, "qwen_semantic", None)
+        if qwen_cfg is None:
+            self._semantic_delegate = None
+            return None
+        from conceptgraph.vlm.qwen_semantic_delegate import QwenDelegateConfig, QwenSemanticDelegate
+
+        fields = QwenDelegateConfig.__dataclass_fields__
+        values = {
+            name: getattr(qwen_cfg, name)
+            for name in fields
+            if hasattr(qwen_cfg, name) and getattr(qwen_cfg, name) is not None
+        }
+        self._semantic_delegate = QwenSemanticDelegate(QwenDelegateConfig(**values))
+        return self._semantic_delegate
 
     def _resolved_instruction(self, query) -> str:
         return query.display_text or query.raw_text
@@ -496,6 +786,39 @@ class SemanticNavigationPipeline:
             self._edges = load_scene_graph_edges(self.cfg.scene_graph_edge_path)
         return self._edges
 
+    def _load_relation_trajectory(self):
+        path = getattr(self.cfg, "relation_trajectory_path", None)
+        if path in {None, ""} or not Path(str(path)).exists():
+            return None
+        poses = np.loadtxt(path)
+        if poses.ndim == 1:
+            poses = poses.reshape(1, -1)
+        trajectory = []
+        for row in poses:
+            if row.size >= 16:
+                trajectory.append(row.reshape(4, 4)[:2, 3])
+            elif row.size >= 2:
+                trajectory.append(row[:2])
+        return None if not trajectory else np.asarray(trajectory, dtype=float)
+
+    def _relation_query_diagnostics(self, selected) -> dict:
+        relation_debug = selected.debug.get("relation_debug", {})
+        matches = relation_debug.get("matches", [])
+        best = matches[0] if matches else {}
+        chain = best.get("relation_chain", [])
+        return {
+            "relation_chain": chain,
+            "edge_source": best.get("edge_source"),
+            "fallback_reason": best.get("fallback_reason", []),
+            "geometry_fallback_count": int(
+                best.get("edge_source") == "geometry_fallback"
+                and float(best.get("geometry_relation_score", 0.0)) > 0.0
+            ),
+            "minimum_edge_confidence": float(
+                getattr(self.cfg, "relation_edge_minimum_confidence", 0.35)
+            ),
+        }
+
     def _get_occupancy_grid(self, nodes):
         if self._occupancy_grid is None:
             scene_map = _build_lightweight_scene_map_from_nodes(nodes)
@@ -513,6 +836,15 @@ class SemanticNavigationPipeline:
                 obstacle_profile=str(getattr(self.cfg, "obstacle_profile", "thesis")),
             )
         return self._occupancy_grid
+
+    def _get_lane_topology(self):
+        if self._lane_topology is None:
+            lane_map_path = getattr(self.cfg, "lane_map_path", None)
+            topology_path = getattr(self.cfg, "lane_topology_path", None)
+            if lane_map_path in {None, ""}:
+                raise FileNotFoundError("lane_map_path is not configured")
+            self._lane_topology = load_lane_topology(str(lane_map_path), None if topology_path in {None, ""} else str(topology_path))
+        return self._lane_topology
 
     def _legend_with_background(self, ax, background_handles: list[Patch]) -> None:
         handles, labels = ax.get_legend_handles_labels()

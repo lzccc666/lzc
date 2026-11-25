@@ -1,0 +1,40 @@
+{
+  "pages": 91,
+  "editable_tables": 20,
+  "figures": 7,
+  "editable_equations": 11,
+  "native_subscripts": 51,
+  "references": 62,
+  "toc_entries": 42,
+  "manuscript_source_characters": 71787,
+  "word_main_prose_cjk_characters": 52913,
+  "checks": {
+    "七章及中英文摘要": true,
+    "20张Word原生可编辑表格": true,
+    "7张真实来源或流程图": true,
+    "11个Word可编辑数学对象": true,
+    "没有遗留模板引用占位符": true,
+    "实际Word正文纯段落汉字不少于五万": true,
+    "无三级标题": true,
+    "目录实际页码收敛": true,
+    "Word和PDF目录均无待定页码": true,
+    "PDF无替换字与外边界溢出": true,
+    "所有表题都在Word中": true,
+    "参考文献不少于50条且全部正文引用": true,
+    "前两章独立引用不少于50项工作": true,
+    "正文和正式参考文献无指定排除文献": true,
+    "分层原始计数98项核验通过": true,
+    "正式题目未擅改": true
+  },
+  "all_passed": true,
+  "pdf_sha256": "37c802fa82529111f0d766c98a3f8719ef616026149911d923e89dd4647922df",
+  "visual_qa_passed": true,
+  "visual_review": "本版逐页渲染与布局检查完成；详见质量检查记录。",
+  "not_completed": [
+    "未使用作者学校正式模板；学校信息未补",
+    "未在Microsoft Word客户端重新排版检查",
+    "Dijkstra/Hart/Dolgov全文读取受限",
+    "未采用的原稿文献并非全部完成外部元数据核验",
+    "未执行新独立模型测试、训练或车辆执行"
+  ]
+}

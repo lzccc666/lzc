@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>普通导航指令审核</title>
+<style>
+body{font:16px/1.6 system-ui,sans-serif;color:#24333d;background:#f5f7f8;margin:0}main{max-width:1050px;margin:24px auto;padding:0 16px}h1{font-size:25px}p{margin:10px 0}button,input,select,textarea{font:inherit}button{cursor:pointer;padding:8px 14px;border:1px solid #b1bdc5;border-radius:5px;background:white}button.primary{background:#146477;color:white}select,textarea{padding:8px;border:1px solid #b1bdc5;border-radius:4px;box-sizing:border-box}textarea{width:100%;min-height:85px;resize:vertical}.controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:16px 0}.layout{display:grid;grid-template-columns:240px 1fr;gap:18px}.card{background:white;padding:18px;border:1px solid #dae1e5;border-radius:7px}#list{display:grid;gap:7px;max-height:620px;overflow:auto}#list button{text-align:left;font-size:14px}#list button.active{border:2px solid #146477;background:#f0f8fa}label.field{display:block;font-weight:600;margin:14px 0 6px}#summary{white-space:pre-line;background:#f0f5f7;padding:12px;border-radius:5px}.muted{color:#60717c;font-size:14px}#message{min-height:25px;color:#146477}.error{color:#a11d32!important}@media(max-width:720px){.layout{grid-template-columns:1fr}#list{max-height:170px}}
+</style>
+<main>
+<h1>普通导航指令审核</h1>
+<p>只看这句话和系统理解是否一致，完成条件由程序处理。</p>
+<div class="controls">
+<label><input id="familyOnly" type="checkbox" checked>每组先看一条</label>
+<label>任务 <select id="taskFilter"><option value="">全部</option><option value="pull_over">靠边停车</option><option value="park_nearest">找车位</option><option value="follow_vehicle">跟车</option></select></label>
+<button id="export">导出审核JSON</button><button id="import">恢复审核JSON</button><input id="importFile" type="file" accept=".json,application/json" hidden>
+</div>
+<p id="counts" class="muted"></p><p id="message" role="status" aria-live="polite"></p>
+<div class="layout"><nav id="list" class="card" aria-label="指令列表"></nav><section class="card">
+<h2 id="sampleHeading"></h2>
+<label class="field" for="instruction">普通指令（可修改说法）</label><textarea id="instruction"></textarea>
+<label class="field">系统理解</label><div id="summary"></div>
+<label class="field" for="decision">怎么处理</label>
+<select id="decision"><option value="pending">暂不判断</option><option value="approve">说法与理解一致</option><option value="needs_revision">需要修改</option><option value="reject">不采用</option></select>
+<label class="field" for="notes">备注（选填）</label><textarea id="notes" placeholder="例如：应该向右、换一种说法、先问是哪辆车。"></textarea>
+<div class="controls"><button id="save" class="primary">保存这一条并继续</button><button id="previous">上一条</button><button id="next">下一条</button></div>
+<p class="muted">逐条保存，最后导出发回聊天。保存只在当前浏览器；通过一条不会自动批准其他说法。</p>
+</section></div>
+</main>
+<script id="bundle" type="application/json">__BUNDLE_JSON__</script>
+<script>
+(()=>{
+'use strict';
+const bundle=JSON.parse(document.getElementById('bundle').textContent), byId=new Map(bundle.rows.map(r=>[r.sample_id,r]));
+const $=id=>document.getElementById(id), key='simpleCommandReview:v3:'+bundle.manifest_sha256;
+let events={},current=bundle.rows[0].sample_id;
+const actions={pull_over:'靠边停车',park_nearest:'找最近的空闲车位停车',follow_vehicle:'跟车',unsupported:'需重新确认'};
+const attrs={category:'类别',color:'颜色',lane_relation:'位置',region_type:'目标类型',free_occupancy_requirement:'占用要求',parking_permission_requirement:'停车要求'};
+const values={vehicle:'车辆',white:'白色',black:'黑色',same_lane_ahead:'本车道前方',stopping_region:'路边停靠位置',individual_parking_space:'单个车位',free:'要求空闲',allowed:'要求允许停车'};
+const intentKeys=['action','target_description','target_conditions','requested_constraints','needs_clarification'];
+function exact(x,allowed,required=allowed){if(!x||typeof x!=='object'||Array.isArray(x)||Object.keys(x).some(k=>!allowed.includes(k))||required.some(k=>!Object.hasOwn(x,k)))throw Error('记录字段不匹配');}
+function validIntent(x){exact(x,intentKeys);if(!Object.hasOwn(actions,x.action)||typeof x.target_description!=='string'||typeof x.needs_clarification!=='boolean'||!Array.isArray(x.target_conditions))throw Error('理解字段无效');for(const c of x.target_conditions){exact(c,['attribute','requested_value','grounding_required']);if(!Object.hasOwn(attrs,c.attribute)||c.grounding_required!==true||!['string','number','boolean'].includes(typeof c.requested_value)&&c.requested_value!==null)throw Error('目标条件无效');}exact(x.requested_constraints,['side','maximum_speed_mps','minimum_headway_s','duration_s'],[]);for(const [k,v]of Object.entries(x.requested_constraints)){if(k==='side'){if(!['left','right',null].includes(v))throw Error('侧向无效');}else if(v!==null&&(typeof v!=='number'||!Number.isFinite(v)||v<=0||k==='duration_s'&&v>600))throw Error('请求数字无效');}return x;}
+function summary(x){const out=['动作：'+actions[x.action],'目标：'+x.target_description];for(const c of x.target_conditions){if(c.attribute!=='category'&&c.attribute!=='region_type')out.push(attrs[c.attribute]+'：'+(values[c.requested_value]||String(c.requested_value)));}const c=x.requested_constraints;if(c.side)out.push('方向：'+(c.side==='left'?'左侧':'右侧'));if(c.maximum_speed_mps!=null)out.push('速度上限：'+c.maximum_speed_mps+'米/秒');if(c.minimum_headway_s!=null)out.push('最小时距：'+c.minimum_headway_s+'秒');if(c.duration_s!=null)out.push('跟随时长：'+c.duration_s+'秒');if(x.needs_clarification)out.push('需要先问清楚具体指代或方向');return out.join('\n');}
+function message(s,error=false){$('message').textContent=s;$('message').className=error?'error':'';}
+function visible(){return bundle.rows.filter(r=>(!$('familyOnly').checked||r.paraphrase_index===1)&&(!$('taskFilter').value||r.intent_draft.action===$('taskFilter').value));}
+function render(){const rows=visible();$('list').replaceChildren();for(const r of rows){const b=document.createElement('button');b.textContent=r.display_id+' · '+actions[r.intent_draft.action]+' · '+({approve:'一致',needs_revision:'需修改',reject:'不采用',pending:'待审'}[events[r.sample_id]?.decision||'pending']);b.className=r.sample_id===current?'active':'';b.onclick=()=>load(r.sample_id);$('list').append(b);}const saved=Object.values(events);$('counts').textContent=`指令${bundle.rows.length}条；已保存${saved.length}条，一致${saved.filter(e=>e.decision==='approve').length}条；当前显示${rows.length}条。`;}
+function load(id){current=id;const r=byId.get(id),e=events[id];$('sampleHeading').textContent=r.display_id+' · '+actions[r.intent_draft.action];$('instruction').value=e?.reviewed_instruction??r.instruction;$('summary').textContent=summary(r.intent_draft);$('decision').value=e?.decision??'pending';$('notes').value=e?.notes??'';render();}
+function move(delta){const rows=visible(),i=rows.findIndex(r=>r.sample_id===current);if(rows.length)load(rows[Math.max(0,Math.min(rows.length-1,i+delta))].sample_id);}
+function validEvent(e){exact(e,['sample_id','source_instruction_sha256','reviewed_instruction','intent_draft','instruction_changed','requires_intent_recheck','decision','reviewed_at','notes','origin']);const r=byId.get(e.sample_id);if(!r||e.source_instruction_sha256!==r.instruction_sha256)throw Error('指令或来源指纹不匹配');if(typeof e.reviewed_instruction!=='string'||!e.reviewed_instruction.trim()||!['pending','approve','needs_revision','reject'].includes(e.decision)||typeof e.notes!=='string'||e.origin!=='browser_explicit_save'||!Number.isFinite(Date.parse(e.reviewed_at)))throw Error('审核记录无效');validIntent(e.intent_draft);if(JSON.stringify(e.intent_draft)!==JSON.stringify(r.intent_draft))throw Error('系统理解不能被导入记录静默替换；请在备注说明');const changed=e.reviewed_instruction!==r.instruction;if(e.instruction_changed!==changed||e.requires_intent_recheck!==changed)throw Error('改写状态不匹配');return e;}
+function payload(){return{package_id:bundle.manifest.package_id,manifest_sha256:bundle.manifest_sha256,intent_schema_sha256:bundle.manifest.intent_schema_sha256,exported_at:new Date().toISOString(),identity_verified:false,training_export_enabled:false,trajectory_evaluation_status:'not_evaluated',review_events:Object.values(events)};}
+function restore(p){exact(p,['package_id','manifest_sha256','intent_schema_sha256','exported_at','identity_verified','training_export_enabled','trajectory_evaluation_status','review_events']);if(p.package_id!==bundle.manifest.package_id||p.manifest_sha256!==bundle.manifest_sha256||p.intent_schema_sha256!==bundle.manifest.intent_schema_sha256)throw Error('版本或审核包不同；旧意见请原样发回聊天核对');if(p.identity_verified!==false||p.training_export_enabled!==false||p.trajectory_evaluation_status!=='not_evaluated'||!Array.isArray(p.review_events))throw Error('审核意见不能授予其他评价或训练权限');const next={};for(const e of p.review_events){validEvent(e);if(next[e.sample_id])throw Error('重复记录');next[e.sample_id]=e;}events=next;localStorage.setItem(key,JSON.stringify(payload()));load(current);return Object.keys(events).length;}
+function save(){try{const r=byId.get(current),text=$('instruction').value.trim(),changed=text!==r.instruction;const e={sample_id:current,source_instruction_sha256:r.instruction_sha256,reviewed_instruction:text,intent_draft:r.intent_draft,instruction_changed:changed,requires_intent_recheck:changed,decision:$('decision').value,reviewed_at:new Date().toISOString(),notes:$('notes').value.trim(),origin:'browser_explicit_save'};validEvent(e);events[current]=e;localStorage.setItem(key,JSON.stringify(payload()));message('已保存。完成后请导出发回聊天。');move(1);}catch(e){message(e.message,true);}}
+function download(){try{const p=payload();for(const e of p.review_events)validEvent(e);const blob=new Blob([JSON.stringify(p,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='普通导航指令_审核意见_'+new Date().toISOString().slice(0,10)+'.json';a.click();URL.revokeObjectURL(url);message('已导出，请发回聊天。');}catch(e){message(e.message,true);}}
+$('save').onclick=save;$('previous').onclick=()=>move(-1);$('next').onclick=()=>move(1);$('export').onclick=download;$('import').onclick=()=>$('importFile').click();$('importFile').onchange=async()=>{try{const f=$('importFile').files[0];if(f)message('已恢复'+restore(JSON.parse(await f.text()))+'条意见。');}catch(e){message(e.message,true);}};for(const id of ['familyOnly','taskFilter'])$(id).onchange=()=>{const rows=visible();if(rows.length)load(rows[0].sample_id);else render();};
+window.SimpleCommandReview={exportPayload:payload,importPayload:restore,validateIntent:validIntent};load(current);try{const saved=localStorage.getItem(key);if(saved){restore(JSON.parse(saved));message('已恢复本浏览器保存的意见。');}}catch(e){message('本地恢复失败，原文件未修改：'+e.message,true);}
+})();
+</script>
+</html>

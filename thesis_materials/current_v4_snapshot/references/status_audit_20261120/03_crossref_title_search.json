@@ -1,0 +1,1812 @@
+{
+  "status": "ok",
+  "message-type": "work-list",
+  "message-version": "1.0.0",
+  "message": {
+    "facets": {},
+    "total-results": 1023678,
+    "items": [
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2026,
+              11,
+              19
+            ]
+          ],
+          "date-time": "2026-11-19T23:28:30Z",
+          "timestamp": 1795130910470,
+          "version": "4.10.3"
+        },
+        "reference-count": 91,
+        "publisher": "IEEE",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2020,
+                  6,
+                  1
+                ]
+              ],
+              "date-time": "2020-06-01T00:00:00Z",
+              "timestamp": 1590969600000
+            },
+            "content-version": "vor",
+            "delay-in-days": 0,
+            "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2020,
+                  6,
+                  1
+                ]
+              ],
+              "date-time": "2020-06-01T00:00:00Z",
+              "timestamp": 1590969600000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-029"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2020,
+                  6,
+                  1
+                ]
+              ],
+              "date-time": "2020-06-01T00:00:00Z",
+              "timestamp": 1590969600000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-037"
+          }
+        ],
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2020,
+              6
+            ]
+          ]
+        },
+        "DOI": "10.1109/cvpr42600.2020.01164",
+        "type": "proceedings-article",
+        "created": {
+          "date-parts": [
+            [
+              2020,
+              8,
+              5
+            ]
+          ],
+          "date-time": "2020-08-05T17:20:05Z",
+          "timestamp": 1596648005000
+        },
+        "page": "11618-11628",
+        "source": "Crossref",
+        "is-referenced-by-count": 6473,
+        "title": [
+          "nuScenes: A Multimodal Dataset for Autonomous Driving"
+        ],
+        "prefix": "10.1109",
+        "author": [
+          {
+            "given": "Holger",
+            "family": "Caesar",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Varun",
+            "family": "Bankiti",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Alex H.",
+            "family": "Lang",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Sourabh",
+            "family": "Vora",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Venice Erin",
+            "family": "Liong",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Qiang",
+            "family": "Xu",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Anush",
+            "family": "Krishnan",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Yu",
+            "family": "Pan",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Giancarlo",
+            "family": "Baldan",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Oscar",
+            "family": "Beijbom",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "member": "263",
+        "reference": [
+          {
+            "key": "ref73",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2019.00864"
+          },
+          {
+            "key": "ref72",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR42600.2020.00466"
+          },
+          {
+            "key": "ref71",
+            "author": "smith",
+            "year": "2018",
+            "journal-title": "A disciplined approach to neural network hyper-parameters Part 1 -learning rate batch size momentum and weight decay"
+          },
+          {
+            "key": "ref70",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICCV.2019.00208"
+          },
+          {
+            "key": "ref76",
+            "year": "2019",
+            "journal-title": "Waymo open dataset An autonomous driving dataset"
+          },
+          {
+            "key": "ref77",
+            "author": "weng",
+            "year": "2019",
+            "journal-title": "A baseline for 3d multi-object tracking"
+          },
+          {
+            "key": "ref74",
+            "article-title": "Dataset for high-level 3d scene understanding of complex road scenes in the top-view",
+            "author": "wang",
+            "year": "2019",
+            "journal-title": "cvprw"
+          },
+          {
+            "key": "ref39",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2016.90"
+          },
+          {
+            "key": "ref75",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/IVS.2018.8500387"
+          },
+          {
+            "key": "ref38",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICCV.2015.123"
+          },
+          {
+            "key": "ref78",
+            "article-title": "Ten technologies which could change our lives",
+            "author": "woensel",
+            "year": "2015",
+            "journal-title": "European Parliamentary Research Service"
+          },
+          {
+            "key": "ref79",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2009.5206638"
+          },
+          {
+            "key": "ref33",
+            "article-title": "The Mapillary Vistas dataset for semantic understanding of street scenes",
+            "author": "gerhard",
+            "year": "2017",
+            "journal-title": "ICCV"
+          },
+          {
+            "key": "ref32",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2012.6248074"
+          },
+          {
+            "key": "ref31",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICCV.2009.5459413"
+          },
+          {
+            "key": "ref30",
+            "author": "yadav",
+            "year": "2019",
+            "journal-title": "EvaIAI Towards Better Evaluation Systems for AI Agents"
+          },
+          {
+            "key": "ref37",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICCV.2019.01030"
+          },
+          {
+            "key": "ref36",
+            "author": "guo",
+            "year": "2018",
+            "journal-title": "Is it safe to drive? An overview of factors challenges and datasets for driveability assessment in autonomous driving"
+          },
+          {
+            "key": "ref35",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICRA.2015.7139484"
+          },
+          {
+            "key": "ref34",
+            "author": "jakob",
+            "year": "2019",
+            "journal-title": "A2D2 AEV Autonomous Driving Dataset"
+          },
+          {
+            "key": "ref60",
+            "article-title": "How much real data do we actually need: Analyzing object detection performance using synthetic and real data",
+            "author": "nowruzi",
+            "year": "0",
+            "journal-title": "ICML Workshop on AI for Autonomous Driving"
+          },
+          {
+            "key": "ref62",
+            "author": "pham",
+            "year": "2019",
+            "journal-title": "A *3D Dataset Towards autonomous driving in challenging environments"
+          },
+          {
+            "key": "ref61",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICRA.2019.8793925"
+          },
+          {
+            "key": "ref63",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR42600.2020.01408"
+          },
+          {
+            "key": "ref28",
+            "author": "feng",
+            "year": "2019",
+            "journal-title": "Deep multi-modal object detection and semantic segmentation for autonomous driving Datasets methods and challenges"
+          },
+          {
+            "key": "ref64",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2018.00102"
+          },
+          {
+            "key": "ref27",
+            "author": "fan",
+            "year": "2019",
+            "journal-title": "Pointrnn Point recurrent neural network for moving point cloud processing"
+          },
+          {
+            "key": "ref65",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2018.00803"
+          },
+          {
+            "key": "ref66",
+            "author": "rangesh",
+            "year": "2018",
+            "journal-title": "Ground plane polling for 6dof pose estimation of objects on the road"
+          },
+          {
+            "key": "ref29",
+            "author": "feng",
+            "year": "2019",
+            "journal-title": "Deep multi-modal object detection and semantic segmentation for autonomous driving Datasets methods and challenges"
+          },
+          {
+            "key": "ref67",
+            "article-title": "Faster R-CNN: Towards real-time object detection with region proposal networks",
+            "author": "ren",
+            "year": "2015",
+            "journal-title": "NIPS"
+          },
+          {
+            "key": "ref68",
+            "article-title": "PRECOG: Predictions conditioned on goals in visual multi-agent scenarios",
+            "author": "nicholas",
+            "year": "2019",
+            "journal-title": "ICCV"
+          },
+          {
+            "key": "ref69",
+            "article-title": "Orthographic feature transform for monocular 3d object detection",
+            "author": "roddick",
+            "year": "2019",
+            "journal-title": "BMVC"
+          },
+          {
+            "key": "ref2",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/IVS.2015.7225746"
+          },
+          {
+            "key": "ref1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/TITS.2006.888597"
+          },
+          {
+            "key": "ref20",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2005.177"
+          },
+          {
+            "key": "ref22",
+            "author": "deruyttere",
+            "year": "2019",
+            "journal-title": "Talk2car Taking control of your self-driving car"
+          },
+          {
+            "key": "ref21",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2009.5206848"
+          },
+          {
+            "key": "ref24",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/TPAMI.2008.260"
+          },
+          {
+            "key": "ref23",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/TPAMI.2011.155"
+          },
+          {
+            "key": "ref26",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1007/s11263-009-0275-4"
+          },
+          {
+            "key": "ref25",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2008.4587581"
+          },
+          {
+            "key": "ref50",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICCVW.2019.00530"
+          },
+          {
+            "key": "ref51",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2019.01298"
+          },
+          {
+            "key": "ref91",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICCV.2019.00394"
+          },
+          {
+            "key": "ref90",
+            "author": "zhu",
+            "year": "2019",
+            "journal-title": "Class-balanced grouping and sampling for point cloud 3d object detection"
+          },
+          {
+            "key": "ref59",
+            "author": "ngiam",
+            "year": "2019",
+            "journal-title": "Starnet Targeted computation for object detection in point clouds"
+          },
+          {
+            "key": "ref58",
+            "article-title": "Nightowls: A pedestrians at night dataset",
+            "author": "neumann",
+            "year": "2018",
+            "journal-title": "ACCV"
+          },
+          {
+            "key": "ref57",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2017.597"
+          },
+          {
+            "key": "ref56",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2019.01296"
+          },
+          {
+            "key": "ref55",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1177/0278364916679498"
+          },
+          {
+            "key": "ref54",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1609/aaai.v33i01.33016120"
+          },
+          {
+            "key": "ref53",
+            "article-title": "SSD: Single shot multibox detector",
+            "author": "liu",
+            "year": "2016",
+            "journal-title": "ECCV"
+          },
+          {
+            "key": "ref52",
+            "article-title": "Deep continuous fusion for multi-sensor 3d object detection",
+            "author": "liang",
+            "year": "2018",
+            "journal-title": "ECCV"
+          },
+          {
+            "key": "ref10",
+            "article-title": "Argo-verse: 3d tracking and forecasting with rich maps",
+            "author": "chang",
+            "year": "2019",
+            "journal-title": "CVPR"
+          },
+          {
+            "key": "ref11",
+            "author": "che",
+            "year": "2019",
+            "journal-title": "D2-city A large-scale dashcam video dataset of diverse traffic scenarios"
+          },
+          {
+            "key": "ref40",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2018.00360"
+          },
+          {
+            "key": "ref12",
+            "article-title": "3d object proposals for accurate object class detection",
+            "author": "xiaozhi",
+            "year": "2015",
+            "journal-title": "NIPS"
+          },
+          {
+            "key": "ref13",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2016.236"
+          },
+          {
+            "key": "ref14",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2017.691"
+          },
+          {
+            "key": "ref15",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2018.00615"
+          },
+          {
+            "key": "ref82",
+            "article-title": "HDNET: Exploiting HD maps for 3d object detection",
+            "author": "yang",
+            "year": "2018",
+            "journal-title": "CoRL"
+          },
+          {
+            "key": "ref16",
+            "author": "chiu",
+            "year": "2020",
+            "journal-title": "Probabilistic 3d multi-object tracking for autonomous driving"
+          },
+          {
+            "key": "ref81",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2018.00033"
+          },
+          {
+            "key": "ref17",
+            "article-title": "KAIST multi-spectral day/night data set for autonomous and assisted driving",
+            "author": "choi",
+            "year": "2017",
+            "journal-title": "IEEE Transactions on Intelligent Transportation Systems"
+          },
+          {
+            "key": "ref84",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICCV.2019.00940"
+          },
+          {
+            "key": "ref18",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ICRA.2013.6630777"
+          },
+          {
+            "key": "ref83",
+            "article-title": "SARPNET: Shape attention regional proposal network for lidar-based 3d object detection",
+            "author": "ye",
+            "year": "2019",
+            "journal-title": "Neurocomputing"
+          },
+          {
+            "key": "ref19",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2016.350"
+          },
+          {
+            "key": "ref80",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2018.00249"
+          },
+          {
+            "key": "ref89",
+            "author": "zhou",
+            "year": "2019",
+            "journal-title": "Longitudinal motion planning for autonomous vehicles and its impact on congestion A survey"
+          },
+          {
+            "key": "ref4",
+            "article-title": "Multiple object tracking performance metrics and evaluation in a smart room environment",
+            "author": "bernardin",
+            "year": "0",
+            "journal-title": "Workshop on Visual Surveillance in ECCV2000"
+          },
+          {
+            "key": "ref3",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/MITS.2014.2336271"
+          },
+          {
+            "key": "ref6",
+            "article-title": "The M&#x00E1;laga urban dataset: High-rate stereo and lidar in a realistic urban scenario",
+            "author": "blanco-claraco",
+            "year": "2014",
+            "journal-title": "IJRR"
+          },
+          {
+            "key": "ref5",
+            "article-title": "Monoloco: Monocular 3d pedestrian localization and uncer-tainty estimation",
+            "author": "bertoni",
+            "year": "2019",
+            "journal-title": "ICCV"
+          },
+          {
+            "key": "ref85",
+            "author": "yu",
+            "year": "2018",
+            "journal-title": "Bdd100k A diverse driving video database with scalable annotation tooling"
+          },
+          {
+            "key": "ref8",
+            "article-title": "Segmentation and recognition using structure from motion point clouds",
+            "author": "brostow",
+            "year": "2008",
+            "journal-title": "ECCV"
+          },
+          {
+            "key": "ref86",
+            "author": "yurtsever",
+            "year": "2019",
+            "journal-title": "A survey of autonomous driving Common practices and emerging technologies"
+          },
+          {
+            "key": "ref7",
+            "author": "brossard",
+            "year": "2019",
+            "journal-title": "AI-IMU Dead-Reckoning"
+          },
+          {
+            "key": "ref49",
+            "author": "laflamme",
+            "year": "2019",
+            "journal-title": "Driving datasets literature review"
+          },
+          {
+            "key": "ref87",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/LSP.2016.2603342"
+          },
+          {
+            "key": "ref88",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR.2017.474"
+          },
+          {
+            "key": "ref9",
+            "author": "casas",
+            "year": "2019",
+            "journal-title": "Spatially-aware graph neural networks for relational behavior forecasting from sensor data"
+          },
+          {
+            "key": "ref46",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/IVS.2018.8500711"
+          },
+          {
+            "key": "ref45",
+            "author": "kesten",
+            "year": "2019",
+            "journal-title": "Lyft level 5 av dataset 2019"
+          },
+          {
+            "key": "ref48",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/IROS.2018.8594049"
+          },
+          {
+            "key": "ref47",
+            "article-title": "Imagenet classification with deep convolutional neural networks",
+            "author": "krizhevsky",
+            "year": "2012",
+            "journal-title": "NIPS"
+          },
+          {
+            "key": "ref42",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1007/978-3-030-34879-3_27"
+          },
+          {
+            "key": "ref41",
+            "author": "huang",
+            "year": "2018",
+            "journal-title": "The apolloscape open dataset for autonomous driving and its application"
+          },
+          {
+            "key": "ref44",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1115/1.3662552"
+          },
+          {
+            "key": "ref43",
+            "article-title": "Multi - modal panoramic 3d outdoor datasets for place categorization",
+            "author": "hojung",
+            "year": "2016",
+            "journal-title": "IROS"
+          }
+        ],
+        "event": {
+          "name": "2020 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+          "location": "Seattle, WA, USA",
+          "start": {
+            "date-parts": [
+              [
+                2020,
+                6,
+                13
+              ]
+            ]
+          },
+          "end": {
+            "date-parts": [
+              [
+                2020,
+                6,
+                19
+              ]
+            ]
+          }
+        },
+        "container-title": [
+          "2020 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)"
+        ],
+        "link": [
+          {
+            "URL": "http://xplorestaging.ieee.org/ielx7/9142308/9156271/09156412.pdf?arnumber=9156412",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2022,
+              6,
+              27
+            ]
+          ],
+          "date-time": "2022-06-27T11:55:10Z",
+          "timestamp": 1656330910000
+        },
+        "score": 36.316875,
+        "resource": {
+          "primary": {
+            "URL": "https://ieeexplore.ieee.org/document/9156412/"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2020,
+              6
+            ]
+          ]
+        },
+        "references-count": 91,
+        "URL": "https://doi.org/10.1109/cvpr42600.2020.01164",
+        "published": {
+          "date-parts": [
+            [
+              2020,
+              6
+            ]
+          ]
+        }
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2026,
+              5,
+              12
+            ]
+          ],
+          "date-time": "2026-05-12T08:33:37Z",
+          "timestamp": 1778574817076,
+          "version": "3.51.4"
+        },
+        "reference-count": 37,
+        "publisher": "Springer Science and Business Media LLC",
+        "issue": "1",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2025,
+                  12,
+                  4
+                ]
+              ],
+              "date-time": "2025-12-04T00:00:00Z",
+              "timestamp": 1764806400000
+            },
+            "content-version": "tdm",
+            "delay-in-days": 0,
+            "URL": "https://creativecommons.org/licenses/by/4.0"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2025,
+                  12,
+                  4
+                ]
+              ],
+              "date-time": "2025-12-04T00:00:00Z",
+              "timestamp": 1764806400000
+            },
+            "content-version": "vor",
+            "delay-in-days": 0,
+            "URL": "https://creativecommons.org/licenses/by/4.0"
+          }
+        ],
+        "funder": [
+          {
+            "name": "Dassault Systemes Foundation, India"
+          }
+        ],
+        "content-domain": {
+          "domain": [
+            "link.springer.com"
+          ],
+          "crossmark-restriction": false
+        },
+        "short-container-title": [
+          "Discov. Robot."
+        ],
+        "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:p>Autonomous vehicles are shaping the future of human mobility, with most advancements focused on self-driving cars and other four-wheeled vehicles. However, two-wheelers, such as motorcycles, present unique challenges due to their lack of inherent stability and complex driving dynamics. High-quality data is crucial for the research and development of intelligent systems for autonomous driving. Such data also facilitates the design and simulation of realistic driving scenarios—both from the rider’s perspective and for understanding and predicting the behavior of other road users, including pedestrians and vehicles. These interactions tend to be less structured and more dynamic in developing countries like India. In this paper, we present the collection and processing of IndiGo, a large-scale, multi-modal dataset captured from a two-wheeler in India. The dataset includes high-resolution imaging, panoramic 3D point clouds, GNSS data, velocity measurements, driver’s point-of-view imaging, and IMU data from multiple locations on the vehicle, including the rider’s helmet. This dataset supports a wide range of applications, including 3D object tracking, physically accurate simulations, pedestrian and vehicle behavior prediction, and the development of Autonomous Driving Systems (ADS) and Advanced Driver Assistance Systems (ADAS) for two-wheelers and other vehicles. Through this work, we introduce the most extensive multi-modal dataset available for research in autonomous driving and traffic behavior analysis under unstructured traffic conditions in India. Additionally, we discuss sensor selection, data collection methodologies, post-processing techniques, and data-handling tools.</jats:p>",
+        "DOI": "10.1007/s44430-025-00013-1",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2025,
+              12,
+              4
+            ]
+          ],
+          "date-time": "2025-12-04T06:58:09Z",
+          "timestamp": 1764831489000
+        },
+        "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+        "source": "Crossref",
+        "is-referenced-by-count": 1,
+        "title": [
+          "Multimodal two-wheeler driving dataset for autonomous driving applications"
+        ],
+        "prefix": "10.1007",
+        "volume": "1",
+        "author": [
+          {
+            "given": "Kumar J.",
+            "family": "Jyothish",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Shriman",
+            "family": "Keshri",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Anubhav",
+            "family": "Vishwakarma",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Subhankar",
+            "family": "Mishra",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "297",
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              12,
+              4
+            ]
+          ]
+        },
+        "reference": [
+          {
+            "key": "13_CR1",
+            "doi-asserted-by": "crossref",
+            "unstructured": "Hey T, Tansley S, Tolle K, et al. The fourth paradigm: data-intensive scientific discovery. Microsoft Res. 2009;1.",
+            "DOI": "10.1007/978-3-642-33299-9_1"
+          },
+          {
+            "key": "13_CR2",
+            "volume-title": "The data revolution: big data, open data, data infrastructures and their consequences",
+            "author": "R Kitchin",
+            "year": "2014",
+            "unstructured": "Kitchin R. The data revolution: big data, open data, data infrastructures and their consequences. Thousand Oaks, CA: Sage; 2014."
+          },
+          {
+            "key": "13_CR3",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1016/j.eswa.2020.113816",
+            "volume": "165",
+            "author": "C Badue",
+            "year": "2021",
+            "unstructured": "Badue C, Guidolini R, Carneiro RV, Azevedo P, Brito VB, Cardoso TO, et al. Self-driving cars: a survey. Expert Syst Appl. 2021;165:113816.",
+            "journal-title": "Expert Syst Appl"
+          },
+          {
+            "key": "13_CR4",
+            "doi-asserted-by": "publisher",
+            "first-page": "58443",
+            "DOI": "10.1109/ACCESS.2020.2983149",
+            "volume": "8",
+            "author": "E Yurtsever",
+            "year": "2020",
+            "unstructured": "Yurtsever E, Lambert J, Carballo A, Takeda K. A survey of autonomous driving: common practices and emerging technologies. IEEE Access. 2020;8:58443–69.",
+            "journal-title": "IEEE Access"
+          },
+          {
+            "issue": "1",
+            "key": "13_CR5",
+            "doi-asserted-by": "publisher",
+            "first-page": "32",
+            "DOI": "10.1518/001872095779049543",
+            "volume": "37",
+            "author": "MR Endsley",
+            "year": "2017",
+            "unstructured": "Endsley MR. Toward a theory of situation awareness in dynamic systems. Hum Factors J. 2017;37(1):32–64.",
+            "journal-title": "Hum Factors J"
+          },
+          {
+            "issue": "1",
+            "key": "13_CR6",
+            "doi-asserted-by": "crossref",
+            "first-page": "134",
+            "DOI": "10.3141/2663-17",
+            "volume": "2663",
+            "author": "O Salem",
+            "year": "2017",
+            "unstructured": "Salem O, Liu L, Mehler A. Driver situation awareness and carfollowing reliability. Transp Res Rec. 2017;2663(1):134–41.",
+            "journal-title": "Transp Res Rec"
+          },
+          {
+            "key": "13_CR7",
+            "volume-title": "Motorcycle dynamics",
+            "author": "V Cossalter",
+            "year": "2006",
+            "unstructured": "Cossalter V, et al. Motorcycle dynamics. New York: Wiley; 2006."
+          },
+          {
+            "issue": "3",
+            "key": "13_CR8",
+            "doi-asserted-by": "crossref",
+            "first-page": "155",
+            "DOI": "10.1080/00423110701211548",
+            "volume": "46",
+            "author": "RS Sharp",
+            "year": "2008",
+            "unstructured": "Sharp RS. Motorcycle dynamics: facts, fiction and folklore. Veh Syst Dyn. 2008;46(3):155–64.",
+            "journal-title": "Veh Syst Dyn"
+          },
+          {
+            "issue": "2",
+            "key": "13_CR9",
+            "doi-asserted-by": "publisher",
+            "first-page": "70",
+            "DOI": "10.1109/MCOMSTD.2017.1700015",
+            "volume": "1",
+            "author": "S Chen",
+            "year": "2017",
+            "unstructured": "Chen S, Hu J, Shi Y, Peng Y, Fang J, Zhao R, et al. Vehicle-to-everything (v2x) services supported by LTE-based systems and 5g. IEEE Commun Stand Mag. 2017;1(2):70–6.",
+            "journal-title": "IEEE Commun Stand Mag"
+          },
+          {
+            "issue": "4",
+            "key": "13_CR10",
+            "doi-asserted-by": "publisher",
+            "first-page": "289",
+            "DOI": "10.1109/JIOT.2014.2327587",
+            "volume": "1",
+            "author": "N Lu",
+            "year": "2014",
+            "unstructured": "Lu N, Cheng N, Zhang N, Shen X, Mark JW. Connected vehicles: solutions and challenges. IEEE Internet Things J. 2014;1(4):289–99.",
+            "journal-title": "IEEE Internet Things J"
+          },
+          {
+            "key": "13_CR11",
+            "unstructured": "Dosovitskiy A, Ros G, Codevilla F, Lopez A, Koltun V. Carla: an open urban driving simulator. 2017;1–16. PMLR."
+          },
+          {
+            "key": "13_CR12",
+            "unstructured": "Foxglove Documentation — docs.foxglove.dev. https://docs.foxglove.dev/docs. Accessed 15 Sep 2025."
+          },
+          {
+            "issue": "1",
+            "key": "13_CR13",
+            "doi-asserted-by": "publisher",
+            "first-page": "3",
+            "DOI": "10.1177/0278364916679498",
+            "volume": "36",
+            "author": "W Maddern",
+            "year": "2016",
+            "unstructured": "Maddern W, Pascoe G, Linegar C, Newman P. 1 year, 1000 km: the Oxford robotcar dataset. The Int J Robot Res. 2016;36(1):3–15. https://doi.org/10.1177/0278364916679498.",
+            "journal-title": "The Int J Robot Res"
+          },
+          {
+            "key": "13_CR14",
+            "doi-asserted-by": "publisher",
+            "unstructured": "Barnes D, Gadd M, Murcutt P, Newman P, Posner I. The oxford radar robotcar dataset a radar extension to the oxford robotcar dataset. 2020. https://doi.org/10.1109/icra40945.2020.9196884.",
+            "DOI": "10.1109/icra40945.2020.9196884"
+          },
+          {
+            "issue": "11",
+            "key": "13_CR15",
+            "doi-asserted-by": "publisher",
+            "first-page": "1231",
+            "DOI": "10.1177/0278364913491297",
+            "volume": "32",
+            "author": "A Geiger",
+            "year": "2013",
+            "unstructured": "Geiger A, Lenz P, Stiller C, Urtasun R. Vision meets robotics: the kitti dataset. The Int J Robot Res. 2013;32(11):1231–7. https://doi.org/10.1177/0278364913491297.",
+            "journal-title": "The Int J Robot Res"
+          },
+          {
+            "issue": "3",
+            "key": "13_CR16",
+            "doi-asserted-by": "publisher",
+            "first-page": "3292",
+            "DOI": "10.1109/tpami.2022.3179507",
+            "volume": "45",
+            "author": "Y Liao",
+            "year": "2023",
+            "unstructured": "Liao Y, Xie J, Geiger A. Kitti-360: a novel dataset and benchmarks for urban scene understanding in 2d and 3d. IEEE Trans Pattern Anal Mach Intell. 2023;45(3):3292–310. https://doi.org/10.1109/tpami.2022.3179507.",
+            "journal-title": "IEEE Trans Pattern Anal Mach Intell"
+          },
+          {
+            "key": "13_CR17",
+            "doi-asserted-by": "publisher",
+            "unstructured": "Kim G, Park YS, Cho Y, Jeong J, Kim A. Mulran: multimodal range dataset for urban place recognition. 2020. https://doi.org/10.1109/icra40945.2020.9197298.",
+            "DOI": "10.1109/icra40945.2020.9197298"
+          },
+          {
+            "key": "13_CR18",
+            "doi-asserted-by": "crossref",
+            "unstructured": "Wen W, Zhou Y, Zhang G, Fahandezh-Saadi S, Bai X, Zhan W, Tomizuka M, Hsu L-T. UrbanLoco: a full sensor suite dataset for mapping and localization in urban scenes. 2020.",
+            "DOI": "10.1109/ICRA40945.2020.9196526"
+          },
+          {
+            "key": "13_CR19",
+            "doi-asserted-by": "publisher",
+            "unstructured": "Caesar H, Bankiti V, Lang AH, Vora S, Liong VE, Xu Q, Krishnan A, Pan Y, Baldan G, Beijbom O. nuscenes: a multimodal dataset for autonomous driving. 2020. https://doi.org/10.1109/cvpr42600.2020.01164.",
+            "DOI": "10.1109/cvpr42600.2020.01164"
+          },
+          {
+            "key": "13_CR20",
+            "doi-asserted-by": "publisher",
+            "first-page": "1270",
+            "DOI": "10.1109/icra40945.2020.9196612",
+            "volume": "1",
+            "author": "R Chandra",
+            "year": "2020",
+            "unstructured": "Chandra R, Bhattacharya U, Randhavane T, Bera A, Manocha D. Roadtrack: realtime tracking of road agents in dense and heterogeneous environments. Tracking. 2020;1:1270–7. https://doi.org/10.1109/icra40945.2020.9196612.",
+            "journal-title": "Tracking"
+          },
+          {
+            "key": "13_CR21",
+            "doi-asserted-by": "publisher",
+            "first-page": "20121",
+            "DOI": "10.1109/iccv51070.2023.01846",
+            "volume": "1",
+            "author": "M Alibeigi",
+            "year": "2023",
+            "unstructured": "Alibeigi M, Ljungbergh W, Tonderski A, Hess G, Lilja A, Lindström C, et al. Zenseact open dataset: a large-scale and diverse multimodal dataset for autonomous driving. Autonomics. 2023;1:20121–31. https://doi.org/10.1109/iccv51070.2023.01846.",
+            "journal-title": "Autonomics"
+          },
+          {
+            "key": "13_CR22",
+            "doi-asserted-by": "publisher",
+            "unstructured": "Jiang P, Osteen P, Wigness M, Saripalli S. Rellis-3d dataset: data, benchmarks and analysis. 2021. In: 2021 IEEE International Conference on Robotics and Automation (ICRA). https://doi.org/10.1109/icra48506.2021.9561251.",
+            "DOI": "10.1109/icra48506.2021.9561251"
+          },
+          {
+            "issue": "1",
+            "key": "13_CR23",
+            "doi-asserted-by": "publisher",
+            "first-page": "214",
+            "DOI": "10.1109/tits.2023.3312355",
+            "volume": "25",
+            "author": "G Mollica",
+            "year": "2024",
+            "unstructured": "Mollica G, Felicioni S, Legittimo M, Meli L, Costante G, Valigi P. Ma-vied: a multisensor automotive visual inertial event dataset. IEEE Trans Intell Transp Syst. 2024;25(1):214–24. https://doi.org/10.1109/tits.2023.3312355.",
+            "journal-title": "IEEE Trans Intell Transp Syst"
+          },
+          {
+            "issue": "3",
+            "key": "13_CR24",
+            "doi-asserted-by": "publisher",
+            "first-page": "4947",
+            "DOI": "10.1109/lra.2021.3068942",
+            "volume": "6",
+            "author": "M Gehrig",
+            "year": "2021",
+            "unstructured": "Gehrig M, Aarents W, Gehrig D, Scaramuzza D. Dsec: a stereo event camera dataset for driving scenarios. IEEE Robot Autom Lett. 2021;6(3):4947–54. https://doi.org/10.1109/lra.2021.3068942.",
+            "journal-title": "IEEE Robot Autom Lett"
+          },
+          {
+            "key": "13_CR25",
+            "doi-asserted-by": "publisher",
+            "first-page": "2961",
+            "DOI": "10.1109/wacv57701.2024.00295",
+            "volume": "28",
+            "author": "G Franchi",
+            "year": "2024",
+            "unstructured": "Franchi G, Hariat M, Yu X, Belkhir N, Manzanera A, Filliat D. Infraparis: a multi-modal and multi-task autonomous driving dataset. Autonomics. 2024;28:2961–71. https://doi.org/10.1109/wacv57701.2024.00295.",
+            "journal-title": "Autonomics"
+          },
+          {
+            "key": "13_CR26",
+            "doi-asserted-by": "publisher",
+            "unstructured": "Chandra R, Wang X, Mahajan M, Kala R, Palugulla R, Naidu C, Jain A, Manocha D. Meteor: a dense, heterogeneous, and unstructured traffic dataset with rare behaviors. 2023. https://doi.org/10.1109/icra48891.2023.10161281.",
+            "DOI": "10.1109/icra48891.2023.10161281"
+          },
+          {
+            "key": "13_CR27",
+            "doi-asserted-by": "publisher",
+            "unstructured": "Varma G, Subramanian A, Namboodiri A, Chandraker M, Jawahar CV. Idd: a dataset for exploring problems of autonomous navigation in unconstrained environments. 2019. https://doi.org/10.1109/wacv.2019.00190.",
+            "DOI": "10.1109/wacv.2019.00190"
+          },
+          {
+            "key": "13_CR28",
+            "doi-asserted-by": "publisher",
+            "first-page": "51714",
+            "DOI": "10.1109/access.2019.2911562",
+            "volume": "7",
+            "author": "Y He",
+            "year": "2019",
+            "unstructured": "He Y, Yang H-B, Wang S-J. Cdbv: a driving dataset with Chinese characteristics from a bike view. IEEE Access. 2019;7:51714–23. https://doi.org/10.1109/access.2019.2911562.",
+            "journal-title": "IEEE Access"
+          },
+          {
+            "key": "13_CR29",
+            "doi-asserted-by": "publisher",
+            "unstructured": "Sekkat AR, Dupuis Y, Vasseur P, Honeine P. The omniscape dataset. 2020. https://doi.org/10.1109/icra40945.2020.9197144.",
+            "DOI": "10.1109/icra40945.2020.9197144"
+          },
+          {
+            "key": "13_CR30",
+            "doi-asserted-by": "publisher",
+            "unstructured": "Carmichael S, Buchan A, Ramanagopal M, Ravi R, Vasudevan R, Skinner KA. Dataset and Benchmark Novel Sensors for Autonomous Vehicle Perception. 2024. https://doi.org/10.48550/ARXIV.2401.13853.",
+            "DOI": "10.48550/ARXIV.2401.13853"
+          },
+          {
+            "key": "13_CR31",
+            "doi-asserted-by": "publisher",
+            "first-page": "130653",
+            "DOI": "10.1016/j.physa.2025.130653",
+            "volume": "671",
+            "author": "Y Li",
+            "year": "2025",
+            "unstructured": "Li Y, Zheng J, Qin L, Li H. Highway capacity of mixed traffic flow with autonomous vehicles: a review. Physica A. 2025;671:130653.",
+            "journal-title": "Physica A"
+          },
+          {
+            "issue": "10",
+            "key": "13_CR32",
+            "doi-asserted-by": "publisher",
+            "first-page": "1",
+            "DOI": "10.1145/3729420",
+            "volume": "57",
+            "author": "J Zhao",
+            "year": "2025",
+            "unstructured": "Zhao J, Wu Y, Deng R, Xu S, Gao J, Burke A. A survey of autonomous driving from a deep learning perspective. ACM Comput Surv. 2025;57(10):1–60.",
+            "journal-title": "ACM Comput Surv"
+          },
+          {
+            "key": "13_CR33",
+            "first-page": "1184",
+            "volume": "2025",
+            "author": "TT Dong",
+            "year": "2025",
+            "unstructured": "Dong TT, Holland J, Sargolzaei A. Traffic signs recognition for connected and autonomous vehicles: a survey of threats and defenses. SoutheastCon. 2025;2025:1184–91.",
+            "journal-title": "SoutheastCon"
+          },
+          {
+            "issue": "10",
+            "key": "13_CR34",
+            "doi-asserted-by": "publisher",
+            "first-page": "1",
+            "DOI": "10.1145/3729167",
+            "volume": "57",
+            "author": "O Fawole",
+            "year": "2025",
+            "unstructured": "Fawole O, Rawat D. Recent advances in vision transformer robustness against adversarial attacks in traffic sign detection and recognition: a survey. ACM Comput Surv. 2025;57(10):1–33.",
+            "journal-title": "ACM Comput Surv"
+          },
+          {
+            "issue": "8",
+            "key": "13_CR35",
+            "first-page": "1",
+            "volume": "57",
+            "author": "T Liu",
+            "year": "2025",
+            "unstructured": "Liu T, Wang S, Dong Z, Li B, He T. From perception to computation: revisiting delay optimization for connected autonomous vehicles. ACM Comput Surv. 2025;57(8):1–45.",
+            "journal-title": "ACM Comput Surv"
+          },
+          {
+            "key": "13_CR36",
+            "unstructured": "Stereolabs: Stereolabs Docs: API Reference, Tutorials, and Integration — stereolabs.com. https://www.stereolabs.com/docs. Accessed 31 Mar 2025."
+          },
+          {
+            "key": "13_CR37",
+            "unstructured": "Jyothish K, Mishra S. Swayansaasita - Autonomous Two-Wheeler Driving - Phase 1. 2024. https://smlab.niser.ac.in/project/swayansaasita/. Accessed 29 Aug 2024."
+          }
+        ],
+        "container-title": [
+          "Discover Robotics"
+        ],
+        "language": "en",
+        "link": [
+          {
+            "URL": "https://link.springer.com/content/pdf/10.1007/s44430-025-00013-1.pdf",
+            "content-type": "application/pdf",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          },
+          {
+            "URL": "https://link.springer.com/article/10.1007/s44430-025-00013-1/fulltext.html",
+            "content-type": "text/html",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          },
+          {
+            "URL": "https://link.springer.com/content/pdf/10.1007/s44430-025-00013-1.pdf",
+            "content-type": "application/pdf",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2025,
+              12,
+              4
+            ]
+          ],
+          "date-time": "2025-12-04T06:58:14Z",
+          "timestamp": 1764831494000
+        },
+        "score": 31.478449,
+        "resource": {
+          "primary": {
+            "URL": "https://link.springer.com/10.1007/s44430-025-00013-1"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              12,
+              4
+            ]
+          ]
+        },
+        "references-count": 37,
+        "journal-issue": {
+          "issue": "1",
+          "published-online": {
+            "date-parts": [
+              [
+                2025,
+                12
+              ]
+            ]
+          }
+        },
+        "alternative-id": [
+          "13"
+        ],
+        "URL": "https://doi.org/10.1007/s44430-025-00013-1",
+        "ISSN": [
+          "3059-3204"
+        ],
+        "issn-type": [
+          {
+            "value": "3059-3204",
+            "type": "electronic"
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              12,
+              4
+            ]
+          ]
+        },
+        "assertion": [
+          {
+            "value": "29 September 2025",
+            "order": 1,
+            "name": "received",
+            "label": "Received",
+            "group": {
+              "name": "ArticleHistory",
+              "label": "Article History"
+            }
+          },
+          {
+            "value": "17 November 2025",
+            "order": 2,
+            "name": "accepted",
+            "label": "Accepted",
+            "group": {
+              "name": "ArticleHistory",
+              "label": "Article History"
+            }
+          },
+          {
+            "value": "4 December 2025",
+            "order": 3,
+            "name": "first_online",
+            "label": "First Online",
+            "group": {
+              "name": "ArticleHistory",
+              "label": "Article History"
+            }
+          },
+          {
+            "order": 1,
+            "name": "Ethics",
+            "group": {
+              "name": "EthicsHeading",
+              "label": "Declarations"
+            }
+          },
+          {
+            "value": "Not applicable.",
+            "order": 2,
+            "name": "Ethics",
+            "group": {
+              "name": "EthicsHeading",
+              "label": "Ethics approval and consent to participate"
+            }
+          },
+          {
+            "value": "All authors have consented to the publication of this manuscript.",
+            "order": 3,
+            "name": "Ethics",
+            "group": {
+              "name": "EthicsHeading",
+              "label": "Consent for publication"
+            }
+          },
+          {
+            "value": "The authors declare no competing interests.",
+            "order": 4,
+            "name": "Ethics",
+            "group": {
+              "name": "EthicsHeading",
+              "label": "Competing interests"
+            }
+          }
+        ],
+        "article-number": "13"
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2026,
+              11,
+              20
+            ]
+          ],
+          "date-time": "2026-11-20T07:17:48Z",
+          "timestamp": 1795159068515,
+          "version": "4.10.3"
+        },
+        "reference-count": 24,
+        "publisher": "IEEE",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2026,
+                  9,
+                  1
+                ]
+              ],
+              "date-time": "2026-09-01T00:00:00Z",
+              "timestamp": 1788220800000
+            },
+            "content-version": "vor",
+            "delay-in-days": 0,
+            "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2026,
+                  9,
+                  1
+                ]
+              ],
+              "date-time": "2026-09-01T00:00:00Z",
+              "timestamp": 1788220800000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-029"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2026,
+                  9,
+                  1
+                ]
+              ],
+              "date-time": "2026-09-01T00:00:00Z",
+              "timestamp": 1788220800000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-037"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2026,
+                  9,
+                  1
+                ]
+              ],
+              "date-time": "2026-09-01T00:00:00Z",
+              "timestamp": 1788220800000
+            },
+            "content-version": "tdm",
+            "delay-in-days": 0,
+            "URL": "https://ieeexplore.ieee.org/Xplorehelp/tdmrep.html"
+          }
+        ],
+        "funder": [
+          {
+            "name": "National Science Foundation",
+            "award": [
+              "CMMI-2502156"
+            ],
+            "award-info": [
+              {
+                "award-number": [
+                  "CMMI-2502156"
+                ]
+              }
+            ]
+          }
+        ],
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2026,
+              9
+            ]
+          ]
+        },
+        "DOI": "10.1109/vtc2026-fall68024.2026.11758313",
+        "type": "proceedings-article",
+        "created": {
+          "date-parts": [
+            [
+              2026,
+              11,
+              12
+            ]
+          ],
+          "date-time": "2026-11-12T20:21:00Z",
+          "timestamp": 1794514860000
+        },
+        "page": "1-6",
+        "source": "Crossref",
+        "is-referenced-by-count": 0,
+        "title": [
+          "DEC-RLAV: Decentralized Reinforcement Learning for End-to-End Real-World Autonomous Driving using nuScenes"
+        ],
+        "prefix": "10.1109",
+        "author": [
+          {
+            "given": "Zulqarnain H.",
+            "family": "Khattak",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Morgan State University"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "member": "263",
+        "reference": [
+          {
+            "key": "ref1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/TITS.2021.3134702"
+          },
+          {
+            "key": "ref2",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ITSC48978.2021.9564523"
+          },
+          {
+            "key": "ref3",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1016/j.commtr.2024.100136"
+          },
+          {
+            "key": "ref4",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/ACCESS.2023.3324056"
+          },
+          {
+            "key": "ref5",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.3390/su151813799"
+          },
+          {
+            "key": "ref6",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.2352/ISSN.2470-1173.2017.19.AVM-023"
+          },
+          {
+            "key": "ref7",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1016/j.trc.2020.102662"
+          },
+          {
+            "key": "ref8",
+            "article-title": "A comprehensive review on traffic datasets and simulators for autonomous vehicles",
+            "author": "Sarker",
+            "year": "2024",
+            "journal-title": "arXiv preprint"
+          },
+          {
+            "key": "ref9",
+            "article-title": "Offline reinforcement learning: Tutorial, review, and perspectives on open problems",
+            "author": "Levine",
+            "year": "2020",
+            "journal-title": "arXiv preprint"
+          },
+          {
+            "key": "ref10",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/CVPR42600.2020.01164"
+          },
+          {
+            "key": "ref11",
+            "article-title": "Open-sourced data ecosystem in autonomous driving: the present and future",
+            "author": "Li",
+            "year": "2023",
+            "journal-title": "arXiv preprint"
+          },
+          {
+            "key": "ref12",
+            "first-page": "1",
+            "article-title": "Carla: An open urban driving simulator",
+            "volume-title": "Conference on robot learning. PMLR",
+            "author": "Dosovitskiy",
+            "year": "2017"
+          },
+          {
+            "key": "ref13",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1007/s11042-021-11437-3"
+          },
+          {
+            "key": "ref14",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1016/j.trc.2019.11.007"
+          },
+          {
+            "key": "ref15",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1016/j.trc.2022.103648"
+          },
+          {
+            "key": "ref16",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/TITS.2020.3003527"
+          },
+          {
+            "key": "ref17",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/TPAMI.2022.3190471"
+          },
+          {
+            "key": "ref18",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.52202/075280-0172"
+          },
+          {
+            "key": "ref19",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/TITS.2021.3054625"
+          },
+          {
+            "key": "ref20",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/SMC52423.2021.9658892"
+          },
+          {
+            "issue": "5",
+            "key": "ref21",
+            "first-page": "1505",
+            "article-title": "A decisionmaking of autonomous driving method based on ddpg with pretraining",
+            "volume-title": "Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering",
+            "volume": "239",
+            "author": "Ma",
+            "year": "2025"
+          },
+          {
+            "key": "ref22",
+            "first-page": "1587",
+            "article-title": "Addressing function approximation error in actor-critic methods",
+            "volume-title": "International conference on machine learning. PMLR",
+            "author": "Fujimoto",
+            "year": "2018"
+          },
+          {
+            "key": "ref23",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/AMLDS63918.2025.11159398"
+          },
+          {
+            "key": "ref24",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/3703935.3704033"
+          }
+        ],
+        "event": {
+          "name": "2026 IEEE 104th Vehicular Technology Conference (VTC2026-Fall)",
+          "location": "Boston, MA, USA",
+          "start": {
+            "date-parts": [
+              [
+                2026,
+                9,
+                6
+              ]
+            ]
+          },
+          "end": {
+            "date-parts": [
+              [
+                2026,
+                9,
+                9
+              ]
+            ]
+          }
+        },
+        "container-title": [
+          "2026 IEEE 104th Vehicular Technology Conference (VTC2026-Fall)"
+        ],
+        "link": [
+          {
+            "URL": "http://xplorestaging.ieee.org/ielx8/11755721/11758042/11758313.pdf?arnumber=11758313",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2026,
+              11,
+              20
+            ]
+          ],
+          "date-time": "2026-11-20T06:44:34Z",
+          "timestamp": 1795157074000
+        },
+        "score": 29.586418,
+        "resource": {
+          "primary": {
+            "URL": "https://ieeexplore.ieee.org/document/11758313/"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2026,
+              9
+            ]
+          ]
+        },
+        "references-count": 24,
+        "URL": "https://doi.org/10.1109/vtc2026-fall68024.2026.11758313",
+        "published": {
+          "date-parts": [
+            [
+              2026,
+              9
+            ]
+          ]
+        }
+      }
+    ],
+    "items-per-page": 3,
+    "query": {
+      "start-index": 0,
+      "search-terms": null
+    }
+  }
+}

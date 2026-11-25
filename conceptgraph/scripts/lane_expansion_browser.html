@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>场景扩充与 Qwen 真实实验证据</title>
+<style>
+:root{color-scheme:light dark;--bg:#f9fafb;--fg:#18212c;--muted:#566474;--line:#cbd2da;--surface:#fff;--lane:#467b9a;--gt:#138460;--path:#315cbd;--rejected:#bd5e20;--node:#9a3f82}
+@media(prefers-color-scheme:dark){:root{--bg:#151a21;--fg:#e6eaf0;--muted:#a9b5c5;--line:#454f5f;--surface:#202833;--lane:#71a9c9;--gt:#62cba4;--path:#8dabff;--rejected:#f0a46c;--node:#dda0d1}}
+*{box-sizing:border-box}body{margin:0 auto;padding:24px;max-width:1180px;font:15px/1.5 system-ui,sans-serif;background:var(--bg);color:var(--fg)}h1{font-size:24px;font-weight:500;margin:0 0 8px}h2{font-size:18px;font-weight:500;margin:24px 0 8px}p{margin:8px 0}.muted{color:var(--muted)}.controls{display:flex;flex-wrap:wrap;gap:12px;margin:16px 0}.controls label{display:flex;flex-direction:column;gap:4px;min-width:140px;flex:1}.checks{display:flex;flex-wrap:wrap;gap:16px}.checks label{display:flex;align-items:center;gap:5px}select,input,button{font:inherit;color:inherit}select,button{background:var(--surface);border:1px solid var(--line);border-radius:5px;padding:7px;max-width:100%}input[type=range]{width:100%}canvas{display:block;width:100%;height:500px;max-height:65vw;background:var(--surface)}table{border-collapse:collapse;width:100%;font-size:14px}td,th{padding:8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;overflow-wrap:anywhere}th{font-weight:500}.tablewrap{overflow:auto}details{margin:16px 0}summary{cursor:pointer}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:13px/1.5 ui-monospace,monospace;max-height:450px;overflow:auto}a{color:var(--path)}img.camera{width:100%;max-width:800px;height:auto}.status{min-height:45px}svg.ci{display:block;width:100%;height:auto}.legend{display:flex;flex-wrap:wrap;gap:16px;font-size:13px;margin:8px 0}.legend span::before{content:'━ ';color:var(--path)}.legend .gt::before{content:'□ ';color:var(--gt)}.legend .node::before{content:'○ ';color:var(--node)}.legend .reject::before{content:'┄ ';color:var(--rejected)}@media(max-width:600px){body{padding:12px}canvas{height:340px;max-height:none}.controls label{min-width:130px}th,td{padding:5px}}
+@media(max-width:600px){.tablewrap table{min-width:620px}.tablewrap th:first-child,.tablewrap td:first-child{white-space:nowrap}}
+</style>
+<h1>场景扩充与 Qwen 真实实验证据</h1>
+<p id="cohortnotice" class="muted"></p>
+<p id="progress" class="muted"></p>
+<p class="muted">nuScenes HD Map约束 · 受控录制回放 · 官方实例真值 · 无实际车辆控制或摄像头车道线识别</p>
+<div class="controls">
+ <label>场景<select id="scene"></select></label>
+ <label>评测范围<select id="scope"><option value="static">四地图静态对照</option><option value="online">逐帧普通 / 车道回放</option></select></label>
+ <label>查询<select id="query"></select></label>
+ <label>方法<select id="method"></select></label>
+ <label>运行<select id="repeat"><option value="first">首次</option><option value="cache_repeat">缓存复跑</option></select></label>
+</div>
+<p id="querytext"></p>
+<div class="checks">
+ <label><input id="lanes" type="checkbox" checked>车道polygon</label>
+ <label><input id="centers" type="checkbox" checked>中心线 / 方向</label>
+ <label><input id="transitions" type="checkbox">合法连接</label>
+ <label><input id="gt" type="checkbox" checked>GT / 节点关联</label>
+ <label><input id="rejected" type="checkbox" checked>被拒平滑路径</label>
+</div>
+<label for="frame">帧 <span id="framevalue">0</span></label><input id="frame" type="range" min="0" max="0" value="0">
+<p id="status" class="status" aria-live="polite"></p>
+<canvas id="map" role="img" aria-label="实际地图、障碍栅格与路径；方框为GT，圆点为系统节点"></canvas>
+<div class="legend"><span>接受路径</span><span class="gt">官方GT</span><span class="node">系统节点</span><span class="reject">拒绝的平滑路径</span></div>
+<p id="source" class="muted"></p>
+<details><summary>当前帧CAM_FRONT</summary><img id="camera" class="camera" alt="实际CAM_FRONT输入"></details>
+<details open><summary>Qwen重排前后与应用状态</summary><div id="rerank"></div></details>
+<details><summary>缓存、路径检查、投影与目标关联</summary><pre id="evidence"></pre></details>
+<details><summary>同输入的合成故障与规则回退</summary><p class="muted">异常、超时、非法schema、空输出、迟到和过期对象版本；不计入真实Qwen模型推理。</p><div id="faults"></div></details>
+<h2>独立测试的场景配对结果</h2>
+<p id="pairednote" class="muted">默认显示车道 − 普通的查询级路径成功率；每个scene先平均3条预选查询，再按scene聚类bootstrap，seed=17，2000次。</p>
+<div id="paired"></div>
+<div class="controls"><label>置信区间比较<select id="comparison"></select></label></div>
+<svg id="ci" class="ci" role="img" aria-label="配对差值及按场景聚类的95%置信区间"></svg>
+<p id="cinote" class="muted"></p>
+<p><a id="reportlink" href="../experiment_report.md">中文实验报告</a> · <a href="../statistical_report.json">完整统计</a> · <a href="source_manifest.json">可视化来源SHA-256</a> · <a href="rejected_smoothing_evidence.json">拒绝平滑复现记录</a> · <a href="rerank_before_after.json">全部重排事件</a></p>
+<script src="summary.js"></script>
+<script>
+(()=>{
+const $=id=>document.getElementById(id),S=window.benchmarkSummary;let data=null,current=null,view=null,drawVersion=0,ciCurrent=null;
+$('pairednote').textContent+='测试'+S.statistics.test_scene_count+'个scene，来自'+S.statistics.test_acquisition_log_count+'个采集log。';
+$('reportlink').href=S.report_href||'../experiment_report.md';
+$('cohortnotice').textContent=S.cohort_notice||'本页沿用原诊断组数据；测试访问历史和补正评测另见中文报告。';
+const names={free_space:'自由空间',drivable_area:'drivable_area',lane_area:'lane区域',lane_constrained:'lane区域 + 方向 + 拓扑',off_drivable:'关闭Qwen · 普通',off_lane:'关闭Qwen · 车道',base_drivable:'base · 普通',base_lane:'base · 车道',adapter_drivable:'adapter · 普通',adapter_lane:'adapter · 车道'};
+function text(value){return value===null||value===undefined?'不适用 / 未知':String(value)}
+function options(element,rows,selected){element.replaceChildren();for(const [value,label] of rows){const o=document.createElement('option');o.value=value;o.textContent=label;element.append(o)}if(rows.some(r=>r[0]===selected))element.value=selected}
+function table(headers,rows){const table=document.createElement('table'),head=document.createElement('tr');for(const h of headers){const th=document.createElement('th');th.textContent=h;head.append(th)}table.append(head);for(const row of rows){const tr=document.createElement('tr');for(const v of row){const td=document.createElement('td');td.textContent=text(v);if(/^-?[0-9]+(?:\.[0-9]+)?$/.test(String(v)))td.style.whiteSpace='nowrap';tr.append(td)}table.append(tr)}const wrap=document.createElement('div');wrap.className='tablewrap';wrap.append(table);return wrap}
+function loadScene(){const script=document.createElement('script');script.src='data/'+$('scene').value+'.js';script.onerror=()=>{$('status').textContent='场景证据加载失败，请保留完整visualizations目录。'};document.body.append(script)}
+window.installScene=function(value){if(value.scene!==$('scene').value)return;data=value;const before=$('query').value;options($('query'),data.queries.map(q=>[q.query_id,q.query_id.split('-').pop()+' · '+q.query_type]),before);setMethods()};
+function setMethods(){const before=$('method').value;const online=$('scope').value==='online';options($('method'),Object.entries(names).filter(([k])=>online?k.startsWith('off_')||((data.role==='sealed_test'||['scene-0003','scene-0916'].includes(data.scene))&&(k.startsWith('base_')||k.startsWith('adapter_'))):['free_space','drivable_area','lane_area','lane_constrained'].includes(k)),before);$('repeat').disabled=!online;render()}
+function render(){if(!data)return;const online=$('scope').value==='online',qid=$('query').value,method=$('method').value,repeat=$('repeat').value;current=(online?data.online:data.static).find(c=>c.query_id===qid&&c.method===method&&(!online||c.repeat===repeat));const query=data.queries.find(q=>q.query_id===qid);$('querytext').textContent=query?query.query_text:'';
+ if(!current){$('status').textContent=online?'该条件尚未完成，或该查询未预选逐帧回放；没有补造结果。':'静态案例缺失';view=null;draw();$('rerank').textContent='无当前证据';return}
+ $('frame').max=online?current.frames.length-1:0;$('frame').value=Math.min(Number($('frame').value),Number($('frame').max));const index=Number($('frame').value);$('framevalue').textContent=index;
+ view=online?current.frames[index]:{...current,vehicle:data.vehicle,nodes:data.nodes,gt:data.gt,matches:data.matches,source_image:data.source_image};
+ const success=online?view.path.length>0:current.success;const failure=online?(view.failure?.code||view.failure):current.failure;
+ $('status').textContent=data.scene+' · '+names[method]+' · '+(online?view.state+' · 帧 '+index+' · ':'')+(success?'存在接受路径':'当前没有接受路径')+(failure?' · '+text(failure):'');
+ $('camera').src=view.source_image;$('source').replaceChildren();const a=document.createElement('a');a.href=current.artifact;a.textContent='当前结构化证据';$('source').append(a,' · '+data.description);
+ const events=online?current.frames.flatMap(f=>f.rerank):[];
+ $('rerank').replaceChildren();if(events.length){$('rerank').append(table(['帧','已验证候选原顺序','模型返回顺序 / 推荐','实际应用','缓存 / 诊断'],events.map(e=>[e.frame,e.before_verified_ids.join(' → '),e.response_ranking?.join(' → ')??('推荐 '+e.selected_recommendation),e.applied?'是':'否',e.cache_status+' / '+e.diagnostic])))}else $('rerank').textContent=online&&method.startsWith('off_')?'关闭Qwen，无模型重排。':'当前条件没有可用的在线重排事件；静态重排建议不算在线应用。';
+ $('evidence').textContent=JSON.stringify({source:'保存的实际实验结果；拒绝平滑坐标为确定性重建并核对原validation',query_truth:query,selected_node:view.selected,matches:view.matches,lane_validation:view.lane_validation,path_collision_cells:view.path_collision_cells,goals:current.goals,rejected:current.rejected,qwen:current.qwen_counts,determinism:current.determinism,cache_zero_new_backend_calls:current.cache_zero_calls},null,2);
+ const faults=online?(data.faults?.cases?.filter(c=>c.query_id===qid&&c.lane===method.endsWith('_lane'))||[]):[];$('faults').replaceChildren();if(faults.length)$('faults').append(table(['故障','规则基线存在合法路径','同安全结果 / 丢弃','通过'],faults.map(f=>[f.fault,f.baseline_legal_path_exists,f.same_safety_outcome??JSON.stringify(f.events||f.diagnostic),f.passed])));else $('faults').textContent=online?'此查询/模式无对应故障记录。':'故障评测采用普通 / 严格车道两种模式；请切换逐帧回放范围查看。';draw();
+}
+async function draw(){const token=++drawVersion,canvas=$('map'),rect=canvas.getBoundingClientRect(),ratio=window.devicePixelRatio||1,W=rect.width,H=rect.height;canvas.dataset.drawPending=String(token);canvas.width=W*ratio;canvas.height=H*ratio;const ctx=canvas.getContext('2d');ctx.scale(ratio,ratio);ctx.clearRect(0,0,W,H);if(!view){canvas.dataset.drawComplete=String(token);return}const css=getComputedStyle(document.documentElement),color=n=>css.getPropertyValue(n).trim(),grid=view.grid,rows=grid.shape[0],cols=grid.shape[1],res=grid.resolution,s=Math.min((W-40)/(cols*res),(H-40)/(rows*res)),pw=cols*res*s,ph=rows*res*s,x0=(W-pw)/2,y0=(H-ph)/2;
+ const point=p=>[x0+(p[0]-grid.origin[0]+res/2)*s,y0+ph-(p[1]-grid.origin[1]+res/2)*s];
+ const image=new Image;image.src=grid.image;try{await image.decode()}catch{}if(token!==drawVersion)return;
+ ctx.save();ctx.translate(x0,y0+ph);ctx.scale(1,-1);ctx.imageSmoothingEnabled=false;if(image.complete&&image.naturalWidth)ctx.drawImage(image,0,0,pw,ph);ctx.restore();ctx.save();ctx.beginPath();ctx.rect(x0,y0,pw,ph);ctx.clip();
+ function line(points,stroke,width=1,dash=[]){if(!points?.length)return;ctx.beginPath();let first=true;for(const p of points){const [x,y]=point(p);if(first){ctx.moveTo(x,y);first=false}else ctx.lineTo(x,y)}ctx.strokeStyle=stroke;ctx.lineWidth=width;ctx.setLineDash(dash);ctx.stroke();ctx.setLineDash([])}
+ function arrow(a,b,stroke){const p=point(a),q=point(b),angle=Math.atan2(q[1]-p[1],q[0]-p[0]);line([a,b],stroke,1);ctx.beginPath();ctx.moveTo(q[0]-5*Math.cos(angle-.5),q[1]-5*Math.sin(angle-.5));ctx.lineTo(q[0],q[1]);ctx.lineTo(q[0]-5*Math.cos(angle+.5),q[1]-5*Math.sin(angle+.5));ctx.strokeStyle=stroke;ctx.stroke()}
+ if($('lanes').checked){ctx.globalAlpha=.17;for(const lane of data.geometry){if(!lane.polygon.length)continue;ctx.beginPath();lane.polygon.forEach((p,i)=>{const q=point(p);i?ctx.lineTo(...q):ctx.moveTo(...q)});ctx.closePath();ctx.fillStyle=color('--lane');ctx.fill();ctx.strokeStyle=color('--lane');ctx.lineWidth=.5;ctx.stroke()}ctx.globalAlpha=1}
+ if($('centers').checked)for(const lane of data.geometry){line(lane.centerline,color('--lane'),.8);const step=Math.max(1,Math.floor(lane.centerline.length/3));for(let i=step;i<lane.centerline.length;i+=step){const p=lane.centerline[i];arrow(p,[p[0]+2*Math.cos(p[2]),p[1]+2*Math.sin(p[2])],color('--lane'))}}
+ if($('transitions').checked)for(const lane of data.geometry){for(const target of lane.outgoing){const other=data.geometry.find(l=>l.token===target);if(!lane.end||!other?.start)continue;arrow(lane.end,other.start,color('--fg'));const [x,y]=point(lane.end);ctx.beginPath();ctx.arc(x,y,3,0,Math.PI*2);ctx.strokeStyle=color('--fg');ctx.stroke()}}
+ if($('gt').checked){const accepted=new Set(data.queries.find(q=>q.query_id===$('query').value)?.accepted_instance_tokens||[]);for(const obj of view.gt||[]){const [x,y]=point(obj.center);const r=accepted.has(obj.instance_token)?7:4;ctx.strokeStyle=color('--gt');ctx.lineWidth=accepted.has(obj.instance_token)?2:1;ctx.strokeRect(x-r,y-r,r*2,r*2)}for(const obj of view.nodes||[]){const [x,y]=point(obj.center);ctx.beginPath();ctx.arc(x,y,obj.node_id===view.selected?7:4,0,Math.PI*2);ctx.strokeStyle=color('--node');ctx.lineWidth=2;ctx.stroke();ctx.fillStyle=color('--fg');ctx.font='13px system-ui';ctx.fillText(String(obj.node_id),x+7,y-5)}for(const match of view.matches||[]){const node=view.nodes.find(n=>n.node_id===match.node_id),gt=view.gt.find(g=>g.instance_token===match.instance_token);if(node&&gt)line([node.center,gt.center],color('--gt'),1,[3,3])}}
+ if(current.goals)for(const goal of current.goals.filter(g=>g.node_id===current.selected)){if(goal.desired&&goal.goal)line([goal.desired,goal.goal],color('--node'),1,[3,3])}
+ if($('rejected').checked)for(const rejected of current.rejected||[])line(rejected.path,color('--rejected'),2,[6,4]);line(view.path,color('--path'),3);if(view.vehicle){const [x,y]=point(view.vehicle);ctx.fillStyle=color('--fg');ctx.beginPath();ctx.moveTo(x,y-7);ctx.lineTo(x-5,y+6);ctx.lineTo(x+5,y+6);ctx.closePath();ctx.fill();if(view.path.length)line([view.vehicle,view.path[0]],color('--path'),1,[3,3])}ctx.restore();
+ ctx.font='13px system-ui';ctx.fillStyle=color('--muted');ctx.fillText('实际局部地图坐标 · '+res+' m / cell',10,H-10);canvas.dataset.drawComplete=String(token);
+}
+function paired(){const rows=S.paired_rows.filter(r=>r.role==='sealed_test');const output=[];for(const scene of S.scenes.filter(s=>s.role==='sealed_test')){const subset=rows.filter(r=>r.scene===scene.scene);const normal=subset.filter(r=>r.method==='off_drivable'),lane=subset.filter(r=>r.method==='off_lane');const mean=x=>x.length?x.reduce((s,r)=>s+Number(r.query_success),0)/x.length:null;const a=mean(normal),b=mean(lane);output.push([scene.scene,normal.length,a===null?'未完成':a.toFixed(3),lane.length,b===null?'未完成':b.toFixed(3),a!==null&&b!==null?(b-a).toFixed(3):'未完成'])}$('paired').append(table(['scene','普通查询数','普通成功率','车道查询数','车道成功率','配对差值'],output));
+ const comparisons=S.statistics.comparisons?.filter(c=>c.role==='sealed_test')||[];options($('comparison'),comparisons.map((c,i)=>[String(i),c.scope+' · '+c.metric+' · '+c.difference]));$('comparison').onchange=()=>drawCI(comparisons[Number($('comparison').value)]);drawCI(comparisons[0])}
+function drawCI(c){ciCurrent=c;const svg=$('ci'),width=svg.getBoundingClientRect().width;svg.replaceChildren();svg.setAttribute('viewBox','0 0 '+width+' 110');if(!c){$('cinote').textContent='尚无完整配对统计';return}const ns='http://www.w3.org/2000/svg',add=(tag,attrs,content)=>{const e=document.createElementNS(ns,tag);for(const [k,v] of Object.entries(attrs))e.setAttribute(k,v);if(content)e.textContent=content;svg.append(e);return e},x=v=>30+(v+1)/2*(width-60);for(const tick of [-1,-.5,0,.5,1]){add('line',{x1:x(tick),x2:x(tick),y1:20,y2:70,stroke:'var(--line)'});add('text',{x:x(tick),y:95,'text-anchor':'middle',fill:'var(--muted)','font-size':14},String(tick))}if(c.ci95)add('line',{x1:x(c.ci95[0]),x2:x(c.ci95[1]),y1:45,y2:45,stroke:'var(--path)','stroke-width':5});if(c.mean_difference!==null)add('circle',{cx:x(c.mean_difference),cy:45,r:6,fill:'var(--path)'});$('cinote').textContent='差值 '+text(c.mean_difference)+'；95% CI '+text(c.ci95?.map(v=>v.toFixed(4)).join(' 至 '))+'；'+c.scene_count+'个scene，'+c.paired_queries+'对查询；'+c.status}
+options($('scene'),S.scenes.map(s=>[s.scene,s.scene+' · '+s.role]),S.scenes.find(s=>s.role==='sealed_test')?.scene);const p=S.progress.counts||{};$('progress').textContent='静态 '+p.static_cases+'/'+p.expected_static_cases+' · 在线条件 '+p.online_pairs+'/'+p.expected_online_pairs+' · 全查询检索 '+p.retrieval_pairs+'/'+p.expected_retrieval_pairs;
+$('scene').onchange=loadScene;$('scope').onchange=setMethods;for(const id of ['query','method','repeat','frame'])$(id).oninput=render;for(const id of ['lanes','centers','transitions','gt','rejected'])$(id).onchange=draw;window.addEventListener('resize',()=>{draw();drawCI(ciCurrent)});if(window.matchMedia)window.matchMedia('(prefers-color-scheme:dark)').addEventListener('change',draw);paired();loadScene();
+})();
+</script>
+</html>

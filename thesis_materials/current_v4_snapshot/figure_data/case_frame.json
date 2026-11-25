@@ -1,0 +1,1842 @@
+{
+  "scene": "scene-0039",
+  "frame_idx": 2,
+  "camera_timestamp_s": 1532400514.66246,
+  "rgb": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_frontend_reuse_full_001/inputs/scene-0039/color/000002.jpg",
+  "depth": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_frontend_reuse_full_001/inputs/scene-0039/depth/000002.png",
+  "detections": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_frontend_reuse_full_001/inputs/scene-0039/exp_streamlined_yolo_outdoor_objects_v1/detections/000002.pkl.gz",
+  "camera_pose": [
+    [
+      -0.9260289991,
+      0.0069437364,
+      -0.3773884967,
+      344.0029996503
+    ],
+    [
+      0.3772879938,
+      -0.0124761602,
+      -0.9260119412,
+      1027.299506629
+    ],
+    [
+      -0.0111383421,
+      -0.9998980598,
+      0.0089334978,
+      1.5355527987
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "intrinsic": [
+    [
+      1266.417203046554,
+      0.0,
+      816.2670197447984
+    ],
+    [
+      0.0,
+      1266.417203046554,
+      491.50706579294757
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "predictions": {
+    "original_fusion": [
+      {
+        "node_id": "color-0.319686,0.293936,0.301918",
+        "category": "car",
+        "center": [
+          331.27402710761856,
+          1010.7081518938558,
+          0.48771021824612304
+        ],
+        "extent": [
+          9.572853271400618,
+          12.795150337448263,
+          0.8277155526805764
+        ],
+        "num_detections": 1,
+        "motion_state": "static",
+        "velocity_mps": 0.0,
+        "last_seen_frame": 1,
+        "timestamp_s": null,
+        "depth_evidence": [
+          {
+            "mask_pixels": 4019,
+            "valid_pixels": 7,
+            "retained_pixels": 7,
+            "units": "m",
+            "source": "current_projected_lidar",
+            "robust_filter": false,
+            "depth_quantiles_m": [
+              16.448,
+              25.055600000000002,
+              30.836,
+              31.2542,
+              31.697
+            ],
+            "sufficient_support": true
+          }
+        ],
+        "source_index": 0
+      },
+      {
+        "node_id": "color-0.076341,0.785327,0.493569",
+        "category": "car",
+        "center": [
+          320.04993884508826,
+          1002.3304275026567,
+          0.7122324160635605
+        ],
+        "extent": [
+          19.61115528398284,
+          20.264015372874383,
+          1.3670580311217835
+        ],
+        "num_detections": 3,
+        "motion_state": "dynamic",
+        "velocity_mps": 4.086799460064673,
+        "last_seen_frame": 2,
+        "timestamp_s": null,
+        "depth_evidence": [
+          {
+            "mask_pixels": 11253,
+            "valid_pixels": 20,
+            "retained_pixels": 20,
+            "units": "m",
+            "source": "current_projected_lidar",
+            "robust_filter": false,
+            "depth_quantiles_m": [
+              19.169,
+              19.224500000000003,
+              20.502000000000002,
+              44.607,
+              44.691
+            ],
+            "sufficient_support": true
+          }
+        ],
+        "source_index": 1
+      },
+      {
+        "node_id": "color-0.842564,0.246304,0.179276",
+        "category": "car",
+        "center": [
+          333.21968851688166,
+          999.7786772176694,
+          0.8348758527613298
+        ],
+        "extent": [
+          1.4320024795957238,
+          0.45200539852191923,
+          0.017354010811672427
+        ],
+        "num_detections": 1,
+        "motion_state": "static",
+        "velocity_mps": 0.0,
+        "last_seen_frame": 1,
+        "timestamp_s": null,
+        "depth_evidence": [
+          {
+            "mask_pixels": 3596,
+            "valid_pixels": 8,
+            "retained_pixels": 8,
+            "units": "m",
+            "source": "current_projected_lidar",
+            "robust_filter": false,
+            "depth_quantiles_m": [
+              33.298,
+              33.3085,
+              33.381,
+              33.621,
+              33.81
+            ],
+            "sufficient_support": true
+          }
+        ],
+        "source_index": 2
+      },
+      {
+        "node_id": "color-0.294876,0.194557,0.514358",
+        "category": "car",
+        "center": [
+          329.2393643576843,
+          1010.7698860910612,
+          0.423144618897383
+        ],
+        "extent": [
+          1.0727533252541548,
+          3.3879456777933683,
+          0.18643164420741898
+        ],
+        "num_detections": 1,
+        "motion_state": "static",
+        "velocity_mps": 0.0,
+        "last_seen_frame": 1,
+        "timestamp_s": null,
+        "depth_evidence": [
+          {
+            "mask_pixels": 6429,
+            "valid_pixels": 5,
+            "retained_pixels": 5,
+            "units": "m",
+            "source": "current_projected_lidar",
+            "robust_filter": false,
+            "depth_quantiles_m": [
+              23.193,
+              23.1998,
+              23.356,
+              25.71,
+              26.662
+            ],
+            "sufficient_support": true
+          }
+        ],
+        "source_index": 3
+      },
+      {
+        "node_id": "color-0.920948,0.935364,0.936303",
+        "category": "car",
+        "center": [
+          319.9944037048154,
+          995.553643372136,
+          0.7382253460916334
+        ],
+        "extent": [
+          32.15543341459568,
+          43.182085893666,
+          1.2708468398336217
+        ],
+        "num_detections": 1,
+        "motion_state": "static",
+        "velocity_mps": 0.0,
+        "last_seen_frame": 2,
+        "timestamp_s": null,
+        "depth_evidence": [
+          {
+            "mask_pixels": 5236,
+            "valid_pixels": 15,
+            "retained_pixels": 15,
+            "units": "m",
+            "source": "current_projected_lidar",
+            "robust_filter": false,
+            "depth_quantiles_m": [
+              12.394,
+              26.5136,
+              27.922,
+              58.5748,
+              64.517
+            ],
+            "sufficient_support": true
+          }
+        ],
+        "source_index": 4
+      },
+      {
+        "node_id": "color-0.38147,0.835187,0.082076",
+        "category": "car",
+        "center": [
+          329.7832668214768,
+          984.5270858999409,
+          0.3881180706907955
+        ],
+        "extent": [
+          7.17236390713839,
+          24.192339931633228,
+          0.8736325772164337
+        ],
+        "num_detections": 1,
+        "motion_state": "static",
+        "velocity_mps": 0.0,
+        "last_seen_frame": 2,
+        "timestamp_s": null,
+        "depth_evidence": [
+          {
+            "mask_pixels": 4231,
+            "valid_pixels": 10,
+            "retained_pixels": 10,
+            "units": "m",
+            "source": "current_projected_lidar",
+            "robust_filter": false,
+            "depth_quantiles_m": [
+              32.62,
+              32.636199999999995,
+              32.754,
+              36.51579999999999,
+              57.511
+            ],
+            "sufficient_support": true
+          }
+        ],
+        "source_index": 5
+      }
+    ],
+    "timestamp_only": [
+      {
+        "node_id": "color-0.319686,0.293936,0.301918",
+        "category": "car",
+        "center": [
+          331.27402710761856,
+          1010.7081518938558,
+          0.48771021824612304
+        ],
+        "extent": [
+          9.572853271400618,
+          12.795150337448263,
+          0.8277155526805764
+        ],
+        "num_detections": 1,
+        "motion_state": "static",
+        "velocity_mps": 0.0,
+        "last_seen_frame": 1,
+        "timestamp_s": 1532400514.16246,
+        "depth_evidence": [
+          {
+            "mask_pixels": 4019,
+            "valid_pixels": 7,
+            "retained_pixels": 7,
+            "units": "m",
+            "source": "current_projected_lidar",
+            "robust_filter": false,
+            "depth_quantiles_m": [
+              16.448,
+              25.055600000000002,
+              30.836,
+              31.2542,
+              31.697
+            ],
+            "sufficient_support": true
+          }
+        ],
+        "source_index": 0
+      },
+      {
+        "node_id": "color-0.076341,0.785327,0.493569",
+        "category": "car",
+        "center": [
+          320.04993884508826,
+          1002.3304275026567,
+          0.7122324160635605
+        ],
+        "extent": [
+          19.61115528398284,
+          20.264015372874383,
+          1.3670580311217835
+        ],
+        "num_detections": 3,
+        "motion_state": "dynamic",
+        "velocity_mps": 1.333399268415833,
+        "last_seen_frame": 2,
+        "timestamp_s": 1532400514.66246,
+        "depth_evidence": [
+          {
+            "mask_pixels": 11253,
+            "valid_pixels": 20,
+            "retained_pixels": 20,
+            "units": "m",
+            "source": "current_projected_lidar",
+            "robust_filter": false,
+            "depth_quantiles_m": [
+              19.169,
+              19.224500000000003,
+              20.502000000000002,
+              44.607,
+              44.691
+            ],
+            "sufficient_support": true
+          }
+        ],
+        "source_index": 1
+      },
+      {
+        "node_id": "color-0.842564,0.246304,0.179276",
+        "category": "car",
+        "center": [
+          333.21968851688166,
+          999.7786772176694,
+          0.8348758527613298
+        ],
+        "extent": [
+          1.4320024795957238,
+          0.45200539852191923,
+          0.017354010811672427
+        ],
+        "num_detections": 1,
+        "motion_state": "static",
+        "velocity_mps": 0.0,
+        "last_seen_frame": 1,
+        "timestamp_s": 1532400514.16246,
+        "depth_evidence": [
+          {
+            "mask_pixels": 3596,
+            "valid_pixels": 8,
+            "retained_pixels": 8,
+            "units": "m",
+            "source": "current_projected_lidar",
+            "robust_filter": false,
+            "depth_quantiles_m": [
+              33.298,
+              33.3085,
+              33.381,
+              33.621,
+              33.81
+            ],
+            "sufficient_support": true
+          }
+        ],
+        "source_index": 2
+      },
+      {
+        "node_id": "color-0.294876,0.194557,0.514358",
+        "category": "car",
+        "center": [
+          329.2393643576843,
+          1010.7698860910612,
+          0.423144618897383
+        ],
+        "extent": [
+          1.0727533252541548,
+          3.3879456777933683,
+          0.18643164420741898
+        ],
+        "num_detections": 1,
+        "motion_state": "static",
+        "velocity_mps": 0.0,
+        "last_seen_frame": 1,
+        "timestamp_s": 1532400514.16246,
+        "depth_evidence": [
+          {
+            "mask_pixels": 6429,
+            "valid_pixels": 5,
+            "retained_pixels": 5,
+            "units": "m",
+            "source": "current_projected_lidar",
+            "robust_filter": false,
+            "depth_quantiles_m": [
+              23.193,
+              23.1998,
+              23.356,
+              25.71,
+              26.662
+            ],
+            "sufficient_support": true
+          }
+        ],
+        "source_index": 3
+      },
+      {
+        "node_id": "color-0.920948,0.935364,0.936303",
+        "category": "car",
+        "center": [
+          319.9944037048154,
+          995.553643372136,
+          0.7382253460916334
+        ],
+        "extent": [
+          32.15543341459568,
+          43.182085893666,
+          1.2708468398336217
+        ],
+        "num_detections": 1,
+        "motion_state": "static",
+        "velocity_mps": 0.0,
+        "last_seen_frame": 2,
+        "timestamp_s": 1532400514.66246,
+        "depth_evidence": [
+          {
+            "mask_pixels": 5236,
+            "valid_pixels": 15,
+            "retained_pixels": 15,
+            "units": "m",
+            "source": "current_projected_lidar",
+            "robust_filter": false,
+            "depth_quantiles_m": [
+              12.394,
+              26.5136,
+              27.922,
+              58.5748,
+              64.517
+            ],
+            "sufficient_support": true
+          }
+        ],
+        "source_index": 4
+      },
+      {
+        "node_id": "color-0.38147,0.835187,0.082076",
+        "category": "car",
+        "center": [
+          329.7832668214768,
+          984.5270858999409,
+          0.3881180706907955
+        ],
+        "extent": [
+          7.17236390713839,
+          24.192339931633228,
+          0.8736325772164337
+        ],
+        "num_detections": 1,
+        "motion_state": "static",
+        "velocity_mps": 0.0,
+        "last_seen_frame": 2,
+        "timestamp_s": 1532400514.66246,
+        "depth_evidence": [
+          {
+            "mask_pixels": 4231,
+            "valid_pixels": 10,
+            "retained_pixels": 10,
+            "units": "m",
+            "source": "current_projected_lidar",
+            "robust_filter": false,
+            "depth_quantiles_m": [
+              32.62,
+              32.636199999999995,
+              32.754,
+              36.51579999999999,
+              57.511
+            ],
+            "sufficient_support": true
+          }
+        ],
+        "source_index": 5
+      }
+    ],
+    "one_to_one_no_expiry": [
+      {
+        "node_id": "track-00000000",
+        "category": "car",
+        "center": [
+          331.27402710761856,
+          1010.7081518938558,
+          0.48771021824612304
+        ],
+        "extent": [
+          9.572853271400618,
+          12.795150337448263,
+          0.8277155526805764
+        ],
+        "num_detections": 1,
+        "motion_state": "unknown",
+        "velocity_mps": 0.0,
+        "last_seen_frame": 1,
+        "timestamp_s": 1532400514.16246,
+        "depth_evidence": [
+          {
+            "mask_pixels": 4019,
+            "valid_pixels": 7,
+            "retained_pixels": 7,
+            "units": "m",
+            "source": "current_projected_lidar",
+            "robust_filter": false,
+            "depth_quantiles_m": [
+              16.448,
+              25.055600000000002,
+              30.836,
+              31.2542,
+              31.697
+            ],
+            "sufficient_support": true
+          }
+        ],
+        "source_index": 0
+      },
+      {
+        "node_id": "track-00000001",
+        "category": "car",
+        "center": [
+          320.3315650931884,
+          1006.4071839892158,
+          0.7639337938399632
+        ],
+        "extent": [
+          25.594391712031836,
+          24.939239366508104,
+          1.4048884317788268
+        ],
+        "num_detections": 2,
+        "motion_state": "dynamic",
+        "velocity_mps": 1.333399268415833,
+        "last_seen_frame": 2,
+        "timestamp_s": 1532400514.66246,
+        "depth_evidence": [
+          {
+            "mask_pixels": 33172,
+            "valid_pixels": 79,
+            "retained_pixels": 79,
+            "units": "m",
+            "source": "current_projected_lidar",
+            "robust_filter": false,
+            "depth_quantiles_m": [
+              12.082,
+              12.175,
+              13.564,
+              38.1176,
+              44.658
+            ],
+            "sufficient_support": true
+          }
+        ],
+        "source_index": 1
+      },
+      {
+        "node_id": "track-00000002",
+        "category": "car",
+        "center": [
+          333.21968851688166,
+          999.7786772176694,
+          0.8348758527613298
+        ],
+        "extent": [
+          1.4320024795957238,
+          0.45200539852191923,
+          0.017354010811672427
+        ],
+        "num_detections": 1,
+        "motion_state": "unknown",
+        "velocity_mps": 0.0,
+        "last_seen_frame": 1,
+        "timestamp_s": 1532400514.16246,
+        "depth_evidence": [
+          {
+            "mask_pixels": 3596,
+            "valid_pixels": 8,
+            "retained_pixels": 8,
+            "units": "m",
+            "source": "current_projected_lidar",
+            "robust_filter": false,
+            "depth_quantiles_m": [
+              33.298,
+              33.3085,
+              33.381,
+              33.621,
+              33.81
+            ],
+            "sufficient_support": true
+          }
+        ],
+        "source_index": 2
+      },
+      {
+        "node_id": "track-00000003",
+        "category": "car",
+        "center": [
+          329.2393643576843,
+          1010.7698860910612,
+          0.423144618897383
+        ],
+        "extent": [
+          1.0727533252541548,
+          3.3879456777933683,
+          0.18643164420741898
+        ],
+        "num_detections": 1,
+        "motion_state": "unknown",
+        "velocity_mps": 0.0,
+        "last_seen_frame": 1,
+        "timestamp_s": 1532400514.16246,
+        "depth_evidence": [
+          {
+            "mask_pixels": 6429,
+            "valid_pixels": 5,
+            "retained_pixels": 5,
+            "units": "m",
+            "source": "current_projected_lidar",
+            "robust_filter": false,
+            "depth_quantiles_m": [
+              23.193,
+              23.1998,
+              23.356,
+              25.71,
+              26.662
+            ],
+            "sufficient_support": true
+          }
+        ],
+        "source_index": 3
+      },
+      {
+        "node_id": "track-00000004",
+        "category": "car",
+        "center": [
+          319.9944037048154,
+          995.553643372136,
+          0.7382253460916334
+        ],
+        "extent": [
+          32.15543341459568,
+          43.182085893666,
+          1.2708468398336217
+        ],
+        "num_detections": 1,
+        "motion_state": "unknown",
+        "velocity_mps": 0.0,
+        "last_seen_frame": 2,
+        "timestamp_s": 1532400514.66246,
+        "depth_evidence": [
+          {
+            "mask_pixels": 5236,
+            "valid_pixels": 15,
+            "retained_pixels": 15,
+            "units": "m",
+            "source": "current_projected_lidar",
+            "robust_filter": false,
+            "depth_quantiles_m": [
+              12.394,
+              26.5136,
+              27.922,
+              58.5748,
+              64.517
+            ],
+            "sufficient_support": true
+          }
+        ],
+        "source_index": 4
+      },
+      {
+        "node_id": "track-00000005",
+        "category": "car",
+        "center": [
+          329.7832668214768,
+          984.5270858999409,
+          0.3881180706907955
+        ],
+        "extent": [
+          7.17236390713839,
+          24.192339931633228,
+          0.8736325772164337
+        ],
+        "num_detections": 1,
+        "motion_state": "unknown",
+        "velocity_mps": 0.0,
+        "last_seen_frame": 2,
+        "timestamp_s": 1532400514.66246,
+        "depth_evidence": [
+          {
+            "mask_pixels": 4231,
+            "valid_pixels": 10,
+            "retained_pixels": 10,
+            "units": "m",
+            "source": "current_projected_lidar",
+            "robust_filter": false,
+            "depth_quantiles_m": [
+              32.62,
+              32.636199999999995,
+              32.754,
+              36.51579999999999,
+              57.511
+            ],
+            "sufficient_support": true
+          }
+        ],
+        "source_index": 5
+      },
+      {
+        "node_id": "track-00000007",
+        "category": "car",
+        "center": [
+          320.04993884508826,
+          1002.3304275026567,
+          0.7122324160635605
+        ],
+        "extent": [
+          19.61115528398284,
+          20.264015372874383,
+          1.3670580311217835
+        ],
+        "num_detections": 1,
+        "motion_state": "unknown",
+        "velocity_mps": 0.0,
+        "last_seen_frame": 2,
+        "timestamp_s": 1532400514.66246,
+        "depth_evidence": [
+          {
+            "mask_pixels": 11253,
+            "valid_pixels": 20,
+            "retained_pixels": 20,
+            "units": "m",
+            "source": "current_projected_lidar",
+            "robust_filter": false,
+            "depth_quantiles_m": [
+              19.169,
+              19.224500000000003,
+              20.502000000000002,
+              44.607,
+              44.691
+            ],
+            "sufficient_support": true
+          }
+        ],
+        "source_index": 6
+      }
+    ],
+    "one_to_one_timestamp": [
+      {
+        "node_id": "track-00000000",
+        "category": "car",
+        "center": [
+          331.27402710761856,
+          1010.7081518938558,
+          0.48771021824612304
+        ],
+        "extent": [
+          9.572853271400618,
+          12.795150337448263,
+          0.8277155526805764
+        ],
+        "num_detections": 1,
+        "motion_state": "unknown",
+        "velocity_mps": 0.0,
+        "last_seen_frame": 1,
+        "timestamp_s": 1532400514.16246,
+        "depth_evidence": [
+          {
+            "mask_pixels": 4019,
+            "valid_pixels": 7,
+            "retained_pixels": 7,
+            "units": "m",
+            "source": "current_projected_lidar",
+            "robust_filter": false,
+            "depth_quantiles_m": [
+              16.448,
+              25.055600000000002,
+              30.836,
+              31.2542,
+              31.697
+            ],
+            "sufficient_support": true
+          }
+        ],
+        "source_index": 0
+      },
+      {
+        "node_id": "track-00000001",
+        "category": "car",
+        "center": [
+          320.3315650931884,
+          1006.4071839892158,
+          0.7639337938399632
+        ],
+        "extent": [
+          25.594391712031836,
+          24.939239366508104,
+          1.4048884317788268
+        ],
+        "num_detections": 2,
+        "motion_state": "dynamic",
+        "velocity_mps": 1.333399268415833,
+        "last_seen_frame": 2,
+        "timestamp_s": 1532400514.66246,
+        "depth_evidence": [
+          {
+            "mask_pixels": 33172,
+            "valid_pixels": 79,
+            "retained_pixels": 79,
+            "units": "m",
+            "source": "current_projected_lidar",
+            "robust_filter": false,
+            "depth_quantiles_m": [
+              12.082,
+              12.175,
+              13.564,
+              38.1176,
+              44.658
+            ],
+            "sufficient_support": true
+          }
+        ],
+        "source_index": 1
+      },
+      {
+        "node_id": "track-00000002",
+        "category": "car",
+        "center": [
+          333.21968851688166,
+          999.7786772176694,
+          0.8348758527613298
+        ],
+        "extent": [
+          1.4320024795957238,
+          0.45200539852191923,
+          0.017354010811672427
+        ],
+        "num_detections": 1,
+        "motion_state": "unknown",
+        "velocity_mps": 0.0,
+        "last_seen_frame": 1,
+        "timestamp_s": 1532400514.16246,
+        "depth_evidence": [
+          {
+            "mask_pixels": 3596,
+            "valid_pixels": 8,
+            "retained_pixels": 8,
+            "units": "m",
+            "source": "current_projected_lidar",
+            "robust_filter": false,
+            "depth_quantiles_m": [
+              33.298,
+              33.3085,
+              33.381,
+              33.621,
+              33.81
+            ],
+            "sufficient_support": true
+          }
+        ],
+        "source_index": 2
+      },
+      {
+        "node_id": "track-00000003",
+        "category": "car",
+        "center": [
+          329.2393643576843,
+          1010.7698860910612,
+          0.423144618897383
+        ],
+        "extent": [
+          1.0727533252541548,
+          3.3879456777933683,
+          0.18643164420741898
+        ],
+        "num_detections": 1,
+        "motion_state": "unknown",
+        "velocity_mps": 0.0,
+        "last_seen_frame": 1,
+        "timestamp_s": 1532400514.16246,
+        "depth_evidence": [
+          {
+            "mask_pixels": 6429,
+            "valid_pixels": 5,
+            "retained_pixels": 5,
+            "units": "m",
+            "source": "current_projected_lidar",
+            "robust_filter": false,
+            "depth_quantiles_m": [
+              23.193,
+              23.1998,
+              23.356,
+              25.71,
+              26.662
+            ],
+            "sufficient_support": true
+          }
+        ],
+        "source_index": 3
+      },
+      {
+        "node_id": "track-00000004",
+        "category": "car",
+        "center": [
+          319.9944037048154,
+          995.553643372136,
+          0.7382253460916334
+        ],
+        "extent": [
+          32.15543341459568,
+          43.182085893666,
+          1.2708468398336217
+        ],
+        "num_detections": 1,
+        "motion_state": "unknown",
+        "velocity_mps": 0.0,
+        "last_seen_frame": 2,
+        "timestamp_s": 1532400514.66246,
+        "depth_evidence": [
+          {
+            "mask_pixels": 5236,
+            "valid_pixels": 15,
+            "retained_pixels": 15,
+            "units": "m",
+            "source": "current_projected_lidar",
+            "robust_filter": false,
+            "depth_quantiles_m": [
+              12.394,
+              26.5136,
+              27.922,
+              58.5748,
+              64.517
+            ],
+            "sufficient_support": true
+          }
+        ],
+        "source_index": 4
+      },
+      {
+        "node_id": "track-00000005",
+        "category": "car",
+        "center": [
+          329.7832668214768,
+          984.5270858999409,
+          0.3881180706907955
+        ],
+        "extent": [
+          7.17236390713839,
+          24.192339931633228,
+          0.8736325772164337
+        ],
+        "num_detections": 1,
+        "motion_state": "unknown",
+        "velocity_mps": 0.0,
+        "last_seen_frame": 2,
+        "timestamp_s": 1532400514.66246,
+        "depth_evidence": [
+          {
+            "mask_pixels": 4231,
+            "valid_pixels": 10,
+            "retained_pixels": 10,
+            "units": "m",
+            "source": "current_projected_lidar",
+            "robust_filter": false,
+            "depth_quantiles_m": [
+              32.62,
+              32.636199999999995,
+              32.754,
+              36.51579999999999,
+              57.511
+            ],
+            "sufficient_support": true
+          }
+        ],
+        "source_index": 5
+      },
+      {
+        "node_id": "track-00000007",
+        "category": "car",
+        "center": [
+          320.04993884508826,
+          1002.3304275026567,
+          0.7122324160635605
+        ],
+        "extent": [
+          19.61115528398284,
+          20.264015372874383,
+          1.3670580311217835
+        ],
+        "num_detections": 1,
+        "motion_state": "unknown",
+        "velocity_mps": 0.0,
+        "last_seen_frame": 2,
+        "timestamp_s": 1532400514.66246,
+        "depth_evidence": [
+          {
+            "mask_pixels": 11253,
+            "valid_pixels": 20,
+            "retained_pixels": 20,
+            "units": "m",
+            "source": "current_projected_lidar",
+            "robust_filter": false,
+            "depth_quantiles_m": [
+              19.169,
+              19.224500000000003,
+              20.502000000000002,
+              44.607,
+              44.691
+            ],
+            "sufficient_support": true
+          }
+        ],
+        "source_index": 6
+      }
+    ],
+    "one_to_one_depth_quality": [
+      {
+        "node_id": "track-00000000",
+        "category": "car",
+        "center": [
+          326.26621918421284,
+          1004.7538239822056,
+          0.4574856534751568
+        ],
+        "extent": [
+          2.089324286734154,
+          2.1459613862512015,
+          0.7079496901508722
+        ],
+        "num_detections": 2,
+        "motion_state": "dynamic",
+        "velocity_mps": 1.3342637518174714,
+        "last_seen_frame": 2,
+        "timestamp_s": 1532400514.66246,
+        "depth_evidence": [
+          {
+            "mask_pixels": 5236,
+            "valid_pixels": 15,
+            "retained_pixels": 11,
+            "units": "m",
+            "source": "current_projected_lidar",
+            "robust_filter": true,
+            "depth_quantiles_m": [
+              12.394,
+              26.5136,
+              27.922,
+              58.5748,
+              64.517
+            ],
+            "cluster_count": 4,
+            "support_fraction": 0.7333333333333333,
+            "sufficient_support": true
+          }
+        ],
+        "source_index": 0
+      },
+      {
+        "node_id": "track-00000001",
+        "category": "car",
+        "center": [
+          332.34944852313953,
+          1017.1361984180186,
+          0.6485323805272514
+        ],
+        "extent": [
+          1.5699575161683015,
+          3.815000962104932,
+          1.1795521325149414
+        ],
+        "num_detections": 2,
+        "motion_state": "unknown",
+        "velocity_mps": 0.23307835889457354,
+        "last_seen_frame": 2,
+        "timestamp_s": 1532400514.66246,
+        "depth_evidence": [
+          {
+            "mask_pixels": 33172,
+            "valid_pixels": 79,
+            "retained_pixels": 62,
+            "units": "m",
+            "source": "current_projected_lidar",
+            "robust_filter": true,
+            "depth_quantiles_m": [
+              12.082,
+              12.175,
+              13.564,
+              38.1176,
+              44.658
+            ],
+            "cluster_count": 7,
+            "support_fraction": 0.7848101265822784,
+            "sufficient_support": true
+          }
+        ],
+        "source_index": 1
+      },
+      {
+        "node_id": "track-00000002",
+        "category": "car",
+        "center": [
+          332.67054247933606,
+          996.4389617008733,
+          0.4409988925099831
+        ],
+        "extent": [
+          1.377986500135819,
+          0.36934686647975923,
+          0.7751071621125135
+        ],
+        "num_detections": 2,
+        "motion_state": "dynamic",
+        "velocity_mps": 6.814211562845171,
+        "last_seen_frame": 2,
+        "timestamp_s": 1532400514.66246,
+        "depth_evidence": [
+          {
+            "mask_pixels": 4231,
+            "valid_pixels": 10,
+            "retained_pixels": 8,
+            "units": "m",
+            "source": "current_projected_lidar",
+            "robust_filter": true,
+            "depth_quantiles_m": [
+              32.62,
+              32.636199999999995,
+              32.754,
+              36.51579999999999,
+              57.511
+            ],
+            "cluster_count": 3,
+            "support_fraction": 0.8,
+            "sufficient_support": true
+          }
+        ],
+        "source_index": 2
+      },
+      {
+        "node_id": "track-00000006",
+        "category": "car",
+        "center": [
+          329.6661765777741,
+          1012.2137801054967,
+          0.29398993553619157
+        ],
+        "extent": [
+          0.3961913154270178,
+          0.4761554673447108,
+          0.5259556938134884
+        ],
+        "num_detections": 1,
+        "motion_state": "unknown",
+        "velocity_mps": 0.0,
+        "last_seen_frame": 2,
+        "timestamp_s": 1532400514.66246,
+        "depth_evidence": [
+          {
+            "mask_pixels": 11253,
+            "valid_pixels": 20,
+            "retained_pixels": 10,
+            "units": "m",
+            "source": "current_projected_lidar",
+            "robust_filter": true,
+            "depth_quantiles_m": [
+              19.169,
+              19.224500000000003,
+              20.502000000000002,
+              44.607,
+              44.691
+            ],
+            "cluster_count": 5,
+            "support_fraction": 0.5,
+            "sufficient_support": true
+          }
+        ],
+        "source_index": 3
+      }
+    ],
+    "one_to_one_depth_robust_motion": [
+      {
+        "node_id": "track-00000000",
+        "category": "car",
+        "center": [
+          326.26621918421284,
+          1004.7538239822056,
+          0.4574856534751568
+        ],
+        "extent": [
+          2.089324286734154,
+          2.1459613862512015,
+          0.7079496901508722
+        ],
+        "num_detections": 2,
+        "motion_state": "dynamic",
+        "velocity_mps": 1.1209565733333346,
+        "last_seen_frame": 2,
+        "timestamp_s": 1532400514.66246,
+        "depth_evidence": [
+          {
+            "mask_pixels": 5236,
+            "valid_pixels": 15,
+            "retained_pixels": 11,
+            "units": "m",
+            "source": "current_projected_lidar",
+            "robust_filter": true,
+            "depth_quantiles_m": [
+              12.394,
+              26.5136,
+              27.922,
+              58.5748,
+              64.517
+            ],
+            "cluster_count": 4,
+            "support_fraction": 0.7333333333333333,
+            "sufficient_support": true
+          }
+        ],
+        "source_index": 0
+      },
+      {
+        "node_id": "track-00000001",
+        "category": "car",
+        "center": [
+          332.34944852313953,
+          1017.1361984180186,
+          0.6485323805272514
+        ],
+        "extent": [
+          1.5699575161683015,
+          3.815000962104932,
+          1.1795521325149414
+        ],
+        "num_detections": 2,
+        "motion_state": "unknown",
+        "velocity_mps": 0.20615588712658894,
+        "last_seen_frame": 2,
+        "timestamp_s": 1532400514.66246,
+        "depth_evidence": [
+          {
+            "mask_pixels": 33172,
+            "valid_pixels": 79,
+            "retained_pixels": 62,
+            "units": "m",
+            "source": "current_projected_lidar",
+            "robust_filter": true,
+            "depth_quantiles_m": [
+              12.082,
+              12.175,
+              13.564,
+              38.1176,
+              44.658
+            ],
+            "cluster_count": 7,
+            "support_fraction": 0.7848101265822784,
+            "sufficient_support": true
+          }
+        ],
+        "source_index": 1
+      },
+      {
+        "node_id": "track-00000002",
+        "category": "car",
+        "center": [
+          332.67054247933606,
+          996.4389617008733,
+          0.4409988925099831
+        ],
+        "extent": [
+          1.377986500135819,
+          0.36934686647975923,
+          0.7751071621125135
+        ],
+        "num_detections": 2,
+        "motion_state": "dynamic",
+        "velocity_mps": 6.768154313080087,
+        "last_seen_frame": 2,
+        "timestamp_s": 1532400514.66246,
+        "depth_evidence": [
+          {
+            "mask_pixels": 4231,
+            "valid_pixels": 10,
+            "retained_pixels": 8,
+            "units": "m",
+            "source": "current_projected_lidar",
+            "robust_filter": true,
+            "depth_quantiles_m": [
+              32.62,
+              32.636199999999995,
+              32.754,
+              36.51579999999999,
+              57.511
+            ],
+            "cluster_count": 3,
+            "support_fraction": 0.8,
+            "sufficient_support": true
+          }
+        ],
+        "source_index": 2
+      },
+      {
+        "node_id": "track-00000006",
+        "category": "car",
+        "center": [
+          329.6661765777741,
+          1012.2137801054967,
+          0.29398993553619157
+        ],
+        "extent": [
+          0.3961913154270178,
+          0.4761554673447108,
+          0.5259556938134884
+        ],
+        "num_detections": 1,
+        "motion_state": "unknown",
+        "velocity_mps": 0.0,
+        "last_seen_frame": 2,
+        "timestamp_s": 1532400514.66246,
+        "depth_evidence": [
+          {
+            "mask_pixels": 11253,
+            "valid_pixels": 20,
+            "retained_pixels": 10,
+            "units": "m",
+            "source": "current_projected_lidar",
+            "robust_filter": true,
+            "depth_quantiles_m": [
+              19.169,
+              19.224500000000003,
+              20.502000000000002,
+              44.607,
+              44.691
+            ],
+            "cluster_count": 5,
+            "support_fraction": 0.5,
+            "sufficient_support": true
+          }
+        ],
+        "source_index": 3
+      }
+    ],
+    "single_frame": [
+      {
+        "node_id": "track-00000004",
+        "category": "car",
+        "center": [
+          319.9944037048154,
+          995.553643372136,
+          0.7382253460916334
+        ],
+        "extent": [
+          32.15543341459568,
+          43.182085893666,
+          1.2708468398336217
+        ],
+        "num_detections": 1,
+        "motion_state": "unknown",
+        "velocity_mps": 0.0,
+        "last_seen_frame": 2,
+        "timestamp_s": 1532400514.66246,
+        "depth_evidence": [
+          {
+            "mask_pixels": 5236,
+            "valid_pixels": 15,
+            "retained_pixels": 15,
+            "units": "m",
+            "source": "current_projected_lidar",
+            "robust_filter": false,
+            "depth_quantiles_m": [
+              12.394,
+              26.5136,
+              27.922,
+              58.5748,
+              64.517
+            ],
+            "sufficient_support": true
+          }
+        ],
+        "source_index": 0
+      },
+      {
+        "node_id": "track-00000005",
+        "category": "car",
+        "center": [
+          329.7832668214768,
+          984.5270858999409,
+          0.3881180706907955
+        ],
+        "extent": [
+          7.17236390713839,
+          24.192339931633228,
+          0.8736325772164337
+        ],
+        "num_detections": 1,
+        "motion_state": "unknown",
+        "velocity_mps": 0.0,
+        "last_seen_frame": 2,
+        "timestamp_s": 1532400514.66246,
+        "depth_evidence": [
+          {
+            "mask_pixels": 4231,
+            "valid_pixels": 10,
+            "retained_pixels": 10,
+            "units": "m",
+            "source": "current_projected_lidar",
+            "robust_filter": false,
+            "depth_quantiles_m": [
+              32.62,
+              32.636199999999995,
+              32.754,
+              36.51579999999999,
+              57.511
+            ],
+            "sufficient_support": true
+          }
+        ],
+        "source_index": 1
+      },
+      {
+        "node_id": "track-00000006",
+        "category": "car",
+        "center": [
+          320.3315650931884,
+          1006.4071839892158,
+          0.7639337938399632
+        ],
+        "extent": [
+          25.594391712031836,
+          24.939239366508104,
+          1.4048884317788268
+        ],
+        "num_detections": 1,
+        "motion_state": "unknown",
+        "velocity_mps": 0.0,
+        "last_seen_frame": 2,
+        "timestamp_s": 1532400514.66246,
+        "depth_evidence": [
+          {
+            "mask_pixels": 33172,
+            "valid_pixels": 79,
+            "retained_pixels": 79,
+            "units": "m",
+            "source": "current_projected_lidar",
+            "robust_filter": false,
+            "depth_quantiles_m": [
+              12.082,
+              12.175,
+              13.564,
+              38.1176,
+              44.658
+            ],
+            "sufficient_support": true
+          }
+        ],
+        "source_index": 2
+      },
+      {
+        "node_id": "track-00000007",
+        "category": "car",
+        "center": [
+          320.04993884508826,
+          1002.3304275026567,
+          0.7122324160635605
+        ],
+        "extent": [
+          19.61115528398284,
+          20.264015372874383,
+          1.3670580311217835
+        ],
+        "num_detections": 1,
+        "motion_state": "unknown",
+        "velocity_mps": 0.0,
+        "last_seen_frame": 2,
+        "timestamp_s": 1532400514.66246,
+        "depth_evidence": [
+          {
+            "mask_pixels": 11253,
+            "valid_pixels": 20,
+            "retained_pixels": 20,
+            "units": "m",
+            "source": "current_projected_lidar",
+            "robust_filter": false,
+            "depth_quantiles_m": [
+              19.169,
+              19.224500000000003,
+              20.502000000000002,
+              44.607,
+              44.691
+            ],
+            "sufficient_support": true
+          }
+        ],
+        "source_index": 3
+      }
+    ]
+  },
+  "evaluation_only_official": [
+    {
+      "annotation_token": "5e63cac9445447648211668a90504698",
+      "instance_token": "387d83ec0b394a14aadb24b10b00f440",
+      "category": "car",
+      "center": [
+        320.756,
+        984.752,
+        0.752
+      ],
+      "size_wlh": [
+        1.991,
+        4.743,
+        1.502
+      ],
+      "rotation_wxyz": [
+        0.8559513926043184,
+        0.0,
+        0.0,
+        0.5170562962567306
+      ],
+      "visibility_token": "4",
+      "num_lidar_pts": 5
+    },
+    {
+      "annotation_token": "7a5f1627dc304a87bcd5fdaea8a5d08f",
+      "instance_token": "470870f431b1421e9dc5aa17ada537da",
+      "category": "car",
+      "center": [
+        325.929,
+        1003.736,
+        0.664
+      ],
+      "size_wlh": [
+        2.051,
+        4.878,
+        1.527
+      ],
+      "rotation_wxyz": [
+        0.8345114379716108,
+        0.0,
+        0.0,
+        0.5509906168843117
+      ],
+      "visibility_token": "4",
+      "num_lidar_pts": 11
+    },
+    {
+      "annotation_token": "eb73b5298f1b4ebab4de0cb1e1e053b4",
+      "instance_token": "98d6848905024d48bb962d867a0e1dbc",
+      "category": "car",
+      "center": [
+        332.579,
+        994.197,
+        0.68
+      ],
+      "size_wlh": [
+        1.951,
+        4.641,
+        1.482
+      ],
+      "rotation_wxyz": [
+        0.7303590150316741,
+        0.0,
+        0.0,
+        -0.6830634737430796
+      ],
+      "visibility_token": "4",
+      "num_lidar_pts": 9
+    },
+    {
+      "annotation_token": "e57dd7080f6b4e35a745a98c7d0226ad",
+      "instance_token": "9fdb6e0712f84c498eef4da3ef43a7d9",
+      "category": "car",
+      "center": [
+        328.449,
+        1010.559,
+        0.824
+      ],
+      "size_wlh": [
+        1.838,
+        4.423,
+        1.561
+      ],
+      "rotation_wxyz": [
+        0.8413551690338845,
+        0.0,
+        0.0,
+        0.5404826357432434
+      ],
+      "visibility_token": "4",
+      "num_lidar_pts": 7
+    },
+    {
+      "annotation_token": "c1a951e3ba05430f8b2b50a80bc0dcc8",
+      "instance_token": "a1e591eb0d71410f9edc60e4e4a9559f",
+      "category": "pedestrian",
+      "center": [
+        334.778,
+        1014.177,
+        1.076
+      ],
+      "size_wlh": [
+        0.784,
+        0.887,
+        1.62
+      ],
+      "rotation_wxyz": [
+        -0.558179625921567,
+        0.0,
+        0.0,
+        0.8297201366762528
+      ],
+      "visibility_token": "4",
+      "num_lidar_pts": 12
+    },
+    {
+      "annotation_token": "56c9b82ad5c34298b59f38437c8dff33",
+      "instance_token": "f05e7a35981742a58104ac77a73da2e3",
+      "category": "car",
+      "center": [
+        323.295,
+        997.209,
+        0.724
+      ],
+      "size_wlh": [
+        2.016,
+        4.852,
+        1.518
+      ],
+      "rotation_wxyz": [
+        0.799317733462339,
+        0.0,
+        0.0,
+        0.6009086128294627
+      ],
+      "visibility_token": "2",
+      "num_lidar_pts": 0
+    },
+    {
+      "annotation_token": "68a9931302ea40f1906bc874abb66bad",
+      "instance_token": "f81b3d5420b646e2a007ca2b3a26317e",
+      "category": "car",
+      "center": [
+        331.727,
+        1016.969,
+        0.829
+      ],
+      "size_wlh": [
+        1.889,
+        4.414,
+        1.704
+      ],
+      "rotation_wxyz": [
+        0.8379569187994645,
+        0.0,
+        0.0,
+        0.5457363852961497
+      ],
+      "visibility_token": "4",
+      "num_lidar_pts": 79
+    }
+  ],
+  "metrics": {
+    "original_fusion": {
+      "predictions": 6,
+      "truth": 7,
+      "true_positive": 1,
+      "unmatched_predictions": 5,
+      "false_negative": 6,
+      "duplicate_nodes": 1,
+      "recall": 0.14285714285714285,
+      "precision": 0.16666666666666666,
+      "center_error_m_mean": 0.8180151351293764,
+      "matches": [
+        {
+          "prediction_index": 3,
+          "truth_index": 3,
+          "distance_m": 0.8180151351293764
+        }
+      ]
+    },
+    "timestamp_only": {
+      "predictions": 6,
+      "truth": 7,
+      "true_positive": 1,
+      "unmatched_predictions": 5,
+      "false_negative": 6,
+      "duplicate_nodes": 1,
+      "recall": 0.14285714285714285,
+      "precision": 0.16666666666666666,
+      "center_error_m_mean": 0.8180151351293764,
+      "matches": [
+        {
+          "prediction_index": 3,
+          "truth_index": 3,
+          "distance_m": 0.8180151351293764
+        }
+      ]
+    },
+    "one_to_one_no_expiry": {
+      "predictions": 7,
+      "truth": 7,
+      "true_positive": 1,
+      "unmatched_predictions": 6,
+      "false_negative": 6,
+      "duplicate_nodes": 1,
+      "recall": 0.14285714285714285,
+      "precision": 0.14285714285714285,
+      "center_error_m_mean": 0.8180151351293764,
+      "matches": [
+        {
+          "prediction_index": 3,
+          "truth_index": 3,
+          "distance_m": 0.8180151351293764
+        }
+      ]
+    },
+    "one_to_one_timestamp": {
+      "predictions": 7,
+      "truth": 7,
+      "true_positive": 1,
+      "unmatched_predictions": 6,
+      "false_negative": 6,
+      "duplicate_nodes": 1,
+      "recall": 0.14285714285714285,
+      "precision": 0.14285714285714285,
+      "center_error_m_mean": 0.8180151351293764,
+      "matches": [
+        {
+          "prediction_index": 3,
+          "truth_index": 3,
+          "distance_m": 0.8180151351293764
+        }
+      ]
+    },
+    "one_to_one_depth_quality": {
+      "predictions": 4,
+      "truth": 7,
+      "true_positive": 4,
+      "unmatched_predictions": 0,
+      "false_negative": 3,
+      "duplicate_nodes": 0,
+      "recall": 0.5714285714285714,
+      "precision": 1.0,
+      "center_error_m_mean": 1.5036986806335966,
+      "matches": [
+        {
+          "prediction_index": 0,
+          "truth_index": 1,
+          "distance_m": 1.0722324547196578
+        },
+        {
+          "prediction_index": 1,
+          "truth_index": 6,
+          "distance_m": 0.6445133628921202
+        },
+        {
+          "prediction_index": 2,
+          "truth_index": 2,
+          "distance_m": 2.2438298272608783
+        },
+        {
+          "prediction_index": 3,
+          "truth_index": 3,
+          "distance_m": 2.0542190776617306
+        }
+      ]
+    },
+    "one_to_one_depth_robust_motion": {
+      "predictions": 4,
+      "truth": 7,
+      "true_positive": 4,
+      "unmatched_predictions": 0,
+      "false_negative": 3,
+      "duplicate_nodes": 0,
+      "recall": 0.5714285714285714,
+      "precision": 1.0,
+      "center_error_m_mean": 1.5036986806335966,
+      "matches": [
+        {
+          "prediction_index": 0,
+          "truth_index": 1,
+          "distance_m": 1.0722324547196578
+        },
+        {
+          "prediction_index": 1,
+          "truth_index": 6,
+          "distance_m": 0.6445133628921202
+        },
+        {
+          "prediction_index": 2,
+          "truth_index": 2,
+          "distance_m": 2.2438298272608783
+        },
+        {
+          "prediction_index": 3,
+          "truth_index": 3,
+          "distance_m": 2.0542190776617306
+        }
+      ]
+    },
+    "single_frame": {
+      "predictions": 4,
+      "truth": 7,
+      "true_positive": 0,
+      "unmatched_predictions": 4,
+      "false_negative": 7,
+      "duplicate_nodes": 0,
+      "recall": 0.0,
+      "precision": 0.0,
+      "center_error_m_mean": null,
+      "matches": []
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "local_before_sync_head": "eab10f5aebfe558d1e50fae543efcce3c27e613f",
+  "remote_main_at_fetch": "c09cde87e56598700be68f836b92e63265083106",
+  "local_root_commits": [
+    "1c584730f5fe185c4f581939a8c27f8db9d77424"
+  ],
+  "remote_root_commits": [
+    "5b7cfb9d79dd65ed9945e3bffdb7c1e546e39d2c"
+  ],
+  "local_only_commits": 54,
+  "remote_only_commits": 23,
+  "common_ancestor": false,
+  "snapshot_branch": "codex/project-sync-20261125",
+  "remote_main_modified": false,
+  "force_push": false,
+  "merge_or_rewrite": false
+}

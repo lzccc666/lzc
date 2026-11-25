@@ -1,0 +1,567 @@
+{
+  "source_release_sha256": "0ac9877e383fdf4ed6fd1e2ec0fb81ec18e7db5c06d414f738ca6b2e40225ca3",
+  "source_cases_sha256": "f0d5c15a1f21110b44889504646054187cada1dda938b730ae44dc56535d4c07",
+  "labels_sha256": "c76109e680abf3c8ab77fc2aa23743d0578b55e8d4e1eec4d43143d9b9056337",
+  "raw_frames_sha256": {
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/faults/causal_fault_full_001/scene-0012/seed17/unperturbed/frames.jsonl": "a42a1dcb82389a1ead5660bbc5dd4066cbfb5aa4ea60121838c5a65e7247c517",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0012/without_dynamic_maintenance/frames.jsonl": "3f2da741d23c13e0113b5677fd2aee83bba2c8ae856a0273e58a2027a883b581",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0012/without_short_term_expiry/frames.jsonl": "fe8b8d771bffa134ffb22cc1666f8ce0b83e74cfcf9d1ea126fca315195fb661",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/faults/causal_fault_full_001/scene-0013/seed17/unperturbed/frames.jsonl": "a7d2ccf7132a89665ddd1fe5c532d400e19b61a8ee355505603e787480913ccd",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0013/without_dynamic_maintenance/frames.jsonl": "8602c777b2865cf6addec506bed713ae07f7c29a2db1602ff950abb193bfd182",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0013/without_short_term_expiry/frames.jsonl": "4423a4fab1519caa4ec8e8dbf8709b0f441faec3a4569d14586b50b2249bf011",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/faults/causal_fault_full_001/scene-0014/seed17/unperturbed/frames.jsonl": "19bea44ef46f1e94ee1d908c9a68e9f192de2fd91d0cb9a02c0e9e07d9475a3f",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0014/without_dynamic_maintenance/frames.jsonl": "4f6da1e4162e5ed900a63b9fed639bdad7118a851db7eb98754564fd2d311648",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0014/without_short_term_expiry/frames.jsonl": "19bea44ef46f1e94ee1d908c9a68e9f192de2fd91d0cb9a02c0e9e07d9475a3f",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/faults/causal_fault_full_001/scene-0015/seed17/unperturbed/frames.jsonl": "b4e57d531ba2965ea35a427c187e8c9656de778743a4960d466d1ae7b5c84880",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0015/without_dynamic_maintenance/frames.jsonl": "3a6bf5a08e0a00dcc0c498ff5b2c47366d201de47f5d0e780687982875b83e3b",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0015/without_short_term_expiry/frames.jsonl": "96d41187bc22e744de173f54267a0fd769292e7497c65f3ad9d9c20ae4f0ff18",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/faults/causal_fault_full_001/scene-0016/seed17/unperturbed/frames.jsonl": "7a9406d5e44e654529037e7606f201711e8df718db989dd645b0149684eff578",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0016/without_dynamic_maintenance/frames.jsonl": "63736c8a0223174d59afa69249146310031bb5ee8a801401e3e7dab449c39c15",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0016/without_short_term_expiry/frames.jsonl": "fa961e4c2dfc7857587703120a678bd3451533149e2d0506150644af8bd88263",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/faults/causal_fault_full_001/scene-0019/seed17/unperturbed/frames.jsonl": "c274703446501661a609579e1f005fc570f9b122d019bfbdd8c3ccd04ed0716a",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0019/without_dynamic_maintenance/frames.jsonl": "da2d4468617792d2d828a41811b90b7d60df2c5bdc4f82769b3e0d9a5c692c5a",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0019/without_short_term_expiry/frames.jsonl": "ccfe18bcff58aad8cac047844183f343aff8df69fda2c36ce004f8928397904c",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/faults/causal_fault_full_001/scene-0020/seed17/unperturbed/frames.jsonl": "ffb0c88a4765c5f4607e832a1e35582e29cc67219038967d87661cbd90f1514c",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0020/without_dynamic_maintenance/frames.jsonl": "8e777a2694d86b6328e38a639a2d3af625b1c362ee5da9292373c24dffb38721",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0020/without_short_term_expiry/frames.jsonl": "fda3409d9bee36e82798b8553f8d12941cf59712bd1419fc4c476476aefb44c0",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/faults/causal_fault_full_001/scene-0021/seed17/unperturbed/frames.jsonl": "2f2a1634fa7b4f874897e60e627f1602bcc196e4bc92cfe35bdd0214e80e2ad4",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0021/without_dynamic_maintenance/frames.jsonl": "a3b70b5a02ad7dd52dbcee46990354175157866270935e16b29b59e5f6e5bb32",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0021/without_short_term_expiry/frames.jsonl": "6e89e58144edc25350d381d9484249339a42b352182b0f2af11f324e6130f0ee",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/faults/causal_fault_full_001/scene-0025/seed17/unperturbed/frames.jsonl": "e7eb7cc798cb807293bb1893b712921a4bf253e0194aaed6f63693df98a25699",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0025/without_dynamic_maintenance/frames.jsonl": "532a7f03b1c5b9d9bdc7054ae590a70a410576afd6ce90691df7753765e4a365",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0025/without_short_term_expiry/frames.jsonl": "6a3a0a5c6f780b9c2659ac323f6db187439989503362a603180fde17fb16ba6a",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/faults/causal_fault_full_001/scene-0026/seed17/unperturbed/frames.jsonl": "6ef472e8c84410d997fa438d58b1b09c5224d8e8228284c5441b5f9275adf44d",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0026/without_dynamic_maintenance/frames.jsonl": "501563a77e22b67ebb5c4920f1c4bfd021165237f28cb7cae236e120eafe819e",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0026/without_short_term_expiry/frames.jsonl": "5ea1ff35ece0a1680425504cbe2547db198288d4cd60dcb53e51200615626257",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/faults/causal_fault_full_001/scene-0027/seed17/unperturbed/frames.jsonl": "87492be954c77d830f5bd70f1c5f05997a99afbe18e8507c3b692fb883e10874",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0027/without_dynamic_maintenance/frames.jsonl": "587dd4feee4bbf2f7a7c538cb0e4517356c0fef7f53841474cd5114c98faa61b",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0027/without_short_term_expiry/frames.jsonl": "4e4ddbbcb6ab1133f9b5708cfe547eb71d437fc2e2265bd69d9890cc4bee9032",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/faults/causal_fault_full_001/scene-0030/seed17/unperturbed/frames.jsonl": "cb8d633f8f0c6c4fbdeaaa4b1cfa5fdf4fda1158511dd02baa0860b12d48bc2d",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0030/without_dynamic_maintenance/frames.jsonl": "cbe9df26b87ff96257c73c95b36f5e5d93de0d8241d2105c5b05118b8a45497d",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0030/without_short_term_expiry/frames.jsonl": "dfe2b4fc77a754de3356eb2f990bbae43367e58beece3b595a3a7cc09fd7e3f9",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/faults/causal_fault_full_001/scene-0032/seed17/unperturbed/frames.jsonl": "928fe3464cb92a1087f59c59da81d25911c418ca7bdfd34631f3b8157a23f3a9",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0032/without_dynamic_maintenance/frames.jsonl": "5bd2be7312ea59e7c626ba179d89f2da8cc2a8947211fc0aa181e3418629b22d",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0032/without_short_term_expiry/frames.jsonl": "928fe3464cb92a1087f59c59da81d25911c418ca7bdfd34631f3b8157a23f3a9",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/faults/causal_fault_full_001/scene-0035/seed17/unperturbed/frames.jsonl": "69e8f435d88484222a9b99899156cd5c9e0fae9e5fe7eca8beda7865c02f4793",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0035/without_dynamic_maintenance/frames.jsonl": "ac281c1437b9cd60cefb10b6d615547afe8ed1f987a41a0f9208d0c3970431a2",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0035/without_short_term_expiry/frames.jsonl": "c4a7c1aa7fa96b7608a8bd41611789fcbfe6ee94d05bc0ec90bee742bd5fa06b",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/faults/causal_fault_full_001/scene-0038/seed17/unperturbed/frames.jsonl": "6373dbc88b0f132367f0fba7a8d7e3511649d9ae97b9543a0669d6a333d49036",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0038/without_dynamic_maintenance/frames.jsonl": "7841245bcc7a91dffd3100a863eefef72bfc635336fdf85c5796f86af056cec9",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0038/without_short_term_expiry/frames.jsonl": "6def268e40dd77868c5de59b25400263276cbc2d35845b861edead222277fa27",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/faults/causal_fault_full_001/scene-0039/seed17/unperturbed/frames.jsonl": "5ae4fe4f244c832abdb9fdbc0caa2095ee178a8c1de86f94b050081ca6fb3bc8",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0039/without_dynamic_maintenance/frames.jsonl": "0f3868db86b6ef64558e28ea2ba889bf59fcb4279bcb83c403b7ef9180cd2b9e",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0039/without_short_term_expiry/frames.jsonl": "a1ab8794d24c0fa6e63eb53c82ec3e10f24b08db69e40a29bd65d1e20c37b746",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/faults/causal_fault_full_001/scene-0042/seed17/unperturbed/frames.jsonl": "b5ecd45c1f760750083a0f865901c752a52d4bb09ef94f71642d45f23f0ca13b",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0042/without_dynamic_maintenance/frames.jsonl": "0c24bcb22a17a092ed757c331adc75060204c823c090d36463aa236f6c68800f",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0042/without_short_term_expiry/frames.jsonl": "8cdc506b5d8a0a69ad46e9d965bf30e5b14311dacf8c42fce4a5092f996f90d4",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/faults/causal_fault_full_001/scene-0043/seed17/unperturbed/frames.jsonl": "9da6609598c85eb9b8d7044c2985e44d3376495d0db7a6547870ddadba7c15f4",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0043/without_dynamic_maintenance/frames.jsonl": "f91d5b551d2f0b1018bc62e6ce6c158b7ce29b2c21df59665a7839a002c3dfb0",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0043/without_short_term_expiry/frames.jsonl": "6386db590649e809e183a1f705ae9ecd50e8646ae1a22d0dbcf16b23ff95c45a",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/faults/causal_fault_full_001/scene-0044/seed17/unperturbed/frames.jsonl": "a17afc481792dc360ac49446acf228cdda73ec04a4d4c92af3b4588561f3d034",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0044/without_dynamic_maintenance/frames.jsonl": "8f6887e78940859d7b6e03f3b93fede3eb0072969b21d3a3795c1705d6a57278",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0044/without_short_term_expiry/frames.jsonl": "b0650711014f928fe671f0cf6ebd3eb01d6a43b67e19ec86502f6bac5eaae966",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/faults/causal_fault_full_001/scene-0047/seed17/unperturbed/frames.jsonl": "a668a99775e184ea37c525bc48f19b0197a28b6a9ba1ba8fa0f8601b1ecd06df",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0047/without_dynamic_maintenance/frames.jsonl": "a72d824fef691accc0cf59231dce14f4c2443d0c93cd97ffce67a2f94266986b",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0047/without_short_term_expiry/frames.jsonl": "11c2074adfd45a1546be37d7f1ea141ac279a4eff35bb7f93c153e1ad19b4e78",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/faults/causal_fault_full_001/scene-0048/seed17/unperturbed/frames.jsonl": "f07dd1a3e485546cc581ed108b196165e7069d38ddaba04587db31a367e9ea76",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0048/without_dynamic_maintenance/frames.jsonl": "a985ba1f0bbc912baaf1d3ee4d4f64e3022f93d1fc3c31b4b3b783aa68df810e",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0048/without_short_term_expiry/frames.jsonl": "4730cb5845d180f5465308014f1adf7607dd1959549af72f147bf4e7670c815d",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/faults/causal_fault_full_001/scene-0049/seed17/unperturbed/frames.jsonl": "0054d72f8a7bad23cbcb736104a0a44aaa9193dfcb5a897170a2b7a44f44cc29",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0049/without_dynamic_maintenance/frames.jsonl": "4de7d45c1bbf2c7ef9accb1017d976a116e1b2d29b52e08b0bad081af1bd32d0",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0049/without_short_term_expiry/frames.jsonl": "c6ff941c39685f77bc45b068514e534310059b4328f2e1dfe8b8ba33456caedc",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/faults/causal_fault_full_001/scene-0053/seed17/unperturbed/frames.jsonl": "7b915ff4cfced94e3c52a4297e07bbd2db07fcd49247bf7729ec7e0048b3702b",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0053/without_dynamic_maintenance/frames.jsonl": "5b18d504ae9c59c860d2225cf844c56283ff5cac66043112c12d3801f54e3152",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0053/without_short_term_expiry/frames.jsonl": "939b75c46d3da87a04f1ca1e619a909f36991eabfbebe4f1163996b91feb249c",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/faults/causal_fault_full_001/scene-0054/seed17/unperturbed/frames.jsonl": "771104662198e27581e24566c5275efd7e62be7bc4b222f53fc153853c0a146b",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0054/without_dynamic_maintenance/frames.jsonl": "e18e34e6520c359503d9d01fd51429e0b84145df752713219a2bf117984b5bae",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0054/without_short_term_expiry/frames.jsonl": "334c4c2ea101cfba61761e6e9041d78fea447032c26aea5d2ba6223f19d35439",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/faults/causal_fault_full_001/scene-0059/seed17/unperturbed/frames.jsonl": "9c1d7889141dad27f039ee93999f9be8488660a50900d8b8505c30f2be48d895",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0059/without_dynamic_maintenance/frames.jsonl": "a2119daa021edf6c78a8379fee9d0d4540b1a5c54a7edca561355f961ae825b5",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0059/without_short_term_expiry/frames.jsonl": "3751a1c9246edd179e9b940454de9c0cc7e582be0a3b36f8278ad5cec5cba9f5",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/faults/causal_fault_full_001/scene-0060/seed17/unperturbed/frames.jsonl": "f1f700b45837f79f8868621b36e2b12987334a7217de6b1cfe35c7d1bde6d677",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0060/without_dynamic_maintenance/frames.jsonl": "9cf6b5dbb934179ced492af32a283f0a747b35a8b904ae4bad8a50277e3edf94",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0060/without_short_term_expiry/frames.jsonl": "5f61cba79036caef2e0601729ad5365544a3853874bb188b416f87fab4d56c6c",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/faults/causal_fault_full_001/scene-0075/seed17/unperturbed/frames.jsonl": "f98ce75d3a8c66bc8cc7d875b9b384848b457b565f436ffaa0f62645eaf5852a",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0075/without_dynamic_maintenance/frames.jsonl": "b9d4bd58a5d28833b872f83e958d09c6ef2d0f72aac6e29988706bc2e6a5c1a7",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0075/without_short_term_expiry/frames.jsonl": "0207ce9f451c2a8c830420c2ccd77a93709c7662b49e17eb8eaa390bab7aa26d",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/faults/causal_fault_full_001/scene-0092/seed17/unperturbed/frames.jsonl": "82ed2932ddb3a7dc3fea5f3b7c3dc5afc140bf273ce73a42e7bbe2bca0bc71c4",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0092/without_dynamic_maintenance/frames.jsonl": "ec84c02da92fbec1c79a27f927ab44c1b7c2be836c21eab0bf773802ca3f0dea",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0092/without_short_term_expiry/frames.jsonl": "b3df0e57ef09433d4780bec37a38bd226f7ce329c578ee6df7bc265752e2a84c",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/faults/causal_fault_full_001/scene-0093/seed17/unperturbed/frames.jsonl": "2bdb834f802a9adbed8af1ad3e7eb186ffc093d2b9b1dc687156d0384714857a",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0093/without_dynamic_maintenance/frames.jsonl": "7ff2a58bdfffa6357347e7f8c2849a6b093b6f5fb9489093243c5ab496fb18d8",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0093/without_short_term_expiry/frames.jsonl": "7a3167f43cd616f51a08c88d61f6daf382e55e1e5c067dc2df44854723a1b4d2",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/faults/causal_fault_full_001/scene-0095/seed17/unperturbed/frames.jsonl": "f34847f2aab99d04c5d1e952d3155f3e77cb0594959836e50594ab9c2a58635c",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0095/without_dynamic_maintenance/frames.jsonl": "c96598dd8d2678088f4bcd976bcba74281fd5129451580ba4165cc8615d52f29",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0095/without_short_term_expiry/frames.jsonl": "285a1f5b2af21bc061b1b130ee2ccf22e527e53cae1c73ecf8b5231ab4c908f9",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/faults/causal_fault_full_001/scene-0096/seed17/unperturbed/frames.jsonl": "b3dfb74212d36f8bf194434b686afffb84b0d8bc9d0ab1243019124df69e7fb8",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0096/without_dynamic_maintenance/frames.jsonl": "691f5c6dfec9d43e6e2bbcd2544b2a715353c9b42a59fd4e8fce9a391966d050",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0096/without_short_term_expiry/frames.jsonl": "a0084aac75902ce88323748aad1cef0a6b90dd8fd4f6b174c2e3ba76c54e0394",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/faults/causal_fault_full_001/scene-0097/seed17/unperturbed/frames.jsonl": "18f0275d924f9e677479f9e3a72c10db4292d89dd431c9fe541688d5c707ab76",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0097/without_dynamic_maintenance/frames.jsonl": "3d5e43bfaac1374d728ef5fcfa0db934b74e0751e71422b0ee81c37e22f2803f",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0097/without_short_term_expiry/frames.jsonl": "62d9718c39a2a5e0f6287d39aba605ceb18eaf2fcc2a3a47dc369cc42601a11d",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/faults/causal_fault_full_001/scene-0098/seed17/unperturbed/frames.jsonl": "7f9627c62f9c4a0dca668473c1bb4f19d89420e8af1048f4ee2f34fb8cf74613",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0098/without_dynamic_maintenance/frames.jsonl": "cfa11f59f8429ec4b1dabb65975e057c3fda943b7e2bfa5b6f59951f105af5f7",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0098/without_short_term_expiry/frames.jsonl": "14a2b5a03c5dd91bc7f9987da025138ded64304464b4caefef95633ed1b85bff",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/faults/causal_fault_full_001/scene-0099/seed17/unperturbed/frames.jsonl": "cf169bf3150e165fcb865c824ee9008e00b5aac05c2ed7249e9fb02dc053502c",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0099/without_dynamic_maintenance/frames.jsonl": "b22fb1f212f43c0bdebcfa4ed6337270bbafa6d5094c25188a00820365846585",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0099/without_short_term_expiry/frames.jsonl": "6dec5e98dcc11f5b8bb1f4f47ac8fdd7858af6375a27577b539ad032e7d5c925",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/faults/causal_fault_full_001/scene-0102/seed17/unperturbed/frames.jsonl": "52473c2a5832b7237d813410471aaa28cbc4c8eadf18d2480763a40e97576ced",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0102/without_dynamic_maintenance/frames.jsonl": "7b86db4aece967455384c2a8948afd0a1f14279f4b952519362ffb85cde8e221",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0102/without_short_term_expiry/frames.jsonl": "1894980dd769aff869e27ed45317a2433082c1dffe5b054e8cff53cc4cf44697",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/faults/causal_fault_full_001/scene-0129/seed17/unperturbed/frames.jsonl": "ed724492950990613439df4c7348b089d6e77969e0392d25a4a421757870c66b",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0129/without_dynamic_maintenance/frames.jsonl": "a4bc3b638db80cfed113599af1bce80a169df28fd30de57a83548dfe9a938561",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0129/without_short_term_expiry/frames.jsonl": "b041b9092c4bda23497e9e8f0b08a0c68652ccdbcf8e3861e952bed59e72dbc7",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/faults/causal_fault_full_001/scene-0135/seed17/unperturbed/frames.jsonl": "948093f194024629394e1aa6342e2ebfd61925607fefc0ee82afe8592809fb55",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0135/without_dynamic_maintenance/frames.jsonl": "bf3d33bfc6f2cbf211adbd76f7ae5388050aabe2e6a9dac7c1693fd8588f155e",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0135/without_short_term_expiry/frames.jsonl": "e74e999c9e756ad7f42dd2b8ec772bab28efe90d05413755fff032970a1870c3",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/faults/causal_fault_full_001/scene-0174/seed17/unperturbed/frames.jsonl": "b62a665eccfb1e7461138cddc261457991c39eadbddea2a45358d38a94155ce8",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0174/without_dynamic_maintenance/frames.jsonl": "be95790329a112edf637842ad8bbba188419e285b3a56a6a1788be6d0db441eb",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_modules_full_001/scene-0174/without_short_term_expiry/frames.jsonl": "097d703d01d365db0ed5e36c0f4c2367d0d8a6b7c16a17828af270c5fd01c7b7"
+  },
+  "statistics_source_sha256": "c49b17363c85150606d324790ae2c592db29a1bd44c9e369e223670c23aa4434",
+  "conditions": {
+    "full": {
+      "static": {
+        "truth": 2556,
+        "matched": 860,
+        "correct_motion": 405,
+        "unknown_prediction": 233,
+        "recall": {
+          "estimate": 0.3364632237871675,
+          "ci95": [
+            0.25510385498809296,
+            0.4016996109007898
+          ]
+        },
+        "matched_motion_accuracy": {
+          "estimate": 0.47093023255813954,
+          "ci95": [
+            0.26534463393983376,
+            0.5893034452286345
+          ]
+        },
+        "unknown_among_matched": {
+          "estimate": 0.2709302325581395,
+          "ci95": [
+            0.20603392268138557,
+            0.38504021357123547
+          ]
+        }
+      },
+      "dynamic": {
+        "truth": 3022,
+        "matched": 822,
+        "correct_motion": 511,
+        "unknown_prediction": 239,
+        "recall": {
+          "estimate": 0.27200529450694905,
+          "ci95": [
+            0.18281262881436042,
+            0.3689309809580609
+          ]
+        },
+        "matched_motion_accuracy": {
+          "estimate": 0.621654501216545,
+          "ci95": [
+            0.5480755649717515,
+            0.7185361542361501
+          ]
+        },
+        "unknown_among_matched": {
+          "estimate": 0.29075425790754256,
+          "ci95": [
+            0.2336114325969909,
+            0.3650077128324857
+          ]
+        }
+      },
+      "unknown": {
+        "truth": 145,
+        "matched": 38,
+        "correct_motion": 0,
+        "unknown_prediction": 17,
+        "recall": {
+          "estimate": 0.2620689655172414,
+          "ci95": [
+            0.09174311926605505,
+            0.416688144329897
+          ]
+        },
+        "matched_motion_accuracy": null,
+        "unknown_among_matched": {
+          "estimate": 0.4473684210526316,
+          "ci95": [
+            0.370952807646356,
+            0.6666666666666666
+          ]
+        }
+      }
+    },
+    "without_dynamic_maintenance": {
+      "static": {
+        "truth": 2556,
+        "matched": 831,
+        "correct_motion": 0,
+        "unknown_prediction": 831,
+        "recall": {
+          "estimate": 0.32511737089201875,
+          "ci95": [
+            0.24442673735309145,
+            0.38903985046712003
+          ]
+        },
+        "matched_motion_accuracy": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "unknown_among_matched": {
+          "estimate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "dynamic": {
+        "truth": 3022,
+        "matched": 560,
+        "correct_motion": 0,
+        "unknown_prediction": 560,
+        "recall": {
+          "estimate": 0.18530774321641297,
+          "ci95": [
+            0.13289354581099794,
+            0.2407037589464396
+          ]
+        },
+        "matched_motion_accuracy": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "unknown_among_matched": {
+          "estimate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "unknown": {
+        "truth": 145,
+        "matched": 31,
+        "correct_motion": 0,
+        "unknown_prediction": 31,
+        "recall": {
+          "estimate": 0.21379310344827587,
+          "ci95": [
+            0.07406648451730419,
+            0.3617056270996641
+          ]
+        },
+        "matched_motion_accuracy": null,
+        "unknown_among_matched": {
+          "estimate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        }
+      }
+    },
+    "without_short_term_expiry": {
+      "static": {
+        "truth": 2556,
+        "matched": 860,
+        "correct_motion": 403,
+        "unknown_prediction": 229,
+        "recall": {
+          "estimate": 0.3364632237871675,
+          "ci95": [
+            0.25510385498809296,
+            0.4016996109007898
+          ]
+        },
+        "matched_motion_accuracy": {
+          "estimate": 0.4686046511627907,
+          "ci95": [
+            0.26731895702659275,
+            0.5850049186671578
+          ]
+        },
+        "unknown_among_matched": {
+          "estimate": 0.26627906976744187,
+          "ci95": [
+            0.20352186944937833,
+            0.3823088509436826
+          ]
+        }
+      },
+      "dynamic": {
+        "truth": 3022,
+        "matched": 822,
+        "correct_motion": 505,
+        "unknown_prediction": 234,
+        "recall": {
+          "estimate": 0.27200529450694905,
+          "ci95": [
+            0.18333541338703482,
+            0.3686420567977184
+          ]
+        },
+        "matched_motion_accuracy": {
+          "estimate": 0.6143552311435523,
+          "ci95": [
+            0.5418521689497716,
+            0.7142857142857143
+          ]
+        },
+        "unknown_among_matched": {
+          "estimate": 0.2846715328467153,
+          "ci95": [
+            0.23090578436451548,
+            0.36235943296237416
+          ]
+        }
+      },
+      "unknown": {
+        "truth": 145,
+        "matched": 38,
+        "correct_motion": 0,
+        "unknown_prediction": 17,
+        "recall": {
+          "estimate": 0.2620689655172414,
+          "ci95": [
+            0.09174311926605505,
+            0.416688144329897
+          ]
+        },
+        "matched_motion_accuracy": null,
+        "unknown_among_matched": {
+          "estimate": 0.4473684210526316,
+          "ci95": [
+            0.370952807646356,
+            0.6666666666666666
+          ]
+        }
+      }
+    }
+  },
+  "paired_differences": [
+    {
+      "condition": "without_dynamic_maintenance",
+      "group": "static",
+      "metric": "recall",
+      "difference": -0.011345852895148723,
+      "ci95": [
+        -0.01850406994836005,
+        -0.005430470647806228
+      ]
+    },
+    {
+      "condition": "without_dynamic_maintenance",
+      "group": "static",
+      "metric": "matched_motion_accuracy",
+      "difference": -0.47093023255813954,
+      "ci95": [
+        -0.5893034452286345,
+        -0.26534463393983376
+      ]
+    },
+    {
+      "condition": "without_dynamic_maintenance",
+      "group": "static",
+      "metric": "unknown_among_matched",
+      "difference": 0.7290697674418605,
+      "ci95": [
+        0.6149597864287645,
+        0.7939660773186145
+      ]
+    },
+    {
+      "condition": "without_dynamic_maintenance",
+      "group": "dynamic",
+      "metric": "recall",
+      "difference": -0.08669755129053608,
+      "ci95": [
+        -0.13219292721141324,
+        -0.0490438630611634
+      ]
+    },
+    {
+      "condition": "without_dynamic_maintenance",
+      "group": "dynamic",
+      "metric": "matched_motion_accuracy",
+      "difference": -0.621654501216545,
+      "ci95": [
+        -0.7185361542361501,
+        -0.5480755649717515
+      ]
+    },
+    {
+      "condition": "without_dynamic_maintenance",
+      "group": "dynamic",
+      "metric": "unknown_among_matched",
+      "difference": 0.7092457420924574,
+      "ci95": [
+        0.6349922871675143,
+        0.7663885674030091
+      ]
+    },
+    {
+      "condition": "without_dynamic_maintenance",
+      "group": "unknown",
+      "metric": "recall",
+      "difference": -0.04827586206896553,
+      "ci95": [
+        -0.11029750090220136,
+        -0.009259259259259259
+      ]
+    },
+    {
+      "condition": "without_dynamic_maintenance",
+      "group": "unknown",
+      "metric": "unknown_among_matched",
+      "difference": 0.5526315789473684,
+      "ci95": [
+        0.33333333333333337,
+        0.629047192353644
+      ]
+    },
+    {
+      "condition": "without_short_term_expiry",
+      "group": "static",
+      "metric": "recall",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "condition": "without_short_term_expiry",
+      "group": "static",
+      "metric": "matched_motion_accuracy",
+      "difference": -0.0023255813953488302,
+      "ci95": [
+        -0.006466099930388111,
+        0.004348142062689617
+      ]
+    },
+    {
+      "condition": "without_short_term_expiry",
+      "group": "static",
+      "metric": "unknown_among_matched",
+      "difference": -0.0046511627906976605,
+      "ci95": [
+        -0.009493670886075944,
+        0.0
+      ]
+    },
+    {
+      "condition": "without_short_term_expiry",
+      "group": "dynamic",
+      "metric": "recall",
+      "difference": 0.0,
+      "ci95": [
+        -0.0013578656802707269,
+        0.0028130055222583277
+      ]
+    },
+    {
+      "condition": "without_short_term_expiry",
+      "group": "dynamic",
+      "metric": "matched_motion_accuracy",
+      "difference": -0.007299270072992692,
+      "ci95": [
+        -0.011954735206032829,
+        0.0
+      ]
+    },
+    {
+      "condition": "without_short_term_expiry",
+      "group": "dynamic",
+      "metric": "unknown_among_matched",
+      "difference": -0.006082725060827243,
+      "ci95": [
+        -0.012416310657638024,
+        0.0034296626984126662
+      ]
+    },
+    {
+      "condition": "without_short_term_expiry",
+      "group": "unknown",
+      "metric": "recall",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "condition": "without_short_term_expiry",
+      "group": "unknown",
+      "metric": "unknown_among_matched",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "confusion": {
+    "full": {
+      "static→unmatched": 1696,
+      "static→unknown": 233,
+      "static→dynamic": 222,
+      "dynamic→unmatched": 2200,
+      "dynamic→unknown": 239,
+      "dynamic→dynamic": 511,
+      "static→static": 405,
+      "dynamic→static": 72,
+      "unknown→unmatched": 107,
+      "unknown→unknown": 17,
+      "unknown→static": 7,
+      "unknown→dynamic": 14
+    },
+    "without_dynamic_maintenance": {
+      "static→unmatched": 1725,
+      "static→unknown": 831,
+      "dynamic→unmatched": 2462,
+      "dynamic→unknown": 560,
+      "unknown→unmatched": 114,
+      "unknown→unknown": 31
+    },
+    "without_short_term_expiry": {
+      "static→unmatched": 1696,
+      "static→unknown": 229,
+      "static→dynamic": 228,
+      "dynamic→unmatched": 2200,
+      "dynamic→unknown": 234,
+      "dynamic→dynamic": 505,
+      "static→static": 403,
+      "dynamic→static": 83,
+      "unknown→unmatched": 107,
+      "unknown→unknown": 17,
+      "unknown→static": 7,
+      "unknown→dynamic": 14
+    }
+  },
+  "scenes": 38,
+  "logs": 11,
+  "bootstrap": {
+    "unit": "采集log",
+    "paired": true,
+    "seed": 17,
+    "repetitions": 4000
+  },
+  "scope": "官方属性分组只供推理结束后的独立评估；unknown不自动当静止，运动准确率仅条件于已匹配对象",
+  "independent_test": false,
+  "arrival_evaluated": false,
+  "goal_complete": false
+}

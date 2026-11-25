@@ -1,0 +1,314 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          20
+        ]
+      ],
+      "date-time": "2026-11-20T03:20:08Z",
+      "timestamp": 1795144808138,
+      "version": "4.10.3"
+    },
+    "reference-count": 12,
+    "publisher": "SAGE Publications",
+    "issue": "11",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2013,
+              8,
+              23
+            ]
+          ],
+          "date-time": "2013-08-23T00:00:00Z",
+          "timestamp": 1377216000000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://journals.sagepub.com/page/policies/text-and-data-mining-license"
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "journals.sagepub.com"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "The International Journal of Robotics Research"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2013,
+          9
+        ]
+      ]
+    },
+    "abstract": "<jats:p>We present a novel dataset captured from a VW station wagon for use in mobile robotics and autonomous driving research. In total, we recorded 6 hours of traffic scenarios at 10–100 Hz using a variety of sensor modalities such as high-resolution color and grayscale stereo cameras, a Velodyne 3D laser scanner and a high-precision GPS/IMU inertial navigation system. The scenarios are diverse, capturing real-world traffic situations, and range from freeways over rural areas to inner-city scenes with many static and dynamic objects. Our data is calibrated, synchronized and timestamped, and we provide the rectified and raw image sequences. Our dataset also contains object labels in the form of 3D tracklets, and we provide online benchmarks for stereo, optical flow, object detection and other tasks. This paper describes our recording platform, the data format and the utilities that we provide.</jats:p>",
+    "DOI": "10.1177/0278364913491297",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2013,
+          8,
+          23
+        ]
+      ],
+      "date-time": "2013-08-23T20:15:57Z",
+      "timestamp": 1377288957000
+    },
+    "page": "1231-1237",
+    "update-policy": "https://doi.org/10.1177/sage-journals-update-policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 9040,
+    "title": [
+      "Vision meets robotics: The KITTI dataset"
+    ],
+    "prefix": "10.1177",
+    "volume": "32",
+    "author": [
+      {
+        "given": "A",
+        "family": "Geiger",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Karlsruhe Institute of Technology and Max Planck Institute for Intelligent Systems Tübingen, Germany"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "P",
+        "family": "Lenz",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Measurement and Control Systems, Karlsruhe Institute of Technology, Germany"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "C",
+        "family": "Stiller",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Measurement and Control Systems, Karlsruhe Institute of Technology, Germany"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "R",
+        "family": "Urtasun",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Toyota Technological Institute at Chicago, IL, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "179",
+    "published-online": {
+      "date-parts": [
+        [
+          2013,
+          8,
+          23
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "bibr1-0278364913491297",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2013.393"
+      },
+      {
+        "key": "bibr2-0278364913491297",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2011.5995641"
+      },
+      {
+        "key": "bibr3-0278364913491297",
+        "volume-title": "Conference on neural information processing systems (NIPS)",
+        "author": "Geiger A",
+        "year": "2011"
+      },
+      {
+        "key": "bibr4-0278364913491297",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2012.6248074"
+      },
+      {
+        "key": "bibr5-0278364913491297",
+        "volume-title": "International conference on robotics and automation (ICRA)",
+        "author": "Geiger A",
+        "year": "2012"
+      },
+      {
+        "key": "bibr6-0278364913491297",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IVS.2007.4290204"
+      },
+      {
+        "key": "bibr7-0278364913491297",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/027836499501400301"
+      },
+      {
+        "key": "bibr8-0278364913491297",
+        "unstructured": "Osborne P (2008) The mercator projections. Available at: http://mercator.myzen.co.uk/mercator.pdf."
+      },
+      {
+        "key": "bibr9-0278364913491297",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ROBOT.2010.5509587"
+      },
+      {
+        "key": "bibr10-0278364913491297",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IVS.2010.5548114"
+      },
+      {
+        "key": "bibr11-0278364913491297",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICRA.2012.6225282"
+      },
+      {
+        "key": "bibr12-0278364913491297",
+        "volume-title": "Proceedings of the Intelligent Vehicles Symposium (IV)",
+        "author": "Wojek C",
+        "year": "2012"
+      }
+    ],
+    "container-title": [
+      "The International Journal of Robotics Research"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://journals.sagepub.com/doi/pdf/10.1177/0278364913491297",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://journals.sagepub.com/doi/full-xml/10.1177/0278364913491297",
+        "content-type": "application/xml",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://journals.sagepub.com/doi/pdf/10.1177/0278364913491297",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          29
+        ]
+      ],
+      "date-time": "2026-04-29T10:17:52Z",
+      "timestamp": 1777457872000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://journals.sagepub.com/doi/10.1177/0278364913491297"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2013,
+          8,
+          23
+        ]
+      ]
+    },
+    "references-count": 12,
+    "journal-issue": {
+      "issue": "11",
+      "published-print": {
+        "date-parts": [
+          [
+            2013,
+            9
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "10.1177/0278364913491297"
+    ],
+    "URL": "https://doi.org/10.1177/0278364913491297",
+    "relation": {},
+    "ISSN": [
+      "0278-3649",
+      "1741-3176"
+    ],
+    "issn-type": [
+      {
+        "value": "0278-3649",
+        "type": "print"
+      },
+      {
+        "value": "1741-3176",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2013,
+          8,
+          23
+        ]
+      ]
+    }
+  }
+}

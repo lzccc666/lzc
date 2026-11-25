@@ -1,0 +1,246 @@
+{
+  "retrieval_run": "causal_retrieval_full_001",
+  "conditions": {
+    "full_joint_rule": {
+      "queries": 1115,
+      "positive_queries": 733,
+      "negative_queries": 382,
+      "positive_selected_correct": 43,
+      "no_match_false_selection": {
+        "estimate": 0.020942408376963352,
+        "numerator": 8,
+        "denominator": 382,
+        "ci95": [
+          0.0039678618482966305,
+          0.04289566356099417
+        ],
+        "valid_resamples": 4000
+      },
+      "no_selection": 1036,
+      "association_unknown": 24,
+      "positive_selection": {
+        "estimate": 0.058663028649386086,
+        "numerator": 43,
+        "denominator": 733,
+        "ci95": [
+          0.014651211361737677,
+          0.12088074167720186
+        ],
+        "valid_resamples": 4000
+      }
+    },
+    "without_depth_evidence_gate": {
+      "queries": 1115,
+      "positive_queries": 733,
+      "negative_queries": 382,
+      "positive_selected_correct": 43,
+      "no_match_false_selection": {
+        "estimate": 0.020942408376963352,
+        "numerator": 8,
+        "denominator": 382,
+        "ci95": [
+          0.0039678618482966305,
+          0.04289566356099417
+        ],
+        "valid_resamples": 4000
+      },
+      "no_selection": 1036,
+      "association_unknown": 24,
+      "positive_selection": {
+        "estimate": 0.058663028649386086,
+        "numerator": 43,
+        "denominator": 733,
+        "ci95": [
+          0.014651211361737677,
+          0.12088074167720186
+        ],
+        "valid_resamples": 4000
+      }
+    },
+    "without_relation_edges": {
+      "queries": 1115,
+      "positive_queries": 733,
+      "negative_queries": 382,
+      "positive_selected_correct": 52,
+      "no_match_false_selection": {
+        "estimate": 0.020942408376963352,
+        "numerator": 8,
+        "denominator": 382,
+        "ci95": [
+          0.0039678618482966305,
+          0.04289566356099417
+        ],
+        "valid_resamples": 4000
+      },
+      "no_selection": 1029,
+      "association_unknown": 28,
+      "positive_selection": {
+        "estimate": 0.07094133697135062,
+        "numerator": 52,
+        "denominator": 733,
+        "ci95": [
+          0.014651211361737677,
+          0.1370123755448039
+        ],
+        "valid_resamples": 4000
+      }
+    }
+  },
+  "by_query_kind": {
+    "no_static_match_in_current_annotated_view": {
+      "full_joint_rule": {
+        "queries": 382,
+        "positive_queries": 0,
+        "negative_queries": 382,
+        "positive_selected_correct": 0,
+        "no_match_false_selection": 8,
+        "no_selection": 374,
+        "association_unknown": 8
+      },
+      "without_relation_edges": {
+        "queries": 382,
+        "positive_queries": 0,
+        "negative_queries": 382,
+        "positive_selected_correct": 0,
+        "no_match_false_selection": 8,
+        "no_selection": 374,
+        "association_unknown": 8
+      },
+      "without_depth_evidence_gate": {
+        "queries": 382,
+        "positive_queries": 0,
+        "negative_queries": 382,
+        "positive_selected_correct": 0,
+        "no_match_false_selection": 8,
+        "no_selection": 374,
+        "association_unknown": 8
+      }
+    },
+    "nearest_static_positive": {
+      "full_joint_rule": {
+        "queries": 386,
+        "positive_queries": 386,
+        "negative_queries": 0,
+        "positive_selected_correct": 33,
+        "no_match_false_selection": 0,
+        "no_selection": 340,
+        "association_unknown": 10
+      },
+      "without_relation_edges": {
+        "queries": 386,
+        "positive_queries": 386,
+        "negative_queries": 0,
+        "positive_selected_correct": 33,
+        "no_match_false_selection": 0,
+        "no_selection": 340,
+        "association_unknown": 10
+      },
+      "without_depth_evidence_gate": {
+        "queries": 386,
+        "positive_queries": 386,
+        "negative_queries": 0,
+        "positive_selected_correct": 33,
+        "no_match_false_selection": 0,
+        "no_selection": 340,
+        "association_unknown": 10
+      }
+    },
+    "relation_static_positive": {
+      "full_joint_rule": {
+        "queries": 347,
+        "positive_queries": 347,
+        "negative_queries": 0,
+        "positive_selected_correct": 10,
+        "no_match_false_selection": 0,
+        "no_selection": 322,
+        "association_unknown": 6
+      },
+      "without_relation_edges": {
+        "queries": 347,
+        "positive_queries": 347,
+        "negative_queries": 0,
+        "positive_selected_correct": 19,
+        "no_match_false_selection": 0,
+        "no_selection": 315,
+        "association_unknown": 10
+      },
+      "without_depth_evidence_gate": {
+        "queries": 347,
+        "positive_queries": 347,
+        "negative_queries": 0,
+        "positive_selected_correct": 10,
+        "no_match_false_selection": 0,
+        "no_selection": 322,
+        "association_unknown": 6
+      }
+    }
+  },
+  "paired_differences": [
+    {
+      "method": "without_depth_evidence_gate",
+      "baseline": "full_joint_rule",
+      "metric": "positive_selection",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "without_depth_evidence_gate",
+      "baseline": "full_joint_rule",
+      "metric": "no_match_false_selection",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "without_relation_edges",
+      "baseline": "full_joint_rule",
+      "metric": "positive_selection",
+      "difference": 0.012278308321964533,
+      "ci95": [
+        0.0,
+        0.025669308249038944
+      ],
+      "valid_resamples": 4000
+    },
+    {
+      "method": "without_relation_edges",
+      "baseline": "full_joint_rule",
+      "metric": "no_match_false_selection",
+      "difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "valid_resamples": 4000
+    }
+  ],
+  "scenes": 38,
+  "logs": 11,
+  "paired_queries": 1115,
+  "bootstrap": {
+    "unit": "采集log",
+    "paired": true,
+    "repetitions": 4000,
+    "seed": 17
+  },
+  "baseline_all_queries_equivalent": true,
+  "raw_sha256": "9c171a92c77dd2aff8d656b0b80d693732f5ec07c361bae47dd66e66023ab49c",
+  "elapsed_s": 3.3473161291331053,
+  "limitations": [
+    "固定已有预测对象图，未知关联与目标缺失保留为正查询失败",
+    "构造开发指令；未开启封存测试，也不获得正确锁定、路线或实际到达信用",
+    "关闭证据门限仅离线；未修改车辆安全检查、正在运行的导航或旧实验生成器",
+    "官方sample GT仍较相机晚约33–42ms，保留评价时间近似"
+  ],
+  "independent_test": false,
+  "gt_in_inference": false,
+  "actual_arrival_evaluated": false,
+  "goal_complete": false
+}
