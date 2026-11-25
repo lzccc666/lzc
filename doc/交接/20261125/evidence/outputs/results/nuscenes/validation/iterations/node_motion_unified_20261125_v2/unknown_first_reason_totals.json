@@ -1,0 +1,19 @@
+{
+  "totals": {
+    "R1": {
+      "invalid_current_measurement_support": 118,
+      "no_current_update": 522,
+      "insufficient_independent_groups": 2384,
+      "span_below_one_second": 135,
+      "unresolved_identity_or_competition": 1154
+    },
+    "S2": {
+      "invalid_current_measurement_support": 23,
+      "no_current_update": 48,
+      "insufficient_independent_groups": 243,
+      "span_below_one_second": 23,
+      "unresolved_identity_or_competition": 107
+    }
+  },
+  "ordering": "as frozen motion_evidence function; first failures mutually exclusive; all_reasons in node_coverage are overlapping"
+}

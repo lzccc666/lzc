@@ -1,0 +1,923 @@
+{
+  "created_utc": "2026-11-25T08:30:18.235100+00:00",
+  "git_base": "4e581523f81c0c81bc8de419a5bd91affe2a8a8b",
+  "policy": {
+    "coordinate_frame": "ego_heading",
+    "coordinate_frame_fallback": null,
+    "relation_distance_thresholds_m": {
+      "near": 6.0,
+      "directional": 12.0,
+      "left_of": 12.0,
+      "right_of": 12.0,
+      "in_front_of": 12.0,
+      "behind": 12.0
+    },
+    "directional_mode": "all_supported_axes",
+    "minimum_direction_component_m": 1.0,
+    "position_update_threshold_m": 0.1
+  },
+  "navigation_policy": {
+    "near_distance_m": 6.0,
+    "maximum_directional_distance_m": 12.0,
+    "minimum_directional_component_m": 1.0,
+    "minimum_approach_center_distance_m": 2.0,
+    "maximum_approach_center_distance_m": 8.0,
+    "task_kind": "approach_confirmed_static_object",
+    "ambiguous_anchor": "ask_clarification",
+    "maximum_road_sample_distance_m": 100.0,
+    "configuration_count": 1,
+    "seed": 17
+  },
+  "source_sha256": {
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/relation_nav_unified_20261125.py": "dfe77e0755ac80cd826da25f3a927000f4a7d75cba25131cf50a8c63baeb81b0",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/scripts/relation_nav_unified_20261125.py": "b3c34c4ce6401cfde6417b3b47d39445d0eb7eceb30ac35d7ebaf4cb42cff981",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/scenegraph/relation_nav_unified_20261125.py": "82b1994516b6daf1b1d9fc7560c4e3553a3e26bcb85dd8768ff0ba4e4c931629",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/navigation/relation_nav_unified_20261125.py": "163bbfd7587079e9fe4883b76d87ae0cd96f7ba3d3d8a455f42fa12cca96f961",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/scenegraph/relations.py": "099e967bdbe5cd0ecf63fe90d094e5f9638d5c4df3643148d7671ee6fa25c105",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/scenegraph/incremental_graph.py": "904fedec44a276080b083ed3459982e7c177f747bbfd0186fa0164e2f1b91f68",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/navigation/semantic.py": "95645c520c37819f5ca0e3feebcfd5e2282cfc4260eb24caea04d04ca94dbf59",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/quality.py": "9d03eeecbd4aaa37708df0894043e796e245c750a7346a33369db150b51da31a",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/evidence.py": "7010f1c26093c0483d2ee4bfac16e933a0809eaa2a6d27d60cc428acc05b7748",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/project_paths.py": "cbb9c0e65ed1630291dced8c4df690409f1b7fb78887c973da6fb84998c354c4"
+  },
+  "input_sha256": {
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0025/frames.jsonl": "904806c76b1b2c094e01f79794dacf5b2facc788e6e212665273b528044d5d63",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0043/frames.jsonl": "4e59b4faebfc5ac5693df64caacc78a9145dfb4d20f25d615da07aa07abb8008",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0015/frames.jsonl.gz": "6bee75467b373add0c12de152904c216f874c13213ba6516fbe9f231288ff905",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0093/frames.jsonl": "6e11b781012f575d89e1b2b183ed2ab85a76b17d342d60c6416fb458d8652dbf",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0054/frames.jsonl": "e3486e4c1e407c18d2f41310663146d6a56d6efa6ee6736ea1d05302c384e2a2",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0020/frames.jsonl.gz": "919211602df3a9248a3fd7cb15c2ed598f227860af6bc756e5555a2a8f2a44ff",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0096/frames.jsonl": "743bb98526ec0374f42b4944b8201e11a43bee3cc09c92196874c826e992fbb8",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0096/frames.jsonl.gz": "12aa510acff6b04dd4f3ec83a153449489f7faf0fd6cf86eeec7a2fbab9aa62d",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0020/frames.jsonl": "cbd4c75bf02670517381899ee6fe00654e48c7d67d3ebaaf6ae2c31d520d3b6a",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0019/frames.jsonl.gz": "a9a81fc1193b228d5633c751f2155066d2031f9294cd9e0c70567019e6e95207",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0014/frames.jsonl.gz": "19e21cd2e93faa70f0620ada6d7cfe86ca8d75dac51a4e3f069d5a90dde3ea37",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0012/frames.jsonl": "b1fdc42f8d0c03f08770ee359025c720d34324f4af1d6fee2dc5402ac6e224fd",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0075/frames.jsonl.gz": "b60c6c8658bc15183d7e07377667082f43c573b1c8cd55f6e4049cfab8736382",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0021/frames.jsonl.gz": "71577dd38b6d80299bddce8a85808136a9420985ca44682d7e138eeba137684b",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0075/frames.jsonl": "60d3efc8dbafbef2b4f2e4cfe2763cca41a0a5025dac5d498f0326de7420bbcf",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0048/frames.jsonl": "93f82423c35bc48802e7b9cd3a2d6bad875a54c468f1d355f918d80212b3cdf0",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0032/frames.jsonl": "e58d917463f12728808c079d6810b6f7b4358cccc5cffebf2ad0175958f65ec4",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0030/frames.jsonl": "80f669cf846575b31e45549071332be09ca44ab03d8fffa1ab66c4d0505d08b8",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0060/frames.jsonl": "031063c8c920822081a39f21e61138695d674b38d51d1799630136c1f791d1ea",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0032/frames.jsonl.gz": "5ffc3307e950dcb943fe912b1502fcf588ea44f856cd70244a3954302e18b8a0",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/mapnext_20261124_S2_full_v1/scene-0047/mapnext_20261124_predictions.jsonl.gz": "ee3dfaad7333999a6b98d8143974098e2a60aae94838602fc22a1dd4f97017f0",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0053/frames.jsonl.gz": "a0485d64a177207d3bd33028461559044c151055a1720ce3161fffcda48b314e",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/mapnext_20261124_S2_full_v1/scene-0012/mapnext_20261124_predictions.jsonl.gz": "03b037d4b618b82f9a8b0b7331dc5f801b9da92cc9f19ab1e3065e1b9266a3e8",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0042/frames.jsonl": "89c98c92dace43a66d06147a81a89643c2e8d0e46441f02143ebbb7f881e0e45",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0038/frames.jsonl.gz": "b12197adf6c89ae732a47f0fadac3154e78b2cabb9b39733b9ac326d350e381a",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/mapnext_20261124_S2_full_v1/scene-0035/mapnext_20261124_predictions.jsonl.gz": "476e7f756d8e0890d87057b904f4cb65878367b69e710a515c380f332c649b51",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0039/frames.jsonl": "d05f116b7c8de8736aae0512d6c50eef63b2b48cf6cc1e619c0ca27eb01da6de",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0044/frames.jsonl.gz": "04260c9b117e116f225c596419ae83d55f40f6b7f86ab849c3ee11771298bb05",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0099/frames.jsonl.gz": "0b84d197213225879889a459066f6625f9619c8888edf4adc795d0d96e46871b",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0013/frames.jsonl.gz": "4c9032a6029ff756ff31f1fb4e139a482faab3d2534e990724969ad28b03570f",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0059/frames.jsonl": "beffd925290d1a2ca4e0d2b1eabaee7f0f46d02d017e3d8f36f607437bd4e608",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0097/frames.jsonl.gz": "97a5fbdea8b65b0265c03abf8fd2a57e02b012e283d473de9082be6f38c0933e",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0019/frames.jsonl": "14dbae585142256eeb601988fbcc8353670e50418ac7d88f451a5cc6e3fa7d54",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0135/frames.jsonl.gz": "60865d521b8299f80ee579b80e05131b206ecb87f4fba780faeb07602e62e021",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0027/frames.jsonl.gz": "5810dabedfe6c4ea43eae49dda1316642060ab85a8522846521f761362fad32c",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0098/frames.jsonl.gz": "5749861729678889e5099baa475a2754caf2c3d923d25e4ca9704a218364c6e0",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0174/frames.jsonl": "5169c8c994a6a27a41179c5dfbb9328914431789edcbbc93ad70232ca94009dd",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0021/frames.jsonl": "d1904b9be22b3560c318d838b984fb375f1e733910d1a771ab6b21bbe96886d9",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0174/frames.jsonl.gz": "b88378ec74416e3045e4779df0d6ce170c83496cb7a9bb5af8f1c7bf9bca7ef7",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/nuscenes_trainval_raw/v1.0-trainval/scene.json": "bdc3211bfbfda652d5e9dab73c45c7132925ca84f869bf45e8e14edeafb1d20b",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/relation_nav_unified_20261125_v1/method_frames.jsonl": "5b3595181e8422c929684b96a157003ee33c105581471b54d0e393676762d5e0",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0095/frames.jsonl": "7d950002d1493838392510068c7d5fb25681b4c1cf36369da17e82b3aec8aa0b",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0026/frames.jsonl": "5029459bb4550c87a66ad0dba5c757b09acc7cd4a092766f128da2a3b92898a2",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/relation_nav_unified_20261125_v1/method_tasks.jsonl": "19eddbb45090e36227a6f30f04d88e7652e75145a278aacce746457eca92f769",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0038/frames.jsonl": "ec3ccc301b06c7cfac5efa6e7688a0fc8007761ab0f98e8ae83882d8d6166e2b",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0026/frames.jsonl.gz": "4f26eed7fd768f528d5999e7d343b2b39b3fc58ff2bdeeb91005b2c38f911ba9",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0095/frames.jsonl.gz": "42a5728237af646821a59dc0b89ee8bb7af9b55441004e1b2c8cce80fa677da7",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0092/frames.jsonl.gz": "7d8e3d7abbb085d4f2d52789ece96c48f432a980617d2f2e59572295cd992f10",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0044/frames.jsonl": "7d99271519b46334ba25296ea01137ae135739d865a24cedb6bc0f1542c25d91",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0047/frames.jsonl.gz": "781606e06cbc34a27d688f5c8cd8e2f1d554fc673696443aa8a9f6961e9e1765",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0129/frames.jsonl": "a78b84b971771d9f68b4b7cdc5fe8ce3b50b7f967a7b2832016b626e3c3a5afb",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0013/frames.jsonl": "18e8912374da5dd90eca58739462df327936362fe05f197422edf996de9f66a1",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0129/frames.jsonl.gz": "5ba1d2c053bb443954826bafd94e01298b022e7e80cea9b9079679924628948e",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0049/frames.jsonl.gz": "d1f024b70fdac1d29263526f35ec95bac6227576aab536db70a92a68cdf15bb1",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0015/frames.jsonl": "fef3c4c214c93b8cbb6c95a3e359592e25b6e3818edde52ed7c04054e1a06e6b",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/mapnext_20261124_S2_full_v1/scene-0042/mapnext_20261124_predictions.jsonl.gz": "d1c1caa0c16a5a393b07162f857fc30a01101cfbe4916f2943329d5a6435f36b",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0012/frames.jsonl.gz": "bf7d7e5e390b422bbcb8ea95404fac6bdf3ca4d4403ca9a6318587f5ca2fc54f",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/mapnext_20261124_S2_full_v1/scene-0013/mapnext_20261124_predictions.jsonl.gz": "7956fa0c9c945abea93dac52d0859305d848185c4d8b9d4d1dceda5ab49826c2",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0135/frames.jsonl": "cee03cd03b4bd01b54cbb5c23ce556320ae56fe8032db9e4f46d70fe531545be",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0035/frames.jsonl.gz": "c79b58d3f563ce92b0c274298caa5e4023c6329a8a3cbf317ae03ddff434c2fb",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0102/frames.jsonl.gz": "6f0f98a00634411a869af66288e1283e06a23d5178c2e8fdd07e8162f4121909",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0014/frames.jsonl": "bf247aafda4eaaaba5fcd4cda92b6c73be1f4d84c5b14873c3bf9679fac3c1ad",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0102/frames.jsonl": "4c9a1414c9987461342975777ef0d085749fe29c9afd977c63fe50197a433898",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/mapnext_20261124_inputs_v1/all_manifest.json": "7779da4a50d69b8d98d815fda202ca4ee3dce662b11025dd5e7004dfe331b303",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0042/frames.jsonl.gz": "5496a5d50b0fa920b1326b463f4390c36f7ab6b34c5c0aa443d2ee7a2cf8aa69",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/mapnext_20261124_inputs_v1/all_GT.jsonl": "e3da7976c24cfdbf36620307f58b7f8ca6e8275ea5e687de20e31492a56a2b85",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0027/frames.jsonl": "6364bd0bc4b59694f768a6b0837dd6c72d2d0991b68091a42a1b287655c7da99",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0039/frames.jsonl.gz": "75455983a38d01c47f95a6e853a4a1d1bffc812c84de1321d7705de2573dc573",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0053/frames.jsonl": "fbd1f08d30a64b54be8ba14dd89b5935edf0d0f54a0c7a92ae43c10639ff54dd",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0016/frames.jsonl.gz": "4925077ac3fc26209366d9ff9d2f59d893fbe668b076d70b5349cae5f504360b",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0025/frames.jsonl.gz": "83258fb0f74566865f75e2fdabc5882196a7c43b8155aa4600f3e48401c65ae3",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0059/frames.jsonl.gz": "7b7bb8d4f90eab4c8170fa84c43bdd1af036efefec69fec22de9d65da4670525",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/nuscenes_trainval_raw/v1.0-trainval/log.json": "774c8256554a5569f64660e5f450394ce7e3a82168edfab530edab81f9ae7edc",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0092/frames.jsonl": "13be06ed58c3119baa04235eadcb81566778a384b8cb99ef4d6b466de5a49bb6",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0043/frames.jsonl.gz": "1c0f80b406b61b3beb3ca3dcd218697f1ea05d5e6e981e57b66f4c793bc03920",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0093/frames.jsonl.gz": "dd70871c7fa87ade5ea6ce69c56e2ab836aa52d75ebe48161c8eadc212c0091f",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0049/frames.jsonl": "8b324dd602f04b0f1fe3f072786273dcaa00e65ea8edf1406ad34d80497c450f",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0054/frames.jsonl.gz": "508b667cabb745a39c8299cf5c9fa9cbaf1100cc9b163f35b1d0f8e88135ac0e",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0099/frames.jsonl": "cd7efea14540a652e93d71c2efc35012b14e046297359683ad6392b0e8cadbb5",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0047/frames.jsonl": "2388853c7bace00f460a0462c66a4b62631cc826580a1ca380a7f8ae58c7b3e8",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0097/frames.jsonl": "4e5b25b326cc247d7dcfb8c6533a7e3b4bfbc023bc60161176f5ee217372df50",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0035/frames.jsonl": "baedef906e65b183ee0d366e2ae6470e32eea3cbdef8d524e1ac641e0058b5cf",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0048/frames.jsonl.gz": "7711a1312642c8abf3c911d9dce7e62933b0a91e0272737c84b61f1b70fc65ca",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0098/frames.jsonl": "b2f37a3123b8211330f2e14cc69e20c926904a3e718bffbf15be7547162f1ba9",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0030/frames.jsonl.gz": "5a12982c6da26251179ccc81f77766335ec1cd1cc2b08b3d304d4ce210b96f60",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/release.json": "12c26b1785d09d4b593d841152b35c59d534ed0527f32cc4d8e4760d81cd7e2b",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0060/frames.jsonl.gz": "8a74f998331348d1a30cd0728cbde251ffdaad4546de0533d3d28a438a77d218",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/mapnext_20261124_S2_full_v1/scene-0019/mapnext_20261124_predictions.jsonl.gz": "b320b0aa828c5ad7f7a44432a70c1af1aa100384567926ebe0ffd02fb64f5a2e",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/causal_mapping_full_001/scene-0016/frames.jsonl": "b31f03e7e27d6eaba8e98be14b481046a45f203dc25226a8928599c46c031519"
+  },
+  "evaluation_only_sha256": {
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/relation_nav_unified_20261125_v1/evaluation_only/frames.jsonl": "387edcb4bada7ca41a01d25a816572e9903ee831eca2b4be2f8d0d677d127750",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/relation_nav_unified_20261125_v1/evaluation_only/task_labels.jsonl": "76e2f4054dbb12a859086430b8378432daaa8ff0396c685e831375dcd1b6c0e3",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/nuscenes_trainval_raw/v1.0-trainval/attribute.json": "dc01438363e29188f25785884bb2431a7aa27ba0debbc359cb21cf1f00652210",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/nuscenes_trainval_raw/v1.0-trainval/sample_annotation.json": "1f4f3835cb86f4efe49ccad3ae6f5f6a2d068422696de564c5892b5b06bea2a9"
+  },
+  "protection": [
+    {
+      "path": "/root/autodl-tmp/lizichong/AGENTS.md",
+      "sha256": "d00d1a5fee7e9a441247f6c0179ecda7e8892b5c53d92fbabb83986413c0ac9b"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/MEMORY.md",
+      "sha256": "f1db9a84f9b586fff70f61d09cd3bdda78d4b2cac953fbde8af45533ed034fd6"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/PAPER_MEMORY.md",
+      "sha256": "2a978751be1efd888a130444bc31f146666c7f4fcb62e37c2f92aa2fe196f2b2"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/completion/association.py",
+      "sha256": "13154cc664d9b1528c869575539c444bb20d8e2cc3a119aa1e4d01f7c9d5ccd4"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/completion/config_comparison.py",
+      "sha256": "e831723cdadfa5441ed6c9ba3bc01f91af37dc0c65929febd3041d017f7dbc97"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/completion/depth.py",
+      "sha256": "c3d0b1efa3cdc91a82b75cdf872fe923ff68b240090a49022d3a7481ab653b0e"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/completion/evidence.py",
+      "sha256": "7010f1c26093c0483d2ee4bfac16e933a0809eaa2a6d27d60cc428acc05b7748"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/completion/fault_robustness.py",
+      "sha256": "c4cd34b4a8c94be0f01ca9145eaf0b0be11a88b4b6d52de985442fba0bb2a50e"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/completion/goal_selection_ablation.py",
+      "sha256": "7c78c920f0db40580fc514e6abfd26ab63fa33931ddf7401cc91b6c796084bd1"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/completion/navigation_diagnostics.py",
+      "sha256": "291f75e65b8d0c398064aef6e0123ec7a77354fabcc9ba36343692b81c46e82f"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/completion/quality.py",
+      "sha256": "9d03eeecbd4aaa37708df0894043e796e245c750a7346a33369db150b51da31a"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/completion/reference_reachability.py",
+      "sha256": "b0576ac64a74387b886af792dd10cff831620956b7ec1c7cb0b8df79115b9894"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/completion/reference_reachability_audit.py",
+      "sha256": "db3bbfb3afef330995d0a01bbc17072c22de032cb632a6250c08c3c99535643f"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/completion/reference_reachability_finalize.py",
+      "sha256": "96591e85fe25097c4ad3cd431171b8d4a375ab48a157c946663bddd0eaa19d3b"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/completion/selection_map_transfer.py",
+      "sha256": "084e77c2497a379a495146c5ae9f28b60c49601636ac8d7b40fe2945bc3ce84d"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/completion/stage9.py",
+      "sha256": "466a5b34dfd039e691232dc02e01869ab700b46ae8162f8fb05232c30a805dd5"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/completion/temporal_identity_evaluation.py",
+      "sha256": "c5a57b4edc7ee979888b139988f99a8df62031985fec9b3b73b5b49581f59b15"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/hydra_configs/base_detections.yaml",
+      "sha256": "0872105ee4e6152fcec55188f5665845d5d31463ee9970771276cf69f7ce5476"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/hydra_configs/base_mapping.yaml",
+      "sha256": "12e4216ad29eee0677f172d9a279de7bfaaa946ebc959ab1d3204031fb5621c0"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/hydra_configs/incremental_navigation.yaml",
+      "sha256": "14551182f5f2a6efe7e3912ee33568d3650045a0feaa3337b7da5a45b155c643"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/hydra_configs/nuscenes.yaml",
+      "sha256": "50e234ff2c3c7682a78a5dfa7a11282d268ea15fc14490485d490a57d0debc3d"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/hydra_configs/project_v2_integration_regression.yaml",
+      "sha256": "2e9c2a8621b46a6fb849f3ba8998a28a5a7216f6561fc167c7eaca74d8ded5e6"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/hydra_configs/qwen_semantic.yaml",
+      "sha256": "afcb6abb4f06664cae7e1144b29562c41fd79279e46024bc6efc5d769504fb22"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/hydra_configs/replica.yaml",
+      "sha256": "9ce285f6565e549fe1213778ce4ca7bc2639d856ca902d94b6b972668f4ab313"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/hydra_configs/sam.yaml",
+      "sha256": "9381072f341d9921169b2df08c3901a028adea7a4cced3790d6b78cdc42f754f"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/hydra_configs/scenegraph_relations.yaml",
+      "sha256": "6174777eedc4436daac4bf7ebdbba89983752e77f619bc0d121100b7e11ed119"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/hydra_configs/semantic_navigation.yaml",
+      "sha256": "e8ca45cdbb10507e9391c3331b6a2bd377b19a501a6e489293c842e3ad6231f1"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/hydra_configs/streamlined_detections.yaml",
+      "sha256": "90ac2ccd86505cd81a66071fba00717e6c904acfafba9b07d0ede3836ea0671f"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/hydra_configs/streamlined_mapping.yaml",
+      "sha256": "76237fb25765dfb257b9f4b05b278cb8d197649c936f2bb2a4265ed695146b60"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/__init__.py",
+      "sha256": "1a641541de8ad170f2fcdc70d7338a2397c8fe9695ef805cf97b196fa95ad1a2"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/evaluation.py",
+      "sha256": "9fd0e526b61f01ef094f079c47efbbe4244f4ef63c66c70ebc6e4da67de50541"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/io.py",
+      "sha256": "86555960cdc263365497399fce47bdf0e6609626b9eb5be4d532100016c25fb4"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/lane_audit.py",
+      "sha256": "c2e509cc3c0661c78429c77f42d5a10dff9c7fb45e963dff8b672f69395037e6"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/lane_constraints.py",
+      "sha256": "aac7da44a65887481f9fbbce7fdf09356097f44b755413b71a7c4b20c46611c5"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/lane_geometry.py",
+      "sha256": "cbeeecd15147a5de9fb59762d52e134ef96c650b10a7e506da923dbbe923d090"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/lane_validation.py",
+      "sha256": "8195d0706612de6aeb614501a5790ec8ce5c7c4ffddb7da9933e75cc4bdf9fd9"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/navstage2_20261124.py",
+      "sha256": "9d27c2f2483bdd5b3400090477ba84346e9ece472c0ab587e455c9b469f4f6f5"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/navstage2_runner_20261124.py",
+      "sha256": "7cc5580404d76c1b56c6521582d47d5494404d601f968b05782c317eb371cef9"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/online.py",
+      "sha256": "1f908ecbf0da1b2fe4f2c6e8cdb7e075c31fc14febb580d96fb6f46b9643a6f6"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/pipeline.py",
+      "sha256": "c4a6fdb6ea848024a2f98ab7a8b98a602ebd4ab59102aafa8c9e62ffb0fb2a13"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/planner.py",
+      "sha256": "585ddc41d7ca1bfc8508dce8cdae1cde81ed5b4982ab3b6dbaa478a4f393bb54"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/reference_guided_vehicle.py",
+      "sha256": "fe65de18c10b7dd4ea2d07df0f3edcfc65772b6fbd4cca10b0f91139276cd9f3"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/replan_policy.py",
+      "sha256": "8765b64d87df117b11655f57f66d54fed9b0a4a4dfc74e03fdb4de75f06f9c45"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/semantic.py",
+      "sha256": "95645c520c37819f5ca0e3feebcfd5e2282cfc4260eb24caea04d04ca94dbf59"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/semantic_tasks_20261123.py",
+      "sha256": "073d51444ea8ede3f17bec9e9b0d4a10208fb5e99aa1ca3ea99895a0a9af52b6"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/state_machine.py",
+      "sha256": "1af29db3ba7f1651e053bb1ba0a548e2458a33a023063b2b6baabd38f6c0540b"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/target_selector.py",
+      "sha256": "0a9e5ebfbdf89d1641863ee7b47a458475896e140cd1d7cc632161803c8855d2"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/task_replay_20261123.py",
+      "sha256": "b7554de03a317e6eaab0b972f86417c8c76609497d6199679a43fb7e7fd126fe"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/types.py",
+      "sha256": "0524d36a7909f4819a56723ac74482c6e61e7b79b780adb8f63fcb9a19370034"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/vehicle_geometry.py",
+      "sha256": "ae93a8ae8e9af6d874eafad1d57e5b2e65f54f45b0c90ccbdcc32d79743a9378"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/vehicle_planner.py",
+      "sha256": "1f17b4c03b9989b3ffd0133469619fb66eb522d9b89ff8071ebb547f49f29b95"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/project_paths.py",
+      "sha256": "cbb9c0e65ed1630291dced8c4df690409f1b7fb78887c973da6fb84998c354c4"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/scenegraph/relations.py",
+      "sha256": "099e967bdbe5cd0ecf63fe90d094e5f9638d5c4df3643148d7671ee6fa25c105"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/slam/audited_mapper.py",
+      "sha256": "60cc24a28289dc5ac037707debb8e8cea7d6581993beb277b187db2fa6804e27"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/slam/current_geometry_mapper.py",
+      "sha256": "8e35b82abdc8e37349391dde2bb6e1b079ab71d27dd9caaa37e8c4234e3a854f"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/slam/dense_refinement.py",
+      "sha256": "6b3626e64bb26b2d2c578e06f6cebea04f4198a503abfbabda339b716626cc10"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/slam/evidence_mapper.py",
+      "sha256": "11fa68d1adb6be33effe8f789e27d09a4df63e4b10acfb3d522670af95a6c748"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/slam/mapnext_20261124_mapper.py",
+      "sha256": "1aad6969dbee5fac03f36f02d09c100d092dacee082e2d2216ff13bc3502cea7"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/slam/mapping.py",
+      "sha256": "95089084ed1ff4c2ec4bfd3414edec6c4a2145a16135373b66db7e9fed6d99d7"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/slam/motion_association_mapper.py",
+      "sha256": "f97b76b531a60d90a78cce8c167156dcf2ee139874dfb498e7de31259e1c2c28"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/slam/mvrepair_lifecycle_20261123_mapper.py",
+      "sha256": "be0cfa38b872a310f1ee662be8f1e0c321917ab142ef797d7717654f23bc1222"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/slam/quality_mapper.py",
+      "sha256": "b2f90dd6522fdba1f13c534376e6422bfb987316184cf19481e18e8d292e402a"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/slam/sparse_observations.py",
+      "sha256": "cdebdf539acf43a0e3735b5792a41f907a8c824e59095e49eb6a2ffd1e839cad"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/slam/streamlined_mapping.py",
+      "sha256": "00ce7e26949c145bdd1b42882a8923e9ff6e106b2101ff288fd6ef05498b8676"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/slam/utils.py",
+      "sha256": "1fc71fe993ba61c3d264d6434df5b195f7347953fbe3d53ec9cc1e4fe007b94d"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navbench_stage1_20261124_v1/denominator_freeze.json",
+      "sha256": "c20f0698eb78ee3a1a58ec9a11712265c9fe658d7ede6cd71b4a8fde39142ee8"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navbench_stage1_20261124_v1/effective_amendment_v3.json",
+      "sha256": "c83cf0f8320187a6cf8318ce55a8b25f5f05a9c8b1e52f35b6e9bd0ac09c1bca"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navbench_stage1_20261124_v1/evaluation_only/certificates.jsonl",
+      "sha256": "e83b98de010a4b68e8eb6bf7de5657a997135c9bcd2c01a3bc06a895302f772a"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navbench_stage1_20261124_v1/evaluation_only/conditional_reference_labels.jsonl",
+      "sha256": "6767bde7abed634f6974ec17b53dcfd71667ca5dd2c212592fce732d786d353c"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navbench_stage1_20261124_v1/manifest.json",
+      "sha256": "bf90fef235ca87c833c6233629b2953eb12fc6a62638fecc1f32c5415c073e61"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navbench_stage1_20261124_v1/preregistration.json",
+      "sha256": "dfec70c5a63b354ef0fc8b48e8312466a841adfedfe48d1546331b9554602e82"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navbench_stage1_20261124_v1/source_binding_overlay_v1.jsonl",
+      "sha256": "5f64ca493d58310cfc7cbc33acedeb40185050be76108eae56152beb4838befe"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navbench_stage1_20261124_v1/task_record.schema_v2.json",
+      "sha256": "5fab8695b03f09a7e45327b0aab3bc721a03e82ed75d7f6035fd71d97831b353"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navbench_stage1_20261124_v1/task_registry.jsonl",
+      "sha256": "40aca597746a2b73b41ad68d711b7aea350c0af3939cc9b9ed4b49ea6e45c35e"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navstage2_20261124_v1/manifest.json",
+      "sha256": "6cb44579418fffb9e0473648690e38a49dba996707a3e2e5bb48acfb4709267a"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navstage2_20261124_v1/method_inputs.jsonl",
+      "sha256": "1eda724fed59032875a3c92b5051533594858c0f87789323a0249b2fc70c7894"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navstage2_20261124_v2/manifest.json",
+      "sha256": "45138c7b1414098f3decea5ecc3d6439bb63c0c86b594d356fcd85c66f72eb58"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navstage2_20261124_v2/method_inputs.jsonl",
+      "sha256": "1eda724fed59032875a3c92b5051533594858c0f87789323a0249b2fc70c7894"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navstage2_repair_20261124_v1/validation_queries.jsonl",
+      "sha256": "624a4fef5ac4a3229c20f6178b06a38b07fde90ad85ccc19fe1105f5e429f4d5"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_goals_full_001/queries.jsonl",
+      "sha256": "1676f1f6ba5fe79522718493c3cbe105a05beb879a2f7b55b31936110eadfafe"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_goals_full_001/report.json",
+      "sha256": "3c8b6b691239983d9753aa081d808e26e40d1d8955a0c02d7888a89508bc01a6"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/annotation/reference_reachability_reserved_full_002/audit_001/auditor_source.py",
+      "sha256": "db3bbfb3afef330995d0a01bbc17072c22de032cb632a6250c08c3c99535643f"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/annotation/reference_reachability_reserved_full_002/audit_001/queries.jsonl",
+      "sha256": "b80b43134a2420912cccb3f4d0e6f9aadb1ff99736cc52c756586302438bfb70"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/annotation/reference_reachability_reserved_full_002/audit_001/report.json",
+      "sha256": "2bbf4a1f93f94fdabda6f67a75fc7f403b4191b9edb25fa3142f49342b179bf8"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/annotation/reference_reachability_reserved_full_002/audit_001/witness_checks.json",
+      "sha256": "2ad00e650d6b4a5e7b1934fed2ad584d87a3fdf5dd2893f8e7e25d1bd7e18899"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/reports/paper_campaign_20261123/navigation/R1_false_selection_case_evidence.json",
+      "sha256": "24170784e9db088e51f98ec676af3ef4b5a722f2eda2a489a1eef3728311fec1"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/reports/paper_campaign_20261123/navigation/episode_protocol_status.json",
+      "sha256": "dfae44b8bd210bd524f02383c3e15fead2be37ee27f7483ecc5ca76a4bb3cb9c"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/reports/paper_campaign_20261123/navigation/paper_nav_20261123_first_104746_start.json",
+      "sha256": "263d642d94ceb8b7c8716116b048a73ba3510c098be50c29bb9c790d6942db74"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/reports/paper_campaign_20261123/navigation/same_task_navigation_chain.csv",
+      "sha256": "33bf82176720a5cad0bc107431a0a9a041d2659012589fc740a980be27e4402b"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/reports/paper_campaign_20261123/navigation/same_task_navigation_chain.json",
+      "sha256": "ec1685cb732f70039fc21bdaa46cf0c92110ae886d3e9df086457fe32975f211"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/reports/paper_campaign_20261123/navigation/shared_rejection_workpoints.csv",
+      "sha256": "3392f103d2c6d72629af65b4ad8dc078f27cb61108c5f7c6509213558debbecd"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/reports/paper_campaign_20261123/navigation/shared_rejection_workpoints.json",
+      "sha256": "a976469bde2f21a4d5ca71cdaa261aac4359f65484f60eb1e52dc8983b26c9b3"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/reports/paper_campaign_20261123/navigation/target_selection_complete.csv",
+      "sha256": "7a67edc5baae0ade72dde388d45093d6043a4d811559c8f3ad993a35c0c29c07"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/reports/paper_campaign_20261123/navigation/target_selection_complete.json",
+      "sha256": "e4023566cb44bd9de70cd57d892636583a399516cb9e683f3e9f40d0fb62d79b"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/test/iterations/navstage2_20261124_v1/manifest.json",
+      "sha256": "6cb44579418fffb9e0473648690e38a49dba996707a3e2e5bb48acfb4709267a"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/test/iterations/navstage2_20261124_v1/method_predictions.jsonl",
+      "sha256": "4c8098b6c3fbcfa79d3d92fbbd04f5558e1518db3a7ac83b76da7a22b7bcf3e3"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/test/iterations/navstage2_20261124_v1/source_snapshot.tar.gz",
+      "sha256": "de7f50fc4a26b5dc5ad72fa72022ddf663d536a9e2798d113af7dc713c8bc2d3"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/test/iterations/navstage2_20261124_v2/evaluation_only/queries.jsonl",
+      "sha256": "c663d8bc0775acc94d9d870682c1e6c73a1c1e518be0835e23ffcbbc63e277f7"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/test/iterations/navstage2_20261124_v2/evaluation_only/summary.json",
+      "sha256": "339249b925f3319813d7c260d72b1f1b80be4a2d3f8ebe11e37c4aa313882dc4"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/test/iterations/navstage2_20261124_v2/manifest.json",
+      "sha256": "45138c7b1414098f3decea5ecc3d6439bb63c0c86b594d356fcd85c66f72eb58"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/test/iterations/navstage2_20261124_v2/method_predictions.jsonl",
+      "sha256": "113c83d755c9a67fd5d4a2879fc50aba82e00a8ed685bed8bc3641a7e89fa166"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/test/iterations/navstage2_20261124_v2/run_summary.json",
+      "sha256": "ed4bd66968b1c03611f4f80bb3c93a835dd2bdf71bd913f35de2d159cd0a0565"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/test/iterations/navstage2_20261124_v2/source_snapshot.tar.gz",
+      "sha256": "0b224597dce4f99d1bd523c9d39c264749f8299de8068234205dc980bdc70352"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/navstage2_sparse_evidence_20261124_v1/raw_navigation_evidence.jsonl.gz",
+      "sha256": "915d2cea930e1861d4bc5f5be98f58fc330eace7fcf6af3e0a623e4984a6a590"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/navstage2_sparse_evidence_20261124_v1/summary.json",
+      "sha256": "0dd299f0eb743d62f97dc6e971dabbc6a0a19f3c2843bcd6ac68656ec99eba85"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/paper_nav_20261123_first_104746/same_task_chain_records.jsonl",
+      "sha256": "440795510d941e5bf8a221bead4ce0417e2f38a3984067e81ce0a13f4273e08b"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/release.json",
+      "sha256": "12c26b1785d09d4b593d841152b35c59d534ed0527f32cc4d8e4760d81cd7e2b"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0012/frames.jsonl.gz",
+      "sha256": "bf7d7e5e390b422bbcb8ea95404fac6bdf3ca4d4403ca9a6318587f5ca2fc54f"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0013/frames.jsonl.gz",
+      "sha256": "4c9032a6029ff756ff31f1fb4e139a482faab3d2534e990724969ad28b03570f"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0014/frames.jsonl.gz",
+      "sha256": "19e21cd2e93faa70f0620ada6d7cfe86ca8d75dac51a4e3f069d5a90dde3ea37"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0015/frames.jsonl.gz",
+      "sha256": "6bee75467b373add0c12de152904c216f874c13213ba6516fbe9f231288ff905"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0016/frames.jsonl.gz",
+      "sha256": "4925077ac3fc26209366d9ff9d2f59d893fbe668b076d70b5349cae5f504360b"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0019/frames.jsonl.gz",
+      "sha256": "a9a81fc1193b228d5633c751f2155066d2031f9294cd9e0c70567019e6e95207"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0020/frames.jsonl.gz",
+      "sha256": "919211602df3a9248a3fd7cb15c2ed598f227860af6bc756e5555a2a8f2a44ff"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0021/frames.jsonl.gz",
+      "sha256": "71577dd38b6d80299bddce8a85808136a9420985ca44682d7e138eeba137684b"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0025/frames.jsonl.gz",
+      "sha256": "83258fb0f74566865f75e2fdabc5882196a7c43b8155aa4600f3e48401c65ae3"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0026/frames.jsonl.gz",
+      "sha256": "4f26eed7fd768f528d5999e7d343b2b39b3fc58ff2bdeeb91005b2c38f911ba9"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0027/frames.jsonl.gz",
+      "sha256": "5810dabedfe6c4ea43eae49dda1316642060ab85a8522846521f761362fad32c"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0030/frames.jsonl.gz",
+      "sha256": "5a12982c6da26251179ccc81f77766335ec1cd1cc2b08b3d304d4ce210b96f60"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0032/frames.jsonl.gz",
+      "sha256": "5ffc3307e950dcb943fe912b1502fcf588ea44f856cd70244a3954302e18b8a0"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0035/frames.jsonl.gz",
+      "sha256": "c79b58d3f563ce92b0c274298caa5e4023c6329a8a3cbf317ae03ddff434c2fb"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0038/frames.jsonl.gz",
+      "sha256": "b12197adf6c89ae732a47f0fadac3154e78b2cabb9b39733b9ac326d350e381a"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0039/frames.jsonl.gz",
+      "sha256": "75455983a38d01c47f95a6e853a4a1d1bffc812c84de1321d7705de2573dc573"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0042/frames.jsonl.gz",
+      "sha256": "5496a5d50b0fa920b1326b463f4390c36f7ab6b34c5c0aa443d2ee7a2cf8aa69"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0043/frames.jsonl.gz",
+      "sha256": "1c0f80b406b61b3beb3ca3dcd218697f1ea05d5e6e981e57b66f4c793bc03920"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0044/frames.jsonl.gz",
+      "sha256": "04260c9b117e116f225c596419ae83d55f40f6b7f86ab849c3ee11771298bb05"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0047/frames.jsonl.gz",
+      "sha256": "781606e06cbc34a27d688f5c8cd8e2f1d554fc673696443aa8a9f6961e9e1765"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0048/frames.jsonl.gz",
+      "sha256": "7711a1312642c8abf3c911d9dce7e62933b0a91e0272737c84b61f1b70fc65ca"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0049/frames.jsonl.gz",
+      "sha256": "d1f024b70fdac1d29263526f35ec95bac6227576aab536db70a92a68cdf15bb1"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0053/frames.jsonl.gz",
+      "sha256": "a0485d64a177207d3bd33028461559044c151055a1720ce3161fffcda48b314e"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0054/frames.jsonl.gz",
+      "sha256": "508b667cabb745a39c8299cf5c9fa9cbaf1100cc9b163f35b1d0f8e88135ac0e"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0059/frames.jsonl.gz",
+      "sha256": "7b7bb8d4f90eab4c8170fa84c43bdd1af036efefec69fec22de9d65da4670525"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0060/frames.jsonl.gz",
+      "sha256": "8a74f998331348d1a30cd0728cbde251ffdaad4546de0533d3d28a438a77d218"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0075/frames.jsonl.gz",
+      "sha256": "b60c6c8658bc15183d7e07377667082f43c573b1c8cd55f6e4049cfab8736382"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0092/frames.jsonl.gz",
+      "sha256": "7d8e3d7abbb085d4f2d52789ece96c48f432a980617d2f2e59572295cd992f10"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0093/frames.jsonl.gz",
+      "sha256": "dd70871c7fa87ade5ea6ce69c56e2ab836aa52d75ebe48161c8eadc212c0091f"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0095/frames.jsonl.gz",
+      "sha256": "42a5728237af646821a59dc0b89ee8bb7af9b55441004e1b2c8cce80fa677da7"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0096/frames.jsonl.gz",
+      "sha256": "12aa510acff6b04dd4f3ec83a153449489f7faf0fd6cf86eeec7a2fbab9aa62d"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0097/frames.jsonl.gz",
+      "sha256": "97a5fbdea8b65b0265c03abf8fd2a57e02b012e283d473de9082be6f38c0933e"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0098/frames.jsonl.gz",
+      "sha256": "5749861729678889e5099baa475a2754caf2c3d923d25e4ca9704a218364c6e0"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0099/frames.jsonl.gz",
+      "sha256": "0b84d197213225879889a459066f6625f9619c8888edf4adc795d0d96e46871b"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0102/frames.jsonl.gz",
+      "sha256": "6f0f98a00634411a869af66288e1283e06a23d5178c2e8fdd07e8162f4121909"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0129/frames.jsonl.gz",
+      "sha256": "5ba1d2c053bb443954826bafd94e01298b022e7e80cea9b9079679924628948e"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0135/frames.jsonl.gz",
+      "sha256": "60865d521b8299f80ee579b80e05131b206ecb87f4fba780faeb07602e62e021"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0174/frames.jsonl.gz",
+      "sha256": "b88378ec74416e3045e4779df0d6ce170c83496cb7a9bb5af8f1c7bf9bca7ef7"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/qwen/validation/iterations/selection_r1_map_transfer_20261123_v1/queries.jsonl",
+      "sha256": "8549f22822fda983d5a0d466f849480a6b866f975fb97f569a988f3112f16e9a"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/qwen/validation/iterations/selection_r1_map_transfer_20261123_v1/release.json",
+      "sha256": "10ddfce97a2aa0d749c6cad94d8a31f966174daf419104881f20769bb50d1976"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/qwen/validation/iterations/selection_r1_map_transfer_20261123_v1/report.json",
+      "sha256": "ff24caac1f032913dfe73a169665a7c5e72a9abc0bc20c3055696601511976c1"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/paper/当前版_v4/sources/论文正文.md",
+      "sha256": "5481fec83d93a23f59f3048aa612d1fecdc4d07d65a4ac0f2e39b37db380a9f1"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/paper/当前版本.json",
+      "sha256": "0a0ee0da832011ebdc11c6a1d6e28d656a46175c5ff24ad5b0fee89aa40aab43"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/scripts/navstage2_20261124.py",
+      "sha256": "cf1d8acb32669fac0e83e65639d461a8041357c71f9ec557977df4d848ad6e50"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/scripts/run_mapping_refinement.py",
+      "sha256": "854921648379c7e40e5c345679be284ac7a28202877af8990283f5794f1fc1c8"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/项目导航.md",
+      "sha256": "d92024013a65d38b2b0686350782a5191abaad89c0e27b4cf86bbd77dac7dcdc"
+    },
+    {
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/MEMORY.md",
+      "sha256": "f1db9a84f9b586fff70f61d09cd3bdda78d4b2cac953fbde8af45533ed034fd6"
+    },
+    {
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/PAPER_MEMORY.md",
+      "sha256": "2a978751be1efd888a130444bc31f146666c7f4fcb62e37c2f92aa2fe196f2b2"
+    },
+    {
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/slam/utils.py",
+      "sha256": "1fc71fe993ba61c3d264d6434df5b195f7347953fbe3d53ec9cc1e4fe007b94d"
+    },
+    {
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/slam/streamlined_mapping.py",
+      "sha256": "00ce7e26949c145bdd1b42882a8923e9ff6e106b2101ff288fd6ef05498b8676"
+    },
+    {
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/navigation/semantic.py",
+      "sha256": "95645c520c37819f5ca0e3feebcfd5e2282cfc4260eb24caea04d04ca94dbf59"
+    },
+    {
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/scenegraph/relations.py",
+      "sha256": "099e967bdbe5cd0ecf63fe90d094e5f9638d5c4df3643148d7671ee6fa25c105"
+    },
+    {
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/scenegraph/incremental_graph.py",
+      "sha256": "904fedec44a276080b083ed3459982e7c177f747bbfd0186fa0164e2f1b91f68"
+    }
+  ],
+  "scope": {
+    "R1_scenes": 38,
+    "R1_frames": 1508,
+    "S2_scenes": 6,
+    "S2_frames": 120,
+    "S2_constructed_tasks": 1200
+  },
+  "no_test_opened": true,
+  "configuration_count": 1,
+  "seed": 17,
+  "GT_in_method": false,
+  "Qwen_calls": 0,
+  "GPU_calls": 0,
+  "planner_calls": 0,
+  "contracts": [
+    {
+      "case": 0,
+      "passed": true,
+      "statistics": {
+        "candidate_pair_count": 1,
+        "geometry_recomputed_pairs": 1,
+        "geometry_cache_hits": 0,
+        "expired_pair_cache": 0,
+        "added_nodes": [
+          0,
+          1
+        ],
+        "removed_nodes": [],
+        "coordinate_axes_changed": false,
+        "current_source_refreshed_edges": 2,
+        "authoritative_current_snapshot": true,
+        "dynamic_memory_edges_retained": 0
+      }
+    },
+    {
+      "case": 1,
+      "passed": true,
+      "statistics": {
+        "candidate_pair_count": 1,
+        "geometry_recomputed_pairs": 1,
+        "geometry_cache_hits": 0,
+        "expired_pair_cache": 0,
+        "added_nodes": [],
+        "removed_nodes": [],
+        "coordinate_axes_changed": false,
+        "current_source_refreshed_edges": 1,
+        "authoritative_current_snapshot": true,
+        "dynamic_memory_edges_retained": 0
+      }
+    },
+    {
+      "case": 2,
+      "passed": true,
+      "statistics": {
+        "candidate_pair_count": 1,
+        "geometry_recomputed_pairs": 0,
+        "geometry_cache_hits": 1,
+        "expired_pair_cache": 0,
+        "added_nodes": [],
+        "removed_nodes": [],
+        "coordinate_axes_changed": false,
+        "current_source_refreshed_edges": 1,
+        "authoritative_current_snapshot": true,
+        "dynamic_memory_edges_retained": 0
+      }
+    },
+    {
+      "case": 3,
+      "passed": true,
+      "statistics": {
+        "candidate_pair_count": 1,
+        "geometry_recomputed_pairs": 1,
+        "geometry_cache_hits": 0,
+        "expired_pair_cache": 0,
+        "added_nodes": [],
+        "removed_nodes": [],
+        "coordinate_axes_changed": true,
+        "current_source_refreshed_edges": 1,
+        "authoritative_current_snapshot": true,
+        "dynamic_memory_edges_retained": 0
+      }
+    },
+    {
+      "case": 4,
+      "passed": true,
+      "statistics": {
+        "candidate_pair_count": 1,
+        "geometry_recomputed_pairs": 1,
+        "geometry_cache_hits": 0,
+        "expired_pair_cache": 0,
+        "added_nodes": [],
+        "removed_nodes": [],
+        "coordinate_axes_changed": false,
+        "current_source_refreshed_edges": 0,
+        "authoritative_current_snapshot": true,
+        "dynamic_memory_edges_retained": 0
+      }
+    },
+    {
+      "case": 5,
+      "passed": true,
+      "statistics": {
+        "candidate_pair_count": 1,
+        "geometry_recomputed_pairs": 1,
+        "geometry_cache_hits": 0,
+        "expired_pair_cache": 1,
+        "added_nodes": [
+          2
+        ],
+        "removed_nodes": [
+          1
+        ],
+        "coordinate_axes_changed": false,
+        "current_source_refreshed_edges": 3,
+        "authoritative_current_snapshot": true,
+        "dynamic_memory_edges_retained": 0
+      }
+    },
+    {
+      "case": "empty_snapshot_expires_current_facts",
+      "passed": true
+    },
+    {
+      "case": "unknown_object_heading_not_supported",
+      "passed": true
+    }
+  ],
+  "task_labels": {
+    "static": "official current parked/stopped/standing/sitting attribute; others unknown or moving",
+    "unknown_motion": "pending, never relabelled as no-match",
+    "multiple_reference": "pending ambiguity, no arbitrary unique GT",
+    "nearest": "unique ego-distance minimum among static eligible objects; only exact distance ties share credit"
+  },
+  "current_facts": "no old dynamic memory in current facts; upstream current snapshot owns node lifetime; empty/removed snapshots expire cached pairs",
+  "storage_budget_bytes": 134217728,
+  "shared_budget_bytes": 268435456,
+  "wall_budget_s": 5400,
+  "minimum_free_bytes": 21474836480,
+  "legacy_near8_unchanged": true,
+  "region_evaluation": "engineering road annulus2..8m independent of relation near6; no independent region GT, parking/curb or path success",
+  "integration_manifest_sha256": "212ee14a250249ec486b171c87c88243cbccdbcefae474d19cadbf3f5d7a6fcd"
+}

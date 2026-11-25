@@ -1,0 +1,1 @@
+{"scope": "S2", "counts": {"nodes": 538, "raw_velocity_available": 410, "static": 26, "unknown": 444, "dynamic": 68}, "output": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/node_motion_unified_20261125_v2/S2_task_nodes.jsonl.gz"}

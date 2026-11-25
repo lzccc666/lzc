@@ -1,0 +1,871 @@
+{
+  "passed": true,
+  "counts": {
+    "tasks": 1200,
+    "scorable": 1140,
+    "positive": 141,
+    "negative": 999,
+    "pending": 60,
+    "positive_selected_correct": 9,
+    "negative_false_selection": 0,
+    "rejected": 1190,
+    "pending_selected": 0,
+    "engineering_subgoal_emitted": 8,
+    "vehicle_route_success": 0,
+    "parking_success": 0
+  },
+  "tasks": 1200,
+  "frames": 120,
+  "all_selections_replayed_from_unified_nodes_and_current_graph": true,
+  "original_index_and_geometry_exact": true,
+  "official_labels_only_used_for_scoring": true,
+  "no_negative_or_pending_dropped": true,
+  "near6_current_graph": true,
+  "cached_regression_vs_navigation_graph": "same builder/policy/geometry; navigation new motion metadata may change confidence; not identical archived payload claim",
+  "engineering_region": "8 outputs only; no independent region GT, path or parking credit",
+  "task_scope": "constructed static object approach, not audited natural language or parking",
+  "node_input_sha256": "c519948213e212a1e26f70fd573a343923ad76d0920b5fb505e91fa16f922668",
+  "navigation_output_sha256": "4d62b722988a6c78a8f7399dc71bf01e8c1b349c2e1d18fada76aa4d1d1361c2",
+  "navigation_graphs": [
+    {
+      "scene": "scene-0012",
+      "frame_idx": 0,
+      "nodes": 0,
+      "edges": 0,
+      "navigation_graph_payload_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "scene": "scene-0012",
+      "frame_idx": 1,
+      "nodes": 0,
+      "edges": 0,
+      "navigation_graph_payload_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "scene": "scene-0012",
+      "frame_idx": 2,
+      "nodes": 0,
+      "edges": 0,
+      "navigation_graph_payload_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "scene": "scene-0012",
+      "frame_idx": 3,
+      "nodes": 0,
+      "edges": 0,
+      "navigation_graph_payload_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "scene": "scene-0012",
+      "frame_idx": 4,
+      "nodes": 1,
+      "edges": 0,
+      "navigation_graph_payload_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "scene": "scene-0012",
+      "frame_idx": 5,
+      "nodes": 1,
+      "edges": 0,
+      "navigation_graph_payload_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "scene": "scene-0012",
+      "frame_idx": 6,
+      "nodes": 1,
+      "edges": 0,
+      "navigation_graph_payload_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "scene": "scene-0012",
+      "frame_idx": 7,
+      "nodes": 1,
+      "edges": 0,
+      "navigation_graph_payload_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "scene": "scene-0012",
+      "frame_idx": 8,
+      "nodes": 0,
+      "edges": 0,
+      "navigation_graph_payload_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "scene": "scene-0012",
+      "frame_idx": 9,
+      "nodes": 1,
+      "edges": 0,
+      "navigation_graph_payload_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "scene": "scene-0012",
+      "frame_idx": 10,
+      "nodes": 2,
+      "edges": 0,
+      "navigation_graph_payload_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "scene": "scene-0012",
+      "frame_idx": 11,
+      "nodes": 2,
+      "edges": 0,
+      "navigation_graph_payload_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "scene": "scene-0012",
+      "frame_idx": 12,
+      "nodes": 5,
+      "edges": 7,
+      "navigation_graph_payload_sha256": "8c18964a94a63df75dabc58bd16805a57985e25a738eca169f36da8fe0f65b60"
+    },
+    {
+      "scene": "scene-0012",
+      "frame_idx": 13,
+      "nodes": 5,
+      "edges": 6,
+      "navigation_graph_payload_sha256": "d0c17955ba0c3f2db216ef567cb8b641319482a9f6bc14da947ae485dc4669fa"
+    },
+    {
+      "scene": "scene-0012",
+      "frame_idx": 14,
+      "nodes": 4,
+      "edges": 5,
+      "navigation_graph_payload_sha256": "bf05613b1f9e0368b1ed787a5a7bb111bc108eedda3892715ea44098d8117139"
+    },
+    {
+      "scene": "scene-0012",
+      "frame_idx": 15,
+      "nodes": 3,
+      "edges": 8,
+      "navigation_graph_payload_sha256": "7a5a4d52ac8676749161338d72f92141222f6f8bdba9a1a0d5bde71f9a4db969"
+    },
+    {
+      "scene": "scene-0012",
+      "frame_idx": 16,
+      "nodes": 2,
+      "edges": 3,
+      "navigation_graph_payload_sha256": "b0922fdea20c7fec0496c944d2e5885042ebcf477a477e703e1d23306b8fdfa3"
+    },
+    {
+      "scene": "scene-0012",
+      "frame_idx": 17,
+      "nodes": 1,
+      "edges": 0,
+      "navigation_graph_payload_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "scene": "scene-0012",
+      "frame_idx": 18,
+      "nodes": 0,
+      "edges": 0,
+      "navigation_graph_payload_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "scene": "scene-0012",
+      "frame_idx": 19,
+      "nodes": 0,
+      "edges": 0,
+      "navigation_graph_payload_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "scene": "scene-0013",
+      "frame_idx": 0,
+      "nodes": 0,
+      "edges": 0,
+      "navigation_graph_payload_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "scene": "scene-0013",
+      "frame_idx": 1,
+      "nodes": 1,
+      "edges": 0,
+      "navigation_graph_payload_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "scene": "scene-0013",
+      "frame_idx": 2,
+      "nodes": 1,
+      "edges": 0,
+      "navigation_graph_payload_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "scene": "scene-0013",
+      "frame_idx": 3,
+      "nodes": 1,
+      "edges": 0,
+      "navigation_graph_payload_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "scene": "scene-0013",
+      "frame_idx": 4,
+      "nodes": 1,
+      "edges": 0,
+      "navigation_graph_payload_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "scene": "scene-0013",
+      "frame_idx": 5,
+      "nodes": 1,
+      "edges": 0,
+      "navigation_graph_payload_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "scene": "scene-0013",
+      "frame_idx": 6,
+      "nodes": 1,
+      "edges": 0,
+      "navigation_graph_payload_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "scene": "scene-0013",
+      "frame_idx": 7,
+      "nodes": 1,
+      "edges": 0,
+      "navigation_graph_payload_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "scene": "scene-0013",
+      "frame_idx": 8,
+      "nodes": 2,
+      "edges": 2,
+      "navigation_graph_payload_sha256": "9716dd8e3f68a4c341d5856ccbf39847f73364f0956a777262cb642a7677bea7"
+    },
+    {
+      "scene": "scene-0013",
+      "frame_idx": 9,
+      "nodes": 3,
+      "edges": 1,
+      "navigation_graph_payload_sha256": "a1dbb6a8d76c2ba73f7cceca8ce0fda5f91f1bfe2b64b8ebefdcfbbef5e77d57"
+    },
+    {
+      "scene": "scene-0013",
+      "frame_idx": 10,
+      "nodes": 4,
+      "edges": 4,
+      "navigation_graph_payload_sha256": "161e18554807970accca2f69e33793e52688ff9a5ad1c2fccd97ee5fcf7e77b9"
+    },
+    {
+      "scene": "scene-0013",
+      "frame_idx": 11,
+      "nodes": 4,
+      "edges": 2,
+      "navigation_graph_payload_sha256": "8e4dd38d21ea26958d07be7b12c05246f5f6b46ad3f284d6525a32b63bef6cd1"
+    },
+    {
+      "scene": "scene-0013",
+      "frame_idx": 12,
+      "nodes": 3,
+      "edges": 1,
+      "navigation_graph_payload_sha256": "eeda312c0086d520a34d29ca8e109ff2615575d5794b67eae64bb5c5d2e27131"
+    },
+    {
+      "scene": "scene-0013",
+      "frame_idx": 13,
+      "nodes": 4,
+      "edges": 2,
+      "navigation_graph_payload_sha256": "53f556de4ad1de77ed549c9b4b1e281c45a18eafba14747a0e59b04446c43c7d"
+    },
+    {
+      "scene": "scene-0013",
+      "frame_idx": 14,
+      "nodes": 4,
+      "edges": 2,
+      "navigation_graph_payload_sha256": "6333f8e972aa5d76c09db96978378d90de6c20a5fccf3bf6c15ed4a79507ebb1"
+    },
+    {
+      "scene": "scene-0013",
+      "frame_idx": 15,
+      "nodes": 4,
+      "edges": 2,
+      "navigation_graph_payload_sha256": "d45156369560500a0a66884dceebc88ad000f37bd0082c6d08537792e4fb6da2"
+    },
+    {
+      "scene": "scene-0013",
+      "frame_idx": 16,
+      "nodes": 7,
+      "edges": 5,
+      "navigation_graph_payload_sha256": "c3020e3d7387a02ee643227cd3717294ef32062424222bdebbaacb68e23cb153"
+    },
+    {
+      "scene": "scene-0013",
+      "frame_idx": 17,
+      "nodes": 7,
+      "edges": 5,
+      "navigation_graph_payload_sha256": "48c518fff0cd80c30b337ad11bb46c9b355029e590a928b078bb0052a55dff01"
+    },
+    {
+      "scene": "scene-0013",
+      "frame_idx": 18,
+      "nodes": 7,
+      "edges": 6,
+      "navigation_graph_payload_sha256": "1432312f294479fa5ac044d00ea74d6e806095da0c7f44c81836a2518f943bda"
+    },
+    {
+      "scene": "scene-0013",
+      "frame_idx": 19,
+      "nodes": 8,
+      "edges": 9,
+      "navigation_graph_payload_sha256": "6de79979140380b5911b7e26a5cbb152d1af9a7d13a333f3a4345a6cf7bdd6df"
+    },
+    {
+      "scene": "scene-0019",
+      "frame_idx": 0,
+      "nodes": 0,
+      "edges": 0,
+      "navigation_graph_payload_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "scene": "scene-0019",
+      "frame_idx": 1,
+      "nodes": 1,
+      "edges": 0,
+      "navigation_graph_payload_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "scene": "scene-0019",
+      "frame_idx": 2,
+      "nodes": 2,
+      "edges": 0,
+      "navigation_graph_payload_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "scene": "scene-0019",
+      "frame_idx": 3,
+      "nodes": 2,
+      "edges": 0,
+      "navigation_graph_payload_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "scene": "scene-0019",
+      "frame_idx": 4,
+      "nodes": 3,
+      "edges": 2,
+      "navigation_graph_payload_sha256": "2346b92afb1bf95ccbea61bbfc98f0a93a0ccf8592b534dcc4fc7504a4cc687e"
+    },
+    {
+      "scene": "scene-0019",
+      "frame_idx": 5,
+      "nodes": 3,
+      "edges": 2,
+      "navigation_graph_payload_sha256": "900a03012b9bfe0589bde14a5468415caf5df3806d68ae3e3aea45150ae1e717"
+    },
+    {
+      "scene": "scene-0019",
+      "frame_idx": 6,
+      "nodes": 2,
+      "edges": 0,
+      "navigation_graph_payload_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "scene": "scene-0019",
+      "frame_idx": 7,
+      "nodes": 5,
+      "edges": 2,
+      "navigation_graph_payload_sha256": "f11d967605c02df54791372044a592e305b775d103289a4ac4c6aefd0bae21d8"
+    },
+    {
+      "scene": "scene-0019",
+      "frame_idx": 8,
+      "nodes": 6,
+      "edges": 5,
+      "navigation_graph_payload_sha256": "de7f113c3fad0c400a97cdf0bb66939d158a5aa305991f3a52f0c61bfeadb9a2"
+    },
+    {
+      "scene": "scene-0019",
+      "frame_idx": 9,
+      "nodes": 8,
+      "edges": 8,
+      "navigation_graph_payload_sha256": "760273a9f11c3f05a9c63807929cebdbd7b25510e4cf3ab33c89c4b0bc5a93a1"
+    },
+    {
+      "scene": "scene-0019",
+      "frame_idx": 10,
+      "nodes": 9,
+      "edges": 7,
+      "navigation_graph_payload_sha256": "d76e905e4da549e02f4ec6d6bc34f5990df346911eadd1e49ce2adde733d9930"
+    },
+    {
+      "scene": "scene-0019",
+      "frame_idx": 11,
+      "nodes": 9,
+      "edges": 9,
+      "navigation_graph_payload_sha256": "e8d7827278eeb6b0763001c6b1c09695f2962570240b40f0e296f12b19bb401f"
+    },
+    {
+      "scene": "scene-0019",
+      "frame_idx": 12,
+      "nodes": 11,
+      "edges": 20,
+      "navigation_graph_payload_sha256": "120405c0088c0cc44dfa0316b5337b639bbf8b1e0cab7fd55ad8311e17337b13"
+    },
+    {
+      "scene": "scene-0019",
+      "frame_idx": 13,
+      "nodes": 10,
+      "edges": 15,
+      "navigation_graph_payload_sha256": "418f4c72a62c2dc077233ecea9850ea633018f0467e1adab1fecdf57e6fae9a1"
+    },
+    {
+      "scene": "scene-0019",
+      "frame_idx": 14,
+      "nodes": 8,
+      "edges": 5,
+      "navigation_graph_payload_sha256": "5a59a69a2a9d6df6953db9e3343355e3cc5e8acfb4114e3d6d363a760bc46495"
+    },
+    {
+      "scene": "scene-0019",
+      "frame_idx": 15,
+      "nodes": 11,
+      "edges": 11,
+      "navigation_graph_payload_sha256": "6e3cd17e6fee4b152a4c96197fc12ea8b35861849a6c466b01d97d7402bb4956"
+    },
+    {
+      "scene": "scene-0019",
+      "frame_idx": 16,
+      "nodes": 9,
+      "edges": 11,
+      "navigation_graph_payload_sha256": "6efa42ff7ad44d226eb8b2bc11ce470c2b4071df931058b7fa14d486048e59cb"
+    },
+    {
+      "scene": "scene-0019",
+      "frame_idx": 17,
+      "nodes": 9,
+      "edges": 11,
+      "navigation_graph_payload_sha256": "9395d6abd1a0e5bb97e03a4add1d022d8d9d85ae05241e124bb5d4e150713a42"
+    },
+    {
+      "scene": "scene-0019",
+      "frame_idx": 18,
+      "nodes": 10,
+      "edges": 19,
+      "navigation_graph_payload_sha256": "26d58b486c7ee2fe7662176af3d989c8595e07d989676d92c8ea45e30374ee28"
+    },
+    {
+      "scene": "scene-0019",
+      "frame_idx": 19,
+      "nodes": 13,
+      "edges": 41,
+      "navigation_graph_payload_sha256": "c2812d6c1428015ebd129a48a5dd83c223657c5ad4418b6574fe3ae7dc24ee1b"
+    },
+    {
+      "scene": "scene-0035",
+      "frame_idx": 0,
+      "nodes": 0,
+      "edges": 0,
+      "navigation_graph_payload_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "scene": "scene-0035",
+      "frame_idx": 1,
+      "nodes": 7,
+      "edges": 12,
+      "navigation_graph_payload_sha256": "67b1b313f689554ef49fbfd58f78f1b9fa3b1559833128752866770852c3c41e"
+    },
+    {
+      "scene": "scene-0035",
+      "frame_idx": 2,
+      "nodes": 8,
+      "edges": 36,
+      "navigation_graph_payload_sha256": "f99ea7beeff915bc5f79788686c83a5ded2a8262fd25f2a39a2c59868d7e8d7d"
+    },
+    {
+      "scene": "scene-0035",
+      "frame_idx": 3,
+      "nodes": 4,
+      "edges": 6,
+      "navigation_graph_payload_sha256": "183e192ff47f15529adc20f45934fbf5b5abed87f9cbb17408aa2eeec145784e"
+    },
+    {
+      "scene": "scene-0035",
+      "frame_idx": 4,
+      "nodes": 5,
+      "edges": 13,
+      "navigation_graph_payload_sha256": "13ab99a3dd07dcb11fb4b4aa1cfacf856b24dd084a6c5851e1f312b37582433a"
+    },
+    {
+      "scene": "scene-0035",
+      "frame_idx": 5,
+      "nodes": 5,
+      "edges": 5,
+      "navigation_graph_payload_sha256": "88c61a0b6279368872cef4d8ad1869097a807dbae89bcae873028a68f14eba31"
+    },
+    {
+      "scene": "scene-0035",
+      "frame_idx": 6,
+      "nodes": 5,
+      "edges": 6,
+      "navigation_graph_payload_sha256": "967337cad4c3986e0ce3a1738f85498234c13f11b9bf262083b516b8d2dfd537"
+    },
+    {
+      "scene": "scene-0035",
+      "frame_idx": 7,
+      "nodes": 4,
+      "edges": 4,
+      "navigation_graph_payload_sha256": "c70f81a163b0c25a63eb1bdb37f0a6cc46419004c8c7f00eb17fcf4d720ebb1d"
+    },
+    {
+      "scene": "scene-0035",
+      "frame_idx": 8,
+      "nodes": 6,
+      "edges": 10,
+      "navigation_graph_payload_sha256": "4988907792d56a688e407d687f98e96aeed51106a12479f5b98c0c90a52640d1"
+    },
+    {
+      "scene": "scene-0035",
+      "frame_idx": 9,
+      "nodes": 8,
+      "edges": 12,
+      "navigation_graph_payload_sha256": "5b46d5f44e389220335ef51e1fb795a14437a223e5d231cb54865407ad533feb"
+    },
+    {
+      "scene": "scene-0035",
+      "frame_idx": 10,
+      "nodes": 13,
+      "edges": 43,
+      "navigation_graph_payload_sha256": "3b3fd7463730d68ac000577b3bfe78352d7414d4a387d55eb3ea34b9b47f9f8d"
+    },
+    {
+      "scene": "scene-0035",
+      "frame_idx": 11,
+      "nodes": 11,
+      "edges": 37,
+      "navigation_graph_payload_sha256": "82a59ec570e01179470c791bbceebb2448490e9a390c12d897080acf25bbf720"
+    },
+    {
+      "scene": "scene-0035",
+      "frame_idx": 12,
+      "nodes": 12,
+      "edges": 32,
+      "navigation_graph_payload_sha256": "96ff70338b07520c039a024095c72250357f3431919a785a14998969d986563e"
+    },
+    {
+      "scene": "scene-0035",
+      "frame_idx": 13,
+      "nodes": 15,
+      "edges": 49,
+      "navigation_graph_payload_sha256": "f01d6d8020081ad61307d23f4138d71fd58b1a15c01286ce6db5e55bcf63bf40"
+    },
+    {
+      "scene": "scene-0035",
+      "frame_idx": 14,
+      "nodes": 14,
+      "edges": 39,
+      "navigation_graph_payload_sha256": "a848e6286ee6cc3a975d4a9d4ba84d43e5567f681eadb674ef5ea3be18cebcc8"
+    },
+    {
+      "scene": "scene-0035",
+      "frame_idx": 15,
+      "nodes": 13,
+      "edges": 43,
+      "navigation_graph_payload_sha256": "fc78ea4bcb1e52266a61bf776aaebc50c4f74ea5369b7de04da02c2a4009da67"
+    },
+    {
+      "scene": "scene-0035",
+      "frame_idx": 16,
+      "nodes": 15,
+      "edges": 68,
+      "navigation_graph_payload_sha256": "92e2a458e5098be0e2c072708bd6489af75d1be44ecd7f959504a171d272b233"
+    },
+    {
+      "scene": "scene-0035",
+      "frame_idx": 17,
+      "nodes": 12,
+      "edges": 49,
+      "navigation_graph_payload_sha256": "985e286ecd44282969d45d883b18e97cc5fe75b56aea69acfdb337fe946fbfdb"
+    },
+    {
+      "scene": "scene-0035",
+      "frame_idx": 18,
+      "nodes": 9,
+      "edges": 35,
+      "navigation_graph_payload_sha256": "e601eb644100159dbaf158ba62d5f5eee9f844084179dcf5a88061ca9fb3bfdc"
+    },
+    {
+      "scene": "scene-0035",
+      "frame_idx": 19,
+      "nodes": 11,
+      "edges": 38,
+      "navigation_graph_payload_sha256": "e3d9cf45b9efcfca2b9be00e96ead7e82f0f8886530327477c8fb07dc00dae91"
+    },
+    {
+      "scene": "scene-0042",
+      "frame_idx": 0,
+      "nodes": 0,
+      "edges": 0,
+      "navigation_graph_payload_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "scene": "scene-0042",
+      "frame_idx": 1,
+      "nodes": 2,
+      "edges": 1,
+      "navigation_graph_payload_sha256": "6f5b538710dc9c00af063cae2b49b0311484fef3244b350240569dd962d33806"
+    },
+    {
+      "scene": "scene-0042",
+      "frame_idx": 2,
+      "nodes": 3,
+      "edges": 1,
+      "navigation_graph_payload_sha256": "4c688c2960da248255fb56923d4f0d4374cb43b0703f517062c61035ed575dd2"
+    },
+    {
+      "scene": "scene-0042",
+      "frame_idx": 3,
+      "nodes": 1,
+      "edges": 0,
+      "navigation_graph_payload_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "scene": "scene-0042",
+      "frame_idx": 4,
+      "nodes": 1,
+      "edges": 0,
+      "navigation_graph_payload_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "scene": "scene-0042",
+      "frame_idx": 5,
+      "nodes": 1,
+      "edges": 0,
+      "navigation_graph_payload_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "scene": "scene-0042",
+      "frame_idx": 6,
+      "nodes": 1,
+      "edges": 0,
+      "navigation_graph_payload_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "scene": "scene-0042",
+      "frame_idx": 7,
+      "nodes": 1,
+      "edges": 0,
+      "navigation_graph_payload_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "scene": "scene-0042",
+      "frame_idx": 8,
+      "nodes": 2,
+      "edges": 0,
+      "navigation_graph_payload_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "scene": "scene-0042",
+      "frame_idx": 9,
+      "nodes": 4,
+      "edges": 2,
+      "navigation_graph_payload_sha256": "347e24274950fee83e2c3749a30895b3cf9a6f81279017b486f1c05735e5965d"
+    },
+    {
+      "scene": "scene-0042",
+      "frame_idx": 10,
+      "nodes": 4,
+      "edges": 2,
+      "navigation_graph_payload_sha256": "39795e01c471cb545b58f26ea6dc5a370395bbc12720acda1008468e46deab58"
+    },
+    {
+      "scene": "scene-0042",
+      "frame_idx": 11,
+      "nodes": 7,
+      "edges": 7,
+      "navigation_graph_payload_sha256": "49b0541c806734c76a3035f1a01e8acdaeba845e661728fde8283e7b1b35cf42"
+    },
+    {
+      "scene": "scene-0042",
+      "frame_idx": 12,
+      "nodes": 8,
+      "edges": 8,
+      "navigation_graph_payload_sha256": "b6aa6ab1fa86e7faee32fb2beeb8d857d832d221b4774e32ce4be4007378229d"
+    },
+    {
+      "scene": "scene-0042",
+      "frame_idx": 13,
+      "nodes": 4,
+      "edges": 2,
+      "navigation_graph_payload_sha256": "71e9eaa5227c0c76a332936ad7004ff4cf02d2a8f4e0251107b0e477abe6117b"
+    },
+    {
+      "scene": "scene-0042",
+      "frame_idx": 14,
+      "nodes": 2,
+      "edges": 3,
+      "navigation_graph_payload_sha256": "89f0dfa45f66ba5d2f77954181a78986aa52dc84d4bcbe48896ebb8d2d0d2f13"
+    },
+    {
+      "scene": "scene-0042",
+      "frame_idx": 15,
+      "nodes": 3,
+      "edges": 3,
+      "navigation_graph_payload_sha256": "a450a03f56127609e0ca16d1ffdcd70000468bae95e73fb43cd1605e1a6c8ea4"
+    },
+    {
+      "scene": "scene-0042",
+      "frame_idx": 16,
+      "nodes": 4,
+      "edges": 10,
+      "navigation_graph_payload_sha256": "4d2ca45390196fac434066d98f19bd7413030fd4fbb4571343b308f4312ae417"
+    },
+    {
+      "scene": "scene-0042",
+      "frame_idx": 17,
+      "nodes": 4,
+      "edges": 2,
+      "navigation_graph_payload_sha256": "3f7ace69a487ab0e952db7eec1e22d4696980df34a058c6e026f62574d7c4002"
+    },
+    {
+      "scene": "scene-0042",
+      "frame_idx": 18,
+      "nodes": 5,
+      "edges": 6,
+      "navigation_graph_payload_sha256": "c6b402851f27faad702df23a325ce02c05c2762884fbc1400d4efa10ceb4ef8c"
+    },
+    {
+      "scene": "scene-0042",
+      "frame_idx": 19,
+      "nodes": 6,
+      "edges": 12,
+      "navigation_graph_payload_sha256": "f146fb968c22c89f30d4cf27e30d55d661df2bab964c4fe9ac7c3ec31068630f"
+    },
+    {
+      "scene": "scene-0047",
+      "frame_idx": 0,
+      "nodes": 0,
+      "edges": 0,
+      "navigation_graph_payload_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "scene": "scene-0047",
+      "frame_idx": 1,
+      "nodes": 4,
+      "edges": 6,
+      "navigation_graph_payload_sha256": "4b8f6018c3c789a1fc925c108bc43c4f3f92125b1efa7a6a4a00c45ad05a4374"
+    },
+    {
+      "scene": "scene-0047",
+      "frame_idx": 2,
+      "nodes": 6,
+      "edges": 10,
+      "navigation_graph_payload_sha256": "518052e0cd192f3a3299b0f45c59506241cc906e72e45d379843aef4d2b9f059"
+    },
+    {
+      "scene": "scene-0047",
+      "frame_idx": 3,
+      "nodes": 8,
+      "edges": 15,
+      "navigation_graph_payload_sha256": "6e3747f37ee9b2e99f3b77ac6a05f10f18869c5ffd782a09838209c5f431a1aa"
+    },
+    {
+      "scene": "scene-0047",
+      "frame_idx": 4,
+      "nodes": 5,
+      "edges": 9,
+      "navigation_graph_payload_sha256": "0be9e864996ffa289817693d10861ee3c129a4bf5689f9d0ecbd06f3209eb89c"
+    },
+    {
+      "scene": "scene-0047",
+      "frame_idx": 5,
+      "nodes": 0,
+      "edges": 0,
+      "navigation_graph_payload_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "scene": "scene-0047",
+      "frame_idx": 6,
+      "nodes": 0,
+      "edges": 0,
+      "navigation_graph_payload_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "scene": "scene-0047",
+      "frame_idx": 7,
+      "nodes": 0,
+      "edges": 0,
+      "navigation_graph_payload_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "scene": "scene-0047",
+      "frame_idx": 8,
+      "nodes": 0,
+      "edges": 0,
+      "navigation_graph_payload_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "scene": "scene-0047",
+      "frame_idx": 9,
+      "nodes": 1,
+      "edges": 0,
+      "navigation_graph_payload_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "scene": "scene-0047",
+      "frame_idx": 10,
+      "nodes": 1,
+      "edges": 0,
+      "navigation_graph_payload_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "scene": "scene-0047",
+      "frame_idx": 11,
+      "nodes": 3,
+      "edges": 1,
+      "navigation_graph_payload_sha256": "e741e817bb5dfea91019b656c4654fe6dff73b4285cbd3bef267fdeadd007819"
+    },
+    {
+      "scene": "scene-0047",
+      "frame_idx": 12,
+      "nodes": 5,
+      "edges": 15,
+      "navigation_graph_payload_sha256": "c1f73b10a9ca1fec5418c42c8533dec250ae73f573240d199f3d6522a93c797b"
+    },
+    {
+      "scene": "scene-0047",
+      "frame_idx": 13,
+      "nodes": 5,
+      "edges": 25,
+      "navigation_graph_payload_sha256": "77d314e3f6594dbc65396e20cba33f578cd803c2720406cbce69c57579270a10"
+    },
+    {
+      "scene": "scene-0047",
+      "frame_idx": 14,
+      "nodes": 9,
+      "edges": 48,
+      "navigation_graph_payload_sha256": "28613724cb45c6f246cd5bddb98548678975736a61fc46a52f4dd065f7b92292"
+    },
+    {
+      "scene": "scene-0047",
+      "frame_idx": 15,
+      "nodes": 8,
+      "edges": 10,
+      "navigation_graph_payload_sha256": "a8d079673735ff80482d7ec0a6daf2abd36127476c2568fd8c20c06fa42fafb8"
+    },
+    {
+      "scene": "scene-0047",
+      "frame_idx": 16,
+      "nodes": 5,
+      "edges": 0,
+      "navigation_graph_payload_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "scene": "scene-0047",
+      "frame_idx": 17,
+      "nodes": 4,
+      "edges": 0,
+      "navigation_graph_payload_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "scene": "scene-0047",
+      "frame_idx": 18,
+      "nodes": 5,
+      "edges": 0,
+      "navigation_graph_payload_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "scene": "scene-0047",
+      "frame_idx": 19,
+      "nodes": 5,
+      "edges": 0,
+      "navigation_graph_payload_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    }
+  ]
+}

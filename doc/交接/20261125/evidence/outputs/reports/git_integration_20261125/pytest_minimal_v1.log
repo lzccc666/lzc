@@ -1,0 +1,8 @@
+....................................                                     [100%]
+=============================== warnings summary ===============================
+../../../../miniconda3/envs/conceptgraph/lib/python3.10/site-packages/faiss/loader.py:28
+../../../../miniconda3/envs/conceptgraph/lib/python3.10/site-packages/setuptools/_distutils/version.py:337
+  DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+36 passed, 2 warnings in 4.90s

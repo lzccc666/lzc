@@ -1,0 +1,31 @@
+{
+  "created_utc": "2026-11-25T08:49:54.517392+00:00",
+  "frozen_manifest_sha256": "d45a0ba8ff7c550a63caa747cfc087e17d7d3e8941fdb433aae2135cfc7bf5fe",
+  "runtime_source_sha256": {
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/relation_nav_runtime_20261125.py": "288071230aa324110e7cbe7082d54bc50956403ea386b8414da38c03db694f7d",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/scripts/relation_nav_runtime_20261125.py": "27feb665bc5a4e9c1b4960b2ef8b2fed846253b767f26cb91348051b7a00ec00"
+  },
+  "changes": [
+    "guard checks actual symlink-resolved output volumes instead of source checkout filesystem",
+    "bind unified nodes to same-frame original depth via original_index; preserve new motion unknown",
+    "dense additionally retains original observation/current-depth/support gate; sparse uses raw position confirmation",
+    "sparse relation source frame resolved by exact source timestamp, otherwise unknown rather than current render"
+  ],
+  "configuration_count": 1,
+  "task_labels_unchanged": true,
+  "thresholds_unchanged": true,
+  "evaluation_not_run_before_amendment": true,
+  "output_volumes": {
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/relation_nav_unified_20261125_v1": {
+      "resolved": "/root/autodl-tmp/lizichong/dataset/processed/relation_nav_unified_20261125_v1",
+      "free_bytes": 30894235648
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/relation_nav_unified_20261125": {
+      "resolved": "/root/autodl-tmp/lizichong/outputs/reports/relation_nav_unified_20261125",
+      "free_bytes": 30894235648
+    }
+  },
+  "dense_policy": "new static AND raw semantic position confirmation AND original dense evidence",
+  "sparse_policy": "new static AND raw semantic position confirmation",
+  "old_motion_used_for_selection": false
+}

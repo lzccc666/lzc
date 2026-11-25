@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "counts": {
+    "R1": 1508,
+    "S2": 120,
+    "edges": 10855,
+    "legacy_fact_equal": 1475
+  },
+  "all_current_payloads_equal": true,
+  "physical_relation_signs_and_thresholds_recomputed": true,
+  "current_frame_provenance_checked": true,
+  "near_distance_m": 6,
+  "directional_distance_m": 12,
+  "component_dead_zone_m": 1,
+  "legacy_near8_results_unchanged": true,
+  "geometry_pose_source": "CAM_FRONT optical axis proxy, not object body heading",
+  "input_sha256": "5b3595181e8422c929684b96a157003ee33c105581471b54d0e393676762d5e0",
+  "output_sha256": "b36cb1f18ac87accf129e837def2c6487f13ab1f35fe26ab1f5043b56b5c0661"
+}

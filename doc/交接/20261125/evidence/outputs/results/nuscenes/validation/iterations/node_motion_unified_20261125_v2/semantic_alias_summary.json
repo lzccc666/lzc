@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "scopes": {
+    "R1": {
+      "counts": {
+        "nodes": 5600,
+        "estimated:unknown": 2698,
+        "verified:static": 707,
+        "verified:unknown": 4313,
+        "estimated:dynamic": 1873,
+        "estimated:static": 1029,
+        "verified:dynamic": 580
+      },
+      "input_sha256": "85a881af3f4c925b727fc9a87268128f62f6bb00cd30f621f4473cffec02fb51",
+      "output_sha256": "a1524891f172a2f1e4e49d335b4bf4dec39341d6f565a5210bfb82209e41338d",
+      "policy_or_previous_fields_changed": false
+    },
+    "S2": {
+      "counts": {
+        "nodes": 538,
+        "estimated:unknown": 270,
+        "verified:static": 26,
+        "verified:unknown": 444,
+        "estimated:dynamic": 206,
+        "estimated:static": 62,
+        "verified:dynamic": 68
+      },
+      "input_sha256": "7abb7d1bd36e03e4edb677d3259f63c808b15b0d2b1ef8821771a1dec4144b27",
+      "output_sha256": "d326dbe58d0bf66314e0697e600f72572f01e3aba59b4730bb3c3903adb356e7",
+      "policy_or_previous_fields_changed": false
+    }
+  },
+  "source_sha256": "381a43896d9aee81f4fcdc6e03383df26419487551264bd05866ffb43b35ab09",
+  "GT_in_method": false,
+  "GPU_calls": 0
+}

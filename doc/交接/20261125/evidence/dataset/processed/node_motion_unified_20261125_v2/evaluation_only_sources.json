@@ -1,0 +1,14 @@
+{
+  "input_sha256": {
+    "/root/autodl-tmp/lizichong/dataset/raw/nuscenes_trainval/v1.0-trainval/attribute.json": "dc01438363e29188f25785884bb2431a7aa27ba0debbc359cb21cf1f00652210",
+    "/root/autodl-tmp/lizichong/dataset/raw/nuscenes_trainval/v1.0-trainval/sample_annotation.json": "1f4f3835cb86f4efe49ccad3ae6f5f6a2d068422696de564c5892b5b06bea2a9",
+    "/root/autodl-tmp/lizichong/dataset/raw/nuscenes_trainval/v1.0-trainval/sample.json": "6035ac58b6e971622be2bb1be15b917e7cb4e05ae984d6b339c27c1699c4ad9d"
+  },
+  "method_outputs_frozen": {
+    "R1": "06077175f63ce89b8dc1606a1a68d75229eb379cb2468ce8aca43bdc20c2fec2",
+    "S2": "c519948213e212a1e26f70fd573a343923ad76d0920b5fb505e91fa16f922668"
+  },
+  "labels_role": "evaluation_only_not_method",
+  "attribute_semantics": "stopped vs parked intent retained; cycle rider status not motion",
+  "displacement_semantics": "past sample annotation interval ending at current official sample; not exact instantaneous/camera-time speed"
+}

@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "created_utc": "2026-11-25T09:00:13.183414+00:00",
+  "cohorts": {
+    "R1": {
+      "frames": 1508,
+      "equal": 1508,
+      "edges": 9992
+    },
+    "S2": {
+      "frames": 120,
+      "equal": 120,
+      "edges": 973
+    }
+  },
+  "R1_output": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/relation_nav_unified_20261125_v1/unified_R1_current_graphs_v2.jsonl.gz",
+  "S2_unchanged_output": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/relation_nav_unified_20261125_v1/unified_S2_current_graphs.jsonl.gz",
+  "supersedes": "v1 unified_R1_current_graphs only: original observation counts were omitted by postprocessing loader",
+  "original_v1_outputs_preserved": true,
+  "actual_navigation_S2_unchanged": true,
+  "source_sha256": {
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/relation_nav_graph_correction_20261125.py": "9983b0f69d651633a22a1a0a95b0ac3824ef3ef50f86b4295f74898367128df5",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/scripts/relation_nav_graph_correction_20261125.py": "18d2acaa66c77ca97599b81610db57d2a66e62dcd9aaa5701df4f1ca3b635a1e"
+  },
+  "no_new_selection": true,
+  "no_threshold_or_node_changes": true,
+  "elapsed_s": 13.48870655335486
+}

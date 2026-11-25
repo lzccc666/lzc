@@ -1,0 +1,7 @@
+{
+  "role": "evaluation_only_geometry_before_export",
+  "path": "/root/autodl-tmp/lizichong/dataset/processed/mapnext_20261124_inputs_v1/all_GT.jsonl",
+  "sha256": "e3da7976c24cfdbf36620307f58b7f8ca6e8275ea5e687de20e31492a56a2b85",
+  "R1_geometry_hashes_already_in_frozen_input": true,
+  "method_input_contains_ground_truth": false
+}

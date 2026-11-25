@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/root/miniconda3/envs/conceptgraph/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "tests/test_completion_navigation_semantics.py",
+    "tests/test_completion_reference_regions.py",
+    "tests/test_completion_reference_reachability.py",
+    "tests/test_current_geometry_mapper.py",
+    "tests/test_sparse_quality_mapping.py",
+    "tests/test_motion_association_mapper.py"
+  ],
+  "returncode": 0,
+  "wall_s": 7.760949673131108,
+  "log": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/git_integration_20261125/pytest_minimal_v1.log",
+  "timestamp_utc": "2026-11-25T08:25:26.553453+00:00"
+}

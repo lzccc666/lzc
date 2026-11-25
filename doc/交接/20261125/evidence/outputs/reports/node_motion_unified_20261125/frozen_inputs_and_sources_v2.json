@@ -1,0 +1,7 @@
+{
+  "manifest_sha256": "be1a60a004715298b698847dac3157a19a35b8e73def5aa8157cf2567bb8e73c",
+  "source_count": 53,
+  "input_count": 6054,
+  "git_base": "4e581523f81c0c81bc8de419a5bd91affe2a8a8b",
+  "prepare_note": "prepare completed manifest/run/snapshots; exclusive v1 receipt name collision retained in prepare_v2.log; this additive v2 receipt does not change source/config"
+}

@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "scope": "S2",
+  "frames": 120,
+  "nodes": 538,
+  "raw_velocity_available": 410,
+  "prior_nodes_byte_content_preserved": true,
+  "unknown_velocity_not_semantic": true,
+  "body_orientation_not_inferred": true,
+  "original_sha256": "c519948213e212a1e26f70fd573a343923ad76d0920b5fb505e91fa16f922668",
+  "extended_sha256": "7abb7d1bd36e03e4edb677d3259f63c808b15b0d2b1ef8821771a1dec4144b27"
+}

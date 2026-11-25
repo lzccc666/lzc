@@ -1,0 +1,354 @@
+{
+  "passed": true,
+  "scopes": {
+    "R1": {
+      "counts": {
+        "frames": 1508,
+        "GT": 5723,
+        "predictions": 5600,
+        "matched_3m": 2769,
+        "unmatched_predictions": 2831,
+        "attribute_label:static": 2363,
+        "displacement_label:static": 2522,
+        "attribute:all_labeled": 5385,
+        "attribute:known_prediction": 694,
+        "attribute:correct_over_all_labeled": 594,
+        "attribute:unknown_or_missing": 4691,
+        "past_displacement:all_labeled": 5311,
+        "past_displacement:known_prediction": 735,
+        "past_displacement:correct_over_all_labeled": 650,
+        "past_displacement:unknown_or_missing": 4576,
+        "attribute_displacement_conflict": 272,
+        "unmatched_prediction_motion:static": 340,
+        "matched_history:no_assigned_identity_history": 601,
+        "matched_history:same_assigned_identity": 1986,
+        "unmatched_prediction_motion:unknown": 2281,
+        "attribute_label:dynamic": 3022,
+        "displacement_label:dynamic": 2789,
+        "displacement_label:unknown": 412,
+        "unmatched_prediction_motion:dynamic": 210,
+        "attribute_label:unknown": 338,
+        "matched_history:changed_assigned_identity": 182
+      },
+      "confusion": {
+        "attribute:static": {
+          "missing_node": 1172,
+          "unknown": 849,
+          "static": 288,
+          "dynamic": 54
+        },
+        "legacy_attribute:static": {
+          "missing_node": 1172,
+          "unknown": 472,
+          "dynamic": 237,
+          "static": 482
+        },
+        "past_displacement:static": {
+          "missing_node": 1172,
+          "unknown": 946,
+          "static": 342,
+          "dynamic": 62
+        },
+        "legacy_past_displacement:static": {
+          "missing_node": 1172,
+          "unknown": 552,
+          "dynamic": 265,
+          "static": 533
+        },
+        "attribute:dynamic": {
+          "missing_node": 1565,
+          "unknown": 1105,
+          "dynamic": 306,
+          "static": 46
+        },
+        "legacy_attribute:dynamic": {
+          "missing_node": 1565,
+          "unknown": 665,
+          "dynamic": 693,
+          "static": 99
+        },
+        "past_displacement:dynamic": {
+          "missing_node": 1387,
+          "unknown": 1071,
+          "dynamic": 308,
+          "static": 23
+        },
+        "legacy_past_displacement:dynamic": {
+          "missing_node": 1387,
+          "unknown": 650,
+          "dynamic": 692,
+          "static": 60
+        },
+        "past_displacement:unknown": {
+          "missing_node": 395,
+          "unknown": 15,
+          "static": 2
+        },
+        "legacy_past_displacement:unknown": {
+          "missing_node": 395,
+          "unknown": 17
+        },
+        "attribute:unknown": {
+          "missing_node": 217,
+          "unknown": 78,
+          "static": 33,
+          "dynamic": 10
+        },
+        "legacy_attribute:unknown": {
+          "missing_node": 217,
+          "unknown": 82,
+          "dynamic": 27,
+          "static": 12
+        }
+      },
+      "speed": {
+        "matched_known_N": 735,
+        "MAE_mps": 0.563285580125157,
+        "same_assigned_identity_N": 673,
+        "same_assigned_identity_MAE_mps": 0.5011199649204251,
+        "changed_assigned_identity_N": 12,
+        "changed_assigned_identity_MAE_mps": 3.0919629598472063
+      }
+    },
+    "S2": {
+      "counts": {
+        "frames": 120,
+        "GT": 687,
+        "predictions": 538,
+        "matched_3m": 310,
+        "unmatched_predictions": 228,
+        "attribute_label:static": 347,
+        "displacement_label:static": 357,
+        "attribute:all_labeled": 635,
+        "attribute:known_prediction": 55,
+        "attribute:correct_over_all_labeled": 48,
+        "attribute:unknown_or_missing": 580,
+        "past_displacement:all_labeled": 616,
+        "past_displacement:known_prediction": 55,
+        "past_displacement:correct_over_all_labeled": 48,
+        "past_displacement:unknown_or_missing": 561,
+        "attribute_displacement_conflict": 33,
+        "unmatched_prediction_motion:static": 7,
+        "matched_history:no_assigned_identity_history": 90,
+        "matched_history:same_assigned_identity": 199,
+        "unmatched_prediction_motion:unknown": 189,
+        "attribute_label:dynamic": 288,
+        "displacement_label:unknown": 71,
+        "displacement_label:dynamic": 259,
+        "unmatched_prediction_motion:dynamic": 32,
+        "attribute_label:unknown": 52,
+        "matched_history:changed_assigned_identity": 21
+      },
+      "confusion": {
+        "attribute:static": {
+          "missing_node": 168,
+          "unknown": 155,
+          "static": 18,
+          "dynamic": 6
+        },
+        "legacy_attribute:static": {
+          "missing_node": 168,
+          "unknown": 79,
+          "dynamic": 68,
+          "static": 32
+        },
+        "past_displacement:static": {
+          "missing_node": 173,
+          "unknown": 160,
+          "static": 18,
+          "dynamic": 6
+        },
+        "legacy_past_displacement:static": {
+          "missing_node": 173,
+          "unknown": 85,
+          "dynamic": 65,
+          "static": 34
+        },
+        "attribute:dynamic": {
+          "missing_node": 166,
+          "unknown": 91,
+          "dynamic": 30,
+          "static": 1
+        },
+        "legacy_attribute:dynamic": {
+          "missing_node": 166,
+          "unknown": 76,
+          "dynamic": 44,
+          "static": 2
+        },
+        "past_displacement:unknown": {
+          "missing_node": 65,
+          "unknown": 6
+        },
+        "legacy_past_displacement:unknown": {
+          "missing_node": 65,
+          "unknown": 2,
+          "dynamic": 4
+        },
+        "past_displacement:dynamic": {
+          "unknown": 89,
+          "missing_node": 139,
+          "dynamic": 30,
+          "static": 1
+        },
+        "legacy_past_displacement:dynamic": {
+          "unknown": 74,
+          "missing_node": 139,
+          "dynamic": 45,
+          "static": 1
+        },
+        "attribute:unknown": {
+          "missing_node": 43,
+          "unknown": 9
+        },
+        "legacy_attribute:unknown": {
+          "missing_node": 43,
+          "unknown": 6,
+          "dynamic": 2,
+          "static": 1
+        }
+      },
+      "speed": {
+        "matched_known_N": 55,
+        "MAE_mps": 0.3734660645541144,
+        "same_assigned_identity_N": 47,
+        "same_assigned_identity_MAE_mps": 0.39692269868902547,
+        "changed_assigned_identity_N": 1,
+        "changed_assigned_identity_MAE_mps": 0.1643937715885715
+      }
+    }
+  },
+  "bylog": {
+    "R1": {
+      "d31dc715d1c34b99bd5afb0e3aea26ed": {
+        "GT": 449,
+        "attribute:all_labeled": 428,
+        "attribute:correct_over_all_labeled": 32,
+        "past_displacement:all_labeled": 427,
+        "past_displacement:correct_over_all_labeled": 35
+      },
+      "bc41a49366734ebf978d6a71981537dc": {
+        "GT": 1126,
+        "attribute:all_labeled": 1041,
+        "attribute:correct_over_all_labeled": 132,
+        "past_displacement:all_labeled": 1061,
+        "past_displacement:correct_over_all_labeled": 163
+      },
+      "783683d957054175bda1b326453a13f4": {
+        "GT": 388,
+        "attribute:all_labeled": 343,
+        "attribute:correct_over_all_labeled": 54,
+        "past_displacement:all_labeled": 355,
+        "past_displacement:correct_over_all_labeled": 55
+      },
+      "d7fd2bb9696d43af901326664e42340b": {
+        "GT": 485,
+        "attribute:all_labeled": 434,
+        "attribute:correct_over_all_labeled": 73,
+        "past_displacement:all_labeled": 453,
+        "past_displacement:correct_over_all_labeled": 75
+      },
+      "f38ef5a1e9c941aabb2155768670b92a": {
+        "GT": 595,
+        "attribute:all_labeled": 550,
+        "attribute:correct_over_all_labeled": 63,
+        "past_displacement:all_labeled": 542,
+        "past_displacement:correct_over_all_labeled": 60
+      },
+      "7e25a2c8ea1f41c5b0da1e69ecfa71a2": {
+        "GT": 241,
+        "attribute:all_labeled": 226,
+        "attribute:correct_over_all_labeled": 80,
+        "past_displacement:all_labeled": 234,
+        "past_displacement:correct_over_all_labeled": 92
+      },
+      "7a0fde44c3504eaeb18f9ad83bed65bc": {
+        "GT": 184,
+        "attribute:all_labeled": 159,
+        "attribute:correct_over_all_labeled": 6,
+        "past_displacement:all_labeled": 154,
+        "past_displacement:correct_over_all_labeled": 7
+      },
+      "53cf9c55dd8644bea67b9f009fc1ee38": {
+        "GT": 1744,
+        "attribute:all_labeled": 1712,
+        "attribute:correct_over_all_labeled": 110,
+        "past_displacement:all_labeled": 1608,
+        "past_displacement:correct_over_all_labeled": 116
+      },
+      "34d0574ea8f340179c82162c6ac069bc": {
+        "GT": 130,
+        "attribute:all_labeled": 127,
+        "attribute:correct_over_all_labeled": 9,
+        "past_displacement:all_labeled": 123,
+        "past_displacement:correct_over_all_labeled": 9
+      },
+      "343d984344e440c7952d1e403b572b2a": {
+        "GT": 207,
+        "attribute:all_labeled": 197,
+        "attribute:correct_over_all_labeled": 10,
+        "past_displacement:all_labeled": 184,
+        "past_displacement:correct_over_all_labeled": 13
+      },
+      "b05f285d53744542a3413476d6dd9270": {
+        "GT": 174,
+        "attribute:all_labeled": 168,
+        "attribute:correct_over_all_labeled": 25,
+        "past_displacement:all_labeled": 170,
+        "past_displacement:correct_over_all_labeled": 25
+      }
+    },
+    "S2": {
+      "d31dc715d1c34b99bd5afb0e3aea26ed": {
+        "GT": 105,
+        "attribute:all_labeled": 97,
+        "attribute:correct_over_all_labeled": 5,
+        "past_displacement:all_labeled": 100,
+        "past_displacement:correct_over_all_labeled": 5
+      },
+      "bc41a49366734ebf978d6a71981537dc": {
+        "GT": 194,
+        "attribute:all_labeled": 193,
+        "attribute:correct_over_all_labeled": 31,
+        "past_displacement:all_labeled": 170,
+        "past_displacement:correct_over_all_labeled": 29
+      },
+      "783683d957054175bda1b326453a13f4": {
+        "GT": 163,
+        "attribute:all_labeled": 149,
+        "attribute:correct_over_all_labeled": 1,
+        "past_displacement:all_labeled": 144,
+        "past_displacement:correct_over_all_labeled": 3
+      },
+      "d7fd2bb9696d43af901326664e42340b": {
+        "GT": 88,
+        "attribute:all_labeled": 68,
+        "attribute:correct_over_all_labeled": 9,
+        "past_displacement:all_labeled": 81,
+        "past_displacement:correct_over_all_labeled": 9
+      },
+      "f38ef5a1e9c941aabb2155768670b92a": {
+        "GT": 137,
+        "attribute:all_labeled": 128,
+        "attribute:correct_over_all_labeled": 2,
+        "past_displacement:all_labeled": 121,
+        "past_displacement:correct_over_all_labeled": 2
+      }
+    }
+  },
+  "rows": 6410,
+  "evaluation_only_source_sha256": {
+    "/root/autodl-tmp/lizichong/dataset/raw/nuscenes_trainval/v1.0-trainval/attribute.json": "dc01438363e29188f25785884bb2431a7aa27ba0debbc359cb21cf1f00652210",
+    "/root/autodl-tmp/lizichong/dataset/raw/nuscenes_trainval/v1.0-trainval/sample_annotation.json": "1f4f3835cb86f4efe49ccad3ae6f5f6a2d068422696de564c5892b5b06bea2a9",
+    "/root/autodl-tmp/lizichong/dataset/raw/nuscenes_trainval/v1.0-trainval/sample.json": "6035ac58b6e971622be2bb1be15b917e7cb4e05ae984d6b339c27c1699c4ad9d"
+  },
+  "GT_in_method": false,
+  "elapsed_s": 19.194519855082035,
+  "limits": [
+    "Official attributes and past interval displacement are different references, not exact instantaneous ground truth",
+    "Unknown and missing-node cases remain in all labeled denominators",
+    "Same3m matching may confuse nearby objects; identity changes are automatic diagnosis, not human audited switches",
+    "Body heading is unknown; no GT orientation enters method",
+    "No frontend/model/GPU/planning call"
+  ]
+}

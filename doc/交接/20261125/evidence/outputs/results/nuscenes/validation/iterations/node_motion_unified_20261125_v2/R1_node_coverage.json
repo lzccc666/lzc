@@ -1,0 +1,282 @@
+{
+  "passed": true,
+  "scope": "R1",
+  "counts": {
+    "nodes": 5600,
+    "raw_velocity_available": 4245,
+    "static": 707,
+    "unknown": 4313,
+    "dynamic": 580
+  },
+  "by_category_shape": {
+    "car|shape=False": {
+      "nodes": 272,
+      "static": 62,
+      "current_update": 199,
+      "raw_velocity_available": 272,
+      "unknown": 198,
+      "dynamic": 12
+    },
+    "pedestrian|shape=False": {
+      "nodes": 631,
+      "unknown": 475,
+      "current_update": 509,
+      "raw_velocity_available": 631,
+      "static": 72,
+      "dynamic": 84
+    },
+    "pedestrian|shape=True": {
+      "nodes": 754,
+      "unknown": 694,
+      "current_update": 628,
+      "raw_velocity_available": 540,
+      "dynamic": 45,
+      "static": 15
+    },
+    "car|shape=True": {
+      "nodes": 2312,
+      "unknown": 1850,
+      "current_update": 1560,
+      "raw_velocity_available": 1616,
+      "static": 250,
+      "dynamic": 212
+    },
+    "bus|shape=True": {
+      "nodes": 433,
+      "unknown": 251,
+      "current_update": 296,
+      "raw_velocity_available": 328,
+      "dynamic": 127,
+      "static": 55
+    },
+    "truck|shape=True": {
+      "nodes": 937,
+      "unknown": 641,
+      "current_update": 720,
+      "raw_velocity_available": 677,
+      "dynamic": 85,
+      "static": 211
+    },
+    "bicycle|shape=False": {
+      "nodes": 30,
+      "unknown": 22,
+      "current_update": 25,
+      "raw_velocity_available": 30,
+      "static": 7,
+      "dynamic": 1
+    },
+    "bicycle|shape=True": {
+      "nodes": 83,
+      "unknown": 70,
+      "current_update": 48,
+      "raw_velocity_available": 33,
+      "dynamic": 10,
+      "static": 3
+    },
+    "bus|shape=False": {
+      "nodes": 15,
+      "unknown": 14,
+      "current_update": 8,
+      "raw_velocity_available": 15,
+      "dynamic": 1
+    },
+    "truck|shape=False": {
+      "nodes": 30,
+      "unknown": 24,
+      "current_update": 22,
+      "raw_velocity_available": 30,
+      "static": 5,
+      "dynamic": 1
+    },
+    "motorcycle|shape=False": {
+      "nodes": 33,
+      "unknown": 11,
+      "current_update": 30,
+      "raw_velocity_available": 33,
+      "static": 21,
+      "dynamic": 1
+    },
+    "motorcycle|shape=True": {
+      "nodes": 70,
+      "unknown": 63,
+      "current_update": 49,
+      "raw_velocity_available": 40,
+      "static": 6,
+      "dynamic": 1
+    }
+  },
+  "unknown_first_reason": {
+    "car|shape=False": {
+      "invalid_current_measurement_support": 34,
+      "no_current_update": 41,
+      "insufficient_independent_groups": 102,
+      "span_below_one_second": 11,
+      "unresolved_identity_or_competition": 10
+    },
+    "pedestrian|shape=False": {
+      "insufficient_independent_groups": 113,
+      "span_below_one_second": 25,
+      "unresolved_identity_or_competition": 209,
+      "no_current_update": 98,
+      "invalid_current_measurement_support": 30
+    },
+    "pedestrian|shape=True": {
+      "insufficient_independent_groups": 352,
+      "span_below_one_second": 25,
+      "invalid_current_measurement_support": 10,
+      "unresolved_identity_or_competition": 257,
+      "no_current_update": 50
+    },
+    "car|shape=True": {
+      "insufficient_independent_groups": 1076,
+      "span_below_one_second": 30,
+      "no_current_update": 233,
+      "invalid_current_measurement_support": 25,
+      "unresolved_identity_or_competition": 486
+    },
+    "bus|shape=True": {
+      "insufficient_independent_groups": 181,
+      "no_current_update": 32,
+      "span_below_one_second": 12,
+      "unresolved_identity_or_competition": 22,
+      "invalid_current_measurement_support": 4
+    },
+    "truck|shape=True": {
+      "insufficient_independent_groups": 401,
+      "no_current_update": 55,
+      "span_below_one_second": 21,
+      "invalid_current_measurement_support": 5,
+      "unresolved_identity_or_competition": 159
+    },
+    "bicycle|shape=False": {
+      "insufficient_independent_groups": 16,
+      "invalid_current_measurement_support": 4,
+      "no_current_update": 1,
+      "span_below_one_second": 1
+    },
+    "bicycle|shape=True": {
+      "insufficient_independent_groups": 61,
+      "span_below_one_second": 4,
+      "invalid_current_measurement_support": 1,
+      "no_current_update": 4
+    },
+    "bus|shape=False": {
+      "insufficient_independent_groups": 9,
+      "no_current_update": 3,
+      "invalid_current_measurement_support": 2
+    },
+    "truck|shape=False": {
+      "insufficient_independent_groups": 16,
+      "span_below_one_second": 2,
+      "invalid_current_measurement_support": 3,
+      "no_current_update": 3
+    },
+    "motorcycle|shape=False": {
+      "span_below_one_second": 1,
+      "no_current_update": 1,
+      "insufficient_independent_groups": 7,
+      "unresolved_identity_or_competition": 2
+    },
+    "motorcycle|shape=True": {
+      "insufficient_independent_groups": 50,
+      "span_below_one_second": 3,
+      "unresolved_identity_or_competition": 9,
+      "no_current_update": 1
+    }
+  },
+  "unknown_all_reasons_overlapping": {
+    "car|shape=False": {
+      "invalid_current_measurement_support": 73,
+      "no_current_update": 73,
+      "insufficient_independent_groups": 102,
+      "span_below_one_second": 85,
+      "unresolved_identity_or_competition": 18
+    },
+    "pedestrian|shape=False": {
+      "insufficient_independent_groups": 113,
+      "span_below_one_second": 128,
+      "unresolved_identity_or_competition": 318,
+      "invalid_current_measurement_support": 49,
+      "no_current_update": 122
+    },
+    "pedestrian|shape=True": {
+      "insufficient_independent_groups": 352,
+      "span_below_one_second": 369,
+      "missing_raw_speed": 214,
+      "no_current_update": 126,
+      "invalid_current_measurement_support": 27,
+      "unresolved_identity_or_competition": 440
+    },
+    "car|shape=True": {
+      "insufficient_independent_groups": 1076,
+      "span_below_one_second": 985,
+      "missing_raw_speed": 696,
+      "unresolved_identity_or_competition": 763,
+      "no_current_update": 752,
+      "invalid_current_measurement_support": 122
+    },
+    "bus|shape=True": {
+      "insufficient_independent_groups": 181,
+      "span_below_one_second": 189,
+      "missing_raw_speed": 105,
+      "no_current_update": 137,
+      "invalid_current_measurement_support": 15,
+      "unresolved_identity_or_competition": 22
+    },
+    "truck|shape=True": {
+      "insufficient_independent_groups": 401,
+      "span_below_one_second": 408,
+      "missing_raw_speed": 260,
+      "no_current_update": 217,
+      "invalid_current_measurement_support": 29,
+      "unresolved_identity_or_competition": 260
+    },
+    "bicycle|shape=False": {
+      "insufficient_independent_groups": 16,
+      "span_below_one_second": 16,
+      "invalid_current_measurement_support": 8,
+      "no_current_update": 5,
+      "unresolved_identity_or_competition": 4
+    },
+    "bicycle|shape=True": {
+      "insufficient_independent_groups": 61,
+      "span_below_one_second": 65,
+      "missing_raw_speed": 50,
+      "invalid_current_measurement_support": 6,
+      "no_current_update": 35,
+      "unresolved_identity_or_competition": 1
+    },
+    "bus|shape=False": {
+      "insufficient_independent_groups": 9,
+      "span_below_one_second": 9,
+      "no_current_update": 7,
+      "invalid_current_measurement_support": 4,
+      "unresolved_identity_or_competition": 2
+    },
+    "truck|shape=False": {
+      "insufficient_independent_groups": 16,
+      "span_below_one_second": 18,
+      "no_current_update": 8,
+      "invalid_current_measurement_support": 10
+    },
+    "motorcycle|shape=False": {
+      "span_below_one_second": 7,
+      "no_current_update": 3,
+      "insufficient_independent_groups": 7,
+      "unresolved_identity_or_competition": 3
+    },
+    "motorcycle|shape=True": {
+      "insufficient_independent_groups": 50,
+      "span_below_one_second": 48,
+      "missing_raw_speed": 30,
+      "unresolved_identity_or_competition": 17,
+      "no_current_update": 21,
+      "invalid_current_measurement_support": 4
+    }
+  },
+  "method_motion_or_geometry_changed": false,
+  "body_heading_available": false,
+  "source_sha256": "06077175f63ce89b8dc1606a1a68d75229eb379cb2468ce8aca43bdc20c2fec2",
+  "output_sha256": "85a881af3f4c925b727fc9a87268128f62f6bb00cd30f621f4473cffec02fb51",
+  "extension_source_sha256": "9bd3ea4c41ddb7907520758cb8b78f19ba6023717c69527383a7dc2cda181b68"
+}

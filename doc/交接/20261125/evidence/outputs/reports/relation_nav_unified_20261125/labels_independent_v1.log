@@ -1,0 +1,1 @@
+{"passed": true, "task_labels_checked": 1200, "statuses": {"scorable": 1140, "pending_motion_evidence": 40, "pending_reference_ambiguity": 20}, "classifications": {"negative": 999, "positive": 141, "pending": 60}, "elapsed_s": 0.48547778837382793}

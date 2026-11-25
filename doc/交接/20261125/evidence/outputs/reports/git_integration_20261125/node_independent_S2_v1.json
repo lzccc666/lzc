@@ -1,0 +1,145 @@
+{
+  "passed": true,
+  "scope": "S2",
+  "node_run": "node_motion_unified_20261125_v2",
+  "counts": {
+    "frames": 120,
+    "nodes": 538,
+    "trace_links": 1739,
+    "known_motion": 94,
+    "unknown_motion": 444,
+    "static": 26,
+    "dynamic": 68
+  },
+  "output_sha256": "c519948213e212a1e26f70fd573a343923ad76d0920b5fb505e91fa16f922668",
+  "manifest_sha256": "be1a60a004715298b698847dac3157a19a35b8e73def5aa8157cf2567bb8e73c",
+  "pixel_checks": [
+    {
+      "key": "scene-0012:1:CAM_FRONT:1531885320.512478:0",
+      "real_pixels": 1,
+      "maximum_center_error_m": 0.0,
+      "depth_sha256": "9cdbe713ea78284d2ee1ba674e1f62c74678da374a40d113b21d230bc69250a0",
+      "detections_sha256": "50d99de40621334e06a4f09d3510ec56cbb57c902b1db469a35112f3bfd78c21"
+    },
+    {
+      "key": "scene-0012:1:CAM_FRONT_LEFT:1531885320.504844:0",
+      "real_pixels": 59,
+      "maximum_center_error_m": 0.0,
+      "depth_sha256": "0f58badda1c29bb60edeaa02d6db27265507dfbccbfe4ab57a661a466d218ec1",
+      "detections_sha256": "36b787b5cad9637ed77ae0e82129a7ab6a00cde8a2bd1e26b5a8c093090698ee"
+    },
+    {
+      "key": "scene-0012:11:CAM_FRONT_RIGHT:1531885325.420339:0",
+      "real_pixels": 4,
+      "maximum_center_error_m": 0.0,
+      "depth_sha256": "44df54dced0c76bb722e6b722aaa653701eafbfd0a1b421baffaac7791b5509b",
+      "detections_sha256": "1fb69f98823ab591eddef3fc0e54ab1655c7f2d75c404e039549b47ef6a1fa91"
+    },
+    {
+      "key": "scene-0013:1:CAM_FRONT:1531885340.512460:0",
+      "real_pixels": 67,
+      "maximum_center_error_m": 0.0,
+      "depth_sha256": "4f03c6be91d7b62e5f1f6ff920128438a6b2ccfb91487570739d19fe668a9ac5",
+      "detections_sha256": "858899e5ad50bb946d05dc3d766dceecc715093335769936b5a33e35c9e64a53"
+    },
+    {
+      "key": "scene-0013:5:CAM_FRONT_RIGHT:1531885342.520339:1",
+      "real_pixels": 1,
+      "maximum_center_error_m": 0.0,
+      "depth_sha256": "394aad08aaee6b20c221eb80a49824e83d2e2d302115fa59ee51eb1e3a0af43a",
+      "detections_sha256": "5255d600292abde0e3fa7bc914dff53a55f59e3ee927343b83617d6e03844ed5"
+    },
+    {
+      "key": "scene-0019:1:CAM_FRONT:1531885863.012466:0",
+      "real_pixels": 63,
+      "maximum_center_error_m": 0.0,
+      "depth_sha256": "8a2312b87fe600cf6026f240d096dfaa6a272b767461e3fc124abc869d2decca",
+      "detections_sha256": "8398a982f760c0a925b43c39850cb49d7e6b957505cd64713a103b2e43cc7bb1"
+    },
+    {
+      "key": "scene-0019:1:CAM_FRONT_LEFT:1531885863.004844:0",
+      "real_pixels": 2,
+      "maximum_center_error_m": 0.0,
+      "depth_sha256": "1509b4f21ec17ed40f37d0b05e02810c4f09a7efcf7cfda538e37f6984637de0",
+      "detections_sha256": "1b201061f64288a8323489108e59114824f6e44d0d4459dbe9cd9e81c17e99ab"
+    },
+    {
+      "key": "scene-0019:1:CAM_FRONT_RIGHT:1531885863.020341:0",
+      "real_pixels": 3,
+      "maximum_center_error_m": 0.0,
+      "depth_sha256": "13811493b03726536143c697ed5e2be70d3942d1b6a527bea083fe01bb629a66",
+      "detections_sha256": "a0de6f4f37c4fbb42423b61dcc1db101d8869380f55e25801b8c442bed115fe1"
+    },
+    {
+      "key": "scene-0035:1:CAM_FRONT:1532400184.162460:1",
+      "real_pixels": 1,
+      "maximum_center_error_m": 0.0,
+      "depth_sha256": "45d9fe96d2cae65efadbe9042e7159db039e20bec492782fd66696bab9ff23ba",
+      "detections_sha256": "7c833e5723a59b8ed5cb15ad6d65d690ef2944f86a16790dbb9f08e0f21ebd60"
+    },
+    {
+      "key": "scene-0035:1:CAM_FRONT_LEFT:1532400184.154844:0",
+      "real_pixels": 39,
+      "maximum_center_error_m": 0.0,
+      "depth_sha256": "0d5e84d619805b84c129a061c5d72a32dddb9f7dd3c642a411a678cbea992aaa",
+      "detections_sha256": "78a4a3cbd3cce3f789810f2c585efe95907dc6961841cfa030923fc5feb48523"
+    },
+    {
+      "key": "scene-0035:1:CAM_FRONT_RIGHT:1532400184.170339:0",
+      "real_pixels": 47,
+      "maximum_center_error_m": 0.0,
+      "depth_sha256": "0c30442ac2b50ab9d8afa08efcfc15f8335a39b0e05248b0c9d59ebca98dcc68",
+      "detections_sha256": "59c490a79b4a609b9108c1a6ea0f0ec4c6e3bd1392dc91a9a5563fad2479b92e"
+    },
+    {
+      "key": "scene-0042:1:CAM_FRONT:1532401553.112460:0",
+      "real_pixels": 2,
+      "maximum_center_error_m": 0.0,
+      "depth_sha256": "95d8983de71146bcd48bda850e0a198806998b085f68b3710bb7c947a5960060",
+      "detections_sha256": "32c8d8dd8650686fc05c3122dc81546202a5450a5a834e05cabd847ceff5f614"
+    },
+    {
+      "key": "scene-0042:1:CAM_FRONT_LEFT:1532401553.104844:0",
+      "real_pixels": 20,
+      "maximum_center_error_m": 0.0,
+      "depth_sha256": "76442d509530cc15e57dc0cb5fb10b68d0d6744c2599d938d047644ef2950d27",
+      "detections_sha256": "5e3fc9989cb644977e90253a5dae5b4401b86dc1ab4093035e261b20541df51a"
+    },
+    {
+      "key": "scene-0042:1:CAM_FRONT_RIGHT:1532401553.120339:0",
+      "real_pixels": 3,
+      "maximum_center_error_m": 0.0,
+      "depth_sha256": "3f3369bbb6308ae391bd3f6eaf989bb4e38e7862d40d20376e74ff81684403cb",
+      "detections_sha256": "4dfd1e6523b4f3a2fa6da3a39d015c7f68715ac9bf4ba19a53e2b0963f61f72a"
+    },
+    {
+      "key": "scene-0047:1:CAM_FRONT:1532402133.612460:0",
+      "real_pixels": 5,
+      "maximum_center_error_m": 0.0,
+      "depth_sha256": "875c701ad84870dcd19e279beefbf2407379b82585cab4175bcb8f972e544bf8",
+      "detections_sha256": "fe30f759b090e25752d1df8d7d023aa1e66780d6350e4033f234c9797db989f0"
+    },
+    {
+      "key": "scene-0047:1:CAM_FRONT_LEFT:1532402133.604844:1",
+      "real_pixels": 1,
+      "maximum_center_error_m": 0.0,
+      "depth_sha256": "60a92cb46ce84f950d9186de8a2325e6e945562a77abad9f4abea08fd3b5671f",
+      "detections_sha256": "e6e779622b264fc8dd3bec7c08b1ba231b97c66b6fc4197581439c237188cf3b"
+    },
+    {
+      "key": "scene-0047:1:CAM_FRONT_RIGHT:1532402133.620339:0",
+      "real_pixels": 10,
+      "maximum_center_error_m": 0.0,
+      "depth_sha256": "a92bfa0ea29d9b95732b396e8943859fd245f6259342667484d6b0fafe777e9f",
+      "detections_sha256": "87fe5360d1767cc989c71027317f462a3d4537f0334623bbf4a451fdc9b30bc8"
+    }
+  ],
+  "independent_raw_pixel_checks": 17,
+  "pixel_sampling": "first real observation per scene/camera; R1 first6 scenes; no outcome selection",
+  "original_predictions_exact": true,
+  "causal_motion_known_only": true,
+  "trace_identity_not_concatenated": true,
+  "GT_in_method": false,
+  "geometry_pose_source": "declared CAM_FRONT camera proxy, not measured rear axle pose",
+  "claims_vehicle_path_or_closed_loop": false
+}

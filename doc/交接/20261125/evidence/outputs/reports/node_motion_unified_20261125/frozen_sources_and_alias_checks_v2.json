@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "checks": {
+    "source_sha256": {
+      "passed": true,
+      "checked": 53
+    },
+    "input_sha256": {
+      "passed": true,
+      "checked": 6054
+    },
+    "evaluation_only_sha256": {
+      "passed": true,
+      "checked": 3
+    }
+  },
+  "GT_in_method": false,
+  "GPU_calls": 0,
+  "parameter_search": false,
+  "source_sha256": "afec3194f3c5f22818831b57f7d5f4830806d8d540856fd3b4cbf749a1b66e94",
+  "checked_utc": "2026-11-25T08:55:19.579683+00:00",
+  "original_predictions_exact": {
+    "R1": 1508,
+    "S2": 120
+  },
+  "independent_reports": [
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/git_integration_20261125/node_independent_R1_v1.json",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/git_integration_20261125/node_independent_S2_v1.json",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/git_integration_20261125/direction_independent_R1_v1.json",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/git_integration_20261125/direction_independent_S2_v1.json",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/git_integration_20261125/motion_evaluation_independent_v1.json"
+  ]
+}

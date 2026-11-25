@@ -1,0 +1,10 @@
+{
+  "source_sha256": "381a43896d9aee81f4fcdc6e03383df26419487551264bd05866ffb43b35ab09",
+  "role": "additive field semantics; legacy estimate and verified raw state stay distinct",
+  "motion_state_semantics": "verified_raw_evidence",
+  "configuration_changed": false,
+  "inputs": {
+    "R1": "85a881af3f4c925b727fc9a87268128f62f6bb00cd30f621f4473cffec02fb51",
+    "S2": "7abb7d1bd36e03e4edb677d3259f63c808b15b0d2b1ef8821771a1dec4144b27"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "created_utc": "2026-11-25T08:51:47.113706+00:00",
+  "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/node_motion_unified_20261125_v2/S2_frames.jsonl.gz",
+  "sha256": "c519948213e212a1e26f70fd573a343923ad76d0920b5fb505e91fa16f922668",
+  "task_policy_unchanged": true,
+  "addition": "unified node schema from independent node/motion lane; same prediction geometry/IDs and same120 frames"
+}

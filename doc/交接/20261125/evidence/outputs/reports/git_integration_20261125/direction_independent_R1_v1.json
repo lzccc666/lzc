@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "scope": "R1",
+  "frames": 1508,
+  "nodes": 5600,
+  "raw_velocity_available": 4245,
+  "prior_nodes_byte_content_preserved": true,
+  "unknown_velocity_not_semantic": true,
+  "body_orientation_not_inferred": true,
+  "original_sha256": "06077175f63ce89b8dc1606a1a68d75229eb379cb2468ce8aca43bdc20c2fec2",
+  "extended_sha256": "85a881af3f4c925b727fc9a87268128f62f6bb00cd30f621f4473cffec02fb51"
+}

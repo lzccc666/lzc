@@ -1,0 +1,975 @@
+{
+  "passed": true,
+  "protection_count": 160,
+  "protected": [
+    {
+      "path": "/root/autodl-tmp/lizichong/AGENTS.md",
+      "expected": "d00d1a5fee7e9a441247f6c0179ecda7e8892b5c53d92fbabb83986413c0ac9b",
+      "actual": "d00d1a5fee7e9a441247f6c0179ecda7e8892b5c53d92fbabb83986413c0ac9b",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/MEMORY.md",
+      "expected": "f1db9a84f9b586fff70f61d09cd3bdda78d4b2cac953fbde8af45533ed034fd6",
+      "actual": "f1db9a84f9b586fff70f61d09cd3bdda78d4b2cac953fbde8af45533ed034fd6",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/PAPER_MEMORY.md",
+      "expected": "2a978751be1efd888a130444bc31f146666c7f4fcb62e37c2f92aa2fe196f2b2",
+      "actual": "2a978751be1efd888a130444bc31f146666c7f4fcb62e37c2f92aa2fe196f2b2",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/completion/association.py",
+      "expected": "13154cc664d9b1528c869575539c444bb20d8e2cc3a119aa1e4d01f7c9d5ccd4",
+      "actual": "13154cc664d9b1528c869575539c444bb20d8e2cc3a119aa1e4d01f7c9d5ccd4",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/completion/config_comparison.py",
+      "expected": "e831723cdadfa5441ed6c9ba3bc01f91af37dc0c65929febd3041d017f7dbc97",
+      "actual": "e831723cdadfa5441ed6c9ba3bc01f91af37dc0c65929febd3041d017f7dbc97",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/completion/depth.py",
+      "expected": "c3d0b1efa3cdc91a82b75cdf872fe923ff68b240090a49022d3a7481ab653b0e",
+      "actual": "c3d0b1efa3cdc91a82b75cdf872fe923ff68b240090a49022d3a7481ab653b0e",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/completion/evidence.py",
+      "expected": "7010f1c26093c0483d2ee4bfac16e933a0809eaa2a6d27d60cc428acc05b7748",
+      "actual": "7010f1c26093c0483d2ee4bfac16e933a0809eaa2a6d27d60cc428acc05b7748",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/completion/fault_robustness.py",
+      "expected": "c4cd34b4a8c94be0f01ca9145eaf0b0be11a88b4b6d52de985442fba0bb2a50e",
+      "actual": "c4cd34b4a8c94be0f01ca9145eaf0b0be11a88b4b6d52de985442fba0bb2a50e",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/completion/goal_selection_ablation.py",
+      "expected": "7c78c920f0db40580fc514e6abfd26ab63fa33931ddf7401cc91b6c796084bd1",
+      "actual": "7c78c920f0db40580fc514e6abfd26ab63fa33931ddf7401cc91b6c796084bd1",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/completion/navigation_diagnostics.py",
+      "expected": "291f75e65b8d0c398064aef6e0123ec7a77354fabcc9ba36343692b81c46e82f",
+      "actual": "291f75e65b8d0c398064aef6e0123ec7a77354fabcc9ba36343692b81c46e82f",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/completion/quality.py",
+      "expected": "9d03eeecbd4aaa37708df0894043e796e245c750a7346a33369db150b51da31a",
+      "actual": "9d03eeecbd4aaa37708df0894043e796e245c750a7346a33369db150b51da31a",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/completion/reference_reachability.py",
+      "expected": "b0576ac64a74387b886af792dd10cff831620956b7ec1c7cb0b8df79115b9894",
+      "actual": "b0576ac64a74387b886af792dd10cff831620956b7ec1c7cb0b8df79115b9894",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/completion/reference_reachability_audit.py",
+      "expected": "db3bbfb3afef330995d0a01bbc17072c22de032cb632a6250c08c3c99535643f",
+      "actual": "db3bbfb3afef330995d0a01bbc17072c22de032cb632a6250c08c3c99535643f",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/completion/reference_reachability_finalize.py",
+      "expected": "96591e85fe25097c4ad3cd431171b8d4a375ab48a157c946663bddd0eaa19d3b",
+      "actual": "96591e85fe25097c4ad3cd431171b8d4a375ab48a157c946663bddd0eaa19d3b",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/completion/selection_map_transfer.py",
+      "expected": "084e77c2497a379a495146c5ae9f28b60c49601636ac8d7b40fe2945bc3ce84d",
+      "actual": "084e77c2497a379a495146c5ae9f28b60c49601636ac8d7b40fe2945bc3ce84d",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/completion/stage9.py",
+      "expected": "466a5b34dfd039e691232dc02e01869ab700b46ae8162f8fb05232c30a805dd5",
+      "actual": "466a5b34dfd039e691232dc02e01869ab700b46ae8162f8fb05232c30a805dd5",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/completion/temporal_identity_evaluation.py",
+      "expected": "c5a57b4edc7ee979888b139988f99a8df62031985fec9b3b73b5b49581f59b15",
+      "actual": "c5a57b4edc7ee979888b139988f99a8df62031985fec9b3b73b5b49581f59b15",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/hydra_configs/base_detections.yaml",
+      "expected": "0872105ee4e6152fcec55188f5665845d5d31463ee9970771276cf69f7ce5476",
+      "actual": "0872105ee4e6152fcec55188f5665845d5d31463ee9970771276cf69f7ce5476",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/hydra_configs/base_mapping.yaml",
+      "expected": "12e4216ad29eee0677f172d9a279de7bfaaa946ebc959ab1d3204031fb5621c0",
+      "actual": "12e4216ad29eee0677f172d9a279de7bfaaa946ebc959ab1d3204031fb5621c0",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/hydra_configs/incremental_navigation.yaml",
+      "expected": "14551182f5f2a6efe7e3912ee33568d3650045a0feaa3337b7da5a45b155c643",
+      "actual": "14551182f5f2a6efe7e3912ee33568d3650045a0feaa3337b7da5a45b155c643",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/hydra_configs/nuscenes.yaml",
+      "expected": "50e234ff2c3c7682a78a5dfa7a11282d268ea15fc14490485d490a57d0debc3d",
+      "actual": "50e234ff2c3c7682a78a5dfa7a11282d268ea15fc14490485d490a57d0debc3d",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/hydra_configs/project_v2_integration_regression.yaml",
+      "expected": "2e9c2a8621b46a6fb849f3ba8998a28a5a7216f6561fc167c7eaca74d8ded5e6",
+      "actual": "2e9c2a8621b46a6fb849f3ba8998a28a5a7216f6561fc167c7eaca74d8ded5e6",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/hydra_configs/qwen_semantic.yaml",
+      "expected": "afcb6abb4f06664cae7e1144b29562c41fd79279e46024bc6efc5d769504fb22",
+      "actual": "afcb6abb4f06664cae7e1144b29562c41fd79279e46024bc6efc5d769504fb22",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/hydra_configs/replica.yaml",
+      "expected": "9ce285f6565e549fe1213778ce4ca7bc2639d856ca902d94b6b972668f4ab313",
+      "actual": "9ce285f6565e549fe1213778ce4ca7bc2639d856ca902d94b6b972668f4ab313",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/hydra_configs/sam.yaml",
+      "expected": "9381072f341d9921169b2df08c3901a028adea7a4cced3790d6b78cdc42f754f",
+      "actual": "9381072f341d9921169b2df08c3901a028adea7a4cced3790d6b78cdc42f754f",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/hydra_configs/scenegraph_relations.yaml",
+      "expected": "6174777eedc4436daac4bf7ebdbba89983752e77f619bc0d121100b7e11ed119",
+      "actual": "6174777eedc4436daac4bf7ebdbba89983752e77f619bc0d121100b7e11ed119",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/hydra_configs/semantic_navigation.yaml",
+      "expected": "e8ca45cdbb10507e9391c3331b6a2bd377b19a501a6e489293c842e3ad6231f1",
+      "actual": "e8ca45cdbb10507e9391c3331b6a2bd377b19a501a6e489293c842e3ad6231f1",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/hydra_configs/streamlined_detections.yaml",
+      "expected": "90ac2ccd86505cd81a66071fba00717e6c904acfafba9b07d0ede3836ea0671f",
+      "actual": "90ac2ccd86505cd81a66071fba00717e6c904acfafba9b07d0ede3836ea0671f",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/hydra_configs/streamlined_mapping.yaml",
+      "expected": "76237fb25765dfb257b9f4b05b278cb8d197649c936f2bb2a4265ed695146b60",
+      "actual": "76237fb25765dfb257b9f4b05b278cb8d197649c936f2bb2a4265ed695146b60",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/__init__.py",
+      "expected": "1a641541de8ad170f2fcdc70d7338a2397c8fe9695ef805cf97b196fa95ad1a2",
+      "actual": "1a641541de8ad170f2fcdc70d7338a2397c8fe9695ef805cf97b196fa95ad1a2",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/evaluation.py",
+      "expected": "9fd0e526b61f01ef094f079c47efbbe4244f4ef63c66c70ebc6e4da67de50541",
+      "actual": "9fd0e526b61f01ef094f079c47efbbe4244f4ef63c66c70ebc6e4da67de50541",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/io.py",
+      "expected": "86555960cdc263365497399fce47bdf0e6609626b9eb5be4d532100016c25fb4",
+      "actual": "86555960cdc263365497399fce47bdf0e6609626b9eb5be4d532100016c25fb4",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/lane_audit.py",
+      "expected": "c2e509cc3c0661c78429c77f42d5a10dff9c7fb45e963dff8b672f69395037e6",
+      "actual": "c2e509cc3c0661c78429c77f42d5a10dff9c7fb45e963dff8b672f69395037e6",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/lane_constraints.py",
+      "expected": "aac7da44a65887481f9fbbce7fdf09356097f44b755413b71a7c4b20c46611c5",
+      "actual": "aac7da44a65887481f9fbbce7fdf09356097f44b755413b71a7c4b20c46611c5",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/lane_geometry.py",
+      "expected": "cbeeecd15147a5de9fb59762d52e134ef96c650b10a7e506da923dbbe923d090",
+      "actual": "cbeeecd15147a5de9fb59762d52e134ef96c650b10a7e506da923dbbe923d090",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/lane_validation.py",
+      "expected": "8195d0706612de6aeb614501a5790ec8ce5c7c4ffddb7da9933e75cc4bdf9fd9",
+      "actual": "8195d0706612de6aeb614501a5790ec8ce5c7c4ffddb7da9933e75cc4bdf9fd9",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/navstage2_20261124.py",
+      "expected": "9d27c2f2483bdd5b3400090477ba84346e9ece472c0ab587e455c9b469f4f6f5",
+      "actual": "9d27c2f2483bdd5b3400090477ba84346e9ece472c0ab587e455c9b469f4f6f5",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/navstage2_runner_20261124.py",
+      "expected": "7cc5580404d76c1b56c6521582d47d5494404d601f968b05782c317eb371cef9",
+      "actual": "7cc5580404d76c1b56c6521582d47d5494404d601f968b05782c317eb371cef9",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/online.py",
+      "expected": "1f908ecbf0da1b2fe4f2c6e8cdb7e075c31fc14febb580d96fb6f46b9643a6f6",
+      "actual": "1f908ecbf0da1b2fe4f2c6e8cdb7e075c31fc14febb580d96fb6f46b9643a6f6",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/pipeline.py",
+      "expected": "c4a6fdb6ea848024a2f98ab7a8b98a602ebd4ab59102aafa8c9e62ffb0fb2a13",
+      "actual": "c4a6fdb6ea848024a2f98ab7a8b98a602ebd4ab59102aafa8c9e62ffb0fb2a13",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/planner.py",
+      "expected": "585ddc41d7ca1bfc8508dce8cdae1cde81ed5b4982ab3b6dbaa478a4f393bb54",
+      "actual": "585ddc41d7ca1bfc8508dce8cdae1cde81ed5b4982ab3b6dbaa478a4f393bb54",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/reference_guided_vehicle.py",
+      "expected": "fe65de18c10b7dd4ea2d07df0f3edcfc65772b6fbd4cca10b0f91139276cd9f3",
+      "actual": "fe65de18c10b7dd4ea2d07df0f3edcfc65772b6fbd4cca10b0f91139276cd9f3",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/replan_policy.py",
+      "expected": "8765b64d87df117b11655f57f66d54fed9b0a4a4dfc74e03fdb4de75f06f9c45",
+      "actual": "8765b64d87df117b11655f57f66d54fed9b0a4a4dfc74e03fdb4de75f06f9c45",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/semantic.py",
+      "expected": "95645c520c37819f5ca0e3feebcfd5e2282cfc4260eb24caea04d04ca94dbf59",
+      "actual": "95645c520c37819f5ca0e3feebcfd5e2282cfc4260eb24caea04d04ca94dbf59",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/semantic_tasks_20261123.py",
+      "expected": "073d51444ea8ede3f17bec9e9b0d4a10208fb5e99aa1ca3ea99895a0a9af52b6",
+      "actual": "073d51444ea8ede3f17bec9e9b0d4a10208fb5e99aa1ca3ea99895a0a9af52b6",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/state_machine.py",
+      "expected": "1af29db3ba7f1651e053bb1ba0a548e2458a33a023063b2b6baabd38f6c0540b",
+      "actual": "1af29db3ba7f1651e053bb1ba0a548e2458a33a023063b2b6baabd38f6c0540b",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/target_selector.py",
+      "expected": "0a9e5ebfbdf89d1641863ee7b47a458475896e140cd1d7cc632161803c8855d2",
+      "actual": "0a9e5ebfbdf89d1641863ee7b47a458475896e140cd1d7cc632161803c8855d2",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/task_replay_20261123.py",
+      "expected": "b7554de03a317e6eaab0b972f86417c8c76609497d6199679a43fb7e7fd126fe",
+      "actual": "b7554de03a317e6eaab0b972f86417c8c76609497d6199679a43fb7e7fd126fe",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/types.py",
+      "expected": "0524d36a7909f4819a56723ac74482c6e61e7b79b780adb8f63fcb9a19370034",
+      "actual": "0524d36a7909f4819a56723ac74482c6e61e7b79b780adb8f63fcb9a19370034",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/vehicle_geometry.py",
+      "expected": "ae93a8ae8e9af6d874eafad1d57e5b2e65f54f45b0c90ccbdcc32d79743a9378",
+      "actual": "ae93a8ae8e9af6d874eafad1d57e5b2e65f54f45b0c90ccbdcc32d79743a9378",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/vehicle_planner.py",
+      "expected": "1f17b4c03b9989b3ffd0133469619fb66eb522d9b89ff8071ebb547f49f29b95",
+      "actual": "1f17b4c03b9989b3ffd0133469619fb66eb522d9b89ff8071ebb547f49f29b95",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/project_paths.py",
+      "expected": "cbb9c0e65ed1630291dced8c4df690409f1b7fb78887c973da6fb84998c354c4",
+      "actual": "cbb9c0e65ed1630291dced8c4df690409f1b7fb78887c973da6fb84998c354c4",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/scenegraph/relations.py",
+      "expected": "099e967bdbe5cd0ecf63fe90d094e5f9638d5c4df3643148d7671ee6fa25c105",
+      "actual": "099e967bdbe5cd0ecf63fe90d094e5f9638d5c4df3643148d7671ee6fa25c105",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/slam/audited_mapper.py",
+      "expected": "60cc24a28289dc5ac037707debb8e8cea7d6581993beb277b187db2fa6804e27",
+      "actual": "60cc24a28289dc5ac037707debb8e8cea7d6581993beb277b187db2fa6804e27",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/slam/current_geometry_mapper.py",
+      "expected": "8e35b82abdc8e37349391dde2bb6e1b079ab71d27dd9caaa37e8c4234e3a854f",
+      "actual": "8e35b82abdc8e37349391dde2bb6e1b079ab71d27dd9caaa37e8c4234e3a854f",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/slam/dense_refinement.py",
+      "expected": "6b3626e64bb26b2d2c578e06f6cebea04f4198a503abfbabda339b716626cc10",
+      "actual": "6b3626e64bb26b2d2c578e06f6cebea04f4198a503abfbabda339b716626cc10",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/slam/evidence_mapper.py",
+      "expected": "11fa68d1adb6be33effe8f789e27d09a4df63e4b10acfb3d522670af95a6c748",
+      "actual": "11fa68d1adb6be33effe8f789e27d09a4df63e4b10acfb3d522670af95a6c748",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/slam/mapnext_20261124_mapper.py",
+      "expected": "1aad6969dbee5fac03f36f02d09c100d092dacee082e2d2216ff13bc3502cea7",
+      "actual": "1aad6969dbee5fac03f36f02d09c100d092dacee082e2d2216ff13bc3502cea7",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/slam/mapping.py",
+      "expected": "95089084ed1ff4c2ec4bfd3414edec6c4a2145a16135373b66db7e9fed6d99d7",
+      "actual": "95089084ed1ff4c2ec4bfd3414edec6c4a2145a16135373b66db7e9fed6d99d7",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/slam/motion_association_mapper.py",
+      "expected": "f97b76b531a60d90a78cce8c167156dcf2ee139874dfb498e7de31259e1c2c28",
+      "actual": "f97b76b531a60d90a78cce8c167156dcf2ee139874dfb498e7de31259e1c2c28",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/slam/mvrepair_lifecycle_20261123_mapper.py",
+      "expected": "be0cfa38b872a310f1ee662be8f1e0c321917ab142ef797d7717654f23bc1222",
+      "actual": "be0cfa38b872a310f1ee662be8f1e0c321917ab142ef797d7717654f23bc1222",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/slam/quality_mapper.py",
+      "expected": "b2f90dd6522fdba1f13c534376e6422bfb987316184cf19481e18e8d292e402a",
+      "actual": "b2f90dd6522fdba1f13c534376e6422bfb987316184cf19481e18e8d292e402a",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/slam/sparse_observations.py",
+      "expected": "cdebdf539acf43a0e3735b5792a41f907a8c824e59095e49eb6a2ffd1e839cad",
+      "actual": "cdebdf539acf43a0e3735b5792a41f907a8c824e59095e49eb6a2ffd1e839cad",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/slam/streamlined_mapping.py",
+      "expected": "00ce7e26949c145bdd1b42882a8923e9ff6e106b2101ff288fd6ef05498b8676",
+      "actual": "00ce7e26949c145bdd1b42882a8923e9ff6e106b2101ff288fd6ef05498b8676",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/slam/utils.py",
+      "expected": "1fc71fe993ba61c3d264d6434df5b195f7347953fbe3d53ec9cc1e4fe007b94d",
+      "actual": "1fc71fe993ba61c3d264d6434df5b195f7347953fbe3d53ec9cc1e4fe007b94d",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navbench_stage1_20261124_v1/denominator_freeze.json",
+      "expected": "c20f0698eb78ee3a1a58ec9a11712265c9fe658d7ede6cd71b4a8fde39142ee8",
+      "actual": "c20f0698eb78ee3a1a58ec9a11712265c9fe658d7ede6cd71b4a8fde39142ee8",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navbench_stage1_20261124_v1/effective_amendment_v3.json",
+      "expected": "c83cf0f8320187a6cf8318ce55a8b25f5f05a9c8b1e52f35b6e9bd0ac09c1bca",
+      "actual": "c83cf0f8320187a6cf8318ce55a8b25f5f05a9c8b1e52f35b6e9bd0ac09c1bca",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navbench_stage1_20261124_v1/evaluation_only/certificates.jsonl",
+      "expected": "e83b98de010a4b68e8eb6bf7de5657a997135c9bcd2c01a3bc06a895302f772a",
+      "actual": "e83b98de010a4b68e8eb6bf7de5657a997135c9bcd2c01a3bc06a895302f772a",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navbench_stage1_20261124_v1/evaluation_only/conditional_reference_labels.jsonl",
+      "expected": "6767bde7abed634f6974ec17b53dcfd71667ca5dd2c212592fce732d786d353c",
+      "actual": "6767bde7abed634f6974ec17b53dcfd71667ca5dd2c212592fce732d786d353c",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navbench_stage1_20261124_v1/manifest.json",
+      "expected": "bf90fef235ca87c833c6233629b2953eb12fc6a62638fecc1f32c5415c073e61",
+      "actual": "bf90fef235ca87c833c6233629b2953eb12fc6a62638fecc1f32c5415c073e61",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navbench_stage1_20261124_v1/preregistration.json",
+      "expected": "dfec70c5a63b354ef0fc8b48e8312466a841adfedfe48d1546331b9554602e82",
+      "actual": "dfec70c5a63b354ef0fc8b48e8312466a841adfedfe48d1546331b9554602e82",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navbench_stage1_20261124_v1/source_binding_overlay_v1.jsonl",
+      "expected": "5f64ca493d58310cfc7cbc33acedeb40185050be76108eae56152beb4838befe",
+      "actual": "5f64ca493d58310cfc7cbc33acedeb40185050be76108eae56152beb4838befe",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navbench_stage1_20261124_v1/task_record.schema_v2.json",
+      "expected": "5fab8695b03f09a7e45327b0aab3bc721a03e82ed75d7f6035fd71d97831b353",
+      "actual": "5fab8695b03f09a7e45327b0aab3bc721a03e82ed75d7f6035fd71d97831b353",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navbench_stage1_20261124_v1/task_registry.jsonl",
+      "expected": "40aca597746a2b73b41ad68d711b7aea350c0af3939cc9b9ed4b49ea6e45c35e",
+      "actual": "40aca597746a2b73b41ad68d711b7aea350c0af3939cc9b9ed4b49ea6e45c35e",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navstage2_20261124_v1/manifest.json",
+      "expected": "6cb44579418fffb9e0473648690e38a49dba996707a3e2e5bb48acfb4709267a",
+      "actual": "6cb44579418fffb9e0473648690e38a49dba996707a3e2e5bb48acfb4709267a",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navstage2_20261124_v1/method_inputs.jsonl",
+      "expected": "1eda724fed59032875a3c92b5051533594858c0f87789323a0249b2fc70c7894",
+      "actual": "1eda724fed59032875a3c92b5051533594858c0f87789323a0249b2fc70c7894",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navstage2_20261124_v2/manifest.json",
+      "expected": "45138c7b1414098f3decea5ecc3d6439bb63c0c86b594d356fcd85c66f72eb58",
+      "actual": "45138c7b1414098f3decea5ecc3d6439bb63c0c86b594d356fcd85c66f72eb58",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navstage2_20261124_v2/method_inputs.jsonl",
+      "expected": "1eda724fed59032875a3c92b5051533594858c0f87789323a0249b2fc70c7894",
+      "actual": "1eda724fed59032875a3c92b5051533594858c0f87789323a0249b2fc70c7894",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navstage2_repair_20261124_v1/validation_queries.jsonl",
+      "expected": "624a4fef5ac4a3229c20f6178b06a38b07fde90ad85ccc19fe1105f5e429f4d5",
+      "actual": "624a4fef5ac4a3229c20f6178b06a38b07fde90ad85ccc19fe1105f5e429f4d5",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_goals_full_001/queries.jsonl",
+      "expected": "1676f1f6ba5fe79522718493c3cbe105a05beb879a2f7b55b31936110eadfafe",
+      "actual": "1676f1f6ba5fe79522718493c3cbe105a05beb879a2f7b55b31936110eadfafe",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_goals_full_001/report.json",
+      "expected": "3c8b6b691239983d9753aa081d808e26e40d1d8955a0c02d7888a89508bc01a6",
+      "actual": "3c8b6b691239983d9753aa081d808e26e40d1d8955a0c02d7888a89508bc01a6",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/annotation/reference_reachability_reserved_full_002/audit_001/auditor_source.py",
+      "expected": "db3bbfb3afef330995d0a01bbc17072c22de032cb632a6250c08c3c99535643f",
+      "actual": "db3bbfb3afef330995d0a01bbc17072c22de032cb632a6250c08c3c99535643f",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/annotation/reference_reachability_reserved_full_002/audit_001/queries.jsonl",
+      "expected": "b80b43134a2420912cccb3f4d0e6f9aadb1ff99736cc52c756586302438bfb70",
+      "actual": "b80b43134a2420912cccb3f4d0e6f9aadb1ff99736cc52c756586302438bfb70",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/annotation/reference_reachability_reserved_full_002/audit_001/report.json",
+      "expected": "2bbf4a1f93f94fdabda6f67a75fc7f403b4191b9edb25fa3142f49342b179bf8",
+      "actual": "2bbf4a1f93f94fdabda6f67a75fc7f403b4191b9edb25fa3142f49342b179bf8",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/annotation/reference_reachability_reserved_full_002/audit_001/witness_checks.json",
+      "expected": "2ad00e650d6b4a5e7b1934fed2ad584d87a3fdf5dd2893f8e7e25d1bd7e18899",
+      "actual": "2ad00e650d6b4a5e7b1934fed2ad584d87a3fdf5dd2893f8e7e25d1bd7e18899",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/reports/paper_campaign_20261123/navigation/R1_false_selection_case_evidence.json",
+      "expected": "24170784e9db088e51f98ec676af3ef4b5a722f2eda2a489a1eef3728311fec1",
+      "actual": "24170784e9db088e51f98ec676af3ef4b5a722f2eda2a489a1eef3728311fec1",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/reports/paper_campaign_20261123/navigation/episode_protocol_status.json",
+      "expected": "dfae44b8bd210bd524f02383c3e15fead2be37ee27f7483ecc5ca76a4bb3cb9c",
+      "actual": "dfae44b8bd210bd524f02383c3e15fead2be37ee27f7483ecc5ca76a4bb3cb9c",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/reports/paper_campaign_20261123/navigation/paper_nav_20261123_first_104746_start.json",
+      "expected": "263d642d94ceb8b7c8716116b048a73ba3510c098be50c29bb9c790d6942db74",
+      "actual": "263d642d94ceb8b7c8716116b048a73ba3510c098be50c29bb9c790d6942db74",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/reports/paper_campaign_20261123/navigation/same_task_navigation_chain.csv",
+      "expected": "33bf82176720a5cad0bc107431a0a9a041d2659012589fc740a980be27e4402b",
+      "actual": "33bf82176720a5cad0bc107431a0a9a041d2659012589fc740a980be27e4402b",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/reports/paper_campaign_20261123/navigation/same_task_navigation_chain.json",
+      "expected": "ec1685cb732f70039fc21bdaa46cf0c92110ae886d3e9df086457fe32975f211",
+      "actual": "ec1685cb732f70039fc21bdaa46cf0c92110ae886d3e9df086457fe32975f211",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/reports/paper_campaign_20261123/navigation/shared_rejection_workpoints.csv",
+      "expected": "3392f103d2c6d72629af65b4ad8dc078f27cb61108c5f7c6509213558debbecd",
+      "actual": "3392f103d2c6d72629af65b4ad8dc078f27cb61108c5f7c6509213558debbecd",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/reports/paper_campaign_20261123/navigation/shared_rejection_workpoints.json",
+      "expected": "a976469bde2f21a4d5ca71cdaa261aac4359f65484f60eb1e52dc8983b26c9b3",
+      "actual": "a976469bde2f21a4d5ca71cdaa261aac4359f65484f60eb1e52dc8983b26c9b3",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/reports/paper_campaign_20261123/navigation/target_selection_complete.csv",
+      "expected": "7a67edc5baae0ade72dde388d45093d6043a4d811559c8f3ad993a35c0c29c07",
+      "actual": "7a67edc5baae0ade72dde388d45093d6043a4d811559c8f3ad993a35c0c29c07",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/reports/paper_campaign_20261123/navigation/target_selection_complete.json",
+      "expected": "e4023566cb44bd9de70cd57d892636583a399516cb9e683f3e9f40d0fb62d79b",
+      "actual": "e4023566cb44bd9de70cd57d892636583a399516cb9e683f3e9f40d0fb62d79b",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/test/iterations/navstage2_20261124_v1/manifest.json",
+      "expected": "6cb44579418fffb9e0473648690e38a49dba996707a3e2e5bb48acfb4709267a",
+      "actual": "6cb44579418fffb9e0473648690e38a49dba996707a3e2e5bb48acfb4709267a",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/test/iterations/navstage2_20261124_v1/method_predictions.jsonl",
+      "expected": "4c8098b6c3fbcfa79d3d92fbbd04f5558e1518db3a7ac83b76da7a22b7bcf3e3",
+      "actual": "4c8098b6c3fbcfa79d3d92fbbd04f5558e1518db3a7ac83b76da7a22b7bcf3e3",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/test/iterations/navstage2_20261124_v1/source_snapshot.tar.gz",
+      "expected": "de7f50fc4a26b5dc5ad72fa72022ddf663d536a9e2798d113af7dc713c8bc2d3",
+      "actual": "de7f50fc4a26b5dc5ad72fa72022ddf663d536a9e2798d113af7dc713c8bc2d3",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/test/iterations/navstage2_20261124_v2/evaluation_only/queries.jsonl",
+      "expected": "c663d8bc0775acc94d9d870682c1e6c73a1c1e518be0835e23ffcbbc63e277f7",
+      "actual": "c663d8bc0775acc94d9d870682c1e6c73a1c1e518be0835e23ffcbbc63e277f7",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/test/iterations/navstage2_20261124_v2/evaluation_only/summary.json",
+      "expected": "339249b925f3319813d7c260d72b1f1b80be4a2d3f8ebe11e37c4aa313882dc4",
+      "actual": "339249b925f3319813d7c260d72b1f1b80be4a2d3f8ebe11e37c4aa313882dc4",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/test/iterations/navstage2_20261124_v2/manifest.json",
+      "expected": "45138c7b1414098f3decea5ecc3d6439bb63c0c86b594d356fcd85c66f72eb58",
+      "actual": "45138c7b1414098f3decea5ecc3d6439bb63c0c86b594d356fcd85c66f72eb58",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/test/iterations/navstage2_20261124_v2/method_predictions.jsonl",
+      "expected": "113c83d755c9a67fd5d4a2879fc50aba82e00a8ed685bed8bc3641a7e89fa166",
+      "actual": "113c83d755c9a67fd5d4a2879fc50aba82e00a8ed685bed8bc3641a7e89fa166",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/test/iterations/navstage2_20261124_v2/run_summary.json",
+      "expected": "ed4bd66968b1c03611f4f80bb3c93a835dd2bdf71bd913f35de2d159cd0a0565",
+      "actual": "ed4bd66968b1c03611f4f80bb3c93a835dd2bdf71bd913f35de2d159cd0a0565",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/test/iterations/navstage2_20261124_v2/source_snapshot.tar.gz",
+      "expected": "0b224597dce4f99d1bd523c9d39c264749f8299de8068234205dc980bdc70352",
+      "actual": "0b224597dce4f99d1bd523c9d39c264749f8299de8068234205dc980bdc70352",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/navstage2_sparse_evidence_20261124_v1/raw_navigation_evidence.jsonl.gz",
+      "expected": "915d2cea930e1861d4bc5f5be98f58fc330eace7fcf6af3e0a623e4984a6a590",
+      "actual": "915d2cea930e1861d4bc5f5be98f58fc330eace7fcf6af3e0a623e4984a6a590",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/navstage2_sparse_evidence_20261124_v1/summary.json",
+      "expected": "0dd299f0eb743d62f97dc6e971dabbc6a0a19f3c2843bcd6ac68656ec99eba85",
+      "actual": "0dd299f0eb743d62f97dc6e971dabbc6a0a19f3c2843bcd6ac68656ec99eba85",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/paper_nav_20261123_first_104746/same_task_chain_records.jsonl",
+      "expected": "440795510d941e5bf8a221bead4ce0417e2f38a3984067e81ce0a13f4273e08b",
+      "actual": "440795510d941e5bf8a221bead4ce0417e2f38a3984067e81ce0a13f4273e08b",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/release.json",
+      "expected": "12c26b1785d09d4b593d841152b35c59d534ed0527f32cc4d8e4760d81cd7e2b",
+      "actual": "12c26b1785d09d4b593d841152b35c59d534ed0527f32cc4d8e4760d81cd7e2b",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0012/frames.jsonl.gz",
+      "expected": "bf7d7e5e390b422bbcb8ea95404fac6bdf3ca4d4403ca9a6318587f5ca2fc54f",
+      "actual": "bf7d7e5e390b422bbcb8ea95404fac6bdf3ca4d4403ca9a6318587f5ca2fc54f",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0013/frames.jsonl.gz",
+      "expected": "4c9032a6029ff756ff31f1fb4e139a482faab3d2534e990724969ad28b03570f",
+      "actual": "4c9032a6029ff756ff31f1fb4e139a482faab3d2534e990724969ad28b03570f",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0014/frames.jsonl.gz",
+      "expected": "19e21cd2e93faa70f0620ada6d7cfe86ca8d75dac51a4e3f069d5a90dde3ea37",
+      "actual": "19e21cd2e93faa70f0620ada6d7cfe86ca8d75dac51a4e3f069d5a90dde3ea37",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0015/frames.jsonl.gz",
+      "expected": "6bee75467b373add0c12de152904c216f874c13213ba6516fbe9f231288ff905",
+      "actual": "6bee75467b373add0c12de152904c216f874c13213ba6516fbe9f231288ff905",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0016/frames.jsonl.gz",
+      "expected": "4925077ac3fc26209366d9ff9d2f59d893fbe668b076d70b5349cae5f504360b",
+      "actual": "4925077ac3fc26209366d9ff9d2f59d893fbe668b076d70b5349cae5f504360b",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0019/frames.jsonl.gz",
+      "expected": "a9a81fc1193b228d5633c751f2155066d2031f9294cd9e0c70567019e6e95207",
+      "actual": "a9a81fc1193b228d5633c751f2155066d2031f9294cd9e0c70567019e6e95207",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0020/frames.jsonl.gz",
+      "expected": "919211602df3a9248a3fd7cb15c2ed598f227860af6bc756e5555a2a8f2a44ff",
+      "actual": "919211602df3a9248a3fd7cb15c2ed598f227860af6bc756e5555a2a8f2a44ff",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0021/frames.jsonl.gz",
+      "expected": "71577dd38b6d80299bddce8a85808136a9420985ca44682d7e138eeba137684b",
+      "actual": "71577dd38b6d80299bddce8a85808136a9420985ca44682d7e138eeba137684b",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0025/frames.jsonl.gz",
+      "expected": "83258fb0f74566865f75e2fdabc5882196a7c43b8155aa4600f3e48401c65ae3",
+      "actual": "83258fb0f74566865f75e2fdabc5882196a7c43b8155aa4600f3e48401c65ae3",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0026/frames.jsonl.gz",
+      "expected": "4f26eed7fd768f528d5999e7d343b2b39b3fc58ff2bdeeb91005b2c38f911ba9",
+      "actual": "4f26eed7fd768f528d5999e7d343b2b39b3fc58ff2bdeeb91005b2c38f911ba9",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0027/frames.jsonl.gz",
+      "expected": "5810dabedfe6c4ea43eae49dda1316642060ab85a8522846521f761362fad32c",
+      "actual": "5810dabedfe6c4ea43eae49dda1316642060ab85a8522846521f761362fad32c",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0030/frames.jsonl.gz",
+      "expected": "5a12982c6da26251179ccc81f77766335ec1cd1cc2b08b3d304d4ce210b96f60",
+      "actual": "5a12982c6da26251179ccc81f77766335ec1cd1cc2b08b3d304d4ce210b96f60",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0032/frames.jsonl.gz",
+      "expected": "5ffc3307e950dcb943fe912b1502fcf588ea44f856cd70244a3954302e18b8a0",
+      "actual": "5ffc3307e950dcb943fe912b1502fcf588ea44f856cd70244a3954302e18b8a0",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0035/frames.jsonl.gz",
+      "expected": "c79b58d3f563ce92b0c274298caa5e4023c6329a8a3cbf317ae03ddff434c2fb",
+      "actual": "c79b58d3f563ce92b0c274298caa5e4023c6329a8a3cbf317ae03ddff434c2fb",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0038/frames.jsonl.gz",
+      "expected": "b12197adf6c89ae732a47f0fadac3154e78b2cabb9b39733b9ac326d350e381a",
+      "actual": "b12197adf6c89ae732a47f0fadac3154e78b2cabb9b39733b9ac326d350e381a",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0039/frames.jsonl.gz",
+      "expected": "75455983a38d01c47f95a6e853a4a1d1bffc812c84de1321d7705de2573dc573",
+      "actual": "75455983a38d01c47f95a6e853a4a1d1bffc812c84de1321d7705de2573dc573",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0042/frames.jsonl.gz",
+      "expected": "5496a5d50b0fa920b1326b463f4390c36f7ab6b34c5c0aa443d2ee7a2cf8aa69",
+      "actual": "5496a5d50b0fa920b1326b463f4390c36f7ab6b34c5c0aa443d2ee7a2cf8aa69",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0043/frames.jsonl.gz",
+      "expected": "1c0f80b406b61b3beb3ca3dcd218697f1ea05d5e6e981e57b66f4c793bc03920",
+      "actual": "1c0f80b406b61b3beb3ca3dcd218697f1ea05d5e6e981e57b66f4c793bc03920",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0044/frames.jsonl.gz",
+      "expected": "04260c9b117e116f225c596419ae83d55f40f6b7f86ab849c3ee11771298bb05",
+      "actual": "04260c9b117e116f225c596419ae83d55f40f6b7f86ab849c3ee11771298bb05",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0047/frames.jsonl.gz",
+      "expected": "781606e06cbc34a27d688f5c8cd8e2f1d554fc673696443aa8a9f6961e9e1765",
+      "actual": "781606e06cbc34a27d688f5c8cd8e2f1d554fc673696443aa8a9f6961e9e1765",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0048/frames.jsonl.gz",
+      "expected": "7711a1312642c8abf3c911d9dce7e62933b0a91e0272737c84b61f1b70fc65ca",
+      "actual": "7711a1312642c8abf3c911d9dce7e62933b0a91e0272737c84b61f1b70fc65ca",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0049/frames.jsonl.gz",
+      "expected": "d1f024b70fdac1d29263526f35ec95bac6227576aab536db70a92a68cdf15bb1",
+      "actual": "d1f024b70fdac1d29263526f35ec95bac6227576aab536db70a92a68cdf15bb1",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0053/frames.jsonl.gz",
+      "expected": "a0485d64a177207d3bd33028461559044c151055a1720ce3161fffcda48b314e",
+      "actual": "a0485d64a177207d3bd33028461559044c151055a1720ce3161fffcda48b314e",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0054/frames.jsonl.gz",
+      "expected": "508b667cabb745a39c8299cf5c9fa9cbaf1100cc9b163f35b1d0f8e88135ac0e",
+      "actual": "508b667cabb745a39c8299cf5c9fa9cbaf1100cc9b163f35b1d0f8e88135ac0e",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0059/frames.jsonl.gz",
+      "expected": "7b7bb8d4f90eab4c8170fa84c43bdd1af036efefec69fec22de9d65da4670525",
+      "actual": "7b7bb8d4f90eab4c8170fa84c43bdd1af036efefec69fec22de9d65da4670525",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0060/frames.jsonl.gz",
+      "expected": "8a74f998331348d1a30cd0728cbde251ffdaad4546de0533d3d28a438a77d218",
+      "actual": "8a74f998331348d1a30cd0728cbde251ffdaad4546de0533d3d28a438a77d218",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0075/frames.jsonl.gz",
+      "expected": "b60c6c8658bc15183d7e07377667082f43c573b1c8cd55f6e4049cfab8736382",
+      "actual": "b60c6c8658bc15183d7e07377667082f43c573b1c8cd55f6e4049cfab8736382",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0092/frames.jsonl.gz",
+      "expected": "7d8e3d7abbb085d4f2d52789ece96c48f432a980617d2f2e59572295cd992f10",
+      "actual": "7d8e3d7abbb085d4f2d52789ece96c48f432a980617d2f2e59572295cd992f10",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0093/frames.jsonl.gz",
+      "expected": "dd70871c7fa87ade5ea6ce69c56e2ab836aa52d75ebe48161c8eadc212c0091f",
+      "actual": "dd70871c7fa87ade5ea6ce69c56e2ab836aa52d75ebe48161c8eadc212c0091f",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0095/frames.jsonl.gz",
+      "expected": "42a5728237af646821a59dc0b89ee8bb7af9b55441004e1b2c8cce80fa677da7",
+      "actual": "42a5728237af646821a59dc0b89ee8bb7af9b55441004e1b2c8cce80fa677da7",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0096/frames.jsonl.gz",
+      "expected": "12aa510acff6b04dd4f3ec83a153449489f7faf0fd6cf86eeec7a2fbab9aa62d",
+      "actual": "12aa510acff6b04dd4f3ec83a153449489f7faf0fd6cf86eeec7a2fbab9aa62d",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0097/frames.jsonl.gz",
+      "expected": "97a5fbdea8b65b0265c03abf8fd2a57e02b012e283d473de9082be6f38c0933e",
+      "actual": "97a5fbdea8b65b0265c03abf8fd2a57e02b012e283d473de9082be6f38c0933e",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0098/frames.jsonl.gz",
+      "expected": "5749861729678889e5099baa475a2754caf2c3d923d25e4ca9704a218364c6e0",
+      "actual": "5749861729678889e5099baa475a2754caf2c3d923d25e4ca9704a218364c6e0",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0099/frames.jsonl.gz",
+      "expected": "0b84d197213225879889a459066f6625f9619c8888edf4adc795d0d96e46871b",
+      "actual": "0b84d197213225879889a459066f6625f9619c8888edf4adc795d0d96e46871b",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0102/frames.jsonl.gz",
+      "expected": "6f0f98a00634411a869af66288e1283e06a23d5178c2e8fdd07e8162f4121909",
+      "actual": "6f0f98a00634411a869af66288e1283e06a23d5178c2e8fdd07e8162f4121909",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0129/frames.jsonl.gz",
+      "expected": "5ba1d2c053bb443954826bafd94e01298b022e7e80cea9b9079679924628948e",
+      "actual": "5ba1d2c053bb443954826bafd94e01298b022e7e80cea9b9079679924628948e",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0135/frames.jsonl.gz",
+      "expected": "60865d521b8299f80ee579b80e05131b206ecb87f4fba780faeb07602e62e021",
+      "actual": "60865d521b8299f80ee579b80e05131b206ecb87f4fba780faeb07602e62e021",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0174/frames.jsonl.gz",
+      "expected": "b88378ec74416e3045e4779df0d6ce170c83496cb7a9bb5af8f1c7bf9bca7ef7",
+      "actual": "b88378ec74416e3045e4779df0d6ce170c83496cb7a9bb5af8f1c7bf9bca7ef7",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/qwen/validation/iterations/selection_r1_map_transfer_20261123_v1/queries.jsonl",
+      "expected": "8549f22822fda983d5a0d466f849480a6b866f975fb97f569a988f3112f16e9a",
+      "actual": "8549f22822fda983d5a0d466f849480a6b866f975fb97f569a988f3112f16e9a",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/qwen/validation/iterations/selection_r1_map_transfer_20261123_v1/release.json",
+      "expected": "10ddfce97a2aa0d749c6cad94d8a31f966174daf419104881f20769bb50d1976",
+      "actual": "10ddfce97a2aa0d749c6cad94d8a31f966174daf419104881f20769bb50d1976",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/qwen/validation/iterations/selection_r1_map_transfer_20261123_v1/report.json",
+      "expected": "ff24caac1f032913dfe73a169665a7c5e72a9abc0bc20c3055696601511976c1",
+      "actual": "ff24caac1f032913dfe73a169665a7c5e72a9abc0bc20c3055696601511976c1",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/paper/当前版_v4/sources/论文正文.md",
+      "expected": "5481fec83d93a23f59f3048aa612d1fecdc4d07d65a4ac0f2e39b37db380a9f1",
+      "actual": "5481fec83d93a23f59f3048aa612d1fecdc4d07d65a4ac0f2e39b37db380a9f1",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/paper/当前版本.json",
+      "expected": "0a0ee0da832011ebdc11c6a1d6e28d656a46175c5ff24ad5b0fee89aa40aab43",
+      "actual": "0a0ee0da832011ebdc11c6a1d6e28d656a46175c5ff24ad5b0fee89aa40aab43",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/scripts/navstage2_20261124.py",
+      "expected": "cf1d8acb32669fac0e83e65639d461a8041357c71f9ec557977df4d848ad6e50",
+      "actual": "cf1d8acb32669fac0e83e65639d461a8041357c71f9ec557977df4d848ad6e50",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/scripts/run_mapping_refinement.py",
+      "expected": "854921648379c7e40e5c345679be284ac7a28202877af8990283f5794f1fc1c8",
+      "actual": "854921648379c7e40e5c345679be284ac7a28202877af8990283f5794f1fc1c8",
+      "unchanged": true
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/项目导航.md",
+      "expected": "d92024013a65d38b2b0686350782a5191abaad89c0e27b4cf86bbd77dac7dcdc",
+      "actual": "d92024013a65d38b2b0686350782a5191abaad89c0e27b4cf86bbd77dac7dcdc",
+      "unchanged": true
+    },
+    {
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/MEMORY.md",
+      "expected": "f1db9a84f9b586fff70f61d09cd3bdda78d4b2cac953fbde8af45533ed034fd6",
+      "actual": "f1db9a84f9b586fff70f61d09cd3bdda78d4b2cac953fbde8af45533ed034fd6",
+      "unchanged": true
+    },
+    {
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/PAPER_MEMORY.md",
+      "expected": "2a978751be1efd888a130444bc31f146666c7f4fcb62e37c2f92aa2fe196f2b2",
+      "actual": "2a978751be1efd888a130444bc31f146666c7f4fcb62e37c2f92aa2fe196f2b2",
+      "unchanged": true
+    },
+    {
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/slam/utils.py",
+      "expected": "1fc71fe993ba61c3d264d6434df5b195f7347953fbe3d53ec9cc1e4fe007b94d",
+      "actual": "1fc71fe993ba61c3d264d6434df5b195f7347953fbe3d53ec9cc1e4fe007b94d",
+      "unchanged": true
+    },
+    {
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/slam/streamlined_mapping.py",
+      "expected": "00ce7e26949c145bdd1b42882a8923e9ff6e106b2101ff288fd6ef05498b8676",
+      "actual": "00ce7e26949c145bdd1b42882a8923e9ff6e106b2101ff288fd6ef05498b8676",
+      "unchanged": true
+    },
+    {
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/navigation/semantic.py",
+      "expected": "95645c520c37819f5ca0e3feebcfd5e2282cfc4260eb24caea04d04ca94dbf59",
+      "actual": "95645c520c37819f5ca0e3feebcfd5e2282cfc4260eb24caea04d04ca94dbf59",
+      "unchanged": true
+    },
+    {
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/scenegraph/relations.py",
+      "expected": "099e967bdbe5cd0ecf63fe90d094e5f9638d5c4df3643148d7671ee6fa25c105",
+      "actual": "099e967bdbe5cd0ecf63fe90d094e5f9638d5c4df3643148d7671ee6fa25c105",
+      "unchanged": true
+    },
+    {
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/scenegraph/incremental_graph.py",
+      "expected": "904fedec44a276080b083ed3459982e7c177f747bbfd0186fa0164e2f1b91f68",
+      "actual": "904fedec44a276080b083ed3459982e7c177f747bbfd0186fa0164e2f1b91f68",
+      "unchanged": true
+    }
+  ],
+  "integration_git_index_records_checked": 3141,
+  "integration_blob_mismatches": [],
+  "frozen_source_and_input_hashes_unchanged": true,
+  "postprocessing_source_sha256": {
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/relation_nav_finalize_20261125.py": "a8fab17e53c73992f999df0859939c4859f75e5857373b0a5a1e8699b72adc9a",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/scripts/relation_nav_finalize_20261125.py": "78f20eae1239f53df048f12b6d82c07484cd4b6736c71bdde66d0f68785ae46d"
+  },
+  "no_model_or_GPU_or_planner_calls": true,
+  "elapsed_s": 15.491438755765557
+}

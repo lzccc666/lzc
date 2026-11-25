@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "scopes": {
+    "R1": {
+      "GT": 5723,
+      "matched_3m": 2769,
+      "attribute:all_labeled": 5385,
+      "attribute:known_prediction": 694,
+      "attribute:correct_over_all_labeled": 594,
+      "attribute:unknown_or_missing": 4691,
+      "past_displacement:all_labeled": 5311,
+      "past_displacement:known_prediction": 735,
+      "past_displacement:correct_over_all_labeled": 650,
+      "past_displacement:unknown_or_missing": 4576
+    },
+    "S2": {
+      "GT": 687,
+      "matched_3m": 310,
+      "attribute:all_labeled": 635,
+      "attribute:known_prediction": 55,
+      "attribute:correct_over_all_labeled": 48,
+      "attribute:unknown_or_missing": 580,
+      "past_displacement:all_labeled": 616,
+      "past_displacement:known_prediction": 55,
+      "past_displacement:correct_over_all_labeled": 48,
+      "past_displacement:unknown_or_missing": 561
+    }
+  },
+  "same_class_planar_3m_independent_assignment": true,
+  "all_GT_denominators_retained": true,
+  "all_attribute_and_displacement_confusions_recounted": true,
+  "raw_official_label_provenance_scope": "frozen sources and evaluator dataflow read; row attribute mapping independently checked",
+  "official_attributes_not_exact_instantaneous_velocity": true,
+  "summary_sha256": "12446ade3d3ba6dc05562e7eaa3490eed72092cba22cebbc376295b1eb5429e3"
+}

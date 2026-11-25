@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/root/.codex/worktrees/lzc-integration-20261125/lizichong/scripts/node_motion_unified_20261125_v2_run.py", line 275, in <module>
+    if args.command=='prepare':prepare()
+  File "/root/.codex/worktrees/lzc-integration-20261125/lizichong/scripts/node_motion_unified_20261125_v2_run.py", line 95, in prepare
+    dump(REPORT/'frozen_inputs_and_sources.json',dict(manifest_sha256=sha(DATA/'manifest.json'),source_count=len(sources),input_count=len(inputs),git_base=m['git_base']))
+  File "/root/.codex/worktrees/lzc-integration-20261125/lizichong/scripts/node_motion_unified_20261125_v2_run.py", line 42, in dump
+    with p.open('x') as f:json.dump(d,f,ensure_ascii=False,indent=2,allow_nan=False);f.write('\n')
+  File "/root/miniconda3/envs/conceptgraph/lib/python3.10/pathlib.py", line 1119, in open
+    return self._accessor.open(self, mode, buffering, encoding, errors,
+FileExistsError: [Errno 17] File exists: '/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/node_motion_unified_20261125/frozen_inputs_and_sources.json'

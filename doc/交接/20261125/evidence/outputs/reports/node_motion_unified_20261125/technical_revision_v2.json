@@ -1,0 +1,5 @@
+{
+  "reason": "v1 incorrectly checked source overlay volume; v2 checks actual output filesystem via RUN.resolve(); no policy/threshold/association changes",
+  "v1_frames_completed": 0,
+  "v1_source_and_empty_output_preserved": true
+}

@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "unified_graphs": {
+    "R1": {
+      "frames": 1508,
+      "edges": 9992
+    },
+    "S2": {
+      "frames": 120,
+      "edges": 973
+    }
+  },
+  "R1_observation_metadata_corrected_v2": true,
+  "S2_actual_navigation_edges_equal_independent_replay_all120": true,
+  "engineering_subgoals_checked": 8,
+  "engineering_checks": "frozen lane sample, drivable point, own polygon,2..8m target annulus, heading dot>=.5, ego-distance<=100m",
+  "claims_vehicle_collision_route_or_region_GT": false,
+  "HD_map_hashes_postrun_receipt": {
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/nuscenes_map_expansion/expansion/singapore-onenorth.json": "17939122b940d7faff50fa7ff623ded7f739549a781c32dff1ecd1ac7bebca02"
+  },
+  "HD_map_hashes_preregistered": false
+}

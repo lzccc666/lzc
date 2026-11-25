@@ -1,0 +1,33 @@
+{
+  "schema": "lzc_initial_integration_readonly_audit_v1",
+  "timestamp_utc": "2026-11-25T08:27:45.026289+00:00",
+  "integration_head": "4e581523f81c0c81bc8de419a5bd91affe2a8a8b",
+  "parents": [
+    "c09cde87e56598700be68f836b92e63265083106",
+    "bc767d9bcc15e7317443f2491f29cc4d4ad3ce82"
+  ],
+  "parents_exact": true,
+  "manifest_sha256": "212ee14a250249ec486b171c87c88243cbccdbcefae474d19cadbf3f5d7a6fcd",
+  "preservation_violations": [],
+  "remote_only_all_preserved": true,
+  "reproduction_tracked_unchanged": 231,
+  "experiments_tracked_unchanged": 435,
+  "sync_business_three_exact": true,
+  "tracked_compile": {
+    "count": 1142,
+    "passed": 1142,
+    "failed": 0,
+    "python": "/root/miniconda3/envs/conceptgraph/bin/python",
+    "cache_location": "temporary directory removed"
+  },
+  "legacy_reproduction_prepare": {
+    "passed": true,
+    "actual_navigation_executed": false,
+    "existing_release_unchanged": true
+  },
+  "whitespace_scope": "5 resolved files plus new integration docs passed; inherited historic whitespace not rewritten",
+  "claim_full_test_suite": false,
+  "gpu_used": false,
+  "remote_main_pushed": false,
+  "passed": true
+}

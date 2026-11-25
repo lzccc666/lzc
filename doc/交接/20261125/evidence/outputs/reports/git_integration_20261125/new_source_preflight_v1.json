@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "new_dated_sources_checked": 31,
+  "syntax_passed": 31,
+  "high_confidence_credential_findings": 0,
+  "affected_paths": [],
+  "scope": "dated source only; complete staged text scan will run before commit"
+}

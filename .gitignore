@@ -195,3 +195,8 @@ outputs/
 !doc/交接/20261125/evidence/outputs/**
 !doc/交接/20261125/evidence/dataset/
 !doc/交接/20261125/evidence/dataset/**
+
+# Ignore local worktree compatibility symlinks as well as data directories.
+/dataset
+/outputs
+/checkpoint

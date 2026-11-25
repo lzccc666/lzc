@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/root/.codex/worktrees/lzc-integration-20261125/lizichong/scripts/node_motion_unified_20261125_run.py", line 278, in <module>
+    else:export(args.command)
+  File "/root/.codex/worktrees/lzc-integration-20261125/lizichong/scripts/node_motion_unified_20261125_run.py", line 132, in export
+    guard();index=item['frame_idx'];mapper.begin_evidence(name,index);np.random.seed(17+index)
+  File "/root/.codex/worktrees/lzc-integration-20261125/lizichong/scripts/node_motion_unified_20261125_run.py", line 46, in guard
+    if shutil.disk_usage(ROOT).free<20*1024**3:raise OSError('disk_below20GiB')
+OSError: disk_below20GiB

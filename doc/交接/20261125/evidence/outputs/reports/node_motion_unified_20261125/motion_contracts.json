@@ -1,0 +1,148 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "three_past_independent_single_point_static",
+      "result": {
+        "state": "static",
+        "speed_mps": 0.1,
+        "measured_raw_speed_mps": 0.1,
+        "motion_heading_world_rad": null,
+        "reasons": [],
+        "span_s": 1.0,
+        "current_update": true,
+        "independent_groups": 3,
+        "first_measurement_s": 0.0,
+        "last_measurement_s": 1.0,
+        "source_closed": true
+      }
+    },
+    {
+      "name": "real_raw_motion_dynamic",
+      "result": {
+        "state": "dynamic",
+        "speed_mps": 2.0,
+        "measured_raw_speed_mps": 2.0,
+        "motion_heading_world_rad": 0.0,
+        "reasons": [],
+        "span_s": 1.0,
+        "current_update": true,
+        "independent_groups": 3,
+        "first_measurement_s": 0.0,
+        "last_measurement_s": 1.0,
+        "source_closed": true
+      }
+    },
+    {
+      "name": "two_measurements_unknown",
+      "result": {
+        "state": "unknown",
+        "speed_mps": null,
+        "measured_raw_speed_mps": 0.1,
+        "motion_heading_world_rad": null,
+        "reasons": [
+          "insufficient_independent_groups",
+          "span_below_one_second"
+        ],
+        "span_s": 0.5,
+        "current_update": true,
+        "independent_groups": 2,
+        "first_measurement_s": 0.0,
+        "last_measurement_s": 0.5,
+        "source_closed": true
+      }
+    },
+    {
+      "name": "stale_current_unknown",
+      "result": {
+        "state": "unknown",
+        "speed_mps": null,
+        "measured_raw_speed_mps": 0.1,
+        "motion_heading_world_rad": null,
+        "reasons": [
+          "no_current_update"
+        ],
+        "span_s": 1.0,
+        "current_update": false,
+        "independent_groups": 3,
+        "first_measurement_s": 0.0,
+        "last_measurement_s": 1.0,
+        "source_closed": true
+      }
+    },
+    {
+      "name": "identity_competition_unknown",
+      "result": {
+        "state": "unknown",
+        "speed_mps": null,
+        "measured_raw_speed_mps": 0.1,
+        "motion_heading_world_rad": null,
+        "reasons": [
+          "unresolved_identity_or_competition"
+        ],
+        "span_s": 1.0,
+        "current_update": true,
+        "independent_groups": 3,
+        "first_measurement_s": 0.0,
+        "last_measurement_s": 1.0,
+        "source_closed": false
+      }
+    },
+    {
+      "name": "future_raw_unknown",
+      "result": {
+        "state": "unknown",
+        "speed_mps": null,
+        "measured_raw_speed_mps": 0.04166666666666667,
+        "motion_heading_world_rad": null,
+        "reasons": [
+          "noncausal_or_unordered_measurements"
+        ],
+        "span_s": 2.0,
+        "current_update": true,
+        "independent_groups": 3,
+        "first_measurement_s": 0.0,
+        "last_measurement_s": 2,
+        "source_closed": true
+      }
+    },
+    {
+      "name": "same_group_not_multiple_independent",
+      "result": {
+        "state": "unknown",
+        "speed_mps": null,
+        "measured_raw_speed_mps": 0.1,
+        "motion_heading_world_rad": null,
+        "reasons": [
+          "insufficient_independent_groups"
+        ],
+        "span_s": 1.0,
+        "current_update": true,
+        "independent_groups": 2,
+        "first_measurement_s": 0.0,
+        "last_measurement_s": 1.0,
+        "source_closed": true
+      }
+    },
+    {
+      "name": "uncertainty_guard",
+      "result": {
+        "state": "unknown",
+        "speed_mps": null,
+        "measured_raw_speed_mps": 0.1,
+        "motion_heading_world_rad": null,
+        "reasons": [
+          "heuristic_uncertainty_too_large_or_missing"
+        ],
+        "span_s": 1.0,
+        "current_update": true,
+        "independent_groups": 3,
+        "first_measurement_s": 0.0,
+        "last_measurement_s": 1.0,
+        "source_closed": true
+      }
+    }
+  ],
+  "synthetic_contract_only": true,
+  "GPU_calls": 0
+}

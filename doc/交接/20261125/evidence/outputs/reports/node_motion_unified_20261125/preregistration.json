@@ -1,0 +1,13 @@
+{
+  "start_utc": "2026-11-25T08:14:57Z",
+  "deadline_utc": "2026-11-25T09:09:57Z",
+  "maximum_new_bytes": 134217728,
+  "GPU_calls": 0,
+  "git_base": "4e581523f81c0c81bc8de419a5bd91affe2a8a8b",
+  "schema_sha256": "7dd81482981dd8d05e5a8d3c2062105b53f8d09f3c2ed387fa7046ecb0448ba1",
+  "R1_frames": 1508,
+  "S2_groups": 120,
+  "seed": 17,
+  "parameter_search": false,
+  "old_predictions_must_equal": true
+}

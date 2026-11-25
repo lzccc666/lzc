@@ -1,0 +1,31 @@
+{
+  "imports": [
+    {
+      "module": "conceptgraph.project_paths",
+      "ok": true,
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/project_paths.py"
+    },
+    {
+      "module": "conceptgraph.navigation.semantic",
+      "ok": true,
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/navigation/semantic.py"
+    },
+    {
+      "module": "conceptgraph.slam.streamlined_mapping",
+      "ok": true,
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/slam/streamlined_mapping.py"
+    },
+    {
+      "module": "conceptgraph.slam.utils",
+      "ok": true,
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/slam/utils.py"
+    },
+    {
+      "module": "conceptgraph.completion.reference_reachability",
+      "ok": true,
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/reference_reachability.py"
+    }
+  ],
+  "all_passed": true,
+  "wall_s": 4.462407598271966
+}

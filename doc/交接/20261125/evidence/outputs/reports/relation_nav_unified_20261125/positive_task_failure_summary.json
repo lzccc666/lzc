@@ -1,0 +1,12 @@
+{
+  "positive_tasks": 141,
+  "mutually_exclusive_task_counts": {
+    "correct_target_absent_from_3m_graph_association": 53,
+    "correct_target_present_but_not_confirmed_static_evidence": 71,
+    "confirmed_target_not_selected_relation_or_reference_gate": 7,
+    "selected_correct": 9,
+    "selected_wrong": 1
+  },
+  "no_threshold_changes": true,
+  "GT_used_only_for_after_inference_diagnosis": true
+}

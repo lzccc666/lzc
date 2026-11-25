@@ -1,0 +1,226 @@
+{
+  "passed": true,
+  "scope": "S2",
+  "counts": {
+    "nodes": 538,
+    "raw_velocity_available": 410,
+    "static": 26,
+    "unknown": 444,
+    "dynamic": 68
+  },
+  "by_category_shape": {
+    "car|shape=False": {
+      "nodes": 32,
+      "static": 4,
+      "current_update": 22,
+      "raw_velocity_available": 32,
+      "unknown": 26,
+      "dynamic": 2
+    },
+    "pedestrian|shape=False": {
+      "nodes": 83,
+      "unknown": 57,
+      "current_update": 68,
+      "raw_velocity_available": 83,
+      "static": 10,
+      "dynamic": 16
+    },
+    "car|shape=True": {
+      "nodes": 167,
+      "unknown": 147,
+      "current_update": 147,
+      "raw_velocity_available": 118,
+      "static": 11,
+      "dynamic": 9
+    },
+    "pedestrian|shape=True": {
+      "nodes": 107,
+      "unknown": 98,
+      "current_update": 100,
+      "raw_velocity_available": 69,
+      "dynamic": 9
+    },
+    "bus|shape=True": {
+      "nodes": 39,
+      "unknown": 12,
+      "current_update": 35,
+      "raw_velocity_available": 35,
+      "dynamic": 27
+    },
+    "truck|shape=True": {
+      "nodes": 84,
+      "unknown": 79,
+      "current_update": 58,
+      "raw_velocity_available": 59,
+      "dynamic": 4,
+      "static": 1
+    },
+    "bus|shape=False": {
+      "nodes": 2,
+      "unknown": 2,
+      "current_update": 1,
+      "raw_velocity_available": 2
+    },
+    "bicycle|shape=True": {
+      "nodes": 16,
+      "unknown": 15,
+      "current_update": 11,
+      "raw_velocity_available": 6,
+      "dynamic": 1
+    },
+    "motorcycle|shape=False": {
+      "nodes": 2,
+      "unknown": 2,
+      "current_update": 1,
+      "raw_velocity_available": 2
+    },
+    "bicycle|shape=False": {
+      "nodes": 3,
+      "unknown": 3,
+      "current_update": 3,
+      "raw_velocity_available": 2
+    },
+    "motorcycle|shape=True": {
+      "nodes": 3,
+      "unknown": 3,
+      "current_update": 3,
+      "raw_velocity_available": 2
+    }
+  },
+  "unknown_first_reason": {
+    "car|shape=False": {
+      "invalid_current_measurement_support": 7,
+      "no_current_update": 6,
+      "insufficient_independent_groups": 11,
+      "span_below_one_second": 2
+    },
+    "pedestrian|shape=False": {
+      "insufficient_independent_groups": 13,
+      "unresolved_identity_or_competition": 19,
+      "no_current_update": 13,
+      "invalid_current_measurement_support": 11,
+      "span_below_one_second": 1
+    },
+    "car|shape=True": {
+      "insufficient_independent_groups": 82,
+      "unresolved_identity_or_competition": 46,
+      "span_below_one_second": 7,
+      "no_current_update": 9,
+      "invalid_current_measurement_support": 3
+    },
+    "pedestrian|shape=True": {
+      "insufficient_independent_groups": 66,
+      "span_below_one_second": 8,
+      "unresolved_identity_or_competition": 23,
+      "no_current_update": 1
+    },
+    "bus|shape=True": {
+      "insufficient_independent_groups": 7,
+      "no_current_update": 4,
+      "span_below_one_second": 1
+    },
+    "truck|shape=True": {
+      "insufficient_independent_groups": 44,
+      "unresolved_identity_or_competition": 18,
+      "no_current_update": 13,
+      "span_below_one_second": 2,
+      "invalid_current_measurement_support": 2
+    },
+    "bus|shape=False": {
+      "insufficient_independent_groups": 2
+    },
+    "bicycle|shape=True": {
+      "insufficient_independent_groups": 13,
+      "no_current_update": 2
+    },
+    "motorcycle|shape=False": {
+      "span_below_one_second": 2
+    },
+    "bicycle|shape=False": {
+      "insufficient_independent_groups": 3
+    },
+    "motorcycle|shape=True": {
+      "insufficient_independent_groups": 2,
+      "unresolved_identity_or_competition": 1
+    }
+  },
+  "unknown_all_reasons_overlapping": {
+    "car|shape=False": {
+      "invalid_current_measurement_support": 12,
+      "no_current_update": 10,
+      "unresolved_identity_or_competition": 6,
+      "insufficient_independent_groups": 11,
+      "span_below_one_second": 9
+    },
+    "pedestrian|shape=False": {
+      "insufficient_independent_groups": 13,
+      "span_below_one_second": 10,
+      "unresolved_identity_or_competition": 32,
+      "no_current_update": 15,
+      "invalid_current_measurement_support": 16
+    },
+    "car|shape=True": {
+      "insufficient_independent_groups": 82,
+      "span_below_one_second": 87,
+      "missing_raw_speed": 49,
+      "unresolved_identity_or_competition": 85,
+      "no_current_update": 20,
+      "invalid_current_measurement_support": 11
+    },
+    "pedestrian|shape=True": {
+      "insufficient_independent_groups": 66,
+      "span_below_one_second": 73,
+      "missing_raw_speed": 38,
+      "unresolved_identity_or_competition": 61,
+      "invalid_current_measurement_support": 2,
+      "no_current_update": 7
+    },
+    "bus|shape=True": {
+      "insufficient_independent_groups": 7,
+      "span_below_one_second": 8,
+      "missing_raw_speed": 4,
+      "no_current_update": 4
+    },
+    "truck|shape=True": {
+      "insufficient_independent_groups": 44,
+      "span_below_one_second": 46,
+      "missing_raw_speed": 25,
+      "no_current_update": 26,
+      "unresolved_identity_or_competition": 37,
+      "invalid_current_measurement_support": 3
+    },
+    "bus|shape=False": {
+      "insufficient_independent_groups": 2,
+      "span_below_one_second": 2,
+      "no_current_update": 1
+    },
+    "bicycle|shape=True": {
+      "insufficient_independent_groups": 13,
+      "span_below_one_second": 13,
+      "missing_raw_speed": 10,
+      "no_current_update": 5,
+      "invalid_current_measurement_support": 3
+    },
+    "motorcycle|shape=False": {
+      "span_below_one_second": 2,
+      "no_current_update": 1
+    },
+    "bicycle|shape=False": {
+      "insufficient_independent_groups": 3,
+      "span_below_one_second": 3,
+      "unresolved_identity_or_competition": 2,
+      "missing_raw_speed": 1
+    },
+    "motorcycle|shape=True": {
+      "insufficient_independent_groups": 2,
+      "span_below_one_second": 2,
+      "missing_raw_speed": 1,
+      "unresolved_identity_or_competition": 2
+    }
+  },
+  "method_motion_or_geometry_changed": false,
+  "body_heading_available": false,
+  "source_sha256": "c519948213e212a1e26f70fd573a343923ad76d0920b5fb505e91fa16f922668",
+  "output_sha256": "7abb7d1bd36e03e4edb677d3259f63c808b15b0d2b1ef8821771a1dec4144b27",
+  "extension_source_sha256": "9bd3ea4c41ddb7907520758cb8b78f19ba6023717c69527383a7dc2cda181b68"
+}

@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "scope": "S2",
+  "counts": {
+    "frames": 120,
+    "predictions": 538,
+    "raw_observations": 1220,
+    "motion:static": 26,
+    "shape:False": 122,
+    "legacy_motion:unknown": 270,
+    "semantic_position_candidates": 26,
+    "motion:unknown": 444,
+    "unknown:invalid_current_measurement_support": 47,
+    "unknown:no_current_update": 89,
+    "unknown:insufficient_independent_groups": 243,
+    "unknown:span_below_one_second": 255,
+    "unknown:unresolved_identity_or_competition": 225,
+    "shape:True": 416,
+    "unknown:missing_raw_speed": 128,
+    "legacy_motion:dynamic": 206,
+    "legacy_motion:static": 62,
+    "motion:dynamic": 68
+  },
+  "by_scene": {
+    "scene-0012": {
+      "frames": 20
+    },
+    "scene-0013": {
+      "frames": 20
+    },
+    "scene-0019": {
+      "frames": 20
+    },
+    "scene-0035": {
+      "frames": 20
+    },
+    "scene-0042": {
+      "frames": 20
+    },
+    "scene-0047": {
+      "frames": 20
+    }
+  },
+  "all_original_predictions_exact": true,
+  "elapsed_s": 56.63252463750541,
+  "frames_sha256": "c519948213e212a1e26f70fd573a343923ad76d0920b5fb505e91fa16f922668",
+  "GT_in_method": false,
+  "GPU_calls": 0
+}

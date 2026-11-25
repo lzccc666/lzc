@@ -1,0 +1,17 @@
+{
+  "schema_version": "node_motion_unified_20261125_v1",
+  "root_required": ["scene", "log", "frame_idx", "render_timestamp_s", "ego_pose_world", "ego_heading_world_xy", "frame_source", "predictions", "nodes", "GT_in_method"],
+  "frame_source": "CAM_FRONT_camera_pose_and_optical_axis_projected_world_XY_proxy_not_rear_axle_heading",
+  "node_required": ["original_index", "node_id", "category", "center_world_m", "extent_world_aabb_m", "shape_available", "motion_state", "motion_speed_xy_mps", "motion_reference_frame", "motion_time", "measurement", "uncertainty", "body_heading_world_rad", "body_heading_source", "motion_heading_world_rad", "semantic_position_candidate", "vehicle_safety_authorized"],
+  "motion_state": ["static", "dynamic", "unknown"],
+  "motion_reference_frame": "world_xy",
+  "time": "actual sensor capture timestamps for raw motion; render timestamp separate; same reference group counted once; past only",
+  "body_heading_source": "unknown; never substitute velocity direction or evaluation GT",
+  "motion_policy": {"minimum_independent_groups": 3, "minimum_span_s": 1.0, "minimum_current_support_fraction": 0.4, "maximum_heuristic_xy_variance_m2": 4.0, "static_speed_threshold_mps": 0.5, "history_length": 8, "require_current_update": true, "require_source_closed": true, "merge_histories_across_ids": false},
+  "uncertainty_kind": "uncalibrated_heuristic_not_probability",
+  "input_scope": "38 previously used validation scenes/1508 R1 frames and 6 previously used validation scenes/120 S2 groups, separately reported",
+  "shape_policy": "extent copied only when present and valid; unknown stays null; no vehicle safety authorization from schema or motion",
+  "evaluation_policy": "GT only after method output, original same-class 3m XY one-to-one; official attributes and past annotation displacement separate; missing labels/unknown/missing nodes keep denominators",
+  "configuration_count": 1,
+  "seed": 17
+}

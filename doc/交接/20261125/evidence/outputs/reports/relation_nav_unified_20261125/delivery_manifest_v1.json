@@ -1,0 +1,395 @@
+{
+  "status": "sealed",
+  "created_utc": "2026-11-25T09:04:09Z",
+  "git_base": "4e581523f81c0c81bc8de419a5bd91affe2a8a8b",
+  "final_report": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/relation_nav_unified_20261125/关系与导航统一_本轮结果.md",
+  "files": [
+    {
+      "kind": "source",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/relation_nav_finalize_20261125.py",
+      "bytes": 10210,
+      "sha256": "a8fab17e53c73992f999df0859939c4859f75e5857373b0a5a1e8699b72adc9a"
+    },
+    {
+      "kind": "source",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/relation_nav_graph_correction_20261125.py",
+      "bytes": 5051,
+      "sha256": "9983b0f69d651633a22a1a0a95b0ac3824ef3ef50f86b4295f74898367128df5"
+    },
+    {
+      "kind": "source",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/relation_nav_label_audit_20261125.py",
+      "bytes": 7683,
+      "sha256": "a237401e5e26f31b0d659944b81bd4965cb59440705c27d545342a95e29eb631"
+    },
+    {
+      "kind": "source",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/relation_nav_runtime_20261125.py",
+      "bytes": 7098,
+      "sha256": "288071230aa324110e7cbe7082d54bc50956403ea386b8414da38c03db694f7d"
+    },
+    {
+      "kind": "source",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/relation_nav_unified_20261125.py",
+      "bytes": 23473,
+      "sha256": "dfe77e0755ac80cd826da25f3a927000f4a7d75cba25131cf50a8c63baeb81b0"
+    },
+    {
+      "kind": "source",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/navigation/relation_nav_unified_20261125.py",
+      "bytes": 6287,
+      "sha256": "163bbfd7587079e9fe4883b76d87ae0cd96f7ba3d3d8a455f42fa12cca96f961"
+    },
+    {
+      "kind": "source",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/scenegraph/relation_nav_unified_20261125.py",
+      "bytes": 8138,
+      "sha256": "82b1994516b6daf1b1d9fc7560c4e3553a3e26bcb85dd8768ff0ba4e4c931629"
+    },
+    {
+      "kind": "source",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/scripts/relation_nav_finalize_20261125.py",
+      "bytes": 111,
+      "sha256": "78f20eae1239f53df048f12b6d82c07484cd4b6736c71bdde66d0f68785ae46d"
+    },
+    {
+      "kind": "source",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/scripts/relation_nav_graph_correction_20261125.py",
+      "bytes": 119,
+      "sha256": "18d2acaa66c77ca97599b81610db57d2a66e62dcd9aaa5701df4f1ca3b635a1e"
+    },
+    {
+      "kind": "source",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/scripts/relation_nav_label_audit_20261125.py",
+      "bytes": 114,
+      "sha256": "dee6671dbef4e7627abea3fc7d1a2eed643b6c4d9c5654d37ce7faf8f06cdec8"
+    },
+    {
+      "kind": "source",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/scripts/relation_nav_runtime_20261125.py",
+      "bytes": 110,
+      "sha256": "27feb665bc5a4e9c1b4960b2ef8b2fed846253b767f26cb91348051b7a00ec00"
+    },
+    {
+      "kind": "source",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/scripts/relation_nav_unified_20261125.py",
+      "bytes": 103,
+      "sha256": "b3c34c4ce6401cfde6417b3b47d39445d0eb7eceb30ac35d7ebaf4cb42cff981"
+    },
+    {
+      "kind": "input",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/relation_nav_unified_20261125_v1/evaluation_only/frames.jsonl",
+      "bytes": 2253927,
+      "sha256": "387edcb4bada7ca41a01d25a816572e9903ee831eca2b4be2f8d0d677d127750"
+    },
+    {
+      "kind": "input",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/relation_nav_unified_20261125_v1/evaluation_only/task_labels.jsonl",
+      "bytes": 375393,
+      "sha256": "76e2f4054dbb12a859086430b8378432daaa8ff0396c685e831375dcd1b6c0e3"
+    },
+    {
+      "kind": "input",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/relation_nav_unified_20261125_v1/manifest.json",
+      "bytes": 63045,
+      "sha256": "d45a0ba8ff7c550a63caa747cfc087e17d7d3e8941fdb433aae2135cfc7bf5fe"
+    },
+    {
+      "kind": "input",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/relation_nav_unified_20261125_v1/method_frames.jsonl",
+      "bytes": 8235873,
+      "sha256": "5b3595181e8422c929684b96a157003ee33c105581471b54d0e393676762d5e0"
+    },
+    {
+      "kind": "input",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/relation_nav_unified_20261125_v1/method_tasks.jsonl",
+      "bytes": 191040,
+      "sha256": "19eddbb45090e36227a6f30f04d88e7652e75145a278aacce746457eca92f769"
+    },
+    {
+      "kind": "input",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/relation_nav_unified_20261125_v1/node_input_amendment_v1.json",
+      "bytes": 458,
+      "sha256": "2290b733137a4c8839602dd681fad7d3e588b3fb604742bd9db8872b4898dd6a"
+    },
+    {
+      "kind": "input",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/relation_nav_unified_20261125_v1/postrun_inputs_receipt_v1.json",
+      "bytes": 1040,
+      "sha256": "9dfc06aac7e8f784c58a1d02e798e7112e9ddd246a494d6641c2b37ead6c033d"
+    },
+    {
+      "kind": "input",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/relation_nav_unified_20261125_v1/runtime_amendment_v1.json",
+      "bytes": 1887,
+      "sha256": "c262aecf02d3f20dd83a45f20ad1135a4e09d033fcd8789113d8614a4ada5d6f"
+    },
+    {
+      "kind": "result",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/relation_nav_unified_20261125_v1/navigation_summary.json",
+      "bytes": 4763,
+      "sha256": "237c7eb1c3e2adb493ad3337b13854c37cdff613ab811e594a82f7b34d9e87d1"
+    },
+    {
+      "kind": "result",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/relation_nav_unified_20261125_v1/navigation_tasks.jsonl",
+      "bytes": 1111692,
+      "sha256": "4d62b722988a6c78a8f7399dc71bf01e8c1b349c2e1d18fada76aa4d1d1361c2"
+    },
+    {
+      "kind": "result",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/relation_nav_unified_20261125_v1/positive_task_failure_diagnostics.jsonl",
+      "bytes": 30128,
+      "sha256": "2f69c8bcb67bdcb950bbf36efbc87bc4414f0e77f95b99d44f945885dd570c81"
+    },
+    {
+      "kind": "result",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/relation_nav_unified_20261125_v1/relation_frames.jsonl.gz",
+      "bytes": 1306027,
+      "sha256": "b36cb1f18ac87accf129e837def2c6487f13ab1f35fe26ab1f5043b56b5c0661"
+    },
+    {
+      "kind": "result",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/relation_nav_unified_20261125_v1/relation_summary.json",
+      "bytes": 13198,
+      "sha256": "c95692f121b604f62eaf3ac61b3c5a90e0bf0d6e07c7c6f3efc6562875ee1b01"
+    },
+    {
+      "kind": "result",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/relation_nav_unified_20261125_v1/source_snapshot/conceptgraph/completion/evidence.py",
+      "bytes": 1165,
+      "sha256": "7010f1c26093c0483d2ee4bfac16e933a0809eaa2a6d27d60cc428acc05b7748"
+    },
+    {
+      "kind": "result",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/relation_nav_unified_20261125_v1/source_snapshot/conceptgraph/completion/quality.py",
+      "bytes": 3759,
+      "sha256": "9d03eeecbd4aaa37708df0894043e796e245c750a7346a33369db150b51da31a"
+    },
+    {
+      "kind": "result",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/relation_nav_unified_20261125_v1/source_snapshot/conceptgraph/completion/relation_nav_finalize_20261125.py",
+      "bytes": 10210,
+      "sha256": "a8fab17e53c73992f999df0859939c4859f75e5857373b0a5a1e8699b72adc9a"
+    },
+    {
+      "kind": "result",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/relation_nav_unified_20261125_v1/source_snapshot/conceptgraph/completion/relation_nav_graph_correction_20261125.py",
+      "bytes": 5051,
+      "sha256": "9983b0f69d651633a22a1a0a95b0ac3824ef3ef50f86b4295f74898367128df5"
+    },
+    {
+      "kind": "result",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/relation_nav_unified_20261125_v1/source_snapshot/conceptgraph/completion/relation_nav_label_audit_20261125.py",
+      "bytes": 7683,
+      "sha256": "a237401e5e26f31b0d659944b81bd4965cb59440705c27d545342a95e29eb631"
+    },
+    {
+      "kind": "result",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/relation_nav_unified_20261125_v1/source_snapshot/conceptgraph/completion/relation_nav_runtime_20261125.py",
+      "bytes": 7098,
+      "sha256": "288071230aa324110e7cbe7082d54bc50956403ea386b8414da38c03db694f7d"
+    },
+    {
+      "kind": "result",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/relation_nav_unified_20261125_v1/source_snapshot/conceptgraph/completion/relation_nav_unified_20261125.py",
+      "bytes": 23473,
+      "sha256": "dfe77e0755ac80cd826da25f3a927000f4a7d75cba25131cf50a8c63baeb81b0"
+    },
+    {
+      "kind": "result",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/relation_nav_unified_20261125_v1/source_snapshot/conceptgraph/navigation/relation_nav_unified_20261125.py",
+      "bytes": 6287,
+      "sha256": "163bbfd7587079e9fe4883b76d87ae0cd96f7ba3d3d8a455f42fa12cca96f961"
+    },
+    {
+      "kind": "result",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/relation_nav_unified_20261125_v1/source_snapshot/conceptgraph/navigation/semantic.py",
+      "bytes": 45148,
+      "sha256": "95645c520c37819f5ca0e3feebcfd5e2282cfc4260eb24caea04d04ca94dbf59"
+    },
+    {
+      "kind": "result",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/relation_nav_unified_20261125_v1/source_snapshot/conceptgraph/project_paths.py",
+      "bytes": 794,
+      "sha256": "cbb9c0e65ed1630291dced8c4df690409f1b7fb78887c973da6fb84998c354c4"
+    },
+    {
+      "kind": "result",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/relation_nav_unified_20261125_v1/source_snapshot/conceptgraph/scenegraph/incremental_graph.py",
+      "bytes": 21510,
+      "sha256": "904fedec44a276080b083ed3459982e7c177f747bbfd0186fa0164e2f1b91f68"
+    },
+    {
+      "kind": "result",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/relation_nav_unified_20261125_v1/source_snapshot/conceptgraph/scenegraph/relation_nav_unified_20261125.py",
+      "bytes": 8138,
+      "sha256": "82b1994516b6daf1b1d9fc7560c4e3553a3e26bcb85dd8768ff0ba4e4c931629"
+    },
+    {
+      "kind": "result",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/relation_nav_unified_20261125_v1/source_snapshot/conceptgraph/scenegraph/relations.py",
+      "bytes": 51345,
+      "sha256": "099e967bdbe5cd0ecf63fe90d094e5f9638d5c4df3643148d7671ee6fa25c105"
+    },
+    {
+      "kind": "result",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/relation_nav_unified_20261125_v1/source_snapshot/scripts/relation_nav_finalize_20261125.py",
+      "bytes": 111,
+      "sha256": "78f20eae1239f53df048f12b6d82c07484cd4b6736c71bdde66d0f68785ae46d"
+    },
+    {
+      "kind": "result",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/relation_nav_unified_20261125_v1/source_snapshot/scripts/relation_nav_graph_correction_20261125.py",
+      "bytes": 119,
+      "sha256": "18d2acaa66c77ca97599b81610db57d2a66e62dcd9aaa5701df4f1ca3b635a1e"
+    },
+    {
+      "kind": "result",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/relation_nav_unified_20261125_v1/source_snapshot/scripts/relation_nav_label_audit_20261125.py",
+      "bytes": 114,
+      "sha256": "dee6671dbef4e7627abea3fc7d1a2eed643b6c4d9c5654d37ce7faf8f06cdec8"
+    },
+    {
+      "kind": "result",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/relation_nav_unified_20261125_v1/source_snapshot/scripts/relation_nav_runtime_20261125.py",
+      "bytes": 110,
+      "sha256": "27feb665bc5a4e9c1b4960b2ef8b2fed846253b767f26cb91348051b7a00ec00"
+    },
+    {
+      "kind": "result",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/relation_nav_unified_20261125_v1/source_snapshot/scripts/relation_nav_unified_20261125.py",
+      "bytes": 103,
+      "sha256": "b3c34c4ce6401cfde6417b3b47d39445d0eb7eceb30ac35d7ebaf4cb42cff981"
+    },
+    {
+      "kind": "result",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/relation_nav_unified_20261125_v1/unified_R1_current_graphs.jsonl.gz",
+      "bytes": 1676195,
+      "sha256": "7562acd9bfcf03eea1037fd82ffff57d863f460721887ab80fce5d020c1761a3"
+    },
+    {
+      "kind": "result",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/relation_nav_unified_20261125_v1/unified_R1_current_graphs_v2.jsonl.gz",
+      "bytes": 1728834,
+      "sha256": "1862b9c6e4dc8d16efad0ce577a02bf7509e5a75b294ae2dcfd8f7b6a4787015"
+    },
+    {
+      "kind": "result",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/relation_nav_unified_20261125_v1/unified_S2_current_graphs.jsonl.gz",
+      "bytes": 175206,
+      "sha256": "4d4c6edd28b8dc33d22d8b96ef098ab5517105ad49aa990dc877b45fc5417499"
+    },
+    {
+      "kind": "result",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/relation_nav_unified_20261125_v1/unified_graph_consistency_summary.json",
+      "bytes": 18216,
+      "sha256": "076a348990644704f936802e57e65aa6b619f09d2b18d9e2fbc8505919d77f49"
+    },
+    {
+      "kind": "result",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/relation_nav_unified_20261125_v1/unified_graph_consistency_summary_v2.json",
+      "bytes": 1361,
+      "sha256": "4e12af9e83f1e5078698299c901d41e2f71f36ad12ed09ed03e210c8313f3647"
+    },
+    {
+      "kind": "report",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/relation_nav_unified_20261125/final_protection_v1.json",
+      "bytes": 52236,
+      "sha256": "5fcb559dff0447c60503c06fa6e74d2055113b68c8397eedd202b613ba23b4fd"
+    },
+    {
+      "kind": "report",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/relation_nav_unified_20261125/finalize_v1.log",
+      "bytes": 392,
+      "sha256": "376d23e3a1fe88cb24c3b3c6273ff9786fa6b3d3074610a4bbd4709be07c82cc"
+    },
+    {
+      "kind": "report",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/relation_nav_unified_20261125/graph_correction_v2.log",
+      "bytes": 106,
+      "sha256": "e9135e0039d4f0861bc822dec1682ed98fb5433693b35bbd2a02ef0b823cbcd7"
+    },
+    {
+      "kind": "report",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/relation_nav_unified_20261125/label_independent_audit_v1.json",
+      "bytes": 1085,
+      "sha256": "b675e2e1d37975ff89adb99213a2d3e857038474fff37b2b9ec28394d6212d6e"
+    },
+    {
+      "kind": "report",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/relation_nav_unified_20261125/labels_independent_v1.log",
+      "bytes": 248,
+      "sha256": "93789e206d77ac38e9a2be46be885b589ded29030903a885489f31d435784950"
+    },
+    {
+      "kind": "report",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/relation_nav_unified_20261125/navigation_runtime_v1.log",
+      "bytes": 271,
+      "sha256": "9ee5f3f3f3ad6bb5d5979c6732fc9968747b2d3150ce1e5064792dda98c14aa1"
+    },
+    {
+      "kind": "report",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/relation_nav_unified_20261125/positive_task_failure_summary.json",
+      "bytes": 402,
+      "sha256": "28f5bb89d47409c88e8023aad5909c8b46f46a01f26be0a73125ccfb5f19a5d7"
+    },
+    {
+      "kind": "report",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/relation_nav_unified_20261125/postprocessing_correction_v2.json",
+      "bytes": 1361,
+      "sha256": "4e12af9e83f1e5078698299c901d41e2f71f36ad12ed09ed03e210c8313f3647"
+    },
+    {
+      "kind": "report",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/relation_nav_unified_20261125/prepare_v1_failure.log",
+      "bytes": 1283,
+      "sha256": "da69dc2456a76e387981e32f283b6d3172abd33fa5748c9502042e7ee54b91dd"
+    },
+    {
+      "kind": "report",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/relation_nav_unified_20261125/registration.json",
+      "bytes": 257,
+      "sha256": "bcc7411e9c0d1152a19f6ab02a821f063f681fe4bb16403326650463687c185f"
+    },
+    {
+      "kind": "report",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/relation_nav_unified_20261125/relations_runtime_v1.log",
+      "bytes": 389,
+      "sha256": "05ce5d62b1798820f40aecbe30b4c359ecb3715ec8527af3f1bb7ad509ad9197"
+    },
+    {
+      "kind": "report",
+      "path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/relation_nav_unified_20261125/关系与导航统一_本轮结果.md",
+      "bytes": 6625,
+      "sha256": "2b9e3093b97a36b4ae604a03801dae4a2a76b6ed1fb626cacfab6a0747cad77d"
+    }
+  ],
+  "own_source_count": 12,
+  "storage_bytes_by_kind": {
+    "source": 68497,
+    "input": 11122663,
+    "result": 6257838,
+    "report": 64655
+  },
+  "protection_count": 160,
+  "protection_unchanged": true,
+  "independent_audits": [
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/git_integration_20261125/relation_independent_v1.json",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/git_integration_20261125/navigation_independent_v1.json",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/git_integration_20261125/unified_graph_and_region_independent_v2.json"
+  ],
+  "all_experiment_processes_stopped": true,
+  "GPU_calls": 0,
+  "model_calls": 0,
+  "planner_calls": 0,
+  "no_more_business_or_result_changes": true,
+  "source_tree_free_bytes": 5476155392,
+  "actual_output_volume_free_bytes": 30884933632,
+  "notes": [
+    "source tree only small source writes; all experiment inputs/results are on actual output volume above20GiB",
+    "R1 v1 derived graph retained and superseded only by R1_v2",
+    "HD map hashes were omitted at preregistration and are explicitly postrun receipt",
+    "render-time graph provenance and raw measurement provenance are distinct"
+  ]
+}

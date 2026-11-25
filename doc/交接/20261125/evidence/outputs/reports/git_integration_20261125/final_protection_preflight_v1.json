@@ -1,0 +1,34 @@
+{
+  "checked_utc": "2026-11-25T08:57:08.361170+00:00",
+  "initial_merge": "4e581523f81c0c81bc8de419a5bd91affe2a8a8b",
+  "initial_source_content_checked": 3141,
+  "allowed_document_or_ignore_updates": [
+    "README.md",
+    ".gitignore",
+    "doc/交接/20261125/当前进度与代码同步.md"
+  ],
+  "source_content_violations": [],
+  "protected_count": 160,
+  "protected_changed": [],
+  "current_source_and_input_freeze": [
+    {
+      "manifest": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/node_motion_unified_20261125_v2/manifest.json",
+      "checked": {
+        "source_sha256": 53,
+        "input_sha256": 6054,
+        "evaluation_only_sha256": 3
+      },
+      "changed": []
+    },
+    {
+      "manifest": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/relation_nav_unified_20261125_v1/manifest.json",
+      "checked": {
+        "source_sha256": 10,
+        "input_sha256": 89,
+        "evaluation_only_sha256": 4
+      },
+      "changed": []
+    }
+  ],
+  "passed": true
+}

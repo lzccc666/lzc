@@ -1,0 +1,51 @@
+{
+  "checked_utc": "2026-11-25T08:36:10.017323+00:00",
+  "method_input_schema_checks": [
+    {
+      "path": "dataset/processed/mf_position_20261125_v2/method_frames.jsonl",
+      "rows": 1508,
+      "top_keys": {
+        "scene": 1508,
+        "frame_idx": 1508,
+        "timestamp_s": 1508,
+        "rgb": 1508,
+        "depth": 1508,
+        "detections": 1508,
+        "intrinsic": 1508,
+        "camera_pose": 1508
+      },
+      "GT_label_key_occurrences": {}
+    },
+    {
+      "path": "dataset/processed/relation_nav_unified_20261125_v1/method_frames.jsonl",
+      "rows": 1628,
+      "top_keys": {
+        "cohort": 1628,
+        "scene": 1628,
+        "log": 1628,
+        "frame_idx": 1628,
+        "timestamp_s": 1628,
+        "camera_pose": 1628,
+        "heading": 1628,
+        "frame_source": 1628,
+        "location": 1628,
+        "predictions": 1628
+      },
+      "GT_label_key_occurrences": {}
+    },
+    {
+      "path": "dataset/processed/relation_nav_unified_20261125_v1/method_tasks.jsonl",
+      "rows": 1200,
+      "top_keys": {
+        "task_id": 1200,
+        "scene": 1200,
+        "frame_idx": 1200,
+        "query_text": 1200,
+        "reference_frame": 1200
+      },
+      "GT_label_key_occurrences": {}
+    }
+  ],
+  "passed": true,
+  "scope": "input field scan plus source dataflow read; not alone proof of all leakage absence"
+}

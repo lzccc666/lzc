@@ -1,0 +1,68 @@
+{
+  "passed": true,
+  "scope": "R1",
+  "node_run": "node_motion_unified_20261125_v2",
+  "counts": {
+    "frames": 1508,
+    "nodes": 5600,
+    "trace_links": 21664,
+    "known_motion": 1287,
+    "unknown_motion": 4313,
+    "static": 707,
+    "dynamic": 580
+  },
+  "output_sha256": "06077175f63ce89b8dc1606a1a68d75229eb379cb2468ce8aca43bdc20c2fec2",
+  "manifest_sha256": "be1a60a004715298b698847dac3157a19a35b8e73def5aa8157cf2567bb8e73c",
+  "pixel_checks": [
+    {
+      "key": "scene-0012:1:CAM_FRONT:1531885320.512478:0",
+      "real_pixels": 1,
+      "maximum_center_error_m": 0.0,
+      "depth_sha256": "9cdbe713ea78284d2ee1ba674e1f62c74678da374a40d113b21d230bc69250a0",
+      "detections_sha256": "3391c64ba858cbbe4657a31c52c5c8f0a404fda58b65d5521d4810e6ce42c345"
+    },
+    {
+      "key": "scene-0013:1:CAM_FRONT:1531885340.512460:0",
+      "real_pixels": 67,
+      "maximum_center_error_m": 0.0,
+      "depth_sha256": "4f03c6be91d7b62e5f1f6ff920128438a6b2ccfb91487570739d19fe668a9ac5",
+      "detections_sha256": "b4130b10802dd18e67e90d203a14b4f79ed41b56d7144acac1a9110d8d189cf8"
+    },
+    {
+      "key": "scene-0014:1:CAM_FRONT:1531885397.512463:0",
+      "real_pixels": 925,
+      "maximum_center_error_m": 0.0,
+      "depth_sha256": "02f66149eb5ec9472e1ff0666cfed24aae4f93d43d36affa8c3529e3b96f83ed",
+      "detections_sha256": "1ecfa6ccfe2b1b28e752dda5ae32e8d687719dfcb79e8dc208a520416f3b635f"
+    },
+    {
+      "key": "scene-0015:1:CAM_FRONT:1531885417.512467:0",
+      "real_pixels": 70,
+      "maximum_center_error_m": 0.0,
+      "depth_sha256": "9ddb7c96eb093e24644509e1e1c8c46c565b9ba90d9250383b55b864034a3193",
+      "detections_sha256": "878c2977aedd8e5b7e8e8b3dcc75e0600c7879f6aee23cb64f7dfd175049c54c"
+    },
+    {
+      "key": "scene-0016:1:CAM_FRONT:1531885613.512464:0",
+      "real_pixels": 10,
+      "maximum_center_error_m": 0.0,
+      "depth_sha256": "03ee204ecab4d182d518f823e48ba432d600ebac55fd542bb2b21c3267b9823b",
+      "detections_sha256": "f3e130e7e38970cffbe4d3849748e83fc0a9f643aa32df45bbc2df6775507e4c"
+    },
+    {
+      "key": "scene-0019:1:CAM_FRONT:1531885863.012466:0",
+      "real_pixels": 63,
+      "maximum_center_error_m": 0.0,
+      "depth_sha256": "8a2312b87fe600cf6026f240d096dfaa6a272b767461e3fc124abc869d2decca",
+      "detections_sha256": "3de198518069124150ae76053eabab97b0b42c8d841c74e6e8e2fd85f220b7f7"
+    }
+  ],
+  "independent_raw_pixel_checks": 6,
+  "pixel_sampling": "first real observation per scene/camera; R1 first6 scenes; no outcome selection",
+  "original_predictions_exact": true,
+  "causal_motion_known_only": true,
+  "trace_identity_not_concatenated": true,
+  "GT_in_method": false,
+  "geometry_pose_source": "declared CAM_FRONT camera proxy, not measured rear axle pose",
+  "claims_vehicle_path_or_closed_loop": false
+}

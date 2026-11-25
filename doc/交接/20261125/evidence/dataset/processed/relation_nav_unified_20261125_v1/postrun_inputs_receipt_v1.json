@@ -1,0 +1,14 @@
+{
+  "created_utc": "2026-11-25T08:57:29.500038+00:00",
+  "receipt_status": "postrun_not_preregistered_hash",
+  "missing_preregistration_field": "engineering HD map paths/SHA omitted from original manifest",
+  "affects": "engineering road region reproducibility; target selection uses no HD map",
+  "map_sha256": {
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/nuscenes_map_expansion/expansion/singapore-onenorth.json": "17939122b940d7faff50fa7ff623ded7f739549a781c32dff1ecd1ac7bebca02"
+  },
+  "node_inputs": {
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/node_motion_unified_20261125_v2/R1_frames.jsonl.gz": "06077175f63ce89b8dc1606a1a68d75229eb379cb2468ce8aca43bdc20c2fec2",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/node_motion_unified_20261125_v2/S2_frames.jsonl.gz": "c519948213e212a1e26f70fd573a343923ad76d0920b5fb505e91fa16f922668"
+  },
+  "task_or_threshold_changes": false
+}

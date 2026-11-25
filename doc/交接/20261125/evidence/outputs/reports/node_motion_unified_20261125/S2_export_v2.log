@@ -1,0 +1,7 @@
+{"scope": "S2", "scene": "scene-0012", "frames": 20, "elapsed_s": 3.9809858929365873}
+{"scope": "S2", "scene": "scene-0013", "frames": 40, "elapsed_s": 12.022636050358415}
+{"scope": "S2", "scene": "scene-0019", "frames": 60, "elapsed_s": 25.699455335736275}
+{"scope": "S2", "scene": "scene-0035", "frames": 80, "elapsed_s": 40.34148481301963}
+{"scope": "S2", "scene": "scene-0042", "frames": 100, "elapsed_s": 47.23390764370561}
+{"scope": "S2", "scene": "scene-0047", "frames": 120, "elapsed_s": 55.69667782448232}
+{"scope": "S2", "complete": true, "counts": {"frames": 120, "predictions": 538, "raw_observations": 1220, "motion:static": 26, "shape:False": 122, "legacy_motion:unknown": 270, "semantic_position_candidates": 26, "motion:unknown": 444, "unknown:invalid_current_measurement_support": 47, "unknown:no_current_update": 89, "unknown:insufficient_independent_groups": 243, "unknown:span_below_one_second": 255, "unknown:unresolved_identity_or_competition": 225, "shape:True": 416, "unknown:missing_raw_speed": 128, "legacy_motion:dynamic": 206, "legacy_motion:static": 62, "motion:dynamic": 68}}

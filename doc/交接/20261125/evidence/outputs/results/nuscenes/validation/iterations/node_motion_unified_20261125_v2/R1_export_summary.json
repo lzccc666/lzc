@@ -1,0 +1,145 @@
+{
+  "passed": true,
+  "scope": "R1",
+  "counts": {
+    "frames": 1508,
+    "predictions": 5600,
+    "raw_observations": 9145,
+    "motion:static": 707,
+    "shape:False": 1011,
+    "legacy_motion:unknown": 2698,
+    "semantic_position_candidates": 707,
+    "motion:unknown": 4313,
+    "unknown:invalid_current_measurement_support": 347,
+    "unknown:no_current_update": 1506,
+    "unknown:insufficient_independent_groups": 2384,
+    "unknown:span_below_one_second": 2327,
+    "shape:True": 4589,
+    "unknown:missing_raw_speed": 1355,
+    "legacy_motion:dynamic": 1873,
+    "unknown:unresolved_identity_or_competition": 1848,
+    "legacy_motion:static": 1029,
+    "motion:dynamic": 580
+  },
+  "by_scene": {
+    "scene-0012": {
+      "frames": 40
+    },
+    "scene-0013": {
+      "frames": 40
+    },
+    "scene-0014": {
+      "frames": 40
+    },
+    "scene-0015": {
+      "frames": 40
+    },
+    "scene-0016": {
+      "frames": 40
+    },
+    "scene-0019": {
+      "frames": 40
+    },
+    "scene-0020": {
+      "frames": 39
+    },
+    "scene-0021": {
+      "frames": 40
+    },
+    "scene-0025": {
+      "frames": 40
+    },
+    "scene-0026": {
+      "frames": 39
+    },
+    "scene-0027": {
+      "frames": 40
+    },
+    "scene-0030": {
+      "frames": 40
+    },
+    "scene-0032": {
+      "frames": 40
+    },
+    "scene-0035": {
+      "frames": 40
+    },
+    "scene-0038": {
+      "frames": 40
+    },
+    "scene-0039": {
+      "frames": 40
+    },
+    "scene-0042": {
+      "frames": 41
+    },
+    "scene-0043": {
+      "frames": 39
+    },
+    "scene-0044": {
+      "frames": 40
+    },
+    "scene-0047": {
+      "frames": 40
+    },
+    "scene-0048": {
+      "frames": 40
+    },
+    "scene-0049": {
+      "frames": 39
+    },
+    "scene-0053": {
+      "frames": 39
+    },
+    "scene-0054": {
+      "frames": 39
+    },
+    "scene-0059": {
+      "frames": 41
+    },
+    "scene-0060": {
+      "frames": 40
+    },
+    "scene-0075": {
+      "frames": 39
+    },
+    "scene-0092": {
+      "frames": 40
+    },
+    "scene-0093": {
+      "frames": 39
+    },
+    "scene-0095": {
+      "frames": 39
+    },
+    "scene-0096": {
+      "frames": 39
+    },
+    "scene-0097": {
+      "frames": 39
+    },
+    "scene-0098": {
+      "frames": 39
+    },
+    "scene-0099": {
+      "frames": 39
+    },
+    "scene-0102": {
+      "frames": 40
+    },
+    "scene-0129": {
+      "frames": 40
+    },
+    "scene-0135": {
+      "frames": 39
+    },
+    "scene-0174": {
+      "frames": 40
+    }
+  },
+  "all_original_predictions_exact": true,
+  "elapsed_s": 352.9980084244162,
+  "frames_sha256": "06077175f63ce89b8dc1606a1a68d75229eb379cb2468ce8aca43bdc20c2fec2",
+  "GT_in_method": false,
+  "GPU_calls": 0
+}
