@@ -1,0 +1,16 @@
+{
+  "created_utc": "2026-11-25T11:20:59.369165+00:00",
+  "runtime_source_sha256": {
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/kitti_object_runtime_20261125_v3.py": "900338dda8e6d02fe5cb95e0e7ed63cc3cdc04d355841323d2a887a1da5e3344",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/scripts/kitti_object_runtime_20261125_v3.py": "a4bc355f7ba4b8010fa4e8439784fce506c06937d33eaab6af919826479aa30f"
+  },
+  "changes": "same frontend calls with explicit CUDA synchronization after YOLO/SAM/CLIP; phase timers and prefix equality guard",
+  "no_change_to_model_weights_or_thresholds_or_seed_or_inputs_or_metrics": true,
+  "prior79_prefix_and10_diagnostic_retained": true,
+  "diagnostic10_all_numeric_predictions_and_maskhash_exact": true,
+  "prefix_required": 79,
+  "total_frames": 7481,
+  "configuration_count": 1,
+  "GPU_budget_includes_prior_v1_and10_profile": true,
+  "underlying_latency_cause": "synchronization-sensitive execution observed; no stronger hardware root-cause claim"
+}

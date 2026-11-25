@@ -1,0 +1,31 @@
+{
+  "registered_utc": "2026-11-25T12:13:45.488129+00:00",
+  "stage": "inference closed; complete evaluation summary not yet read by independent auditor",
+  "metric": "supplementary official-GT camera0-center-z conditional recall",
+  "bins": [
+    {
+      "lower": 1,
+      "upper": 10,
+      "lower_open": true
+    },
+    {
+      "lower": 10,
+      "upper": 20,
+      "lower_open": false
+    },
+    {
+      "lower": 20,
+      "upper": 40,
+      "lower_open": false
+    },
+    {
+      "lower": 40,
+      "upper": 65,
+      "lower_open": false
+    }
+  ],
+  "matching": "same-class fullXYZ<=3m maximum cardinality across whole eligible frame/class, then bucket matched official GT; never rematch individual buckets",
+  "ties": "independent deterministic augmenting paths in input prediction order and official label file order; group membership may differ from another equally maximum-cardinality assignment",
+  "full_denominator": "7481, including failed frames, unchanged main-table metrics",
+  "not_primary": true
+}

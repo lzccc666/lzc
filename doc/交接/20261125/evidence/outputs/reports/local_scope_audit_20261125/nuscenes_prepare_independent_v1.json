@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "scope": "complete_metadata_and_request_contract_only",
+  "scenes": 850,
+  "frames": 34149,
+  "logs": 68,
+  "views": 204894,
+  "causal_depth_views": 199957,
+  "empty_depth_views": 4937,
+  "unique_requested_official_sensors": 244778,
+  "role_counts": {
+    "historical_holdout_access_to_audit": 20,
+    "fixed_method_new_scene": 751,
+    "historical_regression": 11,
+    "used_validation": 38,
+    "previously_used_test_regression": 30
+  },
+  "verified_hashes": {
+    "source_sha256": 3,
+    "metadata_sha256": 7,
+    "role_source_sha256": 3
+  },
+  "every_camera_and_selected_LiDAR_metadata_exact": true,
+  "closest_strictly_past_LiDAR_within_100ms_independently_rebuilt": true,
+  "all_metadata_samples_retained": true,
+  "archive_members_certified": false,
+  "archive_source_certification": "separate phaseA receipt required after ten original archives are indexed",
+  "caveats": [
+    "historical_holdout_access_to_audit is pending access provenance, not an unseen-test claim",
+    "new scenes with previously used logs cannot be called independent unseen logs",
+    "method scores, common-GT view comparison, and real model inference are outside this prepare audit"
+  ],
+  "no_GPU": true,
+  "elapsed_s": 17.962431045249104,
+  "audit_utc": "2026-11-25T11:11:54.897593+00:00",
+  "audit_source_sha256": "bee23144638c780db716186cccbb66611af1b8a8514fa2d91d11676272090bd0",
+  "manifest_sha256": "e077da347a7140e280eae16862c904407e73ba1d1c38ffcc148d093bd4475aca"
+}

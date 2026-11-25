@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "scope": "pre-score source/protocol review, not statistical result validation",
+  "utc": "2026-11-25T12:14:51.349983+00:00",
+  "no_GPU": true,
+  "GT_results_opened": false,
+  "primary": [
+    [
+      "original_fusion",
+      "single_frame",
+      "front"
+    ],
+    [
+      "R1",
+      "original_fusion",
+      "front"
+    ],
+    [
+      "S2_1",
+      "R1",
+      "front"
+    ],
+    [
+      "S2_3",
+      "S2_1",
+      "union6"
+    ],
+    [
+      "S2_6",
+      "S2_3",
+      "union6"
+    ]
+  ],
+  "paired_unit": "same official log bootstrap draws for all methods",
+  "family": "5 predeclared recall contrasts, 99% each; remaining intervals descriptive95%",
+  "group_policy": "GT-conditioned distance/visibility recall; category full precision/recall/F1",
+  "confound": "per-camera different strict-past scanIDs explicit; shared-scan counterfactual is a separate auxiliary, not assumed",
+  "source_sha256": "7244203182b86933edd0aab3cc8cb6f6d98585b22fbc1ada034ee1ee9aed8ae9",
+  "statistics_protocol_sha256": "239176dc8e66346f4f9ada2491959ab30e8809d861e030e61d778a349684faa5",
+  "presealed_sources_unchanged": 65
+}

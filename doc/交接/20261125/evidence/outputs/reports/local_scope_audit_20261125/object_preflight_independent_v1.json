@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "scope": "7481 fixed membership and resource preflight, not full model result audit",
+  "frames": 7481,
+  "members_verified": {
+    "rgb": 7481,
+    "lidar": 7481,
+    "calib": 7481,
+    "evaluation_only_labels": 7481
+  },
+  "input_enumeration_exact": true,
+  "input_contains_official_boxes": false,
+  "preserved_legacy_reprojection_regression_frames": 64,
+  "regression_report_sha256": "6b12af16f964637b4438b13fd2e14afaf857dd7ebb3fd20b1d2a664035584dbe",
+  "legacy_regression_definition": "same stored 64 detections; fresh original RGB/LiDAR/calibration reprojection; no new model inference comparison",
+  "SHA_checked_sources": 11,
+  "SHA_checked_protection": 4,
+  "model_stats_checked": 3,
+  "model_full_SHA_independently_recomputed": false,
+  "global_budget_GiB": {
+    "nuscenes": 4.5,
+    "kitti_object": 0.75,
+    "kitti_tracking": 0.25,
+    "total_reserved": 5.5,
+    "ceiling": 6
+  },
+  "no_fusion_or_motion_or_navigation_credit": true,
+  "no_GPU": true,
+  "elapsed_s": 0.449279697611928,
+  "audit_utc": "2026-11-25T11:15:32.191284+00:00",
+  "audit_source_sha256": "fcefe66204b952952b3c09a0212c84435e64d5c781338ec198f3bb6bab73f6ba",
+  "manifest_sha256": "b1bdf09a4b1810d8343aad82e4511d0ab5afd38afcdd6a80f7716b17208982cb"
+}

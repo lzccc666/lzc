@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "counts": {
+    "independent_causal_mapper_comparisons": 80,
+    "independent_all_method_prediction_comparisons": 120,
+    "nonempty_method_frames": 65,
+    "full_current_graph_payload_comparisons": 120,
+    "edges_checked": 114,
+    "current_raw_sources_verified": 186,
+    "actual_selected_pixels_verified": 5420
+  },
+  "no_GPU": true,
+  "GT_in_method": false,
+  "elapsed_s": 13.506096197292209,
+  "audit_source_sha256": "629684ae5bc128e8dda6401d19c43e564bf357fbefd8495e740b2a571c4e4e7a",
+  "input_summary_sha256": "fa179b3b2f2744fd56f7bec76f2300425654164388dfd89f4bb64b87dc8f2bce",
+  "presealed_sources_unchanged": 65,
+  "scope": "20 already cached real groups; independent original mapper replay, original-mask pixels, full/cache relation payload, six output adapters",
+  "not_full850_results": true
+}

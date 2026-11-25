@@ -1,0 +1,36 @@
+{
+  "created_utc": "2026-11-25T11:50:30.560377+00:00",
+  "policy": {
+    "configuration_count": 1,
+    "seed": 17,
+    "no_new_prediction_scores_seen_before_freeze": true,
+    "reason": "single_frame and original_fusion lack audited raw motion confirmation; cannot use their unsupported confirmation as a zero retrieval baseline",
+    "object_retrieval_diagnostic": {
+      "category": "parsed target category; identical rule for all methods",
+      "motion": "no motion filter or motion penalty; static/dynamic/unknown all participate; static condition remains unverified",
+      "relation": "source-target delta dot current front-camera forward/left; directional distance<=12m, absolute component>1m; near8 old or near6 new",
+      "reference": "legacy1115 exists-any visible category reference; unified1200 multiple visible reference nodes requests clarification",
+      "ranking": "nearest world XY to current front camera ground origin, deterministic original_index tie break",
+      "interpretation": "object retrieval diagnostic under original target-ID labels; not completion of the static semantic task"
+    },
+    "confirmed_static_selection": {
+      "method": "frozen v1 verified-motion and raw-evidence gate; dense retains old depth gate",
+      "unsupported_baselines": [
+        "single_frame",
+        "original_fusion"
+      ],
+      "interpretation": "separate confirmation contract; unsupported baselines are not a claimed retrieval improvement"
+    },
+    "labels": "all original 2315 source tasks and 60 pending unchanged",
+    "GT_in_method": false,
+    "GPU_calls": 0,
+    "Qwen_calls": 0
+  },
+  "original_manifest_sha256": "4c9006067e67c51eb480aa2406160ceeee31bef59455ca7666c0d314d5d7b3fb",
+  "runtime_source_sha256": {
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/nu_task_replay_fair_20261125_v2.py": "d467a0e2d97138b208a505152840defe85bff5142b7078231ea8a1de6f413b9c",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/scripts/nu_task_replay_fair_20261125_v2.py": "8d25df40ab2b920fb74ac0d26d41cf7775b4c1221bebdfd0e0c5a8239bf713be"
+  },
+  "original_v1_retained": true,
+  "results_seen": false
+}

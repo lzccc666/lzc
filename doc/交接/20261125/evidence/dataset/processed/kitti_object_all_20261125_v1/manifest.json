@@ -1,0 +1,121 @@
+{
+  "created_utc": "2026-11-25T11:06:04.345750+00:00",
+  "git_head": "dc290332033d1b7879eec3f4a5d54f8f4b6cf6bc",
+  "frames": 7481,
+  "frame_ids": "all integers000000..007480, no success/GT subset selection",
+  "input_index_sha256": "17aeb24613d1d4debc5ab761d182989985d06dfb8f67155ecbc9654d687c3f59",
+  "evaluation_index_sha256": "96ab8c13da224e90e33c22ef2126d647d324a435ff2f47ab0ba6d1f5869df43e",
+  "archive_stat": {
+    "/root/autodl-pub/KITTI_Object/raw/data_object_image_2.zip": {
+      "size": 12569945557,
+      "mtime_ns": 1728722695960756852
+    },
+    "/root/autodl-pub/KITTI_Object/raw/data_object_velodyne.zip": {
+      "size": 28750710812,
+      "mtime_ns": 1728728025257524218
+    },
+    "/root/autodl-pub/KITTI_Object/raw/data_object_calib.zip": {
+      "size": 26854811,
+      "mtime_ns": 1728722068849368305
+    },
+    "/root/autodl-pub/KITTI_Object/raw/data_object_label_2.zip": {
+      "size": 5601213,
+      "mtime_ns": 1728723296902437963
+    },
+    "/root/autodl-pub/KITTI_Object/raw/devkit_object.zip": {
+      "size": 63794,
+      "mtime_ns": 1728728025358661246
+    }
+  },
+  "archive_identity": "frozen member names, CRC32, sizes, offsets; each actually read raw member additionally gets SHA256; no whole large archive SHA claimed",
+  "source_sha256": {
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/kitti_object_all_20261125.py": "58765a789b6073a17db40c3292ea106376135465212f0d9b182dbb91b366bc4d",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/scripts/kitti_object_all_20261125.py": "1d507d303e7d5348df546c3c70e1db67fd4d8c807e33e0e12bf095fac9c6a474",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/kitti_local_all_20261125.py": "531a570ecbed44154d0b49d81f622eed7369b0713c2cf62f90a3b578b3b239f5",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/kitti_transfer.py": "3d8e69d646b85f884b187f19d483e51cdd7bc7f316570680b645321f3bc9d49a",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/kitti_geometry.py": "5d88914cbb415f01721e2d829c65811bd7b70250ed6dec9084d9a02afbee9ede",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/kitti_evaluate.py": "888266b4a51cc32070ccc625b035da230ed3aae3fcfb07aa808e30727525ea0e",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/depth.py": "c3d0b1efa3cdc91a82b75cdf872fe923ff68b240090a49022d3a7481ab653b0e",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/scripts/streamlined_detections.py": "b487c303cc86e0f3658891c0a1f7a31237fa5042fa99838d7a13cefe4ed1e4c7",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/utils/model_utils.py": "d11de07c9247feb6c8183c70bc7c5d890c2abfe140225a33708dd785a19d4d71",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/vehicle_classes.txt": "6f42f64d2817016109c3920cd3183baf690edaf4706af464712a4ea841185fcb",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/project_paths.py": "cbb9c0e65ed1630291dced8c4df690409f1b7fb78887c973da6fb84998c354c4"
+  },
+  "model_sha256": {
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/checkpoint/yolov8l-world.pt": "a234e9e0f3f5b43da4f899f30c67146a9e404b6e08f4472d0907e3b3f23e1489",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/checkpoint/mobile_sam.pt": "6dbb90523a35330fedd7f1d3dfc66f995213d81b29a5ca8108dbcdd4e37d6c2f",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/checkpoint/hf_models/models--laion--CLIP-ViT-H-14-laion2B-s32B-b79K/snapshots/1c2b8495b28150b8a4922ee1c8edee224c284c0c/open_clip_model.safetensors": "0084e75319a50ad85ef45377bad5bc38f2f58824459eb690048d51c9f8863be5"
+  },
+  "model_stat": {
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/checkpoint/yolov8l-world.pt": {
+      "size": 95659301,
+      "mtime_ns": 1778509594111714128
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/checkpoint/mobile_sam.pt": {
+      "size": 40728226,
+      "mtime_ns": 1778509792289675604
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/checkpoint/hf_models/models--laion--CLIP-ViT-H-14-laion2B-s32B-b79K/snapshots/1c2b8495b28150b8a4922ee1c8edee224c284c0c/open_clip_model.safetensors": {
+      "size": 3944517836,
+      "mtime_ns": 1779955917524627351
+    }
+  },
+  "protection_sha256": {
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/MEMORY.md": "f1db9a84f9b586fff70f61d09cd3bdda78d4b2cac953fbde8af45533ed034fd6",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/PAPER_MEMORY.md": "2a978751be1efd888a130444bc31f146666c7f4fcb62e37c2f92aa2fe196f2b2",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/kitti_object_cpu_full_001/summary.json": "d15b653acf92faa65a143d0ad45ae6d3a3ffbfb393d8ef7719e15e127815b997",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/project_v2/thesis_completion_v1/statistics/kitti_object_cpu_full_001/report.json": "f9d721a62720bdf668133c29d9c4e09e1834056346c81ad6df616d272deb8d24"
+  },
+  "classes": [
+    "car",
+    "truck",
+    "bus",
+    "motorcycle",
+    "bicycle",
+    "pedestrian",
+    "traffic sign",
+    "traffic light",
+    "road",
+    "sidewalk",
+    "building",
+    "tree",
+    "fence",
+    "pole"
+  ],
+  "methods": [
+    "mask_points_mean",
+    "mask_points_robust_mean"
+  ],
+  "frontend": "one shared actual YOLOv8l-world/MobileSAM/CLIP per frame, conf0.1 unchanged",
+  "seed": 17,
+  "configuration_count": 1,
+  "device": "cuda:0",
+  "torch_CPU_threads": 1,
+  "geometry": "rectified camera0 3D, P2 full fourth column, each pixel nearest current projected LiDAR",
+  "depth": {
+    "minimum_m": 1.0,
+    "maximum_m": 65.0,
+    "minimum_retained_points": 5,
+    "robust": "old largest supported current depth cluster; unchanged"
+  },
+  "metric": "same class maximum-cardinality full3D center distance<=3m; not official AP/HOTA or Tracking XY",
+  "primary_categories": [
+    "car",
+    "truck",
+    "pedestrian"
+  ],
+  "cyclist_bicycle": "separate proxy diagnostic only",
+  "label_ignore_policy": "unchanged legacy DontCare/Van/Person_sitting IoA and eligible-IoU guards; every ignored count saved",
+  "GT_in_method": false,
+  "actual_fusion_or_motion_or_navigation": false,
+  "split": "full local Object labelled training split, used as external regression; no parameter updates or unseen-test claim",
+  "GPU_lock": "/root/autodl-tmp/lizichong/outputs/reports/shared_gpu_20261125.lock",
+  "budgets": {
+    "GPU_wall_s": 6000,
+    "CPU_evaluation_wall_s": 1800,
+    "persistent_bytes": 805306368,
+    "temporary_bytes": 536870912,
+    "minimum_free_bytes": 21474836480
+  },
+  "persistent_output": "numeric per-frame detections, 3D centers, depth evidence, raw/packed-mask checksums; no whole RGB/mask/CLIP cache"
+}

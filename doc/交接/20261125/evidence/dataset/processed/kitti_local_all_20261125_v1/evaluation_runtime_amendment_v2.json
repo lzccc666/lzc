@@ -1,0 +1,13 @@
+{
+  "created_utc": "2026-11-25T11:11:43.707818+00:00",
+  "reason": "v1 identity metric adapter omitted required camera_timestamp_s alias; inference and all1030 object evaluations had finished",
+  "change": "identity adapter camera_timestamp_s=already frozen nominal_timestamp_s; not measured sensor time",
+  "original_failure_log": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/kitti_local_all_20261125/evaluation_v1.log",
+  "source_sha256": {
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/kitti_tracking_evaluation_20261125_v2.py": "1f3e1490c9b3a842a26f73d9b5736a90e60eb439e23cfd77f4aa2fc09f08d543",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/scripts/kitti_tracking_evaluation_20261125_v2.py": "b210b2125dd8bcfa446a52d1f73d6962b14f4c4f4492100d6647a478885e8de4"
+  },
+  "configuration_or_matching_or_denominator_changes": false,
+  "inference_rerun": false,
+  "original_completed_evaluation_file_sha256": "379a57e95031ed5919a3562abbceb3cce533b1e39d43015ceec6b34fd963f135"
+}

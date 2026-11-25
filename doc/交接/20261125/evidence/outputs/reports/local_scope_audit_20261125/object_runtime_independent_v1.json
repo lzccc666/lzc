@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "scope": "runtime only; not full7481 evaluation",
+  "runtime_amendment_sha256": "9d120076ae08d4c434fa0de583bc4e28a325b728f8e8a5f0a90985234f89563b",
+  "source_SHA_verified": 2,
+  "original_v1_prefix_frames": 79,
+  "profile_independent_exact_frames": 10,
+  "v3_independent_exact_prefix_frames": 79,
+  "all_numeric_predictions_and_input_SHA_and_maskhashes_equal": true,
+  "matching_thresholds_weights_seed_inputs_metrics_unchanged": true,
+  "original_prefix_preserved": true,
+  "GPU6000s_includes_prior_runs": true,
+  "underlying_cause_not_claimed": true
+}

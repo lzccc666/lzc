@@ -1,0 +1,17 @@
+{
+  "created_utc": "2026-11-25T11:11:09.383741+00:00",
+  "source_sha256": {
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/nuscenes_full_20261125_index_v2.py": "84d4f67d3fa553d918f88e85856806ede3e6c0a8103b956fe1304642850b6f85",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/scripts/nuscenes_full_20261125_index_v2.py": "b0d96ddabf6fd341b3265176b3a7388c2e8b34b422c0bdfcf765197d2997a696"
+  },
+  "resource_only": true,
+  "reason": "tarfile r: seeks for every member; avoid redecoding gzip checkpoint for each small header",
+  "procedure": "one sequential C gzip full-index/CRC pass and one sequential tar r| membership pass; same sources and requests",
+  "v1_prefix_preserved": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/nuscenes_full_20261125_v1/archives/archive01_members.jsonl.gz",
+  "spacing": 16777216,
+  "parallel_archives": 2,
+  "index_budget_bytes": 1073741824,
+  "metadata_budget_bytes": 134217728,
+  "GPU_calls": 0,
+  "deadline_unix": 1795609920
+}

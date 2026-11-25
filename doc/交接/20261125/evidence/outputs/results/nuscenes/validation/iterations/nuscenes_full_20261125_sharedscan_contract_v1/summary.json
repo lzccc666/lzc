@@ -1,0 +1,129 @@
+{
+  "passed": true,
+  "frames": 20,
+  "prediction_comparisons": [
+    {
+      "frame_idx": 0,
+      "predictions": 0,
+      "exact": true
+    },
+    {
+      "frame_idx": 1,
+      "predictions": 0,
+      "exact": true
+    },
+    {
+      "frame_idx": 2,
+      "predictions": 0,
+      "exact": true
+    },
+    {
+      "frame_idx": 3,
+      "predictions": 0,
+      "exact": true
+    },
+    {
+      "frame_idx": 4,
+      "predictions": 1,
+      "exact": true
+    },
+    {
+      "frame_idx": 5,
+      "predictions": 1,
+      "exact": true
+    },
+    {
+      "frame_idx": 6,
+      "predictions": 1,
+      "exact": true
+    },
+    {
+      "frame_idx": 7,
+      "predictions": 1,
+      "exact": true
+    },
+    {
+      "frame_idx": 8,
+      "predictions": 0,
+      "exact": true
+    },
+    {
+      "frame_idx": 9,
+      "predictions": 1,
+      "exact": true
+    },
+    {
+      "frame_idx": 10,
+      "predictions": 2,
+      "exact": true
+    },
+    {
+      "frame_idx": 11,
+      "predictions": 2,
+      "exact": true
+    },
+    {
+      "frame_idx": 12,
+      "predictions": 5,
+      "exact": true
+    },
+    {
+      "frame_idx": 13,
+      "predictions": 5,
+      "exact": true
+    },
+    {
+      "frame_idx": 14,
+      "predictions": 4,
+      "exact": true
+    },
+    {
+      "frame_idx": 15,
+      "predictions": 4,
+      "exact": true
+    },
+    {
+      "frame_idx": 16,
+      "predictions": 5,
+      "exact": true
+    },
+    {
+      "frame_idx": 17,
+      "predictions": 5,
+      "exact": true
+    },
+    {
+      "frame_idx": 18,
+      "predictions": 4,
+      "exact": true
+    },
+    {
+      "frame_idx": 19,
+      "predictions": 5,
+      "exact": true
+    }
+  ],
+  "new_control": {
+    "complete": true,
+    "method": "S2_6_sharedscan",
+    "counts": {
+      "empty_depth_views": 6,
+      "frames": 20,
+      "predictions": 46,
+      "groups_no_earliest_scan": 1,
+      "groups_input_differs_from_main": 0
+    },
+    "CPU_wall_s": 7.3232666570693254,
+    "frames_sha256": "be573fd2ce0190f50f605eb1dbe1c7e36cdd40e3a6463cbde3b541352d323aff",
+    "new_GPU_calls": 0,
+    "GT_in_method": false
+  },
+  "elapsed_s": 25.903005212545395,
+  "wrapper_preserves_original_six_function": true,
+  "original65_source_unchanged": true,
+  "GPU_calls": 0,
+  "GT_accessed": false,
+  "auxiliary_source_sha256": "264052cf99266e70b3ee6d9e37bcd9483db072528e4e83623a8245b60b10686f",
+  "source_sha256": "a042becd7accf05861c0553373d62e4aebd92b37bd63fb58f0c693d8542777d8",
+  "temporary_only_new_path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/nuscenes_full_20261125_tmp/scene-0012__sharedscan_contract"
+}

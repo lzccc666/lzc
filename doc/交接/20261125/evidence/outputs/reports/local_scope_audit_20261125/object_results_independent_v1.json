@@ -1,0 +1,512 @@
+{
+  "passed": true,
+  "frames": 7481,
+  "failed_frames": [],
+  "raw_drive_count": 141,
+  "drive_frame_counts": {
+    "2011_09_28_drive_0106_sync": 11,
+    "2011_09_26_drive_0101_sync": 577,
+    "2011_09_26_drive_0086_sync": 68,
+    "2011_09_26_drive_0046_sync": 28,
+    "2011_09_26_drive_0070_sync": 72,
+    "2011_09_29_drive_0026_sync": 47,
+    "2011_09_26_drive_0056_sync": 197,
+    "2011_09_26_drive_0064_sync": 288,
+    "2011_09_26_drive_0036_sync": 240,
+    "2011_09_26_drive_0106_sync": 88,
+    "2011_09_26_drive_0018_sync": 154,
+    "2011_09_26_drive_0027_sync": 25,
+    "2011_09_26_drive_0028_sync": 131,
+    "2011_09_29_drive_0071_sync": 208,
+    "2011_09_26_drive_0051_sync": 112,
+    "2011_09_26_drive_0022_sync": 321,
+    "2011_09_26_drive_0095_sync": 166,
+    "2011_09_26_drive_0019_sync": 132,
+    "2011_10_03_drive_0047_sync": 296,
+    "2011_09_26_drive_0061_sync": 275,
+    "2011_09_26_drive_0032_sync": 187,
+    "2011_09_28_drive_0177_sync": 11,
+    "2011_09_26_drive_0087_sync": 96,
+    "2011_09_26_drive_0035_sync": 57,
+    "2011_09_26_drive_0096_sync": 243,
+    "2011_09_26_drive_0014_sync": 235,
+    "2011_09_26_drive_0057_sync": 80,
+    "2011_09_26_drive_0059_sync": 178,
+    "2011_09_26_drive_0039_sync": 192,
+    "2011_09_26_drive_0091_sync": 128,
+    "2011_09_26_drive_0001_sync": 51,
+    "2011_09_26_drive_0084_sync": 175,
+    "2011_09_26_drive_0104_sync": 152,
+    "2011_09_26_drive_0093_sync": 194,
+    "2011_09_26_drive_0009_sync": 287,
+    "2011_09_28_drive_0080_sync": 4,
+    "2011_09_28_drive_0125_sync": 8,
+    "2011_09_26_drive_0015_sync": 215,
+    "2011_09_28_drive_0141_sync": 9,
+    "2011_09_28_drive_0043_sync": 17,
+    "2011_09_26_drive_0029_sync": 35,
+    "2011_09_29_drive_0004_sync": 103,
+    "2011_09_26_drive_0117_sync": 198,
+    "2011_09_26_drive_0011_sync": 89,
+    "2011_09_28_drive_0185_sync": 11,
+    "2011_09_28_drive_0161_sync": 3,
+    "2011_09_26_drive_0023_sync": 258,
+    "2011_09_26_drive_0020_sync": 14,
+    "2011_09_28_drive_0002_sync": 107,
+    "2011_09_28_drive_0016_sync": 9,
+    "2011_09_28_drive_0045_sync": 21,
+    "2011_09_28_drive_0071_sync": 2,
+    "2011_09_28_drive_0094_sync": 11,
+    "2011_09_28_drive_0001_sync": 65,
+    "2011_09_26_drive_0002_sync": 6,
+    "2011_09_28_drive_0174_sync": 6,
+    "2011_09_26_drive_0013_sync": 23,
+    "2011_09_28_drive_0095_sync": 4,
+    "2011_09_28_drive_0121_sync": 4,
+    "2011_09_26_drive_0005_sync": 10,
+    "2011_09_28_drive_0037_sync": 21,
+    "2011_09_28_drive_0082_sync": 11,
+    "2011_09_28_drive_0053_sync": 11,
+    "2011_09_28_drive_0165_sync": 11,
+    "2011_09_28_drive_0146_sync": 11,
+    "2011_09_28_drive_0149_sync": 4,
+    "2011_09_28_drive_0222_sync": 7,
+    "2011_09_28_drive_0021_sync": 20,
+    "2011_09_28_drive_0192_sync": 11,
+    "2011_09_26_drive_0017_sync": 38,
+    "2011_09_28_drive_0047_sync": 10,
+    "2011_09_28_drive_0162_sync": 4,
+    "2011_09_28_drive_0039_sync": 24,
+    "2011_09_28_drive_0168_sync": 6,
+    "2011_09_28_drive_0220_sync": 6,
+    "2011_09_28_drive_0209_sync": 11,
+    "2011_09_28_drive_0184_sync": 12,
+    "2011_09_28_drive_0119_sync": 11,
+    "2011_09_26_drive_0060_sync": 18,
+    "2011_09_26_drive_0048_sync": 10,
+    "2011_09_28_drive_0057_sync": 11,
+    "2011_09_28_drive_0090_sync": 4,
+    "2011_09_26_drive_0079_sync": 5,
+    "2011_09_28_drive_0179_sync": 4,
+    "2011_09_28_drive_0087_sync": 10,
+    "2011_09_28_drive_0098_sync": 4,
+    "2011_09_28_drive_0132_sync": 10,
+    "2011_09_28_drive_0038_sync": 26,
+    "2011_09_28_drive_0216_sync": 5,
+    "2011_09_28_drive_0201_sync": 11,
+    "2011_09_28_drive_0089_sync": 4,
+    "2011_09_28_drive_0198_sync": 6,
+    "2011_09_28_drive_0134_sync": 4,
+    "2011_09_28_drive_0143_sync": 3,
+    "2011_09_28_drive_0187_sync": 4,
+    "2011_09_28_drive_0104_sync": 4,
+    "2011_09_28_drive_0110_sync": 5,
+    "2011_09_28_drive_0102_sync": 4,
+    "2011_09_28_drive_0113_sync": 11,
+    "2011_09_28_drive_0068_sync": 6,
+    "2011_09_28_drive_0108_sync": 4,
+    "2011_09_28_drive_0195_sync": 3,
+    "2011_09_28_drive_0054_sync": 4,
+    "2011_09_26_drive_0052_sync": 4,
+    "2011_09_28_drive_0186_sync": 3,
+    "2011_09_28_drive_0166_sync": 3,
+    "2011_09_28_drive_0153_sync": 13,
+    "2011_09_28_drive_0096_sync": 4,
+    "2011_09_28_drive_0100_sync": 11,
+    "2011_09_28_drive_0128_sync": 3,
+    "2011_09_28_drive_0167_sync": 5,
+    "2011_09_28_drive_0117_sync": 4,
+    "2011_09_28_drive_0075_sync": 5,
+    "2011_09_28_drive_0086_sync": 3,
+    "2011_09_28_drive_0214_sync": 3,
+    "2011_09_28_drive_0183_sync": 4,
+    "2011_09_26_drive_0113_sync": 5,
+    "2011_09_28_drive_0208_sync": 3,
+    "2011_09_28_drive_0154_sync": 3,
+    "2011_09_28_drive_0171_sync": 4,
+    "2011_09_28_drive_0204_sync": 3,
+    "2011_09_28_drive_0138_sync": 2,
+    "2011_09_28_drive_0035_sync": 5,
+    "2011_09_28_drive_0122_sync": 4,
+    "2011_09_28_drive_0160_sync": 3,
+    "2011_09_28_drive_0191_sync": 4,
+    "2011_09_28_drive_0205_sync": 3,
+    "2011_09_28_drive_0199_sync": 4,
+    "2011_09_28_drive_0155_sync": 4,
+    "2011_09_28_drive_0145_sync": 3,
+    "2011_09_28_drive_0034_sync": 3,
+    "2011_09_28_drive_0103_sync": 4,
+    "2011_09_28_drive_0065_sync": 1,
+    "2011_09_28_drive_0136_sync": 3,
+    "2011_09_28_drive_0135_sync": 3,
+    "2011_09_28_drive_0078_sync": 2,
+    "2011_09_28_drive_0070_sync": 1,
+    "2011_09_28_drive_0077_sync": 2,
+    "2011_09_28_drive_0066_sync": 1,
+    "2011_09_28_drive_0126_sync": 2,
+    "2011_09_28_drive_0156_sync": 1
+  },
+  "methods": {
+    "mask_points_mean": {
+      "truth": 33191,
+      "predictions": 37985,
+      "ignored_predictions": 10384,
+      "matches_2d": 25298,
+      "localized_predictions": 36697,
+      "matches_3d": 24228
+    },
+    "mask_points_robust_mean": {
+      "truth": 33191,
+      "predictions": 37985,
+      "ignored_predictions": 10384,
+      "matches_2d": 25298,
+      "localized_predictions": 36432,
+      "matches_3d": 26332
+    }
+  },
+  "per_class": {
+    "car": {
+      "mask_points_mean": {
+        "truth": 27945,
+        "predictions": 31974,
+        "ignored_predictions": 9368,
+        "matches_2d": 23574,
+        "localized_predictions": 31024,
+        "matches_3d": 22699
+      },
+      "mask_points_robust_mean": {
+        "truth": 27945,
+        "predictions": 31974,
+        "ignored_predictions": 9368,
+        "matches_2d": 23574,
+        "localized_predictions": 30780,
+        "matches_3d": 24642
+      }
+    },
+    "truck": {
+      "mask_points_mean": {
+        "truth": 775,
+        "predictions": 3473,
+        "ignored_predictions": 563,
+        "matches_2d": 472,
+        "localized_predictions": 3143,
+        "matches_3d": 242
+      },
+      "mask_points_robust_mean": {
+        "truth": 775,
+        "predictions": 3473,
+        "ignored_predictions": 563,
+        "matches_2d": 472,
+        "localized_predictions": 3124,
+        "matches_3d": 273
+      }
+    },
+    "pedestrian": {
+      "mask_points_mean": {
+        "truth": 4471,
+        "predictions": 2538,
+        "ignored_predictions": 453,
+        "matches_2d": 1252,
+        "localized_predictions": 2530,
+        "matches_3d": 1287
+      },
+      "mask_points_robust_mean": {
+        "truth": 4471,
+        "predictions": 2538,
+        "ignored_predictions": 453,
+        "matches_2d": 1252,
+        "localized_predictions": 2528,
+        "matches_3d": 1417
+      }
+    },
+    "bicycle": {
+      "mask_points_mean": {
+        "truth": 1601,
+        "predictions": 6690,
+        "ignored_predictions": 52,
+        "matches_2d": 137,
+        "localized_predictions": 6690,
+        "matches_3d": 635
+      },
+      "mask_points_robust_mean": {
+        "truth": 1601,
+        "predictions": 6690,
+        "ignored_predictions": 52,
+        "matches_2d": 137,
+        "localized_predictions": 6690,
+        "matches_3d": 663
+      }
+    }
+  },
+  "independent_official_labels_parsed": true,
+  "gate": "same-class full camera0 XYZ center<=3m",
+  "distance_groups": [
+    {
+      "category": "bicycle",
+      "camera0_z_bin": "10<=z<20",
+      "methods": {
+        "mask_points_mean": {
+          "truth": 528,
+          "matches_3d": 356,
+          "recall": 0.6742424242424242
+        },
+        "mask_points_robust_mean": {
+          "truth": 528,
+          "matches_3d": 375,
+          "recall": 0.7102272727272727
+        }
+      }
+    },
+    {
+      "category": "bicycle",
+      "camera0_z_bin": "1<z<10",
+      "methods": {
+        "mask_points_mean": {
+          "truth": 218,
+          "matches_3d": 171,
+          "recall": 0.7844036697247706
+        },
+        "mask_points_robust_mean": {
+          "truth": 218,
+          "matches_3d": 175,
+          "recall": 0.8027522935779816
+        }
+      }
+    },
+    {
+      "category": "bicycle",
+      "camera0_z_bin": "20<=z<40",
+      "methods": {
+        "mask_points_mean": {
+          "truth": 644,
+          "matches_3d": 108,
+          "recall": 0.16770186335403728
+        },
+        "mask_points_robust_mean": {
+          "truth": 644,
+          "matches_3d": 113,
+          "recall": 0.17546583850931677
+        }
+      }
+    },
+    {
+      "category": "bicycle",
+      "camera0_z_bin": "40<=z<65",
+      "methods": {
+        "mask_points_mean": {
+          "truth": 211,
+          "matches_3d": 0,
+          "recall": 0.0
+        },
+        "mask_points_robust_mean": {
+          "truth": 211,
+          "matches_3d": 0,
+          "recall": 0.0
+        }
+      }
+    },
+    {
+      "category": "car",
+      "camera0_z_bin": "10<=z<20",
+      "methods": {
+        "mask_points_mean": {
+          "truth": 6707,
+          "matches_3d": 6005,
+          "recall": 0.8953332339346951
+        },
+        "mask_points_robust_mean": {
+          "truth": 6707,
+          "matches_3d": 6352,
+          "recall": 0.9470702251379156
+        }
+      }
+    },
+    {
+      "category": "car",
+      "camera0_z_bin": "1<z<10",
+      "methods": {
+        "mask_points_mean": {
+          "truth": 3753,
+          "matches_3d": 3006,
+          "recall": 0.8009592326139089
+        },
+        "mask_points_robust_mean": {
+          "truth": 3753,
+          "matches_3d": 3523,
+          "recall": 0.9387156941113776
+        }
+      }
+    },
+    {
+      "category": "car",
+      "camera0_z_bin": "20<=z<40",
+      "methods": {
+        "mask_points_mean": {
+          "truth": 11772,
+          "matches_3d": 9617,
+          "recall": 0.8169384981311587
+        },
+        "mask_points_robust_mean": {
+          "truth": 11772,
+          "matches_3d": 10265,
+          "recall": 0.8719843696907917
+        }
+      }
+    },
+    {
+      "category": "car",
+      "camera0_z_bin": "40<=z<65",
+      "methods": {
+        "mask_points_mean": {
+          "truth": 5713,
+          "matches_3d": 4071,
+          "recall": 0.7125853316996325
+        },
+        "mask_points_robust_mean": {
+          "truth": 5713,
+          "matches_3d": 4502,
+          "recall": 0.7880273061438824
+        }
+      }
+    },
+    {
+      "category": "pedestrian",
+      "camera0_z_bin": "10<=z<20",
+      "methods": {
+        "mask_points_mean": {
+          "truth": 1674,
+          "matches_3d": 570,
+          "recall": 0.34050179211469533
+        },
+        "mask_points_robust_mean": {
+          "truth": 1674,
+          "matches_3d": 629,
+          "recall": 0.37574671445639185
+        }
+      }
+    },
+    {
+      "category": "pedestrian",
+      "camera0_z_bin": "1<z<10",
+      "methods": {
+        "mask_points_mean": {
+          "truth": 1392,
+          "matches_3d": 266,
+          "recall": 0.1910919540229885
+        },
+        "mask_points_robust_mean": {
+          "truth": 1392,
+          "matches_3d": 304,
+          "recall": 0.21839080459770116
+        }
+      }
+    },
+    {
+      "category": "pedestrian",
+      "camera0_z_bin": "20<=z<40",
+      "methods": {
+        "mask_points_mean": {
+          "truth": 1221,
+          "matches_3d": 435,
+          "recall": 0.35626535626535627
+        },
+        "mask_points_robust_mean": {
+          "truth": 1221,
+          "matches_3d": 467,
+          "recall": 0.3824733824733825
+        }
+      }
+    },
+    {
+      "category": "pedestrian",
+      "camera0_z_bin": "40<=z<65",
+      "methods": {
+        "mask_points_mean": {
+          "truth": 184,
+          "matches_3d": 16,
+          "recall": 0.08695652173913043
+        },
+        "mask_points_robust_mean": {
+          "truth": 184,
+          "matches_3d": 17,
+          "recall": 0.09239130434782608
+        }
+      }
+    },
+    {
+      "category": "truck",
+      "camera0_z_bin": "10<=z<20",
+      "methods": {
+        "mask_points_mean": {
+          "truth": 80,
+          "matches_3d": 53,
+          "recall": 0.6625
+        },
+        "mask_points_robust_mean": {
+          "truth": 80,
+          "matches_3d": 54,
+          "recall": 0.675
+        }
+      }
+    },
+    {
+      "category": "truck",
+      "camera0_z_bin": "1<z<10",
+      "methods": {
+        "mask_points_mean": {
+          "truth": 54,
+          "matches_3d": 26,
+          "recall": 0.48148148148148145
+        },
+        "mask_points_robust_mean": {
+          "truth": 54,
+          "matches_3d": 31,
+          "recall": 0.5740740740740741
+        }
+      }
+    },
+    {
+      "category": "truck",
+      "camera0_z_bin": "20<=z<40",
+      "methods": {
+        "mask_points_mean": {
+          "truth": 274,
+          "matches_3d": 102,
+          "recall": 0.3722627737226277
+        },
+        "mask_points_robust_mean": {
+          "truth": 274,
+          "matches_3d": 108,
+          "recall": 0.39416058394160586
+        }
+      }
+    },
+    {
+      "category": "truck",
+      "camera0_z_bin": "40<=z<65",
+      "methods": {
+        "mask_points_mean": {
+          "truth": 367,
+          "matches_3d": 61,
+          "recall": 0.16621253405994552
+        },
+        "mask_points_robust_mean": {
+          "truth": 367,
+          "matches_3d": 80,
+          "recall": 0.21798365122615804
+        }
+      }
+    }
+  ],
+  "distance_group_protocol_sha256": "94509e647b0fbb5b0b075ee99ff8f30d571e8d66efd35c483edb950c577bda2a",
+  "independent_matching": "augmenting paths; no experiment matcher/evaluator called",
+  "label_ignore_policy_independently_rebuilt": true,
+  "no_GPU": true,
+  "scope": "all fixed frames/primary classes and separate bicycle proxy; integer counts, not error-sum tie resolution",
+  "elapsed_s": 6.917082859203219,
+  "audit_utc": "2026-11-25T12:15:21.222555+00:00",
+  "audit_source_sha256": "41d2bb160af0ec49a0d0b071fa25f426f92e1fd1ce7f71d54ca991e2f60c7624",
+  "manifest_sha256": "b1bdf09a4b1810d8343aad82e4511d0ab5afd38afcdd6a80f7716b17208982cb",
+  "inference_sha256": "fccd0f593dc6b065abb826a476b45ad7fb28103e9f8ecfd0a95588452b95dd5c",
+  "evaluation_sha256": "cc950d2c8827a45fa368b8ed7ec1c5c4ba8a54ed423a29a5f07378dc98f1b408"
+}

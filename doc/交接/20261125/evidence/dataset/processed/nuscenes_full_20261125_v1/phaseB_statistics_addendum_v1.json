@@ -1,0 +1,11 @@
+{
+  "created_utc": "2026-11-25T11:53:49.063927+00:00",
+  "statistics_protocol_sha256": "239176dc8e66346f4f9ada2491959ab30e8809d861e030e61d778a349684faa5",
+  "source_sha256": {
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/nuscenes_full_20261125_statistics.py": "7244203182b86933edd0aab3cc8cb6f6d98585b22fbc1ada034ee1ee9aed8ae9",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/scripts/nuscenes_full_20261125_statistics.py": "0872ef016d63f91a59a812df17837a87cf8308d7238acdfc7b08a1f7241a7270"
+  },
+  "ex_ante": true,
+  "method_math_unchanged": true,
+  "whole_scope_denominators_unchanged": true
+}

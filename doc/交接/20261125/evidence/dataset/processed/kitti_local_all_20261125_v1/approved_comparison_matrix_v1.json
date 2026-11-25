@@ -1,0 +1,85 @@
+{
+  "created_utc": "2026-11-25T11:28:21Z",
+  "role": "frozen approved comparisons for existing thesis KITTI Tracking/Object protocols; not all sensor products a single metric",
+  "datasets": [
+    {
+      "dataset": "KITTI Tracking",
+      "frames": 1030,
+      "sequences": 11,
+      "all_actual_local_paired_frames": true,
+      "scope_manifest": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/kitti_local_all_20261125_v1/manifest.json",
+      "manifest_sha256": "37ecb0b0551a451401119b1617fd17b33cc8e5acbeb3a3fc212c5c0110be8bcf",
+      "methods": [
+        "single_frame",
+        "original_fusion",
+        "one_to_one_depth_robust_motion"
+      ],
+      "observed_source": "1030 current RGB2/LiDAR/calibration/OXTS frames; fixed existing perception; no sensor downloads",
+      "input_and_frame_denominator_shared": true,
+      "primary_categories": [
+        "car",
+        "truck",
+        "pedestrian"
+      ],
+      "metric": "same category maximum-cardinality initial IMU world XY<=3m; custom,not AP/HOTA",
+      "timestamp": "nominal original_frame_id*0.1s,not measured acquisition time",
+      "GPU_calls": 0,
+      "budget": {
+        "CPU_s": 1200,
+        "persistent_bytes": 268435456
+      },
+      "status": "inference and independent evaluation completed"
+    },
+    {
+      "dataset": "KITTI Object",
+      "frames": 7481,
+      "all_actual_local_labelled_split_frames": true,
+      "scope_manifest": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/kitti_object_all_20261125_v1/manifest.json",
+      "manifest_sha256": "b1bdf09a4b1810d8343aad82e4511d0ab5afd38afcdd6a80f7716b17208982cb",
+      "methods": [
+        "mask_points_mean",
+        "mask_points_robust_mean"
+      ],
+      "observed_source": "one actual shared YOLO/MobileSAM/CLIP RGB2 frontend+current projected LiDAR; stream local archives",
+      "input_and_frame_denominator_shared": true,
+      "primary_categories": [
+        "car",
+        "truck",
+        "pedestrian"
+      ],
+      "auxiliary_category": "Cyclist to bicycle separately reported,not pooled",
+      "metric": "same category maximum-cardinality full3D rectified camera0 center<=3m; custom,not AP/HOTA",
+      "fusion_or_motion_or_world_pose_credit": false,
+      "approved_technical_runtime": "runtime_execution_amendment_v3,79 original-prefix exact hard guard",
+      "budget": {
+        "cumulative_GPU_s": 6000,
+        "CPU_s": 1800,
+        "persistent_bytes": 805306368,
+        "temporary_bytes": 536870912
+      },
+      "status": "all7481 inference running"
+    }
+  ],
+  "separately_inventoried": [
+    {
+      "dataset": "SemanticKITTI+Depth raw RGB",
+      "LiDAR_frames": 43552,
+      "status": "exact raw-drive sensor intersection audit in progress; no newly approved benchmark",
+      "different_GT": "point semantic/instance labels,not3D box centers",
+      "requirement": "if joint input exists,derive independent metric/protocol and additional budget; do not blend into existing Tracking/Object main table"
+    },
+    {
+      "dataset": "KITTI Depth Completion",
+      "raw_RGB2_frames": 47937,
+      "raw_RGB3_frames": 47932,
+      "raw_drives": 155,
+      "raw_LiDAR_members": 0,
+      "OXTS_members": 0,
+      "projected_depth_members": 185500,
+      "status": "actual archive header inventory only; no invented pose or3D object box targets"
+    }
+  ],
+  "no_mixed_denominators": true,
+  "no_parameter_search": true,
+  "no_training": true
+}

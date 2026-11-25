@@ -1,0 +1,11 @@
+{
+  "created_utc": "2026-11-25T11:16:42.983614+00:00",
+  "status": "diagnostic10frames_only_not_full_results",
+  "changes": "timers and explicit CUDA synchronization only",
+  "source_sha256": {
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/kitti_object_profile_20261125.py": "7d87b5ab7d2d3583de6392fa288d8dd0297fe9169e10db0bbc2c3de8e7041d30",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/scripts/kitti_object_profile_20261125.py": "f02845e76802f62dcb71c786f9706ad7a2b067b020a1a62f8dc3f186f413bb97"
+  },
+  "thresholds_or_weights_or_prompts_changed": false,
+  "original_prefix_retained": true
+}

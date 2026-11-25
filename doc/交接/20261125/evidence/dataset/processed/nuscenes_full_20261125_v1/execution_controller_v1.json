@@ -1,0 +1,21 @@
+{
+  "created_utc": "2026-11-25T11:56:17.568240+00:00",
+  "source_sha256": "c0b83dcb777ae716e8a156fb5eced37a50e64b317227a700953f19770bda780a",
+  "authorization": "root full850existing-data execution; source8 and complete source certification, same prediction regression and explicitKITTI release beforefullrun",
+  "GPU_max_occupied_s": 43200,
+  "nu_persistent_bytes": 4831838208,
+  "temporary_bytes": 536870912,
+  "minimum_free_bytes": 21474836480,
+  "stages": [
+    "wait_all10_source_certification_and_KITTI_explicit_release",
+    "freeze_sources_configs_weights_roles",
+    "fixed8_GPU_resource_pilot",
+    "resource_budget_gate",
+    "all850same_single_configuration",
+    "evaluation_only_after_all_predictions",
+    "predeclared_log_statistics"
+  ],
+  "no_parameter_search": true,
+  "scope_never_reduced": true,
+  "no_source_or_old_data_deleted": true
+}

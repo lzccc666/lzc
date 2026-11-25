@@ -1,0 +1,44 @@
+{
+  "created_utc": "2026-11-25T12:16:07.394257+00:00",
+  "control_method": "S2_6_sharedscan",
+  "source_sha256": {
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/nuscenes_full_20261125_sharedscan.py": "264052cf99266e70b3ee6d9e37bcd9483db072528e4e83623a8245b60b10686f",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/scripts/nuscenes_full_20261125_sharedscan.py": "83f0def9b27cedce0a8f81a1b0e79073dd118151320a153e842868997f53fad3",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/nuscenes_full_20261125_sharedscan_evaluate.py": "f0604d02987596578510b98c4671a9125d17326a5565a8489b34edbab64899b2",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/scripts/nuscenes_full_20261125_sharedscan_evaluate.py": "1b9f2b9c36f68dc86e1e687c3cbb60a303cbe73c09b4e5f5b28eb0d0bcf70b3c"
+  },
+  "original65_source_preseal_sha256": "1eacd48bcceb8bf9a1148512198ff9f77db50ccff8807b11a230dfeb07227ad2",
+  "all_original_six_unchanged": true,
+  "primary_five_unchanged": true,
+  "selection": "all850 original scenes/all34149groups full independent mapper trajectories, including groups with no extra scan; not a per-frame subset",
+  "protocol": "nearest requested LiDAR strictly before earliest six exposures, then eachcamera0<age<=100ms else emptydepth; earliest absence entiregroupempty",
+  "matches_historical_control": "scripts/mv136_20261123_sharedscan.py",
+  "historical120_does_not_prove_full850": true,
+  "inherited_config": "exact S2 frozen settings; same6actualRGB and original per-image detections/features",
+  "GT_in_method": false,
+  "new_GPU_calls": 0,
+  "auxiliary_evaluation_scopes": [
+    "front",
+    "front3",
+    "union6"
+  ],
+  "auxiliary_only_no_primary_significance_test": true,
+  "estimates": {
+    "extra_CPU_hours": [
+      2,
+      3
+    ],
+    "extra_persistent_GiB": [
+      0.2,
+      0.7
+    ],
+    "needs_first8_resource_measurement": true
+  },
+  "budgets_unchanged": {
+    "nu_total_persistent_bytes": 4831838208,
+    "temporary_bytes": 536870912,
+    "full_wall_s": 129600,
+    "GPU_occupied_s": 43200
+  },
+  "cleanup": "originalsix CPUworker cleans current scene only after sharedscan auxiliary output also closed; failures retain temporary/prediction prefixes"
+}

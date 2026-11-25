@@ -1,0 +1,13 @@
+{
+  "completed_frames": 7481,
+  "failed_frames": [],
+  "configuration_count": 1,
+  "actual_new_frontend_frames": 7481,
+  "GT_in_method": false,
+  "shared_single_frontend_for_both_methods": true,
+  "cold_start_s": 11.70925061404705,
+  "GPU_lock_held": true,
+  "GPU_wall_s": 3076.189152341336,
+  "inference_frames_sha256": "fccd0f593dc6b065abb826a476b45ad7fb28103e9f8ecfd0a95588452b95dd5c",
+  "source_manifest_sha256": "b1bdf09a4b1810d8343aad82e4511d0ab5afd38afcdd6a80f7716b17208982cb"
+}

@@ -1,0 +1,252 @@
+{
+  "created_utc": "2026-11-25T12:19:28.020323+00:00",
+  "stage": "KITTI full closed/independently audited; nu full in progress, no scores",
+  "files": [
+    {
+      "source": "outputs/results/kitti/validation/iterations/kitti_local_all_20261125_tracking_v1/mapping_summary.json",
+      "copy": "evidence/outputs/results/kitti/validation/iterations/kitti_local_all_20261125_tracking_v1/mapping_summary.json",
+      "bytes": 631,
+      "sha256": "bd40fca484f6c71332b685622fdbd663064c4e88f5cb8b2963ceec9955ab01c9"
+    },
+    {
+      "source": "outputs/results/kitti/validation/iterations/kitti_local_all_20261125_tracking_v1/evaluation_summary_v2.json",
+      "copy": "evidence/outputs/results/kitti/validation/iterations/kitti_local_all_20261125_tracking_v1/evaluation_summary_v2.json",
+      "bytes": 39294,
+      "sha256": "9e319cf4fa75a8f75ff8aceea4dec65f6026ec896ee1e8515c4c3ec3a9067b33"
+    },
+    {
+      "source": "outputs/results/kitti/validation/iterations/kitti_object_all_20261125_v3/inference_summary.json",
+      "copy": "evidence/outputs/results/kitti/validation/iterations/kitti_object_all_20261125_v3/inference_summary.json",
+      "bytes": 486,
+      "sha256": "83cd73fdbc7cd224508ba29e8946e9688d6e76b009463ee1e23a2eb4dc8d0b60"
+    },
+    {
+      "source": "outputs/results/kitti/validation/iterations/kitti_object_all_20261125_v3/evaluation_summary.json",
+      "copy": "evidence/outputs/results/kitti/validation/iterations/kitti_object_all_20261125_v3/evaluation_summary.json",
+      "bytes": 14184,
+      "sha256": "fb2b55bf6501d6273fd890f7ac9fd3f8e8ea6ca39c0e9c69502047a1f89e6f4a"
+    },
+    {
+      "source": "outputs/reports/local_scope_audit_20261125/tracking_independent_v1.json",
+      "copy": "evidence/outputs/reports/local_scope_audit_20261125/tracking_independent_v1.json",
+      "bytes": 12327,
+      "sha256": "41371843d45b2ab44b18b9513e22b2f99c9cb33b739a1a391dd0dcb0e8ff3b38"
+    },
+    {
+      "source": "outputs/reports/local_scope_audit_20261125/object_results_independent_v1.json",
+      "copy": "evidence/outputs/reports/local_scope_audit_20261125/object_results_independent_v1.json",
+      "bytes": 14688,
+      "sha256": "51f6e6312f86e257a1232ad259efbdfe5deb77b23ecf9f11cf2dc97bf57d544d"
+    },
+    {
+      "source": "outputs/reports/local_scope_audit_20261125/object_distance_group_protocol_v1.json",
+      "copy": "evidence/outputs/reports/local_scope_audit_20261125/object_distance_group_protocol_v1.json",
+      "bytes": 1016,
+      "sha256": "94509e647b0fbb5b0b075ee99ff8f30d571e8d66efd35c483edb950c577bda2a"
+    },
+    {
+      "source": "outputs/reports/local_scope_audit_20261125/object_preflight_independent_v1.json",
+      "copy": "evidence/outputs/reports/local_scope_audit_20261125/object_preflight_independent_v1.json",
+      "bytes": 1253,
+      "sha256": "662640c3dc1fa450a1bb9eb9d379460f8b631af66c77921ef00923c2555e558f"
+    },
+    {
+      "source": "outputs/reports/local_scope_audit_20261125/object_runtime_independent_v1.json",
+      "copy": "evidence/outputs/reports/local_scope_audit_20261125/object_runtime_independent_v1.json",
+      "bytes": 575,
+      "sha256": "8f31f7e058508044769b932ef570ebb5283285105a65267926d28c67e86e9265"
+    },
+    {
+      "source": "outputs/reports/local_scope_audit_20261125/nuscenes_prepare_independent_v1.json",
+      "copy": "evidence/outputs/reports/local_scope_audit_20261125/nuscenes_prepare_independent_v1.json",
+      "bytes": 1482,
+      "sha256": "564fc7fe09e78d8f1d3f788c28838b9567d0cda61ae0338d85aa30c044bce5cd"
+    },
+    {
+      "source": "outputs/reports/local_scope_audit_20261125/nuscenes_archive01_independent_v1.json",
+      "copy": "evidence/outputs/reports/local_scope_audit_20261125/nuscenes_archive01_independent_v1.json",
+      "bytes": 5317,
+      "sha256": "134c698253f192c27552f7bb84d36f1aefe00e38cb28f96721d5c91bd0dd0013"
+    },
+    {
+      "source": "outputs/reports/local_scope_audit_20261125/nuscenes_archive02_independent_v1.json",
+      "copy": "evidence/outputs/reports/local_scope_audit_20261125/nuscenes_archive02_independent_v1.json",
+      "bytes": 5316,
+      "sha256": "a62da2a0281cfe8fe714db9d8146c31726baf27784b3d686919d75efc5cdef25"
+    },
+    {
+      "source": "outputs/reports/local_scope_audit_20261125/nuscenes_resource_pilot_independent_v1.json",
+      "copy": "evidence/outputs/reports/local_scope_audit_20261125/nuscenes_resource_pilot_independent_v1.json",
+      "bytes": 769,
+      "sha256": "9b199b1f4f18529d67f633a064d022393c9347b65c59a2d0e5ea44983c5564e9"
+    },
+    {
+      "source": "outputs/reports/local_scope_audit_20261125/nuscenes_CPU_contract_independent_v1.json",
+      "copy": "evidence/outputs/reports/local_scope_audit_20261125/nuscenes_CPU_contract_independent_v1.json",
+      "bytes": 828,
+      "sha256": "f8f08342a4f49cf1e398a5f0b6af36fcd1d5e845649e15805780e7575e34d55f"
+    },
+    {
+      "source": "outputs/reports/local_scope_audit_20261125/nuscenes_statistics_protocol_independent_v1.json",
+      "copy": "evidence/outputs/reports/local_scope_audit_20261125/nuscenes_statistics_protocol_independent_v1.json",
+      "bytes": 1134,
+      "sha256": "dd05b11c8065398ee1d025309e513df877190f5a60c88ce2f1d8cbe9989872b3"
+    },
+    {
+      "source": "outputs/reports/local_scope_audit_20261125/nu_task_preflight_independent_v1.json",
+      "copy": "evidence/outputs/reports/local_scope_audit_20261125/nu_task_preflight_independent_v1.json",
+      "bytes": 1008,
+      "sha256": "04db7f49315ebe386d93a24c7419bc83643a883679efe263a9e73f8e551df21f"
+    },
+    {
+      "source": "outputs/reports/local_scope_audit_20261125/nu_task_fair_preflight_independent_v2.json",
+      "copy": "evidence/outputs/reports/local_scope_audit_20261125/nu_task_fair_preflight_independent_v2.json",
+      "bytes": 1135,
+      "sha256": "b7bfa1082a335a7711a6665551e2c60ed233b23937609fc4209fd74699d7a385"
+    },
+    {
+      "source": "outputs/reports/local_scope_audit_20261125/nu_task_historical_scope_correction_independent_v1.json",
+      "copy": "evidence/outputs/reports/local_scope_audit_20261125/nu_task_historical_scope_correction_independent_v1.json",
+      "bytes": 1128,
+      "sha256": "cb959c59d675453e43c3cefe974c4ca1f19b4fc20566ba25b7fa722e243c34ed"
+    },
+    {
+      "source": "dataset/processed/kitti_local_all_20261125_v1/manifest.json",
+      "copy": "evidence/dataset/processed/kitti_local_all_20261125_v1/manifest.json",
+      "bytes": 33556,
+      "sha256": "37ecb0b0551a451401119b1617fd17b33cc8e5acbeb3a3fc212c5c0110be8bcf"
+    },
+    {
+      "source": "dataset/processed/kitti_local_all_20261125_v1/approved_comparison_matrix_v1.json",
+      "copy": "evidence/dataset/processed/kitti_local_all_20261125_v1/approved_comparison_matrix_v1.json",
+      "bytes": 3473,
+      "sha256": "9c94d2bab5e29303b64dd4d7a2ad546e69eea8183e0d8625387909507a71e8bd"
+    },
+    {
+      "source": "dataset/processed/kitti_local_all_20261125_v1/evaluation_runtime_amendment_v2.json",
+      "copy": "evidence/dataset/processed/kitti_local_all_20261125_v1/evaluation_runtime_amendment_v2.json",
+      "bytes": 1062,
+      "sha256": "1c601ab6a0942755ea2634a1f2eded7fe27f8de11490888e37a04e39b9cd95ff"
+    },
+    {
+      "source": "dataset/processed/kitti_object_all_20261125_v1/manifest.json",
+      "copy": "evidence/dataset/processed/kitti_object_all_20261125_v1/manifest.json",
+      "bytes": 6955,
+      "sha256": "b1bdf09a4b1810d8343aad82e4511d0ab5afd38afcdd6a80f7716b17208982cb"
+    },
+    {
+      "source": "dataset/processed/kitti_object_all_20261125_v1/timing_diagnostic_amendment_v2.json",
+      "copy": "evidence/dataset/processed/kitti_object_all_20261125_v1/timing_diagnostic_amendment_v2.json",
+      "bytes": 652,
+      "sha256": "1bf7ff26fb64ffbc83e254e45c4619412d9f482a615681b9cf46e88c59fd0861"
+    },
+    {
+      "source": "dataset/processed/kitti_object_all_20261125_v1/runtime_execution_amendment_v3.json",
+      "copy": "evidence/dataset/processed/kitti_object_all_20261125_v1/runtime_execution_amendment_v3.json",
+      "bytes": 1038,
+      "sha256": "9d120076ae08d4c434fa0de583bc4e28a325b728f8e8a5f0a90985234f89563b"
+    },
+    {
+      "source": "dataset/processed/kitti_object_all_20261125_v1/read_only_prefetch_amendment_v1.json",
+      "copy": "evidence/dataset/processed/kitti_object_all_20261125_v1/read_only_prefetch_amendment_v1.json",
+      "bytes": 937,
+      "sha256": "9c8eb923994d4732af6caeb76c61432268830be1b9b281710b1604337f7a7f3f"
+    },
+    {
+      "source": "dataset/processed/nuscenes_full_20261125_v1/manifest.json",
+      "copy": "evidence/dataset/processed/nuscenes_full_20261125_v1/manifest.json",
+      "bytes": 578306,
+      "sha256": "e077da347a7140e280eae16862c904407e73ba1d1c38ffcc148d093bd4475aca"
+    },
+    {
+      "source": "dataset/processed/nuscenes_full_20261125_v1/phaseB_source_preseal_v1.json",
+      "copy": "evidence/dataset/processed/nuscenes_full_20261125_v1/phaseB_source_preseal_v1.json",
+      "bytes": 12071,
+      "sha256": "1eacd48bcceb8bf9a1148512198ff9f77db50ccff8807b11a230dfeb07227ad2"
+    },
+    {
+      "source": "dataset/processed/nuscenes_full_20261125_v1/statistics_protocol_v1.json",
+      "copy": "evidence/dataset/processed/nuscenes_full_20261125_v1/statistics_protocol_v1.json",
+      "bytes": 2442,
+      "sha256": "239176dc8e66346f4f9ada2491959ab30e8809d861e030e61d778a349684faa5"
+    },
+    {
+      "source": "dataset/processed/nuscenes_full_20261125_v1/phaseB_statistics_addendum_v1.json",
+      "copy": "evidence/dataset/processed/nuscenes_full_20261125_v1/phaseB_statistics_addendum_v1.json",
+      "bytes": 651,
+      "sha256": "65b78fd829b7047713da6f92ba31bd8a3d5945c7aff39f8f207cb7948b821c11"
+    },
+    {
+      "source": "dataset/processed/nuscenes_full_20261125_v1/execution_controller_v1.json",
+      "copy": "evidence/dataset/processed/nuscenes_full_20261125_v1/execution_controller_v1.json",
+      "bytes": 859,
+      "sha256": "08efaf8eaa762fabead2e59238450b7e4060698a26dc5d0f22b217e866e2286d"
+    },
+    {
+      "source": "dataset/processed/nuscenes_full_20261125_v1/index_technical_revision_v2.json",
+      "copy": "evidence/dataset/processed/nuscenes_full_20261125_v1/index_technical_revision_v2.json",
+      "bytes": 1046,
+      "sha256": "a8734123cc08ca76fdced91560d8463c0509638cd3dffd648cbc008a6c12dd45"
+    },
+    {
+      "source": "dataset/processed/nuscenes_full_20261125_v1/phaseA_parallelism_v2.json",
+      "copy": "evidence/dataset/processed/nuscenes_full_20261125_v1/phaseA_parallelism_v2.json",
+      "bytes": 700,
+      "sha256": "c671f1b3a5d45c5ed12cbb5ca005106dcc8eed19dfa669febc11d499cd0171d1"
+    },
+    {
+      "source": "dataset/processed/nuscenes_full_20261125_v1/scene_role_access_overlay_v2.json",
+      "copy": "evidence/dataset/processed/nuscenes_full_20261125_v1/scene_role_access_overlay_v2.json",
+      "bytes": 4690,
+      "sha256": "5ba37c96508ae66ae3a4fd3330004ecd32538aacb1782250ce7d4c0b9d66f45e"
+    },
+    {
+      "source": "dataset/processed/nu_task_replay_20261125_v1/fair_comparison_amendment_v2.json",
+      "copy": "evidence/dataset/processed/nu_task_replay_20261125_v1/fair_comparison_amendment_v2.json",
+      "bytes": 2173,
+      "sha256": "c8cebc2c72a04ba8d65eb9b34ca9e8a305b8043f704eaafab74fd06229a858ad"
+    },
+    {
+      "source": "dataset/processed/nuscenes_full_20261125_v1/sharedscan_auxiliary_protocol_v1.json",
+      "copy": "evidence/dataset/processed/nuscenes_full_20261125_v1/sharedscan_auxiliary_protocol_v1.json",
+      "bytes": 2281,
+      "sha256": "45fe9a98d883af15db2b67334b2becaabc3c009090e3541d9e7657e1858b3bcc"
+    },
+    {
+      "source": "dataset/processed/nuscenes_full_20261125_v1/execution_controller_v2.json",
+      "copy": "evidence/dataset/processed/nuscenes_full_20261125_v1/execution_controller_v2.json",
+      "bytes": 874,
+      "sha256": "d04146280ea9ea4f4102b7ff912ec792a8569570db5ceb53a1a5b598db0e9ffa"
+    },
+    {
+      "source": "dataset/processed/nuscenes_full_20261125_v1/execution_controller_takeover_v2.json",
+      "copy": "evidence/dataset/processed/nuscenes_full_20261125_v1/execution_controller_takeover_v2.json",
+      "bytes": 251,
+      "sha256": "092cb072b9b2a062f2f629866d4cda5b410d2b08e2623b54cb570d80b275f404"
+    },
+    {
+      "source": "outputs/results/nuscenes/validation/iterations/nuscenes_full_20261125_sharedscan_contract_v1/summary.json",
+      "copy": "evidence/outputs/results/nuscenes/validation/iterations/nuscenes_full_20261125_sharedscan_contract_v1/summary.json",
+      "bytes": 2611,
+      "sha256": "9d38e390c7d76c9130b1712f054d54495a0857e3196de21d9503af17e65a993a"
+    },
+    {
+      "source": "outputs/reports/kitti_local_all_20261125/本机KITTI完整对照_阶段交付.md",
+      "copy": "evidence/outputs/reports/kitti_local_all_20261125/本机KITTI完整对照_阶段交付.md",
+      "bytes": 6745,
+      "sha256": "e93ccf962e692bb589a11ffce58c6c829733279333ba14b33d6a07dd4535b2a0"
+    },
+    {
+      "source": "outputs/reports/kitti_object_all_20261125/full_class_micro_macro_tables_v1.json",
+      "copy": "evidence/outputs/reports/kitti_object_all_20261125/full_class_micro_macro_tables_v1.json",
+      "bytes": 5776,
+      "sha256": "38743235677aa25036ba5eceba029ad26e98f5424beb763d1430d075228f402a"
+    },
+    {
+      "source": "outputs/reports/kitti_local_all_20261125/final_closeout_stage_v1.json",
+      "copy": "evidence/outputs/reports/kitti_local_all_20261125/final_closeout_stage_v1.json",
+      "bytes": 53416,
+      "sha256": "e9b8f4e868ea047072707aa7bf2ca66b6fe0e4507dccb3fb44ba166517280eae"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "source_sha256": "846fcee10e0f08b1671be0395b16f52880153748eed9192c2cece4b10e262677",
+  "created_utc": "2026-11-25T11:21:37.412801+00:00",
+  "resource_only": true,
+  "parallel_archive_workers": 4,
+  "previous_workers": 2,
+  "evidence": "archive01 C-index589.93s,80.98MB; sequential member enumeration additional; shared source read throughput slower than historical estimate",
+  "order": "archive01 complete; fixed8source-only resource pilot; archives02..10 workers4; certify all850",
+  "deadline_unix": 1795609920,
+  "GPU_calls": 0,
+  "parameter_search": false,
+  "old_coordinator_preserved": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/scripts/nuscenes_full_20261125_phaseA.py"
+}

@@ -1,0 +1,26 @@
+{
+  "completed_frames": 1030,
+  "sequence_counts": {
+    "0000": 100,
+    "0002": 100,
+    "0003": 100,
+    "0004": 100,
+    "0005": 100,
+    "0006": 100,
+    "0007": 100,
+    "0008": 100,
+    "0009": 100,
+    "0010": 100,
+    "0013": 30
+  },
+  "all_method_frames": {
+    "single_frame": 1030,
+    "original_fusion": 1030,
+    "one_to_one_depth_robust_motion": 1030
+  },
+  "GT_in_method": false,
+  "GPU_calls": 0,
+  "mapping_frames_sha256": "b93445e23ded4547d2f25b7a6121bcdc17e5048316bba76cb601e3a9c9ad6dff",
+  "wall_s": 322.53295889496803,
+  "manifest_sha256": "37ecb0b0551a451401119b1617fd17b33cc8e5acbeb3a3fc212c5c0110be8bcf"
+}

@@ -1,0 +1,155 @@
+{
+  "created_utc": "2026-11-25T12:18:27.937071+00:00",
+  "frames": 7481,
+  "primary_GT": 33191,
+  "car_GT_weight": 0.841945105600916,
+  "methods": {
+    "mask_points_mean": {
+      "micro": {
+        "TP": 24228,
+        "GT": 33191,
+        "predictions": 37985,
+        "ignored_predictions": 10384,
+        "no_depth": 1288,
+        "P_all_detections": 0.6378307226536791,
+        "R": 0.7299569160314543,
+        "F1_all_detections": 0.6807912779588625,
+        "matched_center_error_m": 1.1575849687236919,
+        "conditional_2D_match_center_error_m": 1.7127674046585595
+      },
+      "macro": {
+        "P_all_detections": 0.42889771687640454,
+        "R": 0.47079574678518155,
+        "F1_all_detections": 0.41294475210255355
+      },
+      "classes": {
+        "car": {
+          "TP": 22699,
+          "GT": 27945,
+          "predictions": 31974,
+          "ignored_predictions": 9368,
+          "no_depth": 950,
+          "P_all_detections": 0.70992056045537,
+          "R": 0.8122741098586509,
+          "F1_all_detections": 0.7576561691617016,
+          "matched_center_error_m": 1.1546194566161279,
+          "conditional_2D_match_center_error_m": 1.686014143688223
+        },
+        "truck": {
+          "TP": 242,
+          "GT": 775,
+          "predictions": 3473,
+          "ignored_predictions": 563,
+          "no_depth": 330,
+          "P_all_detections": 0.06968039159228333,
+          "R": 0.31225806451612903,
+          "F1_all_detections": 0.11393596986817325,
+          "matched_center_error_m": 1.843932924779677,
+          "conditional_2D_match_center_error_m": 3.6035865762010153
+        },
+        "pedestrian": {
+          "TP": 1287,
+          "GT": 4471,
+          "predictions": 2538,
+          "ignored_predictions": 453,
+          "no_depth": 8,
+          "P_all_detections": 0.5070921985815603,
+          "R": 0.28785506598076493,
+          "F1_all_detections": 0.3672421172777857,
+          "matched_center_error_m": 1.0808312422000799,
+          "conditional_2D_match_center_error_m": 1.5019642611034687
+        }
+      },
+      "cyclist_bicycle_proxy_separate": {
+        "TP": 635,
+        "GT": 1601,
+        "predictions": 6690,
+        "ignored_predictions": 52,
+        "no_depth": 0,
+        "P_all_detections": 0.09491778774289986,
+        "R": 0.3966271080574641,
+        "F1_all_detections": 0.15317814497648052,
+        "matched_center_error_m": 1.1218526271743385,
+        "conditional_2D_match_center_error_m": 1.8938237125634807
+      }
+    },
+    "mask_points_robust_mean": {
+      "micro": {
+        "TP": 26332,
+        "GT": 33191,
+        "predictions": 37985,
+        "ignored_predictions": 10384,
+        "no_depth": 1553,
+        "P_all_detections": 0.6932210082927471,
+        "R": 0.7933475942273508,
+        "F1_all_detections": 0.739912329998876,
+        "matched_center_error_m": 1.171196207489895,
+        "conditional_2D_match_center_error_m": 1.5498870906053188
+      },
+      "macro": {
+        "P_all_detections": 0.46920290316869134,
+        "R": 0.5169976474869961,
+        "F1_all_detections": 0.45179291437022995
+      },
+      "classes": {
+        "car": {
+          "TP": 24642,
+          "GT": 27945,
+          "predictions": 31974,
+          "ignored_predictions": 9368,
+          "no_depth": 1194,
+          "P_all_detections": 0.7706886845562019,
+          "R": 0.8818035426731079,
+          "F1_all_detections": 0.822510389025184,
+          "matched_center_error_m": 1.2164717225603914,
+          "conditional_2D_match_center_error_m": 1.5787586871892072
+        },
+        "truck": {
+          "TP": 273,
+          "GT": 775,
+          "predictions": 3473,
+          "ignored_predictions": 563,
+          "no_depth": 349,
+          "P_all_detections": 0.07860639216815433,
+          "R": 0.352258064516129,
+          "F1_all_detections": 0.1285310734463277,
+          "matched_center_error_m": 1.8886029467510421,
+          "conditional_2D_match_center_error_m": 3.561701385924702
+        },
+        "pedestrian": {
+          "TP": 1417,
+          "GT": 4471,
+          "predictions": 2538,
+          "ignored_predictions": 453,
+          "no_depth": 10,
+          "P_all_detections": 0.5583136327817179,
+          "R": 0.31693133527175127,
+          "F1_all_detections": 0.4043372806391782,
+          "matched_center_error_m": 0.24562720100757718,
+          "conditional_2D_match_center_error_m": 0.25076584388287204
+        }
+      },
+      "cyclist_bicycle_proxy_separate": {
+        "TP": 663,
+        "GT": 1601,
+        "predictions": 6690,
+        "ignored_predictions": 52,
+        "no_depth": 0,
+        "P_all_detections": 0.09910313901345291,
+        "R": 0.4141161773891318,
+        "F1_all_detections": 0.15993245688095525,
+        "matched_center_error_m": 0.7025880121640418,
+        "conditional_2D_match_center_error_m": 0.924322418039406
+      }
+    }
+  },
+  "metric": "same class fullXYZ camera0 center distance<=3m, fixed1<GT_z<65m",
+  "P_and_F1": "custom TP divided by all nonignored detections including no-depth; not official AP; unchanged legacy ignore protocol",
+  "macro": "unweighted mean of the three primary class metrics; supplementary, does not replace micro33191GT",
+  "distance_appendix": "independent global matching then assign GT z bins; no-depth predictions have no certified GT distance bin and must not be fabricated",
+  "source_path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/kitti/validation/iterations/kitti_object_all_20261125_v3/evaluation_summary.json",
+  "source_sha256": "fb2b55bf6501d6273fd890f7ac9fd3f8e8ea6ca39c0e9c69502047a1f89e6f4a",
+  "postprocessing_source_sha256": "65e3e5645615104eb862d5d36f04c2ec1b67fd642bd18b26cd3c55749a447d9f",
+  "no_new_inference": true,
+  "no_label_or_matching_changes": true
+}

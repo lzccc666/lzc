@@ -1,0 +1,15 @@
+{
+  "created_utc": "2026-11-25T11:32:48.681101+00:00",
+  "source_sha256": {
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/kitti_object_prefetch_20261125.py": "714db639958cbd8da8f6c2d2e0b0840f24949047dfb98fbfdbadfab7c67c04b0",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/scripts/kitti_object_prefetch_20261125.py": "b9d627130d95e163b85f02eee1b2e9d63fc340629b76e797776cfdd00774983c"
+  },
+  "workers": 8,
+  "maximum_ahead_frames": 32,
+  "retained_input_byte_queue": 0,
+  "maximum_concurrent_uncompressed_members": "8 readers, one current frame each; below256MiB by frozen file sizes",
+  "method_or_prediction_or_input_changes": false,
+  "actual_new_model_calls": 0,
+  "data_action": "read frozen original zip members through independent handles, validate CRC, discard bytes; no raw files written",
+  "budget": "stops on GPU process release or6000s, no further inference config"
+}

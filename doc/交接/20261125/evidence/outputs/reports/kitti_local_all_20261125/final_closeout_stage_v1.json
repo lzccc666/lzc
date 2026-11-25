@@ -1,0 +1,883 @@
+{
+  "created_utc": "2026-11-25T12:23:26.663457+00:00",
+  "passed": true,
+  "protected_unique_files": 148,
+  "protected_SHA": {
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/association.py": {
+      "expected": "13154cc664d9b1528c869575539c444bb20d8e2cc3a119aa1e4d01f7c9d5ccd4",
+      "actual": "13154cc664d9b1528c869575539c444bb20d8e2cc3a119aa1e4d01f7c9d5ccd4",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/depth.py": {
+      "expected": "c3d0b1efa3cdc91a82b75cdf872fe923ff68b240090a49022d3a7481ab653b0e",
+      "actual": "c3d0b1efa3cdc91a82b75cdf872fe923ff68b240090a49022d3a7481ab653b0e",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/interactive_environment.py": {
+      "expected": "1393a771a8c1cc9d35f5b7226be433993660cd0843def9e92e42fc85bb9a05d8",
+      "actual": "1393a771a8c1cc9d35f5b7226be433993660cd0843def9e92e42fc85bb9a05d8",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/interactive_navigation.py": {
+      "expected": "b603a0fa55c09a6eb9add644df30eaa641851b3564eef1ed6ba5b4352f87d1ef",
+      "actual": "b603a0fa55c09a6eb9add644df30eaa641851b3564eef1ed6ba5b4352f87d1ef",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/kinematic_benchmark.py": {
+      "expected": "3f5805c14288992719aa0a4bb967e6211c195cbea8da0e7cbbccf60c4a031045",
+      "actual": "3f5805c14288992719aa0a4bb967e6211c195cbea8da0e7cbbccf60c4a031045",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/kitti_geometry.py": {
+      "expected": "5d88914cbb415f01721e2d829c65811bd7b70250ed6dec9084d9a02afbee9ede",
+      "actual": "5d88914cbb415f01721e2d829c65811bd7b70250ed6dec9084d9a02afbee9ede",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/kitti_local_all_20261125.py": {
+      "expected": "531a570ecbed44154d0b49d81f622eed7369b0713c2cf62f90a3b578b3b239f5",
+      "actual": "531a570ecbed44154d0b49d81f622eed7369b0713c2cf62f90a3b578b3b239f5",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/kitti_tracking_experiment.py": {
+      "expected": "d0ee0ff6cb1917116c09cf877a0523a43c6a7096827a019d7c9fc66bb5d883d4",
+      "actual": "d0ee0ff6cb1917116c09cf877a0523a43c6a7096827a019d7c9fc66bb5d883d4",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/kitti_tracking_geometry.py": {
+      "expected": "1a8955fdb52ae22e05b03562af657087e80dfad28f0384395d88ce683ef31e42",
+      "actual": "1a8955fdb52ae22e05b03562af657087e80dfad28f0384395d88ce683ef31e42",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/motion.py": {
+      "expected": "d9555773c6badfc4e6cf9b23eb8c8cb5396e16912cc9146f50e00ab36e5abb01",
+      "actual": "d9555773c6badfc4e6cf9b23eb8c8cb5396e16912cc9146f50e00ab36e5abb01",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/navigation_semantics.py": {
+      "expected": "5885a80616b5554e41c9094a0f15160308aee3e864a7ccf37d1a08e8078f6279",
+      "actual": "5885a80616b5554e41c9094a0f15160308aee3e864a7ccf37d1a08e8078f6279",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/planning_reuse.py": {
+      "expected": "06db8a8620ef1a5eb6042a7cbc8515c9782c7612571105463148af725385a507",
+      "actual": "06db8a8620ef1a5eb6042a7cbc8515c9782c7612571105463148af725385a507",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/protocol.py": {
+      "expected": "b3ea4080ff9398c40644d00c3aa1307a7cde1e8203f7bfb2c7bfed9e3de800bd",
+      "actual": "b3ea4080ff9398c40644d00c3aa1307a7cde1e8203f7bfb2c7bfed9e3de800bd",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/quality.py": {
+      "expected": "9d03eeecbd4aaa37708df0894043e796e245c750a7346a33369db150b51da31a",
+      "actual": "9d03eeecbd4aaa37708df0894043e796e245c750a7346a33369db150b51da31a",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/realtime_batch.py": {
+      "expected": "eaf012c1e0e46f826d90bdc0d3a32961a97ba2e3a785dbceb7f2e7393e7058d5",
+      "actual": "eaf012c1e0e46f826d90bdc0d3a32961a97ba2e3a785dbceb7f2e7393e7058d5",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/realtime_navigation.py": {
+      "expected": "a955afbe1201b52c647f019acd40567034b08a0ff1dffbb2cf433a965eff2eac",
+      "actual": "a955afbe1201b52c647f019acd40567034b08a0ff1dffbb2cf433a965eff2eac",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/realtime_semantics.py": {
+      "expected": "b33df18dd98ae27769e77f703382767ff5f57764061eafd65583437f892f389b",
+      "actual": "b33df18dd98ae27769e77f703382767ff5f57764061eafd65583437f892f389b",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/render_probe.py": {
+      "expected": "2612e4a7eabd3386b847bed8be58cdb54a37ed14426b194453704fe8698fff38",
+      "actual": "2612e4a7eabd3386b847bed8be58cdb54a37ed14426b194453704fe8698fff38",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/semantic_contract.py": {
+      "expected": "7e0beb0e64629c5c6ccbca84dbe091b996713894268956db2b512ef682d92b91",
+      "actual": "7e0beb0e64629c5c6ccbca84dbe091b996713894268956db2b512ef682d92b91",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/semantic_evaluation.py": {
+      "expected": "4a1a3bf2873332a14026262057c161a44780ea469fddd90bf5024014b59fa17e",
+      "actual": "4a1a3bf2873332a14026262057c161a44780ea469fddd90bf5024014b59fa17e",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/stage9.py": {
+      "expected": "466a5b34dfd039e691232dc02e01869ab700b46ae8162f8fb05232c30a805dd5",
+      "actual": "466a5b34dfd039e691232dc02e01869ab700b46ae8162f8fb05232c30a805dd5",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/navigation/__init__.py": {
+      "expected": "1a641541de8ad170f2fcdc70d7338a2397c8fe9695ef805cf97b196fa95ad1a2",
+      "actual": "1a641541de8ad170f2fcdc70d7338a2397c8fe9695ef805cf97b196fa95ad1a2",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/navigation/evaluation.py": {
+      "expected": "9fd0e526b61f01ef094f079c47efbbe4244f4ef63c66c70ebc6e4da67de50541",
+      "actual": "9fd0e526b61f01ef094f079c47efbbe4244f4ef63c66c70ebc6e4da67de50541",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/navigation/follow_rule_20261124.py": {
+      "expected": "2562b455636b3999d702b9b02c1824d2b52147ec72f2f0a16e05c5812abb8505",
+      "actual": "2562b455636b3999d702b9b02c1824d2b52147ec72f2f0a16e05c5812abb8505",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/navigation/io.py": {
+      "expected": "86555960cdc263365497399fce47bdf0e6609626b9eb5be4d532100016c25fb4",
+      "actual": "86555960cdc263365497399fce47bdf0e6609626b9eb5be4d532100016c25fb4",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/navigation/lane_audit.py": {
+      "expected": "c2e509cc3c0661c78429c77f42d5a10dff9c7fb45e963dff8b672f69395037e6",
+      "actual": "c2e509cc3c0661c78429c77f42d5a10dff9c7fb45e963dff8b672f69395037e6",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/navigation/lane_constraints.py": {
+      "expected": "aac7da44a65887481f9fbbce7fdf09356097f44b755413b71a7c4b20c46611c5",
+      "actual": "aac7da44a65887481f9fbbce7fdf09356097f44b755413b71a7c4b20c46611c5",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/navigation/lane_geometry.py": {
+      "expected": "cbeeecd15147a5de9fb59762d52e134ef96c650b10a7e506da923dbbe923d090",
+      "actual": "cbeeecd15147a5de9fb59762d52e134ef96c650b10a7e506da923dbbe923d090",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/navigation/lane_validation.py": {
+      "expected": "8195d0706612de6aeb614501a5790ec8ce5c7c4ffddb7da9933e75cc4bdf9fd9",
+      "actual": "8195d0706612de6aeb614501a5790ec8ce5c7c4ffddb7da9933e75cc4bdf9fd9",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/navigation/mf_position_20261125.py": {
+      "expected": "8202a8489feea5d84d10daa6b57e9dd8c948058f387d6da015fe77624fb6b1ec",
+      "actual": "8202a8489feea5d84d10daa6b57e9dd8c948058f387d6da015fe77624fb6b1ec",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/navigation/mf_position_20261125_v2.py": {
+      "expected": "c34777352df35c4c5c30950063b90b714fcd46a5374ebe7fb36a50f324ca2489",
+      "actual": "c34777352df35c4c5c30950063b90b714fcd46a5374ebe7fb36a50f324ca2489",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/navigation/navstage2_20261124.py": {
+      "expected": "9d27c2f2483bdd5b3400090477ba84346e9ece472c0ab587e455c9b469f4f6f5",
+      "actual": "9d27c2f2483bdd5b3400090477ba84346e9ece472c0ab587e455c9b469f4f6f5",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/navigation/navstage2_repair_diagnosis_20261124.py": {
+      "expected": "821cb2068432cde6250dd57b1ee67e9c89b40ffcf178c5969c4d6d2252bf9962",
+      "actual": "821cb2068432cde6250dd57b1ee67e9c89b40ffcf178c5969c4d6d2252bf9962",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/navigation/navstage2_runner_20261124.py": {
+      "expected": "7cc5580404d76c1b56c6521582d47d5494404d601f968b05782c317eb371cef9",
+      "actual": "7cc5580404d76c1b56c6521582d47d5494404d601f968b05782c317eb371cef9",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/navigation/navstage2_sparse_evidence_20261124.py": {
+      "expected": "94a9451b082403c50ffe658009b95cb3ad77122d21c5bc166755abd118165961",
+      "actual": "94a9451b082403c50ffe658009b95cb3ad77122d21c5bc166755abd118165961",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/navigation/online.py": {
+      "expected": "1f908ecbf0da1b2fe4f2c6e8cdb7e075c31fc14febb580d96fb6f46b9643a6f6",
+      "actual": "1f908ecbf0da1b2fe4f2c6e8cdb7e075c31fc14febb580d96fb6f46b9643a6f6",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/navigation/pipeline.py": {
+      "expected": "c4a6fdb6ea848024a2f98ab7a8b98a602ebd4ab59102aafa8c9e62ffb0fb2a13",
+      "actual": "c4a6fdb6ea848024a2f98ab7a8b98a602ebd4ab59102aafa8c9e62ffb0fb2a13",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/navigation/planner.py": {
+      "expected": "585ddc41d7ca1bfc8508dce8cdae1cde81ed5b4982ab3b6dbaa478a4f393bb54",
+      "actual": "585ddc41d7ca1bfc8508dce8cdae1cde81ed5b4982ab3b6dbaa478a4f393bb54",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/navigation/reference_guided_vehicle.py": {
+      "expected": "fe65de18c10b7dd4ea2d07df0f3edcfc65772b6fbd4cca10b0f91139276cd9f3",
+      "actual": "fe65de18c10b7dd4ea2d07df0f3edcfc65772b6fbd4cca10b0f91139276cd9f3",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/navigation/relation_nav_unified_20261125.py": {
+      "expected": "163bbfd7587079e9fe4883b76d87ae0cd96f7ba3d3d8a455f42fa12cca96f961",
+      "actual": "163bbfd7587079e9fe4883b76d87ae0cd96f7ba3d3d8a455f42fa12cca96f961",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/navigation/replan_policy.py": {
+      "expected": "8765b64d87df117b11655f57f66d54fed9b0a4a4dfc74e03fdb4de75f06f9c45",
+      "actual": "8765b64d87df117b11655f57f66d54fed9b0a4a4dfc74e03fdb4de75f06f9c45",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/navigation/semantic.py": {
+      "expected": "95645c520c37819f5ca0e3feebcfd5e2282cfc4260eb24caea04d04ca94dbf59",
+      "actual": "95645c520c37819f5ca0e3feebcfd5e2282cfc4260eb24caea04d04ca94dbf59",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/navigation/semantic_tasks_20261123.py": {
+      "expected": "073d51444ea8ede3f17bec9e9b0d4a10208fb5e99aa1ca3ea99895a0a9af52b6",
+      "actual": "073d51444ea8ede3f17bec9e9b0d4a10208fb5e99aa1ca3ea99895a0a9af52b6",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/navigation/state_machine.py": {
+      "expected": "1af29db3ba7f1651e053bb1ba0a548e2458a33a023063b2b6baabd38f6c0540b",
+      "actual": "1af29db3ba7f1651e053bb1ba0a548e2458a33a023063b2b6baabd38f6c0540b",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/navigation/target_selector.py": {
+      "expected": "0a9e5ebfbdf89d1641863ee7b47a458475896e140cd1d7cc632161803c8855d2",
+      "actual": "0a9e5ebfbdf89d1641863ee7b47a458475896e140cd1d7cc632161803c8855d2",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/navigation/task_replay_20261123.py": {
+      "expected": "b7554de03a317e6eaab0b972f86417c8c76609497d6199679a43fb7e7fd126fe",
+      "actual": "b7554de03a317e6eaab0b972f86417c8c76609497d6199679a43fb7e7fd126fe",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/navigation/types.py": {
+      "expected": "0524d36a7909f4819a56723ac74482c6e61e7b79b780adb8f63fcb9a19370034",
+      "actual": "0524d36a7909f4819a56723ac74482c6e61e7b79b780adb8f63fcb9a19370034",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/navigation/vehicle_geometry.py": {
+      "expected": "ae93a8ae8e9af6d874eafad1d57e5b2e65f54f45b0c90ccbdcc32d79743a9378",
+      "actual": "ae93a8ae8e9af6d874eafad1d57e5b2e65f54f45b0c90ccbdcc32d79743a9378",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/navigation/vehicle_planner.py": {
+      "expected": "1f17b4c03b9989b3ffd0133469619fb66eb522d9b89ff8071ebb547f49f29b95",
+      "actual": "1f17b4c03b9989b3ffd0133469619fb66eb522d9b89ff8071ebb547f49f29b95",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/project_paths.py": {
+      "expected": "cbb9c0e65ed1630291dced8c4df690409f1b7fb78887c973da6fb84998c354c4",
+      "actual": "cbb9c0e65ed1630291dced8c4df690409f1b7fb78887c973da6fb84998c354c4",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/scenegraph/GPTPrompt.py": {
+      "expected": "759c4c6deabc932435620e4824e5ae1611d43ad091c8b95a252729957a4b8c5e",
+      "actual": "759c4c6deabc932435620e4824e5ae1611d43ad091c8b95a252729957a4b8c5e",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/scenegraph/__init__.py": {
+      "expected": "3162f896faf3c39c7d45b2e93b5085433ee84c445f8fd48b1c1d6d267b96a457",
+      "actual": "3162f896faf3c39c7d45b2e93b5085433ee84c445f8fd48b1c1d6d267b96a457",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/scenegraph/build_scenegraph_cfslam.py": {
+      "expected": "57ed768feb4c918afee4433ed8813a4904cbcddeb41918b024e870ce3ce37b30",
+      "actual": "57ed768feb4c918afee4433ed8813a4904cbcddeb41918b024e870ce3ce37b30",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/scenegraph/incremental_graph.py": {
+      "expected": "904fedec44a276080b083ed3459982e7c177f747bbfd0186fa0164e2f1b91f68",
+      "actual": "904fedec44a276080b083ed3459982e7c177f747bbfd0186fa0164e2f1b91f68",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/scenegraph/merge_duplicate_objects.py": {
+      "expected": "a4e207b0929addb0c12c38ecb680aba4bc854b35685f90bcc51b19ff4ca9b34e",
+      "actual": "a4e207b0929addb0c12c38ecb680aba4bc854b35685f90bcc51b19ff4ca9b34e",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/scenegraph/node_motion_unified_20261125.py": {
+      "expected": "b84c42be931ee938fb6a9b0137cc0dc0308acc748f43e419c37bbb7500de7775",
+      "actual": "b84c42be931ee938fb6a9b0137cc0dc0308acc748f43e419c37bbb7500de7775",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/scenegraph/paper_graph_20261123_metrics.py": {
+      "expected": "5b61555a466c97aa090b23dd93ff0d1a82e9a238c0a993e51d681e6074172bbf",
+      "actual": "5b61555a466c97aa090b23dd93ff0d1a82e9a238c0a993e51d681e6074172bbf",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/scenegraph/relation_nav_unified_20261125.py": {
+      "expected": "82b1994516b6daf1b1d9fc7560c4e3553a3e26bcb85dd8768ff0ba4e4c931629",
+      "actual": "82b1994516b6daf1b1d9fc7560c4e3553a3e26bcb85dd8768ff0ba4e4c931629",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/scenegraph/relations.py": {
+      "expected": "099e967bdbe5cd0ecf63fe90d094e5f9638d5c4df3643148d7671ee6fa25c105",
+      "actual": "099e967bdbe5cd0ecf63fe90d094e5f9638d5c4df3643148d7671ee6fa25c105",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/scenegraph/visualization.py": {
+      "expected": "900724cb576eb5ac340f90357c5b1176bb2c0859dd4665b4f9159049fb68a752",
+      "actual": "900724cb576eb5ac340f90357c5b1176bb2c0859dd4665b4f9159049fb68a752",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/scripts/run_incremental_semantic_navigation.py": {
+      "expected": "9b0f8b800b7a423d26cb15cf008c04b2d6e6b0b04108730a2bbb6bf62da0ecb4",
+      "actual": "9b0f8b800b7a423d26cb15cf008c04b2d6e6b0b04108730a2bbb6bf62da0ecb4",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/scripts/streamlined_detections.py": {
+      "expected": "b487c303cc86e0f3658891c0a1f7a31237fa5042fa99838d7a13cefe4ed1e4c7",
+      "actual": "b487c303cc86e0f3658891c0a1f7a31237fa5042fa99838d7a13cefe4ed1e4c7",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/slam/__init__.py": {
+      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/slam/audited_mapper.py": {
+      "expected": "60cc24a28289dc5ac037707debb8e8cea7d6581993beb277b187db2fa6804e27",
+      "actual": "60cc24a28289dc5ac037707debb8e8cea7d6581993beb277b187db2fa6804e27",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/slam/cfslam_pipeline_batch.py": {
+      "expected": "e9fd5760ccd1ccdea413dc809056e084b77aac5b6582b47b19aca3cf5f27385a",
+      "actual": "e9fd5760ccd1ccdea413dc809056e084b77aac5b6582b47b19aca3cf5f27385a",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/slam/current_geometry_mapper.py": {
+      "expected": "8e35b82abdc8e37349391dde2bb6e1b079ab71d27dd9caaa37e8c4234e3a854f",
+      "actual": "8e35b82abdc8e37349391dde2bb6e1b079ab71d27dd9caaa37e8c4234e3a854f",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/slam/dense_refinement.py": {
+      "expected": "6b3626e64bb26b2d2c578e06f6cebea04f4198a503abfbabda339b716626cc10",
+      "actual": "6b3626e64bb26b2d2c578e06f6cebea04f4198a503abfbabda339b716626cc10",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/slam/evidence_mapper.py": {
+      "expected": "11fa68d1adb6be33effe8f789e27d09a4df63e4b10acfb3d522670af95a6c748",
+      "actual": "11fa68d1adb6be33effe8f789e27d09a4df63e4b10acfb3d522670af95a6c748",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/slam/mapnext_20261124_depth_history_v1.py": {
+      "expected": "c25e7ffcf208c7059179e26cff34c5d446a8e2820bbaffa86a6a08b74d841a85",
+      "actual": "c25e7ffcf208c7059179e26cff34c5d446a8e2820bbaffa86a6a08b74d841a85",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/slam/mapnext_20261124_depth_history_v2.py": {
+      "expected": "15ad129f13d4bbae43f9a34510a9f0f8057e6e815c955f8d15055f07b1cfb16c",
+      "actual": "15ad129f13d4bbae43f9a34510a9f0f8057e6e815c955f8d15055f07b1cfb16c",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/slam/mapnext_20261124_mapper.py": {
+      "expected": "1aad6969dbee5fac03f36f02d09c100d092dacee082e2d2216ff13bc3502cea7",
+      "actual": "1aad6969dbee5fac03f36f02d09c100d092dacee082e2d2216ff13bc3502cea7",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/slam/mapnext_20261124_sparse_separation_v1.py": {
+      "expected": "f4eb4c5876e309e69128b554af93883c9aa7b82768881d4d451269e8880ccc04",
+      "actual": "f4eb4c5876e309e69128b554af93883c9aa7b82768881d4d451269e8880ccc04",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/slam/mapnext_20261124_sparse_separation_v2.py": {
+      "expected": "a9c67b1e432058ac21308e5968a5e4041303d64e7eb9768a9bbc8e9baed76781",
+      "actual": "a9c67b1e432058ac21308e5968a5e4041303d64e7eb9768a9bbc8e9baed76781",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/slam/mapping.py": {
+      "expected": "95089084ed1ff4c2ec4bfd3414edec6c4a2145a16135373b66db7e9fed6d99d7",
+      "actual": "95089084ed1ff4c2ec4bfd3414edec6c4a2145a16135373b66db7e9fed6d99d7",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/slam/motion_association_mapper.py": {
+      "expected": "f97b76b531a60d90a78cce8c167156dcf2ee139874dfb498e7de31259e1c2c28",
+      "actual": "f97b76b531a60d90a78cce8c167156dcf2ee139874dfb498e7de31259e1c2c28",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/slam/multiview_20261123_fusion.py": {
+      "expected": "c835bbca216c2c33b09c5f5f8d2c548379b805e9966f2802dcb0d7aeba4c262a",
+      "actual": "c835bbca216c2c33b09c5f5f8d2c548379b805e9966f2802dcb0d7aeba4c262a",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/slam/mviter_20261123_diagnostics.py": {
+      "expected": "3823a8e9ccf9007203c2497580864641e8ba6c6de72227120d3806f5617d8e05",
+      "actual": "3823a8e9ccf9007203c2497580864641e8ba6c6de72227120d3806f5617d8e05",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/slam/mviter_20261123_front_anchor.py": {
+      "expected": "7af5c2876143da2e35c2bda0653c996a9cb668cc1f4a7ffd6e6ad5f1f6bcb192",
+      "actual": "7af5c2876143da2e35c2bda0653c996a9cb668cc1f4a7ffd6e6ad5f1f6bcb192",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/slam/mvrepair_20261123_combined.py": {
+      "expected": "b1898939700b5f98104cd12a6f73fb7ac0dc005ac8feed17296b78c66ef4d75c",
+      "actual": "b1898939700b5f98104cd12a6f73fb7ac0dc005ac8feed17296b78c66ef4d75c",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/slam/mvrepair_20261123_conflict_position.py": {
+      "expected": "a6f6f96efcd3342c7e523524e3fd82cf82067e461612012ff48df886369ed667",
+      "actual": "a6f6f96efcd3342c7e523524e3fd82cf82067e461612012ff48df886369ed667",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/slam/mvrepair_20261123_front_position.py": {
+      "expected": "1aff2d57bf5b88151e70b875eee3ec7b73d2d70a45c8de08d46a2e024af039a2",
+      "actual": "1aff2d57bf5b88151e70b875eee3ec7b73d2d70a45c8de08d46a2e024af039a2",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/slam/mvrepair_20261123_native_representative.py": {
+      "expected": "e0cb5c35db4ad6a3a95745f8b7fc5881dfa566af3d962b32fbd93802b4f64a29",
+      "actual": "e0cb5c35db4ad6a3a95745f8b7fc5881dfa566af3d962b32fbd93802b4f64a29",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/slam/mvrepair_20261123_native_representative_v2.py": {
+      "expected": "16f16aad31f235081183e9f4f18843b7e103d244bcf8571dc326c5b5c3582c92",
+      "actual": "16f16aad31f235081183e9f4f18843b7e103d244bcf8571dc326c5b5c3582c92",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/slam/mvrepair_20261123_partial_fragment.py": {
+      "expected": "afaabf213784602122e3a608fcf453a97afe8ab7f540b2579292323815029f8a",
+      "actual": "afaabf213784602122e3a608fcf453a97afe8ab7f540b2579292323815029f8a",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/slam/mvrepair_20261123_prototype.py": {
+      "expected": "f7895ad94c340b1863693c7d337d678c640e8959a77caca794a3417658f3a65f",
+      "actual": "f7895ad94c340b1863693c7d337d678c640e8959a77caca794a3417658f3a65f",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/slam/mvrepair_20261123_unified.py": {
+      "expected": "6e035b4ff468525c9483741bdb7f828a5a12fabc424dd0f76da98dfbb0bc2c19",
+      "actual": "6e035b4ff468525c9483741bdb7f828a5a12fabc424dd0f76da98dfbb0bc2c19",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/slam/mvrepair_lifecycle_20261123_crossclass.py": {
+      "expected": "61545917d82ee995296b84dc4ef00dcdec95e8716d8b0fc2ee3f54c9213e2935",
+      "actual": "61545917d82ee995296b84dc4ef00dcdec95e8716d8b0fc2ee3f54c9213e2935",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/slam/mvrepair_lifecycle_20261123_frontphysical.py": {
+      "expected": "0ef09f34a1d0f3f8d14ab653194539633c513f463de79f95021373eacde678e4",
+      "actual": "0ef09f34a1d0f3f8d14ab653194539633c513f463de79f95021373eacde678e4",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/slam/mvrepair_lifecycle_20261123_mapper.py": {
+      "expected": "be0cfa38b872a310f1ee662be8f1e0c321917ab142ef797d7717654f23bc1222",
+      "actual": "be0cfa38b872a310f1ee662be8f1e0c321917ab142ef797d7717654f23bc1222",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/slam/mvrepair_lifecycle_20261123_ownership_restored.py": {
+      "expected": "46d15e63ebb41a76848cee037448df47f8d127f34300f75b44f29d2aa020c953",
+      "actual": "46d15e63ebb41a76848cee037448df47f8d127f34300f75b44f29d2aa020c953",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/slam/mvrepair_lifecycle_20261123_ownership_restored_v2.py": {
+      "expected": "c382fe5b335dd27f2bd6c3fc834be66144d880dc300d86d21cdc1e4afe577524",
+      "actual": "c382fe5b335dd27f2bd6c3fc834be66144d880dc300d86d21cdc1e4afe577524",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/slam/mvrepair_lifecycle_20261123_registry.py": {
+      "expected": "1f9b82df251a7343e7d011f5773ace77e7d273bd2e17cefaa3f23f0b9f80a0ed",
+      "actual": "1f9b82df251a7343e7d011f5773ace77e7d273bd2e17cefaa3f23f0b9f80a0ed",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/slam/mvrepair_lifecycle_20261123_reliable_ownership.py": {
+      "expected": "4f922ee863478835e06ad346dd06966942b1f7de7db8e26ec2d27a08a4433b0e",
+      "actual": "4f922ee863478835e06ad346dd06966942b1f7de7db8e26ec2d27a08a4433b0e",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/slam/mvrepair_lifecycle_20261123_reliable_ownership_v2.py": {
+      "expected": "89694ac7c2363898baf40e8652ca11c07180f9330513d33390048dad8f900da7",
+      "actual": "89694ac7c2363898baf40e8652ca11c07180f9330513d33390048dad8f900da7",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/slam/mvrepair_lifecycle_20261123_sameview.py": {
+      "expected": "ffe173244784a8e697584931e34744ac9049cef68590f87dcbcf36039fd27230",
+      "actual": "ffe173244784a8e697584931e34744ac9049cef68590f87dcbcf36039fd27230",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/slam/mvrepair_lifecycle_20261123_unique_support.py": {
+      "expected": "9fda38469db4ccdfeb13eb9a9a1d3fbcb4cf11261be1138ccb1e8cfff8e30ae7",
+      "actual": "9fda38469db4ccdfeb13eb9a9a1d3fbcb4cf11261be1138ccb1e8cfff8e30ae7",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/slam/observation_tracker.py": {
+      "expected": "31dd23ddc1ce0712ac37523969cb6a800d7b924ee7a2545e5435322a02e9bd8f",
+      "actual": "31dd23ddc1ce0712ac37523969cb6a800d7b924ee7a2545e5435322a02e9bd8f",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/slam/paper_graph_20261123_sparse_continuity.py": {
+      "expected": "8cbd3f78e3c31cf82347c1cde3d3e12a34b46d6b781754790b271b83bd74fa3e",
+      "actual": "8cbd3f78e3c31cf82347c1cde3d3e12a34b46d6b781754790b271b83bd74fa3e",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/slam/quality_mapper.py": {
+      "expected": "b2f90dd6522fdba1f13c534376e6422bfb987316184cf19481e18e8d292e402a",
+      "actual": "b2f90dd6522fdba1f13c534376e6422bfb987316184cf19481e18e8d292e402a",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/slam/r1_failure_attribution.py": {
+      "expected": "e5e9de5dcd2a07a369b5c0950a085a7c4addef259d0bda18a355b87cc99a58be",
+      "actual": "e5e9de5dcd2a07a369b5c0950a085a7c4addef259d0bda18a355b87cc99a58be",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/slam/slam_classes.py": {
+      "expected": "d4cbffa641a1e4c47e0189e0962463113e9d80739606cee8731f3c0f9755da0e",
+      "actual": "d4cbffa641a1e4c47e0189e0962463113e9d80739606cee8731f3c0f9755da0e",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/slam/sparse_observations.py": {
+      "expected": "cdebdf539acf43a0e3735b5792a41f907a8c824e59095e49eb6a2ffd1e839cad",
+      "actual": "cdebdf539acf43a0e3735b5792a41f907a8c824e59095e49eb6a2ffd1e839cad",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/slam/streamlined_mapping.py": {
+      "expected": "00ce7e26949c145bdd1b42882a8923e9ff6e106b2101ff288fd6ef05498b8676",
+      "actual": "00ce7e26949c145bdd1b42882a8923e9ff6e106b2101ff288fd6ef05498b8676",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/slam/uncertainty_refinement.py": {
+      "expected": "1b11343e53c3dab3a5132dfc763f03c5be621a3a0bc57654522b6c339dfbc928",
+      "actual": "1b11343e53c3dab3a5132dfc763f03c5be621a3a0bc57654522b6c339dfbc928",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/slam/unknown_expiry_refinement.py": {
+      "expected": "b5b5abf2b78f4e71bb92618e1c8b7c826152366895b2a7461b4be13489fcfc99",
+      "actual": "b5b5abf2b78f4e71bb92618e1c8b7c826152366895b2a7461b4be13489fcfc99",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/slam/utils.py": {
+      "expected": "1fc71fe993ba61c3d264d6434df5b195f7347953fbe3d53ec9cc1e4fe007b94d",
+      "actual": "1fc71fe993ba61c3d264d6434df5b195f7347953fbe3d53ec9cc1e4fe007b94d",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/utils/__init__.py": {
+      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/utils/ai2thor.py": {
+      "expected": "7df4c3ef2ece8105af6ade06a35646f57782f6feeecea3b6a5639d40c337ac71",
+      "actual": "7df4c3ef2ece8105af6ade06a35646f57782f6feeecea3b6a5639d40c337ac71",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/utils/eval.py": {
+      "expected": "ce785c53cb0533863e284b7941f194850291a228c2fbb691486b921438c7ece3",
+      "actual": "ce785c53cb0533863e284b7941f194850291a228c2fbb691486b921438c7ece3",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/utils/general_utils.py": {
+      "expected": "54863efb566c330c7255dcb1aa2205f7f4850462de43edd8d3a308518faa5f77",
+      "actual": "54863efb566c330c7255dcb1aa2205f7f4850462de43edd8d3a308518faa5f77",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/utils/geometry.py": {
+      "expected": "c8d766a0e58ab4607a4b356cc96acdb2cc24ba9351fb142b56b30b0ee44ab8c4",
+      "actual": "c8d766a0e58ab4607a4b356cc96acdb2cc24ba9351fb142b56b30b0ee44ab8c4",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/utils/image.py": {
+      "expected": "d4e63160b5210bf6196457c5532a1eef1f11b5306cbc1fa2ba0bb22d778e8474",
+      "actual": "d4e63160b5210bf6196457c5532a1eef1f11b5306cbc1fa2ba0bb22d778e8474",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/utils/ious.py": {
+      "expected": "487e3887746b7402dd25d74bcdadc89112373ffb4e9a6b1a8571485a44d94a9c",
+      "actual": "487e3887746b7402dd25d74bcdadc89112373ffb4e9a6b1a8571485a44d94a9c",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/utils/model_utils.py": {
+      "expected": "d11de07c9247feb6c8183c70bc7c5d890c2abfe140225a33708dd785a19d4d71",
+      "actual": "d11de07c9247feb6c8183c70bc7c5d890c2abfe140225a33708dd785a19d4d71",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/utils/vis.py": {
+      "expected": "429414dd4153a6f3c53af917c04db7e8be43a61265eb2de38fb759af35638ea0",
+      "actual": "429414dd4153a6f3c53af917c04db7e8be43a61265eb2de38fb759af35638ea0",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/vlm/__init__.py": {
+      "expected": "3c0cc18f6752181c459af894dfc462dcf5e376060531efc3c9196fa6ce8245c5",
+      "actual": "3c0cc18f6752181c459af894dfc462dcf5e376060531efc3c9196fa6ce8245c5",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/vlm/image_input.py": {
+      "expected": "65d377dc3a526379c623c282da1f5e46509b197648ef699f53620695870d6075",
+      "actual": "65d377dc3a526379c623c282da1f5e46509b197648ef699f53620695870d6075",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/vlm/qnext_20261124.py": {
+      "expected": "7dbac94f51db29f516fd3f6b41d07fffc67197758480b2618e79fa2e2db93e8c",
+      "actual": "7dbac94f51db29f516fd3f6b41d07fffc67197758480b2618e79fa2e2db93e8c",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/vlm/qnext_20261124_input_rule.py": {
+      "expected": "94be459b2eec7d272a5e4d24297d8643de54679c6c8ad31a6220e61b00370daa",
+      "actual": "94be459b2eec7d272a5e4d24297d8643de54679c6c8ad31a6220e61b00370daa",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/vlm/qnext_20261124_report.py": {
+      "expected": "f32d3bcd5acf45aa84030227963845f88262b6ab395075ee61b5fbce155c059e",
+      "actual": "f32d3bcd5acf45aa84030227963845f88262b6ab395075ee61b5fbce155c059e",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/vlm/qwen_cache.py": {
+      "expected": "221ae6084a165066f8b343de56a090e94c3068cd56462952d1f9b57688d61285",
+      "actual": "221ae6084a165066f8b343de56a090e94c3068cd56462952d1f9b57688d61285",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/vlm/qwen_finetune_v2.py": {
+      "expected": "84d8a5f4ad5a9e50a8c7aef286991d0e7f034ff7f2c7e8f6a0650e6868bd7c90",
+      "actual": "84d8a5f4ad5a9e50a8c7aef286991d0e7f034ff7f2c7e8f6a0650e6868bd7c90",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/vlm/qwen_semantic_delegate.py": {
+      "expected": "c5d95d971456b96ec41dadbd156c0678005c9c5d0a3a678d805eb11ccf36517a",
+      "actual": "c5d95d971456b96ec41dadbd156c0678005c9c5d0a3a678d805eb11ccf36517a",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/vlm/qwen_vl_chat.py": {
+      "expected": "f95c0fe08c30307f22b27062cb1ee06b34113251a0fde0575b3fc424dd5b2360",
+      "actual": "f95c0fe08c30307f22b27062cb1ee06b34113251a0fde0575b3fc424dd5b2360",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/vlm/schemas.py": {
+      "expected": "cf89a1e2344af6872cf16c611c8f6782ce8f54487d9652a840e924266fbed46c",
+      "actual": "cf89a1e2344af6872cf16c611c8f6782ce8f54487d9652a840e924266fbed46c",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/scripts/kitti_local_all_20261125.py": {
+      "expected": "c2e234ccc881eaceb226d13720a5f3bb3b60ccb16e38e2658cb2fb070976d06b",
+      "actual": "c2e234ccc881eaceb226d13720a5f3bb3b60ccb16e38e2658cb2fb070976d06b",
+      "passed": true
+    },
+    "/autodl-fs/data/thesis_completion_v1_bulk/kitti_tracking_expanded_006/agent_manifest.json": {
+      "expected": "6afa237e6c969538735850a71373a44192c150a64947d77323539fea893bafcf",
+      "actual": "6afa237e6c969538735850a71373a44192c150a64947d77323539fea893bafcf",
+      "passed": true
+    },
+    "/autodl-fs/data/thesis_completion_v1_bulk/kitti_tracking_expanded_006/selection.json": {
+      "expected": "4384ed65731965052af804774f194438960493b7a09eae0bb1415f025778231a",
+      "actual": "4384ed65731965052af804774f194438960493b7a09eae0bb1415f025778231a",
+      "passed": true
+    },
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/public_experiment_completion_20261115/mapping_evaluation/kitti_gpu_frontend_full_001/release.json": {
+      "expected": "05e703509ab21880f3baa6d20fbdde4c161a8fb827e8784caa49bb727abae77c",
+      "actual": "05e703509ab21880f3baa6d20fbdde4c161a8fb827e8784caa49bb727abae77c",
+      "passed": true
+    },
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/public_experiment_completion_20261115/mapping_evaluation/kitti_gpu_frontend_full_001/summary.json": {
+      "expected": "3b92c2a9285214c72141939499412774818b517a54f31b7d1c8d098f5d6c2b24",
+      "actual": "3b92c2a9285214c72141939499412774818b517a54f31b7d1c8d098f5d6c2b24",
+      "passed": true
+    },
+    "/root/autodl-tmp/lizichong/dataset/processed/preparation_history/kitti_tracking_center90_002/agent_manifest.json": {
+      "expected": "dfadb38aa6e5c4f4c3459c1aedd6ae1260bcd976c83e8829ed9fa2b7ba87a03d",
+      "actual": "dfadb38aa6e5c4f4c3459c1aedd6ae1260bcd976c83e8829ed9fa2b7ba87a03d",
+      "passed": true
+    },
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/kitti_tracking_frontend_full_001/release.json": {
+      "expected": "ad8854131e9745bebc319fb29c1852a603f991386d717b849ac6fecdbd49287e",
+      "actual": "ad8854131e9745bebc319fb29c1852a603f991386d717b849ac6fecdbd49287e",
+      "passed": true
+    },
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/kitti_tracking_frontend_full_001/summary.json": {
+      "expected": "fb0063d3d374639814e2752b55fbd3c25824e0e4b0f56c1490dad36d503322da",
+      "actual": "fb0063d3d374639814e2752b55fbd3c25824e0e4b0f56c1490dad36d503322da",
+      "passed": true
+    },
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/public_experiment_completion_20261115/mapping_evaluation/kitti_mapping_full_001/release.json": {
+      "expected": "d0d6ca23c4efeed61429d709dca9b903cb8914098208649f6fc3153e7e6f5540",
+      "actual": "d0d6ca23c4efeed61429d709dca9b903cb8914098208649f6fc3153e7e6f5540",
+      "passed": true
+    },
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/kitti_tracking_mapping_full_001/release.json": {
+      "expected": "74fdc6d103a9da678768a61ff7452625bf2d0e492f795e00ae6a3cf75a1918fb",
+      "actual": "74fdc6d103a9da678768a61ff7452625bf2d0e492f795e00ae6a3cf75a1918fb",
+      "passed": true
+    },
+    "/root/autodl-tmp/lizichong/dataset/processed/kitti_local_all_20261125_v1/method_frames.jsonl": {
+      "expected": "139eddbab1ccb13747b16aaccdb267dd0e7a2a58d351534afb9b67c0a24e5195",
+      "actual": "139eddbab1ccb13747b16aaccdb267dd0e7a2a58d351534afb9b67c0a24e5195",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/MEMORY.md": {
+      "expected": "f1db9a84f9b586fff70f61d09cd3bdda78d4b2cac953fbde8af45533ed034fd6",
+      "actual": "f1db9a84f9b586fff70f61d09cd3bdda78d4b2cac953fbde8af45533ed034fd6",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/PAPER_MEMORY.md": {
+      "expected": "2a978751be1efd888a130444bc31f146666c7f4fcb62e37c2f92aa2fe196f2b2",
+      "actual": "2a978751be1efd888a130444bc31f146666c7f4fcb62e37c2f92aa2fe196f2b2",
+      "passed": true
+    },
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/public_experiment_completion_20261115/mapping_evaluation/kitti_mapping_full_001/frames.jsonl": {
+      "expected": "3b0ccee6009b2a742de771e911e217c1f27afe3bd46fe08f1ad333adc01cf185",
+      "actual": "3b0ccee6009b2a742de771e911e217c1f27afe3bd46fe08f1ad333adc01cf185",
+      "passed": true
+    },
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/public_experiment_completion_20261115/statistics/kitti_expanded_full_001/report.json": {
+      "expected": "c69991906a83bd5520cebfa7cd3d741b070708617b6e2545dfc22861b4454d35",
+      "actual": "c69991906a83bd5520cebfa7cd3d741b070708617b6e2545dfc22861b4454d35",
+      "passed": true
+    },
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/kitti_tracking_mapping_full_001/frames.jsonl": {
+      "expected": "d5f41ef8cf47c6567c2df99faba68f3181872a08307ba2da517e5559781905bd",
+      "actual": "d5f41ef8cf47c6567c2df99faba68f3181872a08307ba2da517e5559781905bd",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/kitti_object_all_20261125.py": {
+      "expected": "58765a789b6073a17db40c3292ea106376135465212f0d9b182dbb91b366bc4d",
+      "actual": "58765a789b6073a17db40c3292ea106376135465212f0d9b182dbb91b366bc4d",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/scripts/kitti_object_all_20261125.py": {
+      "expected": "1d507d303e7d5348df546c3c70e1db67fd4d8c807e33e0e12bf095fac9c6a474",
+      "actual": "1d507d303e7d5348df546c3c70e1db67fd4d8c807e33e0e12bf095fac9c6a474",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/kitti_transfer.py": {
+      "expected": "3d8e69d646b85f884b187f19d483e51cdd7bc7f316570680b645321f3bc9d49a",
+      "actual": "3d8e69d646b85f884b187f19d483e51cdd7bc7f316570680b645321f3bc9d49a",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/kitti_evaluate.py": {
+      "expected": "888266b4a51cc32070ccc625b035da230ed3aae3fcfb07aa808e30727525ea0e",
+      "actual": "888266b4a51cc32070ccc625b035da230ed3aae3fcfb07aa808e30727525ea0e",
+      "passed": true
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/vehicle_classes.txt": {
+      "expected": "6f42f64d2817016109c3920cd3183baf690edaf4706af464712a4ea841185fcb",
+      "actual": "6f42f64d2817016109c3920cd3183baf690edaf4706af464712a4ea841185fcb",
+      "passed": true
+    },
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/mapping_evaluation/kitti_object_cpu_full_001/summary.json": {
+      "expected": "d15b653acf92faa65a143d0ad45ae6d3a3ffbfb393d8ef7719e15e127815b997",
+      "actual": "d15b653acf92faa65a143d0ad45ae6d3a3ffbfb393d8ef7719e15e127815b997",
+      "passed": true
+    },
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/statistics/kitti_object_cpu_full_001/report.json": {
+      "expected": "f9d721a62720bdf668133c29d9c4e09e1834056346c81ad6df616d272deb8d24",
+      "actual": "f9d721a62720bdf668133c29d9c4e09e1834056346c81ad6df616d272deb8d24",
+      "passed": true
+    }
+  },
+  "model_stat": {
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/checkpoint/yolov8l-world.pt": {
+      "expected": {
+        "size": 95659301,
+        "mtime_ns": 1778509594111714128
+      },
+      "actual": {
+        "size": 95659301,
+        "mtime_ns": 1778509594111714128
+      }
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/checkpoint/mobile_sam.pt": {
+      "expected": {
+        "size": 40728226,
+        "mtime_ns": 1778509792289675604
+      },
+      "actual": {
+        "size": 40728226,
+        "mtime_ns": 1778509792289675604
+      }
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/checkpoint/hf_models/models--laion--CLIP-ViT-H-14-laion2B-s32B-b79K/snapshots/1c2b8495b28150b8a4922ee1c8edee224c284c0c/open_clip_model.safetensors": {
+      "expected": {
+        "size": 3944517836,
+        "mtime_ns": 1779955917524627351
+      },
+      "actual": {
+        "size": 3944517836,
+        "mtime_ns": 1779955917524627351
+      }
+    }
+  },
+  "model_SHA_frozen_before_execution": {
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/checkpoint/yolov8l-world.pt": "a234e9e0f3f5b43da4f899f30c67146a9e404b6e08f4472d0907e3b3f23e1489",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/checkpoint/mobile_sam.pt": "6dbb90523a35330fedd7f1d3dfc66f995213d81b29a5ca8108dbcdd4e37d6c2f",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/checkpoint/hf_models/models--laion--CLIP-ViT-H-14-laion2B-s32B-b79K/snapshots/1c2b8495b28150b8a4922ee1c8edee224c284c0c/open_clip_model.safetensors": "0084e75319a50ad85ef45377bad5bc38f2f58824459eb690048d51c9f8863be5"
+  },
+  "model_final_full_SHA_recomputed": false,
+  "model_no_copy_or_write": true,
+  "archive_stat": {
+    "/root/autodl-pub/KITTI_Object/raw/data_object_image_2.zip": {
+      "expected": {
+        "size": 12569945557,
+        "mtime_ns": 1728722695960756852
+      },
+      "actual": {
+        "size": 12569945557,
+        "mtime_ns": 1728722695960756852
+      }
+    },
+    "/root/autodl-pub/KITTI_Object/raw/data_object_velodyne.zip": {
+      "expected": {
+        "size": 28750710812,
+        "mtime_ns": 1728728025257524218
+      },
+      "actual": {
+        "size": 28750710812,
+        "mtime_ns": 1728728025257524218
+      }
+    },
+    "/root/autodl-pub/KITTI_Object/raw/data_object_calib.zip": {
+      "expected": {
+        "size": 26854811,
+        "mtime_ns": 1728722068849368305
+      },
+      "actual": {
+        "size": 26854811,
+        "mtime_ns": 1728722068849368305
+      }
+    },
+    "/root/autodl-pub/KITTI_Object/raw/data_object_label_2.zip": {
+      "expected": {
+        "size": 5601213,
+        "mtime_ns": 1728723296902437963
+      },
+      "actual": {
+        "size": 5601213,
+        "mtime_ns": 1728723296902437963
+      }
+    },
+    "/root/autodl-pub/KITTI_Object/raw/devkit_object.zip": {
+      "expected": {
+        "size": 63794,
+        "mtime_ns": 1728728025358661246
+      },
+      "actual": {
+        "size": 63794,
+        "mtime_ns": 1728728025358661246
+      }
+    }
+  },
+  "new_source_sha256": {
+    "conceptgraph/completion/kitti_inventory_20261125.py": "a4fb8d1f45e70f9a34dd2e652dbee124f8130cb2f4fe0632209c6988532a2872",
+    "conceptgraph/completion/kitti_local_all_20261125.py": "531a570ecbed44154d0b49d81f622eed7369b0713c2cf62f90a3b578b3b239f5",
+    "conceptgraph/completion/kitti_object_all_20261125.py": "58765a789b6073a17db40c3292ea106376135465212f0d9b182dbb91b366bc4d",
+    "conceptgraph/completion/kitti_object_prefetch_20261125.py": "714db639958cbd8da8f6c2d2e0b0840f24949047dfb98fbfdbadfab7c67c04b0",
+    "conceptgraph/completion/kitti_object_profile_20261125.py": "7d87b5ab7d2d3583de6392fa288d8dd0297fe9169e10db0bbc2c3de8e7041d30",
+    "conceptgraph/completion/kitti_object_runtime_20261125_v3.py": "900338dda8e6d02fe5cb95e0e7ed63cc3cdc04d355841323d2a887a1da5e3344",
+    "conceptgraph/completion/kitti_result_tables_20261125.py": "65e3e5645615104eb862d5d36f04c2ec1b67fd642bd18b26cd3c55749a447d9f",
+    "conceptgraph/completion/kitti_semantic_pair_inventory_20261125.py": "07b94f95e4f1f4ce0c5ea7cf3af0ce4c73714b70f66cdd64a81f0b3f04bc12ce",
+    "conceptgraph/completion/kitti_tracking_evaluation_20261125_v2.py": "1f3e1490c9b3a842a26f73d9b5736a90e60eb439e23cfd77f4aa2fc09f08d543",
+    "conceptgraph/completion/nu_task_replay_20261125.py": "1b6e133396e88f57e120b9ebd3574001e7d5a0025094bcb9d96fb7830c464fb1",
+    "conceptgraph/completion/nu_task_replay_fair_20261125_v2.py": "d467a0e2d97138b208a505152840defe85bff5142b7078231ea8a1de6f413b9c",
+    "conceptgraph/completion/nu_task_summary_20261125.py": "ea22b647ef12df2111ef72a02fc6ab4ba423ed22ff0d24127a191d159d505f4e",
+    "scripts/kitti_inventory_20261125.py": "67a59842a3cb240e7288ce98eb807391a2ae41d298bea936d0fdc423df4552c9",
+    "scripts/kitti_local_all_20261125.py": "c2e234ccc881eaceb226d13720a5f3bb3b60ccb16e38e2658cb2fb070976d06b",
+    "scripts/kitti_object_all_20261125.py": "1d507d303e7d5348df546c3c70e1db67fd4d8c807e33e0e12bf095fac9c6a474",
+    "scripts/kitti_object_prefetch_20261125.py": "b9d627130d95e163b85f02eee1b2e9d63fc340629b76e797776cfdd00774983c",
+    "scripts/kitti_object_profile_20261125.py": "f02845e76802f62dcb71c786f9706ad7a2b067b020a1a62f8dc3f186f413bb97",
+    "scripts/kitti_object_runtime_20261125_v3.py": "a4bc355f7ba4b8010fa4e8439784fce506c06937d33eaab6af919826479aa30f",
+    "scripts/kitti_result_tables_20261125.py": "ad324f3109f48593baa156347eadf941c48b2c31fe4a09fcacf71297c7974728",
+    "scripts/kitti_semantic_pair_inventory_20261125.py": "2a667951f69f0352ee15788d37a612990d6764a4aae16be963884af8944a906e",
+    "scripts/kitti_tracking_evaluation_20261125_v2.py": "b210b2125dd8bcfa446a52d1f73d6962b14f4c4f4492100d6647a478885e8de4",
+    "scripts/nu_task_replay_20261125.py": "4430de7dcc2fab47b38225e0be54fef6eae380c6a49f6f72fee47363d0275043",
+    "scripts/nu_task_replay_fair_20261125_v2.py": "8d25df40ab2b920fb74ac0d26d41cf7775b4c1221bebdfd0e0c5a8239bf713be",
+    "scripts/nu_task_summary_20261125.py": "8f7d903bda2a6b09f64e1597b84c864cff6a9c3a4512f42f5b3aea576d345e4c"
+  },
+  "persistent_sizes_bytes": {
+    "dataset/processed/kitti_local_all_20261125_v1": 3192600,
+    "dataset/processed/kitti_object_all_20261125_v1": 5256758,
+    "outputs/results/kitti/validation/iterations/kitti_local_all_20261125_tracking_v1": 7264140,
+    "outputs/results/kitti/validation/iterations/kitti_object_all_20261125_v1": 252650,
+    "outputs/results/kitti/validation/iterations/kitti_object_all_20261125_profile_v2": 108830,
+    "outputs/results/kitti/validation/iterations/kitti_object_all_20261125_v3": 20775353,
+    "outputs/reports/kitti_local_all_20261125": 1287038,
+    "outputs/reports/kitti_object_all_20261125": 2843941
+  },
+  "persistent_total_bytes": 40981310,
+  "Semantic_inventory_result_pending": true,
+  "actual_output_free_GiB": 28.54531478881836,
+  "Object_GPU_cumulative_wall_s": 3419.3703121412545,
+  "Object_GPU_budget_s": 6000,
+  "Tracking_frames": 1030,
+  "Object_frames": 7481,
+  "failures_preserved": true,
+  "nu_task_source_status": "frozen and independent preflight passed; waiting producer closed scenes; no new full task scores"
+}

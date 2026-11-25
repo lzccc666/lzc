@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "scope": "eight original-source resource scenes, no models or method scores",
+  "scenes": 8,
+  "source_records": 2227,
+  "counts": {
+    "JPEGs": 1908,
+    "LiDAR_scans": 319
+  },
+  "peak_sealed_scene_bytes": 70062106,
+  "all_temporary_paths_now_absent": true,
+  "all_expected_requested_sensors_exactly_present": true,
+  "all_evidence_SHA_verified": true,
+  "pilot_source_SHA_verified": true,
+  "seed_or_selection_changed": false,
+  "preregistration_sha256": "211d0927dd1dbfe540ab4ebeaf5ae453bf00acd4894514c47f848aaa689c5122",
+  "summary_sha256": "dcccc2c7d7417f6bddcf7276e831dc9d768c76c082c71c09f168e0cdb179b200",
+  "no_GPU": true,
+  "limitation": "peak is independently recomputed from sealed raw member sizes, not a continuous system monitor"
+}

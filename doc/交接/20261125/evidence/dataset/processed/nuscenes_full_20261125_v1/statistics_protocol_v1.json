@@ -1,0 +1,67 @@
+{
+  "created_utc": "2026-11-25T11:53:49.063213+00:00",
+  "seed": 17,
+  "source_sha256": "7244203182b86933edd0aab3cc8cb6f6d98585b22fbc1ada034ee1ee9aed8ae9",
+  "bootstrap_resamples": 10000,
+  "paired_cluster_unit": "official collection log_token; same log draw for both methods and all metrics",
+  "primary_comparisons": [
+    {
+      "method": "original_fusion",
+      "baseline": "single_frame",
+      "scope": "front",
+      "metric": "recall"
+    },
+    {
+      "method": "R1",
+      "baseline": "original_fusion",
+      "scope": "front",
+      "metric": "recall"
+    },
+    {
+      "method": "S2_1",
+      "baseline": "R1",
+      "scope": "front",
+      "metric": "recall"
+    },
+    {
+      "method": "S2_3",
+      "baseline": "S2_1",
+      "scope": "union6",
+      "metric": "recall"
+    },
+    {
+      "method": "S2_6",
+      "baseline": "S2_3",
+      "scope": "union6",
+      "metric": "recall"
+    }
+  ],
+  "primary_interval": {
+    "confidence": 0.99,
+    "method": "percentile paired-cluster bootstrap",
+    "family": "5 predeclared recall contrasts",
+    "Bonferroni_familywise_alpha": 0.05
+  },
+  "secondary_intervals": {
+    "confidence": 0.95,
+    "metrics": [
+      "precision",
+      "F1",
+      "IDF1",
+      "duplicate_fraction",
+      "duplicate_nodes",
+      "center_error_m"
+    ],
+    "scope": "all5contrasts separately within each front/front3/union6 universe; descriptive, no simultaneous significance claim"
+  },
+  "groups": {
+    "category": "all6classes; full-scope original matches, P/R/F1",
+    "distance": "GT worldXY distance to actual CAM_FRONT sensor: [0,10),[10,30),[30,65),[65,infinity); GT-conditioned recall only",
+    "visibility": "official visibility tokens2/3/4; GT-conditioned recall only; not an independently measured occlusion percentage"
+  },
+  "measurement_confound": "all methods share6camera readiness reference, per-camera own most-recent strictly-past<=100ms LiDAR; report exact unique scanIDs and additional scans relative CAM_FRONT each frame; camera count ablation is not pure identical-LiDAR experiment",
+  "applicability": "all850/34149 requests retained. Certified absent source is input applicability failure; existing source but algorithm rejection/empty prediction is algorithm result. No post-success selection",
+  "pending_source_certification": true,
+  "method_source_preseal_sha256": "1eacd48bcceb8bf9a1148512198ff9f77db50ccff8807b11a230dfeb07227ad2",
+  "GT_in_method": false
+}

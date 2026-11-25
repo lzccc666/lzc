@@ -1,0 +1,439 @@
+{
+  "passed": true,
+  "audit_utc": "2026-11-25T11:17:24.749313+00:00",
+  "mode": "tracking_all_local_observations",
+  "frames": 1030,
+  "sequences": 11,
+  "independent_matching": "category+XY<=3m; unweighted augmenting-path maximum cardinality",
+  "actual_agent_input_pair_union": 1030,
+  "sensor_directory_roots": [
+    "/autodl-fs/data/thesis_completion_v1_bulk/kitti_tracking_expanded_006/agent_inputs",
+    "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/data_manifest/kitti_tracking_center90_002/agent_inputs"
+  ],
+  "broad_inventory_roots": 10,
+  "physical_RGB_locations": 1790,
+  "broad_inventory_pair_union": 1030,
+  "census_sha256": "8dbb8aa499cd5f0e06e2c7c853877fd512659ea7e96009110f66d3ecec7e81ce",
+  "source_cache_counts": {
+    "expanded_GPU": 1000,
+    "center90_CPU": 30
+  },
+  "verified_hashes": {
+    "source_sha256": 126,
+    "frozen_metadata_sha256": 10,
+    "protection_sha256": 5
+  },
+  "evaluation_runtime_amendment_sha256": "1c601ab6a0942755ea2634a1f2eded7fe27f8de11490888e37a04e39b9cd95ff",
+  "original_evaluation_stream_preserved": true,
+  "counts": {
+    "single_frame": {
+      "predictions": 3932,
+      "truth": 3257,
+      "true_positive": 846,
+      "unmatched_predictions": 3086,
+      "false_negative": 2411,
+      "duplicate_nodes": 42
+    },
+    "original_fusion": {
+      "predictions": 8865,
+      "truth": 3257,
+      "true_positive": 1235,
+      "unmatched_predictions": 7630,
+      "false_negative": 2022,
+      "duplicate_nodes": 75
+    },
+    "one_to_one_depth_robust_motion": {
+      "predictions": 7002,
+      "truth": 3257,
+      "true_positive": 2739,
+      "unmatched_predictions": 4263,
+      "false_negative": 518,
+      "duplicate_nodes": 307
+    }
+  },
+  "per_sequence": {
+    "0000": {
+      "single_frame": {
+        "predictions": 476,
+        "truth": 53,
+        "true_positive": 24,
+        "unmatched_predictions": 452,
+        "false_negative": 29,
+        "duplicate_nodes": 3
+      },
+      "original_fusion": {
+        "predictions": 1135,
+        "truth": 53,
+        "true_positive": 21,
+        "unmatched_predictions": 1114,
+        "false_negative": 32,
+        "duplicate_nodes": 0
+      },
+      "one_to_one_depth_robust_motion": {
+        "predictions": 886,
+        "truth": 53,
+        "true_positive": 51,
+        "unmatched_predictions": 835,
+        "false_negative": 2,
+        "duplicate_nodes": 11
+      }
+    },
+    "0002": {
+      "single_frame": {
+        "predictions": 534,
+        "truth": 675,
+        "true_positive": 129,
+        "unmatched_predictions": 405,
+        "false_negative": 546,
+        "duplicate_nodes": 6
+      },
+      "original_fusion": {
+        "predictions": 1769,
+        "truth": 675,
+        "true_positive": 290,
+        "unmatched_predictions": 1479,
+        "false_negative": 385,
+        "duplicate_nodes": 8
+      },
+      "one_to_one_depth_robust_motion": {
+        "predictions": 1354,
+        "truth": 675,
+        "true_positive": 519,
+        "unmatched_predictions": 835,
+        "false_negative": 156,
+        "duplicate_nodes": 119
+      }
+    },
+    "0003": {
+      "single_frame": {
+        "predictions": 323,
+        "truth": 263,
+        "true_positive": 49,
+        "unmatched_predictions": 274,
+        "false_negative": 214,
+        "duplicate_nodes": 5
+      },
+      "original_fusion": {
+        "predictions": 549,
+        "truth": 263,
+        "true_positive": 59,
+        "unmatched_predictions": 490,
+        "false_negative": 204,
+        "duplicate_nodes": 6
+      },
+      "one_to_one_depth_robust_motion": {
+        "predictions": 428,
+        "truth": 263,
+        "true_positive": 236,
+        "unmatched_predictions": 192,
+        "false_negative": 27,
+        "duplicate_nodes": 12
+      }
+    },
+    "0004": {
+      "single_frame": {
+        "predictions": 359,
+        "truth": 299,
+        "true_positive": 124,
+        "unmatched_predictions": 235,
+        "false_negative": 175,
+        "duplicate_nodes": 1
+      },
+      "original_fusion": {
+        "predictions": 800,
+        "truth": 299,
+        "true_positive": 155,
+        "unmatched_predictions": 645,
+        "false_negative": 144,
+        "duplicate_nodes": 1
+      },
+      "one_to_one_depth_robust_motion": {
+        "predictions": 608,
+        "truth": 299,
+        "true_positive": 259,
+        "unmatched_predictions": 349,
+        "false_negative": 40,
+        "duplicate_nodes": 15
+      }
+    },
+    "0005": {
+      "single_frame": {
+        "predictions": 405,
+        "truth": 420,
+        "true_positive": 119,
+        "unmatched_predictions": 286,
+        "false_negative": 301,
+        "duplicate_nodes": 4
+      },
+      "original_fusion": {
+        "predictions": 875,
+        "truth": 420,
+        "true_positive": 166,
+        "unmatched_predictions": 709,
+        "false_negative": 254,
+        "duplicate_nodes": 13
+      },
+      "one_to_one_depth_robust_motion": {
+        "predictions": 661,
+        "truth": 420,
+        "true_positive": 377,
+        "unmatched_predictions": 284,
+        "false_negative": 43,
+        "duplicate_nodes": 20
+      }
+    },
+    "0006": {
+      "single_frame": {
+        "predictions": 423,
+        "truth": 338,
+        "true_positive": 83,
+        "unmatched_predictions": 340,
+        "false_negative": 255,
+        "duplicate_nodes": 2
+      },
+      "original_fusion": {
+        "predictions": 1324,
+        "truth": 338,
+        "true_positive": 132,
+        "unmatched_predictions": 1192,
+        "false_negative": 206,
+        "duplicate_nodes": 22
+      },
+      "one_to_one_depth_robust_motion": {
+        "predictions": 1092,
+        "truth": 338,
+        "true_positive": 315,
+        "unmatched_predictions": 777,
+        "false_negative": 23,
+        "duplicate_nodes": 32
+      }
+    },
+    "0007": {
+      "single_frame": {
+        "predictions": 622,
+        "truth": 480,
+        "true_positive": 101,
+        "unmatched_predictions": 521,
+        "false_negative": 379,
+        "duplicate_nodes": 15
+      },
+      "original_fusion": {
+        "predictions": 744,
+        "truth": 480,
+        "true_positive": 118,
+        "unmatched_predictions": 626,
+        "false_negative": 362,
+        "duplicate_nodes": 18
+      },
+      "one_to_one_depth_robust_motion": {
+        "predictions": 762,
+        "truth": 480,
+        "true_positive": 419,
+        "unmatched_predictions": 343,
+        "false_negative": 61,
+        "duplicate_nodes": 98
+      }
+    },
+    "0008": {
+      "single_frame": {
+        "predictions": 455,
+        "truth": 296,
+        "true_positive": 106,
+        "unmatched_predictions": 349,
+        "false_negative": 190,
+        "duplicate_nodes": 3
+      },
+      "original_fusion": {
+        "predictions": 1054,
+        "truth": 296,
+        "true_positive": 124,
+        "unmatched_predictions": 930,
+        "false_negative": 172,
+        "duplicate_nodes": 2
+      },
+      "one_to_one_depth_robust_motion": {
+        "predictions": 786,
+        "truth": 296,
+        "true_positive": 282,
+        "unmatched_predictions": 504,
+        "false_negative": 14,
+        "duplicate_nodes": 0
+      }
+    },
+    "0009": {
+      "single_frame": {
+        "predictions": 48,
+        "truth": 138,
+        "true_positive": 13,
+        "unmatched_predictions": 35,
+        "false_negative": 125,
+        "duplicate_nodes": 0
+      },
+      "original_fusion": {
+        "predictions": 115,
+        "truth": 138,
+        "true_positive": 14,
+        "unmatched_predictions": 101,
+        "false_negative": 124,
+        "duplicate_nodes": 0
+      },
+      "one_to_one_depth_robust_motion": {
+        "predictions": 72,
+        "truth": 138,
+        "true_positive": 38,
+        "unmatched_predictions": 34,
+        "false_negative": 100,
+        "duplicate_nodes": 0
+      }
+    },
+    "0010": {
+      "single_frame": {
+        "predictions": 280,
+        "truth": 295,
+        "true_positive": 98,
+        "unmatched_predictions": 182,
+        "false_negative": 197,
+        "duplicate_nodes": 3
+      },
+      "original_fusion": {
+        "predictions": 489,
+        "truth": 295,
+        "true_positive": 156,
+        "unmatched_predictions": 333,
+        "false_negative": 139,
+        "duplicate_nodes": 5
+      },
+      "one_to_one_depth_robust_motion": {
+        "predictions": 346,
+        "truth": 295,
+        "true_positive": 243,
+        "unmatched_predictions": 103,
+        "false_negative": 52,
+        "duplicate_nodes": 0
+      }
+    },
+    "0013": {
+      "single_frame": {
+        "predictions": 7,
+        "truth": 0,
+        "true_positive": 0,
+        "unmatched_predictions": 7,
+        "false_negative": 0,
+        "duplicate_nodes": 0
+      },
+      "original_fusion": {
+        "predictions": 11,
+        "truth": 0,
+        "true_positive": 0,
+        "unmatched_predictions": 11,
+        "false_negative": 0,
+        "duplicate_nodes": 0
+      },
+      "one_to_one_depth_robust_motion": {
+        "predictions": 7,
+        "truth": 0,
+        "true_positive": 0,
+        "unmatched_predictions": 7,
+        "false_negative": 0,
+        "duplicate_nodes": 0
+      }
+    }
+  },
+  "per_class": {
+    "car": {
+      "single_frame": {
+        "predictions": 3379,
+        "truth": 2921,
+        "true_positive": 834,
+        "unmatched_predictions": 2545,
+        "false_negative": 2087,
+        "duplicate_nodes": 42
+      },
+      "original_fusion": {
+        "predictions": 6431,
+        "truth": 2921,
+        "true_positive": 1154,
+        "unmatched_predictions": 5277,
+        "false_negative": 1767,
+        "duplicate_nodes": 72
+      },
+      "one_to_one_depth_robust_motion": {
+        "predictions": 5346,
+        "truth": 2921,
+        "true_positive": 2625,
+        "unmatched_predictions": 2721,
+        "false_negative": 296,
+        "duplicate_nodes": 249
+      }
+    },
+    "truck": {
+      "single_frame": {
+        "predictions": 410,
+        "truth": 183,
+        "true_positive": 6,
+        "unmatched_predictions": 404,
+        "false_negative": 177,
+        "duplicate_nodes": 0
+      },
+      "original_fusion": {
+        "predictions": 1737,
+        "truth": 183,
+        "true_positive": 7,
+        "unmatched_predictions": 1730,
+        "false_negative": 176,
+        "duplicate_nodes": 0
+      },
+      "one_to_one_depth_robust_motion": {
+        "predictions": 1093,
+        "truth": 183,
+        "true_positive": 31,
+        "unmatched_predictions": 1062,
+        "false_negative": 152,
+        "duplicate_nodes": 0
+      }
+    },
+    "pedestrian": {
+      "single_frame": {
+        "predictions": 143,
+        "truth": 153,
+        "true_positive": 6,
+        "unmatched_predictions": 137,
+        "false_negative": 147,
+        "duplicate_nodes": 0
+      },
+      "original_fusion": {
+        "predictions": 697,
+        "truth": 153,
+        "true_positive": 74,
+        "unmatched_predictions": 623,
+        "false_negative": 79,
+        "duplicate_nodes": 3
+      },
+      "one_to_one_depth_robust_motion": {
+        "predictions": 563,
+        "truth": 153,
+        "true_positive": 83,
+        "unmatched_predictions": 480,
+        "false_negative": 70,
+        "duplicate_nodes": 58
+      }
+    }
+  },
+  "motion_comparison": {
+    "original_fusion": "legacy center-difference estimate; frozen original configuration",
+    "one_to_one_depth_robust_motion": "one-to-one association + largest depth cluster + robust_xy + initially unknown + 3-observation static confirmation +2s dynamic TTL",
+    "new_raw_verified_motion_protocol_evaluated": false,
+    "actual_dynamic_attribute_accuracy_claimed": false
+  },
+  "no_GPU": true,
+  "elapsed_s": 23.12795841693878,
+  "audit_source_sha256": "2a73dd67461177c2c1733f4e49584294eb13c44e2f6d2808cb7acdd037516bf7",
+  "manifest_sha256": "37ecb0b0551a451401119b1617fd17b33cc8e5acbeb3a3fc212c5c0110be8bcf",
+  "evaluated_stream_sha256": "379a57e95031ed5919a3562abbceb3cce533b1e39d43015ceec6b34fd963f135",
+  "limitations": [
+    "directory audit covers both known local Tracking input roots; external archive census is separately reported",
+    "GT eligibility reuses frozen official evaluation rows; this audit independently reconstructs association counts, not official labels",
+    "nominal 0.1s time is not measured sensor time",
+    "1030 available local frames are not complete official sequences"
+  ]
+}

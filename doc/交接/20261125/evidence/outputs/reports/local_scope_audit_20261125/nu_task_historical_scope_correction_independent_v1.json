@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "recorded_utc": "2026-11-25T11:56:16.727459+00:00",
+  "archive": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/main_experiments/causal_retrieval_full_001/source_snapshot.tar.gz",
+  "archive_sha256": "18803dec68f6a8e44d0c5a4d34b439a98cee97d4829eecb461b8d79b0c0d0d35",
+  "member": "conceptgraph/completion/navigation_diagnostics.py",
+  "member_sha256": "291f75e65b8d0c398064aef6e0123ec7a77354fabcc9ba36343692b81c46e82f",
+  "official_GT_generator": {
+    "max_directional_distance_m": 12,
+    "minimum_component_m": 1,
+    "near_m": 6,
+    "source_lines": [
+      39,
+      40
+    ],
+    "near_edges_excluded_from_query_generation": true,
+    "exclude_source_line": 43
+  },
+  "legacy_selector_parse_near_m": 8,
+  "legacy_selector_source_lines": [
+    97,
+    98
+  ],
+  "effective_correction": "GT direction is explicitly12m, not quality helper default15m; new common12m has no12-to15m mismatch",
+  "supersedes": "earlier messages and any preliminary note attributing15m to old1115 GT; preserve originals as superseded",
+  "labels_thresholds_or_scores_modified": false,
+  "no_GPU": true
+}

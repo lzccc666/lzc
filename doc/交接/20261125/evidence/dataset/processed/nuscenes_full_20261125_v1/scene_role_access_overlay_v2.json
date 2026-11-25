@@ -1,0 +1,106 @@
+{
+  "created_utc": "2026-11-25T11:11:09.391195+00:00",
+  "scenes": {
+    "scene-0001": {
+      "original_role": "sealed_test",
+      "access_role": "previous_mapping_seen_label_access_pending",
+      "reason": "existing797frame20scene mapping/converted cache; do not treat as new unseen"
+    },
+    "scene-0004": {
+      "original_role": "sealed_test",
+      "access_role": "previous_mapping_seen_label_access_pending",
+      "reason": "existing797frame20scene mapping/converted cache; do not treat as new unseen"
+    },
+    "scene-0007": {
+      "original_role": "sealed_test",
+      "access_role": "previous_mapping_seen_label_access_pending",
+      "reason": "existing797frame20scene mapping/converted cache; do not treat as new unseen"
+    },
+    "scene-0008": {
+      "original_role": "sealed_test",
+      "access_role": "previous_mapping_seen_label_access_pending",
+      "reason": "existing797frame20scene mapping/converted cache; do not treat as new unseen"
+    },
+    "scene-0009": {
+      "original_role": "sealed_test",
+      "access_role": "previous_mapping_seen_label_access_pending",
+      "reason": "existing797frame20scene mapping/converted cache; do not treat as new unseen"
+    },
+    "scene-0063": {
+      "original_role": "sealed_test",
+      "access_role": "previous_mapping_seen_label_access_pending",
+      "reason": "existing797frame20scene mapping/converted cache; do not treat as new unseen"
+    },
+    "scene-0064": {
+      "original_role": "sealed_test",
+      "access_role": "previous_mapping_seen_label_access_pending",
+      "reason": "existing797frame20scene mapping/converted cache; do not treat as new unseen"
+    },
+    "scene-0154": {
+      "original_role": "sealed_test",
+      "access_role": "previous_mapping_seen_label_access_pending",
+      "reason": "existing797frame20scene mapping/converted cache; do not treat as new unseen"
+    },
+    "scene-0158": {
+      "original_role": "sealed_test",
+      "access_role": "previous_mapping_seen_label_access_pending",
+      "reason": "existing797frame20scene mapping/converted cache; do not treat as new unseen"
+    },
+    "scene-0178": {
+      "original_role": "sealed_test",
+      "access_role": "previous_mapping_seen_label_access_pending",
+      "reason": "existing797frame20scene mapping/converted cache; do not treat as new unseen"
+    },
+    "scene-0184": {
+      "original_role": "sealed_test",
+      "access_role": "previous_mapping_seen_label_access_pending",
+      "reason": "existing797frame20scene mapping/converted cache; do not treat as new unseen"
+    },
+    "scene-0185": {
+      "original_role": "sealed_test",
+      "access_role": "previous_mapping_seen_label_access_pending",
+      "reason": "existing797frame20scene mapping/converted cache; do not treat as new unseen"
+    },
+    "scene-0193": {
+      "original_role": "sealed_test",
+      "access_role": "previous_mapping_seen_label_access_pending",
+      "reason": "existing797frame20scene mapping/converted cache; do not treat as new unseen"
+    },
+    "scene-0194": {
+      "original_role": "sealed_test",
+      "access_role": "previous_mapping_seen_label_access_pending",
+      "reason": "existing797frame20scene mapping/converted cache; do not treat as new unseen"
+    },
+    "scene-0207": {
+      "original_role": "sealed_test",
+      "access_role": "previous_mapping_seen_label_access_pending",
+      "reason": "existing797frame20scene mapping/converted cache; do not treat as new unseen"
+    },
+    "scene-0218": {
+      "original_role": "sealed_test",
+      "access_role": "previous_mapping_seen_label_access_pending",
+      "reason": "existing797frame20scene mapping/converted cache; do not treat as new unseen"
+    },
+    "scene-0796": {
+      "original_role": "sealed_test",
+      "access_role": "previous_mapping_seen_label_access_pending",
+      "reason": "existing797frame20scene mapping/converted cache; do not treat as new unseen"
+    },
+    "scene-1077": {
+      "original_role": "sealed_test",
+      "access_role": "previous_mapping_seen_label_access_pending",
+      "reason": "existing797frame20scene mapping/converted cache; do not treat as new unseen"
+    },
+    "scene-1094": {
+      "original_role": "sealed_test",
+      "access_role": "previous_mapping_seen_label_access_pending",
+      "reason": "existing797frame20scene mapping/converted cache; do not treat as new unseen"
+    },
+    "scene-1100": {
+      "original_role": "sealed_test",
+      "access_role": "previous_mapping_seen_label_access_pending",
+      "reason": "existing797frame20scene mapping/converted cache; do not treat as new unseen"
+    }
+  },
+  "source_manifest_sha256": "e077da347a7140e280eae16862c904407e73ba1d1c38ffcc148d093bd4475aca"
+}

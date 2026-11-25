@@ -1,0 +1,26 @@
+{
+  "source_interface_checks_passed": true,
+  "source_SHA_verified": 2,
+  "original_frozen2315_manifest_unchanged": true,
+  "task_count": 2315,
+  "no_new_graph_scores": true,
+  "all6_methods_use_same_non_motion_geometry_ranking": true,
+  "unknown_not_promoted_to_static": true,
+  "strict_confirmation_separate_and_baseline_unsupported": true,
+  "old_GT_directional_scope_independently_corrected_to12m": true,
+  "query_grammar_actual_counts": {
+    "legacy1115_category_distance": 768,
+    "legacy1115_relation": 347,
+    "unified1200_category_distance": 720,
+    "unified1200_relation": 480
+  },
+  "actual_query_parse_unsupported_category_count": 0,
+  "actual_query_ego_front_or_color_or_exclusion_conditions": 0,
+  "full_task_success_not_claimed": true,
+  "channel_results_not_to_be_pooled": true,
+  "scope": "preregistered interface only; real new graph method results pending",
+  "amendment_sha256": "c8cebc2c72a04ba8d65eb9b34ca9e8a305b8043f704eaafab74fd06229a858ad",
+  "historical_scope_correction": "nu_task_historical_scope_correction_independent_v1.json",
+  "recorded_utc": "2026-11-25T11:57:42.754332+00:00",
+  "no_GPU": true
+}

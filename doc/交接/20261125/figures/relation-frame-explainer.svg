@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="660" viewBox="0 0 1000 660" role="img" aria-labelledby="title desc">
+<title id="title">A位于B的左前方且在附近</title><desc id="desc">自车朝上。参考B位于原点，目标A左3米、前4米，距离5米，同时满足左侧、前方和6米附近。方向可合成左前方，附近是独立距离属性。</desc>
+<style>:root{--bg:#fff;--fg:#18222d;--muted:#526574;--mark:#2269ab;--line:#d9e3ea}text{font-family:SimSun,'Noto Serif CJK SC',serif;fill:var(--fg)}.muted{fill:var(--muted)}.active{fill:var(--mark)}@media(prefers-color-scheme:dark){:root{--bg:#151a20;--fg:#e7eef5;--muted:#a7b9ca;--mark:#7bb7ee;--line:#354350}}</style>
+<rect width="1000" height="660" fill="var(--bg)"/>
+<text x="32" y="48" font-size="32">A 相对 B：左前方，而且在附近</text>
+<circle cx="495" cy="363" r="300" fill="none" stroke="var(--line)" stroke-width="2"/>
+<circle cx="495" cy="363" r="150" fill="none" stroke="var(--line)" stroke-width="2" stroke-dasharray="7 5"/>
+<path d="M495 615V84M812 363H165" fill="none" stroke="var(--muted)" stroke-width="2"/>
+<path d="M495 84l-5 11h10ZM165 363l11-5v10Z" fill="var(--muted)"/>
+<text x="513" y="108" font-size="24">前 f</text><text x="166" y="397" font-size="24">左 l</text>
+<text x="665" y="298" font-size="22" class="muted">方向有效距离 ≤12 m</text><text x="618" y="412" font-size="22" class="muted">附近 ≤6 m</text>
+<path d="M420 263H495V363" fill="none" stroke="var(--mark)" stroke-width="2" stroke-dasharray="5 5"/>
+<line x1="495" y1="363" x2="420" y2="263" stroke="var(--mark)" stroke-width="4"/>
+<path d="M420 263l2 13 9-7Z" fill="var(--mark)"/>
+<rect x="486" y="354" width="18" height="18" rx="3" fill="var(--fg)"/><circle cx="420" cy="263" r="11" fill="var(--mark)"/>
+<text x="342" y="244" font-size="25">A 目标</text><text x="510" y="396" font-size="25">B 参考</text>
+<text x="424" y="252" font-size="23" class="active">左 3 m</text><text x="507" y="312" font-size="23" class="active">前 4 m</text><text x="314" y="329" font-size="24" class="active">距离 5 m</text>
+<rect x="56" y="104" width="28" height="52" rx="6" fill="var(--bg)" stroke="var(--fg)" stroke-width="2"/><line x1="61" y1="116" x2="79" y2="116" stroke="var(--fg)" stroke-width="3"/>
+<line x1="70" y1="101" x2="70" y2="76" stroke="var(--mark)" stroke-width="2"/><path d="M70 76l-5 11h10Z" fill="var(--mark)"/><text x="32" y="191" font-size="22" class="muted">自车朝上</text>
+<text x="32" y="555" font-size="29" class="active">几何事实：左侧 + 前方 + 附近</text><text x="32" y="599" font-size="28">一句话显示：左前方（附近）</text><text x="32" y="638" font-size="22" class="muted">方向可以合成；“附近”仍是独立的距离属性。</text>
+</svg>

@@ -1,0 +1,23 @@
+{
+  "input_and_isolation_checks_passed": true,
+  "task_count": 2315,
+  "frame_protocol_groups": 502,
+  "counts": {
+    "legacy1115:negative": 382,
+    "legacy1115:positive": 733,
+    "unified1200:negative": 999,
+    "unified1200:positive": 141,
+    "unified1200:pending": 60
+  },
+  "source_SHA_checked": 9,
+  "new_input_SHA_checked": 3,
+  "method_records_contain_no_official_answers": true,
+  "method_implementation_reads_GT": false,
+  "not_new_unseen_language_benchmark": true,
+  "legacy_near8_and_unified_near6_kept_separate": true,
+  "scope": "preregistration only; no new graph predictions yet",
+  "interpretation_required": "single/original adapters force semantic_position_candidate=False and verified=unknown; current strict-confirmation contract rejects them structurally; do not present zero as original retrieval baseline reproduction",
+  "all_frozen_inputs_or_old_history_modified": false,
+  "manifest_sha256": "4c9006067e67c51eb480aa2406160ceeee31bef59455ca7666c0d314d5d7b3fb",
+  "no_GPU": true
+}
