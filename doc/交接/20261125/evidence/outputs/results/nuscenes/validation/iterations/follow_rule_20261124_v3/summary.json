@@ -1,0 +1,22 @@
+{
+  "created_utc": "2026-11-24T14:03:47.666336+00:00",
+  "fixed_candidates": 12,
+  "certified_geometry_time_denominator": 3,
+  "correct_identity": 0,
+  "trajectories_emitted": 1,
+  "geometry_time_passed": 1,
+  "joint_success": 0,
+  "source_targets": 4,
+  "source_no_matches": 8,
+  "all_candidate_statuses": {
+    "NO_CURRENT_GRAPH": 6,
+    "NO_FORWARD_PREDICTED_VEHICLE": 4,
+    "PREDICTED_GEOMETRY_TIME_TRAJECTORY": 2
+  },
+  "tiny_seen_regression": true,
+  "independent_logs": 2,
+  "old_2015_81_unchanged": true,
+  "GPU_calls": 0,
+  "Qwen_calls": 0,
+  "no_claim_of_closed_loop_or_control_feasibility": true
+}

@@ -189,3 +189,9 @@ outputs/
 *.safetensors
 *.tgz
 *.zip
+
+# Fixed small handoff evidence copies; actual experiment data/results stay ignored.
+!doc/交接/20261125/evidence/outputs/
+!doc/交接/20261125/evidence/outputs/**
+!doc/交接/20261125/evidence/dataset/
+!doc/交接/20261125/evidence/dataset/**

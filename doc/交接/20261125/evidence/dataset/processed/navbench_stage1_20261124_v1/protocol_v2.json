@@ -1,0 +1,113 @@
+{
+  "version": "navbench-stage1-20261124-v2",
+  "created_utc": "2026-11-24T12:47:46.946341+00:00",
+  "seed": 17,
+  "purpose": "独立认证任务有解后冻结分母；阶段1只准备协议和来源，不运行被测方法",
+  "execution_scope": "open_loop_predicted_trajectory",
+  "requires_actual_execution": false,
+  "budgets": {
+    "wall_seconds": 2700,
+    "new_file_bytes": 134217728,
+    "GPU_calls": 0,
+    "minimum_free_bytes": 21474836480
+  },
+  "status_enum": [
+    "feasible",
+    "infeasible_proven",
+    "pending"
+  ],
+  "inclusion": "只有独立、已审核且与冻结完整任务契约严格一致的参考见证才能feasible；依被测算法成功挑任务禁止",
+  "infeasible": "只接受独立穷尽/解析/几何断连等证明；有限搜索失败不证明无解；unknown统一pending",
+  "main_denominator": "三类新任务先认证且冻结，之后所有被测方法使用相同全部任务；拒选、无路、超时和失败全部保留",
+  "historical_results": "历史1115检索任务/733正/382负及32道路点/0静态车身交集原样保留，不重筛改分母",
+  "scope_boundaries": [
+    "文字审核不证明场景适用、许可、空闲、可行路径",
+    "原录制未来轨迹不能自动证明任意新指令",
+    "官方drivable或lane不证明允许停车",
+    "carpark_area不等于具体车位",
+    "对象附近接近的参考不能改名为靠边/车位/跟车",
+    "已使用测试来源只称历史回归，不称未见测试",
+    "参考GT/轨迹/答案仅evaluation_only，不送入被测方法"
+  ],
+  "contract_match_fields": [
+    "action",
+    "instruction_semantics",
+    "scene",
+    "issue_frame_idx",
+    "initial_pose_reference",
+    "initial_pose",
+    "initial_speed_mps",
+    "initial_steering_rad",
+    "vehicle_model",
+    "allowed_motion",
+    "goal_geometry",
+    "goal_reference_point",
+    "terminal_heading_tolerance_rad",
+    "terminal_speed_max_mps",
+    "prediction_horizon_s",
+    "terminal_hold_s",
+    "obstacle_temporal_scope",
+    "map_geometry_scope",
+    "nearest_definition"
+  ],
+  "task_requirements": {
+    "pull_over": [
+      "指令/时刻/停靠侧",
+      "独立指定停靠区域及其声明限制",
+      "工程车辆/后轴变换",
+      "空间终点/航向与整车扫掠；仅timed_trajectory且任务要求时评价速度/保持"
+    ],
+    "park_nearest": [
+      "指令/时刻",
+      "具体可接受车位集合/几何/声明占用限制",
+      "最近定义及集合完整性",
+      "工程车辆/后轴变换",
+      "空间终点/航向与整车扫掠；时间指标按实际输出定义"
+    ],
+    "follow_vehicle": [
+      "指令/时刻/真实最近同车道前车",
+      "工程车辆/后轴变换",
+      "动态跟随必须有前车连续状态/预测时域/车距定义",
+      "独立轨迹与道路/车身/运动学检查"
+    ]
+  },
+  "expected_source_inventory": {
+    "original_episode_requests": 6,
+    "approved_unbound_language": 16,
+    "historical_retrieval_queries": 1115,
+    "historical_reference_queries": 878
+  },
+  "certification_policy": "先全量盘点参考来源与既有独立审计，禁止新搜索被测规划器，严格按相同工况继承历史条件证书；新三任务无证据保持pending",
+  "snapshot_file": "preregistration.json",
+  "amended_utc": "2026-11-24T12:56:36.381265+00:00",
+  "supersedes_sha256": "dfec70c5a63b354ef0fc8b48e8312466a841adfedfe48d1546331b9554602e82",
+  "amendment_reason": "本阶段任务定义澄清：开环空间路径与带时间轨迹分层；工程模型可冻结，避免将闭环遥测误作路径前置",
+  "execution_output_modes": {
+    "path": {
+      "requires": [
+        "空间终点/姿态定义",
+        "工程车辆模型与参考点变换",
+        "车道/道路/障碍几何",
+        "整车与连续扫掠检查"
+      ],
+      "not_applicable": [
+        "实际执行遥测",
+        "速度正确性",
+        "停稳保持",
+        "动态跟随时距"
+      ]
+    },
+    "timed_trajectory": {
+      "requires": [
+        "path全部几何要求",
+        "明确时间参数/预测时域",
+        "任务确实要求的速度/停车/动态跟随真值"
+      ],
+      "not_applicable": [
+        "实际开过去才可结束"
+      ]
+    }
+  },
+  "engineering_vehicle_policy": "可固定VehicleSpec及后轴参考变换假设，用于同条件规划/评价；明确这是工程模型，不伪称nuScenes实测车辆。不同原点不可静默当同一点。",
+  "parking_region_policy": "只依据冻结任务中的独立指定区域及声明限制；若研究不声称法规判断，不额外强制现实法规证明。drivable不得自动冒充停车区，具体车位/空闲仍不能编造。"
+}

@@ -1,0 +1,49 @@
+{
+  "created_utc": "2026-11-24T14:02:24.667864+00:00",
+  "policy": {
+    "seed": 17,
+    "graph": "T3_three",
+    "horizon_s": 3.0,
+    "dt_s": 0.1,
+    "maximum_measurement_age_s": 1.5,
+    "minimum_motion_span_s": 0.4,
+    "target_categories": [
+      "car",
+      "truck",
+      "bus"
+    ],
+    "minimum_forward_m": 5.0,
+    "maximum_forward_m": 60.0,
+    "maximum_lane_hops": 8,
+    "maximum_lane_join_gap_m": 0.75,
+    "desired_body_gap_m": 15.0,
+    "gap_gain_per_s": 0.25,
+    "max_speed_mps": 15.0,
+    "output": "timed_xy_yaw_trajectory_only; no acceleration or control claims",
+    "identity_evaluation": "one-to-one Hungarian assignment within vehicle family, 3D center distance <=3m; no GT used by method",
+    "map": "same shared official HD lane/drivable map for all tasks",
+    "GPU_calls": 0,
+    "qwen_calls": 0
+  },
+  "candidates": 12,
+  "certified_geometry_time_denominator": {
+    "path": "/root/autodl-tmp/lizichong/dataset/processed/navsemantic_tasks_20261124_v3/geometry_time_denominator_freeze_v1.json",
+    "sha256": "1328041a2b56235ece3e2fe67271d93af203144d9f35b7ae553affd92a240a93"
+  },
+  "graph_sources_sha256": {
+    "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/mapnext_20261124_baseline_v1/scene-0012/mapnext_20261124_predictions.jsonl.gz": "f0796417aa417e404d9ccaac34664d613cabfeb9be2e29183bfb08ee56b91ed5",
+    "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/mapnext_20261124_baseline_v1/scene-0013/mapnext_20261124_predictions.jsonl.gz": "cd781a47b80c3fe4177653bdd68fe795a7f36f032e17a3ac0047ad996e2674e8",
+    "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/mapnext_20261124_baseline_v1/scene-0019/mapnext_20261124_predictions.jsonl.gz": "1d847fb3a2334696e44ba35e198c33a37da831d5bb5b63e1d5f71d8a6ac24509",
+    "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/mapnext_20261124_baseline_v1/scene-0035/mapnext_20261124_predictions.jsonl.gz": "70a62a3faaa73370064f15ed2eb4f29c168ca622c690eddf4f88a9a0847f5d15",
+    "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/mapnext_20261124_baseline_v1/scene-0042/mapnext_20261124_predictions.jsonl.gz": "f2265afcf8133364705c86dd885c04d339d6ec0607c09100ef5fa25404bf37b7",
+    "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/mapnext_20261124_baseline_v1/scene-0047/mapnext_20261124_predictions.jsonl.gz": "f33a1e08f93313c9ec7c0bca22586f6b2206ef23c34d51fc1057d9fd3756748e"
+  },
+  "input": {
+    "path": "/root/autodl-tmp/lizichong/dataset/processed/follow_rule_20261124_v3/method_inputs.jsonl",
+    "sha256": "163868b82c2059777ddbdc93138669d13301beaf80f3c57ebe3063366e32dfed"
+  },
+  "no_parameter_selection": true,
+  "one_fixed_run": true,
+  "GT_in_method": false,
+  "reference_future_in_method": false
+}

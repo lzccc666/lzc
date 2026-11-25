@@ -1,0 +1,348 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "task_id",
+    "source_family",
+    "record_kind",
+    "action",
+    "instruction",
+    "scene",
+    "log_token",
+    "issue_frame_idx",
+    "issue_time_s",
+    "split_role",
+    "split_group_id",
+    "source_ref",
+    "feasibility_status",
+    "reason",
+    "main_table_eligible",
+    "conditional_reference_table_eligible",
+    "execution_readiness",
+    "certificate_ids",
+    "missing_fields",
+    "contract",
+    "contract_sha256",
+    "independent_sample_unit"
+  ],
+  "properties": {
+    "task_id": {
+      "type": "string"
+    },
+    "source_family": {
+      "enum": [
+        "original_episode",
+        "approved_language",
+        "historical_retrieval",
+        "historical_conditional_reference"
+      ]
+    },
+    "record_kind": {
+      "enum": [
+        "scene_task",
+        "unbound_language",
+        "retrieval_query",
+        "conditional_approach_query"
+      ]
+    },
+    "action": {
+      "enum": [
+        "pull_over",
+        "park_nearest",
+        "follow_vehicle",
+        "object_retrieval",
+        "object_approach"
+      ]
+    },
+    "instruction": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "scene": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "log_token": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "issue_frame_idx": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "issue_time_s": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "split_role": {
+      "type": "string"
+    },
+    "split_group_id": {
+      "type": "string"
+    },
+    "source_ref": {
+      "type": "object"
+    },
+    "feasibility_status": {
+      "enum": [
+        "feasible",
+        "infeasible_proven",
+        "pending"
+      ]
+    },
+    "reason": {
+      "type": "string"
+    },
+    "main_table_eligible": {
+      "type": "boolean"
+    },
+    "conditional_reference_table_eligible": {
+      "type": "boolean"
+    },
+    "execution_readiness": {
+      "enum": [
+        "inputs_partial",
+        "language_unbound",
+        "historical_retrieval_only",
+        "historical_input_compatibility_pending"
+      ]
+    },
+    "certificate_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "missing_fields": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "contract": {
+      "type": "object"
+    },
+    "contract_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "independent_sample_unit": {
+      "type": "string"
+    },
+    "infeasibility_proof": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "proof_type",
+        "independent",
+        "complete_declared_domain",
+        "finite_search_failure_is_not_proof",
+        "task_id",
+        "contract_sha256",
+        "proof_artifact",
+        "independent_verification_artifact"
+      ],
+      "properties": {
+        "proof_type": {
+          "enum": [
+            "analytical_constraint_contradiction",
+            "exhaustive_complete_declared_domain"
+          ]
+        },
+        "independent": {
+          "const": true
+        },
+        "complete_declared_domain": {
+          "const": true
+        },
+        "finite_search_failure_is_not_proof": {
+          "const": true
+        },
+        "task_id": {
+          "type": "string"
+        },
+        "contract_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "proof_artifact": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "path",
+            "sha256"
+          ],
+          "properties": {
+            "path": {
+              "type": "string",
+              "minLength": 1
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            }
+          }
+        },
+        "independent_verification_artifact": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "path",
+            "sha256"
+          ],
+          "properties": {
+            "path": {
+              "type": "string",
+              "minLength": 1
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            }
+          }
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "feasibility_status": {
+            "const": "feasible"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "certificate_ids": {
+            "minItems": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "conditional_reference_table_eligible": {
+            "const": true
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "source_family": {
+            "const": "historical_conditional_reference"
+          },
+          "feasibility_status": {
+            "const": "feasible"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "main_table_eligible": {
+            "const": true
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "feasibility_status": {
+            "const": "feasible"
+          },
+          "source_family": {
+            "const": "original_episode"
+          },
+          "record_kind": {
+            "const": "scene_task"
+          },
+          "action": {
+            "enum": [
+              "pull_over",
+              "park_nearest",
+              "follow_vehicle"
+            ]
+          },
+          "scene": {
+            "type": "string",
+            "minLength": 1
+          },
+          "log_token": {
+            "type": "string",
+            "minLength": 1
+          },
+          "issue_frame_idx": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "issue_time_s": {
+            "type": "number"
+          },
+          "certificate_ids": {
+            "minItems": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "feasibility_status": {
+            "const": "infeasible_proven"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "infeasibility_proof"
+        ],
+        "properties": {
+          "main_table_eligible": {
+            "const": false
+          },
+          "conditional_reference_table_eligible": {
+            "const": false
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "feasibility_status": {
+            "const": "pending"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "main_table_eligible": {
+            "const": false
+          },
+          "conditional_reference_table_eligible": {
+            "const": false
+          },
+          "certificate_ids": {
+            "maxItems": 0
+          }
+        }
+      }
+    }
+  ],
+  "$id": "navbench-stage1-20261124-task-v2"
+}

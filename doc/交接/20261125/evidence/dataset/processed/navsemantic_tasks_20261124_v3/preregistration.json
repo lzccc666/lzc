@@ -1,0 +1,75 @@
+{
+  "created_utc": "2026-11-24T13:43:07.285864+00:00",
+  "policy": {
+    "seed": 17,
+    "scenes": [
+      "scene-0012",
+      "scene-0013",
+      "scene-0019",
+      "scene-0035",
+      "scene-0042",
+      "scene-0047"
+    ],
+    "issue_frames": [
+      0,
+      10
+    ],
+    "horizon_s": 3.0,
+    "output_mode": "timed_xy_yaw_trajectory",
+    "reference_step_s": 0.1,
+    "target_categories": [
+      "vehicle.car",
+      "vehicle.truck",
+      "vehicle.bus.bendy",
+      "vehicle.bus.rigid"
+    ],
+    "visible_front_channels": [
+      "CAM_FRONT_LEFT",
+      "CAM_FRONT",
+      "CAM_FRONT_RIGHT"
+    ],
+    "minimum_visibility_token": 2,
+    "minimum_initial_forward_distance_m": 5.0,
+    "maximum_initial_forward_distance_m": 60.0,
+    "minimum_longitudinal_body_gap_m": 5.0,
+    "maximum_longitudinal_body_gap_m": 60.0,
+    "maximum_heading_difference_deg": 30.0,
+    "maximum_lane_hops": 8,
+    "maximum_lane_search_m": 100.0,
+    "maximum_lane_join_gap_m": 0.75,
+    "minimum_ego_forward_progress_m": 0.5,
+    "vehicle": {
+      "wheelbase_m": 2.7,
+      "front_from_rear_axle_m": 3.7,
+      "rear_overhang_m": 0.9,
+      "width_m": 1.85
+    },
+    "engineering_reference": "Official ego_pose origin is declared rear axle in this engineering model; xy and yaw retained, z projected out. No actual nuScenes axle measurement is claimed.",
+    "initial_state": "Known official LIDAR_TOP keyframe ego_pose at issue time; no from-rest assumption or forced stop. No controls/acceleration/bicycle-execution claim.",
+    "geometry": "Whole engineering vehicle on raw official drivable with holes; same directed lane route and all-category official obstacle endpoint convex swept envelopes in every subinterval.",
+    "dynamics_scope": "Evaluation-only official 2Hz boxes; vertices interpolate linearly between anchors. Unmatched endpoint boxes conservatively occupy the full anchor interval. No unobserved-real-traffic guarantee.",
+    "witness_role": "Recorded ego future is only an attempted existence witness after checking this contract, never automatically a correct answer or a unique scoring trajectory.",
+    "admission": "All 12 fixed candidates retained. Only geometry/time independently passed candidates may enter a NEW geometry-time conditional feasible table, never the old main table or historical 81.",
+    "source_roles": "Current labels/geometry evaluation-only. Method inputs contain instruction, current/past sensor references and known initial pose, not official target identity, future sequence, annotations or witness.",
+    "budget": {
+      "max_elapsed_s": 1800,
+      "max_generated_bytes": 67108864,
+      "GPU": 0,
+      "model_calls": 0,
+      "planner_calls": 0
+    }
+  },
+  "source_manifest": {
+    "path": "/root/autodl-tmp/lizichong/dataset/processed/mv136_20261123_sixscene_v1/manifest.json",
+    "sha256": "56f6eb96f15774e6154f308a89c134e62243ec16ef9f438103a3a77358bdf92f"
+  },
+  "all_fixed_candidates_retained": true,
+  "old_registry": {
+    "path": "/root/autodl-tmp/lizichong/dataset/processed/navbench_stage1_20261124_v1/task_registry.jsonl",
+    "sha256": "40aca597746a2b73b41ad68d711b7aea350c0af3939cc9b9ed4b49ea6e45c35e"
+  },
+  "old_denominator": {
+    "path": "/root/autodl-tmp/lizichong/dataset/processed/navbench_stage1_20261124_v1/denominator_freeze.json",
+    "sha256": "c20f0698eb78ee3a1a58ec9a11712265c9fe658d7ede6cd71b4a8fde39142ee8"
+  }
+}
