@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "utc": "2026-11-25T12:43:49.278710+00:00",
+  "scope": "resource entry source/LD environment revision, no numerical GPU result claim",
+  "frozen_sources_unchanged": 71,
+  "weights_SHA_records_identical_to_closed_Object_models": 3,
+  "weights_independently_rehashed_again": false,
+  "entry": "scripts/nuscenes_full_20261125_resource_runtime_v2.py",
+  "entry_sha256": "73894ad134123f7aaa65b951c7f1f7730ffb4072b75c21bbb6d580804ec8834b",
+  "runtime_receipt": "dataset/processed/nuscenes_full_20261125_v1/resource_runtime_v2.json",
+  "runtime_receipt_sha256": "023ec549230dbc3746e606ed80c93daa13cda0d35a5ac736dfa1e76e8642ad4e",
+  "change": "after existing imports, prepend already frozen conda lib path and retain remaining path order; same main/config/seed/model/metric",
+  "no_GPU_by_auditor": true,
+  "configuration_count": 1,
+  "GT_opened": false
+}

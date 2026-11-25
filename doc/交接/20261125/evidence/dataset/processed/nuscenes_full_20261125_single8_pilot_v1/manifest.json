@@ -1,0 +1,129 @@
+{
+  "created_utc": "2026-11-25T12:38:40.548529+00:00",
+  "phase": "CPU_relation_reencoding_only",
+  "scenes": [
+    {
+      "scene": "scene-0001",
+      "scene_token": "73030fb67d3c46cfb5e590168088ae39",
+      "log_token": "6b6513e6c8384cec88775cae30b78c0e",
+      "frames": 40,
+      "role": {
+        "original_role": "sealed_test",
+        "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/project_v2/lane_qwen_expansion_v1/prospective_supplement_v2/split_manifest.json",
+        "source_test_labels_opened": false,
+        "access_role": "historical_holdout_access_to_audit"
+      },
+      "log_previously_used": true,
+      "request": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/nuscenes_full_20261125_v1/requests/scene-0001.jsonl.gz",
+      "request_sha256": "46ebfa73ab904719bbbcc434738bdd70848fc2aa75b68bfa737871f8b2ddd77b"
+    },
+    {
+      "scene": "scene-0002",
+      "scene_token": "c3e0e9f6ee8d4170a3d22a6179f1ca3a",
+      "log_token": "6b6513e6c8384cec88775cae30b78c0e",
+      "frames": 40,
+      "role": {
+        "original_role": "not_previously_selected",
+        "access_role": "fixed_method_new_scene",
+        "source": "official scene table and frozen absence from historical selection"
+      },
+      "log_previously_used": true,
+      "request": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/nuscenes_full_20261125_v1/requests/scene-0002.jsonl.gz",
+      "request_sha256": "e304b6561766e73d65f791d53a069478354dcd02a51048921a3e219ec2bfe736"
+    },
+    {
+      "scene": "scene-0003",
+      "scene_token": "e7ef871f77f44331aefdebc24ec034b7",
+      "log_token": "92af2609d31445e5a71b2d895376fed6",
+      "frames": 40,
+      "role": {
+        "original_role": "legacy_regression",
+        "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/project_v2/lane_qwen_expansion_v1/split_manifest.json",
+        "source_test_labels_opened": false,
+        "access_role": "historical_regression"
+      },
+      "log_previously_used": true,
+      "request": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/nuscenes_full_20261125_v1/requests/scene-0003.jsonl.gz",
+      "request_sha256": "3d391cddc8deb7895f355084d26cd11d47af4bcee396fcdf0ce26a16b8302b13"
+    },
+    {
+      "scene": "scene-0004",
+      "scene_token": "25496f19ffd14bd088cb430bfc01a4d7",
+      "log_token": "47620afea3c443f6a761e885273cb531",
+      "frames": 40,
+      "role": {
+        "original_role": "sealed_test",
+        "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/project_v2/lane_qwen_expansion_v1/split_manifest.json",
+        "source_test_labels_opened": false,
+        "access_role": "historical_holdout_access_to_audit"
+      },
+      "log_previously_used": true,
+      "request": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/nuscenes_full_20261125_v1/requests/scene-0004.jsonl.gz",
+      "request_sha256": "30de1809d495db371f0cd6b44bcbd8617c1ef6b9b49f13fde5c29b8362562e4a"
+    },
+    {
+      "scene": "scene-0005",
+      "scene_token": "6f5133fe62b240e797bac25aeff8b531",
+      "log_token": "47620afea3c443f6a761e885273cb531",
+      "frames": 39,
+      "role": {
+        "original_role": "not_previously_selected",
+        "access_role": "fixed_method_new_scene",
+        "source": "official scene table and frozen absence from historical selection"
+      },
+      "log_previously_used": true,
+      "request": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/nuscenes_full_20261125_v1/requests/scene-0005.jsonl.gz",
+      "request_sha256": "8fbb939fdfa035058c7f4f88bcca329c26b72d5718f4346f4fca73e96d7bed10"
+    },
+    {
+      "scene": "scene-0006",
+      "scene_token": "7deb4760e2244f32b57f9d631b535b66",
+      "log_token": "47620afea3c443f6a761e885273cb531",
+      "frames": 40,
+      "role": {
+        "original_role": "not_previously_selected",
+        "access_role": "fixed_method_new_scene",
+        "source": "official scene table and frozen absence from historical selection"
+      },
+      "log_previously_used": true,
+      "request": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/nuscenes_full_20261125_v1/requests/scene-0006.jsonl.gz",
+      "request_sha256": "b5b1265d965a58c749f9c028aa639c4b0909fede9cc623daa3464d7292d0ad53"
+    },
+    {
+      "scene": "scene-0007",
+      "scene_token": "bc219c0fa63b43b4b9dddab47fce1fef",
+      "log_token": "47620afea3c443f6a761e885273cb531",
+      "frames": 39,
+      "role": {
+        "original_role": "sealed_test",
+        "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/project_v2/lane_qwen_expansion_v1/split_manifest.json",
+        "source_test_labels_opened": false,
+        "access_role": "historical_holdout_access_to_audit"
+      },
+      "log_previously_used": true,
+      "request": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/nuscenes_full_20261125_v1/requests/scene-0007.jsonl.gz",
+      "request_sha256": "06877907d63141fd6fd09c68fff17529e8e0efb0a260c9bb14c8e81d438dc0a9"
+    },
+    {
+      "scene": "scene-0008",
+      "scene_token": "9a61a88ed9094334a73aa93c08222110",
+      "log_token": "47620afea3c443f6a761e885273cb531",
+      "frames": 40,
+      "role": {
+        "original_role": "sealed_test",
+        "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/project_v2/lane_qwen_expansion_v1/split_manifest.json",
+        "source_test_labels_opened": false,
+        "access_role": "historical_holdout_access_to_audit"
+      },
+      "log_previously_used": true,
+      "request": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/nuscenes_full_20261125_v1/requests/scene-0008.jsonl.gz",
+      "request_sha256": "5ce9eebe03cd57bee04a5606c04497e790a7644997516ad62528188f245bbefd"
+    }
+  ],
+  "scene_count": 8,
+  "frames": 318,
+  "master_manifest_sha256": "e077da347a7140e280eae16862c904407e73ba1d1c38ffcc148d093bd4475aca",
+  "no_GT": true,
+  "original_manifest_sha256": "83c20f6c2e711d16b2661f9700b63c60891dc2fd9d08786ed565efdcfdccd437",
+  "relation_protocol_sha256": "637da87e93b987e863fa90cc16d702d7703a2e97dffbf44a489e50324d40a519"
+}

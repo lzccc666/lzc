@@ -1,0 +1,113 @@
+{
+  "created_utc": "2026-11-25T14:05:28.279979+00:00",
+  "source_progress_snapshot": {
+    "utc": "2026-11-25T14:05:13.423008+00:00",
+    "completed_archives": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "active_PIDs": {
+      "9": 29826,
+      "10": 29914
+    },
+    "queued": [],
+    "paused_existing": [],
+    "GPU_release_seen": true,
+    "deadline_unix": 1795617120,
+    "resource_supervisor": "v5",
+    "technical_resumed_archives": [
+      3,
+      4,
+      5
+    ]
+  },
+  "archives": [
+    {
+      "archive": 1,
+      "complete": true,
+      "complete_path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/nuscenes_full_20261125_v1/archives/archive01_complete.json",
+      "active_PID": null,
+      "complete_sha256": "6df67ff1b9bca9ebe6aac262057fbc43d77621352b2392e626411f8fb41e9309"
+    },
+    {
+      "archive": 2,
+      "complete": true,
+      "complete_path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/nuscenes_full_20261125_v1/archives/archive02_complete.json",
+      "active_PID": null,
+      "complete_sha256": "3dd1eb30991117fddc8e6e5037af68c798711017cce757ba1e9fbc5262c93995"
+    },
+    {
+      "archive": 3,
+      "complete": true,
+      "complete_path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/nuscenes_full_20261125_v1/archives/archive03_complete.json",
+      "active_PID": null,
+      "complete_sha256": "e03890c844113b911dda2bcdb3bc24d9bc78a5a4d31e92674ed5bd05640130ae"
+    },
+    {
+      "archive": 4,
+      "complete": true,
+      "complete_path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/nuscenes_full_20261125_v1/archives/archive04_complete.json",
+      "active_PID": null,
+      "complete_sha256": "f65e47d74f27ea4db3fb81d5e69fd7708c6c2daff992fc3c4991a7095490c90f"
+    },
+    {
+      "archive": 5,
+      "complete": true,
+      "complete_path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/nuscenes_full_20261125_v1/archives/archive05_complete.json",
+      "active_PID": null,
+      "complete_sha256": "dabda7e7deb83314146e261a8152c5e286753bb9e832800099d8bb00d7bcd5b4"
+    },
+    {
+      "archive": 6,
+      "complete": true,
+      "complete_path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/nuscenes_full_20261125_v1/archives/archive06_complete.json",
+      "active_PID": null,
+      "complete_sha256": "10e01eb081c170a232ead15462fd7dd59d004b48f66c8ec630abcada2a7e5882"
+    },
+    {
+      "archive": 7,
+      "complete": true,
+      "complete_path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/nuscenes_full_20261125_v1/archives/archive07_complete.json",
+      "active_PID": null,
+      "complete_sha256": "1a197811a763a82fe8f104063bbc8e32589becdd2e2f9197ee5ddfe4e952c6cd"
+    },
+    {
+      "archive": 8,
+      "complete": true,
+      "complete_path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/nuscenes_full_20261125_v1/archives/archive08_complete.json",
+      "active_PID": null,
+      "complete_sha256": "9ca6748a02d0024e005076d135104cc602e33df1b30b68d7cd55680d92c1958d"
+    },
+    {
+      "archive": 9,
+      "complete": false,
+      "complete_path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/nuscenes_full_20261125_v1/archives/archive09_complete.json",
+      "active_PID": 29826,
+      "process_exists": true,
+      "process_state": "D",
+      "cmdline": "/root/miniconda3/envs/conceptgraph/bin/python -u /root/.codex/worktrees/lzc-integration-20261125/lizichong/scripts/nuscenes_full_20261125_index_v2.py --archive 9 --deadline 1795617120 "
+    },
+    {
+      "archive": 10,
+      "complete": false,
+      "complete_path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/nuscenes_full_20261125_v1/archives/archive10_complete.json",
+      "active_PID": 29914,
+      "process_exists": true,
+      "process_state": "D",
+      "cmdline": "/root/miniconda3/envs/conceptgraph/bin/python -u /root/.codex/worktrees/lzc-integration-20261125/lizichong/scripts/nuscenes_full_20261125_index_v2.py --archive 10 --deadline 1795617120 "
+    }
+  ],
+  "GPU_processes_at_check": "",
+  "formal_new_run_exists": false,
+  "formal_old_run_exists": false,
+  "tracked_hold_sha256": "4642593615aea17a5f4ee5665f140c15975588d1e770496c23a645ff76b8250d",
+  "current_source_root": "/root/.codex/worktrees/lzc-integration-20261125/lizichong",
+  "dataset_real_root": "/root/autodl-tmp/lizichong/dataset",
+  "outputs_real_root": "/root/autodl-tmp/lizichong/outputs"
+}

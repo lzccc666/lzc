@@ -1,0 +1,37 @@
+{
+  "created_utc": "2026-11-25T13:51:22.779018+00:00",
+  "contract": "single8_v1_source_relative_to_target",
+  "source_sha256": {
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/nuscenes_full_20261125_single8_reedge.py": "020eefc53a991fa520576cda1dfc40593b4cbc30dcdcb84b2e1778ea7746674a",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/scripts/nuscenes_full_20261125_single8_reedge.py": "5a2302c16942661302fb43dc60a3de9b1a310a7a2fcc1a42a36d9307d411008e",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/scenegraph/relation_single8_20261125.py": "66efdde5b633fdc8a7f9939007cfa20f35d766314a3d274d22b608ba5f7ea124"
+  },
+  "canonical": "str(stable_id) ascending source/target; relation states source position relative to target",
+  "labels": [
+    "front",
+    "front_left",
+    "left",
+    "back_left",
+    "back",
+    "back_right",
+    "right",
+    "front_right"
+  ],
+  "reference_frame": "CAM_FRONT optical +Z projected into world XY; ego-heading proxy, not object body heading",
+  "sector_width_deg": 45.0,
+  "front_interval_deg": [
+    -22.5,
+    22.5
+  ],
+  "interval": "lower inclusive upper exclusive",
+  "boundary_numeric_rule": "8 ULP representational boundary normalization only",
+  "max_distance_m": 12.0,
+  "coincident_threshold_m": 1e-06,
+  "near_edges": false,
+  "inverse_edges_stored": false,
+  "confidence_or_topk_pruning": false,
+  "all_finite_XY_nodes_include_dynamic_and_unknown": true,
+  "old_multirelation_pilot_preserved": true,
+  "GT_not_read": true,
+  "node_fusion_frontend_changes": false
+}

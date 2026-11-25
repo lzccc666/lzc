@@ -1,0 +1,62 @@
+{
+  "passed": true,
+  "audit_utc": "2026-11-25T14:05:43.298951+00:00",
+  "implementation": "actual edge_counts AST compiled verbatim; no official GT loaded",
+  "evaluator_sha256": "023994f7deadabf3ae28a0bb454a38528306b310d0d37b24623eb227c498bf14",
+  "core_sha256": "66efdde5b633fdc8a7f9939007cfa20f35d766314a3d274d22b608ba5f7ea124",
+  "cases": [
+    {
+      "name": "reversed_mapped_GT_ID_order",
+      "counts": {
+        "TP": 1,
+        "all_pred": 1,
+        "resolved_pred": 1,
+        "unresolved_pred": 0,
+        "all_truth": 3,
+        "conditional_truth": 1,
+        "full_FP": 0,
+        "full_FN": 2,
+        "missing_endpoint_FN": 2,
+        "covered_endpoint_FN": 0,
+        "corresponding_endpoint_pairs": 1,
+        "direction_correct_on_corresponding_pairs": 1
+      }
+    },
+    {
+      "name": "wrong_direction_same_pair",
+      "counts": {
+        "TP": 0,
+        "all_pred": 1,
+        "resolved_pred": 1,
+        "unresolved_pred": 0,
+        "all_truth": 3,
+        "conditional_truth": 1,
+        "full_FP": 1,
+        "full_FN": 3,
+        "missing_endpoint_FN": 2,
+        "covered_endpoint_FN": 1,
+        "corresponding_endpoint_pairs": 1,
+        "direction_correct_on_corresponding_pairs": 0
+      }
+    },
+    {
+      "name": "missing_endpoint_kept",
+      "counts": {
+        "TP": 0,
+        "all_pred": 1,
+        "resolved_pred": 0,
+        "unresolved_pred": 1,
+        "all_truth": 3,
+        "conditional_truth": 0,
+        "full_FP": 1,
+        "full_FN": 3,
+        "missing_endpoint_FN": 3,
+        "covered_endpoint_FN": 0,
+        "corresponding_endpoint_pairs": 0,
+        "direction_correct_on_corresponding_pairs": 0
+      }
+    }
+  ],
+  "GPU_calls": 0,
+  "full_evaluation_run": false
+}

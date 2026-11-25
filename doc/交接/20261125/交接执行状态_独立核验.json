@@ -1,0 +1,23 @@
+{
+  "created_utc": "2026-11-25T14:09:40.489383+00:00",
+  "passed": true,
+  "tracked_hold_active": true,
+  "tracked_hold_sha256": "4642593615aea17a5f4ee5665f140c15975588d1e770496c23a645ff76b8250d",
+  "no_automatic_full_resume_watch_processes": true,
+  "GPU_processes": "",
+  "source_certificates_closed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "frozen65_source_SHA_check": "passed",
+  "MEMORY_PAPER_MEMORY": "tracked, no working-tree content changes",
+  "formal_old_or_new_started": false,
+  "actual_scorer_fixture": "single8_GT_metrics_fixture_independent_v1.json",
+  "remaining_source_preparation": "existing read-only index processes can finish; not full experiment"
+}

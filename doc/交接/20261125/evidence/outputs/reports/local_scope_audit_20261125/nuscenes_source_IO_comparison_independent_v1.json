@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "scope": "same original scene member/offset/bytes/hash workload; timing cause not inferred",
+  "scene": "scene-0001",
+  "source_members": 279,
+  "all_source_offsets_and_hashes_identical": true,
+  "original_source_only_scene_s": 10.311310892924666,
+  "original_all8_source_only_wall_s": 83.97438694536686,
+  "current_source_extract_lease_s": 129.12248632125556,
+  "source_archive_unchanged": true,
+  "inference_timing_contexts_different": true,
+  "limits": [
+    "Earlier source-only run and later GPU run occurred under different filesystem/cache/index-worker states; this audit cannot assign the slowdown to a particular cause.",
+    "No second fresh extraction or model rerun is performed; full occupied GPU wall and IO remain in the actual resource forecast."
+  ]
+}

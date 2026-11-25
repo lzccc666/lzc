@@ -19,16 +19,17 @@
     <label class="form-label">展示方式
       <select id="relation-mode" class="form-select"><option value="labels">几何多标签</option><option value="compound">单个复合方位</option></select>
     </label>
-    <label class="form-label">自车朝向 <span id="relation-yaw-value" class="tabular-nums">0°</span>
+    <label class="form-label">参考轴转角 <span id="relation-yaw-value" class="tabular-nums">0°</span>
       <input id="relation-yaw" class="form-range" type="range" min="-180" max="180" step="5" value="0">
     </label>
     <button id="relation-swap" type="button" class="btn">互换 A / B</button>
   </div>
   <svg id="relation-map" class="relation-map" role="img" aria-label="俯视关系图。参考物B，目标A可拖动；默认A在B左3米、前4米。">
-    <title>目标A相对参考B的关系</title><desc>邻近距离6米，方向有效距离12米，轴向分量死区1米。方向以自车朝向定义，距离单独计算。</desc>
+    <title>目标A相对参考B的关系</title><desc>邻近距离6米，方向有效距离12米，轴向分量死区1米。共同前向取CAM_FRONT光轴在世界XY的投影，作为自车朝向近似，不代表物体自身朝向。</desc>
     <defs><marker id="relation-arrow" orient="auto" markerWidth="9" markerHeight="9" refX="8" refY="4.5" markerUnits="userSpaceOnUse"><path d="M1 1L8 4.5 1 8" fill="none" stroke="var(--viz-series-1)" stroke-width="1.5"></path></marker></defs>
     <g id="relation-geometry"></g>
   </svg>
+  <div class="text-small">前向来源：CAM_FRONT 光轴的世界 XY 投影（自车朝向近似）</div>
   <div class="relation-values tabular-nums" aria-live="polite">
     <span id="relation-result"></span><span id="relation-near"></span><span id="relation-distance"></span>
   </div>
@@ -50,7 +51,7 @@
   function label(text,x,y,attrs={}){const node=el('text',{x,y,class:'relation-label',...attrs});node.textContent=text;return node;}
   function xy(world){return [center[0]+(world[0]-state.b[0])*scale,center[1]-(world[1]-state.b[1])*scale];}
   function calc(){const t=state.yaw*Math.PI/180,f=[-Math.sin(t),Math.cos(t)],left=[-Math.cos(t),-Math.sin(t)],d=[state.a[0]-state.b[0],state.a[1]-state.b[1]],distance=Math.hypot(...d),front=d[0]*f[0]+d[1]*f[1],side=d[0]*left[0]+d[1]*left[1];return {f,left,d,distance,front,side};}
-  function save(){if(window.openai?.setWidgetState)window.openai.setWidgetState({modelContent:{target:state.a,reference:state.b,ego_yaw_degrees:state.yaw,display:state.mode},privateContent:state}).catch(()=>{});}
+  function save(){if(window.openai?.setWidgetState)window.openai.setWidgetState({modelContent:{target:state.a,reference:state.b,reference_axis_rotation_degrees:state.yaw,display:state.mode},privateContent:state}).catch(()=>{});}
   function draw(){
     const c=calc();layer.replaceChildren();
     width=Math.max(280,svg.getBoundingClientRect().width||736);height=390;scale=Math.min((width-60)/28,12);center=[width/2,height/2];svg.setAttribute('viewBox',`0 0 ${width} ${height}`);
@@ -76,7 +77,7 @@
     el('rect',{x:-8,y:-15,width:16,height:30,rx:5,fill:'var(--muted)',stroke:'var(--foreground)','stroke-width':1.2},car);
     el('line',{x1:-5,y1:-8,x2:5,y2:-8,stroke:'var(--foreground)','stroke-width':2},car);
     el('line',{x1:0,y1:-18,x2:0,y2:-29,stroke:'var(--viz-series-1)','marker-end':'url(#relation-arrow)'},car);
-    label('自车朝向',12,76,{class:'relation-secondary text-small'});
+    label('前向代理',12,76,{class:'relation-secondary text-small'});
     let horizontal='',vertical='';if(c.distance<=12&&c.distance>1e-9){horizontal=c.side>1?'左':c.side< -1?'右':'';vertical=c.front>1?'前':c.front< -1?'后':'';}
     const names=[horizontal?horizontal+'侧':null,vertical?vertical+'方':null].filter(Boolean);
     const composite=horizontal+vertical+(horizontal||vertical?'方':'');

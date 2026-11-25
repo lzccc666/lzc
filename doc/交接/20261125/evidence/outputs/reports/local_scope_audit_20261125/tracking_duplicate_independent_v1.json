@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "frames": 1030,
+  "duplicate_occurrences": 424,
+  "methods": {
+    "single_frame": {
+      "prediction_node_frames": 3932,
+      "frames": 1030,
+      "duplicate_occurrences": 42,
+      "current_update": 42,
+      "first_exported_ID_not_proven_new_creation": 42
+    },
+    "original_fusion": {
+      "prediction_node_frames": 8865,
+      "frames": 1030,
+      "duplicate_occurrences": 75,
+      "current_update": 32,
+      "previously_exported_ID": 74,
+      "stale_explicit_last_seen": 43,
+      "first_exported_ID_not_proven_new_creation": 1
+    },
+    "one_to_one_depth_robust_motion": {
+      "prediction_node_frames": 7002,
+      "frames": 1030,
+      "duplicate_occurrences": 307,
+      "stale_explicit_last_seen": 199,
+      "previously_exported_ID": 298,
+      "current_update": 108,
+      "first_exported_ID_not_proven_new_creation": 9
+    }
+  },
+  "saved_match_indices_valid": true,
+  "last_seen_unit": "local per-sequence mapping frame_idx; not original sensor frame number",
+  "history": "all_predictions ledger from strictly previous frames; includes full exported graph, not only currently visible filtered predictions",
+  "meaning": "unmatched same-class center within3m of a GT is a duplicate proxy; no human physical-duplicate truth",
+  "limits": [
+    "First exported ID does not establish creation time.",
+    "Current-update flag does not prove correct/wrong association.",
+    "Integer maximum-cardinality scores already independently checked; this replay checks saved matching indices, not a new optimizer."
+  ],
+  "new_models_or_matcher_calls": 0,
+  "elapsed_s": 1.0208577010780573,
+  "audit_source_sha256": "4b92817fc1b5012154d9e217a99f62c877a616d62f9ca532e979b9917f5a9b4c",
+  "diagnosis_sha256": "4401326929807d0de58661e52e02a1de80d4346434cc5d7cd5d1f7891b9f7341",
+  "occurrences_sha256": "91a386cd02a4ec4b0ab1c31a7759dc7de620b57df522556d8c3adcc8d1d50f89"
+}

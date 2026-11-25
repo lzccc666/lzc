@@ -1,0 +1,520 @@
+{
+  "created_utc": "2026-11-25T14:09:01.609414+00:00",
+  "snapshot_base_commit": "03af2e50119c1eeebc5f914fc4790a0fb165d266",
+  "active_root": "/root/.codex/worktrees/lzc-integration-20261125/lizichong",
+  "actual_dataset": "/root/autodl-tmp/lizichong/dataset",
+  "actual_outputs": "/root/autodl-tmp/lizichong/outputs",
+  "actual_checkpoint": "/root/autodl-tmp/lizichong/checkpoint",
+  "user_handoff_hold": true,
+  "raw_data_models_full_results_in_Git": false,
+  "source_manifest_refs": {
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/kitti_local_all_20261125_v1/manifest.json": {
+      "sha256": "37ecb0b0551a451401119b1617fd17b33cc8e5acbeb3a3fc212c5c0110be8bcf",
+      "bytes": 33556
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/kitti_object_all_20261125_v1/manifest.json": {
+      "sha256": "b1bdf09a4b1810d8343aad82e4511d0ab5afd38afcdd6a80f7716b17208982cb",
+      "bytes": 6955
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/nuscenes_full_20261125_v1/manifest.json": {
+      "sha256": "e077da347a7140e280eae16862c904407e73ba1d1c38ffcc148d093bd4475aca",
+      "bytes": 578306
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/nu_task_single8_20261125_v1/manifest.json": {
+      "sha256": "3a1372080afa896a8c4f122f5c646091f30479d7884ba18fdeb5731138340740",
+      "bytes": 16232
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/nuscenes_full_20261125_single8_pilot_v1/manifest.json": {
+      "sha256": "dc825f702188d892d6b4fba68efa12dec7a087040759fd7b017b9223c31816e3",
+      "bytes": 6276
+    }
+  },
+  "model_sha256": {
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/checkpoint/yolov8l-world.pt": "a234e9e0f3f5b43da4f899f30c67146a9e404b6e08f4472d0907e3b3f23e1489",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/checkpoint/mobile_sam.pt": "6dbb90523a35330fedd7f1d3dfc66f995213d81b29a5ca8108dbcdd4e37d6c2f",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/checkpoint/hf_models/models--laion--CLIP-ViT-H-14-laion2B-s32B-b79K/snapshots/1c2b8495b28150b8a4922ee1c8edee224c284c0c/open_clip_model.safetensors": "0084e75319a50ad85ef45377bad5bc38f2f58824459eb690048d51c9f8863be5"
+  },
+  "model_stat": {
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/checkpoint/yolov8l-world.pt": {
+      "size": 95659301,
+      "mtime_ns": 1778509594111714128
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/checkpoint/mobile_sam.pt": {
+      "size": 40728226,
+      "mtime_ns": 1778509792289675604
+    },
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/checkpoint/hf_models/models--laion--CLIP-ViT-H-14-laion2B-s32B-b79K/snapshots/1c2b8495b28150b8a4922ee1c8edee224c284c0c/open_clip_model.safetensors": {
+      "size": 3944517836,
+      "mtime_ns": 1779955917524627351
+    }
+  },
+  "nu_archives": [
+    {
+      "path": "/root/autodl-pub/nuScenes/Fulldatasetv1.0/Trainval/v1.0-trainval01_blobs.tgz",
+      "bytes": 31574298075,
+      "mtime_ns": 1728875513660765156
+    },
+    {
+      "path": "/root/autodl-pub/nuScenes/Fulldatasetv1.0/Trainval/v1.0-trainval02_blobs.tgz",
+      "bytes": 30128325054,
+      "mtime_ns": 1728876934118015105
+    },
+    {
+      "path": "/root/autodl-pub/nuScenes/Fulldatasetv1.0/Trainval/v1.0-trainval03_blobs.tgz",
+      "bytes": 29862707349,
+      "mtime_ns": 1728878390837534712
+    },
+    {
+      "path": "/root/autodl-pub/nuScenes/Fulldatasetv1.0/Trainval/v1.0-trainval04_blobs.tgz",
+      "bytes": 32070725354,
+      "mtime_ns": 1728879871765139485
+    },
+    {
+      "path": "/root/autodl-pub/nuScenes/Fulldatasetv1.0/Trainval/v1.0-trainval05_blobs.tgz",
+      "bytes": 28181092231,
+      "mtime_ns": 1728881142111710396
+    },
+    {
+      "path": "/root/autodl-pub/nuScenes/Fulldatasetv1.0/Trainval/v1.0-trainval06_blobs.tgz",
+      "bytes": 27503837689,
+      "mtime_ns": 1728882387455901886
+    },
+    {
+      "path": "/root/autodl-pub/nuScenes/Fulldatasetv1.0/Trainval/v1.0-trainval07_blobs.tgz",
+      "bytes": 29523743832,
+      "mtime_ns": 1728883736819489913
+    },
+    {
+      "path": "/root/autodl-pub/nuScenes/Fulldatasetv1.0/Trainval/v1.0-trainval08_blobs.tgz",
+      "bytes": 30268612637,
+      "mtime_ns": 1728885164880217805
+    },
+    {
+      "path": "/root/autodl-pub/nuScenes/Fulldatasetv1.0/Trainval/v1.0-trainval09_blobs.tgz",
+      "bytes": 33513836703,
+      "mtime_ns": 1728886696328109279
+    },
+    {
+      "path": "/root/autodl-pub/nuScenes/Fulldatasetv1.0/Trainval/v1.0-trainval10_blobs.tgz",
+      "bytes": 41740937939,
+      "mtime_ns": 1728888714689587484
+    }
+  ],
+  "kitti_object_archives": {
+    "/root/autodl-pub/KITTI_Object/raw/data_object_image_2.zip": {
+      "size": 12569945557,
+      "mtime_ns": 1728722695960756852
+    },
+    "/root/autodl-pub/KITTI_Object/raw/data_object_velodyne.zip": {
+      "size": 28750710812,
+      "mtime_ns": 1728728025257524218
+    },
+    "/root/autodl-pub/KITTI_Object/raw/data_object_calib.zip": {
+      "size": 26854811,
+      "mtime_ns": 1728722068849368305
+    },
+    "/root/autodl-pub/KITTI_Object/raw/data_object_label_2.zip": {
+      "size": 5601213,
+      "mtime_ns": 1728723296902437963
+    },
+    "/root/autodl-pub/KITTI_Object/raw/devkit_object.zip": {
+      "size": 63794,
+      "mtime_ns": 1728728025358661246
+    }
+  },
+  "small_evidence": [
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/local_scope_audit_20261125/formal_relation_contract_hold_independent_v1.json",
+      "copy": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/formal_relation_contract_hold_independent_v1.json",
+      "bytes": 424,
+      "sha256": "8ec4a7c5fc7c96ddb423cba1ad266c304a3ff3a6b13492d5d4b0a295c08036b7"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/local_scope_audit_20261125/nu_task_fair_preflight_independent_v2.json",
+      "copy": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/nu_task_fair_preflight_independent_v2.json",
+      "bytes": 1135,
+      "sha256": "b7bfa1082a335a7711a6665551e2c60ed233b23937609fc4209fd74699d7a385"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/local_scope_audit_20261125/nu_task_historical_scope_correction_independent_v1.json",
+      "copy": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/nu_task_historical_scope_correction_independent_v1.json",
+      "bytes": 1128,
+      "sha256": "cb959c59d675453e43c3cefe974c4ca1f19b4fc20566ba25b7fa722e243c34ed"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/local_scope_audit_20261125/nu_task_preflight_independent_v1.json",
+      "copy": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/nu_task_preflight_independent_v1.json",
+      "bytes": 1008,
+      "sha256": "04db7f49315ebe386d93a24c7419bc83643a883679efe263a9e73f8e551df21f"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/local_scope_audit_20261125/nu_task_watch_v3_source_independent_v1.json",
+      "copy": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/nu_task_watch_v3_source_independent_v1.json",
+      "bytes": 953,
+      "sha256": "df6c5fb112241e5ef03e74c6c6bd50bd9bc1cc59eeca088e1e50313832e6c672"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/local_scope_audit_20261125/nuscenes_CPU_contract_independent_v1.json",
+      "copy": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/nuscenes_CPU_contract_independent_v1.json",
+      "bytes": 828,
+      "sha256": "f8f08342a4f49cf1e398a5f0b6af36fcd1d5e845649e15805780e7575e34d55f"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/local_scope_audit_20261125/nuscenes_archive01_independent_v1.json",
+      "copy": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/nuscenes_archive01_independent_v1.json",
+      "bytes": 5317,
+      "sha256": "134c698253f192c27552f7bb84d36f1aefe00e38cb28f96721d5c91bd0dd0013"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/local_scope_audit_20261125/nuscenes_archive02_independent_v1.json",
+      "copy": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/nuscenes_archive02_independent_v1.json",
+      "bytes": 5316,
+      "sha256": "a62da2a0281cfe8fe714db9d8146c31726baf27784b3d686919d75efc5cdef25"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/local_scope_audit_20261125/nuscenes_archive03_independent_v1.json",
+      "copy": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/nuscenes_archive03_independent_v1.json",
+      "bytes": 5317,
+      "sha256": "75ca2f956551a52b9d951fca3702392dbcb53aef5cd4bb776d0977d9c475e0fa"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/local_scope_audit_20261125/nuscenes_archive03_resume_chain_independent_v1.json",
+      "copy": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/nuscenes_archive03_resume_chain_independent_v1.json",
+      "bytes": 843,
+      "sha256": "c32f9c163f013702c117ad8b31afd90ef2141427440ea35404b27741bdd48933"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/local_scope_audit_20261125/nuscenes_archive04_independent_v1.json",
+      "copy": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/nuscenes_archive04_independent_v1.json",
+      "bytes": 5315,
+      "sha256": "ad8c699e5bf319a9c8ba7a7c4701421c303f0bf32777c0bcc7fc952d55115a33"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/local_scope_audit_20261125/nuscenes_archive04_resume_chain_independent_v1.json",
+      "copy": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/nuscenes_archive04_resume_chain_independent_v1.json",
+      "bytes": 844,
+      "sha256": "f47c0e2ff5e3ad79bab1c0756b1cae15b6eb7748106c9508fe6d8614a619dc88"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/local_scope_audit_20261125/nuscenes_archive05_independent_v1.json",
+      "copy": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/nuscenes_archive05_independent_v1.json",
+      "bytes": 5328,
+      "sha256": "51b14fe331c0c4aad29888174752e32b33f5298136f6e97e049472b6db1b3d97"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/local_scope_audit_20261125/nuscenes_archive05_resume_chain_independent_v1.json",
+      "copy": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/nuscenes_archive05_resume_chain_independent_v1.json",
+      "bytes": 843,
+      "sha256": "64ab2a9c50537ce5cd6cb2a933085d80148f542bd2d0b6be863477bf56da070e"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/local_scope_audit_20261125/nuscenes_archive06_independent_v1.json",
+      "copy": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/nuscenes_archive06_independent_v1.json",
+      "bytes": 5327,
+      "sha256": "11bb75161214765de4a2b815ac879ac76ab2e722c05061aade6137f0b47ef7f8"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/local_scope_audit_20261125/nuscenes_archive07_independent_v1.json",
+      "copy": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/nuscenes_archive07_independent_v1.json",
+      "bytes": 5329,
+      "sha256": "b2f549505c1642c290f8069ec88dbd2808c0805b1016a07cdcf04e3ca66d5ced"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/local_scope_audit_20261125/nuscenes_cpu_runtime_v6_independent_v1.json",
+      "copy": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/nuscenes_cpu_runtime_v6_independent_v1.json",
+      "bytes": 2066,
+      "sha256": "3540e98d4504d7a57039fac44bd1798713845b8bf42bd47ae1be8ee4af63875d"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/local_scope_audit_20261125/nuscenes_failed240_cache_independent_v1.json",
+      "copy": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/nuscenes_failed240_cache_independent_v1.json",
+      "bytes": 61883,
+      "sha256": "ca70c9d3c3d8ecbed6d74b5bb725a97077786d21b033f9159ce4338e45df12a1"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/local_scope_audit_20261125/nuscenes_fixed8_readiness_independent_v1.json",
+      "copy": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/nuscenes_fixed8_readiness_independent_v1.json",
+      "bytes": 1373,
+      "sha256": "6629280f76788a995cf06952b98e0b8cdbe4320e76f5fc1f20fed66d05311e4c"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/local_scope_audit_20261125/nuscenes_prepare_independent_v1.json",
+      "copy": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/nuscenes_prepare_independent_v1.json",
+      "bytes": 1482,
+      "sha256": "564fc7fe09e78d8f1d3f788c28838b9567d0cda61ae0338d85aa30c044bce5cd"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/local_scope_audit_20261125/nuscenes_resource8_budget_independent_v1.json",
+      "copy": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/nuscenes_resource8_budget_independent_v1.json",
+      "bytes": 6719,
+      "sha256": "51be508f239f74bc2e1239ee8fb9bb9167cb126dbda01c0ec289bbdd19e8c756"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/local_scope_audit_20261125/nuscenes_resource_pilot_independent_v1.json",
+      "copy": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/nuscenes_resource_pilot_independent_v1.json",
+      "bytes": 769,
+      "sha256": "9b199b1f4f18529d67f633a064d022393c9347b65c59a2d0e5ea44983c5564e9"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/local_scope_audit_20261125/nuscenes_resource_runtime_independent_v1.json",
+      "copy": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/nuscenes_resource_runtime_independent_v1.json",
+      "bytes": 869,
+      "sha256": "9a64bd4f9c6431e74eb392012ad4565b1bb515898438044831400f9e0141639b"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/local_scope_audit_20261125/nuscenes_source_IO_comparison_independent_v1.json",
+      "copy": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/nuscenes_source_IO_comparison_independent_v1.json",
+      "bytes": 791,
+      "sha256": "17999a11b90425d1829ff7c43307cc0890b64fb4366fcaa949454c37694fe731"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/local_scope_audit_20261125/nuscenes_statistics_protocol_independent_v1.json",
+      "copy": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/nuscenes_statistics_protocol_independent_v1.json",
+      "bytes": 1134,
+      "sha256": "dd05b11c8065398ee1d025309e513df877190f5a60c88ce2f1d8cbe9989872b3"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/local_scope_audit_20261125/object_preflight_independent_v1.json",
+      "copy": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/object_preflight_independent_v1.json",
+      "bytes": 1253,
+      "sha256": "662640c3dc1fa450a1bb9eb9d379460f8b631af66c77921ef00923c2555e558f"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/local_scope_audit_20261125/object_results_independent_v1.json",
+      "copy": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/object_results_independent_v1.json",
+      "bytes": 14688,
+      "sha256": "51f6e6312f86e257a1232ad259efbdfe5deb77b23ecf9f11cf2dc97bf57d544d"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/local_scope_audit_20261125/object_runtime_independent_v1.json",
+      "copy": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/object_runtime_independent_v1.json",
+      "bytes": 575,
+      "sha256": "8f31f7e058508044769b932ef570ebb5283285105a65267926d28c67e86e9265"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/local_scope_audit_20261125/semantic_pairs_independent_v1.json",
+      "copy": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/semantic_pairs_independent_v1.json",
+      "bytes": 6148,
+      "sha256": "d8dc9da014b6c8dcc0a29d1531d97b5e0414c901a718c3dab4cb6dcec438b5fb"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/local_scope_audit_20261125/semantic_scope_final_independent_v1.json",
+      "copy": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/semantic_scope_final_independent_v1.json",
+      "bytes": 512,
+      "sha256": "89f669e3f525360fbbbc899de02e1959d7c0d2ba2a9c865f1e3cf59750bec101"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/local_scope_audit_20261125/single8_GT_metrics_fixture_independent_v1.json",
+      "copy": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/single8_GT_metrics_fixture_independent_v1.json",
+      "bytes": 1734,
+      "sha256": "66739ae3e88a772afb697deca4f47f1d1b405194484a8c288af67430bf2312d0"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/local_scope_audit_20261125/single8_pilot_independent_v1.json",
+      "copy": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/single8_pilot_independent_v1.json",
+      "bytes": 3036,
+      "sha256": "a75f465bc4c00480c571f1cf75b402fb864d4c2b95e8ca7d77fb52958bb977a9"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/local_scope_audit_20261125/single8_task_GT_independent_v1.json",
+      "copy": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/single8_task_GT_independent_v1.json",
+      "bytes": 1265,
+      "sha256": "b2b56065b83c9a7f4fbd6681b9e3e9b5019727754365b82ec2b96029539e12bb"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/local_scope_audit_20261125/tracking_duplicate_independent_v1.json",
+      "copy": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/tracking_duplicate_independent_v1.json",
+      "bytes": 1904,
+      "sha256": "ffbfa2511da35fadaad3ca725a55689d53f6232a883e2c8aaf0160999cae3c8f"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/local_scope_audit_20261125/tracking_independent_v1.json",
+      "copy": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/tracking_independent_v1.json",
+      "bytes": 12327,
+      "sha256": "41371843d45b2ab44b18b9513e22b2f99c9cb33b739a1a391dd0dcb0e8ff3b38"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/kitti_local_all_20261125/跨电脑交接_来源收据_v1.json",
+      "copy": "doc/交接/20261125/evidence/outputs/reports/kitti_local_all_20261125/跨电脑交接_来源收据_v1.json",
+      "bytes": 3237,
+      "sha256": "05175fca252bafee3c1f03ce26d5c2e26c802c2e7296b0ecc11f99272e988840"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/kitti_local_all_20261125/跨电脑交接_kitti_nav_v1.md",
+      "copy": "doc/交接/20261125/evidence/outputs/reports/kitti_local_all_20261125/跨电脑交接_kitti_nav_v1.md",
+      "bytes": 9862,
+      "sha256": "abd30bd885a15bb76c3dd630364aa4fbbf7a25103cc3c775db0c6ecf4734d428"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/kitti_local_all_20261125/duplicate_proxy_diagnosis_v1.json",
+      "copy": "doc/交接/20261125/evidence/outputs/reports/kitti_local_all_20261125/duplicate_proxy_diagnosis_v1.json",
+      "bytes": 17563,
+      "sha256": "4401326929807d0de58661e52e02a1de80d4346434cc5d7cd5d1f7891b9f7341"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/kitti_local_all_20261125/Tracking重复率回退_只读补充.md",
+      "copy": "doc/交接/20261125/evidence/outputs/reports/kitti_local_all_20261125/Tracking重复率回退_只读补充.md",
+      "bytes": 2273,
+      "sha256": "404d9f76a530f2032574d833a78ca5e8e8e8274a0387a5f5569c721438881cf2"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/kitti_local_all_20261125/SemanticKITTI_22seq_applicability_final_v2.json",
+      "copy": "doc/交接/20261125/evidence/outputs/reports/kitti_local_all_20261125/SemanticKITTI_22seq_applicability_final_v2.json",
+      "bytes": 30275,
+      "sha256": "8d62936f4b16e55efee30d0b0737dc6c35fb590b134a1a7a666733cc44368154"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/kitti_local_all_20261125/SemanticKITTI适用性_最终盘点.md",
+      "copy": "doc/交接/20261125/evidence/outputs/reports/kitti_local_all_20261125/SemanticKITTI适用性_最终盘点.md",
+      "bytes": 2793,
+      "sha256": "ae2152e4a4634e41812c5cb999b756abb26869651fa544c703654a3ed2a6c1be"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/nu_task_single8_20261125_v1/manifest.json",
+      "copy": "doc/交接/20261125/evidence/dataset/processed/nu_task_single8_20261125_v1/manifest.json",
+      "bytes": 16232,
+      "sha256": "3a1372080afa896a8c4f122f5c646091f30479d7884ba18fdeb5731138340740"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/nu_task_single8_20261125_v1/preregistration.json",
+      "copy": "doc/交接/20261125/evidence/dataset/processed/nu_task_single8_20261125_v1/preregistration.json",
+      "bytes": 14408,
+      "sha256": "8da8e18f54965cbdf2b9f61cd49ba20bc165035c0fb3ec2c34b0d2b5c2a50630"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/nu_task_single8_20261125_v1/evaluation_only/GT_context.jsonl",
+      "copy": "doc/交接/20261125/evidence/dataset/processed/nu_task_single8_20261125_v1/evaluation_only/GT_context.jsonl",
+      "bytes": 1008530,
+      "sha256": "7e779a7b5836436a05f5512c49495a9725735794dc19cb121d66caf3cde601e4"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/nu_task_single8_20261125_v1/evaluation_only/frame_truth.jsonl",
+      "copy": "doc/交接/20261125/evidence/dataset/processed/nu_task_single8_20261125_v1/evaluation_only/frame_truth.jsonl",
+      "bytes": 842549,
+      "sha256": "d46def7b5a6d1af7fca1fdecc11ef53429b14cff0ade1deb9ba76d1f768fdd4e"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/nu_task_single8_20261125_v1/evaluation_only/label_change_ledger.jsonl",
+      "copy": "doc/交接/20261125/evidence/dataset/processed/nu_task_single8_20261125_v1/evaluation_only/label_change_ledger.jsonl",
+      "bytes": 1745338,
+      "sha256": "30e536a57a6a739a0acc05a02ccf155339d7ec5efa25da6170919f2c382ec3d1"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/nu_task_single8_20261125_v1/evaluation_only/task_labels.jsonl",
+      "copy": "doc/交接/20261125/evidence/dataset/processed/nu_task_single8_20261125_v1/evaluation_only/task_labels.jsonl",
+      "bytes": 563358,
+      "sha256": "febb3f4eeeff41fb984777f144c52974625865b93638ac2011cca7707b29d89d"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/nu_task_single8_20261125_v1/method_tasks.jsonl",
+      "copy": "doc/交接/20261125/evidence/dataset/processed/nu_task_single8_20261125_v1/method_tasks.jsonl",
+      "bytes": 876263,
+      "sha256": "a8dc433a9a1ef4c4e1ce023cfb6cda3d13f8f2bfa9fd9a31d9506fc226acf021"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/nuscenes_full_20261125_v1/effective_resource_policy_v8.json",
+      "copy": "doc/交接/20261125/evidence/dataset/processed/nuscenes_full_20261125_v1/effective_resource_policy_v8.json",
+      "bytes": 1144,
+      "sha256": "f444b800f24ab2b4a6a671b924f30505592ed803b132d385238c347daefaf02d"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/nuscenes_full_20261125_v1/overall_execution_clock_v2.json",
+      "copy": "doc/交接/20261125/evidence/dataset/processed/nuscenes_full_20261125_v1/overall_execution_clock_v2.json",
+      "bytes": 390,
+      "sha256": "85937a3e7e2c618f3e534b61f93779b866bc0a4c4fa339a192145c3375c32124"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/nuscenes_full_20261125_v1/user_handoff_hold_v1.json",
+      "copy": "doc/交接/20261125/evidence/dataset/processed/nuscenes_full_20261125_v1/user_handoff_hold_v1.json",
+      "bytes": 675,
+      "sha256": "d470457a9648b6365d776bfbd1bff29a60e2444d44a7d1b5a80ce6ad4b52345f"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/nuscenes_full_20261125_v1/archives/archive01_complete.json",
+      "copy": "doc/交接/20261125/evidence/dataset/processed/nuscenes_full_20261125_v1/archives/archive01_complete.json",
+      "bytes": 1307,
+      "sha256": "6df67ff1b9bca9ebe6aac262057fbc43d77621352b2392e626411f8fb41e9309"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/nuscenes_full_20261125_v1/archives/archive02_complete.json",
+      "copy": "doc/交接/20261125/evidence/dataset/processed/nuscenes_full_20261125_v1/archives/archive02_complete.json",
+      "bytes": 1308,
+      "sha256": "3dd1eb30991117fddc8e6e5037af68c798711017cce757ba1e9fbc5262c93995"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/nuscenes_full_20261125_v1/archives/archive03_complete.json",
+      "copy": "doc/交接/20261125/evidence/dataset/processed/nuscenes_full_20261125_v1/archives/archive03_complete.json",
+      "bytes": 1605,
+      "sha256": "e03890c844113b911dda2bcdb3bc24d9bc78a5a4d31e92674ed5bd05640130ae"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/nuscenes_full_20261125_v1/archives/archive04_complete.json",
+      "copy": "doc/交接/20261125/evidence/dataset/processed/nuscenes_full_20261125_v1/archives/archive04_complete.json",
+      "bytes": 1605,
+      "sha256": "f65e47d74f27ea4db3fb81d5e69fd7708c6c2daff992fc3c4991a7095490c90f"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/nuscenes_full_20261125_v1/archives/archive05_complete.json",
+      "copy": "doc/交接/20261125/evidence/dataset/processed/nuscenes_full_20261125_v1/archives/archive05_complete.json",
+      "bytes": 1603,
+      "sha256": "dabda7e7deb83314146e261a8152c5e286753bb9e832800099d8bb00d7bcd5b4"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/nuscenes_full_20261125_v1/archives/archive06_complete.json",
+      "copy": "doc/交接/20261125/evidence/dataset/processed/nuscenes_full_20261125_v1/archives/archive06_complete.json",
+      "bytes": 1308,
+      "sha256": "10e01eb081c170a232ead15462fd7dd59d004b48f66c8ec630abcada2a7e5882"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/nuscenes_full_20261125_v1/archives/archive07_complete.json",
+      "copy": "doc/交接/20261125/evidence/dataset/processed/nuscenes_full_20261125_v1/archives/archive07_complete.json",
+      "bytes": 1308,
+      "sha256": "1a197811a763a82fe8f104063bbc8e32589becdd2e2f9197ee5ddfe4e952c6cd"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/nuscenes_full_20261125_v1/archives/archive08_complete.json",
+      "copy": "doc/交接/20261125/evidence/dataset/processed/nuscenes_full_20261125_v1/archives/archive08_complete.json",
+      "bytes": 1308,
+      "sha256": "9ca6748a02d0024e005076d135104cc602e33df1b30b68d7cd55680d92c1958d"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/nuscenes_full_20261125_single8_pilot_v1/manifest.json",
+      "copy": "doc/交接/20261125/evidence/dataset/processed/nuscenes_full_20261125_single8_pilot_v1/manifest.json",
+      "bytes": 6276,
+      "sha256": "dc825f702188d892d6b4fba68efa12dec7a087040759fd7b017b9223c31816e3"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/nuscenes_full_20261125_single8_pilot_v1/method_manifest.json",
+      "copy": "doc/交接/20261125/evidence/dataset/processed/nuscenes_full_20261125_single8_pilot_v1/method_manifest.json",
+      "bytes": 21789,
+      "sha256": "1923b1dccf8244b8a38eeddb6edc9c278079555710eaac03b936473c29f34e9e"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/nuscenes_full_20261125_single8_pilot_v1/relation_protocol_v1.json",
+      "copy": "doc/交接/20261125/evidence/dataset/processed/nuscenes_full_20261125_single8_pilot_v1/relation_protocol_v1.json",
+      "bytes": 1596,
+      "sha256": "637da87e93b987e863fa90cc16d702d7703a2e97dffbf44a489e50324d40a519"
+    },
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/nuscenes/validation/iterations/nuscenes_full_20261125_single8_pilot_v1/summary.json",
+      "copy": "doc/交接/20261125/evidence/outputs/results/nuscenes/validation/iterations/nuscenes_full_20261125_single8_pilot_v1/summary.json",
+      "bytes": 4970,
+      "sha256": "82381cb05fafa21e9ec67538cef3cdb07d8a2d42f9b3f5209ce84eda6c6f44af"
+    }
+  ],
+  "large_local_only": [
+    {
+      "source": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/kitti_local_all_20261125/semantic_RGB_LiDAR_pose_pair_inventory_v3.json",
+      "bytes": 12655204,
+      "sha256": "ed51e4cf4675d191bf3535b95b8c6f5cb0a5316d50bf929aa7c67df238466805",
+      "reason": "12MiB complete input pairing ledger retained on server"
+    }
+  ],
+  "temporary_dependency": {
+    "path": "/tmp/nuscenes_full_index_20261125",
+    "package": "indexed_gzip==1.10.3",
+    "in_git": false
+  },
+  "historical_clock": "2026-11-25T11:02:00Z through 2026-11-27T11:02:00Z; no reset on restart",
+  "formal_runtime_state": "draft; held; new method_manifest absent"
+}

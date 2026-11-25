@@ -1,0 +1,142 @@
+{
+  "passed": true,
+  "archive": 4,
+  "scope": "single completed original archive",
+  "retained_members": 53628,
+  "channels": {
+    "CAM_FRONT_RIGHT": 3409,
+    "CAM_FRONT_LEFT": 3409,
+    "CAM_BACK": 3409,
+    "CAM_BACK_RIGHT": 3409,
+    "CAM_BACK_LEFT": 3409,
+    "LIDAR_TOP": 33174,
+    "CAM_FRONT": 3409
+  },
+  "random_seed": 17,
+  "sampled_decoded_members": [
+    {
+      "filename": "samples/CAM_FRONT_RIGHT/n015-2018-09-27-15-33-17+0800__CAM_FRONT_RIGHT__1538033812370339.jpg",
+      "offset": 1536,
+      "bytes": 163608,
+      "payload_sha256": "76ff13cd03e66b89c6a7a831e540408217929ec36d2fe25936f4cb790d56a56a",
+      "tar_header_name_size_checksum_valid": true,
+      "decoded_image_wh": [
+        1600,
+        900
+      ]
+    },
+    {
+      "filename": "samples/CAM_FRONT_LEFT/n015-2018-08-03-15-31-50+0800__CAM_FRONT_LEFT__1533281894604844.jpg",
+      "offset": 522205184,
+      "bytes": 200793,
+      "payload_sha256": "0f521b36d21feb6988974ef454e1c1fff70f471dd7d37e9f978fb558c5f00153",
+      "tar_header_name_size_checksum_valid": true,
+      "decoded_image_wh": [
+        1600,
+        900
+      ]
+    },
+    {
+      "filename": "samples/CAM_BACK/n015-2018-08-03-15-00-36+0800__CAM_BACK__1533279674687525.jpg",
+      "offset": 1067236352,
+      "bytes": 95181,
+      "payload_sha256": "0f5d7b19889da495368c4d80666041e3540acb5d735fee0fd1bf067e43e8f038",
+      "tar_header_name_size_checksum_valid": true,
+      "decoded_image_wh": [
+        1600,
+        900
+      ]
+    },
+    {
+      "filename": "samples/CAM_BACK_RIGHT/n015-2018-08-02-17-28-51+0800__CAM_BACK_RIGHT__1533202381927893.jpg",
+      "offset": 1524002304,
+      "bytes": 162522,
+      "payload_sha256": "c1b68e3f8781a93ddb3ec31ca667296908eb5de9748ba53d130e17c9ae3f2de6",
+      "tar_header_name_size_checksum_valid": true,
+      "decoded_image_wh": [
+        1600,
+        900
+      ]
+    },
+    {
+      "filename": "samples/CAM_BACK_LEFT/n015-2018-08-03-15-00-36+0800__CAM_BACK_LEFT__1533280317197435.jpg",
+      "offset": 2052980736,
+      "bytes": 134794,
+      "payload_sha256": "dc7e8c10d7988cc3df1205978051eabc4cd21df4ea109c40d5aa5c6cb40f202f",
+      "tar_header_name_size_checksum_valid": true,
+      "decoded_image_wh": [
+        1600,
+        900
+      ]
+    },
+    {
+      "filename": "samples/LIDAR_TOP/n015-2018-08-03-15-21-40+0800__LIDAR_TOP__1533280921300235.pcd.bin",
+      "offset": 2594020864,
+      "bytes": 695040,
+      "payload_sha256": "d2c2db47dcab7d73c96d0b781d55d21d3b78f87de778c7b47cc8a6f097da8d1b",
+      "tar_header_name_size_checksum_valid": true,
+      "LiDAR_five_float_record_count": 34752
+    },
+    {
+      "filename": "samples/LIDAR_TOP/n015-2018-08-02-17-28-51+0800__LIDAR_TOP__1533202560448993.pcd.bin",
+      "offset": 4568242688,
+      "bytes": 694400,
+      "payload_sha256": "a7ea2b97b41cd9325b2f34cbc8b72c78d9f17b39f2264a39e85e15e098812f92",
+      "tar_header_name_size_checksum_valid": true,
+      "LiDAR_five_float_record_count": 34720
+    },
+    {
+      "filename": "samples/CAM_FRONT/n015-2018-08-03-15-00-36+0800__CAM_FRONT__1533279686662460.jpg",
+      "offset": 4963782144,
+      "bytes": 156881,
+      "payload_sha256": "23838ca5e7ba7cae807ca3bfbddb3151a609ab786e721570af50d1eae2b827e6",
+      "tar_header_name_size_checksum_valid": true,
+      "decoded_image_wh": [
+        1600,
+        900
+      ]
+    },
+    {
+      "filename": "sweeps/LIDAR_TOP/n015-2018-08-02-17-28-51+0800__LIDAR_TOP__1533202434450386.pcd.bin",
+      "offset": 18064818176,
+      "bytes": 693120,
+      "payload_sha256": "07a201ec181f59aa155b88d51e8c64d3963d00ca81b99b488744ed463200dfad",
+      "tar_header_name_size_checksum_valid": true,
+      "LiDAR_five_float_record_count": 34656
+    },
+    {
+      "filename": "sweeps/LIDAR_TOP/n015-2018-08-03-15-31-50+0800__LIDAR_TOP__1533281528448994.pcd.bin",
+      "offset": 20276237312,
+      "bytes": 694400,
+      "payload_sha256": "fd94ae88d063bdb3f3015fac8c44ed9e5c02243c8ef7d61b4540dc19185ef86f",
+      "tar_header_name_size_checksum_valid": true,
+      "LiDAR_five_float_record_count": 34720
+    },
+    {
+      "filename": "sweeps/LIDAR_TOP/n015-2018-08-03-15-00-36+0800__LIDAR_TOP__1533279792850384.pcd.bin",
+      "offset": 25188404736,
+      "bytes": 693760,
+      "payload_sha256": "19d1b769c408faf14a8baac365d1c553d3457c0494f17dc6c9ca4b5e2c3bd495",
+      "tar_header_name_size_checksum_valid": true,
+      "LiDAR_five_float_record_count": 34688
+    },
+    {
+      "filename": "sweeps/LIDAR_TOP/n015-2018-09-27-15-33-17+0800__LIDAR_TOP__1538034029097109.pcd.bin",
+      "offset": 38159675392,
+      "bytes": 693760,
+      "payload_sha256": "c51a533d94c979da104bd921182e324ce39689b588522a353b468c7903099bc0",
+      "tar_header_name_size_checksum_valid": true,
+      "LiDAR_five_float_record_count": 34688
+    }
+  ],
+  "no_GPU": true,
+  "original_build_CRC_reported": true,
+  "independent_full_archive_CRC_or_SHA_repeated": false,
+  "imported_seek_index_CRC_disabled_by_library": true,
+  "member_and_seek_index_SHA_independently_verified": true,
+  "complete_receipt_sha256": "f65e47d74f27ea4db3fb81d5e69fd7708c6c2daff992fc3c4991a7095490c90f",
+  "all850_source_certified": false,
+  "elapsed_s": 24.76187302917242,
+  "audit_utc": "2026-11-25T13:35:30.090520+00:00",
+  "audit_source_sha256": "41d2bb160af0ec49a0d0b071fa25f426f92e1fd1ce7f71d54ca991e2f60c7624"
+}

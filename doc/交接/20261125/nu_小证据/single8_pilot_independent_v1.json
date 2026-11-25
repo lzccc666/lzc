@@ -1,0 +1,103 @@
+{
+  "core_fixture": {
+    "passed": true,
+    "analytical_direction_boundary_rotated_checks": 167,
+    "single_canonical_pair_and_inverse_query": true,
+    "no_confidence_or_motion_pruning": true,
+    "source_relative_to_target": true,
+    "stable_ID_lexical_order": true,
+    "mapped_ID_order_reversal_fixture": {
+      "predicted_edge": [
+        "a",
+        "front_left",
+        "b"
+      ],
+      "mapping": {
+        "a": "z",
+        "b": "y"
+      },
+      "expected_canonical_GT_fact": [
+        "y",
+        "back_right",
+        "z"
+      ]
+    },
+    "actual_GT_evaluator_fixture_checked": false
+  },
+  "source_sha256": "66efdde5b633fdc8a7f9939007cfa20f35d766314a3d274d22b608ba5f7ea124",
+  "independent_geometry_method": "nearest8 unit-ray dot products, separate from tested atan2 sectors",
+  "pilot_passed": true,
+  "scenes": [
+    {
+      "scene": "scene-0001",
+      "frames": 40,
+      "complete_sha256": "e14161ecb84f05a01f57d9c35aca5171fba2c099ec1f5249f4dfd47e62c7987d"
+    },
+    {
+      "scene": "scene-0002",
+      "frames": 40,
+      "complete_sha256": "1a4f92e77b877d65f71e4fce43d5ca1517ea3fda340a3119f93d093872cad3b6"
+    },
+    {
+      "scene": "scene-0003",
+      "frames": 40,
+      "complete_sha256": "859f2eef63819f1382f5f8f092d88ffb94ad3552aeacf62056a49009241f6c88"
+    },
+    {
+      "scene": "scene-0004",
+      "frames": 40,
+      "complete_sha256": "041d8fa40f03a6e46ba089e7ed5d57089635094af4e57fe6b55f9c290cf2876a"
+    },
+    {
+      "scene": "scene-0005",
+      "frames": 39,
+      "complete_sha256": "44bf955d8722546ca128c84d1586270246f5c12e25bbdd41e426eeb322af241a"
+    },
+    {
+      "scene": "scene-0006",
+      "frames": 40,
+      "complete_sha256": "fff0a966c63e2a434de47f3c4923f8edb36456d6ae94da6db97872653ab1cac8"
+    },
+    {
+      "scene": "scene-0007",
+      "frames": 39,
+      "complete_sha256": "83b536fdd752877443938db01216858dc5ee0b8e74eca842686e163b94dd1e08"
+    },
+    {
+      "scene": "scene-0008",
+      "frames": 40,
+      "complete_sha256": "82d40096a86c379bbfd5ccde28ced92d319d2f3b66f0491409cfdd6cbd9a1d56"
+    }
+  ],
+  "totals": {
+    "single_frame:frames": 318,
+    "single_frame:edges": 334,
+    "single_frame:coincident": 0,
+    "original_fusion:frames": 318,
+    "original_fusion:edges": 1390,
+    "original_fusion:coincident": 0,
+    "R1:frames": 318,
+    "R1:edges": 863,
+    "R1:coincident": 2,
+    "S2_1:frames": 318,
+    "S2_1:edges": 746,
+    "S2_1:coincident": 2,
+    "S2_3:frames": 318,
+    "S2_3:edges": 2830,
+    "S2_3:coincident": 2,
+    "S2_6:frames": 318,
+    "S2_6:edges": 20271,
+    "S2_6:coincident": 2,
+    "S2_6_sharedscan:frames": 318,
+    "S2_6_sharedscan:edges": 20373,
+    "S2_6_sharedscan:coincident": 2
+  },
+  "maximum_distance_error_m": 1.7763568394002505e-15,
+  "all_nonedge_fields_exact": true,
+  "method_frames": 2226,
+  "new_GPU_calls": 0,
+  "GT_not_read": true,
+  "audit_utc": "2026-11-25T13:54:36.470655+00:00",
+  "elapsed_s": 11.790399715304375,
+  "audit_source_sha256": "89556c403f27c9bb97ee2e87a53e8b0b8b04c8d77f693ccdca469e252fc790a1"
+}

@@ -1,0 +1,51 @@
+{
+  "scope": "changed maintained Python sources, literal dynamic-loading references; not a complete transitive runtime proof",
+  "items": [
+    {
+      "source": "conceptgraph/completion/nuscenes_full_20261125_index_resume_v3.py",
+      "line": 35,
+      "statement": "q=run/'source_snapshot'/p.relative_to(base.ROOT);q.parent.mkdir(parents=True,exist_ok=True)"
+    },
+    {
+      "source": "conceptgraph/completion/nuscenes_full_20261125_resource_guards.py",
+      "line": 17,
+      "statement": "folder=Path(run)/'source_snapshot/resources';folder.mkdir(parents=True,exist_ok=True);snapshot=folder/'run_approved_resource_guards.py'"
+    },
+    {
+      "source": "conceptgraph/completion/nuscenes_full_20261125_resource_pilot.py",
+      "line": 80,
+      "statement": "dest=RUN/'source_snapshot'/Path(path).relative_to(source.ROOT);dest.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(path,dest)"
+    },
+    {
+      "source": "conceptgraph/completion/nuscenes_full_20261125_single8_reedge.py",
+      "line": 64,
+      "statement": "target=RUN/'source_snapshot'/p.relative_to(source.ROOT);target.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(p,target)"
+    },
+    {
+      "source": "scripts/nuscenes_full_20261125_cached_cpu_preflight.py",
+      "line": 13,
+      "statement": "spec=importlib.util.spec_from_file_location('runtime_v4',source.ROOT/'scripts/nuscenes_full_20261125_resource_runtime_v4.py');runtime=importlib.util.module_from_spec(spec);spec.loader.exec_module(runtime)"
+    },
+    {
+      "source": "scripts/nuscenes_full_20261125_cpu_cache_repair_v6.py",
+      "line": 50,
+      "statement": "dst=REPLAY/'source_snapshot'/p.relative_to(source.ROOT);dst.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(p,dst)"
+    },
+    {
+      "source": "scripts/nuscenes_full_20261125_execute_v6.py",
+      "line": 37,
+      "statement": "target=resource.FULL_RUN/'source_snapshot'/name;target.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(source.ROOT/name,target)"
+    },
+    {
+      "source": "scripts/nuscenes_full_20261125_execute_v7.py",
+      "line": 38,
+      "statement": "target=resource.FULL_RUN/'source_snapshot'/name;target.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(source.ROOT/name,target)"
+    },
+    {
+      "source": "scripts/nuscenes_full_20261125_resource_guard_contract_v8.py",
+      "line": 14,
+      "statement": "body=(run/'source_snapshot/resources/run_approved_resource_guards.py').read_text();assert str(32*3600) in body and str(48*3600) in body and str(int(5.25*2**30)) in body"
+    }
+  ],
+  "requirement": "preserve the relevant original outputs source_snapshot/source_bundle/dataset runtime files; pure clone lacks them; prefer same-server SSH"
+}

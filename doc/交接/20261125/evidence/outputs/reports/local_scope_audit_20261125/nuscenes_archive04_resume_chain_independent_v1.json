@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "archive": 4,
+  "audit_utc": "2026-11-25T13:35:30.096572+00:00",
+  "complete_sha256": "f65e47d74f27ea4db3fb81d5e69fd7708c6c2daff992fc3c4991a7095490c90f",
+  "preregistration_sha256": "4c5e208d985e49b9d20841d0612037298b71bef471d055614442b913ff792090",
+  "preserved_predecessor_trace_sha256": "f1408e6211d6b5d3badc677ccce2b14e28f0383f71c76bf2c9332072797c1ffa",
+  "original_full_CRC_export_control_flow_authenticated": true,
+  "imported_index_did_not_rerun_CRC": true,
+  "full_source_SHA_not_independently_repeated": true,
+  "closed_member_and_seek_index_audit_sha256": "ad8c699e5bf319a9c8ba7a7c4701421c303f0bf32777c0bcc7fc952d55115a33",
+  "original_failure_preserved": true,
+  "new_GPU_calls": 0,
+  "elapsed_s": 24.901733377948403,
+  "audit_source_sha256": "3d42c32e8853e198e46e9cb575a4c0f49d31747f12607c8f69d061b0944c8821"
+}

@@ -56,14 +56,14 @@ def raw_speed(trace):
     return float(np.linalg.norm(vector))
 
 
-def check_frame(frame, group, request, members, histories, counts):
+def check_frame(frame, group, request, members, histories, counts, methods=METHODS):
     assert frame['sample_token'] == group['sample_token']
     assert frame['frame_idx'] == group['frame_idx']
     stamp = group['reference_timestamp_us'] / 1e6
     assert frame['render_timestamp_s'] == stamp
     assert frame['GT_in_method'] is False and frame['vehicle_safety_authorized'] is False
     assert set(frame['views']) == set(CHANNELS)
-    assert set(frame['methods']) == set(METHODS)
+    assert set(frame['methods']) == set(methods)
     assert len(frame['frontends']) == 6
     assert {r['camera'] for r in frame['frontends']} == set(CHANNELS)
     for camera in CHANNELS:
@@ -83,7 +83,7 @@ def check_frame(frame, group, request, members, histories, counts):
             assert view['lidar_timestamp_s'] == lidar['timestamp_us'] / 1e6
             assert 0 < sensor['timestamp_us'] - lidar['timestamp_us'] <= 100000
             assert view['lidar_sha256'] == members[expected['lidar']]['sha256']
-    for name in METHODS:
+    for name in methods:
         value = frame['methods'][name]
         assert len(value['nodes']) == len(value['predictions'])
         assert value['vehicle_safety_authorized'] is False and value['body_heading_available'] is False
@@ -178,7 +178,7 @@ def check_frame(frame, group, request, members, histories, counts):
     counts['frames'] += 1
 
 
-def audit_scene(scene, manifest, method_manifest):
+def audit_scene(scene, manifest, method_manifest, method_manifest_path=None):
     folder = RUN / scene['scene']
     complete_path = folder / 'complete.json'
     complete = json.loads(complete_path.read_text())
@@ -221,7 +221,7 @@ def audit_scene(scene, manifest, method_manifest):
     result = dict(passed=True, scene=scene['scene'], counts=dict(counts), frames_sha256=complete['frames_sha256'],
         complete_receipt_sha256=fingerprint, request_sha256=scene['request_sha256'],
         audited_stream_stat=dict(bytes=(folder/'frames.jsonl.gz').stat().st_size, mtime_ns=(folder/'frames.jsonl.gz').stat().st_mtime_ns),
-        audit_source_sha256=sha(__file__), method_manifest_sha256=sha(DATA/'method_manifest.json'),
+        audit_source_sha256=sha(__file__), method_manifest_sha256=sha(method_manifest_path or DATA/'method_manifest.json'), prediction_run=str(RUN),
         no_GPU=True, GT_opened=False, elapsed_s=time.monotonic()-started,
         scope='closed accepted scene, full frame/six-condition denominator, causal sources, stored-pixel reprojection and raw-state speed/gates',
         limits=['Stored pixel/depth provenance is checked for self-consistency; original raw mask was independently checked in the cached 20-group contract only.',
@@ -232,13 +232,17 @@ def audit_scene(scene, manifest, method_manifest):
 
 
 def main():
+    global RUN
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--maximum-new-scenes', type=int, default=100)
+    parser.add_argument('--run-directory', type=Path, default=RUN)
+    parser.add_argument('--method-manifest', type=Path, default=DATA/'method_manifest.json')
     args = parser.parse_args()
     assert args.maximum_new_scenes > 0
+    RUN=args.run_directory
     manifest = json.loads((DATA/'manifest.json').read_text())
     assert len(manifest['scenes']) == 850
-    method_path = DATA/'method_manifest.json'
+    method_path = args.method_manifest
     method = json.loads(method_path.read_text()) if method_path.exists() else None
     if method:
         for path, expected in method['source_sha256'].items():
@@ -254,7 +258,7 @@ def main():
             complete_fingerprint = sha(folder/'complete.json')
             cached_receipt = REPORT/'nuscenes_scenes'/(scene['scene']+'__'+complete_fingerprint[:16]+'.json')
             if audited < args.maximum_new_scenes or cached_receipt.exists():
-                result, cached = audit_scene(scene, manifest, method)
+                result, cached = audit_scene(scene, manifest, method, method_path)
                 reused += int(cached)
                 audited += int(not cached)
                 status.update(state='independently_audited', frames_sha256=result['frames_sha256'])
@@ -267,7 +271,7 @@ def main():
     result = dict(scope='all850 requests, no omitted pending/failed scenes', expected_scenes=850,
         expected_frames=sum(s['frames'] for s in manifest['scenes']), statuses=dict(Counter(s['state'] for s in statuses)),
         newly_audited_scenes=audited, reused_audit_receipts=reused, no_GPU=True, GT_opened=False,
-        method_source_freeze_available=bool(method), utc=stamp, audit_source_sha256=sha(__file__), scenes=statuses)
+        method_source_freeze_available=bool(method), prediction_run=str(RUN), utc=stamp, audit_source_sha256=sha(__file__), scenes=statuses)
     destination = REPORT/'nuscenes_batches'/(stamp+'.json')
     write(destination,result)
     print(json.dumps({k:v for k,v in result.items() if k!='scenes'},ensure_ascii=False))

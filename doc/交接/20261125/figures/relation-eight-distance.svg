@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700" role="img" aria-label="一对物体只有一条关系。A位于B左前方，距离5米。">
+  <title>八方向单关系与距离属性</title>
+  <desc>每个有效物体对至多一条方向边，八个45度扇区互斥。A相对B左3米前4米，唯一方向是左前方，距离5米。前向取前视相机光轴世界XY投影。</desc>
+  <rect width="1000" height="700" fill="#ffffff"/>
+  <g font-family="Noto Serif CJK SC, sans-serif" fill="#18212b">
+    <text x="38" y="48" font-size="29">一对物体，一个方向，距离单独记录</text>
+    <text x="38" y="82" font-size="18" fill="#536171">八方向互斥；反向查询只切换同一条边的读法。</text>
+    <path d="M350 380L132.899 290.071A235 235 0 0 1 260.071 162.899Z" fill="#e6eff9"/>
+    <circle cx="350" cy="380" r="235" fill="none" stroke="#c8cfd6" stroke-width="1.3"/>
+    <g stroke="#d8dde2" stroke-width="1" fill="none">
+      <line x1="350" y1="380" x2="260.071" y2="162.899"/><line x1="350" y1="380" x2="132.899" y2="290.071"/>
+      <line x1="350" y1="380" x2="132.899" y2="469.929"/><line x1="350" y1="380" x2="260.071" y2="597.101"/>
+      <line x1="350" y1="380" x2="439.929" y2="597.101"/><line x1="350" y1="380" x2="567.101" y2="469.929"/>
+      <line x1="350" y1="380" x2="567.101" y2="290.071"/><line x1="350" y1="380" x2="439.929" y2="162.899"/>
+    </g>
+    <g font-size="19" text-anchor="middle">
+      <text x="350" y="124">前方</text><text x="163" y="200">左前方</text><text x="83" y="387">左侧</text><text x="163" y="575">左后方</text>
+      <text x="350" y="653">后方</text><text x="537" y="575">右后方</text><text x="617" y="387">右侧</text><text x="537" y="200">右前方</text>
+    </g>
+    <line x1="350" y1="380" x2="291.25" y2="301.667" stroke="#326ca7" stroke-width="3"/>
+    <circle cx="291.25" cy="301.667" r="12" fill="#326ca7" stroke="#ffffff" stroke-width="2"/>
+    <rect x="341" y="371" width="18" height="18" rx="3" fill="#263340"/>
+    <text x="269" y="276" font-size="23">A</text><text x="370" y="400" font-size="23">B</text>
+    <text x="700" y="253" font-size="20">A 相对 B</text>
+    <text x="700" y="304" font-size="32">左前方</text>
+    <text x="700" y="355" font-size="25">距离 5.00 m</text>
+    <text x="700" y="418" font-size="18" fill="#536171">左 3 m，前 4 m</text>
+    <text x="700" y="451" font-size="18" fill="#536171">只存一条方向关系</text>
+    <text x="38" y="686" font-size="16" fill="#536171">前向≈CAM_FRONT 光轴的世界 XY 投影；不是物体朝向。距离≤12m，重合点不生成方向边。</text>
+  </g>
+</svg>

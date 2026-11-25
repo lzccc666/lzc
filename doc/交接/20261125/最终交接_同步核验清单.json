@@ -1,0 +1,790 @@
+{
+  "created_utc": "2026-11-25T14:10:06.036622+00:00",
+  "base_commit": "03af2e50119c1eeebc5f914fc4790a0fb165d266",
+  "files_before_this_receipt": [
+    {
+      "path": "README.md",
+      "bytes": 22273,
+      "sha256": "264ae09d724608d60d5b31f10293fa8c1b3c8811d38e51a1dfd5b834234e7d44"
+    },
+    {
+      "path": "conceptgraph/completion/kitti_duplicate_diagnosis_20261125.py",
+      "bytes": 5493,
+      "sha256": "fa876d1324991d04b888fd2388664c31355e43ae9bd2d84e189ae40944d8c73d"
+    },
+    {
+      "path": "conceptgraph/completion/kitti_duplicate_independent_20261125.py",
+      "bytes": 6206,
+      "sha256": "4b92817fc1b5012154d9e217a99f62c877a616d62f9ca532e979b9917f5a9b4c"
+    },
+    {
+      "path": "conceptgraph/completion/kitti_semantic_independent_20261125.py",
+      "bytes": 8873,
+      "sha256": "c293c763042c9812bdea1940e4e12e1a7a84b9eb8705be48c6ff88db966187a9"
+    },
+    {
+      "path": "conceptgraph/completion/kitti_semantic_pair_offsets_20261125_v2.py",
+      "bytes": 5342,
+      "sha256": "8aa129b1cdfcd3113cbbb5787968db8e27bbf353d0c599707500640ad2dcc1c5"
+    },
+    {
+      "path": "conceptgraph/completion/kitti_semantic_resume_20261125_v3.py",
+      "bytes": 6840,
+      "sha256": "11231e0ddc8943d1ba37fd180fe6496017f14bb5724961c439376a1f1bac96fe"
+    },
+    {
+      "path": "conceptgraph/completion/kitti_semantic_scope_20261125.py",
+      "bytes": 5733,
+      "sha256": "0399e7e86022091b090e31aabc7e32ab77d05488ae3176b6dec10ae2d5fb08eb"
+    },
+    {
+      "path": "conceptgraph/completion/kitti_semantic_scope_final_20261125.py",
+      "bytes": 3082,
+      "sha256": "d44858bff18f2729d458279ac2a19c32c5a146da81c9df382c7d8c68452efdc8"
+    },
+    {
+      "path": "conceptgraph/completion/nu_pipeline_resume_20261125.py",
+      "bytes": 27273,
+      "sha256": "242d791616b26533ef94b41d7cae8fcbf9c0cdc6dc7a33e3aadcd17a29a193ea"
+    },
+    {
+      "path": "conceptgraph/completion/nu_pipeline_resume_20261125_v2.py",
+      "bytes": 30430,
+      "sha256": "190d7fe86e6685ce9f1cac062f0486112046720a088a6b693b67f4391dc80e06"
+    },
+    {
+      "path": "conceptgraph/completion/nu_task_single8_20261125.py",
+      "bytes": 12577,
+      "sha256": "551ad40410982b985f2a5dfe8ee5f967fa044bf260b1357b9c129cc7a12ae446"
+    },
+    {
+      "path": "conceptgraph/completion/nu_task_single8_independent_20261125.py",
+      "bytes": 7737,
+      "sha256": "1b8aead4e2721bcfbb907063233d023fdbcf7fa35a9d545d6e25585883b5c54a"
+    },
+    {
+      "path": "conceptgraph/completion/nu_task_watch_20261125.py",
+      "bytes": 9670,
+      "sha256": "dc5d16dbdd4d2e9824a927c885e9aeb6e52c71521dc19db172f3ff38c272552c"
+    },
+    {
+      "path": "conceptgraph/completion/nu_task_watch_20261125_v2.py",
+      "bytes": 11037,
+      "sha256": "790cf9222f852ea7cce82ca94970ea542f315bb1f8019235d3fa1bf73378a8d8"
+    },
+    {
+      "path": "conceptgraph/completion/nu_task_watch_20261125_v3.py",
+      "bytes": 11524,
+      "sha256": "eadcff407ded0c75b082267f39131502ce36dc04efb3b1a1e478c22288508899"
+    },
+    {
+      "path": "conceptgraph/completion/nuscenes_cpu_runtime_independent_20261125.py",
+      "bytes": 5755,
+      "sha256": "8091478512a9c96fa405765c219cfadea78f763325ba94eee69a54830838a419"
+    },
+    {
+      "path": "conceptgraph/completion/nuscenes_full_20261125_cpu_runtime_v6.py",
+      "bytes": 499,
+      "sha256": "6373dd78cf89d236c97c58bb0b13ac154e21e474f40e8771613ce89fa8c1d0f1"
+    },
+    {
+      "path": "conceptgraph/completion/nuscenes_full_20261125_index_resume_v3.py",
+      "bytes": 6430,
+      "sha256": "1a23dfcd5ea173b5108f177671dca5efc2876d01785d24989305710b24ca0173"
+    },
+    {
+      "path": "conceptgraph/completion/nuscenes_full_20261125_prefetch.py",
+      "bytes": 5183,
+      "sha256": "e602c103d74499f2f38e57d3f04cec4d579e542989900ac7d05c10d460eb1164"
+    },
+    {
+      "path": "conceptgraph/completion/nuscenes_full_20261125_resource_guards.py",
+      "bytes": 1671,
+      "sha256": "b8e9cb825a80c35fc6a8a0e95a2050000abd4b3e1add8eeef72878ea60e9ebaa"
+    },
+    {
+      "path": "conceptgraph/completion/nuscenes_full_20261125_resource_pilot.py",
+      "bytes": 9226,
+      "sha256": "338101b09aaa05c89422a904b289d6c341f90be49e34ba5be7962d20a3f7f01a"
+    },
+    {
+      "path": "conceptgraph/completion/nuscenes_full_20261125_resource_runtime_v5.py",
+      "bytes": 7358,
+      "sha256": "73d156e7fc7de827012f2a8fc6ab364477ad63892e152a204010f6021f37515a"
+    },
+    {
+      "path": "conceptgraph/completion/nuscenes_full_20261125_resource_runtime_v6.py",
+      "bytes": 10099,
+      "sha256": "955a5f7deeb467439fbb0306e494b86d182448bbb70b6f68e411882b15436980"
+    },
+    {
+      "path": "conceptgraph/completion/nuscenes_full_20261125_resource_runtime_v8.py",
+      "bytes": 13139,
+      "sha256": "d70d16648d1c6c17910476c4b26b0b69ce7e37fc0fd082a4cd74ac921dd65cd9"
+    },
+    {
+      "path": "conceptgraph/completion/nuscenes_full_20261125_single8_context.py",
+      "bytes": 2131,
+      "sha256": "fca614aeb7145b95dd47b512bb7c28c028a57ab8fe81d52cdc29325304f5700f"
+    },
+    {
+      "path": "conceptgraph/completion/nuscenes_full_20261125_single8_evaluate.py",
+      "bytes": 17022,
+      "sha256": "023994f7deadabf3ae28a0bb454a38528306b310d0d37b24623eb227c498bf14"
+    },
+    {
+      "path": "conceptgraph/completion/nuscenes_full_20261125_single8_reedge.py",
+      "bytes": 8251,
+      "sha256": "020eefc53a991fa520576cda1dfc40593b4cbc30dcdcb84b2e1778ea7746674a"
+    },
+    {
+      "path": "conceptgraph/completion/nuscenes_full_20261125_single8_sharedscan_evaluate.py",
+      "bytes": 8565,
+      "sha256": "b148ebc2ae5037af8bcf6881e6766210331141112fecda90fd48f1d4187ee20b"
+    },
+    {
+      "path": "conceptgraph/completion/nuscenes_full_20261125_single8_statistics.py",
+      "bytes": 9070,
+      "sha256": "04724a37aef18448970f7916631d03899e1291d5a8f908c11bd3c4bc4f71a168"
+    },
+    {
+      "path": "conceptgraph/completion/nuscenes_full_aux_audit_20261125.py",
+      "bytes": 7225,
+      "sha256": "9a229f79237d321abb2f5ebf410c73b2f9bafa9fdb6b8f99c889179df3dc05e4"
+    },
+    {
+      "path": "conceptgraph/completion/nuscenes_full_stream_audit_20261125.py",
+      "bytes": 15838,
+      "sha256": "baf180b46a10ece3238074b1e9960e9a15785340c1cb709caeca6520d8b8d158"
+    },
+    {
+      "path": "conceptgraph/completion/nuscenes_resource_budget_independent_20261125.py",
+      "bytes": 6259,
+      "sha256": "bc77f66722799a0837f5cc8d01db678c61e5fdd635dcae44c4e5d866d3a6032f"
+    },
+    {
+      "path": "conceptgraph/completion/nuscenes_resume_independent_20261125.py",
+      "bytes": 4166,
+      "sha256": "3d42c32e8853e198e46e9cb575a4c0f49d31747f12607c8f69d061b0944c8821"
+    },
+    {
+      "path": "conceptgraph/completion/relation_single8_independent_20261125.py",
+      "bytes": 10778,
+      "sha256": "89556c403f27c9bb97ee2e87a53e8b0b8b04c8d77f693ccdca469e252fc790a1"
+    },
+    {
+      "path": "conceptgraph/navigation/single8_task_20261125.py",
+      "bytes": 7757,
+      "sha256": "d64d7e1cffa079f46090429585604487a6b6c34d3ce9384e962e211e0a967261"
+    },
+    {
+      "path": "conceptgraph/scenegraph/relation_single8_20261125.py",
+      "bytes": 5134,
+      "sha256": "66efdde5b633fdc8a7f9939007cfa20f35d766314a3d274d22b608ba5f7ea124"
+    },
+    {
+      "path": "doc/交接/20261125/evidence/dataset/processed/nu_task_single8_20261125_v1/evaluation_only/GT_context.jsonl",
+      "bytes": 1008530,
+      "sha256": "7e779a7b5836436a05f5512c49495a9725735794dc19cb121d66caf3cde601e4"
+    },
+    {
+      "path": "doc/交接/20261125/evidence/dataset/processed/nu_task_single8_20261125_v1/evaluation_only/frame_truth.jsonl",
+      "bytes": 842549,
+      "sha256": "d46def7b5a6d1af7fca1fdecc11ef53429b14cff0ade1deb9ba76d1f768fdd4e"
+    },
+    {
+      "path": "doc/交接/20261125/evidence/dataset/processed/nu_task_single8_20261125_v1/evaluation_only/label_change_ledger.jsonl",
+      "bytes": 1745338,
+      "sha256": "30e536a57a6a739a0acc05a02ccf155339d7ec5efa25da6170919f2c382ec3d1"
+    },
+    {
+      "path": "doc/交接/20261125/evidence/dataset/processed/nu_task_single8_20261125_v1/evaluation_only/task_labels.jsonl",
+      "bytes": 563358,
+      "sha256": "febb3f4eeeff41fb984777f144c52974625865b93638ac2011cca7707b29d89d"
+    },
+    {
+      "path": "doc/交接/20261125/evidence/dataset/processed/nu_task_single8_20261125_v1/manifest.json",
+      "bytes": 16232,
+      "sha256": "3a1372080afa896a8c4f122f5c646091f30479d7884ba18fdeb5731138340740"
+    },
+    {
+      "path": "doc/交接/20261125/evidence/dataset/processed/nu_task_single8_20261125_v1/method_tasks.jsonl",
+      "bytes": 876263,
+      "sha256": "a8dc433a9a1ef4c4e1ce023cfb6cda3d13f8f2bfa9fd9a31d9506fc226acf021"
+    },
+    {
+      "path": "doc/交接/20261125/evidence/dataset/processed/nu_task_single8_20261125_v1/preregistration.json",
+      "bytes": 14408,
+      "sha256": "8da8e18f54965cbdf2b9f61cd49ba20bc165035c0fb3ec2c34b0d2b5c2a50630"
+    },
+    {
+      "path": "doc/交接/20261125/evidence/dataset/processed/nuscenes_full_20261125_single8_pilot_v1/manifest.json",
+      "bytes": 6276,
+      "sha256": "dc825f702188d892d6b4fba68efa12dec7a087040759fd7b017b9223c31816e3"
+    },
+    {
+      "path": "doc/交接/20261125/evidence/dataset/processed/nuscenes_full_20261125_single8_pilot_v1/method_manifest.json",
+      "bytes": 21789,
+      "sha256": "1923b1dccf8244b8a38eeddb6edc9c278079555710eaac03b936473c29f34e9e"
+    },
+    {
+      "path": "doc/交接/20261125/evidence/dataset/processed/nuscenes_full_20261125_single8_pilot_v1/relation_protocol_v1.json",
+      "bytes": 1596,
+      "sha256": "637da87e93b987e863fa90cc16d702d7703a2e97dffbf44a489e50324d40a519"
+    },
+    {
+      "path": "doc/交接/20261125/evidence/dataset/processed/nuscenes_full_20261125_v1/archives/archive01_complete.json",
+      "bytes": 1307,
+      "sha256": "6df67ff1b9bca9ebe6aac262057fbc43d77621352b2392e626411f8fb41e9309"
+    },
+    {
+      "path": "doc/交接/20261125/evidence/dataset/processed/nuscenes_full_20261125_v1/archives/archive02_complete.json",
+      "bytes": 1308,
+      "sha256": "3dd1eb30991117fddc8e6e5037af68c798711017cce757ba1e9fbc5262c93995"
+    },
+    {
+      "path": "doc/交接/20261125/evidence/dataset/processed/nuscenes_full_20261125_v1/archives/archive03_complete.json",
+      "bytes": 1605,
+      "sha256": "e03890c844113b911dda2bcdb3bc24d9bc78a5a4d31e92674ed5bd05640130ae"
+    },
+    {
+      "path": "doc/交接/20261125/evidence/dataset/processed/nuscenes_full_20261125_v1/archives/archive04_complete.json",
+      "bytes": 1605,
+      "sha256": "f65e47d74f27ea4db3fb81d5e69fd7708c6c2daff992fc3c4991a7095490c90f"
+    },
+    {
+      "path": "doc/交接/20261125/evidence/dataset/processed/nuscenes_full_20261125_v1/archives/archive05_complete.json",
+      "bytes": 1603,
+      "sha256": "dabda7e7deb83314146e261a8152c5e286753bb9e832800099d8bb00d7bcd5b4"
+    },
+    {
+      "path": "doc/交接/20261125/evidence/dataset/processed/nuscenes_full_20261125_v1/archives/archive06_complete.json",
+      "bytes": 1308,
+      "sha256": "10e01eb081c170a232ead15462fd7dd59d004b48f66c8ec630abcada2a7e5882"
+    },
+    {
+      "path": "doc/交接/20261125/evidence/dataset/processed/nuscenes_full_20261125_v1/archives/archive07_complete.json",
+      "bytes": 1308,
+      "sha256": "1a197811a763a82fe8f104063bbc8e32589becdd2e2f9197ee5ddfe4e952c6cd"
+    },
+    {
+      "path": "doc/交接/20261125/evidence/dataset/processed/nuscenes_full_20261125_v1/archives/archive08_complete.json",
+      "bytes": 1308,
+      "sha256": "9ca6748a02d0024e005076d135104cc602e33df1b30b68d7cd55680d92c1958d"
+    },
+    {
+      "path": "doc/交接/20261125/evidence/dataset/processed/nuscenes_full_20261125_v1/effective_resource_policy_v8.json",
+      "bytes": 1144,
+      "sha256": "f444b800f24ab2b4a6a671b924f30505592ed803b132d385238c347daefaf02d"
+    },
+    {
+      "path": "doc/交接/20261125/evidence/dataset/processed/nuscenes_full_20261125_v1/overall_execution_clock_v2.json",
+      "bytes": 390,
+      "sha256": "85937a3e7e2c618f3e534b61f93779b866bc0a4c4fa339a192145c3375c32124"
+    },
+    {
+      "path": "doc/交接/20261125/evidence/dataset/processed/nuscenes_full_20261125_v1/user_handoff_hold_v1.json",
+      "bytes": 675,
+      "sha256": "d470457a9648b6365d776bfbd1bff29a60e2444d44a7d1b5a80ce6ad4b52345f"
+    },
+    {
+      "path": "doc/交接/20261125/evidence/outputs/reports/kitti_local_all_20261125/SemanticKITTI_22seq_applicability_final_v2.json",
+      "bytes": 30275,
+      "sha256": "8d62936f4b16e55efee30d0b0737dc6c35fb590b134a1a7a666733cc44368154"
+    },
+    {
+      "path": "doc/交接/20261125/evidence/outputs/reports/kitti_local_all_20261125/SemanticKITTI适用性_最终盘点.md",
+      "bytes": 2793,
+      "sha256": "ae2152e4a4634e41812c5cb999b756abb26869651fa544c703654a3ed2a6c1be"
+    },
+    {
+      "path": "doc/交接/20261125/evidence/outputs/reports/kitti_local_all_20261125/Tracking重复率回退_只读补充.md",
+      "bytes": 2273,
+      "sha256": "404d9f76a530f2032574d833a78ca5e8e8e8274a0387a5f5569c721438881cf2"
+    },
+    {
+      "path": "doc/交接/20261125/evidence/outputs/reports/kitti_local_all_20261125/duplicate_proxy_diagnosis_v1.json",
+      "bytes": 17563,
+      "sha256": "4401326929807d0de58661e52e02a1de80d4346434cc5d7cd5d1f7891b9f7341"
+    },
+    {
+      "path": "doc/交接/20261125/evidence/outputs/reports/kitti_local_all_20261125/跨电脑交接_kitti_nav_v1.md",
+      "bytes": 9862,
+      "sha256": "abd30bd885a15bb76c3dd630364aa4fbbf7a25103cc3c775db0c6ecf4734d428"
+    },
+    {
+      "path": "doc/交接/20261125/evidence/outputs/reports/kitti_local_all_20261125/跨电脑交接_来源收据_v1.json",
+      "bytes": 3237,
+      "sha256": "05175fca252bafee3c1f03ce26d5c2e26c802c2e7296b0ecc11f99272e988840"
+    },
+    {
+      "path": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/formal_relation_contract_hold_independent_v1.json",
+      "bytes": 424,
+      "sha256": "8ec4a7c5fc7c96ddb423cba1ad266c304a3ff3a6b13492d5d4b0a295c08036b7"
+    },
+    {
+      "path": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/nu_task_watch_v3_source_independent_v1.json",
+      "bytes": 953,
+      "sha256": "df6c5fb112241e5ef03e74c6c6bd50bd9bc1cc59eeca088e1e50313832e6c672"
+    },
+    {
+      "path": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/nuscenes_archive03_independent_v1.json",
+      "bytes": 5317,
+      "sha256": "75ca2f956551a52b9d951fca3702392dbcb53aef5cd4bb776d0977d9c475e0fa"
+    },
+    {
+      "path": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/nuscenes_archive03_resume_chain_independent_v1.json",
+      "bytes": 843,
+      "sha256": "c32f9c163f013702c117ad8b31afd90ef2141427440ea35404b27741bdd48933"
+    },
+    {
+      "path": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/nuscenes_archive04_independent_v1.json",
+      "bytes": 5315,
+      "sha256": "ad8c699e5bf319a9c8ba7a7c4701421c303f0bf32777c0bcc7fc952d55115a33"
+    },
+    {
+      "path": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/nuscenes_archive04_resume_chain_independent_v1.json",
+      "bytes": 844,
+      "sha256": "f47c0e2ff5e3ad79bab1c0756b1cae15b6eb7748106c9508fe6d8614a619dc88"
+    },
+    {
+      "path": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/nuscenes_archive05_independent_v1.json",
+      "bytes": 5328,
+      "sha256": "51b14fe331c0c4aad29888174752e32b33f5298136f6e97e049472b6db1b3d97"
+    },
+    {
+      "path": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/nuscenes_archive05_resume_chain_independent_v1.json",
+      "bytes": 843,
+      "sha256": "64ab2a9c50537ce5cd6cb2a933085d80148f542bd2d0b6be863477bf56da070e"
+    },
+    {
+      "path": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/nuscenes_archive06_independent_v1.json",
+      "bytes": 5327,
+      "sha256": "11bb75161214765de4a2b815ac879ac76ab2e722c05061aade6137f0b47ef7f8"
+    },
+    {
+      "path": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/nuscenes_archive07_independent_v1.json",
+      "bytes": 5329,
+      "sha256": "b2f549505c1642c290f8069ec88dbd2808c0805b1016a07cdcf04e3ca66d5ced"
+    },
+    {
+      "path": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/nuscenes_cpu_runtime_v6_independent_v1.json",
+      "bytes": 2066,
+      "sha256": "3540e98d4504d7a57039fac44bd1798713845b8bf42bd47ae1be8ee4af63875d"
+    },
+    {
+      "path": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/nuscenes_failed240_cache_independent_v1.json",
+      "bytes": 61883,
+      "sha256": "ca70c9d3c3d8ecbed6d74b5bb725a97077786d21b033f9159ce4338e45df12a1"
+    },
+    {
+      "path": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/nuscenes_fixed8_readiness_independent_v1.json",
+      "bytes": 1373,
+      "sha256": "6629280f76788a995cf06952b98e0b8cdbe4320e76f5fc1f20fed66d05311e4c"
+    },
+    {
+      "path": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/nuscenes_resource8_budget_independent_v1.json",
+      "bytes": 6719,
+      "sha256": "51be508f239f74bc2e1239ee8fb9bb9167cb126dbda01c0ec289bbdd19e8c756"
+    },
+    {
+      "path": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/nuscenes_resource_runtime_independent_v1.json",
+      "bytes": 869,
+      "sha256": "9a64bd4f9c6431e74eb392012ad4565b1bb515898438044831400f9e0141639b"
+    },
+    {
+      "path": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/nuscenes_source_IO_comparison_independent_v1.json",
+      "bytes": 791,
+      "sha256": "17999a11b90425d1829ff7c43307cc0890b64fb4366fcaa949454c37694fe731"
+    },
+    {
+      "path": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/semantic_pairs_independent_v1.json",
+      "bytes": 6148,
+      "sha256": "d8dc9da014b6c8dcc0a29d1531d97b5e0414c901a718c3dab4cb6dcec438b5fb"
+    },
+    {
+      "path": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/semantic_scope_final_independent_v1.json",
+      "bytes": 512,
+      "sha256": "89f669e3f525360fbbbc899de02e1959d7c0d2ba2a9c865f1e3cf59750bec101"
+    },
+    {
+      "path": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/single8_GT_metrics_fixture_independent_v1.json",
+      "bytes": 1734,
+      "sha256": "66739ae3e88a772afb697deca4f47f1d1b405194484a8c288af67430bf2312d0"
+    },
+    {
+      "path": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/single8_pilot_independent_v1.json",
+      "bytes": 3036,
+      "sha256": "a75f465bc4c00480c571f1cf75b402fb864d4c2b95e8ca7d77fb52958bb977a9"
+    },
+    {
+      "path": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/single8_task_GT_independent_v1.json",
+      "bytes": 1265,
+      "sha256": "b2b56065b83c9a7f4fbd6681b9e3e9b5019727754365b82ec2b96029539e12bb"
+    },
+    {
+      "path": "doc/交接/20261125/evidence/outputs/reports/local_scope_audit_20261125/tracking_duplicate_independent_v1.json",
+      "bytes": 1904,
+      "sha256": "ffbfa2511da35fadaad3ca725a55689d53f6232a883e2c8aaf0160999cae3c8f"
+    },
+    {
+      "path": "doc/交接/20261125/evidence/outputs/results/nuscenes/validation/iterations/nuscenes_full_20261125_single8_pilot_v1/summary.json",
+      "bytes": 4970,
+      "sha256": "82381cb05fafa21e9ec67538cef3cdb07d8a2d42f9b3f5209ce84eda6c6f44af"
+    },
+    {
+      "path": "doc/交接/20261125/figures/README.md",
+      "bytes": 3181,
+      "sha256": "8275d829ce197d10d12d98a2967628d5fa10cb93db294661cb569618c52d3c51"
+    },
+    {
+      "path": "doc/交接/20261125/figures/relation-eight-distance.html",
+      "bytes": 8169,
+      "sha256": "53f296b5b865078366a89ccf521ea598d2d17f91fb5840efd46032afae1f9b6f"
+    },
+    {
+      "path": "doc/交接/20261125/figures/relation-eight-distance.png",
+      "bytes": 60215,
+      "sha256": "bc0000ac2874b73fc1e351f51742edb85937f8990f9d158cbcb0016eeae171a8"
+    },
+    {
+      "path": "doc/交接/20261125/figures/relation-eight-distance.svg",
+      "bytes": 2686,
+      "sha256": "9755c635e939707de73fbce30e7ab811f0707f3367793619e209dbb9210c39d7"
+    },
+    {
+      "path": "doc/交接/20261125/figures/relation-frame-explainer.html",
+      "bytes": 10374,
+      "sha256": "1cc4c457db5dd7148278a4b3cfd2e290b9c27bb2fd909fe22e3e469836397af6"
+    },
+    {
+      "path": "doc/交接/20261125/figures/relation-frame-explainer.png",
+      "bytes": 62725,
+      "sha256": "329ff80127ae78ccc93ce646c76bbc816ca1a03a03557263d69858160fb6578b"
+    },
+    {
+      "path": "doc/交接/20261125/figures/relation-frame-explainer.svg",
+      "bytes": 2836,
+      "sha256": "40eac595f68d42e3872b2880c7712546eaa18e49df50e8e0f7f9aa7c6f6d2a8f"
+    },
+    {
+      "path": "doc/交接/20261125/nu_小证据/effective_resource_policy_v8.json",
+      "bytes": 1144,
+      "sha256": "f444b800f24ab2b4a6a671b924f30505592ed803b132d385238c347daefaf02d"
+    },
+    {
+      "path": "doc/交接/20261125/nu_小证据/overall_execution_clock_v2.json",
+      "bytes": 390,
+      "sha256": "85937a3e7e2c618f3e534b61f93779b866bc0a4c4fa339a192145c3375c32124"
+    },
+    {
+      "path": "doc/交接/20261125/nu_小证据/relation_protocol_v1.json",
+      "bytes": 1596,
+      "sha256": "637da87e93b987e863fa90cc16d702d7703a2e97dffbf44a489e50324d40a519"
+    },
+    {
+      "path": "doc/交接/20261125/nu_小证据/single8_handoff_CPU_check_v1.json",
+      "bytes": 4538,
+      "sha256": "b34619fbf41ec5145cc905c66e944d99d8039f8113a806a54c24e04ffd6a9cc5"
+    },
+    {
+      "path": "doc/交接/20261125/nu_小证据/single8_pilot_independent_v1.json",
+      "bytes": 3036,
+      "sha256": "a75f465bc4c00480c571f1cf75b402fb864d4c2b95e8ca7d77fb52958bb977a9"
+    },
+    {
+      "path": "doc/交接/20261125/nu_小证据/summary.json",
+      "bytes": 4970,
+      "sha256": "82381cb05fafa21e9ec67538cef3cdb07d8a2d42f9b3f5209ce84eda6c6f44af"
+    },
+    {
+      "path": "doc/交接/20261125/nu_小证据/user_handoff_hold_v1.json",
+      "bytes": 675,
+      "sha256": "d470457a9648b6365d776bfbd1bff29a60e2444d44a7d1b5a80ce6ad4b52345f"
+    },
+    {
+      "path": "doc/交接/20261125/nu_建图资源交接.md",
+      "bytes": 9380,
+      "sha256": "a4c2470fb8c4f2aa552936f83bf77cdf35aa72380c685d934c4c4310032d52e5"
+    },
+    {
+      "path": "doc/交接/20261125/nu_源码SHA清单.json",
+      "bytes": 9085,
+      "sha256": "e0522ba68f57039c78ffa448e06cf8bad777d5c7baaf302a80dbb75ce69c96fd"
+    },
+    {
+      "path": "doc/交接/20261125/nu_进程索引快照.json",
+      "bytes": 4646,
+      "sha256": "c8bb81ea00d751179077c9df6303755932582ca421de677cea9d600b1f04036c"
+    },
+    {
+      "path": "doc/交接/20261125/交接执行状态_独立核验.json",
+      "bytes": 696,
+      "sha256": "d8d726aa94ffa99396c3c01a2a760d789846238400ac5ac07e7b0eb882d70a86"
+    },
+    {
+      "path": "doc/交接/20261125/导航任务与Qwen恢复状态.md",
+      "bytes": 9862,
+      "sha256": "abd30bd885a15bb76c3dd630364aa4fbbf7a25103cc3c775db0c6ecf4734d428"
+    },
+    {
+      "path": "doc/交接/20261125/当前进度与代码同步.md",
+      "bytes": 10928,
+      "sha256": "9ec79dbd065b77c870fdb189f1e59c7c0cdc765648593fbeffaee81cd6adee9d"
+    },
+    {
+      "path": "doc/交接/20261125/执行状态.json",
+      "bytes": 1083,
+      "sha256": "4642593615aea17a5f4ee5665f140c15975588d1e770496c23a645ff76b8250d"
+    },
+    {
+      "path": "doc/交接/20261125/本机全数据对照_阶段进度.md",
+      "bytes": 11062,
+      "sha256": "424672786f99e9f70922a35b0839ef73004725b443295482758b1ff7589b274d"
+    },
+    {
+      "path": "doc/交接/20261125/环境包快照.json",
+      "bytes": 13250,
+      "sha256": "c2d663eca8c5fec695892f5d60f4cf9b471d569d12a2b1e1e69883a9e411a2f0"
+    },
+    {
+      "path": "doc/交接/20261125/跨电脑续接_完整交接.md",
+      "bytes": 14967,
+      "sha256": "d35624e6f786e765b0fd518225f606c81557df9e426ddab2987b2149cc9c8c06"
+    },
+    {
+      "path": "doc/交接/20261125/跨电脑续接_来源清单.json",
+      "bytes": 31565,
+      "sha256": "e7814292cbe83dad7b4500c15c85b0d4fa0656d8bd96fc7bbd6882e47656d07e"
+    },
+    {
+      "path": "scripts/kitti_duplicate_diagnosis_20261125.py",
+      "bytes": 189,
+      "sha256": "ebe8fb17241b2f41d83304c5e380b6b25d440ea9b81350d0bc2348e3ea433fcb"
+    },
+    {
+      "path": "scripts/kitti_duplicate_independent_20261125.py",
+      "bytes": 177,
+      "sha256": "6939dd6833137c28c6d6ac051cf9b6920f233d376ea91665f911f2e11eb35bae"
+    },
+    {
+      "path": "scripts/kitti_semantic_independent_20261125.py",
+      "bytes": 178,
+      "sha256": "bfdca7486d29bdad1efeb50299a99435dc1be86602812064ab8678a2574b7d58"
+    },
+    {
+      "path": "scripts/kitti_semantic_pair_offsets_20261125_v2.py",
+      "bytes": 200,
+      "sha256": "439bf75f1e91f16171b2f780a05c939f769cb8f33772aa3bdee07c494bb5f622"
+    },
+    {
+      "path": "scripts/kitti_semantic_resume_20261125_v3.py",
+      "bytes": 193,
+      "sha256": "22ff09d8aed4ab8ade292a46a5279d375890026cb3c9247d8e79840ae423e521"
+    },
+    {
+      "path": "scripts/kitti_semantic_scope_20261125.py",
+      "bytes": 192,
+      "sha256": "08999da73d13d06381fa7d266499731135b88c9f8b3c2ac5ecd85dc98e9d2be3"
+    },
+    {
+      "path": "scripts/kitti_semantic_scope_final_20261125.py",
+      "bytes": 197,
+      "sha256": "3f32ccc1cbfacf91c2c5586dac786108f80c0c172b031dd901a9d7529e2f25f4"
+    },
+    {
+      "path": "scripts/nu_pipeline_resume_20261125.py",
+      "bytes": 186,
+      "sha256": "6ff327a428676dca84b3de4af47b6b80da02c606e0525c7881d4ca1f83a38a32"
+    },
+    {
+      "path": "scripts/nu_pipeline_resume_20261125_v2.py",
+      "bytes": 183,
+      "sha256": "df1a87cb9a9ebb32dfef2a427fea2c55e119274873e4397bd5e0fd2034b8414c"
+    },
+    {
+      "path": "scripts/nu_task_single8_20261125.py",
+      "bytes": 177,
+      "sha256": "01739c67c6a2c541af72df981442ae7639e512125d0523a65dc34d4d006fac6e"
+    },
+    {
+      "path": "scripts/nu_task_single8_independent_20261125.py",
+      "bytes": 198,
+      "sha256": "2be88b4d9f00a7bfb2877d41c090148a62dd16fc5a4213c4c4bcfc5dbeb7893f"
+    },
+    {
+      "path": "scripts/nu_task_watch_20261125.py",
+      "bytes": 176,
+      "sha256": "9d840defb21071d559afa8f3cab0860e2a2ad79b91e1144e29c858ab8ab28879"
+    },
+    {
+      "path": "scripts/nu_task_watch_20261125_v2.py",
+      "bytes": 171,
+      "sha256": "b5fd236c5e609e9450d7e3369d21d531f0011e5d87d8f741e07632042c2a1784"
+    },
+    {
+      "path": "scripts/nu_task_watch_20261125_v3.py",
+      "bytes": 174,
+      "sha256": "e5d43d58071fb249a25704c9f81561cff9cc82b78005bef7c93b58339aba5177"
+    },
+    {
+      "path": "scripts/nuscenes_cpu_runtime_independent_20261125.py",
+      "bytes": 203,
+      "sha256": "ce2fcf456e7de410a0a9dac6cde603c7259676039e138c77d19f9f80325ed1f3"
+    },
+    {
+      "path": "scripts/nuscenes_full_20261125_cached_cpu_preflight.py",
+      "bytes": 3478,
+      "sha256": "e4644feb7f7ea5271638f3548d4eb2efde7c1d3397831416b7f775906936ce4c"
+    },
+    {
+      "path": "scripts/nuscenes_full_20261125_cpu_cache_repair_v6.py",
+      "bytes": 5194,
+      "sha256": "e9aefb33dd32bff87ad3e278b07ae4ae40f3d755f38391fe4b744b64fc3e3684"
+    },
+    {
+      "path": "scripts/nuscenes_full_20261125_cpu_runtime_semantic_check_v6.py",
+      "bytes": 2923,
+      "sha256": "6f0c2daa409756f085c8b82faf8a60cdccfd4eb09afbdc9846bcb33b85c4302d"
+    },
+    {
+      "path": "scripts/nuscenes_full_20261125_execute_v3.py",
+      "bytes": 4250,
+      "sha256": "605f0a5122db47b9db20eee729f337e56eaa61f7531ce1c430e70e7923dda505"
+    },
+    {
+      "path": "scripts/nuscenes_full_20261125_execute_v4.py",
+      "bytes": 4255,
+      "sha256": "f03351038bff68b705a0fc3b636b590cc307ee4e5287629a5505312e24c3337b"
+    },
+    {
+      "path": "scripts/nuscenes_full_20261125_execute_v5.py",
+      "bytes": 4370,
+      "sha256": "1509cbf6e8ca76fa08d9563d861bad022aaa88f3f992fabdaff5e6481c017014"
+    },
+    {
+      "path": "scripts/nuscenes_full_20261125_execute_v6.py",
+      "bytes": 5282,
+      "sha256": "f8c9f14b3706f01fce18c558641924158a6c73d2ca444580739ffc9d185cab05"
+    },
+    {
+      "path": "scripts/nuscenes_full_20261125_execute_v7.py",
+      "bytes": 5474,
+      "sha256": "c083aa30ce6cf8887adab698675f9dd6a60a3b0f050c893f1bb474a64a8bbeba"
+    },
+    {
+      "path": "scripts/nuscenes_full_20261125_index_resume_v3.py",
+      "bytes": 207,
+      "sha256": "86cd36f43b42cab7ab9aa8a071c950f4e2650b51c740b587a5ed6ef4ecdf255e"
+    },
+    {
+      "path": "scripts/nuscenes_full_20261125_phaseA_v4.py",
+      "bytes": 4165,
+      "sha256": "892986927d0c2b02f663e46bffea12695e9f8fa21b72e1a1dc7d3f8adf731c1e"
+    },
+    {
+      "path": "scripts/nuscenes_full_20261125_phaseA_v5.py",
+      "bytes": 4165,
+      "sha256": "94fe3558b0e8f62d6293503578ac6247ceaa726b8fb41ff3a27df7690496e4a9"
+    },
+    {
+      "path": "scripts/nuscenes_full_20261125_prefetch_contract.py",
+      "bytes": 2371,
+      "sha256": "6ffd0c8fa51be85b07c8fd0d97b669573b56a4f54060d57a0ccaba4e4ebb1af5"
+    },
+    {
+      "path": "scripts/nuscenes_full_20261125_resource_guard_contract_v8.py",
+      "bytes": 1664,
+      "sha256": "92efae90e5a4362dcf70774f12838a09978a8aee1d97274d2d28382ae0b7b7fc"
+    },
+    {
+      "path": "scripts/nuscenes_full_20261125_resource_pilot.py",
+      "bytes": 206,
+      "sha256": "eff1de0e4144b209dadef1fac087f40273fc8e8d390aa24e77450b35d5b9bd1d"
+    },
+    {
+      "path": "scripts/nuscenes_full_20261125_resource_runtime_v2.py",
+      "bytes": 518,
+      "sha256": "73894ad134123f7aaa65b951c7f1f7730ffb4072b75c21bbb6d580804ec8834b"
+    },
+    {
+      "path": "scripts/nuscenes_full_20261125_resource_runtime_v3.py",
+      "bytes": 3897,
+      "sha256": "ec1f590b749aef03145033549238233f48ab59bc3edac735f540a768664004ff"
+    },
+    {
+      "path": "scripts/nuscenes_full_20261125_resource_runtime_v4.py",
+      "bytes": 4296,
+      "sha256": "418ec2056c774db035b0fd4dad093c140a4c7080cd861bfae7ccface2dd6b178"
+    },
+    {
+      "path": "scripts/nuscenes_full_20261125_resource_runtime_v5.py",
+      "bytes": 211,
+      "sha256": "42387055343cab35d6c79437739c79f2e3a384b229fe57ef50b2088d75411798"
+    },
+    {
+      "path": "scripts/nuscenes_full_20261125_resource_runtime_v6.py",
+      "bytes": 211,
+      "sha256": "9debc2eddf0155cf604a93e78182c9df95cbc1da97c02c086cb8935eae395caf"
+    },
+    {
+      "path": "scripts/nuscenes_full_20261125_resource_runtime_v8.py",
+      "bytes": 211,
+      "sha256": "bcd23cce948854b5617026857a39b7dd1ac2e5e117fcdd5aea4082b27826ca81"
+    },
+    {
+      "path": "scripts/nuscenes_full_20261125_single8_evaluate.py",
+      "bytes": 208,
+      "sha256": "cb8454a99ea190a54380b1fef6fc674f50863ccd694730144ec15bd29af7b643"
+    },
+    {
+      "path": "scripts/nuscenes_full_20261125_single8_reedge.py",
+      "bytes": 204,
+      "sha256": "5a2302c16942661302fb43dc60a3de9b1a310a7a2fcc1a42a36d9307d411008e"
+    },
+    {
+      "path": "scripts/nuscenes_full_20261125_single8_sharedscan_evaluate.py",
+      "bytes": 219,
+      "sha256": "75cdff08eefbd544f4eb81198c559102fae856c25172e43d43f6b47339fc926a"
+    },
+    {
+      "path": "scripts/nuscenes_full_20261125_single8_statistics.py",
+      "bytes": 210,
+      "sha256": "60a2e5918811c8de578da4161d85af985e603dbcfb392676ccc925d0bb46ba2c"
+    },
+    {
+      "path": "scripts/nuscenes_full_aux_audit_20261125.py",
+      "bytes": 207,
+      "sha256": "38ef22de13cdf651acc6a9d0f6302b98f11f7581cd0a8169dea876607c400218"
+    },
+    {
+      "path": "scripts/nuscenes_resource_budget_independent_20261125.py",
+      "bytes": 191,
+      "sha256": "24d0bb51c5bf8b667769ac76f95bf7b81032af09f56cbd18da13e70b6add0edd"
+    },
+    {
+      "path": "scripts/nuscenes_resume_independent_20261125.py",
+      "bytes": 195,
+      "sha256": "faab423c005b049aeac7e39dd79af5a76aaacdd22d8a309a7d2ca7c6dc4e124d"
+    },
+    {
+      "path": "scripts/relation_single8_independent_20261125.py",
+      "bytes": 193,
+      "sha256": "64ee1c31bedff0edb0da2eb530d5d01ced75cdb0ad7480a6f78abec887ab4945"
+    },
+    {
+      "path": "项目导航.md",
+      "bytes": 5977,
+      "sha256": "4dc681eb9468eed31f1085c504c41970601cce90397dd56fdd419199201ec1f6"
+    }
+  ],
+  "count": 155,
+  "bytes": 5986147,
+  "compiled_changed_python_files": 78,
+  "credential_pattern_matches": 0,
+  "new_changed_symlinks": 0,
+  "files_over8MiB": 0,
+  "remaining_untracked": 0,
+  "data_models_full_results_included": false,
+  "note": "Source drafts saved and labeled; no full experiment executed. Source/GT raw legacy entities not rewritten."
+}

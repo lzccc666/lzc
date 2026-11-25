@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "utc": "2026-11-25T12:34:06.466393+00:00",
+  "scope": "fixed8 source readiness and auxiliary source interface, no GPU pilot results",
+  "fixed_scenes": [
+    "scene-0001",
+    "scene-0002",
+    "scene-0003",
+    "scene-0004",
+    "scene-0005",
+    "scene-0006",
+    "scene-0007",
+    "scene-0008"
+  ],
+  "unique_requested_members": 2227,
+  "certified_available_members": 2227,
+  "missing_members": 0,
+  "all_members_archive": 1,
+  "archive_complete_receipt_sha256": "6df67ff1b9bca9ebe6aac262057fbc43d77621352b2392e626411f8fb41e9309",
+  "preregistration_sha256": "211d0927dd1dbfe540ab4ebeaf5ae453bf00acd4894514c47f848aaa689c5122",
+  "auxiliary_protocol_sha256": "45fe9a98d883af15db2b67334b2becaabc3c009090e3541d9e7657e1858b3bcc",
+  "original65_sources_unchanged": true,
+  "auxiliary4_sources_unchanged": true,
+  "no_GPU": true,
+  "GT_opened": false,
+  "full850_source_ready": false,
+  "auxiliary_source_review": [
+    "Same6 RGB/detection input, no extra model calls.",
+    "Choose nearest strict-past scan of earliest six exposures; later views with age>100ms get empty depth.",
+    "All850/34149 independent auxiliary trajectory, not selected only on changed views.",
+    "Auxiliary error preserves own prefix and temporary; original six still run.",
+    "Source/compute/storage forecast and actual pilot output coverage remain to be checked."
+  ]
+}

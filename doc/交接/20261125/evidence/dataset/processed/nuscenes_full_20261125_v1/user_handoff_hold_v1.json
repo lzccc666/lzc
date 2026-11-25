@@ -1,0 +1,18 @@
+{
+  "schema": "user_handoff_hold_v1",
+  "created_utc": "2026-11-25T14:00:07.689317+00:00",
+  "active": true,
+  "reason": "用户要求规则修改后暂不运行完整实验，先保存全部进度并同步GitHub，交由另一台电脑接手",
+  "blocks": [
+    "formal_full850",
+    "new_GPU_inference",
+    "automatic_release",
+    "new_large_experiment"
+  ],
+  "release_requires": "后续人类用户明确要求继续；不能因原关系定义确认、资源门通过或10包源认证通过自动解除",
+  "allowed": [
+    "finish_already_running_archive_readonly_preparation_without_new_jobs",
+    "small_CPU_contract_checks",
+    "write_handoff_and_git_backup"
+  ]
+}

@@ -1,0 +1,627 @@
+{
+  "definition": "unmatched by saved maximum one-to-one same-class XY3m assignment, but within3m of at least one same-class official GT",
+  "denominator": "prediction-node frame occurrences; not unique physical objects",
+  "totals": {
+    "single_frame": {
+      "prediction_node_frames": 3932,
+      "frames": 1030,
+      "duplicate_occurrences": 42,
+      "current_update": 42,
+      "first_exported_ID_not_proven_new_creation": 42,
+      "unique_exported_IDs_with_duplicate_proxy": 42,
+      "duplicate_fraction": 0.010681586978636826
+    },
+    "original_fusion": {
+      "prediction_node_frames": 8865,
+      "frames": 1030,
+      "duplicate_occurrences": 75,
+      "current_update": 32,
+      "previously_exported_ID": 74,
+      "stale_explicit_last_seen": 43,
+      "first_exported_ID_not_proven_new_creation": 1,
+      "unique_exported_IDs_with_duplicate_proxy": 33,
+      "duplicate_fraction": 0.008460236886632826
+    },
+    "one_to_one_depth_robust_motion": {
+      "prediction_node_frames": 7002,
+      "frames": 1030,
+      "duplicate_occurrences": 307,
+      "stale_explicit_last_seen": 199,
+      "previously_exported_ID": 298,
+      "current_update": 108,
+      "first_exported_ID_not_proven_new_creation": 9,
+      "unique_exported_IDs_with_duplicate_proxy": 48,
+      "duplicate_fraction": 0.04384461582405027
+    }
+  },
+  "by_sequence": [
+    {
+      "method": "one_to_one_depth_robust_motion",
+      "sequence": "0000",
+      "counts": {
+        "duplicate_occurrences": 11,
+        "stale_explicit_last_seen": 2,
+        "previously_exported_ID": 10,
+        "current_update": 9,
+        "first_exported_ID_not_proven_new_creation": 1
+      }
+    },
+    {
+      "method": "one_to_one_depth_robust_motion",
+      "sequence": "0002",
+      "counts": {
+        "duplicate_occurrences": 119,
+        "current_update": 22,
+        "first_exported_ID_not_proven_new_creation": 3,
+        "stale_explicit_last_seen": 97,
+        "previously_exported_ID": 116
+      }
+    },
+    {
+      "method": "one_to_one_depth_robust_motion",
+      "sequence": "0003",
+      "counts": {
+        "duplicate_occurrences": 12,
+        "stale_explicit_last_seen": 8,
+        "previously_exported_ID": 12,
+        "current_update": 4
+      }
+    },
+    {
+      "method": "one_to_one_depth_robust_motion",
+      "sequence": "0004",
+      "counts": {
+        "duplicate_occurrences": 15,
+        "stale_explicit_last_seen": 11,
+        "previously_exported_ID": 14,
+        "current_update": 4,
+        "first_exported_ID_not_proven_new_creation": 1
+      }
+    },
+    {
+      "method": "one_to_one_depth_robust_motion",
+      "sequence": "0005",
+      "counts": {
+        "duplicate_occurrences": 20,
+        "current_update": 9,
+        "previously_exported_ID": 19,
+        "first_exported_ID_not_proven_new_creation": 1,
+        "stale_explicit_last_seen": 11
+      }
+    },
+    {
+      "method": "one_to_one_depth_robust_motion",
+      "sequence": "0006",
+      "counts": {
+        "duplicate_occurrences": 32,
+        "current_update": 4,
+        "first_exported_ID_not_proven_new_creation": 2,
+        "stale_explicit_last_seen": 28,
+        "previously_exported_ID": 30
+      }
+    },
+    {
+      "method": "one_to_one_depth_robust_motion",
+      "sequence": "0007",
+      "counts": {
+        "duplicate_occurrences": 98,
+        "current_update": 56,
+        "previously_exported_ID": 97,
+        "stale_explicit_last_seen": 42,
+        "first_exported_ID_not_proven_new_creation": 1
+      }
+    },
+    {
+      "method": "original_fusion",
+      "sequence": "0002",
+      "counts": {
+        "duplicate_occurrences": 8,
+        "current_update": 4,
+        "previously_exported_ID": 8,
+        "stale_explicit_last_seen": 4
+      }
+    },
+    {
+      "method": "original_fusion",
+      "sequence": "0003",
+      "counts": {
+        "duplicate_occurrences": 6,
+        "stale_explicit_last_seen": 5,
+        "previously_exported_ID": 6,
+        "current_update": 1
+      }
+    },
+    {
+      "method": "original_fusion",
+      "sequence": "0004",
+      "counts": {
+        "duplicate_occurrences": 1,
+        "current_update": 1,
+        "previously_exported_ID": 1
+      }
+    },
+    {
+      "method": "original_fusion",
+      "sequence": "0005",
+      "counts": {
+        "duplicate_occurrences": 13,
+        "stale_explicit_last_seen": 6,
+        "previously_exported_ID": 13,
+        "current_update": 7
+      }
+    },
+    {
+      "method": "original_fusion",
+      "sequence": "0006",
+      "counts": {
+        "duplicate_occurrences": 22,
+        "current_update": 6,
+        "previously_exported_ID": 22,
+        "stale_explicit_last_seen": 16
+      }
+    },
+    {
+      "method": "original_fusion",
+      "sequence": "0007",
+      "counts": {
+        "duplicate_occurrences": 18,
+        "current_update": 8,
+        "previously_exported_ID": 17,
+        "stale_explicit_last_seen": 10,
+        "first_exported_ID_not_proven_new_creation": 1
+      }
+    },
+    {
+      "method": "original_fusion",
+      "sequence": "0008",
+      "counts": {
+        "duplicate_occurrences": 2,
+        "current_update": 1,
+        "previously_exported_ID": 2,
+        "stale_explicit_last_seen": 1
+      }
+    },
+    {
+      "method": "original_fusion",
+      "sequence": "0010",
+      "counts": {
+        "duplicate_occurrences": 5,
+        "current_update": 4,
+        "previously_exported_ID": 5,
+        "stale_explicit_last_seen": 1
+      }
+    },
+    {
+      "method": "single_frame",
+      "sequence": "0000",
+      "counts": {
+        "duplicate_occurrences": 3,
+        "current_update": 3,
+        "first_exported_ID_not_proven_new_creation": 3
+      }
+    },
+    {
+      "method": "single_frame",
+      "sequence": "0002",
+      "counts": {
+        "duplicate_occurrences": 6,
+        "current_update": 6,
+        "first_exported_ID_not_proven_new_creation": 6
+      }
+    },
+    {
+      "method": "single_frame",
+      "sequence": "0003",
+      "counts": {
+        "duplicate_occurrences": 5,
+        "current_update": 5,
+        "first_exported_ID_not_proven_new_creation": 5
+      }
+    },
+    {
+      "method": "single_frame",
+      "sequence": "0004",
+      "counts": {
+        "duplicate_occurrences": 1,
+        "current_update": 1,
+        "first_exported_ID_not_proven_new_creation": 1
+      }
+    },
+    {
+      "method": "single_frame",
+      "sequence": "0005",
+      "counts": {
+        "duplicate_occurrences": 4,
+        "current_update": 4,
+        "first_exported_ID_not_proven_new_creation": 4
+      }
+    },
+    {
+      "method": "single_frame",
+      "sequence": "0006",
+      "counts": {
+        "duplicate_occurrences": 2,
+        "current_update": 2,
+        "first_exported_ID_not_proven_new_creation": 2
+      }
+    },
+    {
+      "method": "single_frame",
+      "sequence": "0007",
+      "counts": {
+        "duplicate_occurrences": 15,
+        "current_update": 15,
+        "first_exported_ID_not_proven_new_creation": 15
+      }
+    },
+    {
+      "method": "single_frame",
+      "sequence": "0008",
+      "counts": {
+        "duplicate_occurrences": 3,
+        "current_update": 3,
+        "first_exported_ID_not_proven_new_creation": 3
+      }
+    },
+    {
+      "method": "single_frame",
+      "sequence": "0010",
+      "counts": {
+        "duplicate_occurrences": 3,
+        "current_update": 3,
+        "first_exported_ID_not_proven_new_creation": 3
+      }
+    }
+  ],
+  "by_class": [
+    {
+      "method": "one_to_one_depth_robust_motion",
+      "category": "car",
+      "counts": {
+        "duplicate_occurrences": 249,
+        "stale_explicit_last_seen": 146,
+        "previously_exported_ID": 240,
+        "current_update": 103,
+        "first_exported_ID_not_proven_new_creation": 9
+      }
+    },
+    {
+      "method": "one_to_one_depth_robust_motion",
+      "category": "pedestrian",
+      "counts": {
+        "duplicate_occurrences": 58,
+        "current_update": 5,
+        "previously_exported_ID": 58,
+        "stale_explicit_last_seen": 53
+      }
+    },
+    {
+      "method": "original_fusion",
+      "category": "car",
+      "counts": {
+        "duplicate_occurrences": 72,
+        "current_update": 31,
+        "previously_exported_ID": 71,
+        "stale_explicit_last_seen": 41,
+        "first_exported_ID_not_proven_new_creation": 1
+      }
+    },
+    {
+      "method": "original_fusion",
+      "category": "pedestrian",
+      "counts": {
+        "duplicate_occurrences": 3,
+        "current_update": 1,
+        "previously_exported_ID": 3,
+        "stale_explicit_last_seen": 2
+      }
+    },
+    {
+      "method": "single_frame",
+      "category": "car",
+      "counts": {
+        "duplicate_occurrences": 42,
+        "current_update": 42,
+        "first_exported_ID_not_proven_new_creation": 42
+      }
+    }
+  ],
+  "by_sequence_class": [
+    {
+      "method": "one_to_one_depth_robust_motion",
+      "sequence": "0000",
+      "category": "car",
+      "counts": {
+        "duplicate_occurrences": 11,
+        "stale_explicit_last_seen": 2,
+        "previously_exported_ID": 10,
+        "current_update": 9,
+        "first_exported_ID_not_proven_new_creation": 1
+      }
+    },
+    {
+      "method": "one_to_one_depth_robust_motion",
+      "sequence": "0002",
+      "category": "car",
+      "counts": {
+        "duplicate_occurrences": 61,
+        "current_update": 17,
+        "first_exported_ID_not_proven_new_creation": 3,
+        "stale_explicit_last_seen": 44,
+        "previously_exported_ID": 58
+      }
+    },
+    {
+      "method": "one_to_one_depth_robust_motion",
+      "sequence": "0002",
+      "category": "pedestrian",
+      "counts": {
+        "duplicate_occurrences": 58,
+        "current_update": 5,
+        "previously_exported_ID": 58,
+        "stale_explicit_last_seen": 53
+      }
+    },
+    {
+      "method": "one_to_one_depth_robust_motion",
+      "sequence": "0003",
+      "category": "car",
+      "counts": {
+        "duplicate_occurrences": 12,
+        "stale_explicit_last_seen": 8,
+        "previously_exported_ID": 12,
+        "current_update": 4
+      }
+    },
+    {
+      "method": "one_to_one_depth_robust_motion",
+      "sequence": "0004",
+      "category": "car",
+      "counts": {
+        "duplicate_occurrences": 15,
+        "stale_explicit_last_seen": 11,
+        "previously_exported_ID": 14,
+        "current_update": 4,
+        "first_exported_ID_not_proven_new_creation": 1
+      }
+    },
+    {
+      "method": "one_to_one_depth_robust_motion",
+      "sequence": "0005",
+      "category": "car",
+      "counts": {
+        "duplicate_occurrences": 20,
+        "current_update": 9,
+        "previously_exported_ID": 19,
+        "first_exported_ID_not_proven_new_creation": 1,
+        "stale_explicit_last_seen": 11
+      }
+    },
+    {
+      "method": "one_to_one_depth_robust_motion",
+      "sequence": "0006",
+      "category": "car",
+      "counts": {
+        "duplicate_occurrences": 32,
+        "current_update": 4,
+        "first_exported_ID_not_proven_new_creation": 2,
+        "stale_explicit_last_seen": 28,
+        "previously_exported_ID": 30
+      }
+    },
+    {
+      "method": "one_to_one_depth_robust_motion",
+      "sequence": "0007",
+      "category": "car",
+      "counts": {
+        "duplicate_occurrences": 98,
+        "current_update": 56,
+        "previously_exported_ID": 97,
+        "stale_explicit_last_seen": 42,
+        "first_exported_ID_not_proven_new_creation": 1
+      }
+    },
+    {
+      "method": "original_fusion",
+      "sequence": "0002",
+      "category": "car",
+      "counts": {
+        "duplicate_occurrences": 5,
+        "current_update": 3,
+        "previously_exported_ID": 5,
+        "stale_explicit_last_seen": 2
+      }
+    },
+    {
+      "method": "original_fusion",
+      "sequence": "0002",
+      "category": "pedestrian",
+      "counts": {
+        "duplicate_occurrences": 3,
+        "current_update": 1,
+        "previously_exported_ID": 3,
+        "stale_explicit_last_seen": 2
+      }
+    },
+    {
+      "method": "original_fusion",
+      "sequence": "0003",
+      "category": "car",
+      "counts": {
+        "duplicate_occurrences": 6,
+        "stale_explicit_last_seen": 5,
+        "previously_exported_ID": 6,
+        "current_update": 1
+      }
+    },
+    {
+      "method": "original_fusion",
+      "sequence": "0004",
+      "category": "car",
+      "counts": {
+        "duplicate_occurrences": 1,
+        "current_update": 1,
+        "previously_exported_ID": 1
+      }
+    },
+    {
+      "method": "original_fusion",
+      "sequence": "0005",
+      "category": "car",
+      "counts": {
+        "duplicate_occurrences": 13,
+        "stale_explicit_last_seen": 6,
+        "previously_exported_ID": 13,
+        "current_update": 7
+      }
+    },
+    {
+      "method": "original_fusion",
+      "sequence": "0006",
+      "category": "car",
+      "counts": {
+        "duplicate_occurrences": 22,
+        "current_update": 6,
+        "previously_exported_ID": 22,
+        "stale_explicit_last_seen": 16
+      }
+    },
+    {
+      "method": "original_fusion",
+      "sequence": "0007",
+      "category": "car",
+      "counts": {
+        "duplicate_occurrences": 18,
+        "current_update": 8,
+        "previously_exported_ID": 17,
+        "stale_explicit_last_seen": 10,
+        "first_exported_ID_not_proven_new_creation": 1
+      }
+    },
+    {
+      "method": "original_fusion",
+      "sequence": "0008",
+      "category": "car",
+      "counts": {
+        "duplicate_occurrences": 2,
+        "current_update": 1,
+        "previously_exported_ID": 2,
+        "stale_explicit_last_seen": 1
+      }
+    },
+    {
+      "method": "original_fusion",
+      "sequence": "0010",
+      "category": "car",
+      "counts": {
+        "duplicate_occurrences": 5,
+        "current_update": 4,
+        "previously_exported_ID": 5,
+        "stale_explicit_last_seen": 1
+      }
+    },
+    {
+      "method": "single_frame",
+      "sequence": "0000",
+      "category": "car",
+      "counts": {
+        "duplicate_occurrences": 3,
+        "current_update": 3,
+        "first_exported_ID_not_proven_new_creation": 3
+      }
+    },
+    {
+      "method": "single_frame",
+      "sequence": "0002",
+      "category": "car",
+      "counts": {
+        "duplicate_occurrences": 6,
+        "current_update": 6,
+        "first_exported_ID_not_proven_new_creation": 6
+      }
+    },
+    {
+      "method": "single_frame",
+      "sequence": "0003",
+      "category": "car",
+      "counts": {
+        "duplicate_occurrences": 5,
+        "current_update": 5,
+        "first_exported_ID_not_proven_new_creation": 5
+      }
+    },
+    {
+      "method": "single_frame",
+      "sequence": "0004",
+      "category": "car",
+      "counts": {
+        "duplicate_occurrences": 1,
+        "current_update": 1,
+        "first_exported_ID_not_proven_new_creation": 1
+      }
+    },
+    {
+      "method": "single_frame",
+      "sequence": "0005",
+      "category": "car",
+      "counts": {
+        "duplicate_occurrences": 4,
+        "current_update": 4,
+        "first_exported_ID_not_proven_new_creation": 4
+      }
+    },
+    {
+      "method": "single_frame",
+      "sequence": "0006",
+      "category": "car",
+      "counts": {
+        "duplicate_occurrences": 2,
+        "current_update": 2,
+        "first_exported_ID_not_proven_new_creation": 2
+      }
+    },
+    {
+      "method": "single_frame",
+      "sequence": "0007",
+      "category": "car",
+      "counts": {
+        "duplicate_occurrences": 15,
+        "current_update": 15,
+        "first_exported_ID_not_proven_new_creation": 15
+      }
+    },
+    {
+      "method": "single_frame",
+      "sequence": "0008",
+      "category": "car",
+      "counts": {
+        "duplicate_occurrences": 3,
+        "current_update": 3,
+        "first_exported_ID_not_proven_new_creation": 3
+      }
+    },
+    {
+      "method": "single_frame",
+      "sequence": "0010",
+      "category": "car",
+      "counts": {
+        "duplicate_occurrences": 3,
+        "current_update": 3,
+        "first_exported_ID_not_proven_new_creation": 3
+      }
+    }
+  ],
+  "limitations": [
+    "first exported ID is not proven creation time; tentative states and exact association lineage were not saved",
+    "current update is not proof of correct/wrong association; this ledger cannot certify the cause as erroneous matching",
+    "nearby same-class centers in crowds and annotation gaps can trigger the duplicate proxy; no physical-duplicate human truth claim"
+  ],
+  "no_new_models_or_matching": true,
+  "source_sha256": {
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/kitti/validation/iterations/kitti_local_all_20261125_tracking_v1/mapping_frames.jsonl.gz": "b93445e23ded4547d2f25b7a6121bcdc17e5048316bba76cb601e3a9c9ad6dff",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/kitti/validation/iterations/kitti_local_all_20261125_tracking_v1/evaluation_frames.jsonl.gz": "379a57e95031ed5919a3562abbceb3cce533b1e39d43015ceec6b34fd963f135",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/results/kitti/validation/iterations/kitti_local_all_20261125_tracking_v1/evaluation_summary_v2.json": "9e319cf4fa75a8f75ff8aceea4dec65f6026ec896ee1e8515c4c3ec3a9067b33",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/conceptgraph/completion/kitti_duplicate_diagnosis_20261125.py": "fa876d1324991d04b888fd2388664c31355e43ae9bd2d84e189ae40944d8c73d",
+    "/root/.codex/worktrees/lzc-integration-20261125/lizichong/scripts/kitti_duplicate_diagnosis_20261125.py": "ebe8fb17241b2f41d83304c5e380b6b25d440ea9b81350d0bc2348e3ea433fcb"
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "passed": true,
+  "audit_utc": "2026-11-25T13:12:05.880813+00:00",
+  "inventory_sha256": "ed51e4cf4675d191bf3535b95b8c6f5cb0a5316d50bf929aa7c67df238466805",
+  "source_sha256": "c293c763042c9812bdea1940e4e12e1a7a84b9eb8705be48c6ff88db966187a9",
+  "pair_count": 22400,
+  "matched_sequences": 10,
+  "by_sequence": {
+    "00": 4541,
+    "01": 1101,
+    "02": 4661,
+    "04": 271,
+    "05": 2761,
+    "06": 1101,
+    "07": 1101,
+    "08": 4071,
+    "09": 1591,
+    "10": 1201
+  },
+  "retained_missing_sequence": "03:801 LiDAR/point-label/pose/time frames lack matching local raw RGB",
+  "sequence08_raw_offset": 1100,
+  "all_prior_pairs_byte_equivalent": true,
+  "reused_pairs": 10883,
+  "no_repeat_of_certified_00_01_02_headers_in_resume_source": true,
+  "current_tar_header_samples": [
+    {
+      "sequence": "00",
+      "frame_idx": 2270,
+      "name": "KITTI_Depth_Completion/raw/2011_10_03/2011_10_03_drive_0027_sync/image_02/data/0000002270.png"
+    },
+    {
+      "sequence": "01",
+      "frame_idx": 550,
+      "name": "KITTI_Depth_Completion/raw/2011_10_03/2011_10_03_drive_0042_sync/image_02/data/0000000550.png"
+    },
+    {
+      "sequence": "02",
+      "frame_idx": 2330,
+      "name": "KITTI_Depth_Completion/raw/2011_10_03/2011_10_03_drive_0034_sync/image_02/data/0000002330.png"
+    },
+    {
+      "sequence": "04",
+      "frame_idx": 135,
+      "name": "KITTI_Depth_Completion/raw/2011_09_30/2011_09_30_drive_0016_sync/image_02/data/0000000135.png"
+    },
+    {
+      "sequence": "05",
+      "frame_idx": 1380,
+      "name": "KITTI_Depth_Completion/raw/2011_09_30/2011_09_30_drive_0018_sync/image_02/data/0000001380.png"
+    },
+    {
+      "sequence": "06",
+      "frame_idx": 550,
+      "name": "KITTI_Depth_Completion/raw/2011_09_30/2011_09_30_drive_0020_sync/image_02/data/0000000550.png"
+    },
+    {
+      "sequence": "07",
+      "frame_idx": 550,
+      "name": "KITTI_Depth_Completion/raw/2011_09_30/2011_09_30_drive_0027_sync/image_02/data/0000000550.png"
+    },
+    {
+      "sequence": "08",
+      "frame_idx": 2035,
+      "name": "KITTI_Depth_Completion/raw/2011_09_30/2011_09_30_drive_0028_sync/image_02/data/0000003135.png"
+    },
+    {
+      "sequence": "09",
+      "frame_idx": 795,
+      "name": "KITTI_Depth_Completion/raw/2011_09_30/2011_09_30_drive_0033_sync/image_02/data/0000000795.png"
+    },
+    {
+      "sequence": "10",
+      "frame_idx": 600,
+      "name": "KITTI_Depth_Completion/raw/2011_09_30/2011_09_30_drive_0034_sync/image_02/data/0000000600.png"
+    }
+  ],
+  "sensor_payload_bytes_read": 0,
+  "independent_large_archive_CRC_or_SHA": false,
+  "original_mapping_metadata_download_SHA_repeated": false,
+  "supplied_pose_time_calibration_SHA": {
+    "00": {
+      "pose_sha256": "dd005d8fbd9eef6fa02ae332602d7e51eb44c227fa6710e301c24706e4851c71",
+      "times_sha256": "99a2899466cdc28dd292b4856d214a8b0aab035b91b02bb6afcb4ff363e7d421",
+      "calib_sha256": "1bb615b4535ac73053be176ac1650fcfe7678ae8225d8999e5a822aa71655682"
+    },
+    "01": {
+      "pose_sha256": "129d9d260ab2cd1ca35b163bd5a5265ec43906f383c4efd4bc9a9d67be3909c6",
+      "times_sha256": "713ffd768507bd11ed168d2456de26f7b4d941bed236b5b581c2dcd26db17f69",
+      "calib_sha256": "1bb615b4535ac73053be176ac1650fcfe7678ae8225d8999e5a822aa71655682"
+    },
+    "02": {
+      "pose_sha256": "499b46f03b1888a9f841d0a9db6f746f92643fa4132922bdc075ebe12953df26",
+      "times_sha256": "5ee392fffa15f509243fc372aeeebf0250e90df6f711065bff55367d7b11aa09",
+      "calib_sha256": "1bb615b4535ac73053be176ac1650fcfe7678ae8225d8999e5a822aa71655682"
+    },
+    "03": {
+      "pose_sha256": "66fc6c9035c5c875e2d9683d5e4e99d76a6fcd0c8f29c74a4e9e11eb6417b773",
+      "times_sha256": "dfabf563ac698165e445d2b6f7ca18da0a85b2cf317e30a7fecb2d8d754c4fec",
+      "calib_sha256": "d76b5668c898c4c6eba9b1024eeba43694cf9026362a2d85b893e3039f8934d0"
+    },
+    "04": {
+      "pose_sha256": "53a1a846177879fc45fa4105652ba58f02d3a662c16b9b9a6c957f61065d4e25",
+      "times_sha256": "d78cfcd055c9281ae3e6bfeebab1874aeb3730f09f129bd94c53ecfe40f9b0fb",
+      "calib_sha256": "5e7b3136edf2799be47e472ca9c5362fcacbee5d21c6ab8038506b8691b8b9ec"
+    },
+    "05": {
+      "pose_sha256": "6db9dcf03a39fe04573d20feb12bdbbada90568ce92ab577db4c44cf8bd24794",
+      "times_sha256": "9dbaedde20199403177f59a564fc214536bdeacf67968f8c4cee9411eadc0169",
+      "calib_sha256": "5e7b3136edf2799be47e472ca9c5362fcacbee5d21c6ab8038506b8691b8b9ec"
+    },
+    "06": {
+      "pose_sha256": "920dfeabea456187415e99d07441cc67891bd82ad5b6539c3b7148f08d06f0bf",
+      "times_sha256": "61c8f09665fb7e89e59515990425f41ec42049bbb2fc94493e69133ca14100cd",
+      "calib_sha256": "5e7b3136edf2799be47e472ca9c5362fcacbee5d21c6ab8038506b8691b8b9ec"
+    },
+    "07": {
+      "pose_sha256": "1356a414544a6cd1c2acbe939275dd561869f4ab4183efde1b8fc9dcecbaccbd",
+      "times_sha256": "13aa9c27223088b6cf646197767a842f0527e3770f5f8a436a8357bd7fff70a1",
+      "calib_sha256": "5e7b3136edf2799be47e472ca9c5362fcacbee5d21c6ab8038506b8691b8b9ec"
+    },
+    "08": {
+      "pose_sha256": "a3542bb46e42048609edd5c88a0a678f972a60b7bf3f592066a19ae05d48c36f",
+      "times_sha256": "65359db9033c8716d2150c90c6fabc6f93db640531d3370e3eb7056d82590e9f",
+      "calib_sha256": "5e7b3136edf2799be47e472ca9c5362fcacbee5d21c6ab8038506b8691b8b9ec"
+    },
+    "09": {
+      "pose_sha256": "9ae5f75267928f12efe0f116d312ef01b0fe216f9a7238cbb2e1cc598d23e230",
+      "times_sha256": "5e46f7b2bf289d693128d64ac8d77631d75e9575d32a2d2686e696a0c406038a",
+      "calib_sha256": "5e7b3136edf2799be47e472ca9c5362fcacbee5d21c6ab8038506b8691b8b9ec"
+    },
+    "10": {
+      "pose_sha256": "cb0d086ee903195e48acb8254d72c8a51fb2ccb8bfb837a3bbdaeaa6faeb4eba",
+      "times_sha256": "a600029792cbd061121b132e83960892a092f5d061e66857675ca826dcfe7e9f",
+      "calib_sha256": "5e7b3136edf2799be47e472ca9c5362fcacbee5d21c6ab8038506b8691b8b9ec"
+    }
+  },
+  "pose_scope": "provider SuMa SLAM, not raw OXTS; strict causal pose not certified",
+  "metric_scope": "data readiness only; point semantic/instance labels are not Object3D box centers",
+  "current_Object_Tracking_results_changed": false,
+  "new_GPU_calls": 0,
+  "elapsed_s": 19.112799804657698
+}

@@ -1,0 +1,30 @@
+{
+  "complete": true,
+  "technical_revision": "sequential_index_and_tar_v2",
+  "archive": "/root/autodl-pub/nuScenes/Fulldatasetv1.0/Trainval/v1.0-trainval07_blobs.tgz",
+  "archive_bytes": 29523743832,
+  "archive_mtime_ns": 1728883736819489913,
+  "archive_sha256": "8c017f5d615dca99d5f8ee91b91b23b9128ed16b0ab271329d25f25861301dcb",
+  "members": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/nuscenes_full_20261125_v1/archives_v2/archive07_members.jsonl.gz",
+  "members_sha256": "e54ddaf17c8f3f909e180708c1ea1b519467d3514851a9cae5e5580983d1a40b",
+  "seek_index": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/nuscenes_full_20261125_v1/archives_v2/archive07.gzidx",
+  "seek_index_sha256": "d5c7f874e13859c74217efc328aeada73c3123dc638076b1571a92acd3c079d1",
+  "seek_index_bytes": 78915955,
+  "spacing": 16777216,
+  "counts": {
+    "tar_headers": 265011,
+    "retained_members": 54047,
+    "CAM_FRONT_RIGHT": 3441,
+    "CAM_FRONT_LEFT": 3441,
+    "CAM_BACK": 3441,
+    "CAM_BACK_RIGHT": 3441,
+    "CAM_BACK_LEFT": 3441,
+    "LIDAR_TOP": 33401,
+    "CAM_FRONT": 3441
+  },
+  "elapsed_s": 2737.6433142758906,
+  "ended_utc": "2026-11-25T13:53:47.843383+00:00",
+  "gzip_CRC_validation": true,
+  "maximum_process_RSS_bytes": 190099456,
+  "GPU_calls": 0
+}

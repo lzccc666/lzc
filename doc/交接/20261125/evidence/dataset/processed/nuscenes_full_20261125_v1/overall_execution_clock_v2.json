@@ -1,0 +1,10 @@
+{
+  "created_utc": "2026-11-25T13:34:35.004995+00:00",
+  "overall_start_unix": 1795604520.0,
+  "overall_start_UTC": "2026-11-25T11:02:00+00:00",
+  "absolute_deadline_unix": 1795777320.0,
+  "absolute_deadline_UTC": "2026-11-27T11:02:00+00:00",
+  "wall_budget_s": 172800,
+  "prior_clock_sha256": "12ab94d685d87ac4476892e6a2cb874871650e64cd68404942f655eac4256703",
+  "start_not_reset": true
+}

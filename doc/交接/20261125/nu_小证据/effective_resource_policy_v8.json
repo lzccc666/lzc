@@ -1,0 +1,22 @@
+{
+  "created_utc": "2026-11-25T13:34:35.006509+00:00",
+  "authorization": "root explicit cumulativeGPU32h/overall48h, nu5.25GiB inside team6GiB; original firstPhaseA11:02 start unchanged",
+  "GPU_occupied_s": 115200,
+  "overall_wall_s": 172800,
+  "nu_persistent_bytes": 5637144576,
+  "other_team_persistent_bytes": 805306368,
+  "team_persistent_bytes": 6442450944,
+  "temporary_disk_bytes": 536870912,
+  "prefetch_RAM_bytes": 134217728,
+  "team_temporary_bound_bytes": 1073741824,
+  "minimum_free_bytes": 21474836480,
+  "phaseA_deadline_unix": 1795617120,
+  "clock_path": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/dataset/processed/nuscenes_full_20261125_v1/overall_execution_clock_v2.json",
+  "clock_sha256": "85937a3e7e2c618f3e534b61f93779b866bc0a4c4fa339a192145c3375c32124",
+  "original12h36h_resource_gate_passed": false,
+  "original_engineering_passed_not_resource_approval": true,
+  "old_pilot_summary_sha256": "f88299e26787bb071e2e3354803cea9db1c3b9dcf97417e8f993e86982b84110",
+  "all850_scope_preserved": true,
+  "all_method_thresholds_seeds_and_roles_unchanged": true,
+  "GT_not_accessed_for_method_selection": true
+}

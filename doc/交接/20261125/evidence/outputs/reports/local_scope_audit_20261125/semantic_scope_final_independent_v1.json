@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "utc": "2026-11-25T13:19:52.042129+00:00",
+  "final_ledger_sha256": "8d62936f4b16e55efee30d0b0737dc6c35fb590b134a1a7a666733cc44368154",
+  "sequences": 22,
+  "LiDAR_frames": 43552,
+  "public_point_label_frames": 23201,
+  "certified_RGB_LiDAR_pose_time_pairs": 22400,
+  "completed_mapping_frames": 0,
+  "causal_pose_claim": false,
+  "box_center_protocol_applicable": false,
+  "all_source_SHA_verified": true,
+  "all_available_pair_counts_match_independent_audit": true,
+  "new_GPU_calls": 0
+}

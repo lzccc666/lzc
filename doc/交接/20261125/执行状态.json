@@ -1,0 +1,32 @@
+{
+  "schema": "execution_handoff_v1",
+  "created_utc": "2026-11-25T14:01:46.441800+00:00",
+  "user_handoff_hold": {
+    "active": true,
+    "automatic_expiry": false,
+    "release_requires": "人类用户后续明确要求继续；不能由资源预算、源认证或原关系定义确认自动解除",
+    "reason": "先保存全部工作和进度并同步GitHub，准备另一台电脑接手"
+  },
+  "formal_experiment": {
+    "run_id": "nuscenes_full_20261125_single8_main_v1",
+    "started": false,
+    "full850_execution_validated": false,
+    "state": "user_handoff_hold"
+  },
+  "relation_rule": {
+    "contract": "single8_v1_source_relative_to_target",
+    "CPU_pilot_completed": true,
+    "scenes": 8,
+    "frames": 318,
+    "method_frames": 2226,
+    "new_GPU_calls": 0
+  },
+  "shared_sensor_data_in_git": false,
+  "continuation_requires": [
+    "读取本文件及交接文档",
+    "用户明确继续",
+    "新单关系正式runtime/prepare/promotion/resume接线及CPU验证",
+    "全部10包真实成员认证与独立核验",
+    "真实资源预算门通过"
+  ]
+}

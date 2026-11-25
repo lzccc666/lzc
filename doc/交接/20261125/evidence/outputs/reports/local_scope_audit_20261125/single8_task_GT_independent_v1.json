@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "audit_utc": "2026-11-25T13:57:04.342496+00:00",
+  "all_tasks": 2315,
+  "official_context_frames": 502,
+  "counts": {
+    "class_nearest": 1488,
+    "changed": 64,
+    "directional": 827,
+    "positive_to_negative": 41,
+    "changed_still_positive": 23,
+    "pending_exact": 60
+  },
+  "by_protocol": {
+    "legacy1115": {
+      "all": 1115,
+      "negative": 420,
+      "positive": 695
+    },
+    "unified1200": {
+      "all": 1200,
+      "negative": 1002,
+      "positive": 138,
+      "pending": 60
+    }
+  },
+  "actual_shared_GT_builder_called": false,
+  "actual_navigation_matcher_called": false,
+  "independent_GEOMETRY": "nearest8 ray dot products",
+  "independent_query_parse": "literal category/phrase split; independent inclusion sets",
+  "all_original_class_nearest_and_pending_exact": true,
+  "all_GT_object_centers_IDs_and_visibility_scope_preserved": true,
+  "source_and_input_SHA_verified": true,
+  "manifest_sha256": "3a1372080afa896a8c4f122f5c646091f30479d7884ba18fdeb5731138340740",
+  "method_input_task_SHA_unchanged": true,
+  "predicted_maps_or_method_results_read": false,
+  "new_GPU_calls": 0,
+  "elapsed_s": 0.20700296945869923,
+  "audit_source_sha256": "1b8aead4e2721bcfbb907063233d023fdbcf7fa35a9d545d6e25585883b5c54a"
+}

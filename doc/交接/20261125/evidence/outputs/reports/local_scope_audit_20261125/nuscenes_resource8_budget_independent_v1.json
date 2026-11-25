@@ -1,0 +1,148 @@
+{
+  "passed_measurement_recount": true,
+  "audit_utc": "2026-11-25T13:33:53.848549+00:00",
+  "source_sha256": "bc77f66722799a0837f5cc8d01db678c61e5fdd635dcae44c4e5d866d3a6032f",
+  "summary_sha256": "f88299e26787bb071e2e3354803cea9db1c3b9dcf97417e8f993e86982b84110",
+  "closed_scenes": [
+    {
+      "scene": "scene-0001",
+      "frames": 40,
+      "main_complete_SHA256": "dfb1eec13713d6fc62e955de16738884fb44759d1cc797c6cbaa316db7c864dc",
+      "auxiliary_complete_SHA256": "8d8af7ba1dcaa68b74d64731ea18f995b39436f622de41c7c243de11c6e60e82"
+    },
+    {
+      "scene": "scene-0002",
+      "frames": 40,
+      "main_complete_SHA256": "d5642f92678cc76ff0c8d929ea08eaa1ac6d03cd6879a0c8853bd1ad1572c882",
+      "auxiliary_complete_SHA256": "d815cbb57a16938e65f03307773ca6ce8be1442f59aea58ad6d0be307992dd88"
+    },
+    {
+      "scene": "scene-0003",
+      "frames": 40,
+      "main_complete_SHA256": "f467737a3fc6b0dcbab87a26c66def1d2b568ec0e48f155de8721ad7a4ca74a5",
+      "auxiliary_complete_SHA256": "d2f1208f7833c8e5c3f6fd65cd6bf094772c6e5a20937a742028679496ef5c71"
+    },
+    {
+      "scene": "scene-0004",
+      "frames": 40,
+      "main_complete_SHA256": "797629d11831af651ef869d02fe0a05bccb063795e77b0228ea657b2ecf17865",
+      "auxiliary_complete_SHA256": "ea12dc897ce8f26d3fc63ff18ab9ad433095747238475765bc0a4102bec2f284"
+    },
+    {
+      "scene": "scene-0005",
+      "frames": 39,
+      "main_complete_SHA256": "1a50e37bc15dd87f435232fe35453564478ec86e5d803c9aff78a91947d3752d",
+      "auxiliary_complete_SHA256": "d85cd27b6c6c418b8b79b713922294bfc476c5ccdcba56176e29742a40c84381"
+    },
+    {
+      "scene": "scene-0006",
+      "frames": 40,
+      "main_complete_SHA256": "7810592fe27eff28b276be1e82e61a33d0401e097b152da9f7edcf0d1973efa7",
+      "auxiliary_complete_SHA256": "421ddafe408542be76b6db8bfe4cf1e987a3ea5ef7e233bca07ed0d7f0135d8a"
+    },
+    {
+      "scene": "scene-0007",
+      "frames": 39,
+      "main_complete_SHA256": "38913270d5777301f1c77c83c9e71f2a0802d04636a1423e011f8262e3ac7d69",
+      "auxiliary_complete_SHA256": "44143548784d806839fb8ecb0de8fabe229665ccf1cf755a177909adebfe408b"
+    },
+    {
+      "scene": "scene-0008",
+      "frames": 40,
+      "main_complete_SHA256": "888601730c2b4f2647c639e4f0e7d7deb0e98685ecb7ea2fc5fb333cd757d1a2",
+      "auxiliary_complete_SHA256": "f81ac078a42ec24e0ee8c8ffd6eff7ca80ff3ec4a4fd3b16e190e31e7d2624f6"
+    }
+  ],
+  "counts": {
+    "actual_GPU_image_calls": 1908,
+    "resource_regression_extra_GPU_calls": 48,
+    "reused_failed_attempt_GPU_image_calls": 240,
+    "model_microseconds": 213375502,
+    "empty_depth_views": 48,
+    "frames": 318,
+    "single_frame_predictions": 693,
+    "original_fusion_predictions": 1388,
+    "R1_predictions": 1071,
+    "S2_1_predictions": 1027,
+    "S2_3_predictions": 2369,
+    "S2_6_predictions": 8805
+  },
+  "method_frames": 2226,
+  "actual_primary_image_calls": 1908,
+  "additional_source_regression_model_calls": 48,
+  "total_physical_model_calls": 1956,
+  "first_primary_240_already_included_not_repeated": true,
+  "all_attempts": [
+    {
+      "attempt": "run0001",
+      "released_utc": "2026-11-25T12:44:17.445597+00:00",
+      "GPU_occupied_wall_s": 190.46002849377692,
+      "PID": 24958,
+      "prior_GPU_occupied_s": 0.0,
+      "acquired_SHA256": "48848f8f5ae9401e4dee49679042a148643604a626140b906ee1a3c263f19f5c",
+      "released_SHA256": "5cd8b64acfd945099df7419b4fd3046a2ea31a45b1d430c1ecb83db8d42d2b9a"
+    },
+    {
+      "attempt": "run0002",
+      "released_utc": "2026-11-25T12:46:54.757349+00:00",
+      "GPU_occupied_wall_s": 25.303205391392112,
+      "PID": 25550,
+      "prior_GPU_occupied_s": 190.46002849377692,
+      "acquired_SHA256": "7370a5bad141d2d0bf2585ecbf3b8d6c386d06d6576648a57ff0943df5e8a415",
+      "released_SHA256": "54a0f2ff3bf059d254709531e3709934b1434a7f83c9959e94df3b572a01d0b4"
+    },
+    {
+      "attempt": "run0003",
+      "released_utc": "2026-11-25T12:48:45.442509+00:00",
+      "GPU_occupied_wall_s": 17.456366628408432,
+      "PID": 25953,
+      "prior_GPU_occupied_s": 215.76323388516903,
+      "acquired_SHA256": "4bd25d2f43b391b1535406fda0a6296747cb7fd75bd5b9819ed6f4374a096617",
+      "released_SHA256": "5dde8a3d993ceb929c5726ebd76816562a0f2038778c04b73d3ee3522f54cb08"
+    },
+    {
+      "attempt": "run0004",
+      "released_utc": "2026-11-25T13:06:00.795390+00:00",
+      "GPU_occupied_wall_s": 499.3109785821289,
+      "PID": 26724,
+      "prior_GPU_occupied_s": 233.21960051357746,
+      "acquired_SHA256": "425defa09e90acba2d1c65efefe65232dbcaab2be6aee7b5c4a480bf41eee9c0",
+      "released_SHA256": "c201566c2318ee004354f4822a56ccf1814bbb8f465828fcd6e887e5d56b15fb"
+    },
+    {
+      "attempt": "run0005",
+      "released_utc": "2026-11-25T13:26:24.769180+00:00",
+      "GPU_occupied_wall_s": 295.58971517905593,
+      "PID": 29040,
+      "prior_GPU_occupied_s": 732.5305790957063,
+      "acquired_SHA256": "f557748a2975e5b6829193cc05b985f63294a11b4766959d9309ff575e5a6515",
+      "released_SHA256": "9fc4ab8669e7b93fce947321aed13acda4271be2fbf28e3a6f1361720e55a575"
+    }
+  ],
+  "total_actual_GPU_occupied_s": 1028.1202942747623,
+  "summary_pre_finally_vs_release_difference_s": 0.00014690682291984558,
+  "projected_all850_actual_occupied_hours": 30.668483516062945,
+  "projection": "linear conservative extrapolation of all cumulative pilot occupancy, including failures and IO/CPU wait; fixed retry costs are thus extrapolated too",
+  "old_12h_actual_occupancy_gate_passed": false,
+  "authorized_new_32h_numerical_projection_gate_passed": true,
+  "authorized_overall_wall_hours": 48,
+  "authorized_nu_persistent_GiB": 5.25,
+  "effective_runtime_budget_overlay_verified": false,
+  "runtime_gate_note": "separate audit must verify the new effective32h/48h/5.25GiB runtime overlay before full-run approval",
+  "overall_start_not_reset": "2026-11-25T11:02:00+00:00",
+  "stage_wall_sums": {
+    "source_IO_recorded_on_accepted_scene_s": 324.645584654063,
+    "frontend_wall_recorded_on_accepted_scene_s": 292.7108211386949,
+    "main_CPU_scene_wall_sum_s": 764.8981278594583,
+    "aux_CPU_scene_wall_sum_s": 422.50057446584105
+  },
+  "stage_wall_sums_not_additive_with_GPU_occupancy": true,
+  "first240_model_and_frontend_timing": "unavailable, placeholders zero are not measurements; actual run0001 occupancy retained",
+  "first240_source_IO_evidence": "/root/.codex/worktrees/lzc-integration-20261125/lizichong/outputs/reports/local_scope_audit_20261125/nuscenes_source_IO_comparison_independent_v1.json",
+  "independent_no_contention_steady_state_measurement": false,
+  "peak_aggregate_temp_bytes": 149532617,
+  "temporary_512MiB_passed": true,
+  "quality_metrics_not_evaluated": true,
+  "new_GPU_calls": 0,
+  "elapsed_s": 0.002949213609099388
+}

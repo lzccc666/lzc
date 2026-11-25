@@ -1,0 +1,19 @@
+{
+  "passed_source_review": true,
+  "utc": "2026-11-25T13:15:28.625550+00:00",
+  "watch_source_sha256": "eadcff407ded0c75b082267f39131502ce36dc04efb3b1a1e478c22288508899",
+  "registration_sha256": "f418ca478ae29ab9485e5ce6b0000779d2b9383bfc3b0d71a22454d5b79b77eb",
+  "fixed_start_UTC": "2026-11-25T12:57:37.475963+00:00",
+  "global_single_consumer_lock": true,
+  "cumulative_active_and_wall_inherited": true,
+  "failed_child_elapsed_charged_in_finally": true,
+  "only_control_JSON_write_races_deferred": true,
+  "real_frame_missing_or_SHA_failure_fatal": true,
+  "attempt_failure_not_global_terminal": true,
+  "producer_v6_stopped_terminal_bridge_compatible": true,
+  "lossless_archive_functions_identical_to_v2": true,
+  "current_formal_scenes_consumed": 0,
+  "new_scores_available": false,
+  "no_GPU": true,
+  "limitation": "source and live waiting-registration review; first real formal scene selection still needs candidate-visibility/input audit"
+}

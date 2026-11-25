@@ -1,0 +1,75 @@
+<div id="relation-eight-distance">
+  <style>
+    #relation-eight-distance{display:grid;gap:calc(var(--font-size-base)*.8);color:var(--foreground)}
+    #relation-eight-distance .eight-map{display:block;width:100%;height:410px;touch-action:none;overflow:visible}
+    #relation-eight-distance .eight-text{fill:var(--foreground);font-weight:400;pointer-events:none}
+    #relation-eight-distance .eight-secondary{fill:var(--muted-foreground);pointer-events:none}
+    #relation-eight-distance .eight-structure{stroke:var(--border);stroke-width:1;fill:none;pointer-events:none}
+    #relation-eight-distance .eight-edge{stroke:var(--viz-series-1);stroke-width:2;fill:none;pointer-events:none}
+    #relation-eight-distance .eight-target{fill:var(--viz-series-1);stroke:var(--background);stroke-width:2;cursor:grab}
+    #relation-eight-distance .eight-fields{display:grid;grid-template-columns:1fr 1fr;gap:calc(var(--font-size-base)*.7)}
+  </style>
+  <h2>一对物体，一个方向，距离单独记录</h2>
+  <div class="viz-controls">
+    <label class="form-label">参考轴转角 <span id="eight-angle-value" class="tabular-nums">0°</span>
+      <input id="eight-angle" class="form-range" type="range" min="-180" max="180" step="5" value="0">
+    </label>
+    <button id="eight-inverse" class="btn" type="button">反向查询</button>
+  </div>
+  <svg id="eight-map" class="eight-map" role="img" aria-label="八方向单关系示意图，默认A相对B在左前方，距离5米。">
+    <title>八方向单关系</title><desc>每对物体至多存储一条边，方向八选一，XY距离是数值属性。前向是CAM_FRONT光轴在世界XY的投影，不是物体车头方向。12米以外或中心重合不生成方向边。</desc>
+    <g id="eight-geometry"></g>
+  </svg>
+  <div id="eight-result" class="tabular-nums" aria-live="polite"></div>
+  <div class="text-small">前向：CAM_FRONT 光轴的世界 XY 投影（自车前向近似）</div>
+  <div class="eight-fields">
+    <label class="form-label">A 世界 X（米）<input id="eight-x" class="form-control" type="number" min="-20" max="20" step=".5" value="-3"></label>
+    <label class="form-label">A 世界 Y（米）<input id="eight-y" class="form-control" type="number" min="-20" max="20" step=".5" value="4"></label>
+  </div>
+</div>
+<script>
+(()=>{
+  const root=document.getElementById('relation-eight-distance');
+  const svg=root.querySelector('#eight-map'),layer=root.querySelector('#eight-geometry');
+  const angle=root.querySelector('#eight-angle'),inputX=root.querySelector('#eight-x'),inputY=root.querySelector('#eight-y');
+  const names=['前方','左前方','左侧','左后方','后方','右后方','右侧','右前方'];
+  const NS='http://www.w3.org/2000/svg';
+  let state={a:[-3,4],b:[0,0],axis:0,inverse:false},width=736,height=410,scale=12,center=[368,205],dragging=false;
+  function mark(tag,attrs,parent=layer){const n=document.createElementNS(NS,tag);for(const [k,v] of Object.entries(attrs))n.setAttribute(k,v);parent.appendChild(n);return n;}
+  function label(value,x,y,attrs={}){const n=mark('text',{x,y,class:'eight-text',...attrs});n.textContent=value;return n;}
+  function project(world){return [center[0]+(world[0]-state.b[0])*scale,center[1]-(world[1]-state.b[1])*scale];}
+  function basis(){const r=state.axis*Math.PI/180;return {f:[-Math.sin(r),Math.cos(r)],l:[-Math.cos(r),-Math.sin(r)]};}
+  function classify(){const q=basis(),delta=[state.a[0]-state.b[0],state.a[1]-state.b[1]],distance=Math.hypot(...delta),front=delta[0]*q.f[0]+delta[1]*q.f[1],left=delta[0]*q.l[0]+delta[1]*q.l[1];let index=null;if(distance>1e-6&&distance<=12){const theta=Math.atan2(left,front)*180/Math.PI;index=Math.floor((theta+22.5+360)/45)%8;}return {q,delta,distance,index};}
+  function save(){window.openai?.setWidgetState?.({modelContent:{target_a_world_xy:state.a,reference_b_world_xy:state.b,reference_axis_rotation_degrees:state.axis,inverse_query:state.inverse,relation_contract:'eight_direction_one_pair_one_edge_distance_attribute'},privateContent:state}).catch(()=>{});}
+  function draw(){
+    const c=classify();layer.replaceChildren();width=Math.max(280,svg.getBoundingClientRect().width||736);height=410;
+    const extent=Math.max(14,Math.abs(c.delta[0])+2,Math.abs(c.delta[1])+2);scale=Math.min((width-48)/(2*extent),(height-64)/(2*extent));center=[width/2,height/2];svg.setAttribute('viewBox',`0 0 ${width} ${height}`);
+    const [bx,by]=project(state.b),[ax,ay]=project(state.a),radius=12*scale;
+    function direction(degrees,length){const t=degrees*Math.PI/180,v=[c.q.f[0]*Math.cos(t)+c.q.l[0]*Math.sin(t),c.q.f[1]*Math.cos(t)+c.q.l[1]*Math.sin(t)];return [bx+v[0]*length,by-v[1]*length];}
+    if(c.index!==null){const p=direction(c.index*45-22.5,radius),q=direction(c.index*45+22.5,radius);mark('path',{d:`M${bx} ${by}L${p[0]} ${p[1]}A${radius} ${radius} 0 0 0 ${q[0]} ${q[1]}Z`,fill:'color-mix(in srgb,var(--viz-series-1) 11%,transparent)','pointer-events':'none'});}
+    mark('circle',{cx:bx,cy:by,r:radius,class:'eight-structure'});
+    for(let i=0;i<8;i++){
+      const edge=direction(i*45+22.5,radius);mark('line',{x1:bx,y1:by,x2:edge[0],y2:edge[1],class:'eight-structure'});
+      const p=direction(i*45,radius+16);label(names[i],Math.max(25,Math.min(width-25,p[0])),Math.max(16,Math.min(height-8,p[1]+4)),{'text-anchor':'middle',class:i===c.index?'eight-text':'eight-secondary text-small'});
+    }
+    mark('line',{x1:bx,y1:by,x2:ax,y2:ay,class:'eight-edge'});
+    mark('rect',{x:bx-8,y:by-8,width:16,height:16,rx:3,fill:'var(--foreground)'});label('B',bx+13,by+22);
+    const target=mark('circle',{cx:ax,cy:ay,r:12,class:'eight-target','aria-label':'拖动目标A'});
+    target.addEventListener('pointerdown',event=>{dragging=true;svg.setPointerCapture(event.pointerId);event.preventDefault();});
+    label('A',Math.max(18,Math.min(width-18,ax)),Math.max(18,Math.min(height-8,ay-19)),{'text-anchor':'middle'});
+    const front=direction(0,Math.max(radius*.6,30));mark('line',{x1:bx,y1:by,x2:front[0],y2:front[1],stroke:'var(--muted-foreground)','stroke-width':1.1,'stroke-dasharray':'3 4'});
+    let result;if(c.index===null)result=c.distance<=1e-6?'中心重合：无方向边':`超过12m：无方向边 · 距离 ${c.distance.toFixed(2)}m`;
+    else result=`${state.inverse?'B 相对 A':'A 相对 B'}：${names[state.inverse?(c.index+4)%8:c.index]} · 距离 ${c.distance.toFixed(2)}m`;
+    root.querySelector('#eight-result').textContent=result;svg.setAttribute('aria-label',result+'。只存储一条关系边。');
+    root.querySelector('#eight-angle-value').textContent=`${state.axis}°`;angle.value=state.axis;inputX.value=state.a[0];inputY.value=state.a[1];
+    root.querySelector('#eight-inverse').textContent=state.inverse?'正向查询':'反向查询';
+  }
+  svg.addEventListener('pointermove',event=>{if(!dragging)return;const r=svg.getBoundingClientRect();state.a=[Math.round((state.b[0]+(event.clientX-r.left-center[0])/scale)*10)/10,Math.round((state.b[1]-(event.clientY-r.top-center[1])/scale)*10)/10];draw();});
+  function finish(){if(dragging){dragging=false;save();}}svg.addEventListener('pointerup',finish);svg.addEventListener('pointercancel',finish);
+  angle.addEventListener('input',()=>{state.axis=Number(angle.value);draw();});angle.addEventListener('change',save);
+  root.querySelector('#eight-inverse').addEventListener('click',()=>{state.inverse=!state.inverse;draw();save();});
+  for(const [field,index] of [[inputX,0],[inputY,1]])field.addEventListener('change',()=>{const value=Number(field.value);if(Number.isFinite(value)){state.a[index]=Math.min(20,Math.max(-20,value));draw();save();}});
+  function restore(value){if(value&&Array.isArray(value.a)&&Array.isArray(value.b)&&value.a.length===2&&value.b.length===2&&[...value.a,...value.b,value.axis].every(Number.isFinite))state={a:value.a,b:value.b,axis:value.axis,inverse:Boolean(value.inverse)};draw();}
+  new ResizeObserver(draw).observe(svg);window.addEventListener('openai:set_globals',event=>{const value=event.detail?.globals?.widgetState;if(value)restore(value.privateContent||value);});restore(window.openai?.widgetState?.privateContent||window.openai?.widgetState);
+})();
+</script>

@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "audit_utc": "2026-11-25T13:38:44.548335+00:00",
+  "active_relation_contract_hold": true,
+  "hold_sha256": "f0580c07fe6f7ddca8167e98d68b06684eed9ee192c827b4c0181aad7fd44394",
+  "active_formal_controllers_or_runtimes_or_resume": [],
+  "formal_run_directory_exists": false,
+  "formal_scene_count": 0,
+  "source_index_not_signalled": true,
+  "old_eight_scene_pilot_preserved": true,
+  "new_GPU_calls": 0
+}

@@ -1,0 +1,73 @@
+{
+  "passed": true,
+  "audit_utc": "2026-11-25T13:22:32.601150+00:00",
+  "same_worker_PID": 27970,
+  "frozen_sequence": [
+    4,
+    5,
+    4,
+    5
+  ],
+  "comparisons": [
+    {
+      "scene": "scene-0004",
+      "frames": 40,
+      "main_payload_equal_except_exact_mapper_wall_duration_paths": true,
+      "differences_by_allowed_method": {
+        "original_fusion": 40,
+        "R1": 40,
+        "S2_1": 40,
+        "S2_3": 40,
+        "S2_6": 40
+      },
+      "auxiliary_decompressed_bytes_SHA_equal": true,
+      "original_main_gzip_sha256": "0c73dfee4e8d707ca2dded83831b42f032f13e4dda00174f4288b83022265e37",
+      "repeated_main_gzip_sha256": "b2b640d437f2f191349e6032bd17c3595eb43ac1a7d0d1532004a77ae8ba207a"
+    },
+    {
+      "scene": "scene-0005",
+      "frames": 39,
+      "main_payload_equal_except_exact_mapper_wall_duration_paths": true,
+      "differences_by_allowed_method": {
+        "original_fusion": 39,
+        "R1": 39,
+        "S2_1": 39,
+        "S2_3": 39,
+        "S2_6": 39
+      },
+      "auxiliary_decompressed_bytes_SHA_equal": true,
+      "original_main_gzip_sha256": "078656dbc68137dc175337752b5fc5e710db1f28f5dcc1409cc7241575e21bbb",
+      "repeated_main_gzip_sha256": "c049a0d5ccd8459627a609241fc287c63fa66fa4ed1acd124f26fe3f3b79b567"
+    }
+  ],
+  "allowed_exclusion_paths": [
+    [
+      "mapper_seconds",
+      "original_fusion"
+    ],
+    [
+      "mapper_seconds",
+      "R1"
+    ],
+    [
+      "mapper_seconds",
+      "S2_1"
+    ],
+    [
+      "mapper_seconds",
+      "S2_3"
+    ],
+    [
+      "mapper_seconds",
+      "S2_6"
+    ]
+  ],
+  "all_other_fields_compared_exact": true,
+  "all_three_cached_scenes_closed": true,
+  "source_preregistration_sha256": "8ffc3797961aa5a9e0a46197a078c05cf191581f145477d8140aa717ebef8d66",
+  "original_overstrict_SHA_failure_preserved": true,
+  "new_GPU_calls": 0,
+  "scope": "runtime worker reuse and repeated original CPU mapper outputs; no new quality score",
+  "elapsed_s": 4.4626205042004585,
+  "audit_source_sha256": "8091478512a9c96fa405765c219cfadea78f763325ba94eee69a54830838a419"
+}

@@ -1,0 +1,46 @@
+{
+  "created_utc": "2026-11-25T14:03:36.751041+00:00",
+  "source_and_minimal_evidence_sha256": {
+    "conceptgraph/navigation/single8_task_20261125.py": "d64d7e1cffa079f46090429585604487a6b6c34d3ce9384e962e211e0a967261",
+    "conceptgraph/completion/nu_task_single8_20261125.py": "551ad40410982b985f2a5dfe8ee5f967fa044bf260b1357b9c129cc7a12ae446",
+    "scripts/nu_task_single8_20261125.py": "01739c67c6a2c541af72df981442ae7639e512125d0523a65dc34d4d006fac6e",
+    "conceptgraph/scenegraph/relation_single8_20261125.py": "66efdde5b633fdc8a7f9939007cfa20f35d766314a3d274d22b608ba5f7ea124",
+    "conceptgraph/completion/nu_pipeline_resume_20261125.py": "242d791616b26533ef94b41d7cae8fcbf9c0cdc6dc7a33e3aadcd17a29a193ea",
+    "scripts/nu_pipeline_resume_20261125.py": "6ff327a428676dca84b3de4af47b6b80da02c606e0525c7881d4ca1f83a38a32",
+    "conceptgraph/completion/nu_pipeline_resume_20261125_v2.py": "190d7fe86e6685ce9f1cac062f0486112046720a088a6b693b67f4391dc80e06",
+    "scripts/nu_pipeline_resume_20261125_v2.py": "df1a87cb9a9ebb32dfef2a427fea2c55e119274873e4397bd5e0fd2034b8414c",
+    "conceptgraph/completion/nu_task_watch_20261125.py": "dc5d16dbdd4d2e9824a927c885e9aeb6e52c71521dc19db172f3ff38c272552c",
+    "conceptgraph/completion/nu_task_watch_20261125_v2.py": "790cf9222f852ea7cce82ca94970ea542f315bb1f8019235d3fa1bf73378a8d8",
+    "conceptgraph/completion/nu_task_watch_20261125_v3.py": "eadcff407ded0c75b082267f39131502ce36dc04efb3b1a1e478c22288508899",
+    "dataset/processed/nu_task_single8_20261125_v1/manifest.json": "3a1372080afa896a8c4f122f5c646091f30479d7884ba18fdeb5731138340740",
+    "dataset/processed/nu_task_single8_20261125_v1/preregistration.json": "8da8e18f54965cbdf2b9f61cd49ba20bc165035c0fb3ec2c34b0d2b5c2a50630",
+    "outputs/reports/local_scope_audit_20261125/single8_task_GT_independent_v1.json": "b2b56065b83c9a7f4fbd6681b9e3e9b5019727754365b82ec2b96029539e12bb",
+    "outputs/reports/local_scope_audit_20261125/tracking_independent_v1.json": "41371843d45b2ab44b18b9513e22b2f99c9cb33b739a1a391dd0dcb0e8ff3b38",
+    "outputs/reports/local_scope_audit_20261125/object_results_independent_v1.json": "51f6e6312f86e257a1232ad259efbdfe5deb77b23ecf9f11cf2dc97bf57d544d",
+    "outputs/reports/local_scope_audit_20261125/tracking_duplicate_independent_v1.json": "ffbfa2511da35fadaad3ca725a55689d53f6232a883e2c8aaf0160999cae3c8f",
+    "outputs/reports/local_scope_audit_20261125/semantic_pairs_independent_v1.json": "d8dc9da014b6c8dcc0a29d1531d97b5e0414c901a718c3dab4cb6dcec438b5fb"
+  },
+  "user_handoff_hold": true,
+  "new_full_experiments_started": false,
+  "KITTI_single8_started": false,
+  "watchers_and_resume_stopped": true,
+  "watch_active_child_wall_s": 0.0,
+  "formal_nav_tasks_consumed": 0,
+  "resume_v1": "frozen legacy namespace, obsolete for new single8",
+  "resume_v2": "handoff-only draft, CLI production actions hard-blocked, no real fullrun/cache repair executed",
+  "new2315_GT": {
+    "legacy_positive": 695,
+    "legacy_negative": 420,
+    "unified_positive": 138,
+    "unified_negative": 1002,
+    "pending": 60,
+    "label_changes": 64
+  },
+  "old2315_GT": {
+    "legacy_positive": 733,
+    "legacy_negative": 382,
+    "unified_positive": 141,
+    "unified_negative": 999,
+    "pending": 60
+  }
+}
