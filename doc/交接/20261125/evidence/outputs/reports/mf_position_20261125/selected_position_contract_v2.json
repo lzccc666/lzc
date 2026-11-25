@@ -1,0 +1,315 @@
+{
+  "passed": true,
+  "selected_task_records": 14,
+  "unique_selected_object_frames": 10,
+  "correct": 12,
+  "still_wrong": 2,
+  "all_unknown_shape": true,
+  "all_vehicle_safety_authorized_false": true,
+  "by_log": {
+    "d31dc715d1c34b99bd5afb0e3aea26ed": {
+      "added_selections": 4,
+      "correct": 4,
+      "still_wrong": 0
+    },
+    "bc41a49366734ebf978d6a71981537dc": {
+      "added_selections": 5,
+      "correct": 5,
+      "still_wrong": 0
+    },
+    "783683d957054175bda1b326453a13f4": {
+      "added_selections": 1,
+      "correct": 1,
+      "still_wrong": 0
+    },
+    "d7fd2bb9696d43af901326664e42340b": {
+      "added_selections": 1,
+      "correct": 1,
+      "still_wrong": 0
+    },
+    "53cf9c55dd8644bea67b9f009fc1ee38": {
+      "added_selections": 1,
+      "correct": 1,
+      "still_wrong": 0
+    },
+    "343d984344e440c7952d1e403b572b2a": {
+      "added_selections": 1,
+      "correct": 0,
+      "still_wrong": 1
+    },
+    "b05f285d53744542a3413476d6dd9270": {
+      "added_selections": 1,
+      "correct": 0,
+      "still_wrong": 1
+    }
+  },
+  "records": [
+    {
+      "scene": "scene-0013",
+      "frame_idx": 24,
+      "query_index": 0,
+      "node_id": "sparse-00000013",
+      "shape_available": false,
+      "extent_present": false,
+      "vehicle_safety_authorized": false,
+      "GT_correct": true,
+      "span_s": 1.449995994567871,
+      "raw_observations": 3,
+      "raw_speed_mps": 0.07716274874039561,
+      "current_points": 4,
+      "current_support": 0.5714285714285714,
+      "heuristic_variance_xy": [
+        0.26775432948843436,
+        0.26174322101178854
+      ]
+    },
+    {
+      "scene": "scene-0013",
+      "frame_idx": 24,
+      "query_index": 3,
+      "node_id": "sparse-00000013",
+      "shape_available": false,
+      "extent_present": false,
+      "vehicle_safety_authorized": false,
+      "GT_correct": true,
+      "span_s": 1.449995994567871,
+      "raw_observations": 3,
+      "raw_speed_mps": 0.07716274874039561,
+      "current_points": 4,
+      "current_support": 0.5714285714285714,
+      "heuristic_variance_xy": [
+        0.26775432948843436,
+        0.26174322101178854
+      ]
+    },
+    {
+      "scene": "scene-0013",
+      "frame_idx": 24,
+      "query_index": 4,
+      "node_id": "sparse-00000013",
+      "shape_available": false,
+      "extent_present": false,
+      "vehicle_safety_authorized": false,
+      "GT_correct": true,
+      "span_s": 1.449995994567871,
+      "raw_observations": 3,
+      "raw_speed_mps": 0.07716274874039561,
+      "current_points": 4,
+      "current_support": 0.5714285714285714,
+      "heuristic_variance_xy": [
+        0.26775432948843436,
+        0.26174322101178854
+      ]
+    },
+    {
+      "scene": "scene-0016",
+      "frame_idx": 20,
+      "query_index": 1,
+      "node_id": "sparse-00000015",
+      "shape_available": false,
+      "extent_present": false,
+      "vehicle_safety_authorized": false,
+      "GT_correct": true,
+      "span_s": 1.949995994567871,
+      "raw_observations": 5,
+      "raw_speed_mps": 0.14568458833682887,
+      "current_points": 4,
+      "current_support": 0.8,
+      "heuristic_variance_xy": [
+        0.3685613970755752,
+        0.3729730629710318
+      ]
+    },
+    {
+      "scene": "scene-0019",
+      "frame_idx": 36,
+      "query_index": 0,
+      "node_id": "sparse-00000075",
+      "shape_available": false,
+      "extent_present": false,
+      "vehicle_safety_authorized": false,
+      "GT_correct": true,
+      "span_s": 1.9000000953674316,
+      "raw_observations": 5,
+      "raw_speed_mps": 0.09028086989772435,
+      "current_points": 2,
+      "current_support": 0.4,
+      "heuristic_variance_xy": [
+        0.35860305344673993,
+        0.36065351204013696
+      ]
+    },
+    {
+      "scene": "scene-0030",
+      "frame_idx": 8,
+      "query_index": 0,
+      "node_id": "sparse-00000000",
+      "shape_available": false,
+      "extent_present": false,
+      "vehicle_safety_authorized": false,
+      "GT_correct": true,
+      "span_s": 3.399988889694214,
+      "raw_observations": 6,
+      "raw_speed_mps": 0.10009797876009903,
+      "current_points": 4,
+      "current_support": 1.0,
+      "heuristic_variance_xy": [
+        0.31344312046570705,
+        0.3128411895737054
+      ]
+    },
+    {
+      "scene": "scene-0030",
+      "frame_idx": 8,
+      "query_index": 1,
+      "node_id": "sparse-00000006",
+      "shape_available": false,
+      "extent_present": false,
+      "vehicle_safety_authorized": false,
+      "GT_correct": true,
+      "span_s": 1.8999969959259033,
+      "raw_observations": 5,
+      "raw_speed_mps": 0.01701004694016894,
+      "current_points": 2,
+      "current_support": 0.4,
+      "heuristic_variance_xy": [
+        0.2743407166527542,
+        0.27449003781427683
+      ]
+    },
+    {
+      "scene": "scene-0030",
+      "frame_idx": 8,
+      "query_index": 3,
+      "node_id": "sparse-00000000",
+      "shape_available": false,
+      "extent_present": false,
+      "vehicle_safety_authorized": false,
+      "GT_correct": true,
+      "span_s": 3.399988889694214,
+      "raw_observations": 6,
+      "raw_speed_mps": 0.10009797876009903,
+      "current_points": 4,
+      "current_support": 1.0,
+      "heuristic_variance_xy": [
+        0.31344312046570705,
+        0.3128411895737054
+      ]
+    },
+    {
+      "scene": "scene-0030",
+      "frame_idx": 8,
+      "query_index": 4,
+      "node_id": "sparse-00000000",
+      "shape_available": false,
+      "extent_present": false,
+      "vehicle_safety_authorized": false,
+      "GT_correct": true,
+      "span_s": 3.399988889694214,
+      "raw_observations": 6,
+      "raw_speed_mps": 0.10009797876009903,
+      "current_points": 4,
+      "current_support": 1.0,
+      "heuristic_variance_xy": [
+        0.31344312046570705,
+        0.3128411895737054
+      ]
+    },
+    {
+      "scene": "scene-0039",
+      "frame_idx": 16,
+      "query_index": 0,
+      "node_id": "sparse-00000022",
+      "shape_available": false,
+      "extent_present": false,
+      "vehicle_safety_authorized": false,
+      "GT_correct": true,
+      "span_s": 1.4499998092651367,
+      "raw_observations": 4,
+      "raw_speed_mps": 0.2810083643331547,
+      "current_points": 2,
+      "current_support": 0.6666666666666666,
+      "heuristic_variance_xy": [
+        0.35668879457223013,
+        0.35603329712296666
+      ]
+    },
+    {
+      "scene": "scene-0042",
+      "frame_idx": 12,
+      "query_index": 1,
+      "node_id": "sparse-00000006",
+      "shape_available": false,
+      "extent_present": false,
+      "vehicle_safety_authorized": false,
+      "GT_correct": true,
+      "span_s": 2.0,
+      "raw_observations": 5,
+      "raw_speed_mps": 0.10321916274199773,
+      "current_points": 3,
+      "current_support": 0.5,
+      "heuristic_variance_xy": [
+        0.3536847431417016,
+        0.35531685991457357
+      ]
+    },
+    {
+      "scene": "scene-0097",
+      "frame_idx": 28,
+      "query_index": 0,
+      "node_id": "sparse-00000006",
+      "shape_available": false,
+      "extent_present": false,
+      "vehicle_safety_authorized": false,
+      "GT_correct": true,
+      "span_s": 5.0,
+      "raw_observations": 8,
+      "raw_speed_mps": 0.06290648314781612,
+      "current_points": 2,
+      "current_support": 1.0,
+      "heuristic_variance_xy": [
+        0.3829141319881248,
+        0.38321678581379043
+      ]
+    },
+    {
+      "scene": "scene-0135",
+      "frame_idx": 36,
+      "query_index": 1,
+      "node_id": "sparse-00000039",
+      "shape_available": false,
+      "extent_present": false,
+      "vehicle_safety_authorized": false,
+      "GT_correct": false,
+      "span_s": 2.5,
+      "raw_observations": 5,
+      "raw_speed_mps": 0.09865492735506036,
+      "current_points": 3,
+      "current_support": 1.0,
+      "heuristic_variance_xy": [
+        0.32618116881899467,
+        0.32597493719013015
+      ]
+    },
+    {
+      "scene": "scene-0174",
+      "frame_idx": 36,
+      "query_index": 4,
+      "node_id": "sparse-00000032",
+      "shape_available": false,
+      "extent_present": false,
+      "vehicle_safety_authorized": false,
+      "GT_correct": false,
+      "span_s": 1.0,
+      "raw_observations": 3,
+      "raw_speed_mps": 0.11526505266418231,
+      "current_points": 2,
+      "current_support": 1.0,
+      "heuristic_variance_xy": [
+        0.5466495354022619,
+        0.5473843844169459
+      ]
+    }
+  ],
+  "queries_sha256": "0cee8237b7dbea71f22dd7613c79ed9989210ef9869a00ad7667f2636eae19e2"
+}

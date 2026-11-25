@@ -1,0 +1,4965 @@
+{
+  "created_utc": "2026-11-25T06:40:39.824408+00:00",
+  "deadline_utc": "2026-11-25T07:23:55Z",
+  "audit_budget_bytes": 33554432,
+  "shared_new_experiment_budget_bytes": 134217728,
+  "GPU_calls": 0,
+  "model_calls": 0,
+  "training_calls": 0,
+  "planner_calls": 0,
+  "git": {
+    "HEAD": "80adf9171f58c4ea58df11147f45f8f686e61078",
+    "remote_refs": "80adf9171f58c4ea58df11147f45f8f686e61078\trefs/heads/codex/project-sync-20261125\nc09cde87e56598700be68f836b92e63265083106\trefs/heads/main",
+    "tracked_files": 1527,
+    "snapshot_copy_count": 695,
+    "all_snapshot_copies_tracked_and_identical": true,
+    "copies": [
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/kitti_tracking_gpu_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_sensor_control_probe_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_sensor_control_probe_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/nuscenes_strict_ablation_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/mapping_assignment_isolated_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/nuscenes_strict_ablation_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_pipeline_episode_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_pipeline_episode_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_sensor_utils_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_agent_isolated_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_pipeline_episode_003.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/kitti_graph_query_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/summarize_strict_ablation_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_pipeline_episode_004.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/build_kitti_delivery_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_agent_isolated_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_pipeline_episode_005.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_actuator_characterization_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/audit_carla_arrival_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_actuator_characterization_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_actuator_characterization_003.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_actuator_characterization_004.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/audit_existing_qwen_fair_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_actuator_characterization_005.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_actuator_characterization_006.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_pipeline_episode_006.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/build_mapping_method_comparison_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/build_mapping_method_comparison_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/audit_carla_arrival_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_pipeline_episode_007.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/write_milestone_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_actuator_characterization_007.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_pipeline_episode_008.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/audit_carla_arrival_003.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/planning_official_snapshot_comparison_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/semantic_graph_contract_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/build_official_graph_semantics_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/train_official_graph_adapter_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_actuator_characterization_008.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/audit_official_graph_dataset_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_actuator_characterization_009.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/build_official_graph_semantics_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/train_official_graph_adapter_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_pipeline_episode_009.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/evaluate_official_graph_models_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/official_graph_cooperation_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_pipeline_episode_010.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/summarize_official_graph_semantics_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/audit_official_graph_dataset_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/review_server_isolated_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/run_serial_gpu_jobs_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/supplement_xyz_metrics_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/storage_snapshot_003.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/ab3dmot_public_frontend_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/ab3dmot_public_frontend_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/ab3dmot_statistics_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/ab3dmot_statistics_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/semantic_target_only_audit_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_compact_evidence_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_ablation_agent_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_ablation_episode_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/run_carla_ablation_batch_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/audit_recorded_retrieval_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/build_semantic_delivery_tables_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/storage_snapshot_004.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/write_milestone_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_ablation_episode_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/run_carla_ablation_batch_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/build_reproduction_bundle_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_ablation_episode_003.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/run_carla_ablation_batch_003.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/real_graph_contract_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/build_real_graph_dataset_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/translation_icp_motion_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/nuscenes_translation_icp_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/motion_registration_statistics_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/observe_carla_resources_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/real_graph_contract_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/build_real_graph_dataset_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/build_real_graph_dataset_003.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/train_real_graph_adapter_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/audit_real_graph_dataset_003.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/real_graph_contract_003.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/train_real_graph_adapter_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/audit_real_graph_dataset_004.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/train_real_graph_adapter_003.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/evaluate_real_graph_models_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/audit_real_graph_dataset_005.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/run_real_graph_gpu_series_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/real_graph_cooperation_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/summarize_real_graph_models_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/storage_snapshot_005.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/audit_carla_choices_004.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/finish_carla_audits_004.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/compact_training_checkpoint_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/train_real_graph_adapter_004.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/evaluate_real_graph_models_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/run_real_graph_gpu_series_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/run_real_graph_gpu_series_003.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/strict_category_semantics_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/build_reproduction_bundle_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/verify_reproduction_snapshot_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/export_completed_tables_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/export_completed_tables_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/finish_real_graph_audit_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/build_carla_inspection_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/verify_protected_history_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/validate_closed_artifacts_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/category_semantics_paired_stats_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/real_graph_permutation_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/run_real_graph_permutation_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/real_graph_permutation_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/run_real_graph_permutation_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/real_graph_paired_statistics_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/decision_token_weights_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/pilot_adapter_checkpoint_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/train_real_graph_decision_weighted_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/evaluate_weighted_pilot_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/run_weighted_pilot_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/permutation_paired_statistics_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/audit_real_graph_authorizations_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/summarize_weighted_pilot_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/real_graph_failure_taxonomy_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/export_real_graph_office_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/validate_closed_artifacts_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/storage_snapshot_006.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/build_reproduction_bundle_003.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/verify_archive_stream_003.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/audit_acceptance_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/build_artifact_manifest_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/finalize_artifact_receipt_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/nuscenes_complex_semantics_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/summarize_nuscenes_complex_semantics_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/audit_dependency_origins_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/audit_carla_input_boundary_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/export_complex_semantics_office_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/nuscenes_full_semantics_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/audit_carla_actuation_signal_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/summarize_full_semantics_details_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/export_full_semantics_office_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/finish_full_semantics_pipeline_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_acceleration_feedback_pilot_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_acceleration_feedback_pilot_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_acceleration_feedback_pilot_003.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/run_official_actuation_pilot_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/audit_full_semantic_task_scope_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/audit_full_semantic_task_scope_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/finalize_artifact_receipt_003.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/run_official_actuation_pilot_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/run_official_actuation_pilot_003.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/run_official_actuation_pilot_004.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/nuscenes_graph_near6_correction_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/build_quick_human_review_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/nuscenes_full_semantics_near6_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/summarize_full_semantics_near6_details_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/export_full_semantics_near6_office_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/finish_full_semantics_near6_pipeline_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/plot_public_evidence_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/plot_public_evidence_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/plot_public_evidence_003.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/install_clean_cpu_environment_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_stock_vehicle_feedback_pilot_004.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/run_official_stock_vehicle_pilot_005.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/resume_clean_cpu_install_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/finish_close_028.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/import_quick_human_reviews_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/review_server_isolated_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/complete_clean_cpu_dependencies_003.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/qa_quick_human_review_browser_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/qa_quick_human_review_browser_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/build_quick_human_review_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/import_quick_human_reviews_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/qa_quick_human_review_browser_003.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/validate_public_figure_exports_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/plot_public_evidence_004.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/validate_public_figure_exports_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/clean_cpu_perception_semantics_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/launch_clean_cpu_chain_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/launch_clean_cpu_chain_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/plot_corrected_semantics_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/complete_near6_exports_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/build_module_index_004.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_stock_navigation_episode_004.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/run_stock_navigation_batch_004.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/run_official_stock_navigation_006.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/audit_full_semantics_near6_readback_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/build_delivery_supplement_003.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_prius_braking_pilot_005.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/run_official_prius_braking_pilot_007.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/build_goal_acceptance_005.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/finalize_artifact_receipt_004.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_prius_braking_pilot_006.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/run_official_prius_braking_pilot_008.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_prius_braking_pilot_007.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/run_official_prius_braking_pilot_009.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/audit_official_pilots_readback_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_prius_navigation_episode_005.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/run_prius_navigation_batch_005.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/run_official_prius_navigation_010.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/audit_carla_choices_005.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_real_graph_bridge_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/test_carla_real_graph_bridge_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/prepare_carla_complex_semantic_006.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_complex_semantic_episode_006.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/audit_carla_complex_choices_006.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/run_complex_semantic_batch_006.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/run_official_complex_semantic_011.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/summarize_prius_navigation_005.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_real_graph_bridge_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/test_carla_real_graph_bridge_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_complex_semantic_episode_007.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/run_complex_semantic_batch_007.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/run_official_complex_semantic_012.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/probe_carla_lossless_storage_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/prepare_clean_cpu_navigation_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_clean_cpu_navigation_episode_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/run_clean_cpu_navigation_batch_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/run_official_clean_cpu_navigation_013.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/probe_temporal_lossless_storage_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/audit_carla_complex_choices_007.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/audit_carla_complex_choices_008.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/install_clean_navigation_overlay_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_clean_cpu_navigation_episode_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/run_clean_cpu_navigation_batch_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/run_official_clean_cpu_navigation_014.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/diagnose_complex_navigation_008.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_prius_cutoff_pilot_008.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/run_official_prius_cutoff_pilot_015.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/close_continuation_delivery_008.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_motion_guard_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/test_carla_motion_guard_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/replay_motion_guard_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_persistent_intent_bridge_003.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/test_carla_persistent_intent_bridge_003.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/readback_clean_cpu_navigation_003.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_guarded_control_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/test_carla_guarded_control_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/readback_prius_cutoff_003.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/prepare_guarded_complex_008.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_guarded_complex_episode_008.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/run_guarded_complex_batch_008.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/prepare_guarded_launcher_016.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/run_official_guarded_complex_016.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/audit_carla_guarded_execution_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/verify_guarded_prefix_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/run_guarded_motion_audits_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/close_continuation_delivery_009.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/probe_streaming_jsonl_003.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/benchmark_obstacle_union_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/inspect_official_task_geometry_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/summarize_guarded_rule_009.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_aggregated_obstacle_bridge_004.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/test_carla_aggregated_obstacles_004.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/close_continuation_delivery_010.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_lane_seed_bridge_006.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_lossless_jsonl_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/build_carla_expansion_runtime_009.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_expansion_truth_009.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/real_graph_cooperation_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_real_graph_bridge_003.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_persistent_intent_bridge_004.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_aggregated_obstacle_bridge_005.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_expansion_episode_009.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/audit_carla_guarded_execution_002.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/audit_carla_expansion_009.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/test_carla_expansion_009.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/run_carla_expansion_batch_009.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/run_official_expansion_017.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/prepare_carla_expansion_009.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/integrate_human_attribute_review_003.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/test_carla_expansion_extra_010.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_expansion_episode_010.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_expansion_truth_010.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/run_carla_expansion_batch_010.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/run_official_expansion_018.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/preflight_carla_expansion_010.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/prepare_carla_expansion_010.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/summarize_guarded_comparison_010.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/preflight_carla_expansion_011.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/run_carla_expansion_batch_011.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/run_official_expansion_019.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/prepare_carla_expansion_011.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/audit_carla_preflight_012.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/close_continuation_delivery_011.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/profile_carla_expansion_live_001.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/close_first_expansion_arrival_012.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/summarize_carla_expansion_013.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/test_carla_expansion_summary_013.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/diagnose_carla_closed_trace_014.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/audit_sealed_inventory_015.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/close_expansion_progress_016.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_history_lifecycle_017.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/build_carla_history_runtime_018.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_history_episode_012.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/replay_carla_history_module_019.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/prepare_history_compact_replay_020.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/replay_carla_history_module_021.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/test_carla_history_lifecycle_022.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/audit_carla_history_execution_023.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/run_carla_remaining_comparison_024.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/prepare_remaining_carla_queue_026.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/preflight_carla_remaining_014.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/run_official_remaining_025.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/close_progress_027.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/summarize_carla_ten_041.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/diagnose_carla_ten_bottlenecks_043.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_current_plan_handoff_044.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/test_carla_current_plan_handoff_044.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/audit_carla_arrival_windows_045.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/audit_carla_identity_geometry_046.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_reference_readiness_047.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/test_carla_reference_readiness_047.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/replay_reference_readiness_047.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/finalize_carla_diagnosis_048.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/carla_stock_stopping_profile_049.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/test_carla_stock_stopping_profile_049.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/audit_carla_actuator_alignment_050.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/audit_carla_actuator_alignment_051.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/audit_reserved_semantics_053.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/public_query_intake_055.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/test_public_query_intake_055.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/validate_public_intake_on_development_055.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/sealed_public_benchmark_058.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/run_sealed_public_series_059.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/preflight_sealed_runner_058.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/build_current_delivery_061.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/audit_actual_sealed_crops_062.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/run_sealed_cpu_parallel_063.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/human_crop_fair_065.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/test_human_crop_fair_065.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/audit_carla_current_body_066.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/export_attribute_control_067.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/review_server_with_natural_071.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/test_review_server_with_natural_071.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/build_current_source_reproduction_072.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/build_current_source_reproduction_073.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/sealed_resource_guard_074.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/test_sealed_resource_guard_074.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/run_sealed_resource_guard_075.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/prepare_git_delivery_077.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/export_sealed_public_078.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/test_export_sealed_public_078.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/wait_and_export_sealed_079.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/export_sealed_office_081.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/build_sealed_viewer_082.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/qa_sealed_viewer_083.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/build_natural_offline_087.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/natural_offline_087.js",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/qa_natural_offline_088.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/build_completion_audit_090.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/reproduce_current_source_093.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/import_human_natural_offline_096.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/export_sealed_office_097.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/build_delivery_index_101.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/build_validation_101.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/audit_main_tables_105.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/audit_human_natural_official_instance_107.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/build_official_instance_review_108.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/viewer_assets_082/index.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "scripts/experiment_archive/public_20261115_snapshot/viewer_assets_082/viewer.js",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/修订交接说明.md",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/质量检查记录.md",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/交付文件校验清单.csv",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/论文目录与图表结构说明.md",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/引用核验清单.csv",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/实验_图表_代码_原始结果索引.csv",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/图表来源索引.csv",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/硕士论文初稿.docx",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/硕士论文初稿.pdf",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/00_当前版本说明.md",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/版本信息.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/本机同步校验清单.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/scripts/collect_literature.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/scripts/extra_literature.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/scripts/build_evidence_figures.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/scripts/build_word.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/scripts/audit_old_references.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/scripts/build_references.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/scripts/qa_document.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/scripts/audit_evidence.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/scripts/finish_delivery.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/scripts/rebuild.sh",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/scripts/requirements.txt",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/scripts/assemble_revision.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/scripts/record_revision_delivery.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/scripts/apply_literature_revision.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/scripts/build_literature_report.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/scripts/expand_literature.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/scripts/fetch_selected_fulltexts.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/scripts/update_delivery_names.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/scripts/record_literature_reading.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/scripts/complete_literature_revision.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/scripts/record_current_delivery.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/scripts/remote_sync_manifest.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/scripts/sync_from_remote.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/scripts/prepare_visual_review.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/scripts/rebuild_cover.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/scripts/verify_recovered_delivery.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/scripts/finalize_recovered_review.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/scripts/build_publication_status_audit.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/qa/protected_sources.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/qa/字数与结构检查.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/qa/headings.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/qa/page_map.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/qa/page_inspection.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/qa/pdf_fulltext.txt",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/qa/evidence_audit.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/qa/最终质量检查.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/qa/各小节正文汉字数.csv",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/qa/视觉巡检确认.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/qa/PDF字体检查.txt",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/qa/逐页检查记录.csv",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/qa/修订前后结构比较.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/qa/源包内容校验清单.csv",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/qa/图表生成审计.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/qa/文献引用检查.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/qa/独立渲染一致性检查.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/qa/封面样式调整检查.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/qa/中断恢复独立核验.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/qa/修订前第一二章Word原文.txt",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/qa/当前Word前两章原文.txt",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/figures/Figure6-1_nuScenes对象建图比较.png",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/figures/Figure6-1_nuScenes对象建图比较.pdf",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/figures/Figure6-2_目标检索选对与误选权衡.png",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/figures/Figure6-2_目标检索选对与误选权衡.pdf",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/figures/Figure6-3_Qwen专项五模型比较.png",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/figures/Figure6-3_Qwen专项五模型比较.pdf",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/figures/Figure6-4_地图约束离线诊断.png",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/figures/Figure6-4_地图约束离线诊断.pdf",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/figures/Figure4-1_nuScenes_scene-0039第2帧检测分割对象定位案例.png",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/figures/Figure4-1_nuScenes_scene-0039第2帧检测分割对象定位案例.pdf",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/figures/Figure4-2_nuScenes_scene-0039第2帧关系几何案例.png",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/figures/Figure4-2_nuScenes_scene-0039第2帧关系几何案例.pdf",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/figures/Figure3-1_公开录制数据研究流程.png",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/figures/Figure3-1_公开录制数据研究流程.pdf",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/figure_data/mapping.csv",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/figure_data/identity.csv",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/figure_data/relations.csv",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/figure_data/retrieval.csv",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/figure_data/qwen.csv",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/figure_data/modules.csv",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/figure_data/selection_ablation.csv",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/figure_data/goals.csv",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/figure_data/maps.csv",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/figure_data/kitti_object.csv",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/figure_data/kitti_tracking.csv",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/figure_data/mapping_parameters.csv",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/figure_data/selection_parameters.csv",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/figure_data/interfaces.csv",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/figure_data/supervision.csv",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/figure_data/qwen_data.csv",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/figure_data/platform.csv",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/figure_data/datasets.csv",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/figure_data/metrics.csv",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/figure_data/case_frame.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/figure_data/relations_case.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/figure_data/source_index.csv",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/figure_data/绘图设计与审核.md",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/evidence/statistics__causal_mapping_full_001__report.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/evidence/mapping_evaluation__causal_relations_full_001__summary.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/evidence/statistics__causal_retrieval_full_001__report.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/evidence/statistics__causal_modules_full_001__report.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/evidence/statistics__causal_modules_motion_full_001__report.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/evidence/statistics__causal_mapping_parameters_full_001__report.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/evidence/performance__causal_selection_parameters_full_001__report.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/evidence/ablations__causal_selection_ablation_full_001__report.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/evidence/ablations__causal_goals_full_001__report.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/evidence/statistics__causal_maps_full_001__report.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/evidence/statistics__fair_three_task_full_validation_001__report.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/evidence/main_experiments__fair_three_task_full_validation_001__release.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/evidence/semantic_dataset__structured_supervision_002__manifest.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/evidence/training__three_task_v2_formal_complete_001.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/evidence/statistics__kitti_object_cpu_full_001__report.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/evidence/statistics__kitti_tracking_full_001__report.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/evidence/原稿阅读_.txt",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/evidence/原稿阅读_manuscript_delivery_016.txt",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/evidence/逐帧索引核对.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/evidence/source_hashes.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/evidence/新增论述数值与案例核验.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/metadata.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/原稿参考文献检查.csv",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/verified_references.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/参考文献.bib",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/参考文献.ris",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/原稿参考文献逐条处理.csv",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/参考文献及阅读依据.md",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/全文获取记录.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/前两章文献调研报告.md",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/文献调研矩阵.csv",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/参考文献真实性与年份核验报告.md",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/论文身份与发表状态核验.csv",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/论文身份与发表状态核验.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/1808.08378/fulltext.txt",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2210.05714/fulltext.txt",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/1909.10838/fulltext.txt",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/KITTI2013/primary_fulltext.txt",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/1910.02490/fulltext.txt",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2207.04429/fulltext.txt",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/1604.07446/fulltext.txt",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2002.06289/fulltext.txt",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2103.00020/fulltext.txt",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/1609.01775/fulltext.txt",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2004.03967/fulltext.txt",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2304.02643/fulltext.txt",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2304.02643/primary_fulltext.txt",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2009.07736/fulltext.txt",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2106.09685/fulltext.txt",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2409.12191/fulltext.txt",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/1609.05130/fulltext.txt",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2211.15654/fulltext.txt",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2305.14314/fulltext.txt",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2401.17270/fulltext.txt",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/1804.09194/fulltext.txt",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2303.09553/fulltext.txt",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/1903.11027/fulltext.txt",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/1711.07280/fulltext.txt",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/1105.1186/fulltext.txt",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/1105.1186/landing.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/1105.1186/阅读核对.md",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/1404.2334/fulltext.txt",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/1404.2334/landing.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/1404.2334/阅读核对.md",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/1502.00956/landing.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/1602.00763/fulltext.txt",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/1602.00763/landing.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/1602.00763/阅读核对.md",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/1610.06475/landing.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/1703.07402/landing.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/1806.05620/landing.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/1812.05784/landing.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/1903.01177/landing.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2006.11275/fulltext.txt",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2006.11275/landing.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2006.11275/阅读核对.md",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2007.11898/landing.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2008.08063/landing.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2106.14386/landing.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2110.06864/fulltext.txt",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2110.06864/landing.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2110.06864/阅读核对.md",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2112.03857/landing.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2201.02605/landing.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2201.03546/landing.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2201.13360/fulltext.txt",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2201.13360/landing.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2201.13360/阅读核对.md",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2203.17270/landing.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2205.13542/fulltext.txt",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2205.13542/landing.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2205.13542/阅读核对.md",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2212.10156/landing.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2302.07241/landing.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2303.05499/landing.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2304.07193/landing.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2306.13631/fulltext.txt",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2306.13631/landing.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2306.13631/阅读核对.md",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2307.05973/landing.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2307.06135/fulltext.txt",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2307.06135/landing.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2307.06135/阅读核对.md",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2310.03923/fulltext.txt",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2310.03923/landing.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2310.03923/阅读核对.md",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2312.03275/landing.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2402.12259/fulltext.txt",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2402.12259/landing.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2402.12259/阅读核对.md",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2403.17846/landing.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2408.00714/landing.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2502.13923/landing.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2410.08189/landing.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2410.11989/landing.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/2503.08474/landing.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/01_crossref.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/02_crossref.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/03_crossref.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/03_crossref_title_search.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/04_crossref.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/05_crossref.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/06_crossref.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/07_crossref.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/08_crossref.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/09_crossref.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/10.1007_BF01386390.crossref.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/10.1109_ICRA57147.2024.10610712.crossref.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/10.1109_IROS.2014.6942976.crossref.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/10.1109_TSSC.1968.300136.crossref.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/10.1177_0278364909359210.crossref.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/10.1177_0278364911406761.crossref.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/10_crossref.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/11_crossref.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/12_crossref.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/13_crossref.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/14_crossref.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/15_crossref.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/15_crossref_title_search.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/16_crossref.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/16_crossref_title_search.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/build_group_17_32.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/fetch_group_17_32.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/fetch_group_33_48.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/group_01_16.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/group_01_16_crossref_fetch.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/group_01_16_summary.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/group_01_16_核验记录.md",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/group_17_32.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/group_17_32_crossref.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/group_17_32_crossref_search.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/group_17_32_live_arxiv.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/group_17_32核验记录.md",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/group_33_48.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/group_33_48核验说明.md",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/group_49_62.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/verify_group_01_16.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/write_group_33_48.py",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/group_17_32_cache/17_crossref.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/group_17_32_cache/18_crossref.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/group_17_32_cache/2103.00020.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/group_17_32_cache/2112.03857.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/group_17_32_cache/2201.02605.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/group_17_32_cache/2201.03546.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/group_17_32_cache/2203.17270.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/group_17_32_cache/2205.13542.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/group_17_32_cache/2211.15654.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/group_17_32_cache/22_crossref.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/group_17_32_cache/2302.07241.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/group_17_32_cache/2303.05499.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/group_17_32_cache/2303.09553.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/group_17_32_cache/2304.02643.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/group_17_32_cache/2304.07193.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/group_17_32_cache/2306.13631.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/group_17_32_cache/2310.03923.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/group_17_32_cache/23_crossref.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/group_17_32_cache/2401.17270.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/group_17_32_cache/2408.00714.html",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/group_17_32_cache/24_crossref.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/group_17_32_cache/25_crossref.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/group_17_32_cache/26_crossref_search.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/group_17_32_cache/28_crossref_search.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/group_17_32_cache/29_crossref.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/group_17_32_cache/30_crossref_search.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/group_17_32_cache/31_crossref.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/group_17_32_cache/32_crossref.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/primary_cache_33_48/33_crossref.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/primary_cache_33_48/34_crossref.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/primary_cache_33_48/37_crossref.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/primary_cache_33_48/38_crossref.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/primary_cache_33_48/42_crossref.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/primary_cache_33_48/43_crossref.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/primary_cache_33_48/44_crossref.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/primary_cache_33_48/47_crossref.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/primary_cache_33_48/48_crossref.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/references/status_audit_20261120/primary_cache_33_48/fetch_results.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/sources/论文正文.md",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/sources/tables.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/sources/figures.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/sources/写作论证与术语表.md",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/sources/论文整合源稿.md",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/sources/原版分段.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/sources/合并正文模板.md",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/sources/前两章文献综述修订.md",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/sources/扩写段落/第一章.md",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/sources/扩写段落/第二章.md",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/sources/扩写段落/第三章.md",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/sources/扩写段落/第四章.md",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/sources/扩写段落/第五章.md",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/sources/扩写段落/第六章.md",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "thesis_materials/current_v4_snapshot/sources/扩写段落/第七章.md",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "doc/交接/20261125/evidence/outputs/reports/navstage2_repair_20261124/本轮收口.md",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "doc/交接/20261125/evidence/outputs/reports/navstage2_repair_20261124/final_protection_v1.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "doc/交接/20261125/evidence/outputs/reports/navfollowup_20261124/independent/本轮独立审计收口.md",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "doc/交接/20261125/evidence/outputs/reports/navfollowup_20261124/independent/semantic_follow_package_v1.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "doc/交接/20261125/evidence/outputs/reports/navfollowup_20261124/independent/validation_and_historical_counts_v1.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "doc/交接/20261125/evidence/outputs/reports/navfollowup_20261124/independent/sparse_provenance_and_semantic_additions_v1.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "doc/交接/20261125/evidence/outputs/results/nuscenes/validation/iterations/follow_rule_20261124_v3/summary.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "doc/交接/20261125/evidence/outputs/reports/mapping_iteration_20261124/mapnext_20261124_conclusion.md",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "doc/交接/20261125/evidence/outputs/reports/mapping_iteration_20261124/mapnext_20261124_selection_freeze.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "doc/交接/20261125/evidence/outputs/reports/mapping_iteration_20261124/S2_full_v1/mapnext_20261124_result.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "doc/交接/20261125/evidence/outputs/reports/multiview_viewcount_20261123/mapping/mv136_20261123_conclusion.md",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "doc/交接/20261125/evidence/outputs/reports/multiview_viewcount_20261123/mapping/main_v1/mv136_20261123_node_main.csv",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "doc/交接/20261125/evidence/outputs/reports/multiview_viewcount_20261123/mapping/sharedscan_v1/mv136_20261123_node_main.csv",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "doc/交接/20261125/evidence/outputs/reports/metric_optimization_20261123/r1_acceptance/验收结论_v1.md",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "doc/交接/20261125/evidence/outputs/reports/metric_optimization_20261123/r1_acceptance/final_audit_20261123_v2/验收补齐结论_v2.md",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "doc/交接/20261125/evidence/outputs/results/kitti/evaluation/report.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "doc/交接/20261125/evidence/outputs/reports/iteration_independent_audit_20261124/独立复核结论.md",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "doc/交接/20261125/evidence/outputs/reports/iteration_independent_audit_20261124/mapping_independent_final_v1.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "doc/交接/20261125/evidence/dataset/processed/navbench_stage1_20261124_v1/protocol_v2.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "doc/交接/20261125/evidence/dataset/processed/navbench_stage1_20261124_v1/effective_amendment_v3.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "doc/交接/20261125/evidence/dataset/processed/navbench_stage1_20261124_v1/task_record.schema_v2.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "doc/交接/20261125/evidence/dataset/processed/navbench_stage1_20261124_v1/denominator_freeze.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "doc/交接/20261125/evidence/dataset/processed/navsemantic_tasks_20261124_v3/preregistration.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "doc/交接/20261125/evidence/dataset/processed/navsemantic_tasks_20261124_v3/effective_amendment_v3.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "doc/交接/20261125/evidence/dataset/processed/navsemantic_tasks_20261124_v3/geometry_time_denominator_freeze_v1.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      },
+      {
+        "destination": "doc/交接/20261125/evidence/dataset/processed/follow_rule_20261124_v3/preregistration.json",
+        "tracked": true,
+        "source_sha_matches": true,
+        "destination_sha_matches": true
+      }
+    ]
+  },
+  "protected": [
+    {
+      "path": "/root/autodl-tmp/lizichong/AGENTS.md",
+      "bytes": 2329,
+      "sha256": "d00d1a5fee7e9a441247f6c0179ecda7e8892b5c53d92fbabb83986413c0ac9b"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/MEMORY.md",
+      "bytes": 27542,
+      "sha256": "f1db9a84f9b586fff70f61d09cd3bdda78d4b2cac953fbde8af45533ed034fd6"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/PAPER_MEMORY.md",
+      "bytes": 26644,
+      "sha256": "2a978751be1efd888a130444bc31f146666c7f4fcb62e37c2f92aa2fe196f2b2"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/completion/association.py",
+      "bytes": 2033,
+      "sha256": "13154cc664d9b1528c869575539c444bb20d8e2cc3a119aa1e4d01f7c9d5ccd4"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/completion/config_comparison.py",
+      "bytes": 2603,
+      "sha256": "e831723cdadfa5441ed6c9ba3bc01f91af37dc0c65929febd3041d017f7dbc97"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/completion/depth.py",
+      "bytes": 1509,
+      "sha256": "c3d0b1efa3cdc91a82b75cdf872fe923ff68b240090a49022d3a7481ab653b0e"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/completion/evidence.py",
+      "bytes": 1165,
+      "sha256": "7010f1c26093c0483d2ee4bfac16e933a0809eaa2a6d27d60cc428acc05b7748"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/completion/fault_robustness.py",
+      "bytes": 10114,
+      "sha256": "c4cd34b4a8c94be0f01ca9145eaf0b0be11a88b4b6d52de985442fba0bb2a50e"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/completion/goal_selection_ablation.py",
+      "bytes": 17748,
+      "sha256": "7c78c920f0db40580fc514e6abfd26ab63fa33931ddf7401cc91b6c796084bd1"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/completion/navigation_diagnostics.py",
+      "bytes": 9377,
+      "sha256": "291f75e65b8d0c398064aef6e0123ec7a77354fabcc9ba36343692b81c46e82f"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/completion/quality.py",
+      "bytes": 3759,
+      "sha256": "9d03eeecbd4aaa37708df0894043e796e245c750a7346a33369db150b51da31a"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/completion/reference_reachability.py",
+      "bytes": 14442,
+      "sha256": "b0576ac64a74387b886af792dd10cff831620956b7ec1c7cb0b8df79115b9894"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/completion/reference_reachability_audit.py",
+      "bytes": 14811,
+      "sha256": "db3bbfb3afef330995d0a01bbc17072c22de032cb632a6250c08c3c99535643f"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/completion/reference_reachability_finalize.py",
+      "bytes": 5444,
+      "sha256": "96591e85fe25097c4ad3cd431171b8d4a375ab48a157c946663bddd0eaa19d3b"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/completion/selection_map_transfer.py",
+      "bytes": 2393,
+      "sha256": "084e77c2497a379a495146c5ae9f28b60c49601636ac8d7b40fe2945bc3ce84d"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/completion/stage9.py",
+      "bytes": 13241,
+      "sha256": "466a5b34dfd039e691232dc02e01869ab700b46ae8162f8fb05232c30a805dd5"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/completion/temporal_identity_evaluation.py",
+      "bytes": 19709,
+      "sha256": "c5a57b4edc7ee979888b139988f99a8df62031985fec9b3b73b5b49581f59b15"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/hydra_configs/base_detections.yaml",
+      "bytes": 408,
+      "sha256": "0872105ee4e6152fcec55188f5665845d5d31463ee9970771276cf69f7ce5476"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/hydra_configs/base_mapping.yaml",
+      "bytes": 3150,
+      "sha256": "12e4216ad29eee0677f172d9a279de7bfaaa946ebc959ab1d3204031fb5621c0"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/hydra_configs/incremental_navigation.yaml",
+      "bytes": 2936,
+      "sha256": "14551182f5f2a6efe7e3912ee33568d3650045a0feaa3337b7da5a45b155c643"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/hydra_configs/nuscenes.yaml",
+      "bytes": 166,
+      "sha256": "50e234ff2c3c7682a78a5dfa7a11282d268ea15fc14490485d490a57d0debc3d"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/hydra_configs/project_v2_integration_regression.yaml",
+      "bytes": 833,
+      "sha256": "2e9c2a8621b46a6fb849f3ba8998a28a5a7216f6561fc167c7eaca74d8ded5e6"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/hydra_configs/qwen_semantic.yaml",
+      "bytes": 704,
+      "sha256": "afcb6abb4f06664cae7e1144b29562c41fd79279e46024bc6efc5d769504fb22"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/hydra_configs/replica.yaml",
+      "bytes": 203,
+      "sha256": "9ce285f6565e549fe1213778ce4ca7bc2639d856ca902d94b6b972668f4ab313"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/hydra_configs/sam.yaml",
+      "bytes": 195,
+      "sha256": "9381072f341d9921169b2df08c3901a028adea7a4cced3790d6b78cdc42f754f"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/hydra_configs/scenegraph_relations.yaml",
+      "bytes": 1177,
+      "sha256": "6174777eedc4436daac4bf7ebdbba89983752e77f619bc0d121100b7e11ed119"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/hydra_configs/semantic_navigation.yaml",
+      "bytes": 2161,
+      "sha256": "e8ca45cdbb10507e9391c3331b6a2bd377b19a501a6e489293c842e3ad6231f1"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/hydra_configs/streamlined_detections.yaml",
+      "bytes": 297,
+      "sha256": "90ac2ccd86505cd81a66071fba00717e6c904acfafba9b07d0ede3836ea0671f"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/hydra_configs/streamlined_mapping.yaml",
+      "bytes": 488,
+      "sha256": "76237fb25765dfb257b9f4b05b278cb8d197649c936f2bb2a4265ed695146b60"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/__init__.py",
+      "bytes": 779,
+      "sha256": "1a641541de8ad170f2fcdc70d7338a2397c8fe9695ef805cf97b196fa95ad1a2"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/evaluation.py",
+      "bytes": 16053,
+      "sha256": "9fd0e526b61f01ef094f079c47efbbe4244f4ef63c66c70ebc6e4da67de50541"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/io.py",
+      "bytes": 3052,
+      "sha256": "86555960cdc263365497399fce47bdf0e6609626b9eb5be4d532100016c25fb4"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/lane_audit.py",
+      "bytes": 3317,
+      "sha256": "c2e509cc3c0661c78429c77f42d5a10dff9c7fb45e963dff8b672f69395037e6"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/lane_constraints.py",
+      "bytes": 20425,
+      "sha256": "aac7da44a65887481f9fbbce7fdf09356097f44b755413b71a7c4b20c46611c5"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/lane_geometry.py",
+      "bytes": 4101,
+      "sha256": "cbeeecd15147a5de9fb59762d52e134ef96c650b10a7e506da923dbbe923d090"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/lane_validation.py",
+      "bytes": 10547,
+      "sha256": "8195d0706612de6aeb614501a5790ec8ce5c7c4ffddb7da9933e75cc4bdf9fd9"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/navstage2_20261124.py",
+      "bytes": 12505,
+      "sha256": "9d27c2f2483bdd5b3400090477ba84346e9ece472c0ab587e455c9b469f4f6f5"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/navstage2_runner_20261124.py",
+      "bytes": 17152,
+      "sha256": "7cc5580404d76c1b56c6521582d47d5494404d601f968b05782c317eb371cef9"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/online.py",
+      "bytes": 70407,
+      "sha256": "1f908ecbf0da1b2fe4f2c6e8cdb7e075c31fc14febb580d96fb6f46b9643a6f6"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/pipeline.py",
+      "bytes": 40985,
+      "sha256": "c4a6fdb6ea848024a2f98ab7a8b98a602ebd4ab59102aafa8c9e62ffb0fb2a13"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/planner.py",
+      "bytes": 30851,
+      "sha256": "585ddc41d7ca1bfc8508dce8cdae1cde81ed5b4982ab3b6dbaa478a4f393bb54"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/reference_guided_vehicle.py",
+      "bytes": 8189,
+      "sha256": "fe65de18c10b7dd4ea2d07df0f3edcfc65772b6fbd4cca10b0f91139276cd9f3"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/replan_policy.py",
+      "bytes": 7765,
+      "sha256": "8765b64d87df117b11655f57f66d54fed9b0a4a4dfc74e03fdb4de75f06f9c45"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/semantic.py",
+      "bytes": 45148,
+      "sha256": "95645c520c37819f5ca0e3feebcfd5e2282cfc4260eb24caea04d04ca94dbf59"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/semantic_tasks_20261123.py",
+      "bytes": 34593,
+      "sha256": "073d51444ea8ede3f17bec9e9b0d4a10208fb5e99aa1ca3ea99895a0a9af52b6"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/state_machine.py",
+      "bytes": 10368,
+      "sha256": "1af29db3ba7f1651e053bb1ba0a548e2458a33a023063b2b6baabd38f6c0540b"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/target_selector.py",
+      "bytes": 47532,
+      "sha256": "0a9e5ebfbdf89d1641863ee7b47a458475896e140cd1d7cc632161803c8855d2"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/task_replay_20261123.py",
+      "bytes": 12631,
+      "sha256": "b7554de03a317e6eaab0b972f86417c8c76609497d6199679a43fb7e7fd126fe"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/types.py",
+      "bytes": 7544,
+      "sha256": "0524d36a7909f4819a56723ac74482c6e61e7b79b780adb8f63fcb9a19370034"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/vehicle_geometry.py",
+      "bytes": 7654,
+      "sha256": "ae93a8ae8e9af6d874eafad1d57e5b2e65f54f45b0c90ccbdcc32d79743a9378"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/navigation/vehicle_planner.py",
+      "bytes": 6023,
+      "sha256": "1f17b4c03b9989b3ffd0133469619fb66eb522d9b89ff8071ebb547f49f29b95"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/project_paths.py",
+      "bytes": 794,
+      "sha256": "cbb9c0e65ed1630291dced8c4df690409f1b7fb78887c973da6fb84998c354c4"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/scenegraph/relations.py",
+      "bytes": 51345,
+      "sha256": "099e967bdbe5cd0ecf63fe90d094e5f9638d5c4df3643148d7671ee6fa25c105"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/slam/audited_mapper.py",
+      "bytes": 1604,
+      "sha256": "60cc24a28289dc5ac037707debb8e8cea7d6581993beb277b187db2fa6804e27"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/slam/current_geometry_mapper.py",
+      "bytes": 814,
+      "sha256": "8e35b82abdc8e37349391dde2bb6e1b079ab71d27dd9caaa37e8c4234e3a854f"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/slam/dense_refinement.py",
+      "bytes": 4833,
+      "sha256": "6b3626e64bb26b2d2c578e06f6cebea04f4198a503abfbabda339b716626cc10"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/slam/evidence_mapper.py",
+      "bytes": 1339,
+      "sha256": "11fa68d1adb6be33effe8f789e27d09a4df63e4b10acfb3d522670af95a6c748"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/slam/mapnext_20261124_mapper.py",
+      "bytes": 1436,
+      "sha256": "1aad6969dbee5fac03f36f02d09c100d092dacee082e2d2216ff13bc3502cea7"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/slam/mapping.py",
+      "bytes": 9097,
+      "sha256": "95089084ed1ff4c2ec4bfd3414edec6c4a2145a16135373b66db7e9fed6d99d7"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/slam/motion_association_mapper.py",
+      "bytes": 3405,
+      "sha256": "f97b76b531a60d90a78cce8c167156dcf2ee139874dfb498e7de31259e1c2c28"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/slam/mvrepair_lifecycle_20261123_mapper.py",
+      "bytes": 4709,
+      "sha256": "be0cfa38b872a310f1ee662be8f1e0c321917ab142ef797d7717654f23bc1222"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/slam/quality_mapper.py",
+      "bytes": 4988,
+      "sha256": "b2f90dd6522fdba1f13c534376e6422bfb987316184cf19481e18e8d292e402a"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/slam/sparse_observations.py",
+      "bytes": 11939,
+      "sha256": "cdebdf539acf43a0e3735b5792a41f907a8c824e59095e49eb6a2ffd1e839cad"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/slam/streamlined_mapping.py",
+      "bytes": 22354,
+      "sha256": "00ce7e26949c145bdd1b42882a8923e9ff6e106b2101ff288fd6ef05498b8676"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/conceptgraph/slam/utils.py",
+      "bytes": 36142,
+      "sha256": "1fc71fe993ba61c3d264d6434df5b195f7347953fbe3d53ec9cc1e4fe007b94d"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navbench_stage1_20261124_v1/denominator_freeze.json",
+      "bytes": 4093,
+      "sha256": "c20f0698eb78ee3a1a58ec9a11712265c9fe658d7ede6cd71b4a8fde39142ee8"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navbench_stage1_20261124_v1/effective_amendment_v3.json",
+      "bytes": 3262,
+      "sha256": "c83cf0f8320187a6cf8318ce55a8b25f5f05a9c8b1e52f35b6e9bd0ac09c1bca"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navbench_stage1_20261124_v1/evaluation_only/certificates.jsonl",
+      "bytes": 277556,
+      "sha256": "e83b98de010a4b68e8eb6bf7de5657a997135c9bcd2c01a3bc06a895302f772a"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navbench_stage1_20261124_v1/evaluation_only/conditional_reference_labels.jsonl",
+      "bytes": 1720151,
+      "sha256": "6767bde7abed634f6974ec17b53dcfd71667ca5dd2c212592fce732d786d353c"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navbench_stage1_20261124_v1/manifest.json",
+      "bytes": 7829,
+      "sha256": "bf90fef235ca87c833c6233629b2953eb12fc6a62638fecc1f32c5415c073e61"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navbench_stage1_20261124_v1/preregistration.json",
+      "bytes": 3433,
+      "sha256": "dfec70c5a63b354ef0fc8b48e8312466a841adfedfe48d1546331b9554602e82"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navbench_stage1_20261124_v1/source_binding_overlay_v1.jsonl",
+      "bytes": 1354163,
+      "sha256": "5f64ca493d58310cfc7cbc33acedeb40185050be76108eae56152beb4838befe"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navbench_stage1_20261124_v1/task_record.schema_v2.json",
+      "bytes": 7197,
+      "sha256": "5fab8695b03f09a7e45327b0aab3bc721a03e82ed75d7f6035fd71d97831b353"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navbench_stage1_20261124_v1/task_registry.jsonl",
+      "bytes": 3695564,
+      "sha256": "40aca597746a2b73b41ad68d711b7aea350c0af3939cc9b9ed4b49ea6e45c35e"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navstage2_20261124_v1/manifest.json",
+      "bytes": 25872,
+      "sha256": "6cb44579418fffb9e0473648690e38a49dba996707a3e2e5bb48acfb4709267a"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navstage2_20261124_v1/method_inputs.jsonl",
+      "bytes": 613622,
+      "sha256": "1eda724fed59032875a3c92b5051533594858c0f87789323a0249b2fc70c7894"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navstage2_20261124_v2/manifest.json",
+      "bytes": 26052,
+      "sha256": "45138c7b1414098f3decea5ecc3d6439bb63c0c86b594d356fcd85c66f72eb58"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navstage2_20261124_v2/method_inputs.jsonl",
+      "bytes": 613622,
+      "sha256": "1eda724fed59032875a3c92b5051533594858c0f87789323a0249b2fc70c7894"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/dataset/processed/navstage2_repair_20261124_v1/validation_queries.jsonl",
+      "bytes": 618049,
+      "sha256": "624a4fef5ac4a3229c20f6178b06a38b07fde90ad85ccc19fe1105f5e429f4d5"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_goals_full_001/queries.jsonl",
+      "bytes": 6668817,
+      "sha256": "1676f1f6ba5fe79522718493c3cbe105a05beb879a2f7b55b31936110eadfafe"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/ablations/causal_goals_full_001/report.json",
+      "bytes": 5808,
+      "sha256": "3c8b6b691239983d9753aa081d808e26e40d1d8955a0c02d7888a89508bc01a6"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/annotation/reference_reachability_reserved_full_002/audit_001/auditor_source.py",
+      "bytes": 14811,
+      "sha256": "db3bbfb3afef330995d0a01bbc17072c22de032cb632a6250c08c3c99535643f"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/annotation/reference_reachability_reserved_full_002/audit_001/queries.jsonl",
+      "bytes": 607740,
+      "sha256": "b80b43134a2420912cccb3f4d0e6f9aadb1ff99736cc52c756586302438bfb70"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/annotation/reference_reachability_reserved_full_002/audit_001/report.json",
+      "bytes": 830,
+      "sha256": "2bbf4a1f93f94fdabda6f67a75fc7f403b4191b9edb25fa3142f49342b179bf8"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/project_v2/thesis_completion_v1/annotation/reference_reachability_reserved_full_002/audit_001/witness_checks.json",
+      "bytes": 32709,
+      "sha256": "2ad00e650d6b4a5e7b1934fed2ad584d87a3fdf5dd2893f8e7e25d1bd7e18899"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/reports/paper_campaign_20261123/navigation/R1_false_selection_case_evidence.json",
+      "bytes": 28035,
+      "sha256": "24170784e9db088e51f98ec676af3ef4b5a722f2eda2a489a1eef3728311fec1"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/reports/paper_campaign_20261123/navigation/episode_protocol_status.json",
+      "bytes": 2742,
+      "sha256": "dfae44b8bd210bd524f02383c3e15fead2be37ee27f7483ecc5ca76a4bb3cb9c"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/reports/paper_campaign_20261123/navigation/paper_nav_20261123_first_104746_start.json",
+      "bytes": 801,
+      "sha256": "263d642d94ceb8b7c8716116b048a73ba3510c098be50c29bb9c790d6942db74"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/reports/paper_campaign_20261123/navigation/same_task_navigation_chain.csv",
+      "bytes": 1783,
+      "sha256": "33bf82176720a5cad0bc107431a0a9a041d2659012589fc740a980be27e4402b"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/reports/paper_campaign_20261123/navigation/same_task_navigation_chain.json",
+      "bytes": 4910,
+      "sha256": "ec1685cb732f70039fc21bdaa46cf0c92110ae886d3e9df086457fe32975f211"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/reports/paper_campaign_20261123/navigation/shared_rejection_workpoints.csv",
+      "bytes": 1702,
+      "sha256": "3392f103d2c6d72629af65b4ad8dc078f27cb61108c5f7c6509213558debbecd"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/reports/paper_campaign_20261123/navigation/shared_rejection_workpoints.json",
+      "bytes": 6774,
+      "sha256": "a976469bde2f21a4d5ca71cdaa261aac4359f65484f60eb1e52dc8983b26c9b3"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/reports/paper_campaign_20261123/navigation/target_selection_complete.csv",
+      "bytes": 4481,
+      "sha256": "7a67edc5baae0ade72dde388d45093d6043a4d811559c8f3ad993a35c0c29c07"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/reports/paper_campaign_20261123/navigation/target_selection_complete.json",
+      "bytes": 12514,
+      "sha256": "e4023566cb44bd9de70cd57d892636583a399516cb9e683f3e9f40d0fb62d79b"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/test/iterations/navstage2_20261124_v1/manifest.json",
+      "bytes": 25872,
+      "sha256": "6cb44579418fffb9e0473648690e38a49dba996707a3e2e5bb48acfb4709267a"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/test/iterations/navstage2_20261124_v1/method_predictions.jsonl",
+      "bytes": 15558,
+      "sha256": "4c8098b6c3fbcfa79d3d92fbbd04f5558e1518db3a7ac83b76da7a22b7bcf3e3"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/test/iterations/navstage2_20261124_v1/source_snapshot.tar.gz",
+      "bytes": 137201,
+      "sha256": "de7f50fc4a26b5dc5ad72fa72022ddf663d536a9e2798d113af7dc713c8bc2d3"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/test/iterations/navstage2_20261124_v2/evaluation_only/queries.jsonl",
+      "bytes": 44427,
+      "sha256": "c663d8bc0775acc94d9d870682c1e6c73a1c1e518be0835e23ffcbbc63e277f7"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/test/iterations/navstage2_20261124_v2/evaluation_only/summary.json",
+      "bytes": 4732,
+      "sha256": "339249b925f3319813d7c260d72b1f1b80be4a2d3f8ebe11e37c4aa313882dc4"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/test/iterations/navstage2_20261124_v2/manifest.json",
+      "bytes": 26052,
+      "sha256": "45138c7b1414098f3decea5ecc3d6439bb63c0c86b594d356fcd85c66f72eb58"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/test/iterations/navstage2_20261124_v2/method_predictions.jsonl",
+      "bytes": 100373,
+      "sha256": "113c83d755c9a67fd5d4a2879fc50aba82e00a8ed685bed8bc3641a7e89fa166"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/test/iterations/navstage2_20261124_v2/run_summary.json",
+      "bytes": 464,
+      "sha256": "ed4bd66968b1c03611f4f80bb3c93a835dd2bdf71bd913f35de2d159cd0a0565"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/test/iterations/navstage2_20261124_v2/source_snapshot.tar.gz",
+      "bytes": 137398,
+      "sha256": "0b224597dce4f99d1bd523c9d39c264749f8299de8068234205dc980bdc70352"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/navstage2_sparse_evidence_20261124_v1/raw_navigation_evidence.jsonl.gz",
+      "bytes": 10307,
+      "sha256": "915d2cea930e1861d4bc5f5be98f58fc330eace7fcf6af3e0a623e4984a6a590"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/navstage2_sparse_evidence_20261124_v1/summary.json",
+      "bytes": 620,
+      "sha256": "0dd299f0eb743d62f97dc6e971dabbc6a0a19f3c2843bcd6ac68656ec99eba85"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/paper_nav_20261123_first_104746/same_task_chain_records.jsonl",
+      "bytes": 1842966,
+      "sha256": "440795510d941e5bf8a221bead4ce0417e2f38a3984067e81ce0a13f4273e08b"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/release.json",
+      "bytes": 29535,
+      "sha256": "12c26b1785d09d4b593d841152b35c59d534ed0527f32cc4d8e4760d81cd7e2b"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0012/frames.jsonl.gz",
+      "bytes": 16082,
+      "sha256": "bf7d7e5e390b422bbcb8ea95404fac6bdf3ca4d4403ca9a6318587f5ca2fc54f"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0013/frames.jsonl.gz",
+      "bytes": 39198,
+      "sha256": "4c9032a6029ff756ff31f1fb4e139a482faab3d2534e990724969ad28b03570f"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0014/frames.jsonl.gz",
+      "bytes": 25660,
+      "sha256": "19e21cd2e93faa70f0620ada6d7cfe86ca8d75dac51a4e3f069d5a90dde3ea37"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0015/frames.jsonl.gz",
+      "bytes": 45291,
+      "sha256": "6bee75467b373add0c12de152904c216f874c13213ba6516fbe9f231288ff905"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0016/frames.jsonl.gz",
+      "bytes": 63247,
+      "sha256": "4925077ac3fc26209366d9ff9d2f59d893fbe668b076d70b5349cae5f504360b"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0019/frames.jsonl.gz",
+      "bytes": 78139,
+      "sha256": "a9a81fc1193b228d5633c751f2155066d2031f9294cd9e0c70567019e6e95207"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0020/frames.jsonl.gz",
+      "bytes": 45165,
+      "sha256": "919211602df3a9248a3fd7cb15c2ed598f227860af6bc756e5555a2a8f2a44ff"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0021/frames.jsonl.gz",
+      "bytes": 61877,
+      "sha256": "71577dd38b6d80299bddce8a85808136a9420985ca44682d7e138eeba137684b"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0025/frames.jsonl.gz",
+      "bytes": 37396,
+      "sha256": "83258fb0f74566865f75e2fdabc5882196a7c43b8155aa4600f3e48401c65ae3"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0026/frames.jsonl.gz",
+      "bytes": 60754,
+      "sha256": "4f26eed7fd768f528d5999e7d343b2b39b3fc58ff2bdeeb91005b2c38f911ba9"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0027/frames.jsonl.gz",
+      "bytes": 49453,
+      "sha256": "5810dabedfe6c4ea43eae49dda1316642060ab85a8522846521f761362fad32c"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0030/frames.jsonl.gz",
+      "bytes": 20446,
+      "sha256": "5a12982c6da26251179ccc81f77766335ec1cd1cc2b08b3d304d4ce210b96f60"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0032/frames.jsonl.gz",
+      "bytes": 10594,
+      "sha256": "5ffc3307e950dcb943fe912b1502fcf588ea44f856cd70244a3954302e18b8a0"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0035/frames.jsonl.gz",
+      "bytes": 57722,
+      "sha256": "c79b58d3f563ce92b0c274298caa5e4023c6329a8a3cbf317ae03ddff434c2fb"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0038/frames.jsonl.gz",
+      "bytes": 55159,
+      "sha256": "b12197adf6c89ae732a47f0fadac3154e78b2cabb9b39733b9ac326d350e381a"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0039/frames.jsonl.gz",
+      "bytes": 45363,
+      "sha256": "75455983a38d01c47f95a6e853a4a1d1bffc812c84de1321d7705de2573dc573"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0042/frames.jsonl.gz",
+      "bytes": 37889,
+      "sha256": "5496a5d50b0fa920b1326b463f4390c36f7ab6b34c5c0aa443d2ee7a2cf8aa69"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0043/frames.jsonl.gz",
+      "bytes": 193422,
+      "sha256": "1c0f80b406b61b3beb3ca3dcd218697f1ea05d5e6e981e57b66f4c793bc03920"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0044/frames.jsonl.gz",
+      "bytes": 26517,
+      "sha256": "04260c9b117e116f225c596419ae83d55f40f6b7f86ab849c3ee11771298bb05"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0047/frames.jsonl.gz",
+      "bytes": 38827,
+      "sha256": "781606e06cbc34a27d688f5c8cd8e2f1d554fc673696443aa8a9f6961e9e1765"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0048/frames.jsonl.gz",
+      "bytes": 29268,
+      "sha256": "7711a1312642c8abf3c911d9dce7e62933b0a91e0272737c84b61f1b70fc65ca"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0049/frames.jsonl.gz",
+      "bytes": 32133,
+      "sha256": "d1f024b70fdac1d29263526f35ec95bac6227576aab536db70a92a68cdf15bb1"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0053/frames.jsonl.gz",
+      "bytes": 75230,
+      "sha256": "a0485d64a177207d3bd33028461559044c151055a1720ce3161fffcda48b314e"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0054/frames.jsonl.gz",
+      "bytes": 81573,
+      "sha256": "508b667cabb745a39c8299cf5c9fa9cbaf1100cc9b163f35b1d0f8e88135ac0e"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0059/frames.jsonl.gz",
+      "bytes": 84057,
+      "sha256": "7b7bb8d4f90eab4c8170fa84c43bdd1af036efefec69fec22de9d65da4670525"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0060/frames.jsonl.gz",
+      "bytes": 39223,
+      "sha256": "8a74f998331348d1a30cd0728cbde251ffdaad4546de0533d3d28a438a77d218"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0075/frames.jsonl.gz",
+      "bytes": 72051,
+      "sha256": "b60c6c8658bc15183d7e07377667082f43c573b1c8cd55f6e4049cfab8736382"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0092/frames.jsonl.gz",
+      "bytes": 64396,
+      "sha256": "7d8e3d7abbb085d4f2d52789ece96c48f432a980617d2f2e59572295cd992f10"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0093/frames.jsonl.gz",
+      "bytes": 58154,
+      "sha256": "dd70871c7fa87ade5ea6ce69c56e2ab836aa52d75ebe48161c8eadc212c0091f"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0095/frames.jsonl.gz",
+      "bytes": 239444,
+      "sha256": "42a5728237af646821a59dc0b89ee8bb7af9b55441004e1b2c8cce80fa677da7"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0096/frames.jsonl.gz",
+      "bytes": 62397,
+      "sha256": "12aa510acff6b04dd4f3ec83a153449489f7faf0fd6cf86eeec7a2fbab9aa62d"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0097/frames.jsonl.gz",
+      "bytes": 74593,
+      "sha256": "97a5fbdea8b65b0265c03abf8fd2a57e02b012e283d473de9082be6f38c0933e"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0098/frames.jsonl.gz",
+      "bytes": 69463,
+      "sha256": "5749861729678889e5099baa475a2754caf2c3d923d25e4ca9704a218364c6e0"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0099/frames.jsonl.gz",
+      "bytes": 116216,
+      "sha256": "0b84d197213225879889a459066f6625f9619c8888edf4adc795d0d96e46871b"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0102/frames.jsonl.gz",
+      "bytes": 60262,
+      "sha256": "6f0f98a00634411a869af66288e1283e06a23d5178c2e8fdd07e8162f4121909"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0129/frames.jsonl.gz",
+      "bytes": 57940,
+      "sha256": "5ba1d2c053bb443954826bafd94e01298b022e7e80cea9b9079679924628948e"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0135/frames.jsonl.gz",
+      "bytes": 61836,
+      "sha256": "60865d521b8299f80ee579b80e05131b206ecb87f4fba780faeb07602e62e021"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/nuscenes/validation/iterations/recall_refinement_R1_full_20261120_v2/scene-0174/frames.jsonl.gz",
+      "bytes": 80355,
+      "sha256": "b88378ec74416e3045e4779df0d6ce170c83496cb7a9bb5af8f1c7bf9bca7ef7"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/qwen/validation/iterations/selection_r1_map_transfer_20261123_v1/queries.jsonl",
+      "bytes": 1618558,
+      "sha256": "8549f22822fda983d5a0d466f849480a6b866f975fb97f569a988f3112f16e9a"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/qwen/validation/iterations/selection_r1_map_transfer_20261123_v1/release.json",
+      "bytes": 18885,
+      "sha256": "10ddfce97a2aa0d749c6cad94d8a31f966174daf419104881f20769bb50d1976"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/outputs/results/qwen/validation/iterations/selection_r1_map_transfer_20261123_v1/report.json",
+      "bytes": 6269,
+      "sha256": "ff24caac1f032913dfe73a169665a7c5e72a9abc0bc20c3055696601511976c1"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/paper/当前版_v4/sources/论文正文.md",
+      "bytes": 192646,
+      "sha256": "5481fec83d93a23f59f3048aa612d1fecdc4d07d65a4ac0f2e39b37db380a9f1"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/paper/当前版本.json",
+      "bytes": 1075,
+      "sha256": "0a0ee0da832011ebdc11c6a1d6e28d656a46175c5ff24ad5b0fee89aa40aab43"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/scripts/navstage2_20261124.py",
+      "bytes": 296,
+      "sha256": "cf1d8acb32669fac0e83e65639d461a8041357c71f9ec557977df4d848ad6e50"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/scripts/run_mapping_refinement.py",
+      "bytes": 9616,
+      "sha256": "854921648379c7e40e5c345679be284ac7a28202877af8990283f5794f1fc1c8"
+    },
+    {
+      "path": "/root/autodl-tmp/lizichong/项目导航.md",
+      "bytes": 5373,
+      "sha256": "d92024013a65d38b2b0686350782a5191abaad89c0e27b4cf86bbd77dac7dcdc"
+    }
+  ],
+  "disk_free_bytes": 30984175616,
+  "required_checks": [
+    "All38 validation/debug scenes/1508 frames; all1115 queries with733 positive and382 negative; same-log historical81 excluded from method selection.",
+    "Frozen source/input/seed and original per-frame R1 predictions exactly unchanged; no GT or future input to evidence collection or ranking.",
+    "Distinct real measurement frames and timestamps, real raw centers and depth/mask provenance; no filtered-center history or cumulative pixels represented as current measured support.",
+    "Alias/assignment transitions traceable; competitive or incomplete identity stays unknown. Static speed threshold and relation/distance semantics retained.",
+    "New position-only task candidates are separate from original shape/depth vehicle-safety authorization; candidate additions do not gain route or arrival credit.",
+    "Same complete positive/negative denominator, failures, per-log counts and baseline scores; no historical81 tuning or new training."
+  ]
+}

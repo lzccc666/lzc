@@ -1,0 +1,329 @@
+{
+  "methods": {
+    "R1_original_rule": {
+      "tasks": 1115,
+      "positive": 733,
+      "negative": 382,
+      "positive_selected_correct": 81,
+      "positive_raw_covered": 370,
+      "positive_candidate_covered": 91,
+      "negative_false_selection": 19,
+      "rejected": 959,
+      "position_only_selected": 0,
+      "vehicle_safety_authorized": 0
+    },
+    "R1_multiframe_position_rule": {
+      "tasks": 1115,
+      "positive": 733,
+      "negative": 382,
+      "positive_selected_correct": 93,
+      "positive_raw_covered": 370,
+      "positive_candidate_covered": 104,
+      "negative_false_selection": 19,
+      "rejected": 945,
+      "position_only_selected": 14,
+      "vehicle_safety_authorized": 0
+    }
+  },
+  "by_log": {
+    "d31dc715d1c34b99bd5afb0e3aea26ed": {
+      "R1_original_rule": {
+        "tasks": 108,
+        "positive": 58,
+        "negative": 50,
+        "positive_selected_correct": 1,
+        "positive_raw_covered": 22,
+        "positive_candidate_covered": 1,
+        "negative_false_selection": 5,
+        "rejected": 102,
+        "position_only_selected": 0,
+        "vehicle_safety_authorized": 0
+      },
+      "R1_multiframe_position_rule": {
+        "tasks": 108,
+        "positive": 58,
+        "negative": 50,
+        "positive_selected_correct": 5,
+        "positive_raw_covered": 22,
+        "positive_candidate_covered": 5,
+        "negative_false_selection": 5,
+        "rejected": 98,
+        "position_only_selected": 4,
+        "vehicle_safety_authorized": 0
+      }
+    },
+    "bc41a49366734ebf978d6a71981537dc": {
+      "R1_original_rule": {
+        "tasks": 193,
+        "positive": 113,
+        "negative": 80,
+        "positive_selected_correct": 13,
+        "positive_raw_covered": 64,
+        "positive_candidate_covered": 13,
+        "negative_false_selection": 1,
+        "rejected": 175,
+        "position_only_selected": 0,
+        "vehicle_safety_authorized": 0
+      },
+      "R1_multiframe_position_rule": {
+        "tasks": 193,
+        "positive": 113,
+        "negative": 80,
+        "positive_selected_correct": 18,
+        "positive_raw_covered": 64,
+        "positive_candidate_covered": 18,
+        "negative_false_selection": 1,
+        "rejected": 170,
+        "position_only_selected": 5,
+        "vehicle_safety_authorized": 0
+      }
+    },
+    "783683d957054175bda1b326453a13f4": {
+      "R1_original_rule": {
+        "tasks": 90,
+        "positive": 60,
+        "negative": 30,
+        "positive_selected_correct": 3,
+        "positive_raw_covered": 36,
+        "positive_candidate_covered": 3,
+        "negative_false_selection": 0,
+        "rejected": 86,
+        "position_only_selected": 0,
+        "vehicle_safety_authorized": 0
+      },
+      "R1_multiframe_position_rule": {
+        "tasks": 90,
+        "positive": 60,
+        "negative": 30,
+        "positive_selected_correct": 4,
+        "positive_raw_covered": 36,
+        "positive_candidate_covered": 4,
+        "negative_false_selection": 0,
+        "rejected": 85,
+        "position_only_selected": 1,
+        "vehicle_safety_authorized": 0
+      }
+    },
+    "d7fd2bb9696d43af901326664e42340b": {
+      "R1_original_rule": {
+        "tasks": 105,
+        "positive": 74,
+        "negative": 31,
+        "positive_selected_correct": 5,
+        "positive_raw_covered": 32,
+        "positive_candidate_covered": 5,
+        "negative_false_selection": 3,
+        "rejected": 92,
+        "position_only_selected": 0,
+        "vehicle_safety_authorized": 0
+      },
+      "R1_multiframe_position_rule": {
+        "tasks": 105,
+        "positive": 74,
+        "negative": 31,
+        "positive_selected_correct": 6,
+        "positive_raw_covered": 32,
+        "positive_candidate_covered": 7,
+        "negative_false_selection": 3,
+        "rejected": 91,
+        "position_only_selected": 1,
+        "vehicle_safety_authorized": 0
+      }
+    },
+    "f38ef5a1e9c941aabb2155768670b92a": {
+      "R1_original_rule": {
+        "tasks": 136,
+        "positive": 86,
+        "negative": 50,
+        "positive_selected_correct": 4,
+        "positive_raw_covered": 31,
+        "positive_candidate_covered": 5,
+        "negative_false_selection": 2,
+        "rejected": 122,
+        "position_only_selected": 0,
+        "vehicle_safety_authorized": 0
+      },
+      "R1_multiframe_position_rule": {
+        "tasks": 136,
+        "positive": 86,
+        "negative": 50,
+        "positive_selected_correct": 4,
+        "positive_raw_covered": 31,
+        "positive_candidate_covered": 5,
+        "negative_false_selection": 2,
+        "rejected": 122,
+        "position_only_selected": 0,
+        "vehicle_safety_authorized": 0
+      }
+    },
+    "7e25a2c8ea1f41c5b0da1e69ecfa71a2": {
+      "R1_original_rule": {
+        "tasks": 46,
+        "positive": 25,
+        "negative": 21,
+        "positive_selected_correct": 17,
+        "positive_raw_covered": 20,
+        "positive_candidate_covered": 17,
+        "negative_false_selection": 3,
+        "rejected": 26,
+        "position_only_selected": 0,
+        "vehicle_safety_authorized": 0
+      },
+      "R1_multiframe_position_rule": {
+        "tasks": 46,
+        "positive": 25,
+        "negative": 21,
+        "positive_selected_correct": 17,
+        "positive_raw_covered": 20,
+        "positive_candidate_covered": 17,
+        "negative_false_selection": 3,
+        "rejected": 26,
+        "position_only_selected": 0,
+        "vehicle_safety_authorized": 0
+      }
+    },
+    "7a0fde44c3504eaeb18f9ad83bed65bc": {
+      "R1_original_rule": {
+        "tasks": 42,
+        "positive": 32,
+        "negative": 10,
+        "positive_selected_correct": 0,
+        "positive_raw_covered": 15,
+        "positive_candidate_covered": 0,
+        "negative_false_selection": 0,
+        "rejected": 38,
+        "position_only_selected": 0,
+        "vehicle_safety_authorized": 0
+      },
+      "R1_multiframe_position_rule": {
+        "tasks": 42,
+        "positive": 32,
+        "negative": 10,
+        "positive_selected_correct": 0,
+        "positive_raw_covered": 15,
+        "positive_candidate_covered": 0,
+        "negative_false_selection": 0,
+        "rejected": 38,
+        "position_only_selected": 0,
+        "vehicle_safety_authorized": 0
+      }
+    },
+    "53cf9c55dd8644bea67b9f009fc1ee38": {
+      "R1_original_rule": {
+        "tasks": 281,
+        "positive": 201,
+        "negative": 80,
+        "positive_selected_correct": 27,
+        "positive_raw_covered": 111,
+        "positive_candidate_covered": 33,
+        "negative_false_selection": 4,
+        "rejected": 224,
+        "position_only_selected": 0,
+        "vehicle_safety_authorized": 0
+      },
+      "R1_multiframe_position_rule": {
+        "tasks": 281,
+        "positive": 201,
+        "negative": 80,
+        "positive_selected_correct": 28,
+        "positive_raw_covered": 111,
+        "positive_candidate_covered": 34,
+        "negative_false_selection": 4,
+        "rejected": 223,
+        "position_only_selected": 1,
+        "vehicle_safety_authorized": 0
+      }
+    },
+    "34d0574ea8f340179c82162c6ac069bc": {
+      "R1_original_rule": {
+        "tasks": 32,
+        "positive": 22,
+        "negative": 10,
+        "positive_selected_correct": 7,
+        "positive_raw_covered": 16,
+        "positive_candidate_covered": 10,
+        "negative_false_selection": 0,
+        "rejected": 18,
+        "position_only_selected": 0,
+        "vehicle_safety_authorized": 0
+      },
+      "R1_multiframe_position_rule": {
+        "tasks": 32,
+        "positive": 22,
+        "negative": 10,
+        "positive_selected_correct": 7,
+        "positive_raw_covered": 16,
+        "positive_candidate_covered": 10,
+        "negative_false_selection": 0,
+        "rejected": 18,
+        "position_only_selected": 0,
+        "vehicle_safety_authorized": 0
+      }
+    },
+    "343d984344e440c7952d1e403b572b2a": {
+      "R1_original_rule": {
+        "tasks": 38,
+        "positive": 28,
+        "negative": 10,
+        "positive_selected_correct": 0,
+        "positive_raw_covered": 9,
+        "positive_candidate_covered": 0,
+        "negative_false_selection": 1,
+        "rejected": 37,
+        "position_only_selected": 0,
+        "vehicle_safety_authorized": 0
+      },
+      "R1_multiframe_position_rule": {
+        "tasks": 38,
+        "positive": 28,
+        "negative": 10,
+        "positive_selected_correct": 0,
+        "positive_raw_covered": 9,
+        "positive_candidate_covered": 0,
+        "negative_false_selection": 1,
+        "rejected": 36,
+        "position_only_selected": 1,
+        "vehicle_safety_authorized": 0
+      }
+    },
+    "b05f285d53744542a3413476d6dd9270": {
+      "R1_original_rule": {
+        "tasks": 44,
+        "positive": 34,
+        "negative": 10,
+        "positive_selected_correct": 4,
+        "positive_raw_covered": 14,
+        "positive_candidate_covered": 4,
+        "negative_false_selection": 0,
+        "rejected": 39,
+        "position_only_selected": 0,
+        "vehicle_safety_authorized": 0
+      },
+      "R1_multiframe_position_rule": {
+        "tasks": 44,
+        "positive": 34,
+        "negative": 10,
+        "positive_selected_correct": 4,
+        "positive_raw_covered": 14,
+        "positive_candidate_covered": 4,
+        "negative_false_selection": 0,
+        "rejected": 38,
+        "position_only_selected": 1,
+        "vehicle_safety_authorized": 0
+      }
+    }
+  },
+  "changed_cases": 14,
+  "baseline_exact": true,
+  "disabled_new_confirmation_exact": true,
+  "configuration_count": 1,
+  "parameter_search": false,
+  "historical81_accessed": false,
+  "GT_in_method": false,
+  "GPU_calls": 0,
+  "planner_calls": 0,
+  "vehicle_safety_authorized": false,
+  "elapsed_s": 8.85676776431501,
+  "queries_sha256": "0cee8237b7dbea71f22dd7613c79ed9989210ef9869a00ad7667f2636eae19e2",
+  "frames_sha256": "4cbb66454f9c86f4997304753b98c10df6fb01c05c8d992a89d9bb6537fc9bfe"
+}

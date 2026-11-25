@@ -1,0 +1,123 @@
+{
+  "base_commit": "80adf9171f58c4ea58df11147f45f8f686e61078",
+  "new_sources": {
+    "conceptgraph/completion/navcandidate_independent_20261125.py": "bb4939271173fa7daa8f19b8825b8e85c7e8072c3b0b08732c1627ea00abd303",
+    "conceptgraph/completion/navcandidate_pixels_audit_20261125.py": "4a80b06b80cd73fb3594818b884b735e40dac62ef61103e19f72e02ee1921f4d",
+    "conceptgraph/completion/navcandidate_results_audit_20261125.py": "b6ac64c3ff46ec44687816882c4408ff77fa2de1bf07ee259011ed7905b611d6",
+    "conceptgraph/navigation/mf_position_20261125.py": "8202a8489feea5d84d10daa6b57e9dd8c948058f387d6da015fe77624fb6b1ec",
+    "conceptgraph/navigation/mf_position_20261125_v2.py": "c34777352df35c4c5c30950063b90b714fcd46a5374ebe7fb36a50f324ca2489",
+    "scripts/mf_position_20261125_run.py": "a1cd6d2065f7531bedd3fad252ee50f76b79cc1e0b7118efef57f15708042daa",
+    "scripts/mf_position_20261125_v2_run.py": "765f045882657448adde287be55109633c1525f391d388ce5c6625cc730aca82",
+    "scripts/navcandidate_independent_20261125.py": "3d968593d713f5850163c4b7eff2b2ddff44e3bc523084e2e48d34814767dbce",
+    "scripts/navcandidate_pixels_audit_20261125.py": "05a9c709bfab314e39710d9bcd967ed49ef0d89af1d454a74a76a30cbd01b93f",
+    "scripts/navcandidate_results_audit_20261125.py": "3ae43341132725a3b2dfb206dc3886c9d275e0794b83ae1fb021633f5b14e73a"
+  },
+  "small_evidence": [
+    {
+      "source": "outputs/reports/mf_position_20261125/本轮结果与交付.md",
+      "destination": "doc/交接/20261125/evidence/outputs/reports/mf_position_20261125/本轮结果与交付.md",
+      "sha256": "adc030aaeebd101311ec016e61b97232698bb9100fdc5ef76427ea98a4c3ef9b",
+      "bytes": 8047
+    },
+    {
+      "source": "outputs/reports/mf_position_20261125/方法与范围登记.md",
+      "destination": "doc/交接/20261125/evidence/outputs/reports/mf_position_20261125/方法与范围登记.md",
+      "sha256": "e6934bd266a926c25453b2063283993a2e6daef642aa0475c1dd7b64bebc83f7",
+      "bytes": 3299
+    },
+    {
+      "source": "outputs/reports/mf_position_20261125/closeout_v2.json",
+      "destination": "doc/交接/20261125/evidence/outputs/reports/mf_position_20261125/closeout_v2.json",
+      "sha256": "bd13becb521f99bd42d894391b37ba4283983c9ff588463f896b4b0961b50cfe",
+      "bytes": 12376
+    },
+    {
+      "source": "outputs/reports/mf_position_20261125/contract_checks_v1.json",
+      "destination": "doc/交接/20261125/evidence/outputs/reports/mf_position_20261125/contract_checks_v1.json",
+      "sha256": "97d395907acc1e6c1153fc4b7eae08ea86322d47c2c7c163f8a3e6b7e5e6c5d0",
+      "bytes": 1910
+    },
+    {
+      "source": "outputs/reports/mf_position_20261125/upstream_competition_contract_v2.json",
+      "destination": "doc/交接/20261125/evidence/outputs/reports/mf_position_20261125/upstream_competition_contract_v2.json",
+      "sha256": "214b9ebbded1cfdd524e1530a39d48a2cd1679bf176666569819824403ffcaf4",
+      "bytes": 1195
+    },
+    {
+      "source": "outputs/reports/mf_position_20261125/selected_position_contract_v2.json",
+      "destination": "doc/交接/20261125/evidence/outputs/reports/mf_position_20261125/selected_position_contract_v2.json",
+      "sha256": "c7023f665d071f1ae60e088716ca78e4efca23307dd31fd43a59b12317b796f4",
+      "bytes": 8435
+    },
+    {
+      "source": "outputs/reports/navcandidate_20261125/independent/独立审计结论.md",
+      "destination": "doc/交接/20261125/evidence/outputs/reports/navcandidate_20261125/independent/独立审计结论.md",
+      "sha256": "600e8cb0da0f0b7b82d37a72630afbed4bf940992ea68c64cc1e3b7aaf999425",
+      "bytes": 1686
+    },
+    {
+      "source": "outputs/reports/navcandidate_20261125/independent/final_audit_v2.json",
+      "destination": "doc/交接/20261125/evidence/outputs/reports/navcandidate_20261125/independent/final_audit_v2.json",
+      "sha256": "d2df8980a6e8f9d61c951f2428f34224f99c1c3f4e3ff62a3f29782860f4a957",
+      "bytes": 4920
+    },
+    {
+      "source": "outputs/reports/navcandidate_20261125/independent/independent_results_v2.json",
+      "destination": "doc/交接/20261125/evidence/outputs/reports/navcandidate_20261125/independent/independent_results_v2.json",
+      "sha256": "ef1192b78665ea776a93074d9b641acd5cfe420e21c4365e635c647bee4d7b69",
+      "bytes": 1021457
+    },
+    {
+      "source": "outputs/reports/navcandidate_20261125/independent/qualified_pixels_v2.json",
+      "destination": "doc/交接/20261125/evidence/outputs/reports/navcandidate_20261125/independent/qualified_pixels_v2.json",
+      "sha256": "64a10ec29f7a097e0905ede137ce62c250d45cc88a8d6078d1824a3b7f94d7b7",
+      "bytes": 64239
+    },
+    {
+      "source": "outputs/reports/navcandidate_20261125/independent/baseline_and_git_sync_v1.json",
+      "destination": "doc/交接/20261125/evidence/outputs/reports/navcandidate_20261125/independent/baseline_and_git_sync_v1.json",
+      "sha256": "a8bb47d3023dd9313db1cb7ce0cca4ca0b5885dd0f6d2559017989831069e908",
+      "bytes": 195688
+    },
+    {
+      "source": "outputs/results/nuscenes/validation/iterations/mf_position_20261125_v1/export_summary.json",
+      "destination": "doc/交接/20261125/evidence/outputs/results/nuscenes/validation/iterations/mf_position_20261125_v1/export_summary.json",
+      "sha256": "d613b953bf4abffa2b9951348356c1bad8e0ad01380f6de352a29f88ab519134",
+      "bytes": 4345
+    },
+    {
+      "source": "outputs/results/nuscenes/validation/iterations/mf_position_20261125_v2/export_summary.json",
+      "destination": "doc/交接/20261125/evidence/outputs/results/nuscenes/validation/iterations/mf_position_20261125_v2/export_summary.json",
+      "sha256": "939ad5931cb437126d127453a70c75bc1c2fe1182123bad669881475cda21082",
+      "bytes": 4395
+    },
+    {
+      "source": "outputs/results/nuscenes/validation/iterations/mf_position_20261125_v2/selection_summary.json",
+      "destination": "doc/交接/20261125/evidence/outputs/results/nuscenes/validation/iterations/mf_position_20261125_v2/selection_summary.json",
+      "sha256": "63d28afbe486a96e5d203bb99737ddd99f3978a70eee82982665b57db4b004a8",
+      "bytes": 9889
+    },
+    {
+      "source": "outputs/results/nuscenes/validation/iterations/mf_position_20261125_v2/changed_cases.json",
+      "destination": "doc/交接/20261125/evidence/outputs/results/nuscenes/validation/iterations/mf_position_20261125_v2/changed_cases.json",
+      "sha256": "32ccee50f193da6a1d26c0ebba1e889a56b55f78fcd0575fe82c922d65f27d53",
+      "bytes": 181063
+    },
+    {
+      "source": "dataset/processed/mf_position_20261125_v1/manifest.json",
+      "destination": "doc/交接/20261125/evidence/dataset/processed/mf_position_20261125_v1/manifest.json",
+      "sha256": "11493654d23e8ff085298e6484e8f06442e4c2f31f03f9168f89e4aca5cda687",
+      "bytes": 1046035
+    },
+    {
+      "source": "dataset/processed/mf_position_20261125_v2/manifest.json",
+      "destination": "doc/交接/20261125/evidence/dataset/processed/mf_position_20261125_v2/manifest.json",
+      "sha256": "2f3ff130d42833e1b244386e1531c8ca612a089b7ab8e8ea02ad2ec6730b094d",
+      "bytes": 1046198
+    }
+  ],
+  "copied_bytes": 3615177,
+  "full_runs_in_Git": false,
+  "original_files_unchanged": true,
+  "source_syntax_and_credentials_scan_passed": true
+}
