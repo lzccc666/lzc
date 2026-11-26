@@ -8,7 +8,6 @@ import matplotlib
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-from matplotlib import font_manager
 from matplotlib.font_manager import FontProperties
 from matplotlib.lines import Line2D
 import networkx as nx
@@ -24,26 +23,10 @@ from conceptgraph.scenegraph.visualization import (
     parse_relation_types,
     relation_style,
 )
+from conceptgraph.utils.plot_fonts import configure_chinese_font
 
 
-CHINESE_FONT = FontProperties(fname="/root/autodl-tmp/lizichong/checkpoint/fonts/NotoSansCJKsc-Regular.otf")
-
-
-def configure_chinese_font() -> None:
-    candidates = [
-        Path("/root/autodl-tmp/lizichong/checkpoint/fonts/NotoSansCJKsc-Regular.otf"),
-        Path("/root/autodl-tmp/lizichong/checkpoint/Qwen2-VL-2B-Instruct/SimSun.ttf"),
-    ]
-    for font_path in candidates:
-        if font_path.exists():
-            font_manager.fontManager.addfont(str(font_path))
-            global CHINESE_FONT
-            CHINESE_FONT = FontProperties(fname=str(font_path))
-            plt.rcParams["font.family"] = [CHINESE_FONT.get_name()]
-            plt.rcParams["axes.unicode_minus"] = False
-            return
-    plt.rcParams["font.family"] = ["DejaVu Sans"]
-    plt.rcParams["axes.unicode_minus"] = False
+CHINESE_FONT = FontProperties()
 
 
 def parse_args() -> argparse.Namespace:
@@ -61,7 +44,8 @@ def parse_args() -> argparse.Namespace:
 
 
 def main() -> None:
-    configure_chinese_font()
+    global CHINESE_FONT
+    CHINESE_FONT = configure_chinese_font()
     args = parse_args()
     scene_graph_path = Path(args.scene_graph)
     out_dir = Path(args.out_dir)

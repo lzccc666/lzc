@@ -8,8 +8,6 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.colors import ListedColormap
-from matplotlib import font_manager
-from matplotlib.font_manager import FontProperties
 from matplotlib.patches import Patch
 import numpy as np
 
@@ -33,21 +31,9 @@ from conceptgraph.navigation.target_selector import (
     target_selection_result_to_dict,
 )
 from conceptgraph.navigation.types import NavigationPlan, TargetSelectionResult
+from conceptgraph.utils.plot_fonts import configure_chinese_font
 
-CHINESE_FONT = FontProperties(fname="/root/autodl-tmp/lizichong/checkpoint/fonts/NotoSansCJKsc-Regular.otf")
-
-
-def _configure_chinese_font() -> None:
-    font_path = Path("/root/autodl-tmp/lizichong/checkpoint/fonts/NotoSansCJKsc-Regular.otf")
-    if font_path.exists():
-        font_manager.fontManager.addfont(str(font_path))
-        global CHINESE_FONT
-        CHINESE_FONT = FontProperties(fname=str(font_path))
-        plt.rcParams["font.family"] = [CHINESE_FONT.get_name()]
-    plt.rcParams["axes.unicode_minus"] = False
-
-
-_configure_chinese_font()
+CHINESE_FONT = configure_chinese_font()
 
 
 class SemanticNavigationPipeline:
