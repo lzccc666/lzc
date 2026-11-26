@@ -8,6 +8,15 @@ import re
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DATASET_ROOT = PROJECT_ROOT / "dataset"
 RESULTS_ROOT = PROJECT_ROOT / "outputs/results"
+LEGACY_REMOTE_ROOT = Path("/root/autodl-tmp/lizichong")
+
+
+def resolve_project_path(value: str | Path) -> Path:
+    """Resolve frozen remote project references against this checkout."""
+    path = Path(value)
+    if path.is_relative_to(LEGACY_REMOTE_ROOT):
+        return PROJECT_ROOT / path.relative_to(LEGACY_REMOTE_ROOT)
+    return path
 
 
 def experiment_directory(dataset: str, split: str, run_id: str, *, create=False) -> Path:

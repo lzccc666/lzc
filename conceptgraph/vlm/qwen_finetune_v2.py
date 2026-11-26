@@ -10,6 +10,7 @@ from typing import Any, Iterable
 
 from PIL import Image
 
+from conceptgraph.project_paths import resolve_project_path
 from conceptgraph.vlm.qwen_cache import sha256_file
 from conceptgraph.vlm.schemas import (
     CANONICAL_BODY_TYPES,
@@ -302,7 +303,7 @@ def audit_dataset(dataset_dir: Path) -> dict[str, Any]:
     image_rows = [row for row in rows if row["task"] == "object_attributes"]
     perceptual = []
     for row in image_rows:
-        path = Path(row.get("crop_path", ""))
+        path = resolve_project_path(row.get("crop_path", ""))
         if not path.is_file():
             crop_missing.append(row["sample_id"])
             continue

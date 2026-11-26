@@ -15,8 +15,8 @@ from PIL import Image
 from torch.utils.data import DataLoader, Dataset, WeightedRandomSampler
 from tqdm import tqdm
 
+from conceptgraph.project_paths import PROJECT_ROOT, resolve_project_path
 
-PROJECT_ROOT = Path("/root/autodl-tmp/lizichong")
 MAX_IMAGE_SIDE = 672
 TASK_FILES = {
     "object_attributes": "object_attributes.jsonl",
@@ -429,7 +429,7 @@ def build_messages(
 def load_sample_image(sample: dict[str, Any]) -> Image.Image | None:
     if sample["task"] != "object_attributes":
         return None
-    path = Path(sample["row"].get("crop_path", ""))
+    path = resolve_project_path(sample["row"].get("crop_path", ""))
     if not path.is_file():
         raise FileNotFoundError(f"对象crop不存在：{path}")
     with Image.open(path) as image:

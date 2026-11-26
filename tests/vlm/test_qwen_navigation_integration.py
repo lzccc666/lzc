@@ -10,6 +10,7 @@ import torch
 from PIL import Image
 
 from conceptgraph.navigation.pipeline import SemanticNavigationPipeline
+from conceptgraph.project_paths import resolve_project_path
 from conceptgraph.scripts.build_qwen_finetune_dataset import (
     audit_scene_leakage,
     deterministic_scene_split,
@@ -244,7 +245,7 @@ def test_stage4_dataset_has_real_candidates_and_real_decodable_crops() -> None:
     rerank = json.loads((dataset_dir / "candidate_rerank.jsonl").read_text(encoding="utf-8").splitlines()[0])
     object_row = json.loads((dataset_dir / "object_attributes.jsonl").read_text(encoding="utf-8").splitlines()[0])
 
-    with Image.open(object_row["crop_path"]) as image:
+    with Image.open(resolve_project_path(object_row["crop_path"])) as image:
         image.load()
         size = image.size
 
